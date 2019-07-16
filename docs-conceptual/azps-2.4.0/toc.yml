@@ -74,7 +74,7 @@
       displayName: 'database, nosql, mongodb, couchdb'
 - name: Versionshinweise
   items:
-    - name: Versionshinweise zu Az 2.1.0
+    - name: Versionshinweise
       href: release-notes-azureps.md
     - name: Wichtige Änderungen in Az 2.0.0
       href: migrate-az-2.0.0.md
