@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 12/20/2018
-ms.openlocfilehash: eaa4e3ccd2b53304aeaf9cb184814b83f4f88608
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.openlocfilehash: bdb63ce4bb614920582460ae707d8594977e8f71
+ms.sourcegitcommit: 0b644bfecf4224b2ea83520d1a6a956734d9fba4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56153191"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863582"
 ---
 # <a name="overview-of-azure-powershell"></a>Übersicht über Azure PowerShell
 
@@ -38,8 +38,6 @@ Falls Sie mit PowerShell noch nicht vertraut sind, kann es hilfreich sein, eine 
 * [Skripterstellung mit PowerShell](/powershell/scripting/powershell-scripting)
 
 Empfehlenswert ist auch folgendes Video: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (PowerShell-Grundlagen – Teil 1: Erste Schritte mit PowerShell)
-
-Oder Sie sehen sich in der Microsoft Virtual Academy die Einführung [Getting Started with PowerShell](https://mva.microsoft.com/liveevents/powershell-jumpstart) (Erste Schritte mit PowerShell) an.
 
 ## <a name="build-your-skills-with-microsoft-learn"></a>Erweitern Ihrer Fähigkeiten mit Microsoft Learn
 
