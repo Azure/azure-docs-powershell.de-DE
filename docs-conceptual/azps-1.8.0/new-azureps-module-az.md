@@ -7,16 +7,16 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: da1d7ec9a196068db237d871834b92f8b077b42c
-ms.sourcegitcommit: 020c69430358b13cbd99fedd5d56607c9b10047b
+ms.openlocfilehash: 8dc5a7d3b47870455213aa01aebc1d215ad640a7
+ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365696"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807484"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
-Ab Dezember 2018 ist das Az-Modul von Azure PowerShell allgemein verfügbar und jetzt das beabsichtigte PowerShell-Modul für die Interaktion mit Azure. Az verfügt über kürzere Befehle, verbesserte Stabilität und plattformübergreifende Unterstützung. Darüber hinaus bietet Az die gleichen Features wie AzureRM sowie einen einfachen Migrationspfad.
+Ab Dezember 2018 ist das Az-Modul von Azure PowerShell allgemein verfügbar und jetzt das beabsichtigte PowerShell-Modul für die Interaktion mit Azure. Az verfügt über kürzere Befehle, verbesserte Stabilität und plattformübergreifende Unterstützung. Az bietet darüber hinaus die gleichen Features wie AzureRM und damit einen einfachen Migrationspfad.
 
 Mit dem Az-Modul ist Azure PowerShell jetzt kompatibel mit PowerShell 5.1 unter Windows und mit PowerShell Core 6.x und höher auf allen unterstützten Plattformen – einschließlich Windows, MacOS und Linux.
 
@@ -67,6 +67,4 @@ Das Az-Modul verfügt über einen Kompatibilitätsmodus, der Ihnen die Verwendun
 
 ## <a name="continued-support-for-azurerm"></a>Fortgesetzte Unterstützung für AzureRM
 
-Für das vorhandene AzureRM-Modul werden keine neuen Cmdlets oder Features mehr bereitgestellt. AzureRM wird aber mindestens bis Dezember 2020 weiterhin offiziell gepflegt und mit Fehlerbehebungen versehen.
-
-Wenn Sie Bedenken haben, ob das Az-Modul voll funktionsfähig, getestet oder produktionsreif ist: Alle Entwicklungsarbeiten, die in AzureRM geflossen sind, konzentrierten sich jetzt auf das Az-Modul, einschließlich der größtmöglichen Wiederverwendung von Code aus den bestehenden Modulen und umfangreicher Tests, damit die neuen Module hinsichtlich der Features kompatibel sind. Der Wechsel zum Az-Modul sollte ausschließlich durch den Zeitplan Ihres Unternehmens beeinflusst werden, ohne dass Sie auf die Bereitstellung bestimmter Features warten müssen.
+Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird bis Dezember 2020 aber weiterhin offiziell gepflegt und mit Fehlerbehebungen versehen.

@@ -1,18 +1,18 @@
 ---
 title: Deinstallieren von Azure PowerShell
 description: Anleitung zum vollständigen Deinstallieren von Azure PowerShell
-ms.date: 05/10/2019
+ms.date: 06/10/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: b32547e9c3df0df7495d1631a43be6934e1f62dc
-ms.sourcegitcommit: febbbd3f75c8dd1a296281d265289f015b6cb537
+ms.openlocfilehash: e71b4d0d662b29a32610fecb36351532040428e4
+ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037765"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807442"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Deinstallieren des Azure PowerShell-Moduls
 
@@ -106,7 +106,8 @@ Uninstalling Az.AnalysisServices version 0.7.0
 ```
 
 > [!NOTE]
-> Wenn das Skript die genaue zu deinstallierende Version des abhängigen Moduls nicht findet, wird _keine_ Version dieses Moduls deinstalliert. Dies ist darauf zurückzuführen, dass möglicherweise andere Versionen von `Az` in Ihrem System vorhanden sind, die von diesen Modulen abhängig sind. In diesem Fall werden die Versionen des Moduls, die nicht gefunden wurden, aufgelistet (sofern installiert). Sie können dann ältere Versionen manuell mit `Uninstall-Module` entfernen.
+> Wenn das Skript keine Abhängigkeit mit der genauen Version findet, die deinstalliert werden soll, wird _keine_ Version dieser Abhängigkeit deinstalliert. Dies ist darauf zurückzuführen, dass möglicherweise andere Versionen des Zielmoduls in Ihrem System vorhanden sind, die auf diesen Abhängigkeiten beruhen. In diesem Fall werden die verfügbaren Versionen der Abhängigkeit aufgelistet.
+> Sie können dann ältere Versionen manuell mit `Uninstall-Module` entfernen.
 
 Führen Sie diesen Befehl für jede Azure PowerShell-Version aus, die Sie deinstallieren möchten. Der Einfachheit halber werden mit dem folgenden Skript alle Versionen von Az deinstalliert, __mit Ausnahme__ der aktuellen Version.
 
