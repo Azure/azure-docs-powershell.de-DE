@@ -2,8 +2,8 @@
   href: overview.md
   items:
     - name: Installieren
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-install?toc=/powershell/azure/azure-stack/toc.json'
+      href: 'https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install?toc=/powershell/azure/azure-stack/toc.json'
     - name: Verbinden – Cloudbetreiber
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-configure-admin'
+      href: 'https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-configure-admin'
     - name: Verbinden – Benutzer
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-configure-user'
+      href: 'https://docs.microsoft.com/azure/azure-stack/user/azure-stack-powershell-configure-user'
