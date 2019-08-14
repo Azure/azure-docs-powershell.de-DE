@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: ffeba2cff2e157e7ec0fb7639f9d4075c359c85e
-ms.sourcegitcommit: 0b644bfecf4224b2ea83520d1a6a956734d9fba4
+ms.openlocfilehash: faf9313d642a3ca45731f4527aafdfd7f5096a78
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67863839"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861282"
 ---
 ## <a name="180---april-2019"></a>1.8.0: April 2019
 ### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion
 * Allgemeine Verfügbarkeit des `Az`-Moduls
 * Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.
-* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/.
+* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.
 * Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt
 * Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt
 * Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt
@@ -114,7 +114,7 @@ ms.locfileid: "67863839"
 ### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion
 * Allgemeine Verfügbarkeit des `Az`-Moduls
 * Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.
-* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/.
+* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.
 * Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt
 * Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt
 * Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt
@@ -171,7 +171,7 @@ ms.locfileid: "67863839"
 ### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion
 * Allgemeine Verfügbarkeit des `Az`-Moduls
 * Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.
-* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/.
+* Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.
 * Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt
 * Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt
 * Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt

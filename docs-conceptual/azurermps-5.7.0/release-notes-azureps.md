@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: ee9fb7e777d06f50514c6b4ba39805936b867045
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535066"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863293"
 ---
 # <a name="release-notes"></a>Versionshinweise
 
@@ -669,7 +669,7 @@ Update-Module -Name AzureRM
   - Neues Cmdlet Update-AzureRmPowerBIEmbeddedCapacity – verändert eine Instanz der PowerBI Embedded-Kapazität.
 * Profil
   - „USGovernmentActiveDirectoryEndpoint“ aktualisiert auf https://login.microsoftonline.us/
-    - Weitere Informationen zu den Azure Government-Endpunktzuordnungen finden Sie im folgenden Artikel: https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
+    - Weitere Informationen zu den Azure Government-Endpunktzuordnungen finden Sie im folgenden Artikel: https://docs.microsoft.com/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
     - -AsJob-Unterstützung für Cmdlets wurde hinzugefügt, wodurch bestimmte Cmdlets im Hintergrund ausgeführt werden und einen Auftrag zum Nachverfolgen und Kontrollieren des Fortschritts zurückgeben können.
     - Der Parameter -AsJob wurde zum Cmdlet Get-AzureRmSubscription hinzugefügt.
 * RecoveryServices.Backup

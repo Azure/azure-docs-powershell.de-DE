@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
-ms.openlocfilehash: d6545f18115e4162bb716def79f6b4cae8953a9c
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 464d7efa640f1d1ffd1c34bfbe6cf13cbe5202b6
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65534712"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863239"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Anmelden mit Azure PowerShell
 
@@ -54,7 +54,7 @@ Weitere Informationen zu verwalteten Identitäten für Azure-Ressourcen finden S
 
 ## <a name="sign-in-as-a-cloud-solution-provider-csp"></a>Anmelden als Cloud Solution Provider (CSP)
 
-Eine Anmeldung als [(Cloud Solution Provider, CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/) erfordert die Verwendung von `-TenantId`. In der Regel kann dieser Parameter entweder als Mandanten-ID oder als Domänenname angegeben werden. Für die CSP-Anmeldung muss jedoch eine **Mandanten-ID** bereitgestellt werden.
+Eine Anmeldung als [(Cloud Solution Provider, CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) erfordert die Verwendung von `-TenantId`. In der Regel kann dieser Parameter entweder als Mandanten-ID oder als Domänenname angegeben werden. Für die CSP-Anmeldung muss jedoch eine **Mandanten-ID** bereitgestellt werden.
 
 ```azurepowershell-interactive
 Connect-AzureRmAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
