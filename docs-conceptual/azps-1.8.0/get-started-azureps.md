@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
-ms.openlocfilehash: c60036ba8be6282007aa34a0bb9c0d9e33197072
-ms.sourcegitcommit: fd62a6376eef9b6ca76df766de1edcd7938c7a30
+ms.openlocfilehash: a4c8792f2ff27e1b6d3cee97144c26455356b7fd
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388911"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386822"
 ---
 # <a name="get-started-with-azure-powershell"></a>Erste Schritte mit Azure PowerShell
 
@@ -43,7 +43,8 @@ Wenn Sie sich in einer Region außerhalb der USA befinden, verwenden Sie den Par
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-Sie erhalten ein Token für die Verwendung unter https://microsoft.com/devicelogin. Öffnen Sie diese Seite in Ihrem Browser, und geben Sie das Token ein. Melden Sie sich dann mit den Anmeldeinformationen für Ihr Azure-Konto an, und autorisieren Sie Azure PowerShell. 
+In PowerShell 5.1-Umgebungen wird ein Anmeldedialogfeld angezeigt, in dem Sie den Benutzernamen und das Kennwort für Ihr Azure-Konto eingeben. In jeder anderen Version von PowerShell erhalten Sie ein Token für die Verwendung unter [https://microsoft.com/devicelogin ].
+Öffnen Sie diese Seite in Ihrem Browser, und geben Sie das Token ein. Melden Sie sich dann mit den Anmeldeinformationen für Ihr Azure-Konto an, und autorisieren Sie Azure PowerShell.
 
 Nach der Anmeldung sehen Sie Informationen, die angeben, welches Ihrer Azure-Abonnements aktiv ist. Wenn Sie mehrere Azure-Abonnements in Ihrem Konto haben und ein anderes auswählen möchten, rufen Sie Ihre verfügbaren Abonnements mit [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription)ab, und verwenden Sie das Cmdlet [Set-AzContext](/powershell/module/az.accounts/set-azcontext) mit Ihrer Abonnement-ID.
 Weitere Informationen zum Verwalten Ihrer Azure-Abonnements in Azure PowerShell finden Sie unter [Verwenden mehrerer Azure-Abonnements](manage-subscriptions-azureps.md).

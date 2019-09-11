@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/20/2019
-ms.openlocfilehash: 0b7a6fa4278d95a69b21f570ac6fb22b70f073f6
-ms.sourcegitcommit: abca342d8687ca638679c049792d0cef6045837d
+ms.date: 09/04/2019
+ms.openlocfilehash: 44f5d5b44788a52db297a0d73697161eec2eedc2
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70052480"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386757"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Anmelden mit Azure PowerShell
 
@@ -54,7 +54,7 @@ Verwenden Sie das Cmdlet [Get-Credential](/powershell/module/microsoft.powershel
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 Für Automatisierungsszenarien müssen Sie Anmeldeinformationen aus einem Benutzernamen und einer sicheren Zeichenfolge erstellen:
@@ -62,7 +62,7 @@ Für Automatisierungsszenarien müssen Sie Anmeldeinformationen aus einem Benutz
 ```azurepowershell-interactive
 $passwd = ConvertTo-SecureString <use a secure password here> -AsPlainText -Force
 $pscredential = New-Object System.Management.Automation.PSCredential('service principal name/id', $passwd)
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 Achten Sie darauf, gute Methoden für die Kennwortspeicherung zu verwenden, wenn Sie Dienstprinzipalverbindungen automatisieren.
@@ -70,8 +70,15 @@ Achten Sie darauf, gute Methoden für die Kennwortspeicherung zu verwenden, wenn
 ### <a name="certificate-based-authentication"></a>Zertifikatbasierte Authentifizierung
 
 Zertifikatbasierte Authentifizierung erfordert, dass Azure PowerShell Informationen von einem lokalen Zertifikatsspeicher basierend auf einem Fingerabdruck des Zertifikats abrufen kann.
+
 ```azurepowershell-interactive
-Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
+Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
+```
+
+Wenn Sie einen Dienstprinzipal anstelle einer registrierten Anwendung verwenden, fügen Sie das Argument `-ServicePrincipal` hinzu, und geben Sie die ID des Dienstprinzipals als Wert für den Parameter `-ApplicationId` an.
+
+```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
 In PowerShell 5.1 kann der Zertifikatspeicher mit den [PKI](/powershell/module/pkiclient)-Modul verwaltet und überprüft werden. Für PowerShell Core 6.x und höher ist der Prozess komplizierter. Die folgenden Skripts zeigen, wie ein vorhandenes Zertifikat in den für PowerShell zugänglichen Zertifikatspeicher importiert wird.
@@ -100,7 +107,7 @@ $store.Add($Certificate)
 $store.Close()
 ```
 
-## <a name="sign-in-using-a-managed-identity"></a>Anmelden mit einer verwalteten Identität 
+## <a name="sign-in-using-a-managed-identity"></a>Anmelden mit einer verwalteten Identität
 
 Verwaltete Identitäten sind ein Feature von Azure Active Directory. Bei verwalteten Identitäten handelt es sich um Dienstprinzipale, die den in Azure ausgeführten Ressourcen zugewiesen sind. Sie können den Dienstprinzipal einer verwalteten Identität für die Anmeldung verwenden und ein App-exklusives Zugriffstoken für den Zugriff auf andere Ressourcen beziehen. Verwaltete Identitäten stehen nur für Ressourcen zur Verfügung, die in einer Azure-Cloud ausgeführt werden.
 
@@ -108,19 +115,19 @@ Weitere Informationen zu verwalteten Identitäten für Azure-Ressourcen finden S
 
 ## <a name="sign-in-with-a-non-default-tenant-or-as-a-cloud-solution-provider-csp"></a>Anmelden mit einem anderen Mandanten als dem Standardmandanten oder als Cloudlösungsanbieter (Cloud Solution Provider, CSP)
 
-Wenn Ihr Konto mehr als einem Mandanten zugeordnet ist, muss bei der Verbindungsherstellung für die Anmeldung der Parameter `-TenantId` verwendet werden. Dieser Parameter funktioniert auch mit jedem anderen Anmeldeverfahren. Beim Anmelden kann dieser Parameterwert entweder die Azure-Objekt-ID des Mandanten (Mandanten-ID) oder der vollqualifizierte Domänenname des Mandanten sein.
+Wenn Ihr Konto mehr als einem Mandanten zugeordnet ist, muss bei der Verbindungsherstellung für die Anmeldung der Parameter `-Tenant` verwendet werden. Dieser Parameter funktioniert mit jedem Anmeldeverfahren. Beim Anmelden kann dieser Parameterwert entweder die Azure-Objekt-ID des Mandanten (Mandanten-ID) oder der vollqualifizierte Domänenname des Mandanten sein.
 
-Wenn Sie ein [Cloudlösungsanbieter (Cloud Solution Provider, CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) sind, **muss** der Wert `-TenantId` eine Mandanten-ID sein.
+Wenn Sie ein [Cloudlösungsanbieter (Cloud Solution Provider, CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) sind, **muss** der Wert `-Tenant` eine Mandanten-ID sein.
 
 ```azurepowershell-interactive
-Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
+Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 ## <a name="sign-in-to-another-cloud"></a>Anmelden bei einer anderen Cloud
 
 Azure-Clouddienste verfügen über Umgebungen, die jeweils mit den regionalen Gesetzen zum Umgang mit Daten konform sind.
 Legen Sie die Umgebung für Konten in einer regionalen Cloud fest, wenn Sie sich mit dem Argument `-Environment` anmelden.
-Beispiel für den Fall, dass sich Ihr Konto in der Cloud in China befindet:
+Dieser Parameter funktioniert mit jedem Anmeldeverfahren. Beispiel für den Fall, dass sich Ihr Konto in der Cloud in China befindet:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
