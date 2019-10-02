@@ -1,10 +1,18 @@
 ---
-ms.openlocfilehash: 96e6d7bc0cc29adc1c0e49ba344d27349454c214
-ms.sourcegitcommit: 92722d603b60dc769660e7517da60110133d9959
+title: Versionshinweise zu Azure PowerShell
+description: Hier erfahren Sie mehr über die aktuellen Updates für die Azure PowerShell-Module.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 09/25/2019
+ms.openlocfilehash: b879d970d3237098e481dba0419ee65efa8d51cd
+ms.sourcegitcommit: f0f09eee03ef9dd7fe07432252a3dc8ca93e3a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71226438"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319309"
 ---
 ## <a name="270---september-2019"></a>2.7.0: September 2019
 #### <a name="azapimanagement"></a>Az.ApiManagement
@@ -46,7 +54,7 @@ ms.locfileid: "71226438"
 * Verweis auf das aktuelle Monitor SDK, d. h. 0.24.1-preview
    - Geringfügige Änderungen an den Metrik-Cmdlets vorgenommen, d. h. die Einheitenenumeration unterstützt verschiedene neue Werte. Dabei handelt es sich um schreibgeschützte Cmdlets, sodass keine Änderungen an der Eingabe der Cmdlets erforderlich sind.
    - Die API-Version der **ActionGroups**-Anforderungen lautet jetzt **2019-06-01** (zuvor **2018-03-01**). Die Szenariotests wurden aktualisiert, um diese Änderung zu berücksichtigen.
-   - Die Konstruktoren für die Klassen **EmailReceiver** und **WebhookReceiver** haben ein neues obligatorisches Argument hinzugefügt, d. h. einen booleschen Wert namens **useCommonAlertSchema**. Derzeit ist der Wert auf „false“ festgelegt, damit sich dieser Breaking Change nicht auf die Cmdlets auswirkt **********************************************************************************************************************************************************
+   - Die Konstruktoren für die Klassen **EmailReceiver** und **WebhookReceiver** haben ein neues obligatorisches Argument hinzugefügt, d. h. einen booleschen Wert namens **useCommonAlertSchema**. Derzeit ist der Wert auf **false** festgelegt, damit sich dieser Breaking Change nicht auf die Cmdlets auswirkt. **HINWEIS:** Dies ist eine vorübergehende Änderung, die vom Team für Warnungen validiert werden muss.
    - Die Reihenfolge der Argumente für den Konstruktor der Klasse **Source** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
    - Die Reihenfolge der Argumente für den Konstruktor der Klasse **AlertingAction** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
 * Unterstützung von Kriterien für dynamische Schwellwerte für Metrikwarnung v2
