@@ -1,0 +1,84 @@
+- name: Azure PowerShell
+  href: index.yml
+- name: Einführung in das neue Az-Modul
+  href: new-azureps-module-az.md
+  displayName: 'intro, introduction, azurerm'
+- name: Installieren
+  items:
+    - name: Installieren mit PowerShell Get
+      href: install-az-ps.md
+    - name: Installieren per MSI
+      href: install-az-ps-msi.md
+- name: Deinstallieren
+  href: uninstall-az-ps.md
+- name: Migrieren aus AzureRM
+  items:
+    - name: Schritte bei der Migration
+      href: migrate-from-azurerm-to-az.md
+      displayName: 'migrate, azurerm, az'
+    - name: Änderungen zwischen AzureRM und Az
+      href: migrate-az-1.0.0.md
+      displayName: 'breaking, cmdlet, module, names'
+- name: Erste Schritte
+  href: get-started-azureps.md
+  displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
+- name: Cloud Shell
+  href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+- name: Anmelden
+  items:
+    - name: Authentifizierungsmethoden
+      href: authenticate-azureps.md
+      displayName: 'sign in, signin, log in, login, credentials, msi, managed identity, tenant, subscription, region, certificate, service principal, authenticate'
+    - name: Erstellen eines Dienstprinzipals
+      href: create-azure-service-principal-azureps.md
+      displayName: 'automation, application, web app, script, certificate, sign in, signin, log in, login, devops, dev ops, itpro, it pro, role, aad, authentication, authenticate'
+    - name: Kontexte für Anmeldeinformationen
+      href: context-persistence.md
+      displayName: 'sign in, signin, log in, login, process, session, context, persist, jobs, background, automation, scripting, task'
+- name: Abfragen
+  href: queries-azureps.md
+  displayName: 'filter, search, format, output, variable, scripting, array, dictionary, map, object'
+- name: Formatieren der Ausgabe
+  href: formatting-output.md
+  displayName: 'object, table, yaml, json, xml, csv, html, list'
+- name: Verwalten von Abonnements
+  href: manage-subscriptions-azureps.md
+  displayName: 'tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts'
+- name: Bereitstellen
+  items:
+    - name: Bereitstellen von Resource Manager-Vorlagen
+      href: /azure/azure-resource-manager/resource-group-template-deploy
+    - name: Exportieren von Resource Manager-Vorlagen
+      href: /azure/azure-resource-manager/resource-manager-export-template-powershell
+    - name: Bereitstellen privater Resource Manager-Vorlagen
+      href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
+- name: Konzepte
+  items:
+    - name: PowerShell-Aufträge
+      href: using-psjobs.md
+      displayName: 'background, task, scripting, automation, context, process'
+- name: Lernprogramme
+  items:
+    - name: Erstellen von virtuellen Computern
+      href: azureps-vm-tutorial.yml
+- name: Beispielskripts
+  items:
+    - name: Virtuelle Linux-Computer
+      href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+      displayName: vms
+    - name: Virtuelle Windows-Computer
+      href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+      displayName: vms
+    - name: Web-Apps
+      href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: SQL-DATENBANKEN
+      href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
+    - name: Cosmos DB
+      href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
+      displayName: 'database, nosql, mongodb, couchdb'
+- name: Versionshinweise
+  items:
+    - name: Versionshinweise
+      href: release-notes-azureps.md
+    - name: Wichtige Änderungen in Az 2.0.0
+      href: migrate-az-2.0.0.md
