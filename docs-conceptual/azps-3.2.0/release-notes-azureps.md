@@ -7,13 +7,358 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.openlocfilehash: f77d901169b0d98b2425a2e50d33a1789150b770
+ms.sourcegitcommit: e598dc45a26ff5a71112383252b350d750144a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75035760"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182552"
 ---
+## <a name="320---december-2019"></a>3.2.0: Dezember 2019
+
+### <a name="general"></a>Allgemein
+* Verweise in „.psd1“ zur Verwendung des relativen Pfads für alle Module aktualisiert
+
+#### <a name="azaccounts"></a>Az.Accounts
+* Richtiges UserAgent-Element für clientseitige Telemetrie für Az 4.0-Vorschauversion festgelegt
+* Anzeigen benutzerfreundlicher Fehlermeldungen, wenn der Kontext in der Az 4.0-Vorschauversion NULL ist
+
+#### <a name="azbatch"></a>Az.Batch
+* Problem [#10602](https://github.com/Azure/azure-powershell/issues/10602) behoben, aufgrund dessen „VirtualMachineConfiguration.ContainerConfiguration“ oder „VirtualMachineConfiguration.DataDisks“ von **New-AzBatchPool** nicht ordnungsgemäß an den Server gesendet wurde
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* Version des ADF .NET SDK auf 4.5.0 aktualisiert
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* Unterstützung für den Ausschluss verwalteter WAF-Regeln hinzugefügt
+* SocketAddr zur automatischen Vervollständigung hinzugefügt
+
+#### <a name="azhealthcareapis"></a>Az.HealthcareApis
+* Ausnahmebehandlung
+
+#### <a name="azkeyvault"></a>Az.KeyVault
+* Fehler im Zusammenhang mit dem Zugriff auf einen möglicherweise nicht festgelegten Wert behoben
+* Zertifikatverwaltung für Kryptografie für elliptische Kurve
+    - Unterstützung zum Angeben der Kurve für Zertifikatsrichtlinien hinzugefügt
+
+#### <a name="azmonitor"></a>Az.Monitor
+* Optionales Argument zum Befehl „Diagnoseeinstellungen hinzufügen“ hinzugefügt. Ein Optionsargument, das angibt, dass der Export in Log Analytics ein festes Schema sein muss (auch bekannt als dedizierter Datentyp)
+
+#### <a name="aznetwork"></a>Az.Network
+* Unterstützung für IpGroups in der AzureFirewall-Anwendung sowie in NAT- und Netzwerkregeln
+
+#### <a name="azresources"></a>Az.Resources
+* Problem behoben, aufgrund dessen die Vorlagenbereitstellung einen Vorlagenparameter nicht lesen kann, wenn der Name einen Konflikt mit einem integrierten Parameternamen verursacht
+* Richtlinien-Cmdlets zur Verwendung der neuen API-Version 2019-09-01 aktualisiert, die Gruppierungsunterstützung in Richtliniensatzdefinitionen einführt
+
+#### <a name="azsql"></a>Az.Sql
+* Speichererstellung in automatischer Aktivierung der Sicherheitsrisikobewertung auf StorageV2 aktualisiert
+
+#### <a name="azstorage"></a>Az.Storage
+* Unterstützung der Generierung blob-/containeridentitätsbasierter SAS-Token mit Speicherkontext auf der Grundlage der OAuth-Authentifizierung
+    - New-AzStorageContainerSASToken
+    - New-AzStorageBlobSASToken
+* Unterstützung für das Widerrufen von Schlüsseln für die Speicherkonto-Benutzerdelegierung hinzugefügt, sodass alle SAS-Identitätstoken widerrufen werden
+    - Revoke-AzStorageAccountUserDelegationKeys
+* Upgrade auf Microsoft.Azure.Management.Storage 14.2.0, um die neue API-Version 2019-06-01 zu unterstützen
+* Unterstützung des QuotaGiB-Freigabeelements von mindestens 5120 in Dateifreigabe-Cmdlet der Verwaltungsebene und Parameteralias „Quota“ zum Parameter „QuotaGiB“ hinzugefügt 
+    - New-AzRmStorageShare
+    - Update-AzRmStorageShare
+* Parameteralias „QuotaGiB“ zum Parameter „Quota“ hinzugefügt
+    - Set-AzStorageShareQuota
+* Problem behoben, dass „Set-AzStorageContainerAcl“ die gespeicherte Zugriffsrichtlinie bereinigen kann
+    - Set-AzStorageContainerAcl
+
+## <a name="310---november-2019"></a>3.1.0 – November 2019
+### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion
+* Az.DataBoxEdge 1.0.0 veröffentlicht
+* Az.SqlVirtualMachine 1.0.0 veröffentlicht
+
+#### <a name="azcompute"></a>Az.Compute
+* Funktion zum erneuten Anwenden von VMs
+    - Parameter für erneutes Anwenden zu Cmdlet „Set-AzVM“ hinzugefügt
+* AutomaticRepairs-Funktion für VM-Skalierungsgruppe:
+    - Parameter „EnableAutomaticRepair“, „AutomaticRepairGracePeriod“ und „AutomaticRepairMaxInstanceRepairsPercent“ zu folgenden Cmdlets hinzugefügt:   New-AzVmssConfig   Update-AzVmss
+* Mandantenübergreifende Unterstützung von Katalogimages für „New-AzVM“
+* „Spot“ zu Argumentvervollständigung des Priority-Parameters in Cmdlets „New-AzVM“, „New-AzVMConfig“ und „New-AzVmss“ hinzugefügt
+* Parameter „DiskIOPSReadWrite“ und „DiskMBpsReadWrite“ zu Cmdlet „Add-AzVmssDataDisk“ hinzugefügt
+* Parameter „SourceImageId“ von Cmdlet „New-AzGalleryImageVersion“ in optional geändert
+* Parameter „OSDiskImage“ und „DataDiskImage“ zu Cmdlet „New-AzGalleryImageVersion“ hinzugefügt
+* Parameter „HyperVGeneration“ zu Cmdlet „New-AzGalleryImageDefinition“ hinzugefügt
+* Parameter „SkipExtensionsOnOverprovisionedVMs“ zu Cmdlets „New-AzVmss“, „New-AzVmssConfig“ und „Update-AzVmss“ hinzugefügt
+
+#### <a name="azdataboxedge"></a>Az.DataBoxEdge
+* Cmdlet `Get-AzDataBoxEdgeOrder` hinzugefügt
+    - Bestellung abrufen
+* Cmdlet `New-AzDataBoxEdgeOrder` hinzugefügt
+    - Neue Bestellung erstellen
+* Cmdlet `Remove-AzDataBoxEdgeOrder` hinzugefügt
+    - Bestellung entfernen
+* Änderung im Cmdlet `New-AzDataBoxEdgeShare`
+    - Erstellt jetzt eine lokale Freigabe
+* Cmdlet `Set-AzDataBoxEdgeRole` hinzugefügt
+    - „IotRole“ kann jetzt einer Freigabe zugeordnet werden.
+* Cmdlet `Invoke-AzDataBoxEdgeDevice` hinzugefügt
+    - Scanupdate aufrufen, Update herunterladen, Updates auf dem Gerät installieren
+* Cmdlet `Get-AzDataBoxEdgeTrigger` hinzugefügt
+    - Ruft die Informationen zu Auslösern ab
+* Cmdlet `New-AzDataBoxEdgeTrigger` hinzugefügt
+    - Neue Auslöser erstellen
+* Cmdlet `Remove-AzDataBoxEdgeTrigger` hinzugefügt
+    - Auslöser entfernen
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* Version des ADF .NET SDK auf 4.4.0 aktualisiert
+* Parameter „ExpressCustomSetup“ für Befehl „Set-AzureRmDataFactoryV2IntegrationRuntime“ hinzugefügt, um Setupkonfigurationen und Drittanbieterkomponenten ohne benutzerdefiniertes Setupskript zu ermöglichen.
+
+#### <a name="azdatalakestore"></a>Az.DataLakeStore
+* Dokumentation von „Get-AzDataLakeStoreDeletedItem“ und „Restore-AzDataLakeStoreDeletedItem“ aktualisiert
+
+#### <a name="azeventhub"></a>Az.EventHub
+* Behebung des Problems 10301: Datumsformat von SAS-Token korrigiert
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* Parameter „MinimumTlsVersion“ zu „Enable-AzFrontDoorCustomDomainHttps“ und „New-AzFrontDoorFrontendEndpointObject“ hinzugefügt
+* Parameter „HealthProbeMethod“ und „EnabledState“ zu „New-AzFrontDoorHealthProbeSettingObject“ hinzugefügt
+* Neues Cmdlet zum Erstellen von BackendPoolsSettings-Objekten für die Übergabe in Erstellung/Update von Front Door hinzugefügt
+    - New-AzFrontDoorBackendPoolsSettingObject
+
+#### <a name="aznetwork"></a>Az.Network
+* FilterData-Optionsbeispiele „Start-AzVirtualNetworkGatewayConnectionPacketCapture.md“ und „Start-AzVirtualnetworkGatewayPacketCapture.md“ geändert.
+
+#### <a name="azprivatedns"></a>Az.PrivateDns
+* PrivateDns.net-SDK auf Version 1.0.0 aktualisiert
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* Azure Site Recovery-Unterstützung zum Auswählen des Datenträgertyps beim Aktivieren des Schutzes.
+* Fehlerbehebung bei Bearbeitungsaktion für Azure Site Recovery-Wiederherstellungsplan.
+* SQL-Wiederherstellungsunterstützung für Azure Backup zum Akzeptieren von Filestream-Datenbanken.
+
+#### <a name="azrediscache"></a>Az.RedisCache
+* Parameter „MinimumTlsVersion“ in Cmdlets „New-AzRedisCache“ und „Set-AzRedisCache“ hinzugefügt. Außerdem „MinimumTlsVersion“ in Ausgabe von Cmdlet „Get-AzRedisCache“ hinzugefügt.
+* Validierung von Parameter „-Size“ für Cmdlets „Set-AzRedisCache“ und „New-AzRedisCache“ hinzugefügt
+
+#### <a name="azresources"></a>Az.Resources
+- Richtlinien-Cmdlets aktualisiert, um die neue API-Version 2019-06-01 mit der neuen EnforcementMode-Eigenschaft bei der Richtlinienzuweisung zu verwenden.
+- Hilfebeispiel zum Erstellen von Richtliniendefinitionen aktualisiert
+- Fehlerkorrektur: „Remove-AZADServicePrincipal -ServicePrincipalName“ gibt Nullverweis aus, wenn Dienstprinzipalname nicht gefunden wird.
+- Fehlerkorrektur: „New-AZADServicePrincipal“ gibt Nullverweis aus, wenn Mandant kein Abonnement hat.
+- „New-AzAdServicePrincipal“ geändert, um Anmeldeinformation nur zu zugeordneter Anwendung hinzuzufügen.
+
+#### <a name="azsql"></a>Az.Sql
+* Unterstützung von „ReadReplicaCount“ für Datenbank hinzugefügt.
+* Korrektur von „Set-AzSqlDatabase“, wenn Zonenredundanz nicht festgelegt
+
+## <a name="300---november-2019"></a>3.0.0 – November 2019
+### <a name="general"></a>Allgemein
+* Az.PrivateDns 1.0.0 veröffentlicht.
+
+#### <a name="azaccounts"></a>Az.Accounts
+* Hinweis zur Veraltung des Alias „Resolve-Error“ hinzugefügt.
+
+#### <a name="azadvisor"></a>Az.Advisor
+* Neue Kategorie „Operational Excellence“ für Cmdlet „Get-AzAdvisorRecommendation“ hinzugefügt.
+
+#### <a name="azbatch"></a>Az.Batch
+* `CoreQuota` für `BatchAccountContext` in `DedicatedCoreQuota` umbenannt. Außerdem wurde das neue Element `LowPriorityCoreQuota` hinzugefügt.
+  - Dies wirkt sich auf **Get-AzBatchAccount** aus.
+* Für den Parameter `-ResourceFile` von **New-AzBatchTask** wird jetzt eine Sammlung mit `PSResourceFile`-Objekten verwendet, und für die Erstellung kann das Cmdlet **New-AzBatchResourceFile** verwendet werden.
+* Neues Cmdlet **New-AzBatchResourceFile** als Hilfe für die Erstellung von `PSResourceFile`-Objekten. Diese können für **New-AzBatchTask** über den Parameter `-ResourceFile` bereitgestellt werden.
+  - Hierbei werden zusätzlich zum Ansatz mit `HttpUrl` zwei neue Arten von Ressourcendateien unterstützt:
+    - Mit Ressourcendateien, die auf `AutoStorageContainerName` basieren, wird ein gesamter Container für die automatische Speicherung auf den Batch-Knoten heruntergeladen.
+    - Für Ressourcendateien, die auf `StorageContainerUrl` basieren, wird der in der URL angegebene Container auf den Batch-Knoten heruntergeladen.
+* `ApplicationPackages`-Eigenschaft von `PSApplication` entfernt, die von **Get-AzBatchApplication** zurückgegeben wird.
+  - Die spezifischen Pakete in einer Anwendung können jetzt mit **Get-AzBatchApplicationPackage** abgerufen werden. Beispiel: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`.
+* `ApplicationId` für **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** und **Set-AzBatchApplication** in `ApplicationName` umbenannt.
+  - `ApplicationId` ist jetzt ein Alias von `ApplicationName`.
+* Neue `PSWindowsUserConfiguration`-Eigenschaft zu `PSUserAccount` hinzugefügt.
+* `Version` für `PSApplicationPackage` in `Name` umbenannt.
+* `BlobSource` für `PSResourceFile` in `HttpUrl` umbenannt.
+* `OSDisk`-Eigenschaft aus `PSVirtualMachineConfiguration` entfernt.
+* **Set-AzBatchPoolOSVersion** entfernt. Dieser Vorgang wird nicht mehr unterstützt.
+* `TargetOSVersion` aus `PSCloudServiceConfiguration` entfernt.
+* `CurrentOSVersion` für `PSCloudServiceConfiguration` in `OSVersion` umbenannt.
+* `DataEgressGiB` und `DataIngressGiB` aus `PSPoolUsageMetrics` entfernt.
+* **Get-AzBatchNodeAgentSku** entfernt und durch **Get-AzBatchSupportedImage** ersetzt. 
+  - **Get-AzBatchSupportedImage** gibt die gleichen Daten wie **Get-AzBatchNodeAgentSku** zurück, aber in einem benutzerfreundlicheren Format.
+  - Neue nicht verifizierte Images werden nun ebenfalls zurückgegeben. Zusätzlich sind weitere Informationen zu `Capabilities` und `BatchSupportEndOfLife` für jedes Image vorhanden.
+* Möglichkeit zum Bereitstellen von Remotedateisystemen auf jedem Knoten eines Pools über den neuen Parameter `MountConfiguration` von **New-AzBatchPool** hinzugefügt.
+* Es ist jetzt Unterstützung für Sicherheitsregeln vorhanden, die den Netzwerkzugriff auf einen Pool basierend auf dem Quellport des Datenverkehrs blockieren. Dies erfolgt über die `SourcePortRanges`-Eigenschaft unter `PSNetworkSecurityGroupRule`.
+* Bei der Ausführung eines Containers unterstützt Batch jetzt die Ausführung der Aufgabe im Arbeitsverzeichnis des Containers bzw. im Arbeitsverzeichnis der Batch-Aufgabe. Dies wird mit der `WorkingDirectory`-Eigenschaft unter `PSTaskContainerSettings` gesteuert.
+* Möglichkeit zum Angeben einer Sammlung mit öffentlichen IP-Adressen für `PSNetworkConfiguration` über die neue `PublicIPs`-Eigenschaft hinzugefügt. So wird sichergestellt, dass Knoten im Pool über eine IP-Adresse aus der Liste mit den von Benutzern bereitgestellten IP-Adressen verfügen.
+* Wenn kein Wert angegeben wird, lautet der Standardwert von `WaitForSuccess` unter `PSSTartTask` jetzt `$True` (bisher `$False`).
+* Wenn kein Wert angegeben wird, lautet der Standardwert von `Scope` unter `PSAutoUserSpecification` jetzt `Pool` (bisher `Task` unter Windows und `Pool` unter Linux).
+
+#### <a name="azcdn"></a>Az.Cdn
+* „UrlRewriteAction“ und „CacheKeyQueryStringAction“ für „RulesEngine“ eingeführt.
+* Mehrere Fehler behoben, z. B. fehlende „Selector“-Eingabe im Cmdlet „New-AzDeliveryRuleCondition“.
+
+#### <a name="azcompute"></a>Az.Compute
+* Feature „Datenträgerverschlüsselungssatz“
+    - Neue Cmdlets:   New-AzDiskEncryptionSetConfig   New-AzDiskEncryptionSet   Get-AzDiskEncryptionSet   Remove-AzDiskEncryptionSet
+    - Parameter „DiskEncryptionSetId“ wurde den folgenden Cmdlets hinzugefügt: Set-AzImageOSDisk Set-AzVMOSDisk Set-AzVmssStorageProfile        
+        Add-AzImageDataDisk New-AzVMDataDisk Set-AzVMDataDisk Add-AzVMDataDisk Add-AzVmssDataDisk Add-AzVmssVMDataDisk
+    - Die Parameter „DiskEncryptionSetId“ und „EncryptionType“ wurden den folgenden Cmdlets hinzugefügt:   New-AzDiskConfig   New-AzSnapshotConfig
+* Parameter „PublicIPAddressVersion“ wurde „New-AzVmssIPConfig“ hinzugefügt.
+* „FileUris“ für benutzerdefinierte Skripterweiterung von öffentlicher Einstellung auf geschützte Einstellung umgestellt.
+* „ScaleInPolicy“ wurde den Cmdlets „New-AzVmss“, „New-AzVmssConfig“ und „Update-AzVmss hinzugefügt.
+* Wichtige Änderungen
+    - Parameter „UploadSizeInBytes“ wird anstelle von „DiskSizeGB“ für „New-AzDiskConfig“ verwendet, wenn „CreateOption“ auf „Upload“ festgelegt ist.
+    - Im „GalleryImageVersion“-Objekt wurde „objectPublishingProfile.Source.ManagedImage.Id“ durch „StorageProfile.Source.Id“ ersetzt.
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* Version des ADF .NET SDK auf 4.3.0 aktualisiert.
+
+#### <a name="azdatalakestore"></a>Az.DataLakeStore
+* Update für ADLS SDK-Version (https://github.com/Azure/azure-data-lake-store-net/blob/preview-alpha/CHANGELOG.md#version-123-alpha) mit den folgenden Fehlerbehebungen durchgeführt:
+* Vermeidung der Auslösung einer Ausnahme, während die Deserialisierung des „creationtime“-Elements des Papierkorb- oder Verzeichniseintrags nicht durchgeführt werden kann
+* Verfügbarmachung der Einstellung pro Anforderungszeitlimit in „adlsclient“
+* Fehlerbehebung für Übergabe des ursprünglichen „syncflag“-Elements für badoffset-Wiederherstellung
+* Fehlerbehebung für „EnumerateDirectory“ zum Abrufen des Fortsetzungstokens nach der Überprüfung der Antwort
+* Behebung eines Verkettungsfehlers
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* Verschiedene Tippfehler im Modul korrigiert.
+
+#### <a name="azhdinsight"></a>Az.HDInsight
+* Fehler behoben, bei dem Kunden die Meldung „Keine gültige Base64-Zeichenfolge“ erhalten haben, wenn sie „Get-AzHDInsightCluster“ zum Abrufen des Clusters mit ADLSGen1-Speicher verwendet haben.
+* Parameter mit dem Namen „ApplicationId“ den drei Cmdlets „Add-AzHDInsightClusterIdentity“, „New-AzHDInsightClusterConfig“ und „New-AzHDInsightCluster“ hinzugefügt, damit der Kunde die Dienstprinzipal-Anwendungs-ID für den Zugriff auf Azure Data Lake bereitstellen kann.
+* Microsoft.Azure.Management.HDInsight von 2.1.0 in 5.1.0 geändert.
+* Fünf Cmdlets wurden entfernt:
+    - Get-AzHDInsightOMS
+    - Enable-AzHDInsightOMS
+    - Disable-AzHDInsightOMS
+    - Grant-AzHDInsightRdpServicesAccess
+    - Revoke-AzHDInsightRdpServicesAccess
+* Drei Cmdlets wurden hinzugefügt:
+    - „Get-AzHDInsightMonitoring“ als Ersatz für „Get-AzHDInsightOMS“.
+    - „Enable-AzHDInsightMonitoring“ als Ersatz für „Enable-AzHDInsightOMS“.
+    - „Disable-AzHDInsightMonitoring“ als Ersatz für „Disable-AzHDInsightOMS“.
+* Fehler für Cmdlet „Get-AzHDInsightProperties“ behoben, um Unterstützung für das Abrufen von Funktionsinformationen von einem bestimmten Ort bereitzustellen.
+* Parametersätze („Spark1“, „Spark2“) aus „Add-AzHDInsightConfigValue“ entfernt.
+* Beispiele den Hilfedokumenten des Cmdlets „Add-AzHDInsightSecurityProfile“ hinzugefügt.
+* Der Ausgabetyp der folgenden Cmdlets wurde geändert:
+*  - Ausgabetyp für „Get-AzHDInsightProperties“ von „CapabilitiesResponse“ in „AzureHDInsightCapabilities“ geändert.
+*  - Ausgabetyp für „Remove-AzHDInsightCluster“ von „ClusterGetResponse“ in „bool“ geändert.
+*  - Ausgabetyp für „Set-AzHDInsightGatewaySettings“ von „HttpConnectivitySettings“ in „GatewaySettings“ geändert.
+* Einige Testfälle für Szenarien wurden hinzugefügt.
+* Aliase wurden entfernt: „Add-AzHDInsightConfigValues“, „Get-AzHDInsightProperties“.
+
+#### <a name="aziothub"></a>Az.IotHub
+* Wichtige Änderungen:
+    - Das Cmdlet „Add-AzIotHubEventHubConsumerGroup“ unterstützt den Parameter „EventHubEndpointName“ nicht mehr, und für den ursprünglichen Parameternamen wurde kein Alias gefunden.
+    - Der Parametersatz „__AllParameterSets“ für das Cmdlet „Add-AzIotHubEventHubConsumerGroup“ wurde entfernt.
+    - Das Cmdlet „Get-AzIotHubEventHubConsumerGroup“ unterstützt den Parameter „EventHubEndpointName“ nicht mehr, und für den ursprünglichen Parameternamen wurde kein Alias gefunden.
+    - Der Parametersatz „__AllParameterSets“ für das Cmdlet „Get-AzIotHubEventHubConsumerGroup“ wurde entfernt.
+    - Die „OperationsMonitoringProperties“-Eigenschaft vom Typ „Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubProperties“ wurde entfernt.
+    - Die „OperationsMonitoringProperties“-Eigenschaft vom Typ „Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubInputProperties“ wurde entfernt.
+    - Das Cmdlet „New-AzIotHubExportDevice“ verfügt nicht mehr über Unterstützung für den Alias „New-AzIotHubExportDevices“.
+    - Das Cmdlet „New-AzIotHubImportDevice“ verfügt nicht mehr über Unterstützung für den Alias „New-AzIotHubImportDevices“.
+    - Das Cmdlet „Remove-AzIotHubEventHubConsumerGroup“ unterstützt den Parameter „EventHubEndpointName“ nicht mehr, und für den ursprünglichen Parameternamen wurde kein Alias gefunden.
+    - Der Parametersatz „__AllParameterSets“ für das Cmdlet „Remove-AzIotHubEventHubConsumerGroup“ wurde entfernt.
+    - Das Cmdlet „Set-AzIotHub“ unterstützt den Parameter „OperationsMonitoringProperties“ nicht mehr, und für den ursprünglichen Parameternamen wurde kein Alias gefunden.
+    - Der Parametersatz „UpdateOperationsMonitoringProperties“ für das Cmdlet „Set-AzIotHub“ wurde entfernt.
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* Azure wurde die Azure Site Recovery-Unterstützung zum Konfigurieren von Netzwerkressourcen, z. B. NSG, öffentliche IP-Adresse und interner Load Balancer für Azure, hinzugefügt.
+* Azure Site Recovery-Unterstützung zum Schreiben auf verwaltete Datenträger für VMware zu Azure hinzugefügt.
+* Azure Site Recovery-Unterstützung für NIC-Reduzierung für VMware zu Azure hinzugefügt.
+* Azure wurde Azure Site Recovery-Unterstützung für beschleunigten Netzwerkbetrieb für Azure hinzugefügt.
+* Azure wurde Azure Site Recovery-Unterstützung für automatische Agent-Updates für Azure hinzugefügt.
+* Azure wurde Azure Site Recovery-Unterstützung für SSD Standard für Azure hinzugefügt.
+* Azure wurde Azure Site Recovery-Unterstützung für das zweistufige Azure Disk Encryption-Verfahren für Azure hinzugefügt.
+* Azure wurde Azure Site Recovery-Unterstützung für das Schützen von neu hinzugefügten Datenträgern für Azure hinzugefügt.
+* Feature „Vorläufiges Löschen“ (SoftDelete) für VM und zugehörige Tests hinzugefügt.
+
+#### <a name="azresources"></a>Az.Resources
+* Abhängigkeitsassembly „Microsoft.Extensions.Caching.Memory“ von 1.1.1 auf 2.2 aktualisiert.
+
+#### <a name="aznetwork"></a>Az.Network
+* Alle Cmdlets für „PrivateEndpointConnection“ geändert, um Unterstützung für generischen Dienstanbieter bereitzustellen.
+    - Aktualisiertes Cmdlet:
+        - Approve-AzPrivateEndpointConnection
+        - Deny-AzPrivateEndpointConnection
+        - Get-AzPrivateEndpointConnection
+        - Remove-AzPrivateEndpointConnection
+        - Set-AzPrivateEndpointConnection
+* Neues Cmdlet für „PrivateLinkResource“ hinzugefügt, einschließlich Unterstützung des generischen Dienstanbieters.
+    - Neues Cmdlet:
+        - Get-AzPrivateLinkResource
+* Neue Felder und Parameter für das Feature „Proxyprotokoll V2“ hinzugefügt.
+    - „EnableProxyProtocol“-Eigenschaft in „PrivateLinkService“ hinzugefügt.
+    - „LinkIdentifier“-Eigenschaft in „PrivateEndpointConnection“ hinzugefügt.
+    - „New-AzPrivateLinkService“ aktualisiert, um den neuen optionalen Parameter „EnableProxyProtocol“ hinzuzufügen.
+* Fehlerhafte Parameterbeschreibung in Referenzdokumentation von „New-AzApplicationGatewaySku“ korrigiert.
+* Neue Cmdlets zur Unterstützung der Azure-Firewallrichtlinie hinzugefügt.
+* Unterstützung für untergeordnete Ressource „RouteTables“ von VirtualHub hinzugefügt.
+    - Neu hinzugefügte Cmdlets:
+        - Add-AzVirtualHubRoute
+        - Add-AzVirtualHubRouteTable
+        - Get-AzVirtualHubRouteTable
+        - Remove-AzVirtualHubRouteTable
+        - Set-AzVirtualHub
+* Unterstützung für die neuen Eigenschaften „Sku“ von VirtualHub und „VirtualWANType“ von VirtualWan hinzugefügt.
+    - Mit optionalen Parametern aktualisierte Cmdlets:
+        - New-AzVirtualHub: Parameter „Sku“ hinzugefügt.
+        - Update-AzVirtualHub: Parameter „Sku“ hinzugefügt.
+        - New-AzVirtualWan: Parameter „VirtualWANType“ hinzugefügt.
+        - Update-AzVirtualWan: Parameter „VirtualWANType“ hinzugefügt.
+* Unterstützung für „EnableInternetSecurity“-Eigenschaft für „HubVnetConnection“, „VpnConnection“ und „ExpressRouteConnection“ hinzugefügt.
+    - Neu hinzugefügte Cmdlets:
+        - Update-AzureRmVirtualHubVnetConnection
+    - Mit optionalen Parametern aktualisierte Cmdlets:
+        - New-AzureRmVirtualHubVnetConnection: Parameter „EnableInternetSecurity“ hinzugefügt.
+        - New-AzureRmVpnConnection: Parameter „EnableInternetSecurity“ hinzugefügt.
+        - Update-AzureRmVpnConnection: Parameter „EnableInternetSecurity“ hinzugefügt.
+        - New-AzureRmExpressRouteConnection: Parameter „EnableInternetSecurity“ hinzugefügt.
+        - Set-AzureRmExpressRouteConnection: Parameter „EnableInternetSecurity“ hinzugefügt.
+* Unterstützung für die Konfiguration der „WebApplicationFirewall“-Richtlinie der obersten Ebene hinzugefügt.
+    - Neu hinzugefügte Cmdlets:
+        - New-AzApplicationGatewayFirewallPolicySetting
+        - New-AzApplicationGatewayFirewallPolicyExclusion
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleGroupOverride
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleOverride
+        - New-AzApplicationGatewayFirewallPolicyManagedRule
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleSet
+    - Mit optionalen Parametern aktualisierte Cmdlets:
+        - New-AzApplicationGatewayFirewallPolicy: Parameter „PolicySetting“, „ManagedRule“ hinzugefügt.
+* Unterstützung für Operator „Geo-Match“ unter „CustomRule“ hinzugefügt.
+    - „GeoMatch“ zum Operator von „FirewallCondition“ hinzugefügt.
+* Unterstützung für Firewallrichtlinien „perListener“ und „perSite“ hinzugefügt.
+    - Mit optionalen Parametern aktualisierte Cmdlets:
+        - New-AzApplicationGatewayHttpListener: Parameter „FirewallPolicy“, „FirewallPolicyId“ hinzugefügt.
+        - New-AzApplicationGatewayPathRuleConfig: Parameter „FirewallPolicy“, „FirewallPolicyId“ hinzugefügt.
+* Fehlerbehebung: Nichtbeachtung der Groß-/Kleinschreibung für erforderliches Subnetz mit dem Namen „AzureBastionSubnet“ in „PSBastion“ ist jetzt möglich.
+* Unterstützung für Ziel-FQDNs in Netzwerkregeln und Übersetzung von FQDN in NAT-Regeln für Azure Firewall hinzugefügt.
+* Unterstützung für Ressource „RouteTables“ der obersten Ebene von „IpGroup“ hinzugefügt.
+    - Neu hinzugefügte Cmdlets:
+        - New-AzIpGroup
+        - Remove-AzIpGroup
+        - Get-AzIpGroup
+        - Set-AzIpGroup
+
+#### <a name="azservicefabric"></a>Az.ServiceFabric
+* Cmdlet „Add-AzServiceFabricApplicationCertificate“ entfernt, da dieses Szenario durch „Add-AzVmssSecret“ abgedeckt ist.
+
+#### <a name="azsql"></a>Az.Sql
+* Unterstützung für die Wiederherstellung von gelöschten Datenbanken auf verwalteten Instanzen hinzugefügt.
+* Veraltete Cmdlets für die Überprüfung aus Code ausgesondert.
+* Veraltete Aliase entfernt:
+* Get-AzSqlDatabaseIndexRecommendations (stattdessen „Get-AzSqlDatabaseIndexRecommendation“ verwenden)
+* Get-AzSqlDatabaseRestorePoints (stattdessen „Get-AzSqlDatabaseRestorePoint“ verwenden)
+* Cmdlet „Get-AzSqlDatabaseSecureConnectionPolicy“ wurde entfernt.
+* Aliase für veraltete Cmdlets für Einstellungen zur Sicherheitsrisikobewertung wurden entfernt.
+* Cmdlets für Einstellungen für die erweiterte Bedrohungserkennung wurden als veraltet eingestuft. 
+* Cmdlets zum Deaktivieren und Aktivieren von Vertraulichkeitsempfehlungen in Spalten einer Datenbank hinzugefügt.
+
+#### <a name="azstorage"></a>Az.Storage
+* Unterstützung für große Dateifreigaben beim Erstellen oder Aktualisieren eines Speicherkontos hinzugefügt.
+    -  New-AzStorageAccount
+    -  Set-AzStorageAccount
+* Beim Schließen/Abrufen des Dateihandles wird die Überprüfung des Eingabepfads auf Dateiverzeichnis oder Datei übersprungen, um einen Fehler für das Objekt im Status „DeletePending“ zu vermeiden.
+    -  Get-AzStorageFileHandle
+    -  Close-AzStorageFileHandle
+    
 ## <a name="280---october-2019"></a>2.8.0: Oktober 2019
 ### <a name="general"></a>Allgemein
 * Az.HealthcareApis-Release 1.0.0
@@ -56,7 +401,7 @@ ms.locfileid: "75035760"
 * Kleinere Fehlerbehebung: „Get-AzIothub“ gibt „subscriptionId“ nicht zurück. 
 
 #### <a name="azmonitor"></a>Az.Monitor
-* Neue Aktionsgruppenempfänger für „New-AzActionGroupReceiver“ hinzugefügt:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
+* Neue Aktionsgruppenempfänger für Aktionsgruppe hinzugefügt:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
 * Verwendung des allgemeinen Warnungsschemas für Empfänger aktiviert. Dies gilt nicht für SMS, Azure App-Pushbenachrichtigungen, ITSM und Sprachempfänger.
 * Webhooks unterstützen nun die Azure Active Directory-Authentifizierung.
 
@@ -64,10 +409,8 @@ ms.locfileid: "75035760"
 * Neues Cmdlet „Get-AzAvailableServiceAlias“ hinzugefügt, das zum Abrufen der Aliase aufgerufen werden kann, die für Dienstendpunktrichtlinien verwendet werden können
 * Unterstützung für das Hinzufügen von Verbindungen von Datenverkehrsselektoren zu Virtual Network-Gatewayverbindungen hinzugefügt
     - Neu hinzugefügte Cmdlets:
-        - New-AzIpsecTrafficSelectorPolicy
-    - Cmdlets mit optionalem Parameter „-TrafficSelectorPolicies“ aktualisiert
-        - New-AzVirtualNetworkGatewayConnection
-        - Set-AzVirtualNetworkGatewayConnection
+        - New-AzureRmTrafficSelectorPolicy
+    - Cmdlets mit optionalen Parametern aktualisiert: -TrafficSelectorPolicies   -New-AzureRmVirtualNetworkGatewayConnection   -Set-AzureRmVirtualNetworkGatewayConnection
 * Unterstützung für ESP- und AH-Protokolle in Konfigurationen von Netzwerksicherheitsregeln hinzugefügt
     - Aktualisierte Cmdlets:
         - Add-AzNetworkSecurityRuleConfig
@@ -222,7 +565,7 @@ ms.locfileid: "75035760"
     -  Remove-AzRmStorageShare
 
 #### <a name="azwebsites"></a>Az.Websites
-* Problem behoben, aufgrund dessen Web-App-Tags beim Migrieren der App zum neuen ASP gelöscht wurden
+* Problem behoben, aufgrund dessen webapp-Tags beim Migrieren der App zu neuem ASP gelöscht wurden
 * „Publish-AzureWebapp“ für die Verwendung unter Linux und Windows korrigiert
 * Beispiel in Referenzdokumentation „Get-AzWebAppPublishingProfile“ aktualisiert
 

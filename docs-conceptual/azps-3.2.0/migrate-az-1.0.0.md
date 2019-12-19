@@ -7,18 +7,21 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: ea7593cf2b753b210ff2955b7bd450030ad83596
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
+ms.sourcegitcommit: e598dc45a26ff5a71112383252b350d750144a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75035828"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182195"
 ---
 # <a name="breaking-changes-for-az-100"></a>Grundlegende Änderungen für Az 1.0.0
 
 Dieses Dokument enthält ausführliche Informationen zu den Änderungen zwischen AzureRM 6.x und dem neuen Az-Modul, Version 1.x und höher. Das Inhaltsverzeichnis führt Sie durch einen vollständigen Migrationspfad, einschließlich modulspezifischer Änderungen, die sich auf Ihre Skripte auswirken können.
 
 Allgemeine Hinweise zu den ersten Schritten bei einer Migration von AzureRM zum Az-Modul finden Sie unter [Starten der Migration von AzureRM zu Az](migrate-from-azurerm-to-az.md).
+
+> [!IMPORTANT]
+> Es gab auch zwischen den Versionen Az 1.0.0 und Az 2.0.0 wichtige Änderungen. Nachdem Sie diesem Leitfaden zum Aktualisieren von AzureRM auf Az gefolgt sind, lesen Sie die Anleitung [Az 2.0.0 Breaking Changes](migrate-az-2.0.0.md), um zu ermitteln, ob Sie zusätzliche Änderungen vornehmen müssen.
 
 ## <a name="table-of-contents"></a>Inhaltsverzeichnis
 
@@ -381,7 +384,7 @@ $b.ICloudBlob.Snapshot()
 Az:
 
 ```azurepowershell-interactive
-$b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -Context $ctx
+$b = Get-AzStorageBlob -Container $containerName -Blob $blobName -Context $ctx
 $task = $b.ICloudBlob.SnapshotAsync()
 $task.Wait()
 $snapshot = $task.Result
@@ -399,7 +402,7 @@ $snapshot = $Share.Snapshot()
 Az:
 
 ```azurepowershell-interactive
-$Share = Get-AzureStorageShare -Name $containerName -Context $ctx
+$Share = Get-AzStorageShare -Name $containerName -Context $ctx
 $task = $Share.SnapshotAsync()
 $task.Wait()
 $snapshot = $task.Result
@@ -417,7 +420,7 @@ $b.ICloudBlob.Undelete()
 Az:
 
 ```azurepowershell-interactive
-$b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
+$b = Get-AzStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
 $task = $b.ICloudBlob.UndeleteAsync()
 $task.Wait()
 ```
@@ -437,11 +440,11 @@ $pageBlob.ICloudBlob.SetPremiumBlobTier("P4")
 Az:
 
 ```azurepowershell-interactive
-$blockBlob = Get-AzureStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
+$blockBlob = Get-AzStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
 $task = $blockBlob.ICloudBlob.SetStandardBlobTierAsync("hot")
 $task.Wait()
 
-$pageBlob = Get-AzureStorageBlob -Container $containerName -Blob $pageBlobName -Context $ctx
+$pageBlob = Get-AzStorageBlob -Container $containerName -Blob $pageBlobName -Context $ctx
 $task = $pageBlob.ICloudBlob.SetPremiumBlobTierAsync("P4")
 $task.Wait()
 ```
