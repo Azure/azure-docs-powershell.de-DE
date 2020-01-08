@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: dc11af0fff84899ca1b3ad3abf8760dd8c59e6f6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: 7b099fead7cb985fc8f7e6fed55b8c1107caa0d9
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863273"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720377"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installieren von Azure PowerShell unter Windows mit PowerShellGet
 
@@ -115,7 +115,7 @@ Wenn mit dem Tool Fehler auftreten, legen Sie einen Eintrag im Bereich [Probleme
 |---|---|
 |Ich besitze Windows 10 oder Windows Server 2016.|In Windows Management Framework (WMF) 5.0 integriert (im Betriebssystem enthalten)|
 |Ich möchte auf PowerShell 5 aktualisieren.|[Installieren Sie die aktuelle Version von WMF.](https://www.microsoft.com/download/details.aspx?id=54616)|
-|Ich nutze eine Windows-Version mit PowerShell 3 oder PowerShell 4.|[Laden Sie die PackageManagement-Module herunter.](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Ich nutze eine Windows-Version mit PowerShell 3 oder PowerShell 4.|[Laden Sie die PackageManagement-Module herunter.](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 ### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Überprüfen der Azure PowerShell-Version
 

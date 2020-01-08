@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
-ms.openlocfilehash: a4c8792f2ff27e1b6d3cee97144c26455356b7fd
-ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
+ms.openlocfilehash: c515fcbbe4dcb0b6578a56da137a77e3f843a2e6
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70386822"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720539"
 ---
 # <a name="get-started-with-azure-powershell"></a>Erste Schritte mit Azure PowerShell
 
@@ -97,5 +97,5 @@ Zudem stehen Ihnen Azure PowerShell-Schnellstarts für andere beliebte Azure-Die
 * [Verwalten von Azure-Abonnements mit Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals with Azure PowerShell](create-azure-service-principal-azureps.md) (Erstellen von Dienstprinzipalen mit Azure PowerShell)
 * Hilfe aus der Community:
-  * [Azure-Forum auf MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [Stack Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure-Forum auf MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [Stack Overflow](https://go.microsoft.com/fwlink/?LinkId=320213)

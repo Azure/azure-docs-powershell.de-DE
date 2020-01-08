@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 1f859dcbaca88e28ebc0814513b7f4ee35610dc2
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: a4911e72f687c07b31805c07fd23263a6b7f33b4
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863216"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718796"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installieren des Azure PowerShell-Dienstverwaltungsmoduls
 
@@ -26,7 +26,7 @@ Für die Installation von Komponenten aus dem PowerShell-Katalog ist das PowerSh
 Get-InstalledModule PowerShellGet -AllVersions | Select-Object Name,Version,Path
 ```
 
-Eine Ausgabe wie die folgende sollte angezeigt werden:
+Etwa folgende Ausgabe sollte angezeigt werden:
 
 ```output
 Name          Version Path
@@ -74,7 +74,7 @@ Azure PowerShell-Module werden regelmäßig aktualisiert. Sollten Sie feststelle
 
 Beispielskripts zur Automatisierung einiger allgemeiner Aufgaben in Azure finden Sie im [Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
 
-Allgemeine Informationen zum Installieren, Kennenlernen, Verwenden und Anpassen von Windows PowerShell finden Sie unter [Skripterstellung mit Windows PowerShell](http://go.microsoft.com/fwlink/p/?linkid=320210).
+Allgemeine Informationen zum Installieren, Kennenlernen, Verwenden und Anpassen von Windows PowerShell finden Sie unter [Skripterstellung mit Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=320210).
 
 ### <a name="how-to-get-powershellget"></a>Installieren von PowerShellGet
 
@@ -82,7 +82,7 @@ Allgemeine Informationen zum Installieren, Kennenlernen, Verwenden und Anpassen 
 |---|---|
 |Ich besitze Windows 10 oder Windows Server 2016.|In Windows Management Framework (WMF) 5.0 integriert (im Betriebssystem enthalten)|
 |Ich möchte auf PowerShell 5 aktualisieren.|[Installieren Sie die aktuelle Version von WMF.](https://www.microsoft.com/download/details.aspx?id=54616)|
-|Ich nutze eine Windows-Version mit PowerShell 3 oder PowerShell 4.|[Laden Sie die PackageManagement-Module herunter.](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Ich nutze eine Windows-Version mit PowerShell 3 oder PowerShell 4.|[Laden Sie die PackageManagement-Module herunter.](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 

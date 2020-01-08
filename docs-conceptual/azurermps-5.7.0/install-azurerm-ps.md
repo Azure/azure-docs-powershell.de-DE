@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: ff50c676d42cad515aea74ea960105ed76f418a6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: 5a4ccd67433fe3716df42075a4e2fd035a12af2b
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863311"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722440"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installieren von Azure PowerShell unter Windows mit PowerShellGet
 
@@ -56,7 +56,7 @@ Befolgen Sie die Anleitung unten in der Tabelle, falls Sie PowerShellGet nicht i
 |---|---|
 |Windows 10<br/>Windows Server 2016|In Windows Management Framework (WMF) 5.0 integriert (im Betriebssystem enthalten)|
 |Upgrade auf PowerShell 5| <ol><li>[Installieren Sie die aktuelle Version von WMF.](https://www.microsoft.com/download/details.aspx?id=54616)</li><li>Führen Sie den folgenden Befehl aus:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|Windows mit PowerShell 3 oder PowerShell 4|<ol><il>[Laden Sie die PackageManagement-Module herunter.](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Führen Sie den folgenden Befehl aus:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|Windows mit PowerShell 3 oder PowerShell 4|<ol><il>[Laden Sie die PackageManagement-Module herunter.](https://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Führen Sie den folgenden Befehl aus:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 > [!NOTE]
 > Für die Verwendung von PowerShellGet ist eine Ausführungsrichtlinie erforderlich, die die Ausführung von Skripts ermöglicht. Weitere Informationen zur Ausführungsrichtlinie von PowerShell finden Sie unter [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies) (Informationen zu Ausführungsrichtlinien).

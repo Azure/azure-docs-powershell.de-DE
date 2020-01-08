@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: d41e7ce2faac6a82b63ed173b5b64b85b56577c0
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: c0ac4f6cfb803519b8dd711d3cca0d4a4f7e6f8b
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535087"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722457"
 ---
 # <a name="other-installation-methods"></a>Andere Installationsmethoden
 
@@ -23,7 +23,7 @@ Für Azure PowerShell stehen unterschiedliche Installationsmethoden zur Verfügu
 ## <a name="install-on-windows-using-the-web-platform-installer"></a>Installieren unter Windows mit dem Webplattform-Installer
 
 Die Vorgehensweise zum Installieren der neuesten Azure PowerShell-Version über WebPI hat sich im Vergleich zu früheren Versionen nicht geändert.
-Laden Sie das [Azure PowerShell-WebPI-Paket](http://aka.ms/webpi-azps) herunter, und starten Sie die Installation.
+Laden Sie das [Azure PowerShell-WebPI-Paket](https://aka.ms/webpi-azps) herunter, und starten Sie die Installation.
 
 > [!NOTE]
 > Wenn Sie bereits Azure-Module aus dem PowerShell-Katalog installiert haben, entfernt das Installationsprogramm diese automatisch. Dadurch wird sichergestellt, dass nur eine einzelne Version von Azure PowerShell installiert ist, was Ihre Umgebung vereinfacht. Es gibt jedoch Szenarien, in denen mehrere gleichzeitig installierte Versionen benötigt werden.
