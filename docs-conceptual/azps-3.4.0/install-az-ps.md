@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/22/2019
-ms.openlocfilehash: 88861b63846db04e901d2a216657307c456c48fe
-ms.sourcegitcommit: 9181f20c2c5eaa271150de9e25b9cb30ba5e6cb0
+ms.openlocfilehash: 66d755384e532d434811f3e6122dcba97d5c48b5
+ms.sourcegitcommit: 0654679cd4141add6d12c02fb8c689efcbad428d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002927"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77154757"
 ---
 # <a name="install-the-azure-powershell-module"></a>Installieren des Azure PowerShell-Moduls
 
@@ -119,7 +119,7 @@ Sie müssen diese Schritte für jede neue PowerShell-Sitzung wiederholen, die Si
 
 ## <a name="update-the-azure-powershell-module"></a>Aktualisieren des Azure PowerShell-Moduls
 
-Wenn Sie ursprünglich „Install-Module“ verwendet haben, sollten Sie [Update-Module](/powershell/module/powershellget/update-module) verwenden, um die neueste Version zu erhalten. Wenn Sie ursprünglich das MSI-Paket verwendet haben, sollten Sie die neue MSI-Datei herunterladen und installieren, um zu aktualisieren. Wenn beim Aktualisieren mithilfe des Pakets aus PowerShellGet Probleme auftreten, müssen Sie __neu installieren__, anstatt nur zu __aktualisieren__. Dies erfolgt auf dieselbe Weise wie bei der Installation, aber Sie müssen möglicherweise das Argument `-Force` hinzufügen:
+Wenn Sie ursprünglich „Install-Module“ verwendet haben, sollten Sie [Update-Module](/powershell/module/powershellget/update-module) verwenden, um die neueste Version zu erhalten. Wenn Sie ursprünglich das MSI-Paket verwendet haben, sollten Sie zum Aktualisieren die neue MSI-Datei herunterladen und installieren. Wenn beim Aktualisieren mithilfe des Pakets aus PowerShellGet Probleme auftreten, müssen Sie __neu installieren__, anstatt nur zu __aktualisieren__. Dies erfolgt auf dieselbe Weise wie bei der Installation, aber Sie müssen möglicherweise das Argument `-Force` hinzufügen:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Force
