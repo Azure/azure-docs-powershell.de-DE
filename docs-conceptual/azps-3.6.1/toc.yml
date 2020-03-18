@@ -5,7 +5,7 @@
   displayName: 'intro, introduction, azurerm'
 - name: Installieren
   items:
-    - name: Installieren mit PowerShell Get
+    - name: Installieren mit PowerShellGet
       href: install-az-ps.md
     - name: Installieren per MSI
       href: install-az-ps-msi.md
@@ -24,6 +24,8 @@
   displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
 - name: Cloud Shell
   href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+- name: Azure PowerShell in Docker
+  href: azureps-in-docker.md
 - name: Anmelden
   items:
     - name: Authentifizierungsmethoden
