@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
 ms.openlocfilehash: 7867adeac41444c81c31b7ee44b910ab40d873f8
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534761"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Verwenden experimenteller Azure PowerShell-Module
@@ -32,11 +32,11 @@ Für die experimentellen Module wird folgende Benennungskonvention verwendet: `A
 
 Experimentelle Module werden genau wie vorhandene Azure PowerShell-Module im PowerShell-Katalog veröffentlicht. Führen Sie zum Anzeigen einer Liste der experimentellen Module den folgenden Befehl aus:
 
-```azurepowershell-interactive
+```powershell-interactive
 Find-Module AzureRM.*.Experiments
 ```
 
-```output
+```Output
 Version Name                         Repository Description
 ------- ----                         ---------- -----------
 1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
@@ -45,7 +45,7 @@ Version Name                         Repository Description
 
 Verwenden Sie zum Installieren des experimentellen Moduls die folgenden Befehle in einer PowerShell-Sitzung mit erhöhten Rechten:
 
-```azurepowershell-interactive
+```powershell-interactive
 Install-Module AzureRM.Compute.Experiments
 Install-Module AzureRM.Websites.Experiments
 ```
@@ -69,7 +69,7 @@ Die zentralen Verbesserungen gelten als naheliegend, und zur Implementierung die
 
 - Kürzere Namen: Gilt für die Namen von Cmdlets (beispielsweise `New-AzureRmVM` => `New-AzVm`) und Parametern (beispielsweise `-ResourceGroupName` => `-Rg`). Verwenden Sie Aliase, um die Kompatibilität mit älteren Cmdlets zu gewährleisten. Geben Sie _abwärtskompatible_ Parametersätze an.
 
-- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel:
+- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel: 
   - Ressourcengruppe
   - Location
   - Abhängige Ressourcen

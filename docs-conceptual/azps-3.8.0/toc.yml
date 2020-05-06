@@ -59,7 +59,7 @@
     - name: PowerShell-Aufträge
       href: using-psjobs.md
       displayName: 'background, task, scripting, automation, context, process'
-- name: Tutorials
+- name: Lernprogramme
   items:
     - name: Erstellen von virtuellen Computern
       href: azureps-vm-tutorial.yml

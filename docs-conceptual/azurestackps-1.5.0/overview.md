@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: afa83a6258e57e961576b328e67fad634704dddf
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56153902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63053357"
 ---
 # <a name="azure-stack-module-150"></a>Azure Stack-Modul 1.5.0
 
@@ -91,7 +91,7 @@ Vorschauversion des Fabric-Administratormoduls von Azure Stack, mit dem Administ
 - Erstellen neuer IP-Pools
 
 
-### <a name="gallery"></a>Gallery
+### <a name="gallery"></a>Galerie
 Vorschauversion des Gallery-Administratormoduls von Azure Stack mit Funktionen zum Verwalten von Katalogelementen im Azure Stack-Marketplace.
 
 ### <a name="infrastructure-insights"></a>Infrastructure Insights
@@ -123,7 +123,7 @@ Vorschauversion des Subscription-Administratormoduls von Azure Stack.  Dieses Mo
 - Anzeigen von Nutzungs- und Leistungsinformationen
 - Verwalten der RBAC
 
-### <a name="subscription"></a>Abonnement
+### <a name="subscription"></a>Subscription
 Vorschauversion des Subscription-Moduls von Azure Stack.  Dieses Modul bietet Benutzerfunktionen für Folgendes:
 - Erstellen, Löschen und Aktualisieren von Abonnements
 
