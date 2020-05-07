@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
 ms.openlocfilehash: f8dc413a91876e53e62d25cc38ac3b3ef6afda8e
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534587"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-500"></a>Grundlegende Änderungen für Microsoft Azure PowerShell 5.0.0
@@ -411,7 +411,7 @@ $consumergroup = Get-AzureRmEventHubConsumerGroup <parameters>
 ### <a name="get-azurermusage"></a>**Get-AzureRMUsage**
 - Das Cmdlet **Get-AzureRMUsage** ist veraltet.
 
-### <a name="get-azurermalerthistory--get-azurermautoscalehistory--get-azurermlogs"></a>**Get-AzureRmAlertHistory**/**Get-AzureRmAutoscaleHistory**/**Get-AzureRmLogs**
+### <a name="get-azurermalerthistory--get-azurermautoscalehistory--get-azurermlogs"></a>**Get-AzureRmAlertHistory** / **Get-AzureRmAutoscaleHistory** / **Get-AzureRmLogs**
 - Ausgabeänderung: Das Feld „EventChannels“ aus dem EventData-Objekt (das von diesen Cmdlets zurückgegeben wird) wird ausgemustert, da nun ein konstanter Wert (Administrator, Vorgang) zurückgegeben wird.
 
 ### <a name="get-azurermalertrule"></a>**Get-AzureRmAlertRule**
@@ -462,7 +462,7 @@ $s1 = Get-AzureRmAutoscaleSetting -ResourceGroup $resourceGroup -Name MySetting
 Write-Host $s1.Name    
 ```
 
-### <a name="remove-azurermalertrule--remove-azurermlogprofile"></a>**Remove-AzureRmAlertRule**/**Remove-AzureRmLogProfile**
+### <a name="remove-azurermalertrule--remove-azurermlogprofile"></a>**Remove-AzureRmAlertRule** / **Remove-AzureRmLogProfile**
 - Ausgabeänderung: Die Art der Ausgabe wird geändert, um ein einzelnes Objekt mit der Anforderungs-ID und dem Statuscode zurückzugeben.
 
 ```powershell-interactive
@@ -641,7 +641,7 @@ Set-AzureRmADUser [other required parameters] -Password $SecureStringVariable
 
 ### <a name="type-namespaceattributes"></a>**Typ „NamespaceAttributes“**
 - Folgende Eigenschaften wurden entfernt:
-    - Enabled
+    - Aktiviert
     - Status
    
 ```powershell-interactive
@@ -679,7 +679,7 @@ $queue = Get-AzureRmServiceBusQueue <parameters>
    
 ### <a name="type-topicattribute"></a>**Typ „TopicAttribute“**
 - Folgende Eigenschaften werden als veraltet markiert:
-    - Location
+    - Standort
     - IsExpress
     - IsAnonymousAccessible
     - FilteringMessagesBeforePublishing
@@ -707,7 +707,7 @@ $topic = Get-AzureRmServiceBusTopic <parameters>
     - DeadLetteringOnFilterEvaluationExceptions
     - EntityAvailabilityStatus
     - IsReadOnly
-    - Location
+    - Standort
    
 ```powershell-interactive
 # Old
