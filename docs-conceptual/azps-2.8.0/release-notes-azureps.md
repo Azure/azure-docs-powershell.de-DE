@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75035760"
 ---
 ## <a name="280---october-2019"></a>2.8.0: Oktober 2019
@@ -816,7 +816,7 @@ ms.locfileid: "75035760"
 * Der Parameter „StorageAccountType“ wurde zu „New-AzGalleryImageVersion“ hinzugefügt.
 * „TargetRegion“ von „New-AzGalleryImageVersion“ kann „StorageAccountType“ enthalten.
 * Switch-Parameter „SkipShutdown“ wurde zu „Stop-AzVM“ und „Stop-AzVmss“ hinzugefügt.       
-* Wichtige Änderungen
+* Aktuelle Änderungen
     - „Set-AzVMBootDiagnostics“ in „Set-AzVMBootDiagnostic“ geändert
     - „Export-AzLogAnalyticThrottledRequests“ in „Export-AzLogAnalyticThrottledRequests“ geändert
 
@@ -1755,4 +1755,4 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 * Neue Cmdlets „New-AzWebAppContainerPSSession“ und „Enter-WebAppContainerPSSession“ zum Initiieren einer PowerShell-Remotesitzung in einer Windows-Container-App
 
 ## <a name="020---september-2018"></a>0.2.0 – September 2018
- Erste Version
+ Erstrelease

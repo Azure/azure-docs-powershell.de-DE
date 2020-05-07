@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: 55f19ac5e6767df1312e0b531184e8621b60a011
-ms.sourcegitcommit: febbbd3f75c8dd1a296281d265289f015b6cb537
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "67038192"
 ---
 # <a name="azurerm-module-250"></a>AzureRM-Modul 2.5.0
@@ -20,7 +20,7 @@ ms.locfileid: "67038192"
 ## <a name="requirements"></a>Anforderungen:
 Die niedrigste unterstützte Azure Stack-Version ist 1904.
 
-Hinweis: Falls Sie eine niedrigere Version verwenden, sollten Sie Version 1.2.11 installieren.
+Hinweis: Falls Sie eine niedrigere Version verwenden, installieren Sie die Version 1.2.11.
 
 
 ## <a name="install"></a>Installieren
@@ -87,7 +87,7 @@ Vorschauversion des Fabric-Administratormoduls von Azure Stack, mit dem Administ
 - Erstellen neuer IP-Pools
 
 
-### <a name="gallery"></a>Gallery
+### <a name="gallery"></a>Galerie
 Vorschauversion des Gallery-Administratormoduls von Azure Stack mit Funktionen zum Verwalten von Katalogelementen im Azure Stack-Marketplace.
 
 ### <a name="infrastructure-insights"></a>Infrastructure Insights
@@ -119,7 +119,7 @@ Vorschauversion des Subscription-Administratormoduls von Azure Stack.  Dieses Mo
 - Anzeigen von Nutzungs- und Leistungsinformationen
 - Verwalten der RBAC
 
-### <a name="subscription"></a>Abonnement
+### <a name="subscription"></a>Subscription
 Vorschauversion des Subscription-Moduls von Azure Stack.  Dieses Modul bietet Benutzerfunktionen für Folgendes:
 - Erstellen, Löschen und Aktualisieren von Abonnements
 

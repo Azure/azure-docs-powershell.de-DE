@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
 ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68863293"
 ---
 # <a name="release-notes"></a>Versionshinweise
@@ -184,9 +184,9 @@ Update-Module -Name AzureRM
 * „New-AzureRmVMSS“ gibt Verbindungszeichenfolgen im ausführlichen Modus aus.
 * „New-AzureRmVmss“ unterstützt öffentliche IP-Adressen, Lastenausgleichsregeln und eingehende NAT-Regeln.
 * WriteAccelerator-Feature
-    - Den folgenden Cmdlets wurde der Switch-Parameter „WriteAccelerator“ hinzugefügt: Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
-    - Dem folgenden Cmdlet wurde der Switch-Parameter „OsDiskWriteAccelerator“ hinzugefügt:     Set-AzureRmVmssStorageProfile.
-    - Den folgenden Cmdlets wurde der boolesche Parameter „OsDiskWriteAccelerator“ hinzugefügt:     Update-AzureRmVM     Update-AzureRmVmss
+    - WriteAccelerator-Switch-Parameter zu folgenden Cmdlets hinzugefügt: Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
+    - OsDiskWriteAccelerator-Switch-Parameter zu folgendem Cmdlet hinzugefügt:     Set-AzureRmVmssStorageProfile.
+    - Boolescher OsDiskWriteAccelerator-Parameter zu folgenden Cmdlets hinzugefügt:     Update-AzureRmVM     Update-AzureRmVmss
 
 #### <a name="azurermdatafactories"></a>AzureRM.DataFactories
 * Das Problem bei der Verschlüsselung von Anmeldeinformationen, das keinen sinnvollen Fehler bei einigen Verschlüsselungsvorgängen verursachte, wurde behoben.
@@ -275,15 +275,15 @@ Update-Module -Name AzureRM
     - Remove-AzureRmNetworkWatcherConnectionMonitor
 * Die Dokumentation zu „Set-AzureRmApplicationGatewayBackendAddressPool“ wurde aktualisiert, und dabei wurde ein veraltetes Beispiel entfernt.
 * EnableHttp2-Flag zu Application Gateway hinzugefügt
-    - „New-AzureRmApplicationGateway“ wurde aktualisiert: Optionaler Parameter „-EnableHttp2“ hinzugefügt
+    - „New-AzureRmApplicationGateway“ wurde aktualisiert: Der optionale Parameter „-EnableHttp2“ wurde hinzugefügt.
 * „IpTags“ zu „PublicIpAddress“ hinzugefügt
-    - „New-AzureRmPublicIpAddress“ wurde aktualisiert: „IpTags“ hinzugefügt
+    - „New-AzureRmPublicIpAddress“ aktualisiert: „IpTags“ hinzugefügt
     - „New-AzureRmPublicIpTag“ zum Hinzufügen von „Iptag“
 * Eigenschaft „DisableBgpRoutePropagation“ in „RouteTable“ und „effectiveRoute“ hinzugefügt.
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* Register-AzureRmProviderFeature: Fehlendes Beispiel in den Dokumenten hinzugefügt
-* Register-AzureRmResourceProvider: Fehlendes Beispiel in den Dokumenten hinzugefügt
+* Register-AzureRmProviderFeature: Fehlendes Beispiel in Dokumenten hinzugefügt
+* Register-AzureRmResourceProvider: Fehlendes Beispiel in Dokumenten hinzugefügt
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
 * Die folgenden Parameter in neuen und festgelegten Speicherkonto-Cmdlets sind veraltet: „EnableEncryptionService“ und „DisableEncryptionService“, da die Verschlüsselung ruhender Daten standardmäßig aktiviert ist und nicht deaktiviert werden kann.
@@ -625,7 +625,7 @@ Update-Module -Name AzureRM
   - Get-AzureRmComputeResourceSku zeigt Zoneninformationen an.
   - „Disable-AzureRmVmssDiskEncryption“ aktualisiert, um das Problem zu beheben: https://github.com/Azure/azure-powershell/issues/5038
   - -AsJob-Unterstützung wurde für Compute-Cmdlets mit langer Ausführungsdauer hinzugefügt. Ausgewählte Cmdlets können im Hintergrund ausgeführt werden und einen Auftrag zum Nachverfolgen und Kontrollieren des Fortschritts zurückgeben.
-    - Betroffene Cmdlets: Cmdlets „New-“, „Update-“, „Set-“, „Remove-“, „Start-“, „Restart-“, „Stop-“ für Virtual Machines und VM-Skalierungsgruppen
+    - Die betroffenen Cmdlets umfassen die Cmdlets New-, Update-, Set-, Remove-, Start-, Restart-, Stop- für virtuelle Computer und VM-Skalierungsgruppen.
     - Ein vereinfachter Parametersatz wurde zu New-AzureRmVM hinzugefügt, der einen virtuellen Computer und alle erforderlichen Ressourcen mithilfe intelligenter Standardwerte erstellt.
 * ContainerInstance
   - Azure-Containerinstanz-SDK 2017-10-01 wird angewendet.
@@ -639,20 +639,20 @@ Update-Module -Name AzureRM
 * DataFactories
     - Die Funktion zum Verschlüsseln von Anmeldeinformationen funktioniert jetzt sowohl bei aktiviertem (über das Netzwerk) als auch bei deaktiviertem Remotezugriff (lokaler Computer).
 * DataFactoryV2
-  - Zwei neue Cmdlets wurden hinzugefügt: „Update-AzureRmDataFactoryV2“ und „Stop-AzureRmDataFactoryV2PipelineRun“
+  - Zwei neue Cmdlets wurden hinzugefügt: Update-AzureRmDataFactoryV2 und Stop-AzureRmDataFactoryV2PipelineRun.
 * DataLakeAnalytics
   - Ein Parameter namens ScriptParameter wurde zu Submit-AzureRmDataLakeAnalyticsJob hinzugefügt.
     - Ausführliche Informationen zu ScriptParameter finden Sie mit Get-Help zu Submit-AzureRmDataLakeAnalyticsJob.
   - Für New-AzureRmDataLakeAnalyticsAccount wurde der Parameter MaxDegreeOfParallelism in MaxAnalyticsUnits geändert.
-    - Für den Parameter „MaxAnalyticsUnits“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelism
+    - Ein Alias wurde für den Parameter MaxAnalyticsUnits hinzugefügt: MaxDegreeOfParallelism.
   - Für New-AzureRmDataLakeAnalyticsComputePolicy wurde der Parameter MaxDegreeOfParallelismPerJob in MaxAnalyticsUnitsPerJob geändert.
-    - Für den Parameter „MaxAnalyticsUnitsPerJob“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelismPerJob
+    - Ein Alias wurde für den Parameter MaxAnalyticsUnitsPerJob hinzugefügt: MaxDegreeOfParallelismPerJob.
   - Für Set-AzureRmDataLakeAnalyticsAccount wurde der Parameter MaxDegreeOfParallelism in MaxAnalyticsUnits geändert.
-    - Für den Parameter „MaxAnalyticsUnits“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelism
+    - Ein Alias wurde für den Parameter MaxAnalyticsUnits hinzugefügt: MaxDegreeOfParallelism.
   - Für Submit-AzureRmDataLakeAnalyticsJob wurde der Parameter DegreeOfParallelism in AnalyticsUnits geändert.
-    - Für den Parameter „AnalyticsUnits“ wurde ein Alias hinzugefügt: DegreeOfParallelism
+    - Ein Alias wurde für den Parameter AnalyticsUnits hinzugefügt: DegreeOfParallelism.
   - Für Update-AzureRmDataLakeAnalyticsComputePolicy wurde der Parameter MaxDegreeOfParallelismPerJob in MaxAnalyticsUnitsPerJob geändert.
-    - Für den Parameter „MaxAnalyticsUnitsPerJob“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelismPerJob
+    - Ein Alias wurde für den Parameter MaxAnalyticsUnitsPerJob hinzugefügt: MaxDegreeOfParallelismPerJob.
 * MachineLearningCompute
   - Set-AzureRmMlOpCluster wurde hinzugefügt.
     - Aktualisiert die Clusteragentanzahl oder SSL-Konfiguration.
@@ -723,7 +723,7 @@ Update-Module -Name AzureRM
   - AzureRM.StreamAnalytics
 
 ## <a name="2017118---version-500"></a>08.11.2017 – Version 5.0.0
-* HINWEIS:  Hierbei handelt es sich um eine Version mit grundlegenden Änderungen. Eine vollständige Liste mit den grundlegenden Änderungen finden Sie im Migrationshandbuch (https://aka.ms/azps-migration-guide).
+* HINWEIS: Hierbei handelt es sich um eine Version mit grundlegenden Änderungen. Eine vollständige Liste mit den grundlegenden Änderungen finden Sie im Migrationshandbuch (https://aka.ms/azps-migration-guide).
 * Alle Cmdlets im AzureRM unterstützen jetzt die Onlinehilfe.
   - Führen Sie „Get-Help“ mit dem Parameter „-Online“ aus, um die Onlinehilfe in Ihrem Standardinternetbrowser zu öffnen.
 * AnalysisServices
@@ -759,7 +759,7 @@ Update-Module -Name AzureRM
     - Der Switch `RunElevated` wurde entfernt. Der Parameter `UserIdentity` wurde hinzugefügt und ersetzt `RunElevated`. Das entsprechende Verhalten kann erreicht werden, indem `PSUserIdentity` wie folgt konstruiert wird:
       - $autoUser = New-Object Microsoft.Azure.Commands.Batch.Models.PSAutoUserSpecification -ArgumentList @("Task", "Admin")
       - $userIdentity = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserIdentity $autoUser
-    - Der Parameter `AuthenticationTokenSettings` wurde hinzugefügt. Mit diesem Parameter können Sie angeben, dass der Batch-Dienst ein Authentifizierungstoken für die Aufgabe bereitstellen soll, wenn sie ausgeführt wird. Dadurch müssen keine Batch-Kontoschlüssel an die Aufgabe übergeben werden, um Anforderungen an den Batch-Dienst auszugeben.
+    - Parameter `AuthenticationTokenSettings` hinzugefügt Mit diesem Parameter können Sie angeben, dass der Batch-Dienst ein Authentifizierungstoken für die Aufgabe bereitstellen soll, wenn sie ausgeführt wird. Dadurch müssen keine Batch-Kontoschlüssel an die Aufgabe übergeben werden, um Anforderungen an den Batch-Dienst auszugeben.
     - Parameter `ContainerSettings` hinzugefügt
       - Mit diesem Parameter können Sie angeben, dass der Batch-Dienst die Aufgabe innerhalb eines Containers ausführen soll.
     - Parameter `OutputFiles` hinzugefügt
@@ -768,7 +768,7 @@ Update-Module -Name AzureRM
     - Parameter `UserAccounts` hinzugefügt
       - Dieser Parameter definiert Benutzerkonten, die auf den einzelnen Knoten im Pool erstellt werden.
     - `TargetLowPriorityComputeNodes` hinzugefügt und `TargetDedicated` in `TargetDedicatedComputeNodes` umbenannt.
-      - `TargetDedicated`-Alias für den Parameter `TargetDedicatedComputeNodes` erstellt.
+      - `TargetDedicated`-Alias für den Parameter `TargetDedicatedComputeNodes` erstellt
     - Parameter `NetworkConfiguration` hinzugefügt
       - Mit diesem Parameter können Sie die Netzwerkeinstellungen des Pools konfigurieren.
   * Parameter für `New-AzureBatchCertificate` aktualisiert
@@ -777,13 +777,13 @@ Update-Module -Name AzureRM
     - Der Parameter `Password` ist nun eine Zeichenfolge vom Typ `SecureString`.
   * Parameter für `Set-AzureBatchComputeNodeUser` aktualisiert
     - Der Parameter `Password` ist nun eine Zeichenfolge vom Typ `SecureString`.
-  * Parameter `Name` für `Get-AzureBatchNodeFile`, `Get-AzureBatchNodeFileContent` und `Remove-AzureBatchNodeFile` in `Path` umbenannt
+  * Parameter `Name` für `Path`, `Get-AzureBatchNodeFile` und `Get-AzureBatchNodeFileContent` in `Remove-AzureBatchNodeFile` umbenannt
     - `Name`-Alias für den Parameter `Path` erstellt
   * Objektänderungen
     - Die vollständige Liste finden Sie im Änderungsprotokoll von Batch.
   * Unterstützung für die Azure Active Directory-basierte Authentifizierung hinzugefügt.
-    - Rufen Sie zur Verwendung der Azure Active Directory-Authentifizierung mithilfe des Cmdlets `Get-AzureRmBatchAccount` ein `BatchAccountContext`-Objekt ab, und übergeben Sie `BatchAccountContext` an den Parameter `-BatchContext` eines Batch-Dienst-Cmdlets. Die Azure Active Directory-Authentifizierung ist für Konten mit `PoolAllocationMode = UserSubscription` obligatorisch.
-    - Für bereits vorhandene Konten oder neue Konten, die mit `PoolAllocationMode = BatchService` erstellt werden, können Sie weiterhin die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, indem Sie mithilfe des Cmdlets `Get-AzureRmBatchAccoutKeys` ein `BatchAccountContext`-Objekt abrufen.
+    - Rufen Sie zur Verwendung der Azure Active Directory-Authentifizierung mithilfe des Cmdlets `BatchAccountContext` ein `Get-AzureRmBatchAccount`-Objekt ab, und übergeben Sie `BatchAccountContext` an den Parameter `-BatchContext` eines Batch-Dienst-Cmdlets. Die Azure Active Directory-Authentifizierung ist für Konten mit `PoolAllocationMode = UserSubscription` obligatorisch.
+    - Für bereits vorhandene Konten oder neue Konten, die mit `PoolAllocationMode = BatchService` erstellt werden, können Sie weiterhin die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, indem Sie mithilfe des Cmdlets `BatchAccountContext` ein `Get-AzureRmBatchAccoutKeys`-Objekt abrufen.
 * Compute
   * Befehle der Azure Disk Encryption-Erweiterung
     - Neuer Parameter für „Set-AzureRmVmDiskEncryptionExtension“: „-EncryptFormatAll“ zum Verschlüsseln/Formatieren von Datenträgern

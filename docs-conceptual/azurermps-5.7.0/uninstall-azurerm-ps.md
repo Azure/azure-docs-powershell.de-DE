@@ -8,10 +8,10 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: cc0b6a4369116e92b8200ffbc0838d6ee2991263
-ms.sourcegitcommit: febbbd3f75c8dd1a296281d265289f015b6cb537
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "67037693"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Deinstallieren des Azure PowerShell-Moduls
@@ -25,10 +25,10 @@ Falls ein Fehler aufgetreten ist, wären wir Ihnen dankbar, wenn Sie ein [GitHub
 
 Falls Sie Azure PowerShell mithilfe des MSI-Pakets oder des Webplattform-Installers installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System durchführen.
 
-| Plattform | Anleitung |
+| Plattform | Instructions |
 |----------|--------------|
 | Windows 10 | Start > Einstellungen > Apps |
-| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
+| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
 
 Auf diesem Bildschirm sollte „Azure PowerShell“ in der Programmliste aufgeführt sein. Sie können die Anwendung dort deinstallieren.
 

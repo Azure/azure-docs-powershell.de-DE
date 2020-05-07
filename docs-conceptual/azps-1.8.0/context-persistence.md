@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.openlocfilehash: 0e8dd4f766307d9ab2e27e2cf8bec6bbd34f5e51
-ms.sourcegitcommit: 1cdff856d1d559b978aac6bc034dd2f99ac04afe
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "72791415"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell-Kontextobjekte
@@ -70,7 +70,7 @@ Ohne Angabe des Arguments `-Name` werden Name und ID des Abonnements als Kontext
 
 ## <a name="change-the-active-azure-context"></a>Ändern des aktiven Azure-Kontexts
 
-Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext?view=azps-1.8.0) geändert werden. `Set-AzContext` erstellt wie unter [Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen](#create-a-new-azure-context-from-subscription-information) beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
+Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext?view=azps-1.8.0) geändert werden. [ erstellt wie unter ](#create-a-new-azure-context-from-subscription-information)Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen`Set-AzContext` beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
 
 `Select-AzContext` ist nur für die Verwendung mit vorhandenen Azure-Kontexten vorgesehen und funktioniert ähnlich wie `Set-AzContext -Context`, ist aber für die Verwendung mit Piping konzipiert:
 
@@ -98,7 +98,7 @@ Der andere Hauptzweck von Kontexten mit Azure PowerShell-Cmdlets ist das Ausfü
 
 Azure-Kontexte werden standardmäßig für die Verwendung zwischen PowerShell-Sitzungen gespeichert. Dieses Verhalten kann wie folgt geändert werden:
 
-* Melden Sie sich mithilfe von `Connect-AzAccount` unter Verwendung von `-Scope Process` an.
+* Melden Sie sich mithilfe von `-Scope Process` unter Verwendung von `Connect-AzAccount` an.
 
   ```azurepowershell
   Connect-AzAccount -Scope Process

@@ -9,10 +9,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: a596e321d19cf157510418c150f51eb2532adb3c
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65535106"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Erstellen eines Azure-Dienstprinzipals mit Azure PowerShell
@@ -45,7 +45,7 @@ Nachdem Sie sich bei Ihrem Azure-Konto angemeldet haben, können Sie den Dienstp
 
 Mit dem Cmdlet `Get-AzureRmADApplication` können Sie Informationen zu Ihrer Anwendung ermitteln.
 
-```azurepowershell-interactive
+```powershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
@@ -65,11 +65,10 @@ ReplyUrls               : {}
 
 Das Cmdlet `New-AzureRmADServicePrincipal` dient zum Erstellen des Dienstprinzipals.
 
-```azurepowershell-interactive
+```powershell-interactive
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
-$securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
-New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
+New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $password
 ```
 
 ```output
@@ -80,7 +79,7 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 
 ### <a name="get-information-about-the-service-principal"></a>Abrufen von Informationen zum Dienstprinzipal
 
-```azurepowershell-interactive
+```powershell-interactive
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
@@ -97,9 +96,9 @@ Type                  : ServicePrincipal
 
 Nun können Sie sich als der neue Dienstprinzipal für die App anmelden. Verwenden Sie dabei die Werte für *appId* und *password*, die Sie angegeben haben. Geben Sie die Mandanten-ID für Ihr Konto an. Ihre Mandanten-ID wird angezeigt, wenn Sie sich mit Ihren persönlichen Anmeldeinformationen bei Azure anmelden.
 
-```azurepowershell-interactive
+```powershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
-Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Login-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 Führen Sie diesen Befehl in einer neuen PowerShell-Sitzung aus. Nach erfolgreicher Anmeldung wird eine Ausgabe wie die folgende angezeigt:
@@ -118,7 +117,7 @@ Glückwunsch! Die Anmeldeinformationen können zum Ausführen Ihrer App verwende
 ## <a name="managing-roles"></a>Verwalten von Rollen
 
 > [!NOTE]
-> Bei der rollenbasierten Zugriffssteuerung (Role-Based Access Control, RBAC) in Azure handelt es sich um ein Modell zum Definieren und Verwalten von Rollen für Benutzer- und Dienstprinzipale. Rollen sind bestimmte Berechtigungen zugeordnet, die bestimmen, welche Ressourcen ein Prinzipal lesen, aufrufen, schreiben oder verwalten kann. Weitere Informationen zu RBAC und Rollen finden Sie unter [ Integrierte Rollen für die rollenbasierte Zugriffssteuerung in Azure](/azure/active-directory/role-based-access-built-in-roles).
+> Bei der rollenbasierten Zugriffssteuerung (Role-Based Access Control, RBAC) in Azure handelt es sich um ein Modell zum Definieren und Verwalten von Rollen für Benutzer- und Dienstprinzipale. Rollen sind bestimmte Berechtigungen zugeordnet, die bestimmen, welche Ressourcen ein Prinzipal lesen, aufrufen, schreiben oder verwalten kann. Weitere Informationen zu RBAC und Rollen finden Sie unter [Integrierte Rollen für die rollenbasierte Zugriffssteuerung in Azure](/azure/active-directory/role-based-access-built-in-roles).
 
 Für die Verwaltung von Rollenzuweisungen stehen in Azure PowerShell folgende Cmdlets zur Verfügung:
 
@@ -131,7 +130,7 @@ Die Rolle **Leser** ist stärker eingeschränkt und bietet sich für Apps ohne S
 
 Im folgenden Beispiel fügen wir unserem vorherigen Beispiel die Rolle **Leser** hinzu und löschen die Rolle **Mitwirkender**:
 
-```azurepowershell-interactive
+```powershell-interactive
 New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
@@ -146,13 +145,13 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-```azurepowershell-interactive
+```powershell-interactive
 Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 So zeigen Sie die derzeit zugewiesenen Rollen an:
 
-```azurepowershell-interactive
+```powershell-interactive
 Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
@@ -180,7 +179,7 @@ Aus Sicherheitsgründen empfiehlt es sich, regelmäßig die Berechtigungen zu ü
 
 ### <a name="add-a-new-password-for-the-service-principal"></a>Hinzufügen eines neuen Kennworts für den Dienstprinzipal
 
-```azurepowershell-interactive
+```powershell-interactive
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
@@ -193,7 +192,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="get-a-list-of-credentials-for-the-service-principal"></a>Abrufen einer Liste mit Anmeldeinformationen für den Dienstprinzipal
 
-```azurepowershell-interactive
+```powershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
@@ -206,7 +205,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="remove-the-old-password-from-the-service-principal"></a>Entfernen des alten Kennworts für den Dienstprinzipal
 
-```azurepowershell-interactive
+```powershell-interactive
 Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
@@ -219,7 +218,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 
 ### <a name="verify-the-list-of-credentials-for-the-service-principal"></a>Überprüfen der Liste mit Anmeldeinformationen für den Dienstprinzipal
 
-```azurepowershell-interactive
+```powershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 

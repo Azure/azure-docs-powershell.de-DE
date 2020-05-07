@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81740149"
 ---
 # <a name="breaking-changes-for-az-100"></a>Grundlegende Änderungen für Az 1.0.0
@@ -58,7 +58,7 @@ In diesem Abschnitt werden die allgemeinen grundlegenden Änderungen beschrieben
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Änderungen von Cmdlet-Nomen
 
-Im AzureRM-Modul verwenden Cmdlets entweder `AzureRM` oder `Azure` als Nomenpräfix.  Az vereinfacht und normalisiert Cmdlet-Namen, sodass alle Cmdlets „Az“ als Nomenpräfix verwenden. Beispiel:
+Im AzureRM-Modul verwenden Cmdlets entweder `AzureRM` oder `Azure` als Nomenpräfix.  Az vereinfacht und normalisiert Cmdlet-Namen, sodass alle Cmdlets „Az“ als Nomenpräfix verwenden. Beispiel: 
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -125,7 +125,7 @@ Die Änderungen der Modulnamen bedeuten, dass alle Skripts, die `#Requires` oder
 
 #### <a name="migrating-requires-and-import-module-statements"></a>Migrieren von #Requires- und Import-Module-Anweisungen
 
-Skripts, für die `#Requires` oder `Import-Module` zum Deklarieren einer Abhängigkeit von AzureRM-Modulen verwendet wird, müssen aktualisiert werden, damit die neuen Modulnamen genutzt werden. Beispiel:
+Skripts, für die `#Requires` oder `Import-Module` zum Deklarieren einer Abhängigkeit von AzureRM-Modulen verwendet wird, müssen aktualisiert werden, damit die neuen Modulnamen genutzt werden. Beispiel: 
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute
@@ -260,7 +260,7 @@ In diesem Abschnitt werden bestimmte wichtige Änderungen für einzelne Module u
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- Die veralteten Eigenschaften `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier` und `FirewallAllowAzureIps` wurden aus dem `PSDataLakeStoreAccountBasic`-Objekt entfernt.  Alle Skripts, für die das von `Get-AzDataLakeStoreAccount` zurückgegebene `PSDatalakeStoreAccount`-Objekt verwendet wird, sollten nicht auf diese Eigenschaften verweisen.
+- Die veralteten Eigenschaften `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier` und `FirewallAllowAzureIps` wurden aus dem `PSDataLakeStoreAccountBasic`-Objekt entfernt.  Alle Skripts, für die das von `PSDatalakeStoreAccount` zurückgegebene `Get-AzDataLakeStoreAccount`-Objekt verwendet wird, sollten nicht auf diese Eigenschaften verweisen.
 
 ### <a name="azkeyvault-previously-azurermkeyvault"></a>Az.KeyVault (bisher AzureRM.KeyVault)
 

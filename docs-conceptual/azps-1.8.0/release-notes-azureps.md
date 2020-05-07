@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
 ms.openlocfilehash: 8a9a399f72ed9e3e9a3cbc09c8a4abaa91339c24
-ms.sourcegitcommit: f0f09eee03ef9dd7fe07432252a3dc8ca93e3a7b
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "71319306"
 ---
 ## <a name="180---april-2019"></a>1.8.0: April 2019
@@ -858,4 +858,4 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 * Neue Cmdlets „New-AzWebAppContainerPSSession“ und „Enter-WebAppContainerPSSession“ zum Initiieren einer PowerShell-Remotesitzung in einer Windows-Container-App
 
 ## <a name="020---september-2018"></a>0.2.0 – September 2018
- Erste Version
+ Erstrelease
