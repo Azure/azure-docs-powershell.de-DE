@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 9141f5640467722608cb7748f425ce3942668fb8
-ms.sourcegitcommit: 5bdedc77b27b66998387486761ec67ed9326f169
+ms.openlocfilehash: 4f74df6acaa05babc712b7b35737ce3001170b87
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346576"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82587991"
 ---
 # <a name="query-output-of-azure-powershell"></a>Abfrageausgabe von Azure PowerShell 
 
@@ -76,7 +76,7 @@ Die Ausgabe für `Select-Object` ist immer zur Anzeige der angeforderten Informa
 Einige Eigenschaften in der Ausgabe von Azure PowerShell-Cmdlets verwenden geschachtelte Objekte, z. B. die `StorageProfile`-Eigenschaft der Ausgabe von `Get-AzVM`. Um einen Wert aus einer geschachtelten Eigenschaft abzurufen, geben Sie einen Anzeigenamen und den vollständigen Pfad des Werts an, den Sie als Teil eines Wörterbucharguments für `Select-Object` überprüfen möchten:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -95,7 +95,7 @@ Jedes Wörterbuchargument wählt eine Eigenschaft des Objekts aus. Die zu extrah
 Mit dem Cmdlet `Where-Object` können Sie das Ergebnis auf der Grundlage eines beliebigen Eigenschaftswerts filtern (einschließlich geschachtelter Eigenschaften). Das nächste Beispiel zeigt, wie Sie mit `Where-Object` nach den Linux-VMs in einer Ressourcengruppe suchen.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
@@ -109,8 +109,8 @@ TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Suc
 Die Ergebnisse von `Select-Object` und `Where-Object` können aneinander weitergeleitet werden. Aus Leistungsgründen wird empfohlen, den `Where-Object`-Vorgang immer vor `Select-Object` zu platzieren:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+Get-AzVM -ResourceGroupName TestGroup |
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
     Select-Object Name,VmID,ProvisioningState
 ```
 

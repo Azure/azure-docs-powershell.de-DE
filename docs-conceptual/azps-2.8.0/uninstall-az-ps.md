@@ -8,10 +8,10 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: 772667032d421e32c6cd63abbcb686b4eab308e2
-ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "72814251"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Deinstallieren des Azure PowerShell-Moduls
@@ -23,10 +23,10 @@ Falls ein Fehler aufgetreten ist, wären wir Ihnen dankbar, wenn Sie ein [GitHub
 
 Falls Sie Azure PowerShell mithilfe des MSI-Pakets installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System ausführen.
 
-| Plattform | Anleitung |
+| Plattform | Instructions |
 |----------|--------------|
 | Windows 10 | Start > Einstellungen > Apps |
-| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
+| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
 
 Auf diesem Bildschirm sollte __Azure PowerShell__ in der Programmliste aufgeführt sein. Dies ist die App, die deinstalliert werden soll. Ist dieses Programm nicht aufgeführt, haben Sie für die Installation PowerShellGet verwendet und müssen die folgenden Anweisungen befolgen.
 
@@ -136,10 +136,10 @@ Wenn Sie sich bezüglich Ihrer ursprünglichen Installationsmethode nicht sicher
 
 Falls Sie die AzureRM-Module von Azure PowerShell mit dem MSI-Paket installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System durchführen.
 
-| Plattform | Anleitung |
+| Plattform | Instructions |
 |----------|--------------|
 | Windows 10 | Start > Einstellungen > Apps |
-| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
+| Windows 7 </br>Windows 8 | Start > Systemsteuerung > Programme > Programm deinstallieren |
 
 Auf diesem Bildschirm sollte __Azure PowerShell__ in der Programmliste aufgeführt sein. Dies ist die App, die deinstalliert werden soll. Ist dieses Programm nicht aufgeführt, haben Sie für die Installation PowerShellGet verwendet und müssen die folgenden Anweisungen befolgen.
 

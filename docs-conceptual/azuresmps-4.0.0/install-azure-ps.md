@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.openlocfilehash: a4911e72f687c07b31805c07fd23263a6b7f33b4
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75718796"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installieren des Azure PowerShell-Dienstverwaltungsmoduls
@@ -36,7 +36,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 Falls PowerShellGet nicht installiert ist, lesen Sie [Installieren von PowerShellGet](#how-to-get-powershellget).
 
-## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure Powershell
+## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure PowerShell
 
 Führen Sie über die Windows PowerShell-Konsole den folgenden Befehl als Administrator aus:
 

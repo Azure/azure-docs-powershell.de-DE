@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
 ms.openlocfilehash: e88752e0c997efc4f49161e358072803cb63450a
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445525"
 ---
 # <a name="migration-guide-for-az-300"></a>Migrationsleitfaden für Az 3.0.0
@@ -113,7 +113,7 @@ Version 2.0.1 des Moduls „Az.Batch“ ist mit früheren Versionen (Version 1.7
 ## <a name="compute"></a>Compute
 
 ### `New-AzDiskConfig`
-Für `New-AzDiskConfig` wird anstelle von `DiskSizeGB` der Parameter `UploadSizeInBytes` verwendet, wenn „CreateOption“ auf „Upload“ festgelegt ist.
+Für `UploadSizeInBytes` wird anstelle von `DiskSizeGB` der Parameter `New-AzDiskConfig` verwendet, wenn „CreateOption“ auf „Upload“ festgelegt ist.
 
 #### <a name="before"></a>vor
 ```powershell
