@@ -70,7 +70,7 @@ Ohne Angabe des Arguments `-Name` werden Name und ID des Abonnements als Kontext
 
 ## <a name="change-the-active-azure-context"></a>Ändern des aktiven Azure-Kontexts
 
-Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext) geändert werden. [ erstellt wie unter ](#create-a-new-azure-context-from-subscription-information)Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen`Set-AzContext` beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
+Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext) geändert werden. `Set-AzContext` erstellt wie unter [Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen](#create-a-new-azure-context-from-subscription-information) beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
 
 `Select-AzContext` ist nur für die Verwendung mit vorhandenen Azure-Kontexten vorgesehen und funktioniert ähnlich wie `Set-AzContext -Context`, ist aber für die Verwendung mit Piping konzipiert:
 
@@ -98,7 +98,7 @@ Der andere Hauptzweck von Kontexten mit Azure PowerShell-Cmdlets ist das Ausfü
 
 Azure-Kontexte werden standardmäßig für die Verwendung zwischen PowerShell-Sitzungen gespeichert. Dieses Verhalten kann wie folgt geändert werden:
 
-* Melden Sie sich mithilfe von `-Scope Process` unter Verwendung von `Connect-AzAccount` an.
+* Melden Sie sich mithilfe von `Connect-AzAccount` unter Verwendung von `-Scope Process` an.
 
   ```azurepowershell
   Connect-AzAccount -Scope Process

@@ -113,7 +113,7 @@ Version 2.0.1 des Moduls „Az.Batch“ ist mit früheren Versionen (Version 1.7
 ## <a name="compute"></a>Compute
 
 ### `New-AzDiskConfig`
-Für `UploadSizeInBytes` wird anstelle von `DiskSizeGB` der Parameter `New-AzDiskConfig` verwendet, wenn „CreateOption“ auf „Upload“ festgelegt ist.
+Für `New-AzDiskConfig` wird anstelle von `DiskSizeGB` der Parameter `UploadSizeInBytes` verwendet, wenn „CreateOption“ auf „Upload“ festgelegt ist.
 
 #### <a name="before"></a>vor
 ```powershell
