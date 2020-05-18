@@ -777,13 +777,13 @@ Update-Module -Name AzureRM
     - Der Parameter `Password` ist nun eine Zeichenfolge vom Typ `SecureString`.
   * Parameter für `Set-AzureBatchComputeNodeUser` aktualisiert
     - Der Parameter `Password` ist nun eine Zeichenfolge vom Typ `SecureString`.
-  * Parameter `Name` für `Path`, `Get-AzureBatchNodeFile` und `Get-AzureBatchNodeFileContent` in `Remove-AzureBatchNodeFile` umbenannt
+  * Parameter `Name` für `Get-AzureBatchNodeFile`, `Get-AzureBatchNodeFileContent` und `Remove-AzureBatchNodeFile` in `Path` umbenannt
     - `Name`-Alias für den Parameter `Path` erstellt
   * Objektänderungen
     - Die vollständige Liste finden Sie im Änderungsprotokoll von Batch.
   * Unterstützung für die Azure Active Directory-basierte Authentifizierung hinzugefügt.
-    - Rufen Sie zur Verwendung der Azure Active Directory-Authentifizierung mithilfe des Cmdlets `BatchAccountContext` ein `Get-AzureRmBatchAccount`-Objekt ab, und übergeben Sie `BatchAccountContext` an den Parameter `-BatchContext` eines Batch-Dienst-Cmdlets. Die Azure Active Directory-Authentifizierung ist für Konten mit `PoolAllocationMode = UserSubscription` obligatorisch.
-    - Für bereits vorhandene Konten oder neue Konten, die mit `PoolAllocationMode = BatchService` erstellt werden, können Sie weiterhin die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, indem Sie mithilfe des Cmdlets `BatchAccountContext` ein `Get-AzureRmBatchAccoutKeys`-Objekt abrufen.
+    - Rufen Sie zur Verwendung der Azure Active Directory-Authentifizierung mithilfe des Cmdlets `Get-AzureRmBatchAccount` ein `BatchAccountContext`-Objekt ab, und übergeben Sie `BatchAccountContext` an den Parameter `-BatchContext` eines Batch-Dienst-Cmdlets. Die Azure Active Directory-Authentifizierung ist für Konten mit `PoolAllocationMode = UserSubscription` obligatorisch.
+    - Für bereits vorhandene Konten oder neue Konten, die mit `PoolAllocationMode = BatchService` erstellt werden, können Sie weiterhin die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, indem Sie mithilfe des Cmdlets `Get-AzureRmBatchAccoutKeys` ein `BatchAccountContext`-Objekt abrufen.
 * Compute
   * Befehle der Azure Disk Encryption-Erweiterung
     - Neuer Parameter für „Set-AzureRmVmDiskEncryptionExtension“: „-EncryptFormatAll“ zum Verschlüsseln/Formatieren von Datenträgern

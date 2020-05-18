@@ -58,7 +58,7 @@ In diesem Abschnitt werden die allgemeinen grundlegenden Änderungen beschrieben
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Änderungen von Cmdlet-Nomen
 
-Im AzureRM-Modul verwenden Cmdlets entweder `AzureRM` oder `Azure` als Nomenpräfix.  Az vereinfacht und normalisiert Cmdlet-Namen, sodass alle Cmdlets „Az“ als Nomenpräfix verwenden. Beispiel: 
+Im AzureRM-Modul verwenden Cmdlets entweder `AzureRM` oder `Azure` als Nomenpräfix.  Az vereinfacht und normalisiert Cmdlet-Namen, sodass alle Cmdlets „Az“ als Nomenpräfix verwenden. Beispiel:
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -125,7 +125,7 @@ Die Änderungen der Modulnamen bedeuten, dass alle Skripts, die `#Requires` oder
 
 #### <a name="migrating-requires-and-import-module-statements"></a>Migrieren von #Requires- und Import-Module-Anweisungen
 
-Skripts, für die `#Requires` oder `Import-Module` zum Deklarieren einer Abhängigkeit von AzureRM-Modulen verwendet wird, müssen aktualisiert werden, damit die neuen Modulnamen genutzt werden. Beispiel: 
+Skripts, für die `#Requires` oder `Import-Module` zum Deklarieren einer Abhängigkeit von AzureRM-Modulen verwendet wird, müssen aktualisiert werden, damit die neuen Modulnamen genutzt werden. Beispiel:
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute
@@ -260,7 +260,7 @@ In diesem Abschnitt werden bestimmte wichtige Änderungen für einzelne Module u
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- Die veralteten Eigenschaften `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier` und `FirewallAllowAzureIps` wurden aus dem `PSDataLakeStoreAccountBasic`-Objekt entfernt.  Alle Skripts, für die das von `PSDatalakeStoreAccount` zurückgegebene `Get-AzDataLakeStoreAccount`-Objekt verwendet wird, sollten nicht auf diese Eigenschaften verweisen.
+- Die veralteten Eigenschaften `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier` und `FirewallAllowAzureIps` wurden aus dem `PSDataLakeStoreAccountBasic`-Objekt entfernt.  Alle Skripts, für die das von `Get-AzDataLakeStoreAccount` zurückgegebene `PSDatalakeStoreAccount`-Objekt verwendet wird, sollten nicht auf diese Eigenschaften verweisen.
 
 ### <a name="azkeyvault-previously-azurermkeyvault"></a>Az.KeyVault (bisher AzureRM.KeyVault)
 
