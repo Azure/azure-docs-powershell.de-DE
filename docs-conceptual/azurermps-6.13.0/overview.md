@@ -1,19 +1,15 @@
 ---
 title: Übersicht über Azure PowerShell | Microsoft-Dokumentation
 description: Eine Übersicht über Azure PowerShell mit Links zur Installation und Konfiguration.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.manager: carmonm
 ms.date: 12/20/2018
-ms.openlocfilehash: a5c5504aa4c2932582df9e4a40b4950d5f999cbd
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 91607252c33deb05efebb2d02608084a4b9c7b35
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035845"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83385557"
 ---
 # <a name="overview-of-azure-powershell"></a>Übersicht über Azure PowerShell
 
@@ -37,7 +33,7 @@ Falls Sie mit PowerShell noch nicht vertraut sind, kann es hilfreich sein, eine 
 * [Installieren von PowerShell](/powershell/scripting/install/installing-windows-powershell)
 * [Skripterstellung mit PowerShell](/powershell/scripting/powershell-scripting)
 
-Empfehlenswert ist auch folgendes Video: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (PowerShell-Grundlagen – Teil 1: Erste Schritte mit PowerShell).
+Empfehlenswert ist auch folgendes Video: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (PowerShell-Grundlagen – Teil 1: Erste Schritte mit PowerShell)
 
 ## <a name="build-your-skills-with-microsoft-learn"></a>Erweitern Ihrer Fähigkeiten mit Microsoft Learn
 

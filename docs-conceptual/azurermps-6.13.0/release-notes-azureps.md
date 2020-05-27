@@ -1,19 +1,16 @@
 ---
 title: Azure PowerShell-Änderungsprotokoll | Microsoft-Dokumentation
 description: Hierbei handelt es sich um einen Verlauf der Änderungen, die in der neuesten Version an Azure PowerShell vorgenommen wurden.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
-ms.openlocfilehash: eecd66ddf433cc2543ceeaef1519d69179f2f099
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 8aa0462af97877e0d20fe898ddd927a6d2850dea
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534456"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387325"
 ---
 # <a name="release-notes"></a>Versionshinweise
 
@@ -168,10 +165,10 @@ Hierbei handelt es sich um eine Liste der Änderungen, die in dieser Version an 
 
 #### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
 * Unterstützung für VNET-Regeln hinzugefügt
-    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Ruft die VNET-Regel für Azure Data Lake Store ab oder listet sie auf.
-    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Fügt dem angegebenen Data Lake Store-Konto eine VNET-Regel hinzu.
-    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändert die angegebene VNET-Regel im angegebenen Data Lake Store-Konto.
-    - Remove-AzureRmDataLakeStoreVirtualNetworkRule: Löscht eine VNET-Regel für Azure Data Lake Store.
+    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Dient zum Abrufen oder Auflisten der Azure Data Lake Store-Regel für das virtuelle Netzwerk.
+    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Fügt dem angegebenen Data Lake Store-Konto eine Regel für das virtuelle Netzwerk hinzu.
+    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändert die angegebene Regel für das virtuelle Netzwerk in das angegebene Data Lake Store-Konto.
+    - Remove-AzureRmDataLakeStoreVirtualNetworkRule: Dient zum Löschen der Azure Data Lake Store-Regel für das virtuelle Netzwerk.
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert, Protokollwert wird jetzt an Back-End übergeben.
@@ -273,7 +270,7 @@ Hierbei handelt es sich um eine Liste der Änderungen, die in dieser Version an 
   - Set-AzureRmLoadBalancerOutboundRuleConfig
   - Remove-AzureRmLoadBalancerOutboundRuleConfig
 * Neue HostedWorkloads-Eigenschaft für PSNetworkInterface hinzugefügt
-* Neue Cmdlets für Feature: Azure Firewall über ARM
+* Neue Cmdlets für Funktion hinzugefügt: Azure Firewall über ARM
   - Get-AzureRmFirewall hinzugefügt
   - Set-AzureRmFirewall hinzugefügt
   - New-AzureRmFirewall hinzugefügt
@@ -325,9 +322,9 @@ Hierbei handelt es sich um eine Liste der Änderungen, die in dieser Version an 
   - New-AzureRmLoadBalancerFrontendIpConfig
   - New-AzureRmNetworkInterface
 * Cmdlets für die Subnetzdelegierung hinzufügen.
-  - New-AzureRmDelegation: Erstellt eine neue Delegierung, die einem Subnetz hinzugefügt werden kann
-  - Remove-AzureRmDelegation: Nutzt ein Subnetz und entfernt den bereitgestellten Delegierungsnamen aus diesem Subnetz
-  - Add-AzureRmDelegation: Nutzt ein Subnetz und fügt den angegebenen Dienstnamen diesem Subnetz als Delegierung hinzu
+  - New-AzureRmDelegation: Erstellt eine neue Delegierung, die einem Subnetz hinzugefügt werden kann.
+  - Remove-AzureRmDelegation: Nutzt ein Subnetz und entfernt den bereitgestellten Delegierungsnamen aus diesem Subnetz.
+  - Add-AzureRmDelegation: Nutzt ein Subnetz und fügt diesem Subnetz den angegebenen Dienstnamen als Delegierung hinzu
   - Get-AzureRmDelegation
   - Get-AzureRmAvailableServiceDelegations
 
@@ -366,7 +363,7 @@ Hierbei handelt es sich um eine Liste der Änderungen, die in dieser Version an 
     - Lock-AzureRmStorageContainerImmutabilityPolicy
 
 #### <a name="azurermwebsites"></a>AzureRM.Websites
-* Zwei neue Cmdlets hinzugefügt: Get-AzureRmDeletedWebApp und Restore-AzureRmDeletedWebApp
+* Zwei neue Cmdlets wurden hinzugefügt: Get-AzureRmDeletedWebApp und Restore-AzureRmDeletedWebApp.
 * New-AzureRmAppServicePlan -HyperV-Switch für „App Service-Plan erstellen“ mit Windows-Container hinzugefügt
 * New-AzureRmWebApp/New-AzureRmWebAppSlot/Set-AzureRmWebApp/Set-AzureRmWebAppSlot: Neue Parameter (–ContainerRegistryUser string -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment) für die Erstellung und Verwaltung der Windows-Container-App hinzugefügt
 

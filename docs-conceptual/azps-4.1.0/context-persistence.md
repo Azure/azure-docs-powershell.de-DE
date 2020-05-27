@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie Azure-Anmeldeinformationen und andere In
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
-ms.openlocfilehash: d93d7ee0ac88d797b04080e8b96160b4241eaf92
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: c79d1d634d5b76b2c6ab6b6ab309c2d49f9f7678
+ms.sourcegitcommit: 10ec909100a70acec94d42f6084e7bf0342c6854
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387121"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630927"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell-Kontextobjekte
 
@@ -40,7 +40,7 @@ Get-AzContext -ListAvailable
 Oder rufen Sie einen Kontext anhand des Namens ab:
 
 ```azurepowershell-interactive
-$context = Get-Context -Name "mycontext"
+$context = Get-AzContext -Name "mycontext"
 ```
 
 Kontextnamen können sich vom Namen des zugeordneten Abonnements unterscheiden.
@@ -50,7 +50,7 @@ Kontextnamen können sich vom Namen des zugeordneten Abonnements unterscheiden.
 
 ## <a name="create-a-new-azure-context-from-subscription-information"></a>Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen
 
-Mit dem Cmdlet [Set-AzContext](/powershell/module/Az.Accounts/Set-AzContext?view=azps-1.8.0) können Sie neue Azure-Kontexte erstellen und sie als aktiven Kontext festlegen.
+Mit dem Cmdlet [Set-AzContext](/powershell/module/Az.Accounts/Set-AzContext) können Sie neue Azure-Kontexte erstellen und sie als aktiven Kontext festlegen.
 Am einfachsten lässt sich ein neuer Azure-Kontext auf der Grundlage vorhandener Abonnementinformationen erstellen. Das Cmdlet akzeptiert das Ausgabeobjekt von `Get-AzSubscription` als weitergeleiteten Wert und konfiguriert einen neuen Azure-Kontext:
 
 ```azurepowershell-interactive
@@ -67,7 +67,7 @@ Ohne Angabe des Arguments `-Name` werden Name und ID des Abonnements als Kontext
 
 ## <a name="change-the-active-azure-context"></a>Ändern des aktiven Azure-Kontexts
 
-Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext?view=azps-1.8.0) geändert werden. `Set-AzContext` erstellt wie unter [Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen](#create-a-new-azure-context-from-subscription-information) beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
+Der aktive Azure-Kontext kann sowohl mit `Set-AzContext` als auch mit [Select-AzContext](/powershell/module/az.accounts/set-azcontext) geändert werden. `Set-AzContext` erstellt wie unter [Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen](#create-a-new-azure-context-from-subscription-information) beschrieben einen neuen Azure-Kontext für ein Abonnement, sofern noch keiner vorhanden ist, und verwendet diesen dann als aktiven Kontext.
 
 `Select-AzContext` ist nur für die Verwendung mit vorhandenen Azure-Kontexten vorgesehen und funktioniert ähnlich wie `Set-AzContext -Context`, ist aber für die Verwendung mit Piping konzipiert:
 

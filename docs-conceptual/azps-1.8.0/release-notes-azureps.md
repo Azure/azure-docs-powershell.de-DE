@@ -1,18 +1,15 @@
 ---
 title: Versionshinweise zu Azure PowerShell
 description: Hier erfahren Sie mehr über die aktuellen Updates für die Azure PowerShell-Module.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 8a9a399f72ed9e3e9a3cbc09c8a4abaa91339c24
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "71319306"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386968"
 ---
 ## <a name="180---april-2019"></a>1.8.0: April 2019
 ### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion

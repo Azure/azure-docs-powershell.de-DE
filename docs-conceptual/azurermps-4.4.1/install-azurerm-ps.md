@@ -1,18 +1,15 @@
 ---
 title: Installieren und Konfigurieren von Azure PowerShell | Microsoft-Dokumentation
 description: Hier erfahren Sie, wie Sie Azure PowerShell für die erste Verwendung installieren und konfigurieren.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: 7b099fead7cb985fc8f7e6fed55b8c1107caa0d9
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 6f894546364e6a5ae06e1915a166edb258ccc698
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75720377"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386747"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installieren von Azure PowerShell unter Windows mit PowerShellGet
 
@@ -59,7 +56,7 @@ Falls PowerShellGet nicht installiert ist, lesen Sie die Informationen im Abschn
 > [!IMPORTANT]
 > Das in diesem Dokument beschriebene Modul „AzureRM“ verwendet .NET Framework. Dadurch ist es nicht mit PowerShell 6.0 kompatibel, das .NET Core verwendet. Wenn Sie PowerShell 6.0 verwenden, befolgen Sie die [Installationsanweisungen für macOS und Linux](install-azurermps-maclinux.md).
 
-## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure PowerShell
+## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure Powershell
 
 Für die Installation von Azure PowerShell aus dem PowerShell-Katalog sind erhöhte Rechte erforderlich. Führen Sie den folgenden Befehl in einer PowerShell-Sitzung mit erhöhten Rechten aus:
 

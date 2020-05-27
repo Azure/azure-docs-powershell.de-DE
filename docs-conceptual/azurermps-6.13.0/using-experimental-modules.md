@@ -1,18 +1,15 @@
 ---
 title: Verwenden experimenteller Azure PowerShell-Module
 description: Grundlegendes zur Philosophie und Verwendung experimenteller Azure PowerShell-Module.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 11847ca2fe09ebeb48f962eab6dac2be06bd8805
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 2c52dec39bdc656c7a2b17c547ec5f87ac659fa1
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534349"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387291"
 ---
 # <a name="use-experimental-azure-powershell-modules"></a>Verwenden von experimentellen Azure PowerShell-Modulen
 
@@ -69,9 +66,9 @@ Die zentralen Verbesserungen gelten als naheliegend, und zur Implementierung die
 
 - Kürzere Namen: Gilt für die Namen von Cmdlets (beispielsweise `New-AzureRmVM` => `New-AzVm`) und Parametern (beispielsweise `-ResourceGroupName` => `-Rg`). Verwenden Sie Aliase, um die Kompatibilität mit älteren Cmdlets zu gewährleisten. Geben Sie _abwärtskompatible_ Parametersätze an.
 
-- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel: 
+- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel:
   - Ressourcengruppe
-  - Location
+  - Standort
   - Abhängige Ressourcen
 
 ### <a name="experimental-improvements"></a>Experimentelle Verbesserungen

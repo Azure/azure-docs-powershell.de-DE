@@ -1,18 +1,15 @@
 ---
 title: Alle Änderungen von AzureRM zum Azure PowerShell Az-Modul 1.0.0
 description: Dieser Migrationsleitfaden enthält eine Liste mit grundlegenden Änderungen, die in Az-Version 1 an Azure PowerShell vorgenommen wurden.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 6c2d681144fe561e734a247c44046e3dadb78083
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81445542"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387716"
 ---
 # <a name="breaking-changes-for-az-100"></a>Grundlegende Änderungen für Az 1.0.0
 

@@ -1,18 +1,15 @@
 ---
 title: Abfragen der Ausgabe von Azure PowerShell-Cmdlets
 description: Hier erfahren Sie, wie Sie in Azure Ressourcenabfragen ausführen und die Ergebnisse formatieren.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: b6f0b01fa38ae4484fe9706e739b12b229b57661
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 0900b060bc83392c538b0a5d1a8949c51925d66a
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534499"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387257"
 ---
 # <a name="query-output-of-azure-powershell-cmdlets"></a>Abfragen der Ausgabe von Azure PowerShell-Cmdlets
 
