@@ -4,13 +4,14 @@ description: Hier erfahren Sie mehr über die aktuellen Updates für die Azure P
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 34b21292ccc47bb53b6609cd637ef18338a45cd3
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386968"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121459"
 ---
+# <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 ## <a name="180---april-2019"></a>1.8.0: April 2019
 ### <a name="highlights-since-the-last-major-release"></a>Highlights seit der letzten Hauptversion
 * Allgemeine Verfügbarkeit des `Az`-Moduls
@@ -48,7 +49,7 @@ ms.locfileid: "83386968"
 * Hilfetext für Endpunkt aktualisiert, um anzugeben, dass Ressourcen erstellt werden müssen, bevor die Cmdlets zum Erstellen/Aktualisieren von Ereignisabonnements verwendet werden
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt 
+* Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.
@@ -138,7 +139,7 @@ ms.locfileid: "83386968"
 
 #### <a name="azcompute"></a>Az.Compute
 * Parameter „HyperVGeneration“ zu „New-AzDiskConfig“ und „New-AzSnapshotConfig“ hinzugefügt
-* Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten 
+* Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * Problem im Parameter „-Command“ von „New-AzContainerGroup“ behoben, das dazu führte, dass ein nachgestelltes leeres Argument hinzugefügt wurde
@@ -220,7 +221,7 @@ ms.locfileid: "83386968"
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte 
+* ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte
 
 ## <a name="150---march-2019"></a>1.5.0: März 2019
 #### <a name="azaccounts"></a>Az.Accounts
@@ -289,7 +290,7 @@ ms.locfileid: "83386968"
 * Cmdlets zum Auflisten und Wiederherstellen gelöschter ADL-Elemente hinzugefügt
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt 
+* Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Kennzeichnung in „Set-AzKeyVaultSecret“ korrigiert
@@ -317,8 +318,8 @@ ms.locfileid: "83386968"
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * Zusätzliche Unterstützung für Datenquelle von „New-ApplicationInsights“ und „Get-ApplicationInsights“ hinzugefügt.
-    - Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt. 
-    - Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“. 
+    - Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt.
+    - Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“.
 
 #### <a name="azresources"></a>Az.Resources
 * Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8166
@@ -349,9 +350,9 @@ Allgemeine Verfügbarkeit für Az.AnalysisServices-Modul
 Allgemeine Verfügbarkeit für Az.RecoveryServices-Modul.
 
 #### <a name="azresources"></a>Az.Resources
-* Kennzeichnung für Ressourcengruppen korrigiert 
+* Kennzeichnung für Ressourcengruppen korrigiert
     - Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8166
-* Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird 
+* Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird
     - Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8235
 
 #### <a name="azsql"></a>Az.Sql
@@ -656,7 +657,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp und Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp und Set-AzureRmWebAppSlot
     - Neuen Parameter (-AzureStoragePath) zum Angeben von Azure Storage-Pfaden hinzugefügt, die in Windows- und Linux-Container-Apps bereitgestellt werden sollen. Verwenden Sie die Ausgabe des neuen Cmdlets New-AzureRmWebAppAzureStoragePath als Parameter zum Festlegen der Azure Storage-Pfade.
 
 ## <a name="061---november-2018"></a>0.6.1 – November 2018
@@ -684,7 +685,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 ### <a name="aznetwork"></a>Az.Network
 * Folgende Cmdlets hinzugefügt: New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
 * ICMP wieder unterstützten AzureFirewall-Netzwerkprotokollen hinzugefügt
-* Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt 
+* Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt
 * Probleme mit Arbeitsspeicherauslastung in der VirtualNetwork-Zuordnung behoben
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -816,7 +817,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
     - Start-AzureStorageFileCopy
 * Der Abruf der Speicherressourcennutzung eines bestimmten Standorts wird jetzt unterstützt, und das Hinzufügen einer Warnmeldung für den Abruf der globalen Speicherressourcennutzung ist überflüssig.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * „Get-AzCognitiveServicesAccountSkus“ wird ohne vorhandenes Konto unterstützt.
 

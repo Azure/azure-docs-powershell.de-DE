@@ -4,13 +4,14 @@ description: Hier erfahren Sie mehr über die aktuellen Updates für die Azure P
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 0fc897579e8caef999c337303428fd12740c3606
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: bcbb78809c2db63d665dc0c3d05e0614acce6045
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386101"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122155"
 ---
+# <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 ## <a name="280---october-2019"></a>2.8.0: Oktober 2019
 ### <a name="general"></a>Allgemein
 * Az.HealthcareApis-Release 1.0.0
@@ -23,7 +24,7 @@ ms.locfileid: "83386101"
     - Behebung des Problems: https://github.com/Azure/azure-powershell/issues/10068
 
 #### <a name="azautomation"></a>Az.Automation
-* Cmdlet „New-AzureAutomationSoftwareUpdateConfiguration“ für den Parameter für die Linux-Neustarteinstellung korrigiert 
+* Cmdlet „New-AzureAutomationSoftwareUpdateConfiguration“ für den Parameter für die Linux-Neustarteinstellung korrigiert
 
 #### <a name="azbatch"></a>Az.Batch
 * **Get-AzBatchNodeAgentSku** ist veraltet und wird in Version 2.0.0 durch **Get-AzBatchSupportImage** ersetzt.
@@ -31,7 +32,7 @@ ms.locfileid: "83386101"
 #### <a name="azcompute"></a>Az.Compute
 * Parameter „Priority“, „EvictionPolicy“ und „MaxPrice“ zu den Cmdlets „“New-AzVM“ und „New-AzVmss“ hinzugefügt
 * Warnmeldung und Hilfedokument für die Cmdlets „Add-AzVMAdditionalUnattendContent“ und „Add-AzVMSshPublicKey“ korrigiert
-* Ausnahme „-skipVmBackup“ Linux-VMs mit verwalteten Datenträgern für „Set-AzVMDiskEncryptionExtension“ korrigiert 
+* Ausnahme „-skipVmBackup“ Linux-VMs mit verwalteten Datenträgern für „Set-AzVMDiskEncryptionExtension“ korrigiert
 * Fehler beim Aktualisieren von Verschlüsselungseinstellungen in „Set-AzVMDiskEncryptionExtension“ korrigiert (zweistufiges Szenario)
 
 #### <a name="azdatafactory"></a>Az.DataFactory
@@ -50,7 +51,7 @@ ms.locfileid: "83386101"
 
 #### <a name="aziothub"></a>Az.IotHub
 * Neue Routingquelle hinzugefügt: DigitalTwinChangeEvents
-* Kleinere Fehlerbehebung: „Get-AzIothub“ gibt „subscriptionId“ nicht zurück. 
+* Kleinere Fehlerbehebung: „Get-AzIothub“ gibt „subscriptionId“ nicht zurück.
 
 #### <a name="azmonitor"></a>Az.Monitor
 * Neue Aktionsgruppenempfänger für „New-AzActionGroupReceiver“ hinzugefügt:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
@@ -148,7 +149,7 @@ ms.locfileid: "83386101"
 * Fehler beim Bestimmen des Bereichstyps für „Set-AzActionRule“ behoben
 
 #### <a name="aznetwork"></a>Az.Network
-* Fehlerhaftes Beispiel in der Referenzdokumentation zu „New-AzApplicationGateway“ korrigiert 
+* Fehlerhaftes Beispiel in der Referenzdokumentation zu „New-AzApplicationGateway“ korrigiert
 * Hinweis in der Referenzdokumentation zu „Get-AzNetworkWatcherPacketCapture“ zum Abrufen aller Eigenschaften für eine Paketerfassung hinzugefügt
 * Beispiel in der Referenzdokumentation zu „Test-AzNetworkWatcherIPFlow“ korrigiert, um die Netzwerkadapter ordnungsgemäß aufzulisten
 * Cloudausnahmeanalyse verbessert, um ggf. zusätzliche Details anzuzeigen
@@ -284,7 +285,7 @@ ms.locfileid: "83386101"
     - Parameter „PublicIpAddress“ ausgemustert, da er auf Serverseite nie verwendet wurde
     - Optionaler Parameter „Primary“ hinzugefügt, der angibt, ob die aktuelle IP-Konfiguration die primäre ist oder nicht
 * Verbesserte Verarbeitung der Anforderungsfehlerausnahme aus dem SDK: Behebt das Problem, dass vorherige SDK-Ausnahmen nicht richtig behandelt wurden, was dazu führt, dass Schlüsselfehlerdetails nicht angezeigt werden.
-* Validierungslogik für Ipv6-IP-Präfix angepasst, damit auf die richtige IPv6-Präfixlänge geprüft wird 
+* Validierungslogik für Ipv6-IP-Präfix angepasst, damit auf die richtige IPv6-Präfixlänge geprüft wird
 * „Get-AzVirtualNetworkSubnetConfig“ aktualisiert: Parametersatz zum Abrufen nach Subnetzressourcen-ID hinzugefügt
 * Aktualisierte Beschreibung des Location-Parameters für „AzNetworkServiceTag“
 
@@ -307,7 +308,7 @@ ms.locfileid: "83386101"
 #### <a name="azservicebus"></a>Az.ServiceBus
 * Behebung des Problems #9658: Tippfehler für Parameter „VirtualNetworkRule“ in „Set-AzServiceBusNetworkRuleSet“
 * Behebung des Problems #9786: Erstellen einer Regel mit Rechten, die nur das Lauschen zulassen
-* Neuer Befehl „Test-AzServiceBusNameAvailability“ zum Überprüfen der Verfügbarkeit des Namens für Warteschlange und Thema hinzugefügt 
+* Neuer Befehl „Test-AzServiceBusNameAvailability“ zum Überprüfen der Verfügbarkeit des Namens für Warteschlange und Thema hinzugefügt
 
 #### <a name="azservicefabric"></a>Az.ServiceFabric
 * Fehler bei Cmdlets zum Hinzufügen des Knotentyps korrigiert:
@@ -334,10 +335,10 @@ ms.locfileid: "83386101"
 * Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird
 
 #### <a name="azapplicationinsights"></a>Az.ApplicationInsights
-* Tippfehler im Beispiel in der Dokumentation zu „Remove-AzApplicationInsightsApiKey“ korrigiert 
+* Tippfehler im Beispiel in der Dokumentation zu „Remove-AzApplicationInsightsApiKey“ korrigiert
 
 #### <a name="azautomation"></a>Az.Automation
-* Tippfehler in der Ressourcenzeichenfolge korrigiert 
+* Tippfehler in der Ressourcenzeichenfolge korrigiert
 
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * Unterstützung für NetworkRuleSet hinzugefügt
@@ -398,7 +399,7 @@ ms.locfileid: "83386101"
     - „New-AzApplicationGatewayProbeConfig“ aktualisiert: Optionaler Parameter „Port“ hinzugefügt, der zum Testen des Back-End-Servers verwendet wird. Dieser Parameter gilt für Standard_V2 und WAF_V2 SKU.
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
-* Standardversion für gespeicherte Suchvorgänge auf 1 aktualisiert 
+* Standardversion für gespeicherte Suchvorgänge auf 1 aktualisiert
 * Verarbeitung des regulären NULL-Ausdrucks in benutzerdefinierten Protokollen korrigiert
 
 #### <a name="azrecoveryservices"></a>Az.RecoveryServices
@@ -552,7 +553,7 @@ ms.locfileid: "83386101"
     - New-AzureRmEventGridDomainTopic:
         - Erstellt ein neues Azure Event Grid-Domänenthema.
     - Get-AzureRmEventGridDomainTopic
-        - Ruft die Details eines Event Grid-Domänenthemas oder eine Liste aller Event Grid-Domänenthemen unter der jeweiligen Event Grid-Domäne im aktuellen Azure-Abonnement ab. 
+        - Ruft die Details eines Event Grid-Domänenthemas oder eine Liste aller Event Grid-Domänenthemen unter der jeweiligen Event Grid-Domäne im aktuellen Azure-Abonnement ab.
     - Remove-AzureRmEventGridDomainTopic:
         - Entfernt ein vorhandenes Azure Event Grid-Domänenthema.
 * Aktualisierte Cmdlets:
@@ -564,7 +565,7 @@ ms.locfileid: "83386101"
             - Ablaufdatum des Ereignisabonnements
             - Erweiterte Filterparameter
         - Neue Enumeration für „servicebusqueue“ als Ziel hinzugefügt
-        - Verwendung der Option „All“ in „-IncludedEventType“ gesperrt und wie folgt ersetzt 
+        - Verwendung der Option „All“ in „-IncludedEventType“ gesperrt und wie folgt ersetzt
     - Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:
         - Neue optionale Parameter („Top“, „ODataQuery“ und „NextLink“) zur Unterstützung der Ergebnispaginierung und -filterung hinzugefügt
     - Remove-AzureRmEventGridSubscription
@@ -582,11 +583,11 @@ ms.locfileid: "83386101"
     - Neue Cmdlets
         - Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 * AvailablePrivateEndpointType
-    - Neue Cmdlets 
+    - Neue Cmdlets
         - Get-AzAvailablePrivateEndpointType
 * „PrivatePrivateLinkService“ hinzugefügt
-    - Neue Cmdlets 
-        - Get-AzPrivateLinkService 
+    - Neue Cmdlets
+        - Get-AzPrivateLinkService
         - New-AzPrivateLinkService
         - Remove-AzPrivateLinkService
         - New-AzPrivateLinkServiceIpConfig
@@ -615,8 +616,8 @@ ms.locfileid: "83386101"
         - Parameter „-PublicIpAddress“ hinzugefügt, der ein oder mehre öffentliche IP-Adressobjekte akzeptiert
         - Parameter „- VirtualNetwork“ hinzugefügt, der ein Virtual Network-Objekt akzeptiert
         - Methoden „AddPublicIpAddress“ und „RemovePublicIpAddress“ für Firewallobjekte hinzugefügt (akzeptieren ein öffentliches IP-Adressobjekt als Eingabe)
-        - Parameter „-PublicIpName“ und „-VirtualNetworkName“ als veraltet markiert 
-* Folgende Befehle für das Feature aktualisiert: VpnClient-AAD-Authentifizierungsoptionen auf die Gatewayressource des virtuellen Netzwerkgateways festgelegt 
+        - Parameter „-PublicIpName“ und „-VirtualNetworkName“ als veraltet markiert
+* Folgende Befehle für das Feature aktualisiert: VpnClient-AAD-Authentifizierungsoptionen auf die Gatewayressource des virtuellen Netzwerkgateways festgelegt
     - „New-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt
     - „Set-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt.
     - „Set-AzVirtualNetworkGateway“ aktualisiert: Optionaler Switch-Parameter „RemoveAadAuthentication“ zum Entfernen von VpnClient-AAD-Authentifizierungsoptionen aus dem Gateway hinzugefügt
@@ -711,17 +712,17 @@ ms.locfileid: "83386101"
     - **Get-AzApiManagementSchema**: Abrufen des in der API konfigurierten Schemas
     - **Remove-AzApiManagementSchema**: Entfernen des in der API konfigurierten Schemas
     - **Set-AzApiManagementSchema**: Aktualisieren des in der API konfigurierten Schemas
-* Es wurde ein neues Cmdlet zum Generieren eines Benutzertokens erstellt 
+* Es wurde ein neues Cmdlet zum Generieren eines Benutzertokens erstellt
     - **New-AzApiManagementUserToken**: Generieren eines neuen Benutzertokens, das standardmäßig für acht Stunden gültig ist. Mit diesem Cmdlet kann das Token für den „GIT“-Benutzer generiert werden./
 * Es wurde ein neues Cmdlet zum Abrufen des Netzwerkstatus erstellt
     - **Get-AzApiManagementNetworkStatus**: Abrufen der Netzwerkstatuskonnektivität von Ressourcen, von denen der API Management-Dienst abhängig ist Dies ist hilfreich, wenn Sie den ApiManagement-Dienst in einem virtuellen Netzwerk bereitstellen und überprüfen, ob eine der Abhängigkeiten fehlerhaft ist.
-* Das Cmdlet **New-AzApiManagement** wurde zum Verwalten des ApiManagement-Diensts aktualisiert 
+* Das Cmdlet **New-AzApiManagement** wurde zum Verwalten des ApiManagement-Diensts aktualisiert
     - Die Unterstützung für die neue SKU „Consumption“ wurde hinzugefügt
     - Die Unterstützung zum Aktivieren des Flags „EnableClientCertificate“ für die neue SKU „Consumption“ wurde hinzugefügt
     - Das neue Cmdlet **New-AzApiManagementSslSetting** ermöglicht die Konfiguration der „TLS/SSL“-Einstellung für „Back-End“ und „Front-End“ Dies kann auch dazu verwendet werden, um „Verschlüsselungen“ wie „3DES“ und „ServerProtokolle“ wie „Http2“ für das „Front-End“ eines ApiManagement-Diensts zu konfigurieren
     - Die Unterstützung für die Konfiguration des Hostnamens „DeveloperPortal“ wurde zum ApiManagement-Dienst hinzugefügt
 * Die **Get-AzApiManagementSsoToken**-Cmdlets wurden aktualisiert, um das Objekt „PsApiManagement“ als Eingabe zu übernehmen
-* Das Cmdlet wurde aktualisiert, um Fehlermeldungen inline anzuzeigen 
+* Das Cmdlet wurde aktualisiert, um Fehlermeldungen inline anzuzeigen
      > PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Fehlercode: ValidationError-Fehlermeldung: Mindestens ein Feld enthält ungültige Werte: Fehlerdetails: [Code=ValidationError, Message=Fehler in Element 'log-to-eventhub' in Zeile 3, Spalte 10: Protokollierungstool nicht gefunden, Target=log-to-eventhub]
 * Cmdlet **Export-AzApiManagementApi** wurde für den Export von APIs im Format „OpenApi 3.0“ aktualisiert
 * Cmdlet **Import-AzApiManagementApi** wurde aktualisiert
@@ -730,15 +731,15 @@ ms.locfileid: "83386101"
     - Zur Außerkraftsetzung der „ServiceUrl“-Eigenschaft, die in einem beliebigen Dokument angegeben ist
 * Cmdlet **Get-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ zurückzugeben
 * Cmdlet **Set-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ und im Format mit XML-Escapezeichen mit „xml“ zurückzugeben
-* Cmdlet **New-AzApiManagementApi** wurde aktualisiert 
+* Cmdlet **New-AzApiManagementApi** wurde aktualisiert
     - Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver
     - Zum Erstellen einer API in einem „ApiVersionSet“
     - Zum Klonen einer API mithilfe von „SourceApiId“ und „SourceApiRevision“
-    - Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich 
+    - Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich
 * Cmdlet **Set-AzApiManagementApi** wurde aktualisiert
     - Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver
-    - Zum Aktualisieren einer API in einem „ApiVersionSet“    
-    - Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich 
+    - Zum Aktualisieren einer API in einem „ApiVersionSet“
+    - Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich
 * Cmdlet **New-AzApiManagementRevision** wurde aktualisiert
     - Zum Klonen (Kopiertags, Produkte, Vorgänge und Richtlinien) einer vorhandenen Version mithilfe von „SourceApiRevision“ Die neue Version übernimmt die „ApiId“ des übergeordneten Elements
     - Zum Bereitstellen einer „ApiRevisionDescription“
@@ -764,7 +765,7 @@ ms.locfileid: "83386101"
     - 'Get-AzApiManagementAuthorizationServer'
     - 'Get-AzApiManagementBackend'
         > Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric
-    - 'Get-AzApiManagementCertificate' 
+    - 'Get-AzApiManagementCertificate'
     - 'Remove-AzApiManagementApiVersionSet'
     - 'Remove-AzApiManagementSubscription'
 
@@ -812,7 +813,7 @@ ms.locfileid: "83386101"
     - Der neue Parameter „ProximityPlacementGroupId“ wurde zu den folgenden Cmdlets hinzugefügt:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig
 * Der Parameter „StorageAccountType“ wurde zu „New-AzGalleryImageVersion“ hinzugefügt.
 * „TargetRegion“ von „New-AzGalleryImageVersion“ kann „StorageAccountType“ enthalten.
-* Switch-Parameter „SkipShutdown“ wurde zu „Stop-AzVM“ und „Stop-AzVmss“ hinzugefügt.       
+* Switch-Parameter „SkipShutdown“ wurde zu „Stop-AzVM“ und „Stop-AzVmss“ hinzugefügt.
 * Aktuelle Änderungen
     - „Set-AzVMBootDiagnostics“ in „Set-AzVMBootDiagnostic“ geändert
     - „Export-AzLogAnalyticThrottledRequests“ in „Export-AzLogAnalyticThrottledRequests“ geändert
@@ -847,7 +848,7 @@ ms.locfileid: "83386101"
     - Benutzer mit der Rolle des HDInsight-Bedieners sind nicht betroffen.
 
 #### <a name="azmonitor"></a>Az.Monitor
-* Neue Cmdlets für SQR-API (Scheduled Query Rule, geplante Abfrageregel)  
+* Neue Cmdlets für SQR-API (Scheduled Query Rule, geplante Abfrageregel)
     - New-AzScheduledQueryRuleAlertingAction
     - New-AzScheduledQueryRuleAznsActionGroup
     - New-AzScheduledQueryRuleLogMetricTrigger
@@ -945,7 +946,7 @@ ms.locfileid: "83386101"
 * Hilfetext für Endpunkt aktualisiert, um anzugeben, dass Ressourcen erstellt werden müssen, bevor die Cmdlets zum Erstellen/Aktualisieren von Ereignisabonnements verwendet werden
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt 
+* Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.
@@ -1035,7 +1036,7 @@ ms.locfileid: "83386101"
 
 #### <a name="azcompute"></a>Az.Compute
 * Parameter „HyperVGeneration“ zu „New-AzDiskConfig“ und „New-AzSnapshotConfig“ hinzugefügt
-* Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten 
+* Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * Problem im Parameter „-Command“ von „New-AzContainerGroup“ behoben, das dazu führte, dass ein nachgestelltes leeres Argument hinzugefügt wurde
@@ -1117,7 +1118,7 @@ ms.locfileid: "83386101"
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte 
+* ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte
 
 ## <a name="150---march-2019"></a>1.5.0: März 2019
 #### <a name="azaccounts"></a>Az.Accounts
@@ -1186,7 +1187,7 @@ ms.locfileid: "83386101"
 * Cmdlets zum Auflisten und Wiederherstellen gelöschter ADL-Elemente hinzugefügt
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt 
+* Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Kennzeichnung in „Set-AzKeyVaultSecret“ korrigiert
@@ -1214,8 +1215,8 @@ ms.locfileid: "83386101"
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * Zusätzliche Unterstützung für Datenquelle von „New-ApplicationInsights“ und „Get-ApplicationInsights“ hinzugefügt.
-    - Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt. 
-    - Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“. 
+    - Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt.
+    - Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“.
 
 #### <a name="azresources"></a>Az.Resources
 * Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8166
@@ -1246,9 +1247,9 @@ Allgemeine Verfügbarkeit für Az.AnalysisServices-Modul
 Allgemeine Verfügbarkeit für Az.RecoveryServices-Modul.
 
 #### <a name="azresources"></a>Az.Resources
-* Kennzeichnung für Ressourcengruppen korrigiert 
+* Kennzeichnung für Ressourcengruppen korrigiert
     - Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8166
-* Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird 
+* Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird
     - Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8235
 
 #### <a name="azsql"></a>Az.Sql
@@ -1553,7 +1554,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp und Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp und Set-AzureRmWebAppSlot
     - Neuen Parameter (-AzureStoragePath) zum Angeben von Azure Storage-Pfaden hinzugefügt, die in Windows- und Linux-Container-Apps bereitgestellt werden sollen. Verwenden Sie die Ausgabe des neuen Cmdlets New-AzureRmWebAppAzureStoragePath als Parameter zum Festlegen der Azure Storage-Pfade.
 
 ## <a name="061---november-2018"></a>0.6.1 – November 2018
@@ -1581,7 +1582,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
 ### <a name="aznetwork"></a>Az.Network
 * Folgende Cmdlets hinzugefügt: New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
 * ICMP wieder unterstützten AzureFirewall-Netzwerkprotokollen hinzugefügt
-* Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt 
+* Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt
 * Probleme mit Arbeitsspeicherauslastung in der VirtualNetwork-Zuordnung behoben
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -1713,7 +1714,7 @@ Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway
     - Start-AzureStorageFileCopy
 * Der Abruf der Speicherressourcennutzung eines bestimmten Standorts wird jetzt unterstützt, und das Hinzufügen einer Warnmeldung für den Abruf der globalen Speicherressourcennutzung ist überflüssig.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * „Get-AzCognitiveServicesAccountSkus“ wird ohne vorhandenes Konto unterstützt.
 
