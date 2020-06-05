@@ -4,12 +4,12 @@ description: Hier finden Sie eine Einführung in das neue Az-Modul von Azure Pow
 ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: a50592c65c52eab005a6531572dbbfc144a0e43a
-ms.sourcegitcommit: 308ebca475d1c37624d7a10a2c02047594f44cdf
+ms.openlocfilehash: 1626bb4bee775ac173d078cf67934ee5a22632c4
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83778147"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122142"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
@@ -26,8 +26,8 @@ Da es sich bei Az um ein neues Modul handelt, wurde die Version auf 1.0.0 zurüc
 
 Größere Updates können umständlich sein, daher ist es wichtig, dass Sie erfahren, warum die Entscheidung getroffen wurde, einen neuen Satz von Modulen mit neuen Cmdlets für die Interaktion zwischen Azure und PowerShell einzuführen.
 
-Die größte und wichtigste Änderung ist, dass PowerShell seit der Einführung von [PowerShell 6.x](/powershell/scripting/overview) auf Basis der .NET Standard-Bibliothek ein plattformübergreifendes Produkt ist. Wir sind bestrebt, Azure auf allen Plattformen zu unterstützen. Dies bedeutet, dass die Azure PowerShell-Module für die Verwendung von .NET Standard und eine Kompatibilität mit PowerShell 6.x und höher aktualisiert werden müssen.
-Anstatt das bestehende AzureRM-Modul zu verwenden und komplexe Änderungen vorzunehmen, um diese Unterstützung zu implementieren, wurde das Az-Modul erstellt.
+Die größte und wichtigste Änderung ist, dass PowerShell seit der Einführung von [PowerShell](/powershell/scripting/overview) auf Basis der .NET Standard-Bibliothek ein plattformübergreifendes Produkt ist.
+Wir sind bestrebt, den Azure-Support auf allen Plattformen bereitzustellen. Dies bedeutet, dass die Azure PowerShell-Module aktualisiert werden müssen, um .NET Standard zu verwenden und mit PowerShell Core kompatibel zu sein. Anstatt das bestehende AzureRM-Modul zu verwenden und komplexe Änderungen vorzunehmen, um diese Unterstützung zu implementieren, wurde das Az-Modul erstellt.
 
 Die Erstellung eines neuen Moduls ermöglichte es unseren Technikern, auch das Design und die Benennung von Cmdlets und Modulen zu vereinheitlichen. Alle Module beginnen jetzt mit dem Präfix `Az.` und Cmdlets verwenden alle die Form _Verb_-`Az`_Nomen_. Früher waren Cmdlet-Namen nicht nur länger, sondern es gab auch Inkonsistenzen bei Cmdlet-Namen.
 
@@ -46,12 +46,12 @@ So führen Sie ein Upgrade von einer bestehenden AzureRM-Installation durch
 
 1. [Deinstallieren Sie das AzureRM-Modul von Azure PowerShell.](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Installieren Sie das Az-Modul von Azure PowerShell.](install-az-ps.md)
-3. __OPTIONAL__: Aktivieren Sie den Kompatibilitätsmodus, um Aliase für AzureRM-Cmdlets mit [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) hinzuzufügen, während Sie sich mit den neuen Befehlen vertraut machen. Weitere Informationen finden Sie im nächsten Abschnitt oder unter [Starten der Migration von AzureRM zu Az](migrate-from-azurerm-to-az.md).
+3. **OPTIONAL**: Aktivieren Sie den Kompatibilitätsmodus, um Aliase für AzureRM-Cmdlets mit [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) hinzuzufügen, während Sie sich mit den neuen Befehlen vertraut machen. Weitere Informationen finden Sie im nächsten Abschnitt oder unter [Starten der Migration von AzureRM zu Az](migrate-from-azurerm-to-az.md).
 
 ## <a name="migrate-existing-scripts-to-az"></a>Migrieren bereits vorhandener Skripts zu Az
 
 Die neuen Cmdlet-Namen sind ganz einfach zu lernen. Verwenden Sie in Cmdlet-Namen nicht mehr `AzureRm` oder `Azure`, sondern `Az`. Der alte Befehl `New-AzureRMVm` lautet nun also beispielsweise `New-AzVm`.
-Die Migration umfasst mehr als sich nur mit den neuen Cmdlet-Namen vertraut zu machen. Es gibt umbenannte Module, Parameter und andere wichtige Änderungen.
+Die Migration umfasst mehr als sich nur mit den neuen Cmdlet-Namen vertraut zu machen: Es gibt umbenannte Module, Parameter und andere wichtige Änderungen.
 
 Um Sie bei der Migration von AzureRM zu Az zu unterstützen, haben wir einige Ressourcen zur Verfügung gestellt:
 

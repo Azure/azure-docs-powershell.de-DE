@@ -1,21 +1,18 @@
 ---
-title: Azure PowerShell-Änderungsprotokoll | Microsoft-Dokumentation
+title: Azure PowerShell-Änderungsprotokoll
 description: Hierbei handelt es sich um einen Verlauf der Änderungen, die in der neuesten Version an Azure PowerShell vorgenommen wurden.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: cf8d1fc76feb07e075339255de63e09f59187dc6
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "68863293"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122053"
 ---
-# <a name="release-notes"></a>Versionshinweise
+# <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
@@ -23,7 +20,7 @@ Hierbei handelt es sich um eine Liste der Änderungen, die in dieser Version an 
 
 ---
 
-# <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
+## <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
 
 Azure PowerShell 5.7.0-Installationsprogramm: [Link](https://github.com/Azure/azure-powershell/releases/download/v5.7.0-April2018/azure-powershell.5.7.0.msi)
 
@@ -41,7 +38,7 @@ Führen Sie zum Aktualisieren von einer älteren Version von `AzureRM` den folge
 Update-Module -Name AzureRM
 ```
 
-## <a name="changes-since-last-release"></a>Änderungen seit der letzten Version
+### <a name="changes-since-last-release"></a>Änderungen seit der letzten Version
 
 #### <a name="general"></a>Allgemein
 * Aktualisiert auf die aktuelle Version von Azure ClientRuntime
@@ -184,9 +181,9 @@ Update-Module -Name AzureRM
 * „New-AzureRmVMSS“ gibt Verbindungszeichenfolgen im ausführlichen Modus aus.
 * „New-AzureRmVmss“ unterstützt öffentliche IP-Adressen, Lastenausgleichsregeln und eingehende NAT-Regeln.
 * WriteAccelerator-Feature
-    - WriteAccelerator-Switch-Parameter zu folgenden Cmdlets hinzugefügt: Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
-    - OsDiskWriteAccelerator-Switch-Parameter zu folgendem Cmdlet hinzugefügt:     Set-AzureRmVmssStorageProfile.
-    - Boolescher OsDiskWriteAccelerator-Parameter zu folgenden Cmdlets hinzugefügt:     Update-AzureRmVM     Update-AzureRmVmss
+    - Den folgenden Cmdlets wurde der Switch-Parameter „WriteAccelerator“ hinzugefügt: Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
+    - Dem folgenden Cmdlet wurde der Switch-Parameter „OsDiskWriteAccelerator“ hinzugefügt:     Set-AzureRmVmssStorageProfile.
+    - Den folgenden Cmdlets wurde der boolesche Parameter „OsDiskWriteAccelerator“ hinzugefügt:     Update-AzureRmVM     Update-AzureRmVmss
 
 #### <a name="azurermdatafactories"></a>AzureRM.DataFactories
 * Das Problem bei der Verschlüsselung von Anmeldeinformationen, das keinen sinnvollen Fehler bei einigen Verschlüsselungsvorgängen verursachte, wurde behoben.
@@ -275,15 +272,15 @@ Update-Module -Name AzureRM
     - Remove-AzureRmNetworkWatcherConnectionMonitor
 * Die Dokumentation zu „Set-AzureRmApplicationGatewayBackendAddressPool“ wurde aktualisiert, und dabei wurde ein veraltetes Beispiel entfernt.
 * EnableHttp2-Flag zu Application Gateway hinzugefügt
-    - „New-AzureRmApplicationGateway“ wurde aktualisiert: Der optionale Parameter „-EnableHttp2“ wurde hinzugefügt.
+    - „New-AzureRmApplicationGateway“ wurde aktualisiert: Optionaler Parameter „-EnableHttp2“ hinzugefügt
 * „IpTags“ zu „PublicIpAddress“ hinzugefügt
-    - „New-AzureRmPublicIpAddress“ aktualisiert: „IpTags“ hinzugefügt
+    - „New-AzureRmPublicIpAddress“ wurde aktualisiert: „IpTags“ hinzugefügt
     - „New-AzureRmPublicIpTag“ zum Hinzufügen von „Iptag“
 * Eigenschaft „DisableBgpRoutePropagation“ in „RouteTable“ und „effectiveRoute“ hinzugefügt.
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* Register-AzureRmProviderFeature: Fehlendes Beispiel in Dokumenten hinzugefügt
-* Register-AzureRmResourceProvider: Fehlendes Beispiel in Dokumenten hinzugefügt
+* Register-AzureRmProviderFeature: Fehlendes Beispiel in den Dokumenten hinzugefügt
+* Register-AzureRmResourceProvider: Fehlendes Beispiel in den Dokumenten hinzugefügt
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
 * Die folgenden Parameter in neuen und festgelegten Speicherkonto-Cmdlets sind veraltet: „EnableEncryptionService“ und „DisableEncryptionService“, da die Verschlüsselung ruhender Daten standardmäßig aktiviert ist und nicht deaktiviert werden kann.
@@ -625,7 +622,7 @@ Update-Module -Name AzureRM
   - Get-AzureRmComputeResourceSku zeigt Zoneninformationen an.
   - „Disable-AzureRmVmssDiskEncryption“ aktualisiert, um das Problem zu beheben: https://github.com/Azure/azure-powershell/issues/5038
   - -AsJob-Unterstützung wurde für Compute-Cmdlets mit langer Ausführungsdauer hinzugefügt. Ausgewählte Cmdlets können im Hintergrund ausgeführt werden und einen Auftrag zum Nachverfolgen und Kontrollieren des Fortschritts zurückgeben.
-    - Die betroffenen Cmdlets umfassen die Cmdlets New-, Update-, Set-, Remove-, Start-, Restart-, Stop- für virtuelle Computer und VM-Skalierungsgruppen.
+    - Betroffene Cmdlets: Cmdlets „New-“, „Update-“, „Set-“, „Remove-“, „Start-“, „Restart-“, „Stop-“ für Virtual Machines und VM-Skalierungsgruppen
     - Ein vereinfachter Parametersatz wurde zu New-AzureRmVM hinzugefügt, der einen virtuellen Computer und alle erforderlichen Ressourcen mithilfe intelligenter Standardwerte erstellt.
 * ContainerInstance
   - Azure-Containerinstanz-SDK 2017-10-01 wird angewendet.
@@ -639,20 +636,20 @@ Update-Module -Name AzureRM
 * DataFactories
     - Die Funktion zum Verschlüsseln von Anmeldeinformationen funktioniert jetzt sowohl bei aktiviertem (über das Netzwerk) als auch bei deaktiviertem Remotezugriff (lokaler Computer).
 * DataFactoryV2
-  - Zwei neue Cmdlets wurden hinzugefügt: Update-AzureRmDataFactoryV2 und Stop-AzureRmDataFactoryV2PipelineRun.
+  - Zwei neue Cmdlets wurden hinzugefügt: „Update-AzureRmDataFactoryV2“ und „Stop-AzureRmDataFactoryV2PipelineRun“
 * DataLakeAnalytics
   - Ein Parameter namens ScriptParameter wurde zu Submit-AzureRmDataLakeAnalyticsJob hinzugefügt.
     - Ausführliche Informationen zu ScriptParameter finden Sie mit Get-Help zu Submit-AzureRmDataLakeAnalyticsJob.
   - Für New-AzureRmDataLakeAnalyticsAccount wurde der Parameter MaxDegreeOfParallelism in MaxAnalyticsUnits geändert.
-    - Ein Alias wurde für den Parameter MaxAnalyticsUnits hinzugefügt: MaxDegreeOfParallelism.
+    - Für den Parameter „MaxAnalyticsUnits“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelism
   - Für New-AzureRmDataLakeAnalyticsComputePolicy wurde der Parameter MaxDegreeOfParallelismPerJob in MaxAnalyticsUnitsPerJob geändert.
-    - Ein Alias wurde für den Parameter MaxAnalyticsUnitsPerJob hinzugefügt: MaxDegreeOfParallelismPerJob.
+    - Für den Parameter „MaxAnalyticsUnitsPerJob“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelismPerJob
   - Für Set-AzureRmDataLakeAnalyticsAccount wurde der Parameter MaxDegreeOfParallelism in MaxAnalyticsUnits geändert.
-    - Ein Alias wurde für den Parameter MaxAnalyticsUnits hinzugefügt: MaxDegreeOfParallelism.
+    - Für den Parameter „MaxAnalyticsUnits“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelism
   - Für Submit-AzureRmDataLakeAnalyticsJob wurde der Parameter DegreeOfParallelism in AnalyticsUnits geändert.
-    - Ein Alias wurde für den Parameter AnalyticsUnits hinzugefügt: DegreeOfParallelism.
+    - Für den Parameter „AnalyticsUnits“ wurde ein Alias hinzugefügt: DegreeOfParallelism
   - Für Update-AzureRmDataLakeAnalyticsComputePolicy wurde der Parameter MaxDegreeOfParallelismPerJob in MaxAnalyticsUnitsPerJob geändert.
-    - Ein Alias wurde für den Parameter MaxAnalyticsUnitsPerJob hinzugefügt: MaxDegreeOfParallelismPerJob.
+    - Für den Parameter „MaxAnalyticsUnitsPerJob“ wurde ein Alias hinzugefügt: MaxDegreeOfParallelismPerJob
 * MachineLearningCompute
   - Set-AzureRmMlOpCluster wurde hinzugefügt.
     - Aktualisiert die Clusteragentanzahl oder SSL-Konfiguration.
@@ -723,7 +720,7 @@ Update-Module -Name AzureRM
   - AzureRM.StreamAnalytics
 
 ## <a name="2017118---version-500"></a>08.11.2017 – Version 5.0.0
-* HINWEIS: Hierbei handelt es sich um eine Version mit grundlegenden Änderungen. Eine vollständige Liste mit den grundlegenden Änderungen finden Sie im Migrationshandbuch (https://aka.ms/azps-migration-guide).
+* HINWEIS:  Hierbei handelt es sich um eine Version mit grundlegenden Änderungen. Eine vollständige Liste mit den grundlegenden Änderungen finden Sie im Migrationshandbuch (https://aka.ms/azps-migration-guide).
 * Alle Cmdlets im AzureRM unterstützen jetzt die Onlinehilfe.
   - Führen Sie „Get-Help“ mit dem Parameter „-Online“ aus, um die Onlinehilfe in Ihrem Standardinternetbrowser zu öffnen.
 * AnalysisServices
@@ -793,17 +790,17 @@ Update-Module -Name AzureRM
 * DataLakeAnalytics
   * Informationen zu grundlegenden Änderungen, die in dieser Version für „DataLakeAnalytics“ vorgenommen wurden, finden Sie im Migrationshandbuch.
   * Einer der beiden Ausgabetypen von „Get-AzureRmDataLakeAnalyticsAccount“ wurde geändert.
-    - Von „List\<DataLakeAnalyticsAccount>“ in „List\<PSDataLakeAnalyticsAccountBasic>“
+    - „List\<DataLakeAnalyticsAccount>“ in „List\<PSDataLakeAnalyticsAccountBasic>“
     - Bei den Eigenschaften von „PSDataLakeAnalyticsAccountBasic“ handelt es sich um eine echte Teilmenge der Eigenschaften von „DataLakeAnalyticsAccount“.
     - Die zusätzlichen Eigenschaften in „DataLakeAnalyticsAccount“ werden von dem Dienst nicht zurückgegeben.  Diese Änderung dient dazu, dies korrekt wiederzugeben. Die zusätzlichen Eigenschaften sind zwar weiterhin in „PSDataLakeAnalyticsAccountBasic“ enthalten, werden aber als veraltet gekennzeichnet.
   * Einer der beiden Ausgabetypen von „Get-AzureRmDataLakeAnalyticsJob“ wurde geändert.
-    - Von „List\<JobInformation>“ in „List\<PSJobInformationBasic>“
+    - „List\<JobInformation>“ in „List\<PSJobInformationBasic>“
     - Bei den Eigenschaften von „PSJobInformationBasic“ handelt es sich um eine echte Teilmenge der Eigenschaften von „JobInformation“.
     - Die zusätzlichen Eigenschaften in „JobInformation“ werden von dem Dienst nicht zurückgegeben.  Diese Änderung dient dazu, dies korrekt wiederzugeben. Die zusätzlichen Eigenschaften sind zwar weiterhin in „PSJobInformationBasic“ enthalten, werden aber als veraltet gekennzeichnet.
 * DataLakeStore
   * Informationen zu grundlegenden Änderungen, die in dieser Version für „DataLakeStore“ vorgenommen wurden, finden Sie im Migrationshandbuch.
   * Einer der beiden Ausgabetypen von „Get-AzureRmDataLakeStoreAccount“ wurde geändert.
-    - Von „List\<PSDataLakeStoreAccount>“ in „List\<PSDataLakeStoreAccountBasic>“
+    - „List\<PSDataLakeStoreAccount>“ in „List\<PSDataLakeStoreAccountBasic>“
     - Bei den Eigenschaften von „PSDataLakeStoreAccountBasic“ handelt es sich um eine echte Teilmenge der Eigenschaften von „PSDataLakeStoreAccount“.
     - Die zusätzlichen Eigenschaften in „PSDataLakeStoreAccount“ werden von dem Dienst nicht zurückgegeben.  Diese Änderung dient dazu, dies korrekt wiederzugeben. Die zusätzlichen Eigenschaften sind zwar weiterhin in „PSDataLakeStoreAccountBasic“ enthalten, werden aber als veraltet gekennzeichnet.
 * Dns
