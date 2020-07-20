@@ -5,7 +5,7 @@
       "docset_name": "azureps",
       "build_source_folder": ".",
       "build_output_subfolder": "azureps",
-      "locale": "de-DE",
+      "locale": "de-de",
       "monikers": [],
       "xref_query_tags": [
         "/dotnet"
@@ -32,23 +32,16 @@
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": [
-    "live"
-  ],
+  "sync_notification_subscribers": [],
+  "branches_to_filter": ["live"],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-powershell.de-de",
   "git_repository_branch_open_to_public_contributors": "live",
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-powershell.de-DE",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "enable_incremental_build": true,
-  "error_log_codes": ["DuplicateOutputFiles"],
-  "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.de-DE",
-      "branch": "master",
-      "branch_mapping": {}
-    },
+  "enable_incremental_build": false,
+  "contribution_branch_mappings": {"live-sxs": "live"},
+ "dependent_repositories": [
+ 
     {
       "path_to_root": "dotnet-xref",
       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
@@ -60,13 +53,18 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/MicrosoftDocs/azure-docs-powershell",
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
     }
   ],
   "branch_target_mapping": {
-     "live-sxs": [
-           "Publish",
-           "Pdf" 
-    ],
     "live": [
       "Publish",
       "Pdf"
@@ -78,6 +76,9 @@
       "template_folder": "_themes.pdf"
     }
   },
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
