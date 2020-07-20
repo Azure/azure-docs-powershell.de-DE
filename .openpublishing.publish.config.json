@@ -38,9 +38,15 @@
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "enable_incremental_build": false,
+  "enable_incremental_build": true,
   "contribution_branch_mappings": {"live-sxs": "live"},
  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.de-de",
+      "branch": "master",
+      "branch_mapping": {}
+    },
  
     {
       "path_to_root": "dotnet-xref",
@@ -65,6 +71,10 @@
     }
   ],
   "branch_target_mapping": {
+     "live-sxs": [
+           "Publish",
+           "Pdf" 
+    ],
     "live": [
       "Publish",
       "Pdf"
