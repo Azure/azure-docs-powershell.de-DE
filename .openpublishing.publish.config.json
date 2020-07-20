@@ -44,13 +44,7 @@
   "contribution_branch_mappings": {
     "live-sxs": "live"
   },
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.de-de",
-      "branch": "master",
-      "branch_mapping": {}
-    },
+ 
     {
       "path_to_root": "dotnet-xref",
       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
@@ -85,6 +79,9 @@
       "template_folder": "_themes.pdf"
     }
   },
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
