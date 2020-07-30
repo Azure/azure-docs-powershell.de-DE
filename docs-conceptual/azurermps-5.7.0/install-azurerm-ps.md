@@ -4,12 +4,12 @@ description: Anleitung für die Installation von Azure PowerShell mit PowerShell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: 17e625dacfadff07b0498ac173b7b2c312172f87
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: bd9cbdd66c1a9a623461ca8b0291ac1cb61f1e54
+ms.sourcegitcommit: c19bf5a96a82a56e2b1fa9ab5e106690f850cedf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387767"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177474"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installieren von Azure PowerShell unter Windows mit PowerShellGet
 
@@ -59,7 +59,7 @@ Befolgen Sie die Anleitung unten in der Tabelle, falls Sie PowerShellGet nicht i
 > Für die Verwendung von PowerShellGet ist eine Ausführungsrichtlinie erforderlich, die die Ausführung von Skripts ermöglicht. Weitere Informationen zur Ausführungsrichtlinie von PowerShell finden Sie unter [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies) (Informationen zu Ausführungsrichtlinien).
 >
 > [!IMPORTANT]
-> Das in diesem Dokument beschriebene Modul „AzureRM“ verwendet .NET Framework. Dadurch ist es nicht mit PowerShell 6.0 kompatibel, das .NET Core verwendet. Wenn Sie PowerShell 6.0 verwenden, befolgen Sie die [Installationsanweisungen für macOS und Linux](install-azurermps-maclinux.md).
+> Das in diesem Dokument beschriebene Modul „AzureRM“ verwendet .NET Framework. Dadurch ist es nicht mit PowerShell 6.0 kompatibel, das .NET Core verwendet. Wenn Sie PowerShell 6.0 verwenden, befolgen Sie die [Installationsanweisungen für macOS und Linux](/powershell/azure/install-az-ps).
 
 ## <a name="install-the-azure-powershell-module"></a>Installieren des Azure PowerShell-Moduls
 
