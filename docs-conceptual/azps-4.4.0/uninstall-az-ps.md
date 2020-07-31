@@ -4,20 +4,20 @@ description: Anleitung zum vollständigen Deinstallieren von Azure PowerShell
 ms.date: 05/28/2020
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 4b40a3aebab84176a48bcdb0ef818cfa05dea269
-ms.sourcegitcommit: 23e5b2b0751777ef0a5ca74e40c7772653e339a3
+ms.openlocfilehash: d99b40121deca0a4817c3a6364ad55020dadbda1
+ms.sourcegitcommit: c19bf5a96a82a56e2b1fa9ab5e106690f850cedf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382167"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177491"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Deinstallieren des Azure PowerShell-Moduls
 
 In diesem Artikel erfahren Sie, wie Sie eine ältere Version von Azure PowerShell deinstallieren bzw. vollständig vom System entfernen. Verwenden Sie das Cmdlet [Send-Feedback](/powershell/module/az.accounts/send-feedback), um uns Feedback zu senden, falls Sie Azure PowerShell vollständig deinstallieren möchten. Falls ein Fehler aufgetreten ist, wären wir Ihnen dankbar, wenn Sie ein [GitHub-Problem melden](https://github.com/azure/azure-powershell/issues), damit es behoben werden kann.
 
-## <a name="uninstall-azure-powershell-from-msi"></a>Deinstallieren von Azure PowerShell über die MSI
+## <a name="uninstall-the-az-powershell-module-from-msi"></a>Deinstallieren des Azure PowerShell-Moduls über MSI
 
-Falls Sie Azure PowerShell mithilfe des MSI-Pakets installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System ausführen.
+Falls Sie das Azure PowerShell-Modul mithilfe des MSI-Pakets installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System ausführen.
 
 |         Plattform         |                      Instructions                      |
 | ------------------------ | ------------------------------------------------------ |
@@ -26,11 +26,11 @@ Falls Sie Azure PowerShell mithilfe des MSI-Pakets installiert haben, müssen Si
 
 Auf diesem Bildschirm sollte **Azure PowerShell** in der Programmliste aufgeführt sein. Dies ist die App, die deinstalliert werden soll. Ist dieses Programm nicht aufgeführt, haben Sie für die Installation PowerShellGet verwendet und müssen die folgenden Anweisungen befolgen.
 
-## <a name="uninstall-azure-powershell-from-powershellget"></a>Deinstallieren von Azure PowerShell über PowerShellGet
+## <a name="uninstall-the-az-powershell-module-from-powershellget"></a>Deinstallieren des Az PowerShell-Moduls über PowerShellGet
 
-Zum Deinstallieren der Az-Module können Sie das Cmdlet [Uninstall-Module](/powershell/module/powershellget/uninstall-module) verwenden. Mit `Uninstall-Module` wird jedoch nur ein Modul deinstalliert. Wenn Sie Azure PowerShell vollständig entfernen möchten, müssen Sie die Module einzeln deinstallieren. Die Deinstallation kann kompliziert sein, wenn Sie mehrere Versionen von Azure PowerShell installiert haben.
+Zum Deinstallieren der Az-Module können Sie das Cmdlet [Uninstall-Module](/powershell/module/powershellget/uninstall-module) verwenden. Mit `Uninstall-Module` wird jedoch nur ein Modul deinstalliert. Wenn Sie das Az PowerShell-Modul vollständig entfernen möchten, müssen Sie die Module einzeln deinstallieren. Die Deinstallation kann kompliziert sein, wenn Sie mehrere Versionen von Azure PowerShell installiert haben.
 
-Überprüfen Sie mit dem folgenden Befehl, welche Versionen von Azure PowerShell installiert sind:
+Überprüfen Sie mit dem folgenden Befehl, welche Versionen des Az PowerShell-Moduls installiert sind:
 
 ```powershell-interactive
 Get-InstalledModule -Name Az -AllVersions
@@ -45,7 +45,7 @@ Version             Name                           Repository           Descript
 
 <a name="uninstall-script"/>
 
-Das folgende Skript fragt den PowerShell-Katalog ab, um eine Liste mit den abhängigen Submodulen abzurufen. Anschließend wird mit dem Skript die richtige Version der einzelnen Submodule deinstalliert. Sie benötigen Administratorzugriff, um dieses Skript in einem anderen Bereich als **Process** oder **CurrentUser** auszuführen.
+Das folgende Skript fragt den PowerShell-Katalog ab, um eine Liste mit den abhängigen Submodulen abzurufen. Anschließend wird mit dem Skript die richtige Version der einzelnen Submodule deinstalliert. Sie benötigen Administratorzugriff, um dieses Skript in einem anderen Bereich als **Prozess** oder **Aktueller Benutzer** auszuführen.
 
 ```powershell-interactive
 function Uninstall-AzModule {
@@ -141,7 +141,7 @@ function Uninstall-AzModule {
 }
 ```
 
-Kopieren Sie zum Verwenden dieser Funktion den Code, und fügen Sie ihn in Ihre PowerShell-Sitzung ein. Das folgende Beispiel zeigt, wie Sie die Funktion ausführen, um eine ältere Version von Azure PowerShell zu entfernen.
+Kopieren Sie zum Verwenden dieser Funktion den Code, und fügen Sie ihn in Ihre PowerShell-Sitzung ein. Das folgende Beispiel zeigt, wie Sie die Funktion ausführen, um eine ältere Version des Az PowerShell-Moduls und seine Untermodule zu entfernen.
 
 ```powershell-interactive
 Uninstall-AzModule -Name Az -Version 1.8.0
@@ -163,22 +163,23 @@ Az.ApplicationInsights  1.0.0    Uninstalled
 > [!IMPORTANT]
 > Wenn das Skript keine Abhängigkeit mit der genauen Version findet, die deinstalliert werden soll, wird _keine_ Version dieser Abhängigkeit deinstalliert. Dies ist darauf zurückzuführen, dass möglicherweise andere Versionen des Zielmoduls in Ihrem System vorhanden sind, die auf diesen Abhängigkeiten beruhen.
 
-Führen Sie das folgende Beispiel für jede Azure PowerShell-Version aus, die Sie deinstallieren möchten. Der Einfachheit halber werden mit dem folgenden Skript alle Versionen von Az deinstalliert, **mit Ausnahme** der aktuellen Version.
+Führen Sie das folgende Beispiel für jede Version des Az PowerShell-Moduls aus, die Sie deinstallieren möchten.
+Der Einfachheit halber werden mit dem folgenden Skript alle Versionen von Az deinstalliert, **mit Ausnahme** der aktuellen Version.
 
 ```powershell-interactive
-$Modules = Get-InstalledModule -Name Az -AllVersions | 
-    Sort-Object -Property Version -Descending | 
+$Modules = Get-InstalledModule -Name Az -AllVersions |
+    Sort-Object -Property Version -Descending |
         Select-Object -Skip 1
 $Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 ```
 
 ## <a name="uninstall-the-azurerm-module"></a>Deinstallieren des AzureRM-Moduls
 
-Falls Sie das Az-Modul auf Ihrem System installiert haben und AzureRM deinstallieren möchten, haben Sie zwei Möglichkeiten, bei denen das obige `Uninstall-AzModule`-Skript nicht ausgeführt werden muss. Die Wahl der Methode richtet sich danach, wie Sie das AzureRM-Modul installiert haben. Wenn Sie sich bezüglich Ihrer ursprünglichen Installationsmethode nicht sicher sind, befolgen Sie zuerst die Schritte zur Deinstallation einer MSI.
+Falls Sie das Az-Modul auf Ihrem System installiert haben und AzureRM deinstallieren möchten, haben Sie zwei Möglichkeiten. Die Wahl der Methode richtet sich danach, wie Sie das AzureRM-Modul installiert haben. Wenn Sie sich bezüglich Ihrer ursprünglichen Installationsmethode nicht sicher sind, befolgen Sie zuerst die Schritte zur Deinstallation einer MSI.
 
-### <a name="uninstall-azure-powershell-msi"></a>Deinstallieren von Azure PowerShell MSI
+### <a name="uninstall-the-azurerm-powershell-module-from-msi"></a>Deinstallieren des AzureRM PowerShell-Moduls über MSI
 
-Falls Sie die AzureRM-Module von Azure PowerShell mit dem MSI-Paket installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System durchführen.
+Falls Sie das AzureRM PowerShell-Modul mithilfe des MSI-Pakets installiert haben, müssen Sie die Deinstallation nicht über PowerShell, sondern über das Windows-System ausführen.
 
 |         Plattform         |                      Instructions                      |
 | ------------------------ | ------------------------------------------------------ |
@@ -187,17 +188,10 @@ Falls Sie die AzureRM-Module von Azure PowerShell mit dem MSI-Paket installiert 
 
 Auf dem angezeigten Bildschirm sollte in der Programmliste **Azure PowerShell** oder **Microsoft Azure PowerShell – Monat/Jahr** aufgeführt sein. Dies ist die App, die deinstalliert werden soll. Ist dieses Programm nicht aufgeführt, haben Sie für die Installation PowerShellGet verwendet und müssen die folgenden Anweisungen befolgen.
 
-### <a name="uninstall-from-powershell"></a>Deinstallieren über PowerShell
+### <a name="uninstall-the-azurerm-powershell-module-from-powershellget"></a>Deinstallieren des AzureRM PowerShell-Moduls über PowerShellGet
 
-Wenn Sie AzureRM mit PowerShellGet installiert haben, können Sie die Module mit dem Cmdlet [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) (als Teil des `Az.Accounts`-Moduls verfügbar) entfernen. Mit dem folgenden Beispiel werden _alle_ AzureRM-Module von Ihrem Computer entfernt, aber für diesen Vorgang werden Administratorrechte benötigt.
+Wenn Sie AzureRM mit PowerShellGet installiert haben, können Sie die Module mit dem Cmdlet [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) (als Teil des `Az.Accounts`-Moduls verfügbar) entfernen. Mit dem folgenden Beispiel werden _alle_ AzureRM-Module von Ihrem Computer entfernt. Für diesen Vorgang sind Administratorrechte erforderlich.
 
 ```powershell-interactive
 Uninstall-AzureRm
-```
-
-Wenn Sie den Befehl `Uninstall-AzureRM` nicht erfolgreich ausführen können, können Sie stattdessen das in diesem Artikel enthaltene [`Uninstall-AzModule`-Skript](#uninstall-script) mit folgendem Aufruf verwenden:
-
-```powershell-interactive
-$Modules = Get-InstalledModule -Name AzureRM -AllVersions
-$Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 ```
