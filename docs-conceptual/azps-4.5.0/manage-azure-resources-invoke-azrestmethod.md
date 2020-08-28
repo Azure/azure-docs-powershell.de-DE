@@ -3,13 +3,13 @@ title: Verwalten von Azure-Ressourcen mit Invoke-AzRestMethod
 description: Hier erfahren Sie, wie Sie Azure PowerShell zum Verwalten von Ressourcen mit dem Cmdlet „Invoke-AzRestMethod“ verwenden.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020
-ms.openlocfilehash: 380fd818a3af2474ce192c7a1da8a6798795cf21
-ms.sourcegitcommit: bd7edc4d48b6a8a8bec864edc876e16af0a49505
+ms.date: 08/24/2020
+ms.openlocfilehash: 6a267e28ec8e2540ce7d6431ffd9aab0b2090c6a
+ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512968"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88821362"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Verwalten von Azure-Ressourcen mit Invoke-AzRestMethod
 
@@ -19,8 +19,7 @@ Dieses Cmdlet ist nützlich, wenn Sie Azure-Dienste im Hinblick auf Features ver
 
 ## <a name="how-to-use-invoke-azrestmethod"></a>Verwenden von „Invoke-AzRestMethod“
 
-Sie können beispielsweise Zugriff auf Azure Container Registry (ACR) ausschließlich für bestimmte Netzwerke zulassen oder den öffentlichen Zugriff verweigern. Dieses Feature ist im [PowerShell-Modul „Az.ContainerRegistry“](/powershell/module/Az.ContainerRegistry/) noch nicht verfügbar.
-Es kann in der Zwischenzeit jedoch mit `Invoke-AzRestMethod` verwaltet werden.
+Sie können beispielsweise Zugriff auf Azure Container Registry (ACR) ausschließlich für bestimmte Netzwerke zulassen oder den öffentlichen Zugriff verweigern. Ab Version 4.5.0 des Az PowerShell-Moduls ist dieses Feature im [PowerShell-Modul „Az.ContainerRegistry“](/powershell/module/Az.ContainerRegistry/) noch nicht verfügbar. Es kann in der Zwischenzeit jedoch mit `Invoke-AzRestMethod` verwaltet werden.
 
 ## <a name="using-invoke-azrestmethod-with-get-operations"></a>Verwenden von „Invoke-AzRestMethod“ mit GET-Vorgängen
 
@@ -51,7 +50,7 @@ Die Definition für die ACR-Version „2019-12-01-preview“ befindet sich an fo
 
 ## <a name="using-invoke-azrestmethod-with-patch-operations"></a>Verwenden von „Invoke-AzRestMethod“ mit PATCH-Vorgängen
 
-Sie können den öffentlichen Zugriff auf die vorhandene ACR-Instanz `myacr` in der Ressourcengruppe `myresourcegroup` mithilfe des Cmdlets „Invoke-AzRestMethod“ deaktivieren.
+Sie können den öffentlichen Zugriff auf die vorhandene ACR-Instanz `myacr` in der Ressourcengruppe `myresourcegroup` mithilfe des Cmdlets `Invoke-AzRestMethod` deaktivieren.
 
 Wenn Sie den Zugriff auf das öffentliche Netzwerk deaktivieren möchten, senden Sie einen **PATCH**-Aufruf an die API, der den Wert des Parameters `publicNetwokAccess` wie im folgenden Beispiel gezeigt ändert:
 
@@ -100,11 +99,11 @@ Invoke-AzRestMethod @specificIpParams
 
 ## <a name="comparison-to-get-azresource-new-azresource-and-remove-azresource"></a>Vergleich mit „Get-AzResource“, „New-AzResource“ und „Remove-AzResource“
 
-Mit den `*-AzResource`-Cmdlets können Sie den REST-API-Aufruf an Azure anpassen, indem Sie den Ressourcentyp, die API-Version und die zu aktualisierenden Eigenschaften angeben. Bei den Eigenschaften muss es sich jedoch um ein `PSObject`-Element handeln, dessen Erstellung kompliziert werden kann.
+Mit den `*-AzResource`-Cmdlets können Sie den REST-API-Aufruf an Azure anpassen, indem Sie den Ressourcentyp, die API-Version und die zu aktualisierenden Eigenschaften angeben. Die Eigenschaften müssen jedoch zuerst als `PSObject` erstellt werden. Dieser Vorgang erhöht die Komplexität und kann kompliziert werden.
 
-Mit `Invoke-AzRestMethod` lassen sich Azure-Ressourcen einfacher verwalten. Im vorherigen Beispiel sehen Sie, dass die Nutzlast als JSON-Zeichenfolge vorliegt. Sie müssen sich nicht mit der Konvertierung zwischen JSON und `PSObjects` auseinandersetzen.
+Mit `Invoke-AzRestMethod` lassen sich Azure-Ressourcen einfach verwalten. Wie im vorherigen Beispiel gezeigt, können Sie eine JSON-Zeichenfolge erstellen und diese zum Anpassen des REST-API-Aufrufs verwenden, ohne vorab `PSObjects` erstellen zu müssen.
 
-Wenn Sie bereits mit den `*-AzResource`-Cmdlets vertraut sind, können Sie sie weiterhin verwenden. Es ist nicht geplant, ihre Unterstützung einzustellen. Mit `Invoke-AzRestMethod` wurde der Familie ein neues Cmdlet hinzugefügt.
+Wenn Sie bereits mit den `*-AzResource`-Cmdlets vertraut sind, können Sie sie weiterhin verwenden. Es ist nicht geplant, ihre Unterstützung einzustellen. Mit `Invoke-AzRestMethod` wurde dem Toolkit ein neues Cmdlet hinzugefügt.
 
 ## <a name="see-also"></a>Weitere Informationen
 
