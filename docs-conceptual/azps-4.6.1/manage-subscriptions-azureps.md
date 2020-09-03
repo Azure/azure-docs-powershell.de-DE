@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: cfe5833bd8bbfac53f65695f8bdfbd7b946a8852
+ms.openlocfilehash: 96b94ffcb5075764eb5d2dcaec7b13c5933b83da
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244074"
+ms.locfileid: "89240198"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>Verwenden mehrerer Azure-Abonnements
 
@@ -23,7 +23,7 @@ Ausführliche Informationen zu Abonnements, der Abrechnung und der Kostenverwalt
 Möglicherweise sind Sie sich nicht ganz über den Unterschied zwischen Mandanten, Benutzern und Abonnements in Azure im Klaren. Ein _Mandant_ ist die Azure Active Directory-Entität, die eine gesamte Organisation umfasst. Dieser Mandant hat mindestens ein _Abonnement_ und einen _Benutzer_. Ein Benutzer ist eine Person und nur einem einzelnen Mandanten zugeordnet: der Organisation, der er angehört. Benutzer sind Konten, die sich bei Azure anmelden, um Ressourcen zu erstellen, zu verwalten und zu verwenden.
 Ein Benutzer hat möglicherweise Zugriff auf mehrere _Abonnements_. Hierbei handelt es sich um die Vereinbarungen mit Microsoft, die die Verwendung von Clouddiensten wie Azure regeln. Jede Ressource ist einem Abonnement zugeordnet.
 
-Weitere Informationen zu den Unterschieden zwischen Mandanten, Benutzern und Abonnements finden Sie im [Microsoft Azure-Glossar](/azure/azure-glossary-cloud-terminology).  Informationen zum Hinzufügen eines neuen Abonnements zu Ihrem Azure Active Directory-Mandanten finden Sie unter [Hinzufügen eines Azure-Abonnements zu Azure Active Directory](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
+Weitere Informationen zu den Unterschieden zwischen Mandanten, Benutzern und Abonnements finden Sie im [Microsoft Azure-Glossar](/azure/azure-glossary-cloud-terminology).  Informationen zum Hinzufügen eines neuen Abonnements zu Ihrem Azure Active Directory-Mandanten finden Sie unter [Zuordnen oder Hinzufügen eines Azure-Abonnements zu Ihrem Azure Active Directory-Mandanten](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
 Informationen zum Anmelden bei einem bestimmten Mandanten finden Sie unter [Anmelden mit Azure PowerShell](/powershell/azure/authenticate-azureps).
 
 ## <a name="change-the-active-subscription"></a>Ändern des aktiven Abonnements

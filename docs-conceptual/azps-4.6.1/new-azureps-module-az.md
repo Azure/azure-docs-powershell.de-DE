@@ -1,22 +1,25 @@
 ---
 title: Einführung in das Az-Modul von Azure PowerShell
 description: Hier finden Sie eine Einführung in das neue Az-Modul von Azure PowerShell, das das AzureRM-Modul ersetzt.
-ms.date: 05/10/2019
+ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: e7fb420f8d3c7f4ac76f3f542a4fd3171d9effa4
+ms.openlocfilehash: 0771bc474f43d8bbf392f2eba10da2e320d30556
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244006"
+ms.locfileid: "89240521"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
 Seit Dezember 2018 ist das Az-Modul von Azure PowerShell allgemein verfügbar und jetzt das beabsichtigte PowerShell-Modul für die Interaktion mit Azure. Az verfügt über kürzere Befehle, verbesserte Stabilität und plattformübergreifende Unterstützung. Az bietet darüber hinaus die gleichen Features wie AzureRM und damit einen einfachen Migrationspfad.
 
-Mit dem Az-Modul ist Azure PowerShell jetzt kompatibel mit PowerShell 5.1 unter Windows und mit PowerShell Core 6.x und höher auf allen unterstützten Plattformen – einschließlich Windows, MacOS und Linux.
+> [!NOTE]
+> PowerShell 7.x und höher ist die für die Verwendung mit Azure PowerShell auf allen Plattformen empfohlene PowerShell-Version.
+
+Mit dem neuesten Az-Modul funktioniert Azure PowerShell mit PowerShell 6.2.4 und höher auf allen Plattformen, einschließlich Windows, macOS und Linux. Es ist ebenfalls mit PowerShell 5.1 unter Windows kompatibel.
 
 Da es sich bei Az um ein neues Modul handelt, wurde die Version auf 1.0.0 zurückgesetzt.
 
@@ -27,7 +30,7 @@ Größere Updates können umständlich sein, daher ist es wichtig, dass Sie erfa
 Die größte und wichtigste Änderung ist, dass PowerShell seit der Einführung von [PowerShell](/powershell/scripting/overview) auf Basis der .NET Standard-Bibliothek ein plattformübergreifendes Produkt ist.
 Wir sind bestrebt, den Azure-Support auf allen Plattformen bereitzustellen. Dies bedeutet, dass die Azure PowerShell-Module aktualisiert werden müssen, um .NET Standard zu verwenden und mit PowerShell Core kompatibel zu sein. Anstatt das bestehende AzureRM-Modul zu verwenden und komplexe Änderungen vorzunehmen, um diese Unterstützung zu implementieren, wurde das Az-Modul erstellt.
 
-Die Erstellung eines neuen Moduls gab unseren Technikern auch die Möglichkeit, das Design und die Benennung von Cmdlets und Modulen einheitlich zu gestalten. Alle Module beginnen jetzt mit dem Präfix `Az.` und Cmdlets verwenden alle die Form _Verb_-`Az`_Nomen_. Früher waren Cmdlet-Namen nicht nur länger, sondern es gab auch Inkonsistenzen bei Cmdlet-Namen.
+Die Erstellung eines neuen Moduls ermöglichte es unseren Technikern, auch das Design und die Benennung von Cmdlets und Modulen zu vereinheitlichen. Alle Module beginnen jetzt mit dem Präfix `Az.` und Cmdlets verwenden alle die Form _Verb_-`Az`_Nomen_. Früher waren Cmdlet-Namen nicht nur länger, sondern es gab auch Inkonsistenzen bei Cmdlet-Namen.
 
 Auch die Anzahl der Module wurde verringert: Einige Module, die dieselben Diensten verwendet haben, wurden zusammengeführt. Cmdlets auf Verwaltungs- und Datenebene sind jetzt in einzelnen Modulen für ihre Dienste zusammengefasst. Für diejenigen, die Abhängigkeiten und Importvorgänge manuell verwalten, vereinfacht dies die Situation erheblich.
 
@@ -49,7 +52,7 @@ So führen Sie ein Upgrade von einer bestehenden AzureRM-Installation durch
 ## <a name="migrate-existing-scripts-to-az"></a>Migrieren bereits vorhandener Skripts zu Az
 
 Die neuen Cmdlet-Namen sind ganz einfach zu lernen. Verwenden Sie in Cmdlet-Namen nicht mehr `AzureRm` oder `Azure`, sondern `Az`. Der alte Befehl `New-AzureRMVm` lautet nun also beispielsweise `New-AzVm`.
-Die Migration umfasst mehr als sich nur mit den neuen Cmdlet-Namen vertraut zu machen: Es gibt umbenannte Module, Parameter und andere wichtige Änderungen.
+Die Migration umfasst mehr als sich nur mit den neuen Cmdlet-Namen vertraut zu machen. Es gibt umbenannte Module, Parameter und andere wichtige Änderungen.
 
 Um Sie bei der Migration von AzureRM zu Az zu unterstützen, haben wir einige Ressourcen zur Verfügung gestellt:
 
@@ -57,7 +60,7 @@ Um Sie bei der Migration von AzureRM zu Az zu unterstützen, haben wir einige Re
 - [Vollständige Liste der Breaking Changes von AzureRM zu Az 1.0.0.0](migrate-az-1.0.0.md)
 - Das Cmdlet [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias)
 
-Das Az-Modul verfügt über einen Kompatibilitätsmodus, der Ihnen die Verwendung bereits vorhandener Skripts ermöglicht, während Sie das Update auf die neue Syntax durchführen. Das Cmdlet [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) ermöglicht einen Kompatibilitätsmodus durch Aliase, damit Sie vorhandene Skripts mit minimalen Änderungen verwenden können, während Sie an der vollständigen Migration zu Az arbeiten.
+Das Az-Modul verfügt über einen Kompatibilitätsmodus, der Ihnen die Verwendung bereits vorhandener Skripts ermöglicht, während Sie das Update auf die neue Syntax durchführen. Das Cmdlet [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) ermöglicht einen Kompatibilitätsmodus durch Aliase, damit Sie vorhandene Skripts mit minimalen Änderungen verwenden können, während Sie an der vollständigen Migration zu Az arbeiten. Standardmäßig aktiviert `Enable-AzureRmAlias` nur Kompatibilitätsaliase für die aktuelle PowerShell-Sitzung. Verwenden Sie den Parameter `Scope`, um Kompatibilitätsaliase über PowerShell-Sitzungen hinweg beizubehalten. Weitere Informationen finden Sie in der [Referenzdokumentation zu Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias).
 
 > [!IMPORTANT]
 > Auch wenn die Cmdlet-Namen mit Aliasen versehen sind, kann es dennoch neue (oder umbenannte) Parameter oder geänderte Rückgabewerte für die Az-Cmdlets geben. Erwarten Sie nicht, dass die Aktivierung von Aliasen die Migration für Sie übernimmt! Weitere Informationen zu möglicherweise erforderlichen Änderungen an Ihren Skripts finden Sie in der [Vollständigen Liste der Breaking Changes](migrate-az-1.0.0.md).

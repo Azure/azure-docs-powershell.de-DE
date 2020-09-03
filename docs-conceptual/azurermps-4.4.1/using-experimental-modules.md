@@ -4,16 +4,17 @@ description: Grundlegendes zur Philosophie und Verwendung experimenteller Azure 
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 35e704b21e0034dffc2c9edc23977d8d6ef44661
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: fd910e124a8589c2e5e187bc5a9d2a902ae57a07
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387376"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243887"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Verwenden experimenteller Azure PowerShell-Module
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Das Azure PowerShell-Team experimentiert mit zahlreichen Verbesserungen für Azure-PowerShell und konzentriert sich dabei auf Azure-Entwicklertools (insbesondere Befehlszeilenschnittstellen).
 
@@ -66,9 +67,9 @@ Die zentralen Verbesserungen gelten als naheliegend, und zur Implementierung die
 
 - Kürzere Namen: Gilt für die Namen von Cmdlets (beispielsweise `New-AzureRmVM` => `New-AzVm`) und Parametern (beispielsweise `-ResourceGroupName` => `-Rg`). Verwenden Sie Aliase, um die Kompatibilität mit älteren Cmdlets zu gewährleisten. Geben Sie _abwärtskompatible_ Parametersätze an.
 
-- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel: 
+- Intelligente Standardwerte: Erstellen Sie intelligente Standardwerte zum Ausfüllen erforderlicher Informationen. Beispiel:
   - Ressourcengruppe
-  - Location
+  - Standort
   - Abhängige Ressourcen
 
 ### <a name="experimental-improvements"></a>Experimentelle Verbesserungen

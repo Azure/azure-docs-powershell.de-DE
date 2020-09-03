@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239501"
+ms.locfileid: "89240062"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Migrieren von Azure PowerShell von AzureRM zum Az-Modul
 
