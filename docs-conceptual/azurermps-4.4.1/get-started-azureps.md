@@ -4,16 +4,17 @@ description: ''
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017
-ms.openlocfilehash: e7735d6f60e7f62376dbd7bdcd5e4897d177dcd7
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 44cca63bbea555f754d2625b13187c294647eef2
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386798"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238653"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Erste Schritte mit Azure PowerShell
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell ermöglicht die Verwaltung von Azure-Ressourcen über die Befehlszeile sowie die Erstellung von Automatisierungsskripts für Azure Resource Manager. Azure PowerShell kann mit [Azure Cloud Shell](/azure/cloud-shell/overview) im Browser verwendet oder auf dem lokalen Computer installiert und in einer beliebigen PowerShell-Sitzung verwendet werden. Dieser Artikel hilft Ihnen beim Einstieg und informiert über die wichtigsten Konzepte.
 

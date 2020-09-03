@@ -4,12 +4,13 @@ description: Hier erfahren Sie mehr über die aktuellen Updates für die Azure P
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
-ms.openlocfilehash: 9dd733865ba8235eed6dcef4637a63ad93999338
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: f0a8c70ac16c99235b9497cddd03ec4796b40482
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84121913"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89239348"
 ---
 # <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 ## <a name="0100-preview---april-2020"></a>0.10.0-preview: April 2020
