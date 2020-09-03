@@ -4,16 +4,17 @@ description: Hier erfahren Sie, wie Sie Cmdlets mithilfe des Parameters „-AsJo
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: d312812ff3c9e4934ed2bfa7371a9e420668e852
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 8a05d8ff8344870e2daac130135b921b192f0f5d
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83384992"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241337"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>Paralleles Ausführen von Cmdlets mithilfe von PowerShell-Aufträgen
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 PowerShell unterstützt asynchrone Aktionen mit [PowerShell-Aufträgen](/powershell/module/microsoft.powershell.core/about/about_jobs).
 Azure PowerShell muss häufig Netzwerkaufrufe an Azure senden und anschließend warten. Es kann häufig vorkommen, dass Sie nicht blockierende Aufrufe durchführen müssen. Azure PowerShell verfügt über erstklassige [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs)-Unterstützung, um diese Anforderung zu erfüllen.

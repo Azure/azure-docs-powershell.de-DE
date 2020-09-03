@@ -3,12 +3,13 @@ title: Übersicht über das Azure PowerShell-Dienstverwaltungsmodul | Microsoft-
 description: Eine Übersicht über Azure PowerShell mit Links zur Installation und Konfiguration.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 32e98196d1b23e96b9846e9cd4da93bca15448cb
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 84f0d176ce01d267824ce4f3e94bdca4cd09c9ff
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83384741"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241218"
 ---
 # <a name="overview-of-the-azure-powershell-service-management-module"></a>Übersicht über das Azure PowerShell-Dienstverwaltungsmodul
 

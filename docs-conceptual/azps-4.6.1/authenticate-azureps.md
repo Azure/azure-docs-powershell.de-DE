@@ -3,20 +3,20 @@ title: Anmelden mit Azure PowerShell
 description: Es wird beschrieben, wie Sie sich mit Azure PowerShell als Benutzer, per Dienstprinzipal oder mit verwalteten Identitäten für Azure-Ressourcen anmelden.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/18/2020
+ms.date: 7/7/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 10deb367456574a29b5b9c301e0e1a6b10d95c14
+ms.openlocfilehash: 8f18af8ed67ecf2aefd353208c07bf812df732d9
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241473"
+ms.locfileid: "89242170"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Anmelden mit Azure PowerShell
 
 Azure PowerShell unterstützt mehrere Authentifizierungsmethoden. Den einfachsten Einstieg ermöglicht der [Azure Cloud Shell](/azure/cloud-shell/overview)-Dienst, der Sie automatisch anmeldet. Bei einer lokalen Installation können Sie sich interaktiv über Ihren Browser anmelden. Beim Schreiben von Skripts für die Automatisierung besteht der empfohlene Ansatz darin, einen [Dienstprinzipal](create-azure-service-principal-azureps.md) mit den erforderlichen Berechtigungen zu verwenden. Indem Sie die Anmeldeberechtigungen für Ihren Anwendungsfall so weit wie möglich einschränken, tragen Sie zur Sicherheit Ihrer Azure-Ressourcen bei.
 
-Nach der Anmeldung werden Befehle für Ihr Standardabonnement ausgeführt. Verwenden Sie das Cmdlet [Set-AzContext](/powershell/module/az.accounts/set-azcontext), um Ihr aktives Abonnement für eine Sitzung zu ändern. Verwenden Sie [Set-AzDefault](/powershell/module/az.accounts/set-azdefault), um das Standardabonnement zu ändern, das beim Anmelden mit Azure PowerShell verwendet wird.
+Zunächst sind Sie beim ersten Abonnement angemeldet, das von Azure zurückgegeben wird, wenn Sie Zugriff auf mehrere Abonnements haben. Befehle werden für dieses Abonnement standardmäßig ausgeführt. Verwenden Sie das Cmdlet [Set-AzContext](/powershell/module/az.accounts/set-azcontext), um Ihr aktives Abonnement für eine Sitzung zu ändern. Um Ihr aktives Abonnement zu ändern und es zwischen Sitzungen auf demselben System beizubehalten, verwenden Sie das Cmdlet [Select-AzContext](/powershell/module/az.accounts/select-azcontext).
 
 > [!IMPORTANT]
 > Ihre Anmeldeinformationen werden in mehreren PowerShell-Sitzungen gemeinsam verwendet, solange Sie angemeldet bleiben.
