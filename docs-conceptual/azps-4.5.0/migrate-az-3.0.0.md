@@ -4,12 +4,13 @@ description: Dieser Migrationsleitfaden enthält eine Liste mit grundlegenden Ä
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
-ms.openlocfilehash: 06be35bc3573d00d90a8cf2d822ac051ab72f6bb
-ms.sourcegitcommit: edfe63c6949cd59127028ac8a13bb4a8827d555c
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 727a74ef9cd0f6e1bf93b65c4776816c1aa23334
+ms.sourcegitcommit: 2f1e3c275626fba1c4275cae8ef1d13b11f55735
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87566497"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449924"
 ---
 # <a name="migration-guide-for-az-300"></a>Migrationsleitfaden für Az 3.0.0
 
