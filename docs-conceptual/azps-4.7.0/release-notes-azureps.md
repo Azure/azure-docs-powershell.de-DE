@@ -5,14 +5,176 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 52129f31202a8ae04bf80988b5aa07b12fe081b8
+ms.openlocfilehash: 98bae70dbd61c74aa92e69cb67afc89ebae23f70
 ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913394"
+ms.locfileid: "90928376"
 ---
 # <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
+
+## <a name="470---september-2020"></a>4.7.0: September 2020
+#### <a name="azaccounts"></a>Az.Accounts
+* Die anstehenden Breaking Change-Meldungen wurden formatiert.
+* Azure.Core wurde auf 1.4.1 aktualisiert.
+
+#### <a name="azaks"></a>Az.Aks
+* Clientseitige Logik zur Parameterüberprüfung für „New-AzAksCluster“, „Set-AzAksCluster“ und „New-AzAksNodePool“ wurde hinzugefügt. [#12372]
+* Unterstützung für Add-Ons in „New-AzAksCluster“ wurde hinzugefügt. [#11239]
+* Die Cmdlets „Enable-AzAksAddOn“ und „Disable-AzAksAddOn“ für Add-Ons wurden hinzugefügt. [#11239]
+* Der Parameter „GenerateSshKey“ für „New-AzAksCluster“ wurde hinzugefügt. [#12371]
+* Die API-Version wurde auf 2020-06-01 aktualisiert.
+
+#### <a name="azcognitiveservices"></a>Az.CognitiveServices
+* Es werden zusätzliche rechtliche Bedingungen für bestimmte APIs angezeigt.
+
+#### <a name="azcompute"></a>Az.Compute
+* Der optionale Parameter „EncryptionType“ wurde zu „New-AzVmDiskEncryptionSetConfig“ hinzugefügt.
+* Neue Cmdlets für den neuen Ressourcentyp: DiskAccess „Get-AzDiskAccess“, „New-AzDiskAccess“, „Get-AzDiskAccess“
+* Optionale Parameter „-DiskAccessId“ und „-NetworkAccessPolicy“ wurden zu „New-AzSnapshotConfig“ hinzugefügt.
+* Optionale Parameter „-DiskAccessIdessid“ und „-NetworkAccessPolicy“ wurden zu „New-AzDiskConfig“ hinzugefügt.
+* Die Eigenschaft „PatchStatus“ wurde zur VirtualMachine-Instanzansicht hinzugefügt.
+* Die Eigenschaft „VMHealth“ wurde zur Instanzansicht des virtuellen Computers hinzugefügt; dabei handelt es sich um das zurückgegebene Objekt, wenn „Get-AzVm“ mit „-Status“ aufgerufen wird.
+* Das Feld „AssignedHost“ wurde den Instanzansichten „Get-AzVM“ und „Get-AzVmss“ hinzugefügt. Das Feld zeigt die Ressourcen-ID der Instanz des virtuellen Computers.
+* Der optionale Parameter „-SupportAutomaticPlacement“ wurde zu „New-AzHostGroup“ hinzugefügt. 
+* Der Parameter „-HostGroupId“ wurde zu „New-AzVm“ und „New-AzVmss“ hinzugefügt.
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* Die ADF .Net SDK-Version wurde auf 4.11.0 aktualisiert.
+
+#### <a name="azeventhub"></a>Az.EventHub
+* Neue Cluster-Cmdlets wurden hinzugefügt: „New-AzEventHubCluster“, „Set-AzEventHubCluster“, „Get-AzEventHubCluster“, „Remove-AzEventHubCluster“, „Get-AzEventHubClustersAvailableRegions“.
+* Für Problem #10722 behoben: Fix für die ausschließliche Zuweisung von „Listen“ zu AuthorizationRule-Berechtigungen.
+
+#### <a name="azfunctions"></a>Az.Functions
+* Die Möglichkeit zum Erstellen von v2-Funktionen wurde in Regionen entfernt, in denen sie nicht unterstützt werden.
+* PowerShell 6.2 wurde als veraltet markiert. Es wurde eine Warnung für den Fall hinzugefügt, dass ein Benutzer eine PowerShell 6.2-Funktions-App erstellt, die ihm rät, stattdessen eine PowerShell 7.0-Funktions-App zu erstellen.
+
+#### <a name="azhdinsight"></a>Az.HDInsight
+* Das Erstellen von Clustern mit Autoscale-Konfiguration wird jetzt unterstützt.
+    - Ein neuer Parameter „AutoscaleConfiguration“ wurde zum Cmdlet „New-AzHDInsightCluster“ hinzugefügt.
+* Der Betrieb von Clustern mit Autoscale-Konfiguration wird jetzt unterstützt.
+    - Ein neues Cmdlet „Get-AzHDInsihgtClusterAutoscaleConfiguration“ wurde hinzugefügt.
+    - Ein neues Cmdlet „New-AzHDInsihgtClusterAutoscaleConfiguration“ wurde hinzugefügt.
+    - Ein neues Cmdlet „Set-AzHDInsihgtClusterAutoscaleConfiguration“ wurde hinzugefügt.
+    - Ein neues Cmdlet „Remove-AzHDInsihgtClusterAutoscaleConfiguration“ wurde hinzugefügt.
+    - Ein neues Cmdlet „New-AzHDInsihgtClusterAutoscaleScheduleCondition“ wurde hinzugefügt.
+
+#### <a name="azkeyvault"></a>Az.KeyVault
+* Unterstützung für RBAC-Autorisierung wurde hinzugefügt [#10557].
+* Die Fehlerbehandlung in „Set-AzKeyVaultAccessPolicy“ wurde erweitert [#4007].
+
+#### <a name="azkusto"></a>Az.Kusto
+* Allgemeine Verfügbarkeit des Moduls „Az.Kusto“
+
+#### <a name="aznetwork"></a>Az.Network
+* [Breaking Change] Die nachfolgend aufgelisteten Cmdlets wurden aktualisiert, um die Ressourcen „virtueller Router“ und „virtueller Hub“ auf eine gemeinsame Grundlage zu stellen.
+    - „'New-AzVirtualRouter“: 
+        - Der Parameter „-HostedSubnet“ zur Unterstützung untergeordneter IP-Konfigurationsressourcen wurde hinzugefügt.
+        - „-HostedGateway“ und „-HostedGatewayId“ wurden gelöscht.
+    - „Get-AzVirtualRouter“:
+        - Ein Parametersatz auf Abonnementebene wurde hinzugefügt.
+    - „Remove-AzVirtualRouter“
+    - „Add-AzVirtualRouterPeer“
+    - „Get-AzVirtualRouterPeer“
+    - „Remove-AzVirtualRouterPeer“
+* Ein neues Cmdlet für den Azure Express Route-Port wurde hinzugefügt.
+    - „New-AzExpressRoutePortLOA“
+* Die Eigenschaft „RemoteBgpCommunities“ wurde der VirtualNetwork-Peeringressource hinzugefügt.
+* Warnmeldung für „New-AzLoadBalancerFrontendIpConfig“, „New-AzPublicIpAddress“ und „New-AzPublicIpPrefix“ geändert
+* „VpnGatewayIpConfigurations“ wurde zur Ausgabe „Get-AzVpnGateway“ hinzugefügt.
+* Ein Fehler für „Set-AzApplicationGatewaySslCertificate“ wurde behoben [#9488].
+* Der Parameter „AllowActiveFTP“ wurde zu „AzureFirewall“ hinzugefügt.
+* Folgende Befehle für das Feature aktualisiert: Das Festlegen/Entfernen von Internetsicherheit wurde für VirtualWan P2SVpnGateway aktiviert.
+- „New-AzP2sVpnGateway“ wurde aktualisiert: Der optionale Schalterparameter „EnableInternetSecurityFlag“ wurde hinzugefügt, den Kunden auf „True“ festlegen können, um Internetsicherheit für das „P2SVpnGateway“ zu aktivieren, die auf Point-to-Site-Clients angewendet wird.
+- „Update-AzP2sVpnGateway“ wurde aktualisiert: Die optionalen Schalterparameter „EnableInternetSecurityFlag“ und „DisableInternetSecurityFlag“ wurden hinzugefügt, die Kunden auf „True/False“ festlegen können, um Internetsicherheit für das „P2SVpnGateway“ zu aktivieren/deaktivieren, die auf Point-to-Site-Clients angewendet wird.
+* Das neue Cmdlet „Reset-AzP2sVpnGateway“ wurde hinzugefügt, mit dem Kunden ihr VirtualWan P2SVpnGateway für die Problembehandlung zurücksetzen/neu starten können.
+* Das neue Cmdlet „Reset-AzVpnGateway“ wurde hinzugefügt, mit dem Kunden ihr VirtualWan VpnGateway für die Problembehandlung zurücksetzen/neu starten können.
+* „Set-AzVirtualNetworkSubnetConfig“ wurde aktualisiert.
+    - Die NSG- und Routingtabellen-Eigenschaften vom Subnetz werden auf NULL festgelegt, wenn sie in Parametern explizit festgelegt sind [#1548][#9718].
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* Das Löschen des Status für Workload-Sicherungselemente wurde korrigiert.
+
+#### <a name="azresources"></a>Az.Resources
+* Die fehlende Überprüfung für „Set-AzRoleAssignment“ wurde hinzugefügt.
+* Ein Breaking Change-Attribut wurde zum Parameter „SubscriptionId“ von „Get-AzResourceGroupDeploymentOperation“ hinzugefügt.
+* Die ARM-Vorlage für What-If-Cmdlets wurde angezeigt, um „Ignore“-Ressourcenänderungen zuletzt anzuzeigen.
+* Serialisierungsprobleme bei sicheren und Array-Parametern für Bereitstellungs-Cmdlets wurden behoben [#12773].
+
+#### <a name="azservicefabric"></a>Az.ServiceFabric
+* Es wurden neue Cmdlets für verwaltete Cluster und Knotentypen hinzugefügt:
+    - „New-AzServiceFabricManagedCluster“
+    - „Get-AzServiceFabricManagedCluster“
+    - „Set-AzServiceFabricManagedCluster“
+    - „Remove-AzServiceFabricManagedCluster“
+    - „Add-AzServiceFabricManagedClusterClientCertificate“
+    - „Remove-AzServiceFabricManagedClusterClientCertificate“
+    - „New-AzServiceFabricManagedNodeType“
+    - „Get-AzServiceFabricManagedNodeType“
+    - „Set-AzServiceFabricManagedNodeType“
+    - „Remove-AzServiceFabricManagedNodeType“
+    - „Add-AzServiceFabricManagedNodeTypeVMExtension“
+    - „Add-AzServiceFabricManagedNodeTypeVMSecret“
+    - „Remove-AzServiceFabricManagedNodeTypeVMExtension“
+    - „Restart-AzServiceFabricManagedNodeTyp“
+* Das Service Fabric SDK wurde auf Version 1.2.0 aktualisiert, die die API-Version 2020-03-01 des Service Fabric-Ressourcenanbieters für das aktuelle Modell und die Vorschauversion 2020-01-01 für verwaltete Cluster verwendet.
+
+#### <a name="azsql"></a>Az.Sql
+* BackupStorageRedundancy wurde zu „New-AzSqlInstance“ und „Get-AzSqlInstance“ hinzugefügt.
+* Das Cmdlet „Get-AzSqlServerActiveDirectoryOnlyAuthentication“ wurde hinzugefügt.
+* Das Cmdlet „Enable-AzSqlServerActiveDirectoryOnlyAuthentication“ wurde hinzugefügt.
+* Der Force-Parameter wurde zu „New-AzSqlInstance“ hinzugefügt.
+* Cmdlets für den Protokollwiedergabedienst von verwalteten Datenbanken wurden hinzugefügt.
+    - „Start-AzSqlInstanceDatabaseLogReplay“
+    - „Get-AzSqlInstanceDatabaseLogReplay“
+    - „Complete-AzSqlInstanceDatabaseLogReplay“
+    - „Stop-AzSqlInstanceDatabaseLogReplay“
+* Das Cmdlet „Get-AzSqlInstanceActiveDirectoryOnlyAuthentication“ wurde hinzugefügt.
+* Das Cmdlet „Enable-AzSqlInstanceActiveDirectoryOnlyAuthentication“ wurde hinzugefügt.
+* Cmdlet „Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication“ hinzugefügt.
+* Die Cmdlets „New-AzSqlDatabaseImport“ und „New-AzSqlDatabaseExport“ zum Unterstützen von Netzwerk-Isolationsfunktionen wurden hinzugefügt.
+* Das Cmdlet „New-AzSqlDatabaseImportExisting“ wurde hinzugefügt.
+* Datenbanken-Cmdlets wurden zum Unterstützen der Typangabe für den Sicherungsspeicher aktualisiert.
+* Der Force-Parameter wurde zu „New-AzSqlDatabase“ hinzugefügt.
+* Eine Warnung wurde für die BackupStorageRedundancy-Konfiguration in ausgewählten Regionen in „New-AzSqlDatabase“ hinzugefügt.
+* Die ActiveDirectoryOnlyAuthentication-Cmdlets für Server und Instanz wurden aktualisiert und beinhalten jetzt „ResourceId“ und „InputObject“.
+
+#### <a name="azstorage"></a>Az.Storage
+* Ein Fehler beim Hochladen von Blobs wurde durch Upgrade auf Microsoft.Azure.Storage.DataMovement 2.0.0 behoben [#12220].
+* Unterstützung für Point-in-Time-Wiederherstellung
+    - „Enable-AzStorageBlobRestorePolicy“
+    - „Disable-AzStorageBlobRestorePolicy“
+    - „New-AzStorageBlobRangeToRestore“
+    - „Restore-AzStorageBlobRange“
+* Das Abrufen des Blob-Wiederherstellungsstatus von Speicherkonten durch Ausführen von „get-AzureRMStorageAccount“ mit dem Parameter „-IncludeBlobRestoreStatus“ wird unterstützt. 
+    - „Get-AzureRMStorageAccount“
+* Eine Breaking Change Warnmeldung für die anstehende Änderung der Cmdlet-Ausgabe wurde hinzugefügt.
+    - „Get-AzStorageContainerStoredAccessPolicy“
+    - „Set-AzStorageContainerStoredAccessPolicy“
+    - „Set-AzStorageAccountManagementPolicy“
+    - „Get-AzStorageAccountManagementPolicy“
+    - „Add-AzStorageAccountManagementPolicyAction“
+    - „New-AzStorageAccountManagementPolicyRule“
+* Microsoft.Azure.Cosmos.Table SDK wurde auf 1.0.8 aktualisiert.
+
+### <a name="thanks-to-our-community-contributors"></a>Dank an unsere Mitwirkenden in der Community
+* Thomas Van Laere (@ThomVanL), Hinzufügen von Dockerfile-alpine-3.10 (#12911) 
+* Lohith Chowdary Chilukuri (@Lochiluk), Aktualisierung von Remove-AzNetworkInterfaceIpConfig.md (#12807) 
+* Roberth Strand (@roberthstrand), Get-AzResourceGroup: Neues Beispiel und Bereinigung (#12828) 
+* Ravi Mishra (@inmishrar), Aktualisierung des Azure Web App-Runtime-Stacks auf DOTNETCORE (#12833) 
+* @jack-education, Aktualisierung von „Set-AzVirtualNetworkSubnetConfig“, um das Entfernen von NSG und Routingtabelle aus Subnetzen zu ermöglichen (#12351) 
+* @hagop-globanet, Aktualisierung von Add-AzApplicationGatewayCustomError.md (#12784) 
+* Joshua Van Daalen (@greenSacrifice)
+  * Aktualisierung der Schreibung von Eigenschaft auf Eigenschaft (#12821) 
+  * Aktualisierung der New-AzResourceLock.md-Beispiele (#12806)
+* Eragon Riddle (@eragonriddle), Berichtigter Parameterfeldname im Beispiel (#12825) 
+* @rossifumax, Behobener Tippfehler in New-AzConfigurationAssignment.md (#12701)
+
+## <a name="461---august-2020"></a>4.6.1: August 2020
+#### <a name="azcompute"></a>Az.Compute
+* Patch für Parameter „-EncryptionAtHost“ in „New-AzVm“, um den Standardwert „false“ zu entfernen [Nr. 12776]
 
 ## <a name="460---august-2020"></a>4.6.0: August 2020
 #### <a name="azaccounts"></a>Az.Accounts
@@ -55,7 +217,7 @@ ms.locfileid: "90913394"
 * „Get-AzDeploymentManagementGroupWhatIfResult“ zum Abrufen von Was-wäre-wenn-Ergebnissen der ARM-Vorlage im Verwaltungsgruppenbereich hinzugefügt
 * Neues Cmdlet „Get-AzTenantWhatIfResult“ zum Abrufen von Was-wäre-wenn-Ergebnissen der ARM-Vorlage im Mandantenbereich hinzugefügt
 * Parameter „-WhatIf“ und „-Confirm“ für „New-AzManagementGroupDeployment“ und „New-AzTenantDeployment“ für die Verwendung von Was-wäre-wenn-Ergebnissen der ARM-Vorlage überschrieben
-* Das Verhalten von „-WhatIf“ und „-Confirm“ für neue Bereitstellungs-Cmdlets wurde korrigiert, so dass sie mit „$WhatIfPreference“ und „$ConfirmPreference“ kompatibel sind.
+* Verhalten von „-WhatIf“ und „-Confirm“ für neue Bereitstellungs-Cmdlets korrigiert (abgestimmt auf „False“ und 
 * Serialisierungsfehler für „-TemplateObject“ und „TemplateParameterObject“ behoben [Nr. 1528] [Nr. 6292]
 * Breaking Change-Attribut zu „Get-AzResourceGroupDeploymentOperation“ für anstehende Ausgabetypänderung hinzugefügt
 
