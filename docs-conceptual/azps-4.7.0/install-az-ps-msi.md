@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
-ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+ms.openlocfilehash: 193e8c5d14f1bf2fe9c84a9da2defac50be97ec7
+ms.sourcegitcommit: 3d16496984a0b9fd7631aa043726060ddae3624d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90928251"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833269"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>Installieren von Azure PowerShell unter Windows per MSI
 
@@ -31,7 +31,14 @@ Für die Verwendung von Azure PowerShell in PowerShell 5.1 ist Folgendes erforde
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>Installieren oder Aktualisieren unter Windows mithilfe des MSI-Pakets
 
-Das MSI-Paket für Azure PowerShell ist auf [GitHub](https://github.com/Azure/azure-powershell/releases/latest) verfügbar. Ältere per MSI installierte Versionen von Azure PowerShell werden vom Installationsprogramm automatisch entfernt. Mit dem MSI-Paket werden Module unter `${env:ProgramFiles}\WindowsPowerShell\Modules` installiert.
+Das MSI-Paket für Azure PowerShell ist auf [GitHub](https://github.com/Azure/azure-powershell/releases) verfügbar:
+
+1. Gehe zu https://github.com/Azure/azure-powershell/releases.
+2. Suchen Sie nach dem aktuellen Katalogmodul für Azure PowerShell (diese sind chronologisch aufgelistet und in der Regel nur als Releaseversion ohne Namen, z. B. „4.7.0“).
+3. Scrollen Sie zum unteren Rand der Patchnotizen, und klicken Sie auf den Pfeil neben „Ressourcen“, um die MSI-Optionen anzuzeigen.
+4. Klicken Sie auf die MSI-Datei der Az-Cmdlets Ihrer Wahl, um den Download zu starten.
+
+Ältere per MSI installierte Versionen von Azure PowerShell werden vom Installationsprogramm automatisch entfernt. Mit dem MSI-Paket werden Module unter `${env:ProgramFiles}\WindowsPowerShell\Modules` installiert.
 
 Melden Sie sich mit Ihren Azure-Anmeldeinformationen an, um Azure PowerShell zu verwenden.
 
