@@ -1,14 +1,13 @@
 ###YamlMime:Landing
 title: Dokumentation zu Azure PowerShell
-summary: |
-  Azure PowerShell ist ein Satz von Cmdlets für das direkte Verwalten von Azure-Ressourcen über die PowerShell-Befehlszeile. Azure PowerShell wurde entwickelt, um das Erlernen und die ersten Schritte zu erleichtern, bietet jedoch auch leistungsstarke Features für die Automatisierung. Azure PowerShell wurde in .NET Standard geschrieben und funktioniert mit PowerShell 5.1 unter Windows und ab PowerShell 6. x auf allen Plattformen.
+summary: "Azure PowerShell ist ein Satz von Cmdlets für das direkte Verwalten von Azure-Ressourcen über die PowerShell-Befehlszeile. Azure PowerShell wurde entwickelt, um das Erlernen und die ersten Schritte zu erleichtern, bietet jedoch auch leistungsstarke Features für die Automatisierung. Azure PowerShell wurde in .NET Standard geschrieben und funktioniert mit PowerShell\_5.1 unter Windows und ab PowerShell\_7. x auf allen Plattformen.\n"
 metadata:
   title: Übersicht über Azure PowerShell
   description: 'Unternehmen Sie Ihre ersten Schritte mit Azure PowerShell, indem Sie die Features und Funktionen installieren und kennenlernen.'
   ms.topic: landing-page
-  author: sptramer
-  ms.author: sttramer
-  ms.date: 12/10/2019
+  author: mikefrobbins
+  ms.author: mirobb
+  ms.date: 10/22/2020
 landingContent:
   - title: Erste Schritte mit Azure PowerShell
     linkLists:
@@ -41,7 +40,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Beispielskripts für virtuelle Computer
-            url: /azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json
+            url: /azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json
           - text: Beispielskripts für Azure App Service
             url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
           - text: Beispielskripts für SQL-Datenbanken
@@ -73,7 +72,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet-Referenz
-            url: /powershell/module/?view=azps-2.7.0
+            url: /powershell/module/?view=azps-0.10.0
           - text: Versionshinweise
             url: release-notes-azureps.md
           - text: "Breaking Changes in Az\_2.0.0"
@@ -85,8 +84,8 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure Active Directory für PowerShell
-            url: /powershell/azure/active-directory/
+            url: /powershell/module/azuread/
           - text: Azure Service Fabric für PowerShell
-            url: /powershell/azure/service-fabric/
-          - text: Azure ElasticDB für PowerShell
-            url: /powershell/azure/elasticdbjobs/
+            url: /powershell/module/servicefabric/
+          - text: Azure SQL-Datenbank-Cmdlets
+            url: /powershell/module/az.sql/
