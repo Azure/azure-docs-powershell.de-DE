@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 73f8401fa3fe405d21b654bf8e7df628af9773e9
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 2427e26700e975bfb6ce3d677a1af1a6130f10a9
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89243853"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523392"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>Speichern von Benutzeranmeldeinformationen zwischen PowerShell-Sitzungen
 
@@ -27,12 +27,12 @@ Azure PowerShell bietet ein Feature namens **Azure Context Autosave** mit den fo
 
 Bei einem *Azure-Kontext* handelt es sich um einen Satz von Informationen, die das Ziel von Azure PowerShell-Cmdlets definieren. Der Kontext setzt sich aus fünf Teilen zusammen:
 
-- Ein *Konto*: Der Benutzername oder Dienstprinzipal, der verwendet wird, um die Kommunikation mit Azure zu authentifizieren.
-- Ein *Abonnement*: Das Azure-Abonnement mit den Ressourcen, für die eine Aktion ausgeführt wird.
-- Ein *Mandant*: Der Azure Active Directory-Mandant mit Ihrem Abonnement. Mandanten sind eher für die Dienstprinzipalauthentifizierung relevant.
-- Eine *Umgebung*: Die spezielle Azure-Cloud, die als Ziel fungiert (in der Regel die globale Azure-Cloud).
+- Ein *Konto* : Der Benutzername oder Dienstprinzipal, der verwendet wird, um die Kommunikation mit Azure zu authentifizieren.
+- Ein *Abonnement* : Das Azure-Abonnement mit den Ressourcen, für die eine Aktion ausgeführt wird.
+- Ein *Mandant* : Der Azure Active Directory-Mandant mit Ihrem Abonnement. Mandanten sind eher für die Dienstprinzipalauthentifizierung relevant.
+- Eine *Umgebung* : Die spezielle Azure-Cloud, die als Ziel fungiert (in der Regel die globale Azure-Cloud).
   Über die Umgebungseinstellung können Sie jedoch auch nationale Clouds, Government Clouds und lokale Clouds (Azure Stack) als Ziel festlegen.
-- *Anmeldeinformationen*: Die Informationen, die von Azure verwendet werden, um Ihre Identität zu überprüfen und die Autorisierung des Zugriffs auf Ressourcen in Azure zu gewährleisten.
+- *Anmeldeinformationen* : Die Informationen, die von Azure verwendet werden, um Ihre Identität zu überprüfen und die Autorisierung des Zugriffs auf Ressourcen in Azure zu gewährleisten.
 
 In früheren Versionen musste der Azure-Kontext bei jedem Öffnen einer neuen PowerShell-Sitzung erstellt werden. Ab Azure PowerShell 4.4.0 können Sie die automatische Speicherung und Wiederverwendung von Azure-Kontexten beim Öffnen einer neuen PowerShell-Sitzung aktivieren.
 
@@ -49,7 +49,7 @@ Die Cmdlets zum Verwalten von Azure-Kontexten ermöglichen eine präzise Steueru
 
 ## <a name="running-azure-powershell-cmdlets-as-background-jobs"></a>Ausführen von Azure PowerShell-Cmdlets als Hintergrundaufträge
 
-Dank der**automatischen Speicherung des Azure-Kontexts können** Sie Ihren Kontext auch für PowerShell-Hintergrundaufträge freigeben. Mit PowerShell können Sie Aufgaben mit langer Ausführungszeit als Hintergrundaufträge starten und überwachen, ohne auf den Abschluss der Aufgaben warten zu müssen. Sie können Anmeldeinformationen auf zwei Arten an Hintergrundaufträge weitergeben:
+Dank der **automatischen Speicherung des Azure-Kontexts können** Sie Ihren Kontext auch für PowerShell-Hintergrundaufträge freigeben. Mit PowerShell können Sie Aufgaben mit langer Ausführungszeit als Hintergrundaufträge starten und überwachen, ohne auf den Abschluss der Aufgaben warten zu müssen. Sie können Anmeldeinformationen auf zwei Arten an Hintergrundaufträge weitergeben:
 
 - Übergeben des Kontexts als Argument
 
@@ -154,5 +154,4 @@ Neue Cmdlets für die Kontextverwaltung
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
