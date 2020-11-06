@@ -1,0 +1,217 @@
+---
+external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
+ms.assetid: D077DB50-12BC-45AB-8EAC-57810DA83035
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchRemoteDesktopProtocolFile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchRemoteDesktopProtocolFile.md
+ms.openlocfilehash: 37d91dc6fd9d90291c7b619fdb9839d6d9af83b7
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93505662"
+---
+# <span data-ttu-id="7007f-101">Get-AzureBatchRemoteDesktopProtocolFile</span><span class="sxs-lookup"><span data-stu-id="7007f-101">Get-AzureBatchRemoteDesktopProtocolFile</span></span>
+
+## <span data-ttu-id="7007f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="7007f-102">SYNOPSIS</span></span>
+<span data-ttu-id="7007f-103">Ruft eine RDP-Datei von einem Compute-Knoten ab.</span><span class="sxs-lookup"><span data-stu-id="7007f-103">Gets an RDP file from a compute node.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="7007f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7007f-104">SYNTAX</span></span>
+
+### <span data-ttu-id="7007f-105">Id_Path (Standard)</span><span class="sxs-lookup"><span data-stu-id="7007f-105">Id_Path (Default)</span></span>
+```
+Get-AzureBatchRemoteDesktopProtocolFile [-PoolId] <String> [-ComputeNodeId] <String> -DestinationPath <String>
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="7007f-106">Id_Stream</span><span class="sxs-lookup"><span data-stu-id="7007f-106">Id_Stream</span></span>
+```
+Get-AzureBatchRemoteDesktopProtocolFile [-PoolId] <String> [-ComputeNodeId] <String>
+ -DestinationStream <Stream> -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="7007f-107">InputObject_Path</span><span class="sxs-lookup"><span data-stu-id="7007f-107">InputObject_Path</span></span>
+```
+Get-AzureBatchRemoteDesktopProtocolFile [[-ComputeNode] <PSComputeNode>] -DestinationPath <String>
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="7007f-108">InputObject_Stream</span><span class="sxs-lookup"><span data-stu-id="7007f-108">InputObject_Stream</span></span>
+```
+Get-AzureBatchRemoteDesktopProtocolFile [[-ComputeNode] <PSComputeNode>] -DestinationStream <Stream>
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="7007f-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7007f-109">DESCRIPTION</span></span>
+<span data-ttu-id="7007f-110">Das Cmdlet " **Get-AzureBatchRemoteDesktopProtocolFile** " Ruft eine RDP-Datei (Remote Desktop Protocol) von einem Compute-Knoten ab und speichert Sie als Datei oder für einen vom Benutzer angegebenen Stream.</span><span class="sxs-lookup"><span data-stu-id="7007f-110">The **Get-AzureBatchRemoteDesktopProtocolFile** cmdlet gets a Remote Desktop Protocol (RDP) file from a compute node and saves it as a file or to a user supplied stream.</span></span>
+
+## <span data-ttu-id="7007f-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7007f-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="7007f-112">Beispiel 1: Abrufen einer RDP-Datei von einem angegebenen Compute-Knoten und Speichern der Datei</span><span class="sxs-lookup"><span data-stu-id="7007f-112">Example 1: Get an RDP file from a specified compute node and save the file</span></span>
+```
+PS C:\>Get-AzureBatchRemoteDesktopProtocolFile -PoolId "Pool06" -ComputeNodeId "ComputeNode01" -DestinationPath "C:\PowerShell\ComputeNode01.rdp" -BatchContext $Context
+```
+
+<span data-ttu-id="7007f-113">Dieser Befehl ruft eine RDP-Datei vom Compute-Knoten ab, die die ID-ComputeNode01 im Pool mit der ID Pool06 hat.</span><span class="sxs-lookup"><span data-stu-id="7007f-113">This command gets an RDP file from the compute node that has the ID ComputeNode01 in the pool that has the ID Pool06.</span></span>
+<span data-ttu-id="7007f-114">Der Befehl speichert die RDP-Datei als C:\PowerShell\MyComputeNode.RDP.</span><span class="sxs-lookup"><span data-stu-id="7007f-114">The command saves the .rdp file as C:\PowerShell\MyComputeNode.rdp.</span></span>
+<span data-ttu-id="7007f-115">Verwenden Sie das Get-AzureRmBatchAccountKeys-Cmdlet, um der $Context Variablen einen Kontext zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="7007f-115">Use the Get-AzureRmBatchAccountKeys cmdlet to assign a context to the $Context variable.</span></span>
+
+### <span data-ttu-id="7007f-116">Beispiel 2: Abrufen einer RDP-Datei von einem Compute-Knoten und Speichern der Datei mithilfe der Pipeline</span><span class="sxs-lookup"><span data-stu-id="7007f-116">Example 2: Get an RDP file from a compute node and save the file by using the pipeline</span></span>
+```
+PS C:\>Get-AzureBatchComputeNode -PoolId "Pool06" -Id "ComputeNode02" -BatchContext $Context | Get-AzureBatchRemoteDesktopProtocolFile -DestinationPath "C:\PowerShell\MyComputeNode02.rdp" -BatchContext $Context
+```
+
+<span data-ttu-id="7007f-117">Dieser Befehl ruft den Compute-Knoten ab, dessen ID-ComputeNode02 im Pool mit der ID-Pool06.</span><span class="sxs-lookup"><span data-stu-id="7007f-117">This command gets the compute node that has the ID ComputeNode02 in the pool that has the ID Pool06.</span></span>
+<span data-ttu-id="7007f-118">Der Befehl übergibt diesen Compute-Knoten mithilfe des Pipelineoperators an das aktuelle Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="7007f-118">The command passes that compute node to the current cmdlet by using the pipeline operator.</span></span>
+<span data-ttu-id="7007f-119">Das aktuelle Cmdlet ruft eine RPD-Datei vom Compute-Knoten ab und speichert dann den Inhalt als Datei mit dem Namen C:\PowerShell\MyComputeNode02.RDP.</span><span class="sxs-lookup"><span data-stu-id="7007f-119">The current cmdlet gets an .rpd file from the compute node, and then saves the contents as a file that is named C:\PowerShell\MyComputeNode02.rdp.</span></span>
+
+### <span data-ttu-id="7007f-120">Beispiel 3: Abrufen einer RDP-Datei aus einem angegebenen Compute-Knoten und Weiterleiten an einen Datenstrom</span><span class="sxs-lookup"><span data-stu-id="7007f-120">Example 3: Get a RDP file from a specified compute node and direct it to a stream</span></span>
+```
+PS C:\>$Stream = New-Object -TypeName "System.IO.MemoryStream"
+PS C:\> Get-AzureBatchRemoteDesktopProtocolFile "Pool06" -ComputeNodeId "ComputeNode03" -DestinationStream $Stream -BatchContext $Context
+```
+
+<span data-ttu-id="7007f-121">Der erste Befehl erstellt einen Datenstrom mithilfe des New-Object-Cmdlets und speichert ihn dann in der $Stream-Variablen.</span><span class="sxs-lookup"><span data-stu-id="7007f-121">The first command creates a stream by using the New-Object cmdlet, and then stores it in the $Stream variable.</span></span>
+
+<span data-ttu-id="7007f-122">Der zweite Befehl ruft eine RDP-Datei vom Compute-Knoten ab, die die ID-ComputeNode03 im Pool mit der ID Pool06 hat.</span><span class="sxs-lookup"><span data-stu-id="7007f-122">The second command gets an .rdp file from the compute node that has the ID ComputeNode03 in the pool that has the ID Pool06.</span></span>
+<span data-ttu-id="7007f-123">Der Befehl leitet Dateiinhalte in $Stream an den Datenstrom weiter.</span><span class="sxs-lookup"><span data-stu-id="7007f-123">The command directs file contents to the stream in $Stream.</span></span>
+
+## <span data-ttu-id="7007f-124">Parameter</span><span class="sxs-lookup"><span data-stu-id="7007f-124">PARAMETERS</span></span>
+
+### <span data-ttu-id="7007f-125">-Batchcontext</span><span class="sxs-lookup"><span data-stu-id="7007f-125">-BatchContext</span></span>
+<span data-ttu-id="7007f-126">Gibt die **BatchAccountContext** -Instanz an, die dieses Cmdlet für die Interaktion mit dem Batch Dienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="7007f-126">Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.</span></span>
+<span data-ttu-id="7007f-127">Wenn Sie ein **BatchAccountContext** -Objekt abrufen möchten, das Zugriffstasten für Ihr Abonnement enthält, verwenden Sie das Get-AzureRmBatchAccountKeys-Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="7007f-127">To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-128">-ComputeNode</span><span class="sxs-lookup"><span data-stu-id="7007f-128">-ComputeNode</span></span>
+<span data-ttu-id="7007f-129">Gibt einen Compute-Knoten als **PSComputeNode** -Objekt an, auf das die RDP-Datei verweist.</span><span class="sxs-lookup"><span data-stu-id="7007f-129">Specifies a compute node, as a **PSComputeNode** object, to which the .rdp file points.</span></span>
+<span data-ttu-id="7007f-130">Verwenden Sie das Get-AzureBatchComputeNode-Cmdlet, um ein Compute-Node-Objekt zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="7007f-130">To obtain a compute node object, use the Get-AzureBatchComputeNode cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
+Parameter Sets: InputObject_Path, InputObject_Stream
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-131">-ComputeNodeId</span><span class="sxs-lookup"><span data-stu-id="7007f-131">-ComputeNodeId</span></span>
+<span data-ttu-id="7007f-132">Gibt die ID des Compute-Knotens an, auf den die RDP-Datei verweist.</span><span class="sxs-lookup"><span data-stu-id="7007f-132">Specifies the ID of the compute node to which the .rdp file points.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Id_Path, Id_Stream
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-133">-DestinationPath</span><span class="sxs-lookup"><span data-stu-id="7007f-133">-DestinationPath</span></span>
+<span data-ttu-id="7007f-134">Gibt den Dateipfad an, in dem dieses Cmdlet die RDP-Datei speichert.</span><span class="sxs-lookup"><span data-stu-id="7007f-134">Specifies the file path where this cmdlet saves the .rdp file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Id_Path, InputObject_Path
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-135">-DestinationStream</span><span class="sxs-lookup"><span data-stu-id="7007f-135">-DestinationStream</span></span>
+<span data-ttu-id="7007f-136">Gibt den Stream an, in den das Cmdlet die RDP-Daten leitet.</span><span class="sxs-lookup"><span data-stu-id="7007f-136">Specifies the stream into which this cmdlet directs the RDP data.</span></span>
+<span data-ttu-id="7007f-137">Mit diesem Cmdlet wird dieser Datenstrom nicht geschlossen oder zurückgespult.</span><span class="sxs-lookup"><span data-stu-id="7007f-137">This cmdlet does not close or rewind this stream.</span></span>
+
+```yaml
+Type: System.IO.Stream
+Parameter Sets: Id_Stream, InputObject_Stream
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-138">-Pool-Nr</span><span class="sxs-lookup"><span data-stu-id="7007f-138">-PoolId</span></span>
+<span data-ttu-id="7007f-139">Gibt die ID des Pools an, der den Compute-Knoten enthält, aus dem dieses Cmdlet eine RDP-Datei erhält.</span><span class="sxs-lookup"><span data-stu-id="7007f-139">Specifies the ID of the pool that contains the compute node from which this cmdlet gets an .rdp file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Id_Path, Id_Stream
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-140">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7007f-140">-DefaultProfile</span></span>
+<span data-ttu-id="7007f-141">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="7007f-141">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7007f-142">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7007f-142">CommonParameters</span></span>
+<span data-ttu-id="7007f-143">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7007f-143">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7007f-144">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="7007f-144">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="7007f-145">Eingaben</span><span class="sxs-lookup"><span data-stu-id="7007f-145">INPUTS</span></span>
+
+### <span data-ttu-id="7007f-146">BatchAccountContext</span><span class="sxs-lookup"><span data-stu-id="7007f-146">BatchAccountContext</span></span>
+<span data-ttu-id="7007f-147">Der Parameter "batchcontext" akzeptiert den Wert vom Typ "BatchAccountContext" aus der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="7007f-147">Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline</span></span>
+
+### <span data-ttu-id="7007f-148">PSComputeNode</span><span class="sxs-lookup"><span data-stu-id="7007f-148">PSComputeNode</span></span>
+<span data-ttu-id="7007f-149">Der Parameter "ComputeNode" akzeptiert den Wert vom Typ "PSComputeNode" aus der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="7007f-149">Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline</span></span>
+
+## <span data-ttu-id="7007f-150">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="7007f-150">OUTPUTS</span></span>
+
+## <span data-ttu-id="7007f-151">Notizen</span><span class="sxs-lookup"><span data-stu-id="7007f-151">NOTES</span></span>
+
+## <span data-ttu-id="7007f-152">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="7007f-152">RELATED LINKS</span></span>
+
+[<span data-ttu-id="7007f-153">Get-AzureRmBatchAccountKeys</span><span class="sxs-lookup"><span data-stu-id="7007f-153">Get-AzureRmBatchAccountKeys</span></span>](./Get-AzureRmBatchAccountKeys.md)
+
+[<span data-ttu-id="7007f-154">Get-AzureBatchComputeNode</span><span class="sxs-lookup"><span data-stu-id="7007f-154">Get-AzureBatchComputeNode</span></span>](./Get-AzureBatchComputeNode.md)
+
+[<span data-ttu-id="7007f-155">Azure Batch-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="7007f-155">Azure Batch Cmdlets</span></span>](./AzureRM.Batch.md)
+
+
