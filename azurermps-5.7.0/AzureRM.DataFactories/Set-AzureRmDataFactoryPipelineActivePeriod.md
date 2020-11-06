@@ -1,0 +1,267 @@
+---
+external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
+ms.assetid: D853A91F-95E7-4C36-AC0F-2C10DFCF68F8
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/set-azurermdatafactorypipelineactiveperiod
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactoryPipelineActivePeriod.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactoryPipelineActivePeriod.md
+ms.openlocfilehash: 1c6290f21693f599925f34f950256005df8be670
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93478529"
+---
+# <span data-ttu-id="3c608-101">Set-AzureRmDataFactoryPipelineActivePeriod</span><span class="sxs-lookup"><span data-stu-id="3c608-101">Set-AzureRmDataFactoryPipelineActivePeriod</span></span>
+
+## <span data-ttu-id="3c608-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="3c608-102">SYNOPSIS</span></span>
+<span data-ttu-id="3c608-103">Konfiguriert den aktiven Zeitraum für Datenslices.</span><span class="sxs-lookup"><span data-stu-id="3c608-103">Configures the active period for data slices.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="3c608-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3c608-104">SYNTAX</span></span>
+
+### <span data-ttu-id="3c608-105">ByFactoryName (Standard)</span><span class="sxs-lookup"><span data-stu-id="3c608-105">ByFactoryName (Default)</span></span>
+```
+Set-AzureRmDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactoryName] <String>
+ [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="3c608-106">ByFactoryObject</span><span class="sxs-lookup"><span data-stu-id="3c608-106">ByFactoryObject</span></span>
+```
+Set-AzureRmDataFactoryPipelineActivePeriod [-PipelineName] <String> [-DataFactory] <PSDataFactory>
+ [-StartDateTime] <DateTime> [[-EndDateTime] <DateTime>] [-AutoResolve] [-ForceRecalculate]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="3c608-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3c608-107">DESCRIPTION</span></span>
+<span data-ttu-id="3c608-108">Das Cmdlet " **festlegen-AzureRmDataFactoryPipelineActivePeriod** " konfiguriert den aktiven Zeitraum für die Datensegmente, die von einer Pipeline in Azure Data Factory verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="3c608-108">The **Set-AzureRmDataFactoryPipelineActivePeriod** cmdlet configures the active period for the data slices that are processed by a pipeline in Azure Data Factory.</span></span>
+<span data-ttu-id="3c608-109">Wenn Sie das Set-AzureRmDataFactorySliceStatus-Cmdlet verwenden, um den Status von Segmenten für ein DataSet zu ändern, stellen Sie sicher, dass sich die Startzeit und die Endzeit für ein Segment im aktiven Zeitraum der Pipeline befinden.</span><span class="sxs-lookup"><span data-stu-id="3c608-109">If you use the Set-AzureRmDataFactorySliceStatus cmdlet to modify the status of slices for a dataset, make sure that the start time and end time for a slice are in the active period of the pipeline.</span></span>
+
+<span data-ttu-id="3c608-110">Nachdem Sie eine Pipeline erstellt haben, können Sie den Zeitraum angeben, in dem die Datenverarbeitung erfolgen soll.</span><span class="sxs-lookup"><span data-stu-id="3c608-110">After you create a pipeline, you can specify the period in which data processing occurs.</span></span>
+<span data-ttu-id="3c608-111">Wenn Sie den aktiven Zeitraum für eine Pipeline angeben, wird die Zeitdauer definiert, in der die Datensegmente basierend auf den **Verfügbarkeits** Eigenschaften verarbeitet werden, die für die einzelnen Daten Factory-Datasets definiert wurden.</span><span class="sxs-lookup"><span data-stu-id="3c608-111">Specifying the active period for a pipeline defines the time duration in which the data slices are processed based on the **Availability** properties that were defined for each Data Factory dataset.</span></span>
+
+## <span data-ttu-id="3c608-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="3c608-112">EXAMPLES</span></span>
+
+### <span data-ttu-id="3c608-113">Beispiel 1: Konfigurieren des aktiven Zeitraums</span><span class="sxs-lookup"><span data-stu-id="3c608-113">Example 1: Configure the active period</span></span>
+```
+PS C:\>Set-AzureRmDataFactoryPipelineActivePeriod -ResourceGroupName "ADF" -PipelineName "DPWikisample" -DataFactoryName "WikiADF" -StartDateTime 2014-05-21T16:00:00Z -EndDateTime 2014-05-22T16:00:00Z
+Confirm
+Are you sure you want to set pipeline 'DPWikisample' active period from '05/21/2014 16:00:00' to
+'05/22/2014 16:00:00'? 
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+True
+```
+
+<span data-ttu-id="3c608-114">Dieser Befehl konfiguriert den aktiven Zeitraum für die Datensegmente, die von der Pipeline mit dem Namen DPWikisample verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="3c608-114">This command configures the active period for the data slices that the pipeline named DPWikisample processes.</span></span>
+<span data-ttu-id="3c608-115">Der Befehl bietet Anfangs-und Endpunkte für die Datensegmente als Werte.</span><span class="sxs-lookup"><span data-stu-id="3c608-115">The command provides beginning and end points for the data slices as values.</span></span>
+<span data-ttu-id="3c608-116">Der Befehl gibt den Wert $true zurück.</span><span class="sxs-lookup"><span data-stu-id="3c608-116">The command returns a value of $True.</span></span>
+
+## <span data-ttu-id="3c608-117">Parameter</span><span class="sxs-lookup"><span data-stu-id="3c608-117">PARAMETERS</span></span>
+
+### <span data-ttu-id="3c608-118">– Autoresolve</span><span class="sxs-lookup"><span data-stu-id="3c608-118">-AutoResolve</span></span>
+<span data-ttu-id="3c608-119">Gibt an, dass dieses Cmdlet die automatische Aufhebung verwendet.</span><span class="sxs-lookup"><span data-stu-id="3c608-119">Indicates that this cmdlet uses auto resolve.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-120">-DataFactory</span><span class="sxs-lookup"><span data-stu-id="3c608-120">-DataFactory</span></span>
+<span data-ttu-id="3c608-121">Gibt ein **PSDataFactory** -Objekt an.</span><span class="sxs-lookup"><span data-stu-id="3c608-121">Specifies a **PSDataFactory** object.</span></span>
+<span data-ttu-id="3c608-122">Dieses Cmdlet ändert den aktiven Zeitraum für eine Pipeline, die zu der Data Factory gehört, die dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="3c608-122">This cmdlet modifies the active period for a pipeline that belongs to the data factory that this parameter specifies.</span></span>
+
+```yaml
+Type: PSDataFactory
+Parameter Sets: ByFactoryObject
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-123">-Datafactoryname</span><span class="sxs-lookup"><span data-stu-id="3c608-123">-DataFactoryName</span></span>
+<span data-ttu-id="3c608-124">Gibt den Namen einer Data Factory an.</span><span class="sxs-lookup"><span data-stu-id="3c608-124">Specifies the name of a data factory.</span></span>
+<span data-ttu-id="3c608-125">Dieses Cmdlet ändert den aktiven Zeitraum für eine Pipeline, die zu der Data Factory gehört, die dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="3c608-125">This cmdlet modifies the active period for a pipeline that belongs to the data factory that this parameter specifies.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-126">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3c608-126">-DefaultProfile</span></span>
+<span data-ttu-id="3c608-127">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="3c608-127">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-128">-Enddatum</span><span class="sxs-lookup"><span data-stu-id="3c608-128">-EndDateTime</span></span>
+<span data-ttu-id="3c608-129">Gibt das Ende eines Zeitraums als **DateTime** -Objekt an.</span><span class="sxs-lookup"><span data-stu-id="3c608-129">Specifies the end of a time period as a **DateTime** object.</span></span>
+<span data-ttu-id="3c608-130">Die Datenverarbeitung erfolgt, oder Datenscheiben werden innerhalb dieses Zeitraums verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="3c608-130">Data processing occurs or data slices are processed within this period.</span></span>
+<span data-ttu-id="3c608-131">Wenn Sie weitere Informationen zu **DateTime** -Objekten wünschen, geben Sie `Get-Help Get-Date` .</span><span class="sxs-lookup"><span data-stu-id="3c608-131">For more information about **DateTime** objects, type `Get-Help Get-Date`.</span></span>
+
+<span data-ttu-id="3c608-132">*Enddatum* muss im ISO8601-Format wie in den folgenden Beispielen angegeben werden:</span><span class="sxs-lookup"><span data-stu-id="3c608-132">*EndDateTime* must be specified in the ISO8601 format as in the following examples:</span></span> 
+
+<span data-ttu-id="3c608-133">2015-01-01z 2015-01-01T00:00:00Z 2015-01-01T00:00:00.000 z (UTC) 2015-01-01T00:00:00-08:00 (Pazifik-Standard Zeit)</span><span class="sxs-lookup"><span data-stu-id="3c608-133">2015-01-01Z 2015-01-01T00:00:00Z 2015-01-01T00:00:00.000Z (UTC) 2015-01-01T00:00:00-08:00 (Pacific Standard Time)</span></span>
+
+<span data-ttu-id="3c608-134">Der standardmäßige Zeitzonenbezeichner ist UTC.</span><span class="sxs-lookup"><span data-stu-id="3c608-134">The default time zone designator is UTC.</span></span>
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-135">-ForceRecalculate</span><span class="sxs-lookup"><span data-stu-id="3c608-135">-ForceRecalculate</span></span>
+<span data-ttu-id="3c608-136">Gibt an, dass dieses Cmdlet Force-Neuberechnung verwendet.</span><span class="sxs-lookup"><span data-stu-id="3c608-136">Indicates that this cmdlet uses force recalculate.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-137">-Pipelinename</span><span class="sxs-lookup"><span data-stu-id="3c608-137">-PipelineName</span></span>
+<span data-ttu-id="3c608-138">Gibt den Namen der Pipeline an.</span><span class="sxs-lookup"><span data-stu-id="3c608-138">Specifies the name of the pipeline.</span></span>
+<span data-ttu-id="3c608-139">Mit diesem Cmdlet wird der aktive Zeitraum für die Pipeline festgelegt, den dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="3c608-139">This cmdlet sets the active period for the pipeline that this parameter specifies.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-140">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="3c608-140">-ResourceGroupName</span></span>
+<span data-ttu-id="3c608-141">Gibt den Namen einer Azure-Ressourcengruppe an.</span><span class="sxs-lookup"><span data-stu-id="3c608-141">Specifies the name of an Azure resource group.</span></span>
+<span data-ttu-id="3c608-142">Dieses Cmdlet ändert den aktiven Zeitraum für eine Pipeline, die zu der Gruppe gehört, die dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="3c608-142">This cmdlet modifies the active period for a pipeline that belongs to the group that this parameter specifies.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-143">-Startdatum</span><span class="sxs-lookup"><span data-stu-id="3c608-143">-StartDateTime</span></span>
+<span data-ttu-id="3c608-144">Gibt den Anfang eines Zeitraums als **DateTime** -Objekt an.</span><span class="sxs-lookup"><span data-stu-id="3c608-144">Specifies the start of a time period as a **DateTime** object.</span></span>
+<span data-ttu-id="3c608-145">Die Datenverarbeitung erfolgt, oder Datenscheiben werden innerhalb dieses Zeitraums verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="3c608-145">Data processing occurs or data slices are processed within this period.</span></span>
+
+<span data-ttu-id="3c608-146">Start *Datum* muss im ISO8601-Format angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3c608-146">*StartDateTime* must be specified in the ISO8601 format.</span></span>
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-147">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="3c608-147">-Confirm</span></span>
+<span data-ttu-id="3c608-148">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="3c608-148">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-149">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="3c608-149">-WhatIf</span></span>
+<span data-ttu-id="3c608-150">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3c608-150">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="3c608-151">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3c608-151">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3c608-152">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3c608-152">CommonParameters</span></span>
+<span data-ttu-id="3c608-153">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3c608-153">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3c608-154">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="3c608-154">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="3c608-155">Eingaben</span><span class="sxs-lookup"><span data-stu-id="3c608-155">INPUTS</span></span>
+
+### <span data-ttu-id="3c608-156">Keine</span><span class="sxs-lookup"><span data-stu-id="3c608-156">None</span></span>
+<span data-ttu-id="3c608-157">Dieses Cmdlet akzeptiert keine Eingaben.</span><span class="sxs-lookup"><span data-stu-id="3c608-157">This cmdlet does not accept any input.</span></span>
+
+## <span data-ttu-id="3c608-158">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="3c608-158">OUTPUTS</span></span>
+
+### <span data-ttu-id="3c608-159">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="3c608-159">System.Boolean</span></span>
+
+## <span data-ttu-id="3c608-160">Notizen</span><span class="sxs-lookup"><span data-stu-id="3c608-160">NOTES</span></span>
+* <span data-ttu-id="3c608-161">Schlüsselwörter: Azure, azurerm, arm, Resource, Verwaltung, Manager, Daten, Factorys</span><span class="sxs-lookup"><span data-stu-id="3c608-161">Keywords: azure, azurerm, arm, resource, management, manager, data, factories</span></span>
+
+## <span data-ttu-id="3c608-162">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="3c608-162">RELATED LINKS</span></span>
+
+[<span data-ttu-id="3c608-163">Neu – AzureRmDataFactoryPipeline</span><span class="sxs-lookup"><span data-stu-id="3c608-163">New-AzureRmDataFactoryPipeline</span></span>](./New-AzureRmDataFactoryPipeline.md)
+
+[<span data-ttu-id="3c608-164">Satz-AzureRmDataFactorySliceStatus</span><span class="sxs-lookup"><span data-stu-id="3c608-164">Set-AzureRmDataFactorySliceStatus</span></span>](./Set-AzureRmDataFactorySliceStatus.md)
+
+

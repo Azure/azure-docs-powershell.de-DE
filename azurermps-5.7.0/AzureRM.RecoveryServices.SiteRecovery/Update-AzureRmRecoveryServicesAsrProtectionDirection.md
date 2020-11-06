@@ -1,0 +1,511 @@
+---
+external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.SiteRecovery
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/update-azurermrecoveryservicesasrprotectiondirection
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Update-AzureRmRecoveryServicesAsrProtectionDirection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Update-AzureRmRecoveryServicesAsrProtectionDirection.md
+ms.openlocfilehash: 13d1829326695e2860caf99bf002dcf5da31caac
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93478286"
+---
+# <span data-ttu-id="b6f22-101">Update-AzureRmRecoveryServicesAsrProtectionDirection</span><span class="sxs-lookup"><span data-stu-id="b6f22-101">Update-AzureRmRecoveryServicesAsrProtectionDirection</span></span>
+
+## <span data-ttu-id="b6f22-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="b6f22-102">SYNOPSIS</span></span>
+<span data-ttu-id="b6f22-103">Aktualisiert die Replikationsrichtung für das angegebene Replikations geschützte Element oder den Wiederherstellungsplan.</span><span class="sxs-lookup"><span data-stu-id="b6f22-103">Updates the replication direction for the specified replication protected item or recovery plan.</span></span> <span data-ttu-id="b6f22-104">Wird verwendet, um einen fehlerhaften über replizierten Artikel oder Wiederherstellungsplan wieder zu replizieren/zurück zu replizieren.</span><span class="sxs-lookup"><span data-stu-id="b6f22-104">Used to re-protect/reverse replicate a failed over replicated item or recovery plan.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="b6f22-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6f22-105">SYNTAX</span></span>
+
+### <span data-ttu-id="b6f22-106">ByRPIObject (Standard)</span><span class="sxs-lookup"><span data-stu-id="b6f22-106">ByRPIObject (Default)</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection -ReplicationProtectedItem <ASRReplicationProtectedItem>
+ -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-107">AzureToVMware</span><span class="sxs-lookup"><span data-stu-id="b6f22-107">AzureToVMware</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-AzureToVMware] [-Account <ASRRunAsAccount>]
+ -DataStore <ASRDataStore> [-MasterTarget <ASRMasterTargetServer>] -ProcessServer <ASRProcessServer>
+ -ProtectionContainerMapping <ASRProtectionContainerMapping>
+ -ReplicationProtectedItem <ASRReplicationProtectedItem> -Direction <String>
+ -RetentionVolume <ASRRetentionVolume> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-108">VMwareToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-108">VMwareToAzure</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-VMwareToAzure] -Account <ASRRunAsAccount>
+ [-MasterTarget <ASRMasterTargetServer>] -ProcessServer <ASRProcessServer>
+ -ProtectionContainerMapping <ASRProtectionContainerMapping> [-LogStorageAccountId <String>]
+ [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+ -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-109">HyperVToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-109">HyperVToAzure</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-HyperVToAzure] [-LogStorageAccountId <String>]
+ [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+ -Direction <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-110">EnterpriseToEnterprise</span><span class="sxs-lookup"><span data-stu-id="b6f22-110">EnterpriseToEnterprise</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-VmmToVmm]
+ -ReplicationProtectedItem <ASRReplicationProtectedItem> -Direction <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-111">AzureToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-111">AzureToAzure</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-AzureToAzure]
+ -ProtectionContainerMapping <ASRProtectionContainerMapping> -LogStorageAccountId <String>
+ [-RecoveryAzureStorageAccountId <String>] -ReplicationProtectedItem <ASRReplicationProtectedItem>
+ [-RecoveryResourceGroupId <String>] [-RecoveryCloudServiceId <String>] [-RecoveryAvailabilitySetId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-112">AzureToAzureWithMultipleStorageAccount</span><span class="sxs-lookup"><span data-stu-id="b6f22-112">AzureToAzureWithMultipleStorageAccount</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection [-AzureToAzure]
+ -ProtectionContainerMapping <ASRProtectionContainerMapping>
+ -AzureToAzureDiskReplicationConfiguration <ASRAzuretoAzureDiskReplicationConfig[]>
+ -ReplicationProtectedItem <ASRReplicationProtectedItem> [-RecoveryResourceGroupId <String>]
+ [-RecoveryCloudServiceId <String>] [-RecoveryAvailabilitySetId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-113">ByRPObject</span><span class="sxs-lookup"><span data-stu-id="b6f22-113">ByRPObject</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection -RecoveryPlan <ASRRecoveryPlan> -Direction <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b6f22-114">ByPEObject</span><span class="sxs-lookup"><span data-stu-id="b6f22-114">ByPEObject</span></span>
+```
+Update-AzureRmRecoveryServicesAsrProtectionDirection -Direction <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="b6f22-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b6f22-115">DESCRIPTION</span></span>
+<span data-ttu-id="b6f22-116">Das Cmdlet **Update-AzureRmRecoveryServicesAsrProtectionDirection** aktualisiert die Replikationsrichtung für das angegebene Azure Site Recovery-Objekt nach Abschluss eines Commit-Failover-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="b6f22-116">The **Update-AzureRmRecoveryServicesAsrProtectionDirection** cmdlet updates the replication direction for the specified Azure Site Recovery object after the completion of a commit failover operation.</span></span>
+
+## <span data-ttu-id="b6f22-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b6f22-117">EXAMPLES</span></span>
+
+### <span data-ttu-id="b6f22-118">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="b6f22-118">Example 1</span></span>
+```
+PS C:\> $currentJob = Update-AzureRmRecoveryServicesAsrProtectionDirection -RecoveryPlan $RP -Direction PrimaryToRecovery
+```
+
+<span data-ttu-id="b6f22-119">Starten Sie den Vorgang Richtung aktualisieren für den angegebenen Wiederherstellungsplan, und geben Sie das ASR-Auftragsobjekt zurück, das zum Nachvollziehen des Vorgangs verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b6f22-119">Start the update direction operation for the specified recovery plan and returns the ASR job object used to track the operation.</span></span>
+
+### <span data-ttu-id="b6f22-120">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="b6f22-120">Example 2</span></span>
+```
+PS C:\> $currentJob = Update-AzureRmRecoveryServicesAsrProtectionDirection -AzureToAzure -ProtectionContainerMapping $B2ApcmMapping -LogStorageAccountId $cacheStorageId `
+ -ReplicationProtectedItem $rpi
+```
+
+<span data-ttu-id="b6f22-121">Starten Sie den Vorgang "Richtung aktualisieren" für das angegebene, durch die Schutzcontainer Zuordnung und die Verwendung des Cachespeichers (im gleichen Bereich wie VM) definierte Replikations geschützte Element im Ziel Azure-Bereich.</span><span class="sxs-lookup"><span data-stu-id="b6f22-121">Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and using cache storage (in same region as VM).</span></span>
+
+### <span data-ttu-id="b6f22-122">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="b6f22-122">Example 3</span></span>
+```
+PS C:\> $currentJob = Update-AzureRmRecoveryServicesAsrProtectionDirection -AzureToAzure -ProtectionContainerMapping $B2ApcmMapping `
+ -AzureToAzureDiskReplicationConfiguration $disk1,$disk2 -ReplicationProtectedItem  $rpi
+```
+
+<span data-ttu-id="b6f22-123">Starten Sie den Vorgang "Richtung aktualisieren" für das angegebene, durch die Schutzcontainer Zuordnung und die Bereitstellung der Datenträger Replikation festgelegte, in Ziel Azure Region definierte, geschützte Element</span><span class="sxs-lookup"><span data-stu-id="b6f22-123">Start the update direction operation for the specified replication protected item in target azure region defined by protection container mapping and provided disk replication configuration.</span></span>
+
+## <span data-ttu-id="b6f22-124">Parameter</span><span class="sxs-lookup"><span data-stu-id="b6f22-124">PARAMETERS</span></span>
+
+### <span data-ttu-id="b6f22-125">-Konto</span><span class="sxs-lookup"><span data-stu-id="b6f22-125">-Account</span></span>
+<span data-ttu-id="b6f22-126">Das ausführende Konto, das für die Push-Installation des mobilitätsdiensts verwendet werden soll, falls erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b6f22-126">The run as account to be used to push install the Mobility service if needed.</span></span> <span data-ttu-id="b6f22-127">Muss eine aus der Liste der ausführende Konten in der ASR-Fabric sein.</span><span class="sxs-lookup"><span data-stu-id="b6f22-127">Must be one from the list of run as accounts in the ASR fabric.</span></span>
+
+```yaml
+Type: ASRRunAsAccount
+Parameter Sets: AzureToVMware
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: ASRRunAsAccount
+Parameter Sets: VMwareToAzure
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-128">-AzureToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-128">-AzureToAzure</span></span>
+<span data-ttu-id="b6f22-129">Parameter Switch gibt an, dass die Replikationsrichtung für replizierte Azure Virtual Machines zwischen zwei Azure-Regionen aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="b6f22-129">Switch parameter specifying that the replication direction being updated for replicated Azure virtual machines between two Azure regions.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-130">-AzureToAzureDiskReplicationConfiguration</span><span class="sxs-lookup"><span data-stu-id="b6f22-130">-AzureToAzureDiskReplicationConfiguration</span></span>
+<span data-ttu-id="b6f22-131">Gibt die Liste der zu replizierenden virtuellen Computer Datenträger sowie das Cache-Speicherkonto und das Wiederherstellungs Speicherkonto an, das zum Replizieren des Datenträgers verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="b6f22-131">Specifies the list of virtual machine disks to replicated and the cache storage account and recovery storage account to be used to replicate the disk.</span></span>
+
+```yaml
+Type: ASRAzuretoAzureDiskReplicationConfig[]
+Parameter Sets: AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-132">-AzureToVMware</span><span class="sxs-lookup"><span data-stu-id="b6f22-132">-AzureToVMware</span></span>
+<span data-ttu-id="b6f22-133">Aktualisieren Sie die Replikationsrichtung von Azure auf VMware.</span><span class="sxs-lookup"><span data-stu-id="b6f22-133">Update replication direction from Azure to Vmware.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AzureToVMware
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-134">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="b6f22-134">-Confirm</span></span>
+<span data-ttu-id="b6f22-135">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="b6f22-135">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-136">-Datenspeicher</span><span class="sxs-lookup"><span data-stu-id="b6f22-136">-DataStore</span></span>
+<span data-ttu-id="b6f22-137">Der VMware-Datenspeicher, der für die vmdisk verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b6f22-137">The VMware datastore to be used for the vmdisk's.</span></span>
+
+```yaml
+Type: ASRDataStore
+Parameter Sets: AzureToVMware
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-138">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b6f22-138">-DefaultProfile</span></span>
+<span data-ttu-id="b6f22-139">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="b6f22-139">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-140">-Richtung</span><span class="sxs-lookup"><span data-stu-id="b6f22-140">-Direction</span></span>
+<span data-ttu-id="b6f22-141">Gibt die Richtung an, die für den Aktualisierungsvorgang verwendet werden soll, um einen Failover zu senden.</span><span class="sxs-lookup"><span data-stu-id="b6f22-141">Specifies the direction to be used for the update operation post a failover.</span></span>
+<span data-ttu-id="b6f22-142">Die zulässigen Werte für diesen Parameter lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="b6f22-142">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="b6f22-143">PrimaryToRecovery</span><span class="sxs-lookup"><span data-stu-id="b6f22-143">PrimaryToRecovery</span></span>
+- <span data-ttu-id="b6f22-144">RecoveryToPrimary</span><span class="sxs-lookup"><span data-stu-id="b6f22-144">RecoveryToPrimary</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByRPIObject, AzureToVMware, VMwareToAzure, HyperVToAzure, EnterpriseToEnterprise, ByRPObject, ByPEObject
+Aliases:
+Accepted values: PrimaryToRecovery, RecoveryToPrimary
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-145">-HyperVToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-145">-HyperVToAzure</span></span>
+<span data-ttu-id="b6f22-146">Schützen Sie einen virtuellen Hyper-V-Computer nach dem Failback.</span><span class="sxs-lookup"><span data-stu-id="b6f22-146">Reprotect a Hyper-V virtual machine after failback.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: HyperVToAzure
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-147">-LogStorageAccountId</span><span class="sxs-lookup"><span data-stu-id="b6f22-147">-LogStorageAccountId</span></span>
+<span data-ttu-id="b6f22-148">Gibt die Speicherkonto-ID an, auf der das Replikationsprotokoll von VMS gespeichert werden soll.</span><span class="sxs-lookup"><span data-stu-id="b6f22-148">Specifies the storage account ID to store the replication log of VMs.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: VMwareToAzure, HyperVToAzure
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: AzureToAzure
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-149">-MasterTarget</span><span class="sxs-lookup"><span data-stu-id="b6f22-149">-MasterTarget</span></span>
+<span data-ttu-id="b6f22-150">Master-Ziel Server Details.</span><span class="sxs-lookup"><span data-stu-id="b6f22-150">Master Target Server Details.</span></span>
+
+```yaml
+Type: ASRMasterTargetServer
+Parameter Sets: AzureToVMware, VMwareToAzure
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-151">-ProcessServer</span><span class="sxs-lookup"><span data-stu-id="b6f22-151">-ProcessServer</span></span>
+<span data-ttu-id="b6f22-152">Der für die Replikation zu verwendende Prozess Server.</span><span class="sxs-lookup"><span data-stu-id="b6f22-152">Process Server to be used for replication.</span></span>
+
+```yaml
+Type: ASRProcessServer
+Parameter Sets: AzureToVMware, VMwareToAzure
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-153">-ProtectionContainerMapping</span><span class="sxs-lookup"><span data-stu-id="b6f22-153">-ProtectionContainerMapping</span></span>
+<span data-ttu-id="b6f22-154">Der für die Replikation zu verwendende Schutz containerMapping.</span><span class="sxs-lookup"><span data-stu-id="b6f22-154">Protection containerMapping to be used for replication.</span></span>
+
+```yaml
+Type: ASRProtectionContainerMapping
+Parameter Sets: AzureToVMware, VMwareToAzure, AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-155">-RecoveryAvailabilitySetId</span><span class="sxs-lookup"><span data-stu-id="b6f22-155">-RecoveryAvailabilitySetId</span></span>
+<span data-ttu-id="b6f22-156">Der Verfügbarkeits Satz, in dem der virtuelle Computer beim Failover erstellt werden soll</span><span class="sxs-lookup"><span data-stu-id="b6f22-156">The availability set that the virtual machine should be created in upon failover</span></span>
+
+```yaml
+Type: String
+Parameter Sets: AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-157">-RecoveryAzureStorageAccountId</span><span class="sxs-lookup"><span data-stu-id="b6f22-157">-RecoveryAzureStorageAccountId</span></span>
+<span data-ttu-id="b6f22-158">Gibt die ID des Azure-speicherkontos an, in das repliziert werden soll.</span><span class="sxs-lookup"><span data-stu-id="b6f22-158">Specifies the ID of the Azure storage account to replicate to.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: VMwareToAzure, HyperVToAzure, AzureToAzure
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-159">-RecoveryCloudServiceId</span><span class="sxs-lookup"><span data-stu-id="b6f22-159">-RecoveryCloudServiceId</span></span>
+<span data-ttu-id="b6f22-160">Die Ressourcen-ID des Wiederherstellungs-Cloud-Diensts, auf den dieser virtuelle Computer Failover durch ein Failover durch.</span><span class="sxs-lookup"><span data-stu-id="b6f22-160">The resource ID of the recovery cloud service to failover this virtual machine to.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-161">-RecoveryPlan</span><span class="sxs-lookup"><span data-stu-id="b6f22-161">-RecoveryPlan</span></span>
+<span data-ttu-id="b6f22-162">Gibt ein ASR-Wiederherstellungsplan-Objekt an.</span><span class="sxs-lookup"><span data-stu-id="b6f22-162">Specifies an ASR recovery plan object.</span></span>
+
+```yaml
+Type: ASRRecoveryPlan
+Parameter Sets: ByRPObject
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-163">-RecoveryResourceGroupId</span><span class="sxs-lookup"><span data-stu-id="b6f22-163">-RecoveryResourceGroupId</span></span>
+<span data-ttu-id="b6f22-164">Wiederherstellungs-Wiederbeschaffungs-ID für geschützte VM.</span><span class="sxs-lookup"><span data-stu-id="b6f22-164">Recovery resourceGroup id for protected Vm.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-165">-ReplicationProtectedItem</span><span class="sxs-lookup"><span data-stu-id="b6f22-165">-ReplicationProtectedItem</span></span>
+<span data-ttu-id="b6f22-166">Gibt ein geschütztes ASR-Replikations Element an.</span><span class="sxs-lookup"><span data-stu-id="b6f22-166">Specifies an ASR replication protected item.</span></span>
+
+```yaml
+Type: ASRReplicationProtectedItem
+Parameter Sets: ByRPIObject, AzureToVMware, VMwareToAzure, HyperVToAzure, EnterpriseToEnterprise, AzureToAzure, AzureToAzureWithMultipleStorageAccount
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-167">-RetentionVolume</span><span class="sxs-lookup"><span data-stu-id="b6f22-167">-RetentionVolume</span></span>
+<span data-ttu-id="b6f22-168">Das Aufbewahrungs Volumen auf dem zu verwendenden Master-Zielserver.</span><span class="sxs-lookup"><span data-stu-id="b6f22-168">Retention Volume on the master target server to be used.</span></span>
+
+```yaml
+Type: ASRRetentionVolume
+Parameter Sets: AzureToVMware
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-169">-VMwareToAzure</span><span class="sxs-lookup"><span data-stu-id="b6f22-169">-VMwareToAzure</span></span>
+<span data-ttu-id="b6f22-170">Aktualisieren Sie die Replikationsrichtung von VMware auf Azure.</span><span class="sxs-lookup"><span data-stu-id="b6f22-170">Update replication direction from VMware to Azure.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: VMwareToAzure
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-171">-VmmToVmm</span><span class="sxs-lookup"><span data-stu-id="b6f22-171">-VmmToVmm</span></span>
+<span data-ttu-id="b6f22-172">Aktualisieren Sie die Replikationsrichtung für einen fehlerhaften Hyper-v-virtuellen Computer, der zwischen zwei VMM-verwalteten Hyper-v-Websites geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="b6f22-172">Update replication direction for a failed over Hyper-V virtual machine that is protected between two VMM managed Hyper-V sites.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnterpriseToEnterprise
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-173">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b6f22-173">-WhatIf</span></span>
+<span data-ttu-id="b6f22-174">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b6f22-174">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="b6f22-175">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b6f22-175">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b6f22-176">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b6f22-176">CommonParameters</span></span>
+<span data-ttu-id="b6f22-177">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b6f22-177">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b6f22-178">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="b6f22-178">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="b6f22-179">Eingaben</span><span class="sxs-lookup"><span data-stu-id="b6f22-179">INPUTS</span></span>
+
+### <span data-ttu-id="b6f22-180">Microsoft. Azure. Commands. RecoveryServices. SiteRecovery. ASRRecoveryPlan</span><span class="sxs-lookup"><span data-stu-id="b6f22-180">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan</span></span>
+<span data-ttu-id="b6f22-181">Microsoft. Azure. Commands. RecoveryServices. SiteRecovery. ASRReplicationProtectedItem</span><span class="sxs-lookup"><span data-stu-id="b6f22-181">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem</span></span>
+
+## <span data-ttu-id="b6f22-182">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="b6f22-182">OUTPUTS</span></span>
+
+### <span data-ttu-id="b6f22-183">Microsoft. Azure. Commands. RecoveryServices. SiteRecovery. ASRJob</span><span class="sxs-lookup"><span data-stu-id="b6f22-183">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob</span></span>
+
+## <span data-ttu-id="b6f22-184">Notizen</span><span class="sxs-lookup"><span data-stu-id="b6f22-184">NOTES</span></span>
+
+## <span data-ttu-id="b6f22-185">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="b6f22-185">RELATED LINKS</span></span>
