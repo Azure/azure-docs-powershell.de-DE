@@ -1,0 +1,110 @@
+---
+external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+Module Name: AzureRM.Network
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/get-azurermapplicationgatewayhttplistenercustomerror
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayHttpListenerCustomError.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayHttpListenerCustomError.md
+ms.openlocfilehash: 89e323bd8e8dedbaa3c7716a6c10119a6fb69365
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93495957"
+---
+# <span data-ttu-id="4bcc9-101">Get-AzureRmApplicationGatewayHttpListenerCustomError</span><span class="sxs-lookup"><span data-stu-id="4bcc9-101">Get-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
+
+## <span data-ttu-id="4bcc9-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="4bcc9-102">SYNOPSIS</span></span>
+<span data-ttu-id="4bcc9-103">Ruft benutzerdefinierte Fehler (en) aus einem HTTP-Listener eines Anwendungs Gateways ab.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-103">Gets custom error(s) from a http listener of an application gateway.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="4bcc9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4bcc9-104">SYNTAX</span></span>
+
+```
+Get-AzureRmApplicationGatewayHttpListenerCustomError [-StatusCode <String>]
+ -HttpListener <PSApplicationGatewayHttpListener> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="4bcc9-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4bcc9-105">DESCRIPTION</span></span>
+<span data-ttu-id="4bcc9-106">Das Cmdlet " **Get-AzureRmApplicationGatewayCustomError** " Ruft benutzerdefinierte Fehler (en) aus einem HTTP-Listener eines Anwendungs Gateways ab.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-106">The **Get-AzureRmApplicationGatewayCustomError** cmdlet gets custom error(s) from a http listener of an application gateway.</span></span>
+
+## <span data-ttu-id="4bcc9-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="4bcc9-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="4bcc9-108">Beispiel 1: Ruft einen benutzerdefinierten Fehler in einem HTTP-Listener ab</span><span class="sxs-lookup"><span data-stu-id="4bcc9-108">Example 1: Gets a custom error in a http listener</span></span>
+```powershell
+PS C:\> $ce = Get-AzureRmApplicationGatewayCustomError -HttpListener $listener01 -StatusCode HttpStatus502
+```
+
+<span data-ttu-id="4bcc9-109">Dieser Befehl ruft den benutzerdefinierten Fehler des HTTP-Statuscodes 502 vom HTTP-Listener ab $Listener 01 ab und gibt ihn zurück.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-109">This command gets and returns the custom error of http status code 502 from the http listener $listener01.</span></span>
+
+### <span data-ttu-id="4bcc9-110">Beispiel 2: Ruft die Liste aller benutzerdefinierten Fehler in einem HTTP-Listener ab</span><span class="sxs-lookup"><span data-stu-id="4bcc9-110">Example 2: Gets the list of all custom errors in a http listener</span></span>
+```powershell
+PS C:\> $ces = Get-AzureRmApplicationGatewayCustomError -HttpListener $listener01
+```
+
+<span data-ttu-id="4bcc9-111">Dieser Befehl ruft die Liste aller benutzerdefinierten Fehler vom HTTP-Listener $Listener 01 ab und gibt diese zurück.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-111">This command gets and returns the list of all custom errors from the http listener $listener01.</span></span>
+
+## <span data-ttu-id="4bcc9-112">Parameter</span><span class="sxs-lookup"><span data-stu-id="4bcc9-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="4bcc9-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="4bcc9-113">-DefaultProfile</span></span>
+<span data-ttu-id="4bcc9-114">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-114">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bcc9-115">-HttpListener</span><span class="sxs-lookup"><span data-stu-id="4bcc9-115">-HttpListener</span></span>
+<span data-ttu-id="4bcc9-116">Der HTTP-Listener für Application Gateway</span><span class="sxs-lookup"><span data-stu-id="4bcc9-116">The Application Gateway Http Listener</span></span>
+
+```yaml
+Type: PSApplicationGatewayHttpListener
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bcc9-117">-Statuscode</span><span class="sxs-lookup"><span data-stu-id="4bcc9-117">-StatusCode</span></span>
+<span data-ttu-id="4bcc9-118">Status Code des Kunden Fehlers des Application Gateway-Kunden.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-118">Status code of the application gateway customer error.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4bcc9-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4bcc9-119">CommonParameters</span></span>
+<span data-ttu-id="4bcc9-120">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="4bcc9-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span>
+<span data-ttu-id="4bcc9-121">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="4bcc9-121">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="4bcc9-122">Eingaben</span><span class="sxs-lookup"><span data-stu-id="4bcc9-122">INPUTS</span></span>
+
+### <span data-ttu-id="4bcc9-123">Microsoft. Azure. Commands. Network. Models. PSApplicationGatewayHttpListener</span><span class="sxs-lookup"><span data-stu-id="4bcc9-123">Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener</span></span>
+
+## <span data-ttu-id="4bcc9-124">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="4bcc9-124">OUTPUTS</span></span>
+
+### <span data-ttu-id="4bcc9-125">Microsoft. Azure. Commands. Network. Models. PSApplicationGatewayCustomError</span><span class="sxs-lookup"><span data-stu-id="4bcc9-125">Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError</span></span>
+
+## <span data-ttu-id="4bcc9-126">Notizen</span><span class="sxs-lookup"><span data-stu-id="4bcc9-126">NOTES</span></span>
+
+## <span data-ttu-id="4bcc9-127">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="4bcc9-127">RELATED LINKS</span></span>

@@ -1,0 +1,274 @@
+---
+external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servicefabric/add-azurermservicefabricclustercertificate
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricClusterCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricClusterCertificate.md
+ms.openlocfilehash: fa357a4f5b8e599858ce5aff3e0aa11121833ba1
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93497301"
+---
+# <span data-ttu-id="b272f-101">Add-AzureRmServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="b272f-101">Add-AzureRmServiceFabricClusterCertificate</span></span>
+
+## <span data-ttu-id="b272f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="b272f-102">SYNOPSIS</span></span>
+<span data-ttu-id="b272f-103">Hinzufügen eines sekundären Cluster Zertifikats zum Cluster</span><span class="sxs-lookup"><span data-stu-id="b272f-103">Add a secondary cluster certificate to the cluster.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="b272f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b272f-104">SYNTAX</span></span>
+
+### <span data-ttu-id="b272f-105">ByExistingKeyVault</span><span class="sxs-lookup"><span data-stu-id="b272f-105">ByExistingKeyVault</span></span>
+```
+Add-AzureRmServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <String>
+ -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="b272f-106">ByNewPfxAndVaultName</span><span class="sxs-lookup"><span data-stu-id="b272f-106">ByNewPfxAndVaultName</span></span>
+```
+Add-AzureRmServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <String>
+ [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>] [-CertificateOutputFolder <String>]
+ [-CertificatePassword <SecureString>] -CertificateSubjectName <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b272f-107">ByExistingPfxAndVaultName</span><span class="sxs-lookup"><span data-stu-id="b272f-107">ByExistingPfxAndVaultName</span></span>
+```
+Add-AzureRmServiceFabricClusterCertificate [-ResourceGroupName] <String> [-Name] <String>
+ [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>] -CertificateFile <String>
+ [-CertificatePassword <SecureString>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="b272f-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b272f-108">DESCRIPTION</span></span>
+<span data-ttu-id="b272f-109">Verwenden **Sie Add-AzureRmServiceFabricClusterCertificate** zum Hinzufügen eines sekundären Cluster Zertifikats, entweder aus einem vorhandenen Azure Key Vault oder durch Erstellen eines neuen Azure Key Vault mithilfe eines vorhandenen Zertifikats oder aus einem neuen selbstsignierten Zertifikat, das erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="b272f-109">Use **Add-AzureRmServiceFabricClusterCertificate** to add a secondary cluster certificate, either from an existing Azure key vault or creating a new Azure key vault using an existing certificate provided or from a new self-signed certificate created.</span></span> <span data-ttu-id="b272f-110">Wenn vorhanden, wird der sekundäre Cluster überschrieben.</span><span class="sxs-lookup"><span data-stu-id="b272f-110">It will override the secondary cluster if there is any.</span></span>
+
+## <span data-ttu-id="b272f-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b272f-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="b272f-112">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="b272f-112">Example 1</span></span>
+```
+Add-AzureRmServiceFabricClusterCertificate -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' 
+-SecretIdentifier 'https://contoso03vault.vault.azure.net/secrets/contoso03vaultrg/7f7de9131c034172b9df37ccc549524f'
+```
+
+<span data-ttu-id="b272f-113">Mit diesem Befehl wird ein Zertifikat im vorhandenen Azure Key Vault als sekundäres Cluster Zertifikat hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="b272f-113">This command will add a certificate in the existing Azure key vault as a secondary cluster certificate.</span></span>
+
+### <span data-ttu-id="b272f-114">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="b272f-114">Example 2</span></span>
+```
+PS c:\> $pwd = ConvertTo-SecureString -String "123" -AsPlainText -Force
+PS c:\> add-AzureRmServiceFabricClusterCertificate -ResourceGroupName 'Group2' -Name 'Contoso02SFCluster'  -CertificateSubjectName 'Contoso.com' 
+-CertificateOutputFolder 'c:\test' -CertificatePassword $pwd
+```
+
+<span data-ttu-id="b272f-115">Mit diesem Befehl wird im Azure Key Vault ein selbstsigniertes Zertifikat erstellt und der Cluster so aktualisiert, dass es als sekundäres Cluster Zertifikat verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b272f-115">This command will create a self-signed certificate in the Azure key vault and upgrade the cluster to use it as a secondary cluster certificate.</span></span>
+
+## <span data-ttu-id="b272f-116">Parameter</span><span class="sxs-lookup"><span data-stu-id="b272f-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="b272f-117">-Certificatedatei</span><span class="sxs-lookup"><span data-stu-id="b272f-117">-CertificateFile</span></span>
+<span data-ttu-id="b272f-118">Der vorhandene Zertifikat Dateipfad.</span><span class="sxs-lookup"><span data-stu-id="b272f-118">The existing certificate file path.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: Source
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-119">-CertificateOutputFolder</span><span class="sxs-lookup"><span data-stu-id="b272f-119">-CertificateOutputFolder</span></span>
+<span data-ttu-id="b272f-120">Der Ordner des neuen Zertifikats, das erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="b272f-120">The folder of the new certificate to be created.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNewPfxAndVaultName
+Aliases: Destination
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-121">-CertificatePassword</span><span class="sxs-lookup"><span data-stu-id="b272f-121">-CertificatePassword</span></span>
+<span data-ttu-id="b272f-122">Das Kennwort der Zertifikatsdatei.</span><span class="sxs-lookup"><span data-stu-id="b272f-122">The password of the certificate file.</span></span>
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: CertPassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-123">-CertificateSubjectName</span><span class="sxs-lookup"><span data-stu-id="b272f-123">-CertificateSubjectName</span></span>
+<span data-ttu-id="b272f-124">Der DNS-Name des zu erstellenden Zertifikats.</span><span class="sxs-lookup"><span data-stu-id="b272f-124">The Dns name of the certificate to be created.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNewPfxAndVaultName
+Aliases: Subject
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-125">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b272f-125">-DefaultProfile</span></span>
+<span data-ttu-id="b272f-126">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="b272f-126">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-127">-Keyvaultname</span><span class="sxs-lookup"><span data-stu-id="b272f-127">-KeyVaultName</span></span>
+<span data-ttu-id="b272f-128">Azure Key Vault-Name.</span><span class="sxs-lookup"><span data-stu-id="b272f-128">Azure key vault name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-129">-KeyVaultResouceGroupName</span><span class="sxs-lookup"><span data-stu-id="b272f-129">-KeyVaultResouceGroupName</span></span>
+<span data-ttu-id="b272f-130">Azure Key Vault-Ressourcengruppenname</span><span class="sxs-lookup"><span data-stu-id="b272f-130">Azure key vault resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-131">-Name</span><span class="sxs-lookup"><span data-stu-id="b272f-131">-Name</span></span>
+<span data-ttu-id="b272f-132">Geben Sie den Namen des Clusters an.</span><span class="sxs-lookup"><span data-stu-id="b272f-132">Specify the name of the cluster.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ClusterName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="b272f-133">-ResourceGroupName</span></span>
+<span data-ttu-id="b272f-134">Gibt den Namen der Ressourcengruppe an.</span><span class="sxs-lookup"><span data-stu-id="b272f-134">Specifies the name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-135">-SecretIdentifier</span><span class="sxs-lookup"><span data-stu-id="b272f-135">-SecretIdentifier</span></span>
+<span data-ttu-id="b272f-136">Die vorhandene Azure Key Vault Secret-URL.</span><span class="sxs-lookup"><span data-stu-id="b272f-136">The existing Azure key vault secret Url.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-137">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="b272f-137">-Confirm</span></span>
+<span data-ttu-id="b272f-138">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="b272f-138">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-139">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b272f-139">-WhatIf</span></span>
+<span data-ttu-id="b272f-140">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b272f-140">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="b272f-141">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b272f-141">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b272f-142">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b272f-142">CommonParameters</span></span>
+<span data-ttu-id="b272f-143">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b272f-143">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b272f-144">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="b272f-144">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="b272f-145">Eingaben</span><span class="sxs-lookup"><span data-stu-id="b272f-145">INPUTS</span></span>
+
+### <span data-ttu-id="b272f-146">System. String</span><span class="sxs-lookup"><span data-stu-id="b272f-146">System.String</span></span>
+<span data-ttu-id="b272f-147">Parameter: certificatedatei (ByValue), CertificateOutputFolder (ByValue), CertificateSubjectName (ByValue), keyvaultname (ByValue), KeyVaultResouceGroupName (ByValue), SecretIdentifier (ByValue)</span><span class="sxs-lookup"><span data-stu-id="b272f-147">Parameters: CertificateFile (ByValue), CertificateOutputFolder (ByValue), CertificateSubjectName (ByValue), KeyVaultName (ByValue), KeyVaultResouceGroupName (ByValue), SecretIdentifier (ByValue)</span></span>
+
+### <span data-ttu-id="b272f-148">System. Security. SecureString</span><span class="sxs-lookup"><span data-stu-id="b272f-148">System.Security.SecureString</span></span>
+<span data-ttu-id="b272f-149">Parameter: CertificatePassword (ByValue)</span><span class="sxs-lookup"><span data-stu-id="b272f-149">Parameters: CertificatePassword (ByValue)</span></span>
+
+## <span data-ttu-id="b272f-150">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="b272f-150">OUTPUTS</span></span>
+
+### <span data-ttu-id="b272f-151">Microsoft. Azure. Commands. ServiceFabric. Models. PSCluster</span><span class="sxs-lookup"><span data-stu-id="b272f-151">Microsoft.Azure.Commands.ServiceFabric.Models.PSCluster</span></span>
+
+## <span data-ttu-id="b272f-152">Notizen</span><span class="sxs-lookup"><span data-stu-id="b272f-152">NOTES</span></span>
+
+## <span data-ttu-id="b272f-153">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="b272f-153">RELATED LINKS</span></span>
+
+[<span data-ttu-id="b272f-154">Remove-AzureRmServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="b272f-154">Remove-AzureRmServiceFabricClusterCertificate</span></span>](./Remove-AzureRmServiceFabricClusterCertificate.md)
+
+[<span data-ttu-id="b272f-155">Neu – AzureRmServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="b272f-155">New-AzureRmServiceFabricCluster</span></span>](./New-AzureRmServiceFabricCluster.md)
+
+[<span data-ttu-id="b272f-156">Add-AzureRmServiceFabricApplicationCertificate</span><span class="sxs-lookup"><span data-stu-id="b272f-156">Add-AzureRmServiceFabricApplicationCertificate</span></span>](./Add-AzureRmServiceFabricApplicationCertificate.md)
