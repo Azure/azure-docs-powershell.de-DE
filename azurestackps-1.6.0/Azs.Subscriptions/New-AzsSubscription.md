@@ -1,0 +1,173 @@
+---
+external help file: Azs.Subscriptions-help.xml
+Module Name: Azs.Subscriptions
+online version: ''
+schema: 2.0.0
+ms.openlocfilehash: 617a7ac7d949eb54ab08b0d0cb06c0fca3ba79bd
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93661991"
+---
+# <span data-ttu-id="fa78b-101">New-AzsSubscription</span><span class="sxs-lookup"><span data-stu-id="fa78b-101">New-AzsSubscription</span></span>
+
+## <span data-ttu-id="fa78b-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="fa78b-102">SYNOPSIS</span></span>
+<span data-ttu-id="fa78b-103">Erstellen Sie ein Abonnement.</span><span class="sxs-lookup"><span data-stu-id="fa78b-103">Create a subscription.</span></span>
+
+## <span data-ttu-id="fa78b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fa78b-104">SYNTAX</span></span>
+
+```
+New-AzsSubscription [-OfferId] <String> [[-DisplayName] <String>] [[-TenantId] <String>]
+ [[-SubscriptionId] <String>] [[-State] <String>] [[-Location] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="fa78b-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fa78b-105">DESCRIPTION</span></span>
+<span data-ttu-id="fa78b-106">Erstellen Sie ein Abonnement.</span><span class="sxs-lookup"><span data-stu-id="fa78b-106">Create a subscription.</span></span>
+
+## <span data-ttu-id="fa78b-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="fa78b-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="fa78b-108">--------------------------Beispiel 1--------------------------</span><span class="sxs-lookup"><span data-stu-id="fa78b-108">-------------------------- EXAMPLE 1 --------------------------</span></span>
+```
+New-AzsSubscription -OfferId /delegatedProviders/default/offers/offer1
+```
+
+<span data-ttu-id="fa78b-109">Erstellen Sie ein Abonnement.</span><span class="sxs-lookup"><span data-stu-id="fa78b-109">Create a subscription.</span></span>
+
+## <span data-ttu-id="fa78b-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="fa78b-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="fa78b-111">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="fa78b-111">-DisplayName</span></span>
+<span data-ttu-id="fa78b-112">Name des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="fa78b-112">Subscription name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-113">-Standort</span><span class="sxs-lookup"><span data-stu-id="fa78b-113">-Location</span></span>
+<span data-ttu-id="fa78b-114">Ort, an dem sich die Ressource befindet.</span><span class="sxs-lookup"><span data-stu-id="fa78b-114">Location where resource is location.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ArmLocation
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-115">-Angebots-Nr</span><span class="sxs-lookup"><span data-stu-id="fa78b-115">-OfferId</span></span>
+<span data-ttu-id="fa78b-116">Der Bezeichner des Angebots unter dem Bereich eines Delegierten Anbieters.</span><span class="sxs-lookup"><span data-stu-id="fa78b-116">Identifier of the offer under the scope of a delegated provider.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-117">-Bundesland</span><span class="sxs-lookup"><span data-stu-id="fa78b-117">-State</span></span>
+<span data-ttu-id="fa78b-118">Status des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="fa78b-118">Subscription state.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-119">-Abonnement-Nr</span><span class="sxs-lookup"><span data-stu-id="fa78b-119">-SubscriptionId</span></span>
+<span data-ttu-id="fa78b-120">Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="fa78b-120">Subscription identifier.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: $([Guid]::NewGuid().ToString())
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-121">-Mandanten-Nr</span><span class="sxs-lookup"><span data-stu-id="fa78b-121">-TenantId</span></span>
+<span data-ttu-id="fa78b-122">Verzeichnis Mandanten-ID.</span><span class="sxs-lookup"><span data-stu-id="fa78b-122">Directory tenant identifier.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-123">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="fa78b-123">-Confirm</span></span>
+<span data-ttu-id="fa78b-124">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="fa78b-124">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-125">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="fa78b-125">-WhatIf</span></span>
+<span data-ttu-id="fa78b-126">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fa78b-126">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="fa78b-127">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fa78b-127">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fa78b-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="fa78b-128">CommonParameters</span></span>
+<span data-ttu-id="fa78b-129">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="fa78b-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="fa78b-130">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="fa78b-130">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="fa78b-131">Eingaben</span><span class="sxs-lookup"><span data-stu-id="fa78b-131">INPUTS</span></span>
+
+## <span data-ttu-id="fa78b-132">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="fa78b-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="fa78b-133">Microsoft. AzureStack. Management. Subscription. Models. SubscriptionModel</span><span class="sxs-lookup"><span data-stu-id="fa78b-133">Microsoft.AzureStack.Management.Subscription.Models.SubscriptionModel</span></span>
+
+## <span data-ttu-id="fa78b-134">Notizen</span><span class="sxs-lookup"><span data-stu-id="fa78b-134">NOTES</span></span>
+
+## <span data-ttu-id="fa78b-135">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="fa78b-135">RELATED LINKS</span></span>
+
