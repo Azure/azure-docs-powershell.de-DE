@@ -1,0 +1,285 @@
+---
+external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/update-azurermadserviceprincipal
+schema: 2.0.0
+ms.openlocfilehash: d3e5459c81d2abbe7178652ce7b00fc35e6e3bbd
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93849019"
+---
+# Update-AzureRmADServicePrincipal
+
+## Synopsis
+Aktualisiert einen vorhandenen Azure Active Directory-Dienstprinzipal.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## Syntax
+
+### SpObjectIdWithDisplayNameParameterSet (Standard)
+```
+Update-AzureRmADServicePrincipal -ObjectId <Guid> [-DisplayName <String>] [-Homepage <String>]
+ [-IdentifierUri <String[]>] [-KeyCredential <KeyCredential[]>] [-PasswordCredential <PasswordCredential[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SpApplicationIdWithDisplayNameParameterSet
+```
+Update-AzureRmADServicePrincipal -ApplicationId <Guid> [-Homepage <String>] [-IdentifierUri <String[]>]
+ [-KeyCredential <KeyCredential[]>] [-PasswordCredential <PasswordCredential[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SPNWithDisplayNameParameterSet
+```
+Update-AzureRmADServicePrincipal -ServicePrincipalName <String> [-DisplayName <String>] [-Homepage <String>]
+ [-IdentifierUri <String[]>] [-KeyCredential <KeyCredential[]>] [-PasswordCredential <PasswordCredential[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### InputObjectWithDisplayNameParameterSet
+```
+Update-AzureRmADServicePrincipal -InputObject <PSADServicePrincipal> [-DisplayName <String>]
+ [-Homepage <String>] [-IdentifierUri <String[]>] [-KeyCredential <KeyCredential[]>]
+ [-PasswordCredential <PasswordCredential[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## Beschreibung
+Aktualisiert einen vorhandenen Azure Active Directory-Dienstprinzipal. Verwenden Sie New-AzureRmADSpCredential-Cmdlet, um die dem Dienstprinzipal zugeordneten Anmeldeinformationen zu aktualisieren. Verwenden Sie Update-AzureRmADApplication-Cmdlet, um die Eigenschaften zu aktualisieren, die der zugrunde liegenden Anwendung zugeordnet sind.
+
+## Beispiele
+
+### Beispiel 1 – Aktualisieren des Anzeigenamens eines Dienst Prinzipals
+
+```
+PS C:\> Update-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 -DisplayName MyNewDisplayName
+```
+
+Aktualisiert den Anzeigenamen des Dienst Prinzipals mit der Objekt-ID "784136ca-3ae2-4fdd-A388-89d793e7c780" als "MyNewDisplayName".
+
+### Beispiel 2 – Aktualisieren des Anzeigenamens eines Dienst Prinzipals mithilfe von Piping
+
+```
+PS C:\> Get-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 | Update-AzureRmADServicePrincipal -DisplayName MyNewDisplayName
+```
+
+Ruft den Dienstprinzipal mit der Objekt-ID "784136ca-3ae2-4fdd-A388-89d793e7c780" und Pipes ab, die zum Cmdlet Update-AzureRmADServicePrincipal, um den Anzeigenamen des Dienst Prinzipals auf "MyNewDisplayName" zu aktualisieren.
+
+## Parameter
+
+### -ApplicationId
+Die Anwendungs-ID des Dienst Prinzipals, der aktualisiert werden soll.
+
+```yaml
+Type: System.Guid
+Parameter Sets: SpApplicationIdWithDisplayNameParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+Der Anzeigename für den Dienstprinzipal.
+
+```yaml
+Type: System.String
+Parameter Sets: SpObjectIdWithDisplayNameParameterSet, SPNWithDisplayNameParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: InputObjectWithDisplayNameParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Startseite
+Die Homepage des Dienst Prinzipals.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IdentifierUri
+Die Identifier-URI (s) für den Dienstprinzipal.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Inputobject
+Das Objekt, das den zu aktualisierbaren Dienstprinzipal darstellt.
+
+```yaml
+Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
+Parameter Sets: InputObjectWithDisplayNameParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Keycredential
+Die Schlüssel Anmeldeinformationen für den Dienstprinzipal.
+
+```yaml
+Type: Microsoft.Azure.Graph.RBAC.Version1_6.Models.KeyCredential[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ObjectID
+Die Objekt-ID des Dienst Prinzipals, der aktualisiert werden soll.
+
+```yaml
+Type: System.Guid
+Parameter Sets: SpObjectIdWithDisplayNameParameterSet
+Aliases: ServicePrincipalObjectId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PasswordCredential
+Die Kennwortanmeldeinformationen für den Dienstprinzipal.
+
+```yaml
+Type: Microsoft.Azure.Graph.RBAC.Version1_6.Models.PasswordCredential[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServicePrincipalName
+Der SPN des Dienst Prinzipals, der aktualisiert werden soll.
+
+```yaml
+Type: System.String
+Parameter Sets: SPNWithDisplayNameParameterSet
+Aliases: SPN
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Bestätigen
+Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
+Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+### System. GUID
+
+### System. String
+
+### Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADServicePrincipal
+Parameter: Inputobject (ByValue)
+
+## Ausgaben
+
+### Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADServicePrincipal
+
+## Notizen
+
+## Verwandte Links
