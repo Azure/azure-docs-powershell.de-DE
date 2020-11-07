@@ -1,0 +1,160 @@
+---
+external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermmanagedapplicationdefinition
+schema: 2.0.0
+ms.openlocfilehash: e6df93dee8599c6bae42cc9428b2a7691abf4740
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93849527"
+---
+# <span data-ttu-id="ff9b3-101">Get-AzureRmManagedApplicationDefinition</span><span class="sxs-lookup"><span data-stu-id="ff9b3-101">Get-AzureRmManagedApplicationDefinition</span></span>
+
+## <span data-ttu-id="ff9b3-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="ff9b3-102">SYNOPSIS</span></span>
+<span data-ttu-id="ff9b3-103">Ruft Definitionen für verwaltete Anwendungen ab</span><span class="sxs-lookup"><span data-stu-id="ff9b3-103">Gets managed application definitions</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="ff9b3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ff9b3-104">SYNTAX</span></span>
+
+### <span data-ttu-id="ff9b3-105">GetByNameAndResourceGroup (Standard)</span><span class="sxs-lookup"><span data-stu-id="ff9b3-105">GetByNameAndResourceGroup (Default)</span></span>
+```
+Get-AzureRmManagedApplicationDefinition [-Name <String>] -ResourceGroupName <String> [-ApiVersion <String>]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="ff9b3-106">GetById</span><span class="sxs-lookup"><span data-stu-id="ff9b3-106">GetById</span></span>
+```
+Get-AzureRmManagedApplicationDefinition -Id <String> [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="ff9b3-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ff9b3-107">DESCRIPTION</span></span>
+<span data-ttu-id="ff9b3-108">Das Cmdlet " **Get-AzureRmManagedApplicationDefinition** " ruft verwaltete Anwendungsdefinitionen ab.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-108">The **Get-AzureRmManagedApplicationDefinition** cmdlet gets managed application definitions</span></span>
+
+## <span data-ttu-id="ff9b3-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ff9b3-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="ff9b3-110">Beispiel 1: Abrufen aller verwalteten Anwendungsdefinitionen unter einer Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="ff9b3-110">Example 1: Get all managed application definitions under a resource group</span></span>
+```
+PS C:\>Get-AzureRmManagedApplicationDefinition -ResourceGroupName "MyRG"
+```
+
+<span data-ttu-id="ff9b3-111">Dieser Befehl ruft die Definitionen verwalteter Anwendungen unter Ressourcengruppe "MyRG" ab.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-111">This command gets the managed application definitions under resource group "MyRG"</span></span>
+
+### <span data-ttu-id="ff9b3-112">Beispiel 2: Abrufen einer Definition einer verwalteten Anwendung</span><span class="sxs-lookup"><span data-stu-id="ff9b3-112">Example 2: Get a managed application definition</span></span>
+```
+PS C:\>Get-AzureRmManagedApplicationDefinition -ResourceGroupName "MyRG" -Name "myManagedAppDef"
+```
+
+<span data-ttu-id="ff9b3-113">Dieser Befehl ruft die verwaltete Anwendungsdefinition "myManagedAppDef" unter Ressourcengruppe "MyRG" ab.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-113">This command gets the managed application definition "myManagedAppDef" under resource group "MyRG"</span></span>
+
+## <span data-ttu-id="ff9b3-114">Parameter</span><span class="sxs-lookup"><span data-stu-id="ff9b3-114">PARAMETERS</span></span>
+
+### <span data-ttu-id="ff9b3-115">-ApiVersion</span><span class="sxs-lookup"><span data-stu-id="ff9b3-115">-ApiVersion</span></span>
+<span data-ttu-id="ff9b3-116">Gibt an, dass die Version der zu verwendenden Ressourcenanbieter-API verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-116">When set, indicates the version of the resource provider API to use.</span></span>
+<span data-ttu-id="ff9b3-117">Wenn Sie nicht angegeben wird, wird die API-Version automatisch als die neueste verfügbare Version bestimmt.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-117">If not specified, the API version is automatically determined as the latest available.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-118">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ff9b3-118">-DefaultProfile</span></span>
+<span data-ttu-id="ff9b3-119">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-119">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-120">-ID</span><span class="sxs-lookup"><span data-stu-id="ff9b3-120">-Id</span></span>
+<span data-ttu-id="ff9b3-121">Die vollqualifizierte Definitions-ID der verwalteten Anwendung einschließlich des Abonnements.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-121">The fully qualified managed application definition Id, including the subscription.</span></span>
+<span data-ttu-id="ff9b3-122">z.b./Subscriptions/{SubscriptionId}/ResourceGroups/{resourceGroupName}</span><span class="sxs-lookup"><span data-stu-id="ff9b3-122">e.g. /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}</span></span>
+
+```yaml
+Type: String
+Parameter Sets: GetById
+Aliases: ResourceId, ManagedApplicationDefinitionId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-123">-Name</span><span class="sxs-lookup"><span data-stu-id="ff9b3-123">-Name</span></span>
+<span data-ttu-id="ff9b3-124">Der Definitionsname der verwalteten Anwendung.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-124">The managed application definition name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: GetByNameAndResourceGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-125">-Pre</span><span class="sxs-lookup"><span data-stu-id="ff9b3-125">-Pre</span></span>
+<span data-ttu-id="ff9b3-126">Wenn festgelegt, gibt an, dass das Cmdlet Vorabversion-API-Versionen verwenden soll, wenn die zu verwendende Version automatisch ermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-126">When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="ff9b3-127">-ResourceGroupName</span></span>
+<span data-ttu-id="ff9b3-128">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-128">The resource group name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: GetByNameAndResourceGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ff9b3-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ff9b3-129">CommonParameters</span></span>
+<span data-ttu-id="ff9b3-130">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ff9b3-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ff9b3-131">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="ff9b3-131">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="ff9b3-132">Eingaben</span><span class="sxs-lookup"><span data-stu-id="ff9b3-132">INPUTS</span></span>
+
+### <span data-ttu-id="ff9b3-133">System. String</span><span class="sxs-lookup"><span data-stu-id="ff9b3-133">System.String</span></span>
+
+## <span data-ttu-id="ff9b3-134">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="ff9b3-134">OUTPUTS</span></span>
+
+### <span data-ttu-id="ff9b3-135">System. Management. Automation. PSObject</span><span class="sxs-lookup"><span data-stu-id="ff9b3-135">System.Management.Automation.PSObject</span></span>
+
+## <span data-ttu-id="ff9b3-136">Notizen</span><span class="sxs-lookup"><span data-stu-id="ff9b3-136">NOTES</span></span>
+
+## <span data-ttu-id="ff9b3-137">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="ff9b3-137">RELATED LINKS</span></span>
