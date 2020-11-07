@@ -1,0 +1,94 @@
+---
+external help file: Azs.Storage.Admin-help.xml
+Module Name: Azs.Storage.Admin
+online version: ''
+schema: 2.0.0
+ms.openlocfilehash: 47ac85406955592cba566df505900e6c42befb7a
+ms.sourcegitcommit: a6f2fc500242de6248224278d743fd09aac2fafd
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "93827992"
+---
+# Get-AzsStorageDestinationShare
+
+## Synopsis
+Gibt eine Liste der Ziel Freigaben zurück, die das System als beste Kandidaten für die Migration betrachtet.
+
+## Syntax
+
+```
+Get-AzsStorageDestinationShare [-SourceShareName] <String> [-FarmName] <String> [[-ResourceGroupName] <String>]
+ [<CommonParameters>]
+```
+
+## Beschreibung
+Gibt eine Liste der Ziel Freigaben zurück, die das System als beste Kandidaten für die Migration betrachtet.
+
+## Beispiele
+
+### --------------------------Beispiel 1--------------------------
+```
+Get-AzsStorageDestinationShare -FarmName f9b8e2e2-e4b4-44e0-9d92-6a848b1a5376 -SourceShareName "||SU1FileServer.azurestack.local|SU1_ObjStore"
+```
+
+Rufen Sie eine Liste der Ziel Freigaben ab, die das System als beste Kandidaten für die Migration betrachtet.
+
+## Parameter
+
+### -Farmname
+Farm-ID.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Name der Ressourcengruppe.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceShareName
+Der Name der Freigabe, die Container enthält, die migriert werden sollen.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+## Ausgaben
+
+## Notizen
+
+## Verwandte Links
+
