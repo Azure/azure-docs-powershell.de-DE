@@ -1,0 +1,516 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+Module Name: Az.ServiceFabric
+online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefabric/new-azservicefabriccluster
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricCluster.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricCluster.md
+ms.openlocfilehash: e78912d2a8ab0ce4f5e990e69e236853a85019c6
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93659326"
+---
+# <span data-ttu-id="c07bf-101">New-AzServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="c07bf-101">New-AzServiceFabricCluster</span></span>
+
+## <span data-ttu-id="c07bf-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="c07bf-102">SYNOPSIS</span></span>
+<span data-ttu-id="c07bf-103">Dieser Befehl verwendet von Ihnen bereitgestellte Zertifikate oder vom System generierte selbstsignierte Zertifikate, um einen neuen Service Fabric-Cluster einzurichten.</span><span class="sxs-lookup"><span data-stu-id="c07bf-103">This command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster.</span></span> <span data-ttu-id="c07bf-104">Sie kann eine Standardvorlage oder eine von Ihnen bereitgestellte benutzerdefinierte Vorlage verwenden.</span><span class="sxs-lookup"><span data-stu-id="c07bf-104">It can use a default template or a custom template that you provide.</span></span> <span data-ttu-id="c07bf-105">Sie haben die Möglichkeit, einen Ordner anzugeben, um die selbstsignierten Zertifikate zu exportieren oder später aus dem schlüsseltresor abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-105">You have the option of specifying a folder to export the self-signed certificates to or fetching them later from the key vault.</span></span> 
+
+## <span data-ttu-id="c07bf-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="c07bf-106">SYNTAX</span></span>
+
+### <span data-ttu-id="c07bf-107">ByDefaultArmTemplate (Standard)</span><span class="sxs-lookup"><span data-stu-id="c07bf-107">ByDefaultArmTemplate (Default)</span></span>
+```
+New-AzServiceFabricCluster [-ResourceGroupName] <String> [-CertificateOutputFolder <String>]
+ [-CertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>]
+ -Location <String> [-Name <String>] [-VmUserName <String>] [-ClusterSize <Int32>]
+ [-CertificateSubjectName <String>] -VmPassword <SecureString> [-OS <OperatingSystem>] [-VmSku <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="c07bf-108">ByExistingKeyVault</span><span class="sxs-lookup"><span data-stu-id="c07bf-108">ByExistingKeyVault</span></span>
+```
+New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+ -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="c07bf-109">ByNewPfxAndVaultName</span><span class="sxs-lookup"><span data-stu-id="c07bf-109">ByNewPfxAndVaultName</span></span>
+```
+New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ [-CertificateOutputFolder <String>] [-CertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>]
+ [-KeyVaultName <String>] [-CertificateSubjectName <String>] [-VmPassword <SecureString>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="c07bf-110">ByExistingPfxAndVaultName</span><span class="sxs-lookup"><span data-stu-id="c07bf-110">ByExistingPfxAndVaultName</span></span>
+```
+New-AzServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ -CertificateFile <String> [-CertificatePassword <SecureString>] [-SecondaryCertificateFile <String>]
+ [-SecondaryCertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>]
+ [-CertificateCommonName <String>] [-CertificateIssuerThumbprint <String>] [-VmPassword <SecureString>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="c07bf-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c07bf-111">DESCRIPTION</span></span>
+<span data-ttu-id="c07bf-112">Der Befehl **New-AzServiceFabricCluster** verwendet von Ihnen bereitgestellte Zertifikate oder vom System generierte selbstsignierte Zertifikate, um einen neuen Service Fabric-Cluster einzurichten.</span><span class="sxs-lookup"><span data-stu-id="c07bf-112">The **New-AzServiceFabricCluster** command uses certificates that you provide or system generated self-signed certificates to set up a new service fabric cluster.</span></span> <span data-ttu-id="c07bf-113">Die verwendete Vorlage kann eine Standardvorlage oder eine von Ihnen bereitgestellte benutzerdefinierte Vorlage sein.</span><span class="sxs-lookup"><span data-stu-id="c07bf-113">The template used can be a default template or a custom template that you provide.</span></span> <span data-ttu-id="c07bf-114">Sie haben die Möglichkeit, einen Ordner anzugeben, um die selbstsignierten Zertifikate zu exportieren oder später aus dem schlüsseltresor abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-114">You have the option of specifying a folder to export the self-signed certificates or fetching them later from the key vault.</span></span>
+<span data-ttu-id="c07bf-115">Wenn Sie eine benutzerdefinierte Vorlage und eine Parameterdatei angeben, müssen Sie die Zertifikatinformationen nicht in der Parameterdatei angeben, das System füllt diese Parameter.</span><span class="sxs-lookup"><span data-stu-id="c07bf-115">If you are specifying a custom template and parameter file, you don't need to provide the certificate information in the parameter file, the system will populate these parameters.</span></span>
+<span data-ttu-id="c07bf-116">Die vier Optionen sind im folgenden aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="c07bf-116">The four options are detailed below.</span></span> <span data-ttu-id="c07bf-117">Scrollen Sie nach unten, um Erläuterungen zu den einzelnen Parametern zu haben.</span><span class="sxs-lookup"><span data-stu-id="c07bf-117">Scroll down for explanations of each of the parameters.</span></span>
+
+## <span data-ttu-id="c07bf-118">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c07bf-118">EXAMPLES</span></span>
+
+### <span data-ttu-id="c07bf-119">Beispiel 1: Geben Sie nur die Clustergröße, den Zertifikatantragstellernamen und das Betriebssystem für die Bereitstellungeines Clusters an.</span><span class="sxs-lookup"><span data-stu-id="c07bf-119">Example 1: Specify only the cluster size, the cert subject name, and the OS to deploy a cluster.</span></span>
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test01"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.cloudapp.azure.com" -f $RGname, $clusterloc
+$pfxfolder="c:\certs"
+
+Write-Output "Create cluster in '$clusterloc' with cert subject name '$subname' and cert output path '$pfxfolder'"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -Location $clusterloc -ClusterSize 5 -VmPassword $pass -CertificateSubjectName $subname -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -OS WindowsServer2016Datacenter
+```
+
+<span data-ttu-id="c07bf-120">Dieser Befehl gibt nur die Clustergröße, den Zertifikatantragstellernamen und das Betriebssystem für die Bereitstellungeines Clusters an.</span><span class="sxs-lookup"><span data-stu-id="c07bf-120">This command specifies only the cluster size, the cert subject name, and the OS to deploy a cluster.</span></span>
+
+### <span data-ttu-id="c07bf-121">Beispiel 2: Angeben einer vorhandenen Zertifikat Ressource in einem schlüsseltresor und einer benutzerdefinierten Vorlage zum Bereitstellen eines Clusters</span><span class="sxs-lookup"><span data-stu-id="c07bf-121">Example 2: Specify an existing Certificate resource in a key vault and a custom template to deploy a cluster</span></span>
+```
+$RGname="test20"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+$secretId="https://test1.vault.azure.net:443/secrets/testcertificate4/56ec774dc61a462bbc645ffc9b4b225f"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -SecretIdentifier $secretId
+```
+
+<span data-ttu-id="c07bf-122">Mit diesem Befehl wird eine vorhandene Zertifikat Ressource in einem schlüsseltresor und eine benutzerdefinierte Vorlage zum Bereitstellen eines Clusters angegeben.</span><span class="sxs-lookup"><span data-stu-id="c07bf-122">This command specifies an existing Certificate resource in a key vault and a custom template to deploy a cluster.</span></span>
+
+### <span data-ttu-id="c07bf-123">Beispiel 3: Erstellen eines neuen Clusters mit einer benutzerdefinierten Vorlage</span><span class="sxs-lookup"><span data-stu-id="c07bf-123">Example 3: Create a new cluster using a custom template.</span></span> <span data-ttu-id="c07bf-124">Geben Sie einen anderen Ressourcengruppennamen für den schlüsseltresor an, und lassen Sie das System ein neues Zertifikat hochladen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-124">Specify a different resource group name for the key vault and have the system upload a new certificate to it</span></span>
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.$clusterloc.cloudapp.azure.com" -f $RGName, $clusterloc
+$pfxfolder="~\Documents"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateOutputFolder $pfxfolder -CertificatePassword $pass -KeyVaultResouceGroupName $keyVaultRG  -KeyVaultName $keyVault -CertificateSubjectName $subname
+```
+
+<span data-ttu-id="c07bf-125">Dieser Befehl erstellt einen neuen Cluster unter Verwendung einer benutzerdefinierten Vorlage.</span><span class="sxs-lookup"><span data-stu-id="c07bf-125">This command creates a new cluster using a custom template.</span></span> <span data-ttu-id="c07bf-126">Geben Sie einen anderen Ressourcengruppennamen für den schlüsseltresor an, und lassen Sie das System ein neues Zertifikat hochladen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-126">Specify a different resource group name for the key vault and have the system upload a new certificate to it</span></span>
+
+### <span data-ttu-id="c07bf-127">Beispiel 4: Erstellen eines eigenen Zertifikats und einer benutzerdefinierten Vorlage und Erstellen eines neuen Clusters</span><span class="sxs-lookup"><span data-stu-id="c07bf-127">Example 4: Bring your own Certificate and custom template and create a new cluster</span></span>
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$pfxsourcefile="c:\Mycertificates\my2017Prodcert.pfx"
+$templateParmfile="~\Documents\GitHub\azure-quickstart-templates-parms\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="~\GitHub\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+New-AzServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateFile $pfxsourcefile -CertificatePassword $pass -KeyVaultResouceGroupName $keyVaultRG -KeyVaultName $keyVault
+```
+
+<span data-ttu-id="c07bf-128">Mit diesem Befehl können Sie ein eigenes Zertifikat und eine benutzerdefinierte Vorlage erstellen und einen neuen Cluster erstellen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-128">This command will let you bring your own Certificate and custom template and create a new cluster.</span></span>
+
+## <span data-ttu-id="c07bf-129">Parameter</span><span class="sxs-lookup"><span data-stu-id="c07bf-129">PARAMETERS</span></span>
+
+### <span data-ttu-id="c07bf-130">-CertificateCommonName</span><span class="sxs-lookup"><span data-stu-id="c07bf-130">-CertificateCommonName</span></span>
+<span data-ttu-id="c07bf-131">Allgemeiner Zertifikatname</span><span class="sxs-lookup"><span data-stu-id="c07bf-131">Certificate common name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertCommonName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-132">-Certificatedatei</span><span class="sxs-lookup"><span data-stu-id="c07bf-132">-CertificateFile</span></span>
+<span data-ttu-id="c07bf-133">Der vorhandene Zertifikats Dateipfad für das primäre Cluster Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="c07bf-133">The existing certificate file path for the primary cluster certificate.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: Source
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-134">-CertificateIssuerThumbprint</span><span class="sxs-lookup"><span data-stu-id="c07bf-134">-CertificateIssuerThumbprint</span></span>
+<span data-ttu-id="c07bf-135">Fingerabdruck des Zertifikatausstellers, getrennt durch Kommas, wenn mehr als eine</span><span class="sxs-lookup"><span data-stu-id="c07bf-135">Certificate issuer thumbprint, separated by commas if more than one</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByExistingPfxAndVaultName
+Aliases: CertIssuerThumbprint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-136">-CertificateOutputFolder</span><span class="sxs-lookup"><span data-stu-id="c07bf-136">-CertificateOutputFolder</span></span>
+<span data-ttu-id="c07bf-137">Der Ordner der neuen Zertifikatsdatei, die erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="c07bf-137">The folder of the new certificate file to be created.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName
+Aliases: Destination
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-138">-CertificatePassword</span><span class="sxs-lookup"><span data-stu-id="c07bf-138">-CertificatePassword</span></span>
+<span data-ttu-id="c07bf-139">Das Kennwort der Zertifikatsdatei.</span><span class="sxs-lookup"><span data-stu-id="c07bf-139">The password of the certificate file.</span></span>
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: CertPassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-140">-CertificateSubjectName</span><span class="sxs-lookup"><span data-stu-id="c07bf-140">-CertificateSubjectName</span></span>
+<span data-ttu-id="c07bf-141">Der Name des Antragstellers des zu erstellenden Zertifikats.</span><span class="sxs-lookup"><span data-stu-id="c07bf-141">The subject name of the certificate to be created.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName
+Aliases: Subject
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-142">-Clusterisieren</span><span class="sxs-lookup"><span data-stu-id="c07bf-142">-ClusterSize</span></span>
+<span data-ttu-id="c07bf-143">Die Anzahl der Knoten im Cluster.</span><span class="sxs-lookup"><span data-stu-id="c07bf-143">The number of nodes in the cluster.</span></span> <span data-ttu-id="c07bf-144">Standard sind fünf Knoten.</span><span class="sxs-lookup"><span data-stu-id="c07bf-144">Default are 5 nodes.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: ByDefaultArmTemplate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-145">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c07bf-145">-DefaultProfile</span></span>
+<span data-ttu-id="c07bf-146">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c07bf-146">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-147">-Keyvaultname</span><span class="sxs-lookup"><span data-stu-id="c07bf-147">-KeyVaultName</span></span>
+<span data-ttu-id="c07bf-148">Azure Key Vault-Name.</span><span class="sxs-lookup"><span data-stu-id="c07bf-148">Azure key vault name.</span></span> <span data-ttu-id="c07bf-149">Wenn nicht angegeben, wird der Name der Ressourcengruppe standardmäßig verwendet.</span><span class="sxs-lookup"><span data-stu-id="c07bf-149">If not given, it will be defaulted to the resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-150">-KeyVaultResouceGroupName</span><span class="sxs-lookup"><span data-stu-id="c07bf-150">-KeyVaultResouceGroupName</span></span>
+<span data-ttu-id="c07bf-151">Azure Key Vault-Ressourcengruppenname</span><span class="sxs-lookup"><span data-stu-id="c07bf-151">Azure key vault resource group name.</span></span> <span data-ttu-id="c07bf-152">Wenn nicht angegeben, wird der Name der Ressourcengruppe standardmäßig verwendet.</span><span class="sxs-lookup"><span data-stu-id="c07bf-152">If not given, it will be defaulted to resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-153">-Standort</span><span class="sxs-lookup"><span data-stu-id="c07bf-153">-Location</span></span>
+<span data-ttu-id="c07bf-154">Der Speicherort der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c07bf-154">The resource group location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-155">-Name</span><span class="sxs-lookup"><span data-stu-id="c07bf-155">-Name</span></span>
+<span data-ttu-id="c07bf-156">Geben Sie den Namen des Clusters an.</span><span class="sxs-lookup"><span data-stu-id="c07bf-156">Specify the name of the cluster.</span></span> <span data-ttu-id="c07bf-157">Wenn Sie nicht angegeben wird, ist Sie mit dem Namen der Ressourcengruppe identisch.</span><span class="sxs-lookup"><span data-stu-id="c07bf-157">If not given, it will be same as resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: ClusterName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-158">-OS</span><span class="sxs-lookup"><span data-stu-id="c07bf-158">-OS</span></span>
+<span data-ttu-id="c07bf-159">Das Betriebs System der VMS, aus denen sich der Cluster zusammensetzen soll</span><span class="sxs-lookup"><span data-stu-id="c07bf-159">The Operating System of the VMs that make up the cluster.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ServiceFabric.Models.OperatingSystem
+Parameter Sets: ByDefaultArmTemplate
+Aliases: VmImage
+Accepted values: WindowsServer2012R2Datacenter, WindowsServer2016Datacenter, WindowsServer2016DatacenterwithContainers, UbuntuServer1604
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-160">-Parameterdatei</span><span class="sxs-lookup"><span data-stu-id="c07bf-160">-ParameterFile</span></span>
+<span data-ttu-id="c07bf-161">Der Pfad zur Vorlagenparameter Datei.</span><span class="sxs-lookup"><span data-stu-id="c07bf-161">The path to the template parameter file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-162">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="c07bf-162">-ResourceGroupName</span></span>
+<span data-ttu-id="c07bf-163">Geben Sie den Namen der Ressourcengruppe an.</span><span class="sxs-lookup"><span data-stu-id="c07bf-163">Specify the name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-164">-SecondaryCertificateFile</span><span class="sxs-lookup"><span data-stu-id="c07bf-164">-SecondaryCertificateFile</span></span>
+<span data-ttu-id="c07bf-165">Der vorhandene Zertifikats Dateipfad für das sekundäre Cluster Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="c07bf-165">The existing certificate file path for the secondary cluster certificate.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: SecSource
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-166">-SecondaryCertificatePassword</span><span class="sxs-lookup"><span data-stu-id="c07bf-166">-SecondaryCertificatePassword</span></span>
+<span data-ttu-id="c07bf-167">Das Kennwort der Zertifikatsdatei.</span><span class="sxs-lookup"><span data-stu-id="c07bf-167">The password of the certificate file.</span></span>
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: SecCertPassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-168">-SecretIdentifier</span><span class="sxs-lookup"><span data-stu-id="c07bf-168">-SecretIdentifier</span></span>
+<span data-ttu-id="c07bf-169">Die vorhandene Azure Key Vault Secret-URL, beispielsweise: " https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f '.</span><span class="sxs-lookup"><span data-stu-id="c07bf-169">The existing Azure key vault secret URL, for example: 'https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f'.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-170">-Vorlagendatei</span><span class="sxs-lookup"><span data-stu-id="c07bf-170">-TemplateFile</span></span>
+<span data-ttu-id="c07bf-171">Der Pfad zur Vorlagendatei.</span><span class="sxs-lookup"><span data-stu-id="c07bf-171">The path to the template file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-172">-VmPassword</span><span class="sxs-lookup"><span data-stu-id="c07bf-172">-VmPassword</span></span>
+<span data-ttu-id="c07bf-173">Das Kennwort des VM.</span><span class="sxs-lookup"><span data-stu-id="c07bf-173">The password of the Vm.</span></span>
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByDefaultArmTemplate
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByExistingKeyVault, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-174">-VmSku</span><span class="sxs-lookup"><span data-stu-id="c07bf-174">-VmSku</span></span>
+<span data-ttu-id="c07bf-175">Die VM-SKU.</span><span class="sxs-lookup"><span data-stu-id="c07bf-175">The Vm Sku.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: Sku
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-176">-VmUserName</span><span class="sxs-lookup"><span data-stu-id="c07bf-176">-VmUserName</span></span>
+<span data-ttu-id="c07bf-177">Der Benutzername für die Anmeldung bei VM.</span><span class="sxs-lookup"><span data-stu-id="c07bf-177">The user name for logging to Vm.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-178">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="c07bf-178">-Confirm</span></span>
+<span data-ttu-id="c07bf-179">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="c07bf-179">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-180">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c07bf-180">-WhatIf</span></span>
+<span data-ttu-id="c07bf-181">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c07bf-181">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="c07bf-182">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c07bf-182">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c07bf-183">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c07bf-183">CommonParameters</span></span>
+<span data-ttu-id="c07bf-184">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c07bf-184">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c07bf-185">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="c07bf-185">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="c07bf-186">Eingaben</span><span class="sxs-lookup"><span data-stu-id="c07bf-186">INPUTS</span></span>
+
+### <span data-ttu-id="c07bf-187">System. String</span><span class="sxs-lookup"><span data-stu-id="c07bf-187">System.String</span></span>
+
+### <span data-ttu-id="c07bf-188">System. Security. SecureString</span><span class="sxs-lookup"><span data-stu-id="c07bf-188">System.Security.SecureString</span></span>
+
+### <span data-ttu-id="c07bf-189">System. Int32</span><span class="sxs-lookup"><span data-stu-id="c07bf-189">System.Int32</span></span>
+
+### <span data-ttu-id="c07bf-190">Microsoft. Azure. Commands. ServiceFabric. Models. OperatingSystem</span><span class="sxs-lookup"><span data-stu-id="c07bf-190">Microsoft.Azure.Commands.ServiceFabric.Models.OperatingSystem</span></span>
+
+## <span data-ttu-id="c07bf-191">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="c07bf-191">OUTPUTS</span></span>
+
+### <span data-ttu-id="c07bf-192">Microsoft.Azure.Commands.ServiceFabric.Models.PSDeploymentResult</span><span class="sxs-lookup"><span data-stu-id="c07bf-192">Microsoft.Azure.Commands.ServiceFabric.Models.PSDeploymentResult</span></span>
+
+## <span data-ttu-id="c07bf-193">Notizen</span><span class="sxs-lookup"><span data-stu-id="c07bf-193">NOTES</span></span>
+
+## <span data-ttu-id="c07bf-194">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="c07bf-194">RELATED LINKS</span></span>

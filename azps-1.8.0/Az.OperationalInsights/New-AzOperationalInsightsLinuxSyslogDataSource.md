@@ -1,0 +1,324 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+Module Name: Az.OperationalInsights
+ms.assetid: D6CBDF09-E243-425B-8677-256163A6DFBF
+online version: https://docs.microsoft.com/en-us/powershell/module/az.operationalinsights/new-azoperationalinsightslinuxsyslogdatasource
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsLinuxSyslogDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsLinuxSyslogDataSource.md
+ms.openlocfilehash: a0268931d276c74560acd5cb04cac1d1e5778b81
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93660050"
+---
+# <span data-ttu-id="b052b-101">New-AzOperationalInsightsLinuxSyslogDataSource</span><span class="sxs-lookup"><span data-stu-id="b052b-101">New-AzOperationalInsightsLinuxSyslogDataSource</span></span>
+
+## <span data-ttu-id="b052b-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="b052b-102">SYNOPSIS</span></span>
+<span data-ttu-id="b052b-103">Fügt eine Datenquelle zu Linux-Computern hinzu.</span><span class="sxs-lookup"><span data-stu-id="b052b-103">Adds a data source to Linux computers.</span></span>
+
+## <span data-ttu-id="b052b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b052b-104">SYNTAX</span></span>
+
+### <span data-ttu-id="b052b-105">ByWorkspaceName (Standard)</span><span class="sxs-lookup"><span data-stu-id="b052b-105">ByWorkspaceName (Default)</span></span>
+```
+New-AzOperationalInsightsLinuxSyslogDataSource [-ResourceGroupName] <String> [-WorkspaceName] <String>
+ [-Name] <String> [-Facility] <String> [-CollectEmergency] [-CollectAlert] [-CollectCritical] [-CollectError]
+ [-CollectWarning] [-CollectNotice] [-CollectDebug] [-CollectInformational] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="b052b-106">ByWorkspaceObject</span><span class="sxs-lookup"><span data-stu-id="b052b-106">ByWorkspaceObject</span></span>
+```
+New-AzOperationalInsightsLinuxSyslogDataSource [-Workspace] <PSWorkspace> [-Name] <String> [-Facility] <String>
+ [-CollectEmergency] [-CollectAlert] [-CollectCritical] [-CollectError] [-CollectWarning] [-CollectNotice]
+ [-CollectDebug] [-CollectInformational] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="b052b-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b052b-107">DESCRIPTION</span></span>
+<span data-ttu-id="b052b-108">Mit dem Cmdlet **New-AzOperationalInsightsLinuxSyslogDataSource** wird eine syslog-Datenquelle zu verbundenen Linux-Computern in einem Arbeitsbereich hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="b052b-108">The **New-AzOperationalInsightsLinuxSyslogDataSource** cmdlet adds a syslog data source to connected Linux computers in a workspace.</span></span>
+<span data-ttu-id="b052b-109">Azure Operational Insights kann syslog-Daten sammeln.</span><span class="sxs-lookup"><span data-stu-id="b052b-109">Azure Operational Insights can collect syslog data.</span></span>
+
+## <span data-ttu-id="b052b-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b052b-110">EXAMPLES</span></span>
+
+## <span data-ttu-id="b052b-111">Parameter</span><span class="sxs-lookup"><span data-stu-id="b052b-111">PARAMETERS</span></span>
+
+### <span data-ttu-id="b052b-112">-CollectAlert</span><span class="sxs-lookup"><span data-stu-id="b052b-112">-CollectAlert</span></span>
+<span data-ttu-id="b052b-113">Gibt an, dass operative Einblicke Benachrichtigungsmeldungen sammelt.</span><span class="sxs-lookup"><span data-stu-id="b052b-113">Indicates that Operational Insights collects alert messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-114">-CollectCritical</span><span class="sxs-lookup"><span data-stu-id="b052b-114">-CollectCritical</span></span>
+<span data-ttu-id="b052b-115">Gibt an, dass operative Einblicke kritische Nachrichten sammelt.</span><span class="sxs-lookup"><span data-stu-id="b052b-115">Indicates that Operational Insights collects critical messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-116">-CollectDebug</span><span class="sxs-lookup"><span data-stu-id="b052b-116">-CollectDebug</span></span>
+<span data-ttu-id="b052b-117">Gibt an, dass operative Einblicke Debug-Nachrichten sammeln.</span><span class="sxs-lookup"><span data-stu-id="b052b-117">Indicates that Operational Insights collects debug messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-118">-CollectEmergency</span><span class="sxs-lookup"><span data-stu-id="b052b-118">-CollectEmergency</span></span>
+<span data-ttu-id="b052b-119">Gibt an, dass operative Einblicke Notfallnachrichten sammeln.</span><span class="sxs-lookup"><span data-stu-id="b052b-119">Indicates that Operational Insights collects emergency messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-120">-CollectError</span><span class="sxs-lookup"><span data-stu-id="b052b-120">-CollectError</span></span>
+<span data-ttu-id="b052b-121">Gibt an, dass operative Einblicke Fehlermeldungen sammelt.</span><span class="sxs-lookup"><span data-stu-id="b052b-121">Indicates that Operational Insights collects error messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-122">-CollectInformational</span><span class="sxs-lookup"><span data-stu-id="b052b-122">-CollectInformational</span></span>
+<span data-ttu-id="b052b-123">Gibt an, dass operative Einblicke Informationsnachrichten sammelt.</span><span class="sxs-lookup"><span data-stu-id="b052b-123">Indicates that Operational Insights collects informational messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-124">-CollectNotice</span><span class="sxs-lookup"><span data-stu-id="b052b-124">-CollectNotice</span></span>
+<span data-ttu-id="b052b-125">Gibt an, dass operative Einblicke Benachrichtigungsmeldungen sammelt.</span><span class="sxs-lookup"><span data-stu-id="b052b-125">Indicates that Operational Insights collects notice messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-126">-CollectWarning</span><span class="sxs-lookup"><span data-stu-id="b052b-126">-CollectWarning</span></span>
+<span data-ttu-id="b052b-127">Gibt an, dass der syslog Warnmeldungen enthält.</span><span class="sxs-lookup"><span data-stu-id="b052b-127">Indicates that the syslog includes warning messages.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-128">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b052b-128">-DefaultProfile</span></span>
+<span data-ttu-id="b052b-129">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="b052b-129">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-130">-Facility</span><span class="sxs-lookup"><span data-stu-id="b052b-130">-Facility</span></span>
+<span data-ttu-id="b052b-131">Gibt einen Facility-Code an.</span><span class="sxs-lookup"><span data-stu-id="b052b-131">Specifies a facility code.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-132">-Force</span><span class="sxs-lookup"><span data-stu-id="b052b-132">-Force</span></span>
+<span data-ttu-id="b052b-133">Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.</span><span class="sxs-lookup"><span data-stu-id="b052b-133">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-134">-Name</span><span class="sxs-lookup"><span data-stu-id="b052b-134">-Name</span></span>
+<span data-ttu-id="b052b-135">Gibt einen Namen für die Datenquelle an.</span><span class="sxs-lookup"><span data-stu-id="b052b-135">Specifies a name for the data source.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-136">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="b052b-136">-ResourceGroupName</span></span>
+<span data-ttu-id="b052b-137">Gibt den Namen einer Ressourcengruppe an, die Linux-Computer enthält.</span><span class="sxs-lookup"><span data-stu-id="b052b-137">Specifies the name of a resource group that contains Linux computers.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByWorkspaceName
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-138">– Arbeitsbereich</span><span class="sxs-lookup"><span data-stu-id="b052b-138">-Workspace</span></span>
+<span data-ttu-id="b052b-139">Gibt einen Arbeitsbereich an, in dem dieses Cmdlet funktioniert.</span><span class="sxs-lookup"><span data-stu-id="b052b-139">Specifies a workspace in which this cmdlet operates.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
+Parameter Sets: ByWorkspaceObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-140">-WorkspaceName</span><span class="sxs-lookup"><span data-stu-id="b052b-140">-WorkspaceName</span></span>
+<span data-ttu-id="b052b-141">Gibt den Namen eines Arbeitsbereichs an, in dem dieses Cmdlet funktioniert.</span><span class="sxs-lookup"><span data-stu-id="b052b-141">Specifies the name of a workspace in which this cmdlet operates.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByWorkspaceName
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-142">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="b052b-142">-Confirm</span></span>
+<span data-ttu-id="b052b-143">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="b052b-143">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-144">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b052b-144">-WhatIf</span></span>
+<span data-ttu-id="b052b-145">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b052b-145">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="b052b-146">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b052b-146">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b052b-147">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b052b-147">CommonParameters</span></span>
+<span data-ttu-id="b052b-148">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b052b-148">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b052b-149">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="b052b-149">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="b052b-150">Eingaben</span><span class="sxs-lookup"><span data-stu-id="b052b-150">INPUTS</span></span>
+
+### <span data-ttu-id="b052b-151">Microsoft. Azure. Commands. OperationalInsights. Models. PSWorkspace</span><span class="sxs-lookup"><span data-stu-id="b052b-151">Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace</span></span>
+
+### <span data-ttu-id="b052b-152">System. String</span><span class="sxs-lookup"><span data-stu-id="b052b-152">System.String</span></span>
+
+## <span data-ttu-id="b052b-153">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="b052b-153">OUTPUTS</span></span>
+
+### <span data-ttu-id="b052b-154">Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource</span><span class="sxs-lookup"><span data-stu-id="b052b-154">Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource</span></span>
+
+## <span data-ttu-id="b052b-155">Notizen</span><span class="sxs-lookup"><span data-stu-id="b052b-155">NOTES</span></span>
+
+## <span data-ttu-id="b052b-156">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="b052b-156">RELATED LINKS</span></span>
+
+[<span data-ttu-id="b052b-157">Deaktivieren-AzOperationalInsightsLinuxSyslogCollection</span><span class="sxs-lookup"><span data-stu-id="b052b-157">Disable-AzOperationalInsightsLinuxSyslogCollection</span></span>](./Disable-AzOperationalInsightsLinuxSyslogCollection.md)
+
+[<span data-ttu-id="b052b-158">Enable-AzOperationalInsightsLinuxSyslogCollection</span><span class="sxs-lookup"><span data-stu-id="b052b-158">Enable-AzOperationalInsightsLinuxSyslogCollection</span></span>](./Enable-AzOperationalInsightsLinuxSyslogCollection.md)
+
+
