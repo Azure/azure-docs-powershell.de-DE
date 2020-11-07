@@ -1,0 +1,111 @@
+---
+external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.WebSites
+ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebappcertificate
+schema: 2.0.0
+ms.openlocfilehash: dcdba23de872ed0f1518188387c6f7e2d357c909
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93848612"
+---
+# Get-AzureRmWebAppCertificate
+
+## Synopsis
+Ruft ein Azure Web App-Zertifikat ab.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## Syntax
+
+```
+Get-AzureRmWebAppCertificate [[-ResourceGroupName] <String>] [[-Thumbprint] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet " **Get-AzureRmWebAppCertificate** " Ruft Informationen zu Azure Web App-Zertifikaten ab, die einer angegebenen Ressourcengruppe zugeordnet sind.
+Wenn Sie den Fingerabdruck des Zertifikats kennen, können Sie dieses Cmdlet auch verwenden, um Informationen zu einem angegebenen Zertifikat abzurufen.
+
+## Beispiele
+
+### Beispiel 1: Abrufen von Web App-Zertifikaten in einer Ressourcengruppe
+```
+PS C:\>Get-AzureRmWebAppCertificate -ResourceGroupName "ContosoResourceGroup"
+```
+
+Dieser Befehl gibt Informationen zu den geuploadeten Web App-Zertifikaten zurück, die der Ressourcengruppe ContosoResourceGroup zugeordnet sind.
+
+### Beispiel 2: Abrufen eines angegebenen Web App-Zertifikats
+```
+PS C:\>Get-AzureRmWebAppCertificate -ResourceGroupName "ContosoResourceGroup" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
+```
+
+Dieser Befehl ruft das ContosoResourceGroup Web App-Zertifikat mit dem Fingerabdruck-E3A38EBA60CAA1C162785A2E1C44A15AD450199C3.
+
+## Parameter
+
+### -DefaultProfile
+Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Gibt den Namen der Ressourcengruppe an, der das Zertifikat zugewiesen ist.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fingerabdruck
+Gibt den eindeutigen Bezeichner für das Zertifikat an.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+### Keine
+Dieses Cmdlet akzeptiert keine Eingaben.
+
+## Ausgaben
+
+## Notizen
+
+## Verwandte Links
+
+[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
+
+
