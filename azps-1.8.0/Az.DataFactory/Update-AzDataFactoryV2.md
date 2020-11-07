@@ -1,0 +1,203 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+Module Name: Az.DataFactory
+online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactory/update-azdatafactoryv2
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Update-AzDataFactoryV2.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Update-AzDataFactoryV2.md
+ms.openlocfilehash: 85bd5f6eef9c4f10d8a40ee58817f531a542d9ff
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93820307"
+---
+# <span data-ttu-id="75575-101">Update-AzDataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="75575-101">Update-AzDataFactoryV2</span></span>
+
+## <span data-ttu-id="75575-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="75575-102">SYNOPSIS</span></span>
+<span data-ttu-id="75575-103">Aktualisiert die Eigenschaften einer Data Factory.</span><span class="sxs-lookup"><span data-stu-id="75575-103">Updates the properties of a data factory.</span></span>
+
+## <span data-ttu-id="75575-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="75575-104">SYNTAX</span></span>
+
+### <span data-ttu-id="75575-105">ByFactoryName (Standard)</span><span class="sxs-lookup"><span data-stu-id="75575-105">ByFactoryName (Default)</span></span>
+```
+Update-AzDataFactoryV2 [-ResourceGroupName] <String> [-Name] <String> [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="75575-106">ByFactoryObject</span><span class="sxs-lookup"><span data-stu-id="75575-106">ByFactoryObject</span></span>
+```
+Update-AzDataFactoryV2 [-InputObject] <PSDataFactory> [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="75575-107">ByResourceId</span><span class="sxs-lookup"><span data-stu-id="75575-107">ByResourceId</span></span>
+```
+Update-AzDataFactoryV2 [-ResourceId] <String> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="75575-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="75575-108">DESCRIPTION</span></span>
+<span data-ttu-id="75575-109">Das Cmdlet **Update-AzDataFactoryV2** aktualisiert Tags oder Identitätseigenschaften einer Data Factory.</span><span class="sxs-lookup"><span data-stu-id="75575-109">The **Update-AzDataFactoryV2** cmdlet updates tags or identity properties of a data factory.</span></span>
+
+## <span data-ttu-id="75575-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="75575-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="75575-111">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="75575-111">Example 1</span></span>
+```
+PS C:\> Update-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF" -Tag @{myNewTagName = "myTagValue"}
+
+Confirm
+Are you sure you want to update properties of the data factory 'WikiADF' in resource group 'ADF'?
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+DataFactoryName   : WikiADF
+DataFactoryId     : /subscriptions/1e42591f-1f0c-4c5a-b7f2-a268f6105ec5/resourceGroups/adf/providers/Microsoft.DataF
+                    actory/factories/wikiadf
+ResourceGroupName : ADF
+Location          : EastUS
+Tags              : {[myNewTagName, myTagValue]}
+Identity          :
+ProvisioningState : Succeeded
+```
+
+<span data-ttu-id="75575-112">Dieser Befehl aktualisiert die Tags für die Factory-WikiADF in einem Wörterbuch mit einem Tag namens myNewTagName mit dem Wert myTagValue.</span><span class="sxs-lookup"><span data-stu-id="75575-112">This command updates the tags for the factory WikiADF to a dictionary containing a tag named myNewTagName with value myTagValue.</span></span>
+
+## <span data-ttu-id="75575-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="75575-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="75575-114">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="75575-114">-DefaultProfile</span></span>
+<span data-ttu-id="75575-115">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="75575-115">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-116">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="75575-116">-InputObject</span></span>
+<span data-ttu-id="75575-117">Das Data Factory-Objekt.</span><span class="sxs-lookup"><span data-stu-id="75575-117">The data factory object.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
+Parameter Sets: ByFactoryObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-118">-Name</span><span class="sxs-lookup"><span data-stu-id="75575-118">-Name</span></span>
+<span data-ttu-id="75575-119">Der Name der Daten Factory.</span><span class="sxs-lookup"><span data-stu-id="75575-119">The data factory name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByFactoryName
+Aliases: DataFactoryName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="75575-120">-ResourceGroupName</span></span>
+<span data-ttu-id="75575-121">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="75575-121">The resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByFactoryName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-122">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="75575-122">-ResourceId</span></span>
+<span data-ttu-id="75575-123">Die Azure-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="75575-123">The Azure resource ID.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByResourceId
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-124">-Tag</span><span class="sxs-lookup"><span data-stu-id="75575-124">-Tag</span></span>
+<span data-ttu-id="75575-125">Die Tags der Data Factory.</span><span class="sxs-lookup"><span data-stu-id="75575-125">The tags of the data factory.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-126">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="75575-126">-Confirm</span></span>
+<span data-ttu-id="75575-127">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="75575-127">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-128">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="75575-128">-WhatIf</span></span>
+<span data-ttu-id="75575-129">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="75575-129">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="75575-130">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="75575-130">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="75575-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="75575-131">CommonParameters</span></span>
+<span data-ttu-id="75575-132">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="75575-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="75575-133">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="75575-133">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="75575-134">Eingaben</span><span class="sxs-lookup"><span data-stu-id="75575-134">INPUTS</span></span>
+
+### <span data-ttu-id="75575-135">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory</span><span class="sxs-lookup"><span data-stu-id="75575-135">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory</span></span>
+
+### <span data-ttu-id="75575-136">System. String</span><span class="sxs-lookup"><span data-stu-id="75575-136">System.String</span></span>
+
+## <span data-ttu-id="75575-137">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="75575-137">OUTPUTS</span></span>
+
+### <span data-ttu-id="75575-138">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory</span><span class="sxs-lookup"><span data-stu-id="75575-138">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory</span></span>
+
+## <span data-ttu-id="75575-139">Notizen</span><span class="sxs-lookup"><span data-stu-id="75575-139">NOTES</span></span>
+
+## <span data-ttu-id="75575-140">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="75575-140">RELATED LINKS</span></span>
