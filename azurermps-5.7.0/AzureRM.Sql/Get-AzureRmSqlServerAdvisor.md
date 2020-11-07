@@ -1,0 +1,270 @@
+---
+external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
+ms.assetid: DAEF11C1-281B-4BED-9283-2296E0B57018
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/get-azurermsqlserveradvisor
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlServerAdvisor.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlServerAdvisor.md
+ms.openlocfilehash: 4e5a811831b0012fbae99097472cdb7830de58db
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93662558"
+---
+# Get-AzureRmSqlServerAdvisor
+
+## Synopsis
+Ruft einen oder mehrere Ratgeber für einen Azure SQL Server ab.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## Syntax
+
+```
+Get-AzureRmSqlServerAdvisor [-AdvisorName <String>] [-ExpandRecommendedActions] -ServerName <String>
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet " **Get-AzureRmSqlServerAdvisor** " Ruft einen oder mehrere Azure SQL Server-Ratgeber für einen Azure SQL Server ab.
+
+## Beispiele
+
+### Beispiel 1: Auflisten aller Ratgeber für den Server
+```
+PS C:\> Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east"
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {}
+
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : DropIndex
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 7/31/2016 8:41:19 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {}
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : DbParameterization
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Default
+LastChecked                    : 7/31/2016 2:46:58 PM
+RecommendationsStatus          : NoDbParameterizationIssue
+RecommendedActions             : {}
+
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : SchemaIssue
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Default
+LastChecked                    : 8/1/2016 3:01:41 PM
+RecommendationsStatus          : SchemaIsConsistent
+RecommendedActions             : {}
+```
+
+Dieser Befehl ruft eine Liste aller Ratgeber für den Server mit dem Namen "Wi-Runner-Australia-East" ab, der zur Ressourcengruppe mit dem Namen "WIRunnersProd" gehört.
+
+### Beispiel 2: Abrufen eines einzelnen Ratgebers für den Server
+```
+PS C:\> Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex"
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {}
+```
+
+Dieser Befehl ruft den Berater mit dem Namen CreateIndex für den Server mit dem Namen "Wi-Runner-Australia-East" ab.
+
+### Beispiel 3: Auflisten aller Ratgeber, deren empfohlene Aktionen in der Antwort enthalten sind
+```
+PS C:\>Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ExpandRecommendedActions
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...} 
+
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : DropIndex
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 7/31/2016 8:41:19 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957, 
+                                 IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957, 
+                                 IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957, 
+                                 IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...} 
+
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : DbParameterization
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Default
+LastChecked                    : 7/31/2016 2:46:58 PM
+RecommendationsStatus          : NoDbParameterizationIssue
+RecommendedActions             : {}
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : SchemaIssue
+AdvisorStatus                  : PublicPreview
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Default
+LastChecked                    : 8/1/2016 3:04:26 PM
+RecommendationsStatus          : SchemaIsConsistent
+RecommendedActions             : {}
+```
+
+Dieser Befehl ruft alle Berater für den Server mit dem Namen "Wi-Runner-Australia-East" ab.
+Da der Befehl den *ExpandRecommendedActions* -Parameter verwendet, ruft das Cmdlet die in der Antwort enthaltenen empfohlenen Aktionen ab.
+
+### Beispiel 4: Abrufen eines einzelnen Ratgebers mit den empfohlenen Aktionen, die in der Antwort enthalten sind
+```
+PS C:\> Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -ExpandRecommendedActions
+ResourceGroupName              : WIRunnersProd
+ServerName                     : wi-runner-australia-east
+AdvisorName                    : CreateIndex
+AdvisorStatus                  : GA
+AutoExecuteStatus              : Disabled
+AutoExecuteStatusInheritedFrom : Database
+LastChecked                    : 8/1/2016 2:36:47 PM
+RecommendationsStatus          : Ok
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
+```
+
+Dieser Befehl ruft den Berater mit dem Namen CreateIndex vom Server mit dem Namen "Wi-Runner-Australia-East" ab, wobei die empfohlenen Aktionen in der Antwort enthalten sind.
+
+## Parameter
+
+### -Advisorname
+Gibt den Namen des Beraters an, den dieses Cmdlet erhält.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpandRecommendedActions
+Gibt an, dass das Cmdlet die empfohlenen Aktionen der Ratgeber enthält, die in der Antwort enthalten sind.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Gibt den Namen der Ressourcengruppe des Servers an.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Servername
+Gibt den Namen des Servers für den Berater an, den dieses Cmdlet anfordert.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+### Keine
+Dieses Cmdlet akzeptiert keine Eingaben.
+
+## Ausgaben
+
+### Microsoft. Azure. Commands. SQL. Advisor. Model. AzureSqlServerAdvisorModel
+
+## Notizen
+* Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, SQL, Server, MSSQL, Ratgeber
+
+## Verwandte Links
+
+[Get-AzureRmSqlElasticPoolAdvisor](./Get-AzureRmSqlElasticPoolAdvisor.md)
+
+[Get-AzureRmSqlDatabaseAdvisor](./Get-AzureRmSqlDatabaseAdvisor.md)
+
+[Get-AzureRmSqlServerRecommendedAction](./Get-AzureRmSqlServerRecommendedAction.md)
+
+[Satz-AzureRmSqlServerAdvisorAutoExecuteStatus](./Set-AzureRmSqlServerAdvisorAutoExecuteStatus.md)
+
+[SQL-Datenbank-Dokumentation](https://docs.microsoft.com/azure/sql-database/)
+
