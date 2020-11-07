@@ -1,0 +1,247 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+Module Name: Az.Sql
+ms.assetid: 848A6972-AB29-46FB-8E03-FF2ADB113A0E
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasedatamaskingrule
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
+ms.openlocfilehash: 5c43820c57531ca5a844e1ab429c26d85fecceee
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93825687"
+---
+# <span data-ttu-id="e467f-101">Get-AzSqlDatabaseDataMaskingRule</span><span class="sxs-lookup"><span data-stu-id="e467f-101">Get-AzSqlDatabaseDataMaskingRule</span></span>
+
+## <span data-ttu-id="e467f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="e467f-102">SYNOPSIS</span></span>
+<span data-ttu-id="e467f-103">Ruft die Regeln für die Daten Maskierung aus einer Datenbank ab.</span><span class="sxs-lookup"><span data-stu-id="e467f-103">Gets the data masking rules from a database.</span></span>
+
+## <span data-ttu-id="e467f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e467f-104">SYNTAX</span></span>
+
+```
+Get-AzSqlDatabaseDataMaskingRule [-SchemaName <String>] [-TableName <String>] [-ColumnName <String>]
+ [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="e467f-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e467f-105">DESCRIPTION</span></span>
+<span data-ttu-id="e467f-106">Das Cmdlet " **Get-AzSqlDatabaseDataMaskingRule** " erhält entweder eine bestimmte Daten Maskierungs Regel oder alle Daten Maskierungs Regeln für eine Azure SQL-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="e467f-106">The **Get-AzSqlDatabaseDataMaskingRule** cmdlet gets either a specific data masking rule or all of the data masking rules for an Azure SQL database.</span></span>
+<span data-ttu-id="e467f-107">Um das Cmdlet zu verwenden, verwenden Sie die *ResourceGroupName* -, *Servername* -und *DatabaseName* -Parameter, um die Datenbank zu identifizieren, und den Parameter " *rulecode* ", um anzugeben, welche Regel dieses Cmdlet zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="e467f-107">To use the cmdlet, use the *ResourceGroupName* , *ServerName* , and *DatabaseName* parameters to identify the database, and the *RuleId* parameter to specify which rule this cmdlet returns.</span></span>
+<span data-ttu-id="e467f-108">Wenn Sie keine Regel- *Nr* angeben, werden alle Daten Maskierungs Regeln für diese Azure SQL-Datenbank zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e467f-108">If you do not provide *RuleId* , all the data masking rules for that Azure SQL database are returned.</span></span>
+<span data-ttu-id="e467f-109">Dieses Cmdlet wird auch vom SQL Server Stretch-Datenbankdienst auf Azure unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e467f-109">This cmdlet is also supported by the SQL Server Stretch Database service on Azure.</span></span>
+
+## <span data-ttu-id="e467f-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="e467f-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="e467f-111">Beispiel 1: Abrufen aller Regeln für die Daten Maskierung aus einer Datenbank</span><span class="sxs-lookup"><span data-stu-id="e467f-111">Example 1: Get all data masking rules from a database</span></span>
+```
+PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table1
+ColumnName        : column1
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
+
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table2
+ColumnName        : column2
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
+```
+
+### <span data-ttu-id="e467f-112">Beispiel 2: Abrufen der für das Schema "dbo" definierten Daten Maskierungs Regel, Tabelle "Tabelle1" und Spalte "Spalte1"</span><span class="sxs-lookup"><span data-stu-id="e467f-112">Example 2: Get the data masking rule defined on schema "dbo", table "table1" and column "column1".</span></span>
+```
+PS C:\>Get-AzSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SchemaName "dbo" -TableName  "table1" -ColumnName "column1"
+DatabaseName      : database01
+ResourceGroupName : resourcegroup01
+ServerName        : server01
+SchemaName        : dbo
+TableName         : table1
+ColumnName        : column1
+MaskingFunction   : Default
+PrefixSize        :
+SuffixSize        :
+ReplacementString :
+NumberFrom        :
+NumberTo          :
+```
+
+## <span data-ttu-id="e467f-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="e467f-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="e467f-114">-ColumnName</span><span class="sxs-lookup"><span data-stu-id="e467f-114">-ColumnName</span></span>
+<span data-ttu-id="e467f-115">Gibt den Namen der Spalte an, auf die die Maskierungs Regel ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="e467f-115">Specifies the name of the column targeted by the masking rule.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-116">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="e467f-116">-DatabaseName</span></span>
+<span data-ttu-id="e467f-117">Gibt den Namen der Datenbank an.</span><span class="sxs-lookup"><span data-stu-id="e467f-117">Specifies the name of the database.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-118">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="e467f-118">-DefaultProfile</span></span>
+<span data-ttu-id="e467f-119">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="e467f-119">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="e467f-120">-ResourceGroupName</span></span>
+<span data-ttu-id="e467f-121">Gibt den Namen der Ressourcengruppe an, der die Datenbank zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="e467f-121">Specifies the name of the resource group to which the database is assigned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-122">-Schemaname</span><span class="sxs-lookup"><span data-stu-id="e467f-122">-SchemaName</span></span>
+<span data-ttu-id="e467f-123">Gibt den Namen eines Schemas an.</span><span class="sxs-lookup"><span data-stu-id="e467f-123">Specifies the name of a schema.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-124">-Servername</span><span class="sxs-lookup"><span data-stu-id="e467f-124">-ServerName</span></span>
+<span data-ttu-id="e467f-125">Gibt den Namen des Servers an.</span><span class="sxs-lookup"><span data-stu-id="e467f-125">Specifies the name of the server.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-126">-Tabellenname</span><span class="sxs-lookup"><span data-stu-id="e467f-126">-TableName</span></span>
+<span data-ttu-id="e467f-127">Gibt den Namen einer Azure SQL-Tabelle an.</span><span class="sxs-lookup"><span data-stu-id="e467f-127">Specifies the name of an Azure SQL table.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-128">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="e467f-128">-Confirm</span></span>
+<span data-ttu-id="e467f-129">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="e467f-129">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-130">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="e467f-130">-WhatIf</span></span>
+<span data-ttu-id="e467f-131">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e467f-131">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="e467f-132">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e467f-132">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e467f-133">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e467f-133">CommonParameters</span></span>
+<span data-ttu-id="e467f-134">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e467f-134">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e467f-135">Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="e467f-135">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="e467f-136">Eingaben</span><span class="sxs-lookup"><span data-stu-id="e467f-136">INPUTS</span></span>
+
+### <span data-ttu-id="e467f-137">System. String</span><span class="sxs-lookup"><span data-stu-id="e467f-137">System.String</span></span>
+
+## <span data-ttu-id="e467f-138">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="e467f-138">OUTPUTS</span></span>
+
+### <span data-ttu-id="e467f-139">Microsoft. Azure. Commands. SQL. datamasking. Model. DatabaseDataMaskingRuleModel</span><span class="sxs-lookup"><span data-stu-id="e467f-139">Microsoft.Azure.Commands.Sql.DataMasking.Model.DatabaseDataMaskingRuleModel</span></span>
+
+## <span data-ttu-id="e467f-140">Notizen</span><span class="sxs-lookup"><span data-stu-id="e467f-140">NOTES</span></span>
+
+## <span data-ttu-id="e467f-141">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="e467f-141">RELATED LINKS</span></span>
+
+[<span data-ttu-id="e467f-142">Get-AzSqlDatabaseDataMaskingPolicy</span><span class="sxs-lookup"><span data-stu-id="e467f-142">Get-AzSqlDatabaseDataMaskingPolicy</span></span>](./Get-AzSqlDatabaseDataMaskingPolicy.md)
+
+[<span data-ttu-id="e467f-143">Neu – AzSqlDatabaseDataMaskingRule</span><span class="sxs-lookup"><span data-stu-id="e467f-143">New-AzSqlDatabaseDataMaskingRule</span></span>](./New-AzSqlDatabaseDataMaskingRule.md)
+
+[<span data-ttu-id="e467f-144">Remove-AzSqlDatabaseDataMaskingRule</span><span class="sxs-lookup"><span data-stu-id="e467f-144">Remove-AzSqlDatabaseDataMaskingRule</span></span>](./Remove-AzSqlDatabaseDataMaskingRule.md)
+
+[<span data-ttu-id="e467f-145">Satz-AzSqlDatabaseDataMaskingPolicy</span><span class="sxs-lookup"><span data-stu-id="e467f-145">Set-AzSqlDatabaseDataMaskingPolicy</span></span>](./Set-AzSqlDatabaseDataMaskingPolicy.md)
+
+[<span data-ttu-id="e467f-146">Satz-AzSqlDatabaseDataMaskingRule</span><span class="sxs-lookup"><span data-stu-id="e467f-146">Set-AzSqlDatabaseDataMaskingRule</span></span>](./Set-AzSqlDatabaseDataMaskingRule.md)
+
+

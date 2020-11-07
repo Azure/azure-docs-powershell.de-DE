@@ -1,0 +1,172 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+Module Name: Az.Sql
+ms.assetid: 40054224-52FF-4AF6-A090-9F6D07A2BA99
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-azsqldatabasereplicationlink
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseReplicationLink.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseReplicationLink.md
+ms.openlocfilehash: 6bb2a3891abe8453ee8460f6879dbc134f6ab29b
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93825647"
+---
+# <span data-ttu-id="12391-101">Get-AzSqlDatabaseReplicationLink</span><span class="sxs-lookup"><span data-stu-id="12391-101">Get-AzSqlDatabaseReplicationLink</span></span>
+
+## <span data-ttu-id="12391-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="12391-102">SYNOPSIS</span></span>
+<span data-ttu-id="12391-103">Ruft die Geo-Replikationsverknüpfungen zwischen einer Azure SQL-Datenbank und einer Ressourcengruppe oder SQL Server ab.</span><span class="sxs-lookup"><span data-stu-id="12391-103">Gets the geo-replication links between an Azure SQL Database and a resource group or SQL Server.</span></span>
+
+## <span data-ttu-id="12391-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="12391-104">SYNTAX</span></span>
+
+```
+Get-AzSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceGroupName <String>
+ [-PartnerServerName <String>] [-ServerName] <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="12391-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="12391-105">DESCRIPTION</span></span>
+<span data-ttu-id="12391-106">Das Cmdlet **Get-AzSqlDatabaseReplicationLink** ersetzt das Cmdlet **Get-AzSqlDatabaseCopy** .</span><span class="sxs-lookup"><span data-stu-id="12391-106">The **Get-AzSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzSqlDatabaseCopy** cmdlet.</span></span>
+<span data-ttu-id="12391-107">Es werden alle Geo-Replikationsverknüpfungen zwischen der angegebenen Azure SQL-Datenbank und einer Ressourcengruppe oder einem AzureSQL-Server abgerufen.</span><span class="sxs-lookup"><span data-stu-id="12391-107">It gets all geo-replication links between the specified Azure SQL Database and a resource group or AzureSQL Server.</span></span>
+
+## <span data-ttu-id="12391-108">Beispiele</span><span class="sxs-lookup"><span data-stu-id="12391-108">EXAMPLES</span></span>
+
+## <span data-ttu-id="12391-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="12391-109">PARAMETERS</span></span>
+
+### <span data-ttu-id="12391-110">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="12391-110">-DatabaseName</span></span>
+<span data-ttu-id="12391-111">Gibt den Namen der SQL-Datenbank an, für die Links abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="12391-111">Specifies the name of the SQL Database for which to retrieve links.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="12391-112">-DefaultProfile</span></span>
+<span data-ttu-id="12391-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="12391-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-114">-PartnerResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="12391-114">-PartnerResourceGroupName</span></span>
+<span data-ttu-id="12391-115">Gibt den Namen der Ressourcengruppe an, der der Partner zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="12391-115">Specifies the name of the resource group to which the partner is assigned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-116">-PartnerServerName</span><span class="sxs-lookup"><span data-stu-id="12391-116">-PartnerServerName</span></span>
+<span data-ttu-id="12391-117">Gibt den Namen des Azure SQL Server für den Partner an.</span><span class="sxs-lookup"><span data-stu-id="12391-117">Specifies the name of the Azure SQL Server for the partner.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="12391-118">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="12391-118">-ResourceGroupName</span></span>
+<span data-ttu-id="12391-119">Gibt den Namen der Azure-Ressourcengruppe für die Datenbank an, für die Verknüpfungen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="12391-119">Specifies the name of the Azure resource group for the database for which to retrieve links.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-120">-Servername</span><span class="sxs-lookup"><span data-stu-id="12391-120">-ServerName</span></span>
+<span data-ttu-id="12391-121">Gibt den Namen des SQL Server für die Datenbank an, für den Links abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="12391-121">Specifies the name of the SQL Server for the database to retrieve links for.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-122">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="12391-122">-Confirm</span></span>
+<span data-ttu-id="12391-123">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="12391-123">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-124">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="12391-124">-WhatIf</span></span>
+<span data-ttu-id="12391-125">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="12391-125">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="12391-126">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="12391-126">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="12391-127">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="12391-127">CommonParameters</span></span>
+<span data-ttu-id="12391-128">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="12391-128">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="12391-129">Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="12391-129">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="12391-130">Eingaben</span><span class="sxs-lookup"><span data-stu-id="12391-130">INPUTS</span></span>
+
+### <span data-ttu-id="12391-131">System. String</span><span class="sxs-lookup"><span data-stu-id="12391-131">System.String</span></span>
+
+## <span data-ttu-id="12391-132">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="12391-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="12391-133">Microsoft. Azure. Commands. SQL. Replication. Model. AzureReplicationLinkModel</span><span class="sxs-lookup"><span data-stu-id="12391-133">Microsoft.Azure.Commands.Sql.Replication.Model.AzureReplicationLinkModel</span></span>
+
+## <span data-ttu-id="12391-134">Notizen</span><span class="sxs-lookup"><span data-stu-id="12391-134">NOTES</span></span>
+
+## <span data-ttu-id="12391-135">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="12391-135">RELATED LINKS</span></span>
+
+[<span data-ttu-id="12391-136">SQL-Datenbank-Dokumentation</span><span class="sxs-lookup"><span data-stu-id="12391-136">SQL Database Documentation</span></span>](https://docs.microsoft.com/azure/sql-database/)
