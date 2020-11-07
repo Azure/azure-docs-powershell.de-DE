@@ -1,0 +1,164 @@
+---
+external help file: ''
+Module Name: Azs.Compute.Admin
+online version: https://docs.microsoft.com/powershell/module/azs.compute.admin/stop-azsdiskmigrationjob
+schema: 2.0.0
+ms.openlocfilehash: bb5c78d6c0ae29d415e02d3e78e79f963bc3315c
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93844847"
+---
+# <span data-ttu-id="c09cc-101">Stop-AzsDiskMigrationJob</span><span class="sxs-lookup"><span data-stu-id="c09cc-101">Stop-AzsDiskMigrationJob</span></span>
+
+## <span data-ttu-id="c09cc-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="c09cc-102">SYNOPSIS</span></span>
+<span data-ttu-id="c09cc-103">Abbrechen eines Datenträger Migrationsauftrags</span><span class="sxs-lookup"><span data-stu-id="c09cc-103">Cancel a disk migration job.</span></span>
+
+## <span data-ttu-id="c09cc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c09cc-104">SYNTAX</span></span>
+
+```
+Stop-AzsDiskMigrationJob -Name <String> [-Location <String>] [-SubscriptionId <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## <span data-ttu-id="c09cc-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c09cc-105">DESCRIPTION</span></span>
+<span data-ttu-id="c09cc-106">Abbrechen eines Datenträger Migrationsauftrags</span><span class="sxs-lookup"><span data-stu-id="c09cc-106">Cancel a disk migration job.</span></span>
+
+## <span data-ttu-id="c09cc-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c09cc-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="c09cc-108">Beispiel 1:</span><span class="sxs-lookup"><span data-stu-id="c09cc-108">Example 1:</span></span>
+```powershell
+PS C:\> Stop-AzsDiskMigrationJob -Name TestJob
+
+CreationTime : 2/26/2020 11:06:40 AM
+EndTime      : 2/26/2020 11:07:24 AM
+Id           : /subscriptions/627fecef-520e-4c18-94e0-8f0665ba86a7/providers/Microsoft.Compute.Admin/locations/redmond/diskmigrati
+               onjobs/TestJob
+Location     : redmond
+MigrationId  : TestJob
+Name         : redmond/TestJob
+StartTime    : 2/26/2020 11:06:40 AM
+Status       : Canceled
+Subtask      : {47774498-6bc7-4ce2-98ca-738739ded2fc, b09ac623-f71d-480c-98bc-88fa3f603f2c}
+TargetShare  : \\SU1FileServer.s31r1801.masd.stbtest.microsoft.com\SU1_ObjStore_4
+Type         : Microsoft.Compute.Admin/locations/diskmigrationjobs
+```
+
+<span data-ttu-id="c09cc-109">Abbrechen eines verwalteten Datenträger Migrationsauftrags</span><span class="sxs-lookup"><span data-stu-id="c09cc-109">Cancel a managed disk migration job.</span></span>
+
+## <span data-ttu-id="c09cc-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="c09cc-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="c09cc-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c09cc-111">-DefaultProfile</span></span>
+<span data-ttu-id="c09cc-112">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c09cc-112">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-113">-Standort</span><span class="sxs-lookup"><span data-stu-id="c09cc-113">-Location</span></span>
+<span data-ttu-id="c09cc-114">Der Speicherort der Ressource.</span><span class="sxs-lookup"><span data-stu-id="c09cc-114">Location of the resource.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzLocation)[0].Location
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-115">-Name</span><span class="sxs-lookup"><span data-stu-id="c09cc-115">-Name</span></span>
+<span data-ttu-id="c09cc-116">Der GUID-Name des Migrationsauftrags.</span><span class="sxs-lookup"><span data-stu-id="c09cc-116">The migration job guid name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: MigrationId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-117">-Abonnement-Nr</span><span class="sxs-lookup"><span data-stu-id="c09cc-117">-SubscriptionId</span></span>
+<span data-ttu-id="c09cc-118">Abonnement Anmeldeinformationen, die das Microsoft Azure-Abonnement eindeutig identifizieren.</span><span class="sxs-lookup"><span data-stu-id="c09cc-118">Subscription credentials that uniquely identify Microsoft Azure subscription.</span></span>
+<span data-ttu-id="c09cc-119">Die Abonnement-ID ist Teil des URIs für jeden Dienst Anruf.</span><span class="sxs-lookup"><span data-stu-id="c09cc-119">The subscription ID forms part of the URI for every service call.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-120">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="c09cc-120">-Confirm</span></span>
+<span data-ttu-id="c09cc-121">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="c09cc-121">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-122">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c09cc-122">-WhatIf</span></span>
+<span data-ttu-id="c09cc-123">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c09cc-123">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="c09cc-124">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c09cc-124">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### <span data-ttu-id="c09cc-125">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c09cc-125">CommonParameters</span></span>
+<span data-ttu-id="c09cc-126">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c09cc-126">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c09cc-127">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="c09cc-127">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="c09cc-128">Eingaben</span><span class="sxs-lookup"><span data-stu-id="c09cc-128">INPUTS</span></span>
+
+## <span data-ttu-id="c09cc-129">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="c09cc-129">OUTPUTS</span></span>
+
+### <span data-ttu-id="c09cc-130">Microsoft. Azure. PowerShell. Cmdlets. ComputeAdmin. Models. Api20180730Preview. IDiskMigrationJob</span><span class="sxs-lookup"><span data-stu-id="c09cc-130">Microsoft.Azure.PowerShell.Cmdlets.ComputeAdmin.Models.Api20180730Preview.IDiskMigrationJob</span></span>
+
+
+
+## <span data-ttu-id="c09cc-131">Notizen</span><span class="sxs-lookup"><span data-stu-id="c09cc-131">NOTES</span></span>
+
+## <span data-ttu-id="c09cc-132">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="c09cc-132">RELATED LINKS</span></span>
+
