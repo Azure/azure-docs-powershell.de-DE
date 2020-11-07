@@ -1,0 +1,187 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+Module Name: Az.Compute
+ms.assetid: 7F7D1F05-617C-4EC5-8FF5-D816E9148841
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/start-azvmss
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Start-AzVmss.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Start-AzVmss.md
+ms.openlocfilehash: d3677191bb3a196b97dcb8ff6c5b62b4aafd3a8b
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93842475"
+---
+# <span data-ttu-id="36561-101">Start-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-101">Start-AzVmss</span></span>
+
+## <span data-ttu-id="36561-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="36561-102">SYNOPSIS</span></span>
+<span data-ttu-id="36561-103">Startet die VMSS oder einen Satz virtueller Computer innerhalb des VMSS.</span><span class="sxs-lookup"><span data-stu-id="36561-103">Starts the VMSS or a set of virtual machines within the VMSS.</span></span>
+
+## <span data-ttu-id="36561-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="36561-104">SYNTAX</span></span>
+
+```
+Start-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceId] <String[]>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="36561-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36561-105">DESCRIPTION</span></span>
+<span data-ttu-id="36561-106">Mit dem **Start-AzVmss-** Cmdlet werden alle virtuellen Computer im virtuellen Computer-Skalierungs Satz (VMSS) oder eine Gruppe virtueller Computer gestartet.</span><span class="sxs-lookup"><span data-stu-id="36561-106">The **Start-AzVmss** cmdlet starts all the virtual machines within the Virtual Machine Scale Set (VMSS) or a set of virtual machines.</span></span>
+<span data-ttu-id="36561-107">Sie können den *InstanceId* -Parameter verwenden, um einen Satz virtueller Computer auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="36561-107">You can use the *InstanceId* parameter to select a set of virtual machines.</span></span>
+
+## <span data-ttu-id="36561-108">Beispiele</span><span class="sxs-lookup"><span data-stu-id="36561-108">EXAMPLES</span></span>
+
+### <span data-ttu-id="36561-109">Beispiel 1: Starten einer bestimmten Gruppe von virtuellen Computern innerhalb des VMSS</span><span class="sxs-lookup"><span data-stu-id="36561-109">Example 1: Start a specific set of virtual machines within the VMSS</span></span>
+```
+PS C:\> Start-AzVmss -ResourceGroupName "ContosOrg" -VMScaleSetName "ContosoVMSS"-InstanceId "0", "1"
+```
+
+<span data-ttu-id="36561-110">Mit diesem Befehl wird ein bestimmter Satz virtueller Computer gestartet, die durch das Array der Instanz-ID-Zeichenfolge angegeben werden, die zum VMSS mit dem Namen ContosoVMSS gehören.</span><span class="sxs-lookup"><span data-stu-id="36561-110">This command starts a specific set of virtual machines specified by the instance ID string array that belong to the VMSS named ContosoVMSS.</span></span>
+
+### <span data-ttu-id="36561-111">Beispiel 2: Starten aller virtuellen Computer innerhalb des VMSS</span><span class="sxs-lookup"><span data-stu-id="36561-111">Example 2: Start all virtual machines within the VMSS</span></span>
+```
+PS C:\> Start-AzVmss -ResourceGroupName "ContosOrg" -VMScaleSetName "ContosoVMSS"
+```
+
+<span data-ttu-id="36561-112">Mit diesem Befehl werden alle virtuellen Computer gestartet, die zum VMSS mit dem Namen ContosoVMSS gehören.</span><span class="sxs-lookup"><span data-stu-id="36561-112">This command starts all virtual machines that belong to the VMSS named ContosoVMSS.</span></span>
+
+## <span data-ttu-id="36561-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="36561-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="36561-114">-AsJob</span><span class="sxs-lookup"><span data-stu-id="36561-114">-AsJob</span></span>
+<span data-ttu-id="36561-115">Führen Sie das Cmdlet im Hintergrund aus, und geben Sie einen Auftrag zum Nachverfolgen des Fortschritts zurück.</span><span class="sxs-lookup"><span data-stu-id="36561-115">Run cmdlet in the background and return a Job to track progress.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="36561-116">-DefaultProfile</span></span>
+<span data-ttu-id="36561-117">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="36561-117">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-118">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="36561-118">-InstanceId</span></span>
+<span data-ttu-id="36561-119">Gibt als Zeichenfolgenarray die ID oder IDs der Instanzen an, die vom Cmdlet gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="36561-119">Specifies, as a string array, the ID or IDs of the instances that cmdlet starts.</span></span>
+<span data-ttu-id="36561-120">Zum Beispiel: `-InstanceId "0", "3"`</span><span class="sxs-lookup"><span data-stu-id="36561-120">For instance: `-InstanceId "0", "3"`</span></span>
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-121">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="36561-121">-ResourceGroupName</span></span>
+<span data-ttu-id="36561-122">Gibt den Namen der Ressourcengruppe des VMSS an.</span><span class="sxs-lookup"><span data-stu-id="36561-122">Specifies the name of the resource group of the VMSS.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-123">-VMScaleSetName</span><span class="sxs-lookup"><span data-stu-id="36561-123">-VMScaleSetName</span></span>
+<span data-ttu-id="36561-124">Gibt den Namen des VMSS an, mit dem das Cmdlet die virtuellen Computer startet.</span><span class="sxs-lookup"><span data-stu-id="36561-124">Specifies the name of the VMSS that this cmdlet starts the virtual machines.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-125">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="36561-125">-Confirm</span></span>
+<span data-ttu-id="36561-126">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="36561-126">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-127">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="36561-127">-WhatIf</span></span>
+<span data-ttu-id="36561-128">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="36561-128">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="36561-129">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="36561-129">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36561-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="36561-130">CommonParameters</span></span>
+<span data-ttu-id="36561-131">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="36561-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="36561-132">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="36561-132">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="36561-133">Eingaben</span><span class="sxs-lookup"><span data-stu-id="36561-133">INPUTS</span></span>
+
+### <span data-ttu-id="36561-134">Keine</span><span class="sxs-lookup"><span data-stu-id="36561-134">None</span></span>
+<span data-ttu-id="36561-135">Dieses Cmdlet akzeptiert keine Eingaben.</span><span class="sxs-lookup"><span data-stu-id="36561-135">This cmdlet does not accept any input.</span></span>
+
+## <span data-ttu-id="36561-136">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="36561-136">OUTPUTS</span></span>
+
+###  
+<span data-ttu-id="36561-137">Dieses Cmdlet generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="36561-137">This cmdlet does not generate any output.</span></span>
+
+## <span data-ttu-id="36561-138">Notizen</span><span class="sxs-lookup"><span data-stu-id="36561-138">NOTES</span></span>
+
+## <span data-ttu-id="36561-139">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="36561-139">RELATED LINKS</span></span>
+
+[<span data-ttu-id="36561-140">Get-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-140">Get-AzVmss</span></span>](./Get-AzVmss.md)
+
+[<span data-ttu-id="36561-141">Neu – AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-141">New-AzVmss</span></span>](./New-AzVmss.md)
+
+[<span data-ttu-id="36561-142">Remove-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-142">Remove-AzVmss</span></span>](./Remove-AzVmss.md)
+
+[<span data-ttu-id="36561-143">Neustart-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-143">Restart-AzVmss</span></span>](./Restart-AzVmss.md)
+
+[<span data-ttu-id="36561-144">Satz-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-144">Set-AzVmss</span></span>](./Set-AzVmss.md)
+
+[<span data-ttu-id="36561-145">Stopp-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-145">Stop-AzVmss</span></span>](./Stop-AzVmss.md)
+
+[<span data-ttu-id="36561-146">Update-AzVmss</span><span class="sxs-lookup"><span data-stu-id="36561-146">Update-AzVmss</span></span>](./Update-AzVmss.md)
+
+

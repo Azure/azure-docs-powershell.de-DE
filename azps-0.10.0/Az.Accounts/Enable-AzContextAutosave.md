@@ -1,0 +1,116 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+Module Name: Az.Accounts
+online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/enable-azcontextautosave
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
+ms.openlocfilehash: 6c0e557078bde5cbec7b1f7dd96f1fa2c71408a7
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93841087"
+---
+# <span data-ttu-id="cb4fe-101">Enable-AzContextAutosave</span><span class="sxs-lookup"><span data-stu-id="cb4fe-101">Enable-AzContextAutosave</span></span>
+
+## <span data-ttu-id="cb4fe-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="cb4fe-102">SYNOPSIS</span></span>
+<span data-ttu-id="cb4fe-103">Zulassen, dass Azure-Anmeldeinformationen, Konto-und Abonnementinformationen gespeichert und automatisch geladen werden, wenn Sie ein PowerShell-Fenster öffnen.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-103">Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window.</span></span> 
+
+## <span data-ttu-id="cb4fe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cb4fe-104">SYNTAX</span></span>
+
+```
+Enable-AzContextAutosave [-Scope <ContextModificationScope>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="cb4fe-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cb4fe-105">DESCRIPTION</span></span>
+<span data-ttu-id="cb4fe-106">Zulassen, dass Azure-Anmeldeinformationen, Konto-und Abonnementinformationen gespeichert und automatisch geladen werden, wenn Sie ein PowerShell-Fenster öffnen.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-106">Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window.</span></span> 
+
+## <span data-ttu-id="cb4fe-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="cb4fe-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="cb4fe-108">Aktivieren der AutoSpeichern-Anmeldeinformationen für den aktuellen Benutzer</span><span class="sxs-lookup"><span data-stu-id="cb4fe-108">Enable autosaving credentials for the current user</span></span>
+```
+PS C:\> Enable-AzContextAutosave
+```
+
+<span data-ttu-id="cb4fe-109">Aktivieren Sie das automatische Speichern von Anmeldeinformationen für den aktuellen Benutzer.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-109">Turn on credential autosave for the current user.</span></span>  <span data-ttu-id="cb4fe-110">Wenn ein PowerShell-Fenster geöffnet wird, wird der aktuelle Kontext ohne Anmeldung gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-110">Whenever a powershell window is opened, your current context will be remembered without logging in.</span></span>
+
+## <span data-ttu-id="cb4fe-111">Parameter</span><span class="sxs-lookup"><span data-stu-id="cb4fe-111">PARAMETERS</span></span>
+
+### <span data-ttu-id="cb4fe-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="cb4fe-112">-DefaultProfile</span></span>
+<span data-ttu-id="cb4fe-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, Mandanten und Abonnements</span><span class="sxs-lookup"><span data-stu-id="cb4fe-113">The credentials, tenant and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb4fe-114">-Scope</span><span class="sxs-lookup"><span data-stu-id="cb4fe-114">-Scope</span></span>
+<span data-ttu-id="cb4fe-115">Bestimmt den Bereich von Kontextänderungen, beispielsweise, ob Änderungen nur für den aktuellen Prozess oder für alle von diesem Benutzer gestarteten Sitzungen gelten.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-115">Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
+Parameter Sets: (All)
+Aliases:
+Accepted values: Process, CurrentUser
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb4fe-116">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="cb4fe-116">-Confirm</span></span>
+<span data-ttu-id="cb4fe-117">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-117">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb4fe-118">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="cb4fe-118">-WhatIf</span></span>
+<span data-ttu-id="cb4fe-119">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-119">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="cb4fe-120">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-120">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cb4fe-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cb4fe-121">CommonParameters</span></span>
+<span data-ttu-id="cb4fe-122">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cb4fe-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cb4fe-123">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="cb4fe-123">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="cb4fe-124">Eingaben</span><span class="sxs-lookup"><span data-stu-id="cb4fe-124">INPUTS</span></span>
+
+### <span data-ttu-id="cb4fe-125">Keine</span><span class="sxs-lookup"><span data-stu-id="cb4fe-125">None</span></span>
+
+## <span data-ttu-id="cb4fe-126">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="cb4fe-126">OUTPUTS</span></span>
+
+### <span data-ttu-id="cb4fe-127">Microsoft. Azure. Commands. Common. Authentication. ContextAutosaveSettings</span><span class="sxs-lookup"><span data-stu-id="cb4fe-127">Microsoft.Azure.Commands.Common.Authentication.ContextAutosaveSettings</span></span>
+
+## <span data-ttu-id="cb4fe-128">Notizen</span><span class="sxs-lookup"><span data-stu-id="cb4fe-128">NOTES</span></span>
+
+## <span data-ttu-id="cb4fe-129">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="cb4fe-129">RELATED LINKS</span></span>
