@@ -1,0 +1,220 @@
+---
+external help file: Microsoft.Azure.Commands.StorageSync.dll-Help.xml
+Module Name: Az.StorageSync
+online version: https://docs.microsoft.com/en-us/powershell/module/Az.storagesync/remove-Azstoragesyncservice
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Remove-AzStorageSyncService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Remove-AzStorageSyncService.md
+ms.openlocfilehash: 5116ead7111902b1009517ff42ff6594ac87d8c5
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93658681"
+---
+# <span data-ttu-id="df91b-101">Remove-AzStorageSyncService</span><span class="sxs-lookup"><span data-stu-id="df91b-101">Remove-AzStorageSyncService</span></span>
+
+## <span data-ttu-id="df91b-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="df91b-102">SYNOPSIS</span></span>
+<span data-ttu-id="df91b-103">Mit diesem Befehl wird der angegebene Speicher Synchronisierungsdienst gelöscht.</span><span class="sxs-lookup"><span data-stu-id="df91b-103">This command will delete the specified storage sync service.</span></span>
+
+## <span data-ttu-id="df91b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="df91b-104">SYNTAX</span></span>
+
+### <span data-ttu-id="df91b-105">InputObjectParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="df91b-105">InputObjectParameterSet (Default)</span></span>
+```
+Remove-AzStorageSyncService [-InputObject] <PSStorageSyncService> [-Force] [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="df91b-106">ResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="df91b-106">ResourceIdParameterSet</span></span>
+```
+Remove-AzStorageSyncService [-ResourceId] <String> [-Force] [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="df91b-107">StringParameterSet</span><span class="sxs-lookup"><span data-stu-id="df91b-107">StringParameterSet</span></span>
+```
+Remove-AzStorageSyncService [-ResourceGroupName] <String> [-Name] <String> [-Force] [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="df91b-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="df91b-108">DESCRIPTION</span></span>
+<span data-ttu-id="df91b-109">Mit diesem Befehl wird der angegebene Speicher Synchronisierungsdienst gelöscht.</span><span class="sxs-lookup"><span data-stu-id="df91b-109">This command will delete the specified storage sync service.</span></span> <span data-ttu-id="df91b-110">Ein Speicher Synchronisierungsdienst kann nur entfernt werden, wenn alle enthaltenen Synchronisierungsgruppen und registrierten Server zuerst gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="df91b-110">A storage sync service can only be removed when all of the contained sync groups and registered servers are deleted first.</span></span>
+
+## <span data-ttu-id="df91b-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="df91b-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="df91b-112">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="df91b-112">Example 1</span></span>
+```powershell
+PS C:\> Remove-AzStorageSyncService -Force -ResourceGroupName "myResourceGroup" -Name "myStorageSyncServiceName"
+```
+
+<span data-ttu-id="df91b-113">Mit diesem Befehl wird der Speicher Synchronisierungsdienst entfernt.</span><span class="sxs-lookup"><span data-stu-id="df91b-113">This command will remove the storage sync service.</span></span>
+
+## <span data-ttu-id="df91b-114">Parameter</span><span class="sxs-lookup"><span data-stu-id="df91b-114">PARAMETERS</span></span>
+
+### <span data-ttu-id="df91b-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="df91b-115">-AsJob</span></span>
+<span data-ttu-id="df91b-116">Ausführen eines Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="df91b-116">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="df91b-117">-DefaultProfile</span></span>
+<span data-ttu-id="df91b-118">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="df91b-118">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-119">-Force</span><span class="sxs-lookup"><span data-stu-id="df91b-119">-Force</span></span>
+<span data-ttu-id="df91b-120">Supply-Force, um die Bestätigung dieses Befehls zu überspringen.</span><span class="sxs-lookup"><span data-stu-id="df91b-120">Supply -Force to skip confirmation of this command.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-121">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="df91b-121">-InputObject</span></span>
+<span data-ttu-id="df91b-122">StorageSyncService-Eingabeobjekt, das normalerweise durch die Pipeline übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="df91b-122">StorageSyncService Input Object, normally passed through the pipeline.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService
+Parameter Sets: InputObjectParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-123">-Name</span><span class="sxs-lookup"><span data-stu-id="df91b-123">-Name</span></span>
+<span data-ttu-id="df91b-124">Der Name des StorageSyncService.</span><span class="sxs-lookup"><span data-stu-id="df91b-124">Name of the StorageSyncService.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: StringParameterSet
+Aliases: StorageSyncServiceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-125">-PassThru</span><span class="sxs-lookup"><span data-stu-id="df91b-125">-PassThru</span></span>
+<span data-ttu-id="df91b-126">{{Fill passthru Description}}</span><span class="sxs-lookup"><span data-stu-id="df91b-126">{{Fill PassThru Description}}</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="df91b-127">-ResourceGroupName</span></span>
+<span data-ttu-id="df91b-128">Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="df91b-128">Resource Group Name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: StringParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-129">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="df91b-129">-ResourceId</span></span>
+<span data-ttu-id="df91b-130">StorageSyncService-Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="df91b-130">StorageSyncService Resource Id</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceIdParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-131">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="df91b-131">-Confirm</span></span>
+<span data-ttu-id="df91b-132">Fordert zur Bestätigung auf, bevor das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="df91b-132">Prompts for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="df91b-133">-WhatIf</span></span>
+<span data-ttu-id="df91b-134">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="df91b-134">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="df91b-135">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="df91b-135">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="df91b-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="df91b-136">CommonParameters</span></span>
+<span data-ttu-id="df91b-137">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="df91b-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="df91b-138">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="df91b-138">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="df91b-139">Eingaben</span><span class="sxs-lookup"><span data-stu-id="df91b-139">INPUTS</span></span>
+
+### <span data-ttu-id="df91b-140">Microsoft. Azure. Commands. StorageSync. Models. PSStorageSyncService</span><span class="sxs-lookup"><span data-stu-id="df91b-140">Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService</span></span>
+
+### <span data-ttu-id="df91b-141">System. String</span><span class="sxs-lookup"><span data-stu-id="df91b-141">System.String</span></span>
+
+### <span data-ttu-id="df91b-142">System. Management. Automation. Switchparameter</span><span class="sxs-lookup"><span data-stu-id="df91b-142">System.Management.Automation.SwitchParameter</span></span>
+
+## <span data-ttu-id="df91b-143">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="df91b-143">OUTPUTS</span></span>
+
+### <span data-ttu-id="df91b-144">System. Object</span><span class="sxs-lookup"><span data-stu-id="df91b-144">System.Object</span></span>
+## <span data-ttu-id="df91b-145">Notizen</span><span class="sxs-lookup"><span data-stu-id="df91b-145">NOTES</span></span>
+
+## <span data-ttu-id="df91b-146">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="df91b-146">RELATED LINKS</span></span>
