@@ -1,0 +1,417 @@
+---
+external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
+ms.assetid: 25E0F0E9-BF8C-49DF-87BA-31E2103A29A9
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/new-azurekeyvaultcertificatepolicy
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureKeyVaultCertificatePolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureKeyVaultCertificatePolicy.md
+ms.openlocfilehash: a77cd700064777c769d5499cb099cfa3f9a53ec0
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93662683"
+---
+# <span data-ttu-id="2bc71-101">New-AzureKeyVaultCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="2bc71-101">New-AzureKeyVaultCertificatePolicy</span></span>
+
+## <span data-ttu-id="2bc71-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="2bc71-102">SYNOPSIS</span></span>
+<span data-ttu-id="2bc71-103">Erstellt ein Zertifikatrichtlinien Objekt im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="2bc71-103">Creates an in-memory certificate policy object.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="2bc71-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2bc71-104">SYNTAX</span></span>
+
+### <span data-ttu-id="2bc71-105">SubjectName (Standard)</span><span class="sxs-lookup"><span data-stu-id="2bc71-105">SubjectName (Default)</span></span>
+```
+New-AzureKeyVaultCertificatePolicy [-IssuerName] <String> [-SubjectName] <String>
+ [-RenewAtNumberOfDaysBeforeExpiry <Int32>] [-RenewAtPercentageLifetime <Int32>] [-SecretContentType <String>]
+ [-ReuseKeyOnRenewal] [-Disabled]
+ [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+ [-Ekus <System.Collections.Generic.List`1[System.String]>] [-ValidityInMonths <Int32>]
+ [-CertificateType <String>] [-EmailAtNumberOfDaysBeforeExpiry <Int32>] [-EmailAtPercentageLifetime <Int32>]
+ [-KeyType <String>] [-KeyNotExportable] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="2bc71-106">DNSNames</span><span class="sxs-lookup"><span data-stu-id="2bc71-106">DNSNames</span></span>
+```
+New-AzureKeyVaultCertificatePolicy [-IssuerName] <String> [[-SubjectName] <String>]
+ [-DnsName] <System.Collections.Generic.List`1[System.String]> [-RenewAtNumberOfDaysBeforeExpiry <Int32>]
+ [-RenewAtPercentageLifetime <Int32>] [-SecretContentType <String>] [-ReuseKeyOnRenewal] [-Disabled]
+ [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+ [-Ekus <System.Collections.Generic.List`1[System.String]>] [-ValidityInMonths <Int32>]
+ [-CertificateType <String>] [-EmailAtNumberOfDaysBeforeExpiry <Int32>] [-EmailAtPercentageLifetime <Int32>]
+ [-KeyType <String>] [-KeyNotExportable] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="2bc71-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2bc71-107">DESCRIPTION</span></span>
+<span data-ttu-id="2bc71-108">Das Cmdlet **New-AzureKeyVaultCertificatePolicy** erstellt ein Zertifikatrichtlinien Objekt im Arbeitsspeicher für Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="2bc71-108">The **New-AzureKeyVaultCertificatePolicy** cmdlet creates an in-memory certificate policy object for Azure Key Vault.</span></span>
+
+## <span data-ttu-id="2bc71-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2bc71-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="2bc71-110">Beispiel 1: Erstellen einer Zertifikatrichtlinie</span><span class="sxs-lookup"><span data-stu-id="2bc71-110">Example 1: Create a certificate policy</span></span>
+```powershell
+PS C:\> New-AzureKeyVaultCertificatePolicy -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -IssuerName "Self" -ValidityInMonths 6 -ReuseKeyOnRenewal
+
+SecretContentType               : application/x-pkcs12
+Kty                             :
+KeySize                         : 2048
+Exportable                      :
+ReuseKeyOnRenewal               : True
+SubjectName                     : CN=contoso.com
+DnsNames                        :
+KeyUsage                        :
+Ekus                            :
+ValidityInMonths                : 6
+IssuerName                      : Self
+CertificateType                 :
+RenewAtNumberOfDaysBeforeExpiry :
+RenewAtPercentageLifetime       :
+EmailAtNumberOfDaysBeforeExpiry :
+EmailAtPercentageLifetime       :
+CertificateTransparency         :
+Enabled                         : True
+Created                         :
+Updated                         :
+```
+
+<span data-ttu-id="2bc71-111">Dieser Befehl erstellt eine Zertifikatrichtlinie, die für sechs Monate gültig ist, und verwendet den Schlüssel zum Verlängern des Zertifikats erneut.</span><span class="sxs-lookup"><span data-stu-id="2bc71-111">This command creates a certificate policy that is valid for six months and reuses the key to renew the certificate.</span></span>
+
+## <span data-ttu-id="2bc71-112">Parameter</span><span class="sxs-lookup"><span data-stu-id="2bc71-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="2bc71-113">-Certificatetype</span><span class="sxs-lookup"><span data-stu-id="2bc71-113">-CertificateType</span></span>
+<span data-ttu-id="2bc71-114">Gibt den Typ des Zertifikats an den Aussteller an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-114">Specifies the type of certificate to the issuer.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="2bc71-115">-DefaultProfile</span></span>
+<span data-ttu-id="2bc71-116">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="2bc71-116">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-117">-Deaktiviert</span><span class="sxs-lookup"><span data-stu-id="2bc71-117">-Disabled</span></span>
+<span data-ttu-id="2bc71-118">Gibt an, dass die Zertifikatrichtlinie deaktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="2bc71-118">Indicates that the certificate policy is disabled.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-119">-DnsName</span><span class="sxs-lookup"><span data-stu-id="2bc71-119">-DnsName</span></span>
+<span data-ttu-id="2bc71-120">Gibt die DNS-Namen im Zertifikat an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-120">Specifies the DNS names in the certificate.</span></span>
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: DNSNames
+Aliases: DnsNames
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-121">-EKUs</span><span class="sxs-lookup"><span data-stu-id="2bc71-121">-Ekus</span></span>
+<span data-ttu-id="2bc71-122">Gibt die erweiterten Schlüsselverwendungen (EKUs) im Zertifikat an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-122">Specifies the enhanced key usages (EKUs) in the certificate.</span></span>
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-123">-EmailAtNumberOfDaysBeforeExpiry</span><span class="sxs-lookup"><span data-stu-id="2bc71-123">-EmailAtNumberOfDaysBeforeExpiry</span></span>
+<span data-ttu-id="2bc71-124">Gibt an, wie viele Tage vor Ablauf des automatischen Benachrichtigungsprozesses beginnen.</span><span class="sxs-lookup"><span data-stu-id="2bc71-124">Specifies how many days before expiry the automatic notification process begins.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-125">-EmailAtPercentageLifetime</span><span class="sxs-lookup"><span data-stu-id="2bc71-125">-EmailAtPercentageLifetime</span></span>
+<span data-ttu-id="2bc71-126">Gibt den Prozentsatz der Lebensdauer an, nach dem der automatische Prozess für die Benachrichtigung beginnt.</span><span class="sxs-lookup"><span data-stu-id="2bc71-126">Specifies the percentage of the lifetime after which the automatic process for the notification begins.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-127">-IssuerName</span><span class="sxs-lookup"><span data-stu-id="2bc71-127">-IssuerName</span></span>
+<span data-ttu-id="2bc71-128">Gibt den Namen des Emittenten für das Zertifikat an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-128">Specifies the name of the issuer for the certificate.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-129">-KeyNotExportable</span><span class="sxs-lookup"><span data-stu-id="2bc71-129">-KeyNotExportable</span></span>
+<span data-ttu-id="2bc71-130">Gibt an, dass der Schlüssel nicht exportierbar ist.</span><span class="sxs-lookup"><span data-stu-id="2bc71-130">Indicates that the key is not exportable.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-131">-KeyType</span><span class="sxs-lookup"><span data-stu-id="2bc71-131">-KeyType</span></span>
+<span data-ttu-id="2bc71-132">Gibt den Schlüsseltyp des Schlüssels an, der das Zertifikat zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="2bc71-132">Specifies the key type of the key that backs the certificate.</span></span>
+<span data-ttu-id="2bc71-133">Die zulässigen Werte für diesen Parameter lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="2bc71-133">The acceptable values for this parameter are:</span></span>
+- <span data-ttu-id="2bc71-134">RSA</span><span class="sxs-lookup"><span data-stu-id="2bc71-134">RSA</span></span>
+- <span data-ttu-id="2bc71-135">RSA-HSM</span><span class="sxs-lookup"><span data-stu-id="2bc71-135">RSA-HSM</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: RSA, RSA-HSM
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-136">-KeyUsage</span><span class="sxs-lookup"><span data-stu-id="2bc71-136">-KeyUsage</span></span>
+<span data-ttu-id="2bc71-137">Gibt die Schlüsselverwendungen im Zertifikat an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-137">Specifies the key usages in the certificate.</span></span>
+
+```yaml
+Type: System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, EncipherOnly, CrlSign, KeyCertSign, KeyAgreement, DataEncipherment, KeyEncipherment, NonRepudiation, DigitalSignature, DecipherOnly
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-138">-RenewAtNumberOfDaysBeforeExpiry</span><span class="sxs-lookup"><span data-stu-id="2bc71-138">-RenewAtNumberOfDaysBeforeExpiry</span></span>
+<span data-ttu-id="2bc71-139">Gibt an, wie viele Tage vor dem Ablaufdatum der automatische Prozess für die Zertifikaterneuerung beginnt.</span><span class="sxs-lookup"><span data-stu-id="2bc71-139">Specifies the number of days before expiry after which the automatic process for certificate renewal begins.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-140">-RenewAtPercentageLifetime</span><span class="sxs-lookup"><span data-stu-id="2bc71-140">-RenewAtPercentageLifetime</span></span>
+<span data-ttu-id="2bc71-141">Gibt den Prozentsatz der Lebensdauer an, nach dem der automatische Prozess für die Zertifikaterneuerung beginnt.</span><span class="sxs-lookup"><span data-stu-id="2bc71-141">Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-142">-ReuseKeyOnRenewal</span><span class="sxs-lookup"><span data-stu-id="2bc71-142">-ReuseKeyOnRenewal</span></span>
+<span data-ttu-id="2bc71-143">Gibt an, dass das Zertifikat den Schlüssel während der Erneuerung wieder verwendet.</span><span class="sxs-lookup"><span data-stu-id="2bc71-143">Indicates that the certificate reuse the key during renewal.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-144">-SecretContentType</span><span class="sxs-lookup"><span data-stu-id="2bc71-144">-SecretContentType</span></span>
+<span data-ttu-id="2bc71-145">Gibt den Inhaltstyp des neuen Schlüssels Vault Secret an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-145">Specifies the content type of the new key vault secret.</span></span>
+<span data-ttu-id="2bc71-146">Die zulässigen Werte für diesen Parameter lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="2bc71-146">The acceptable values for this parameter are:</span></span>
+- <span data-ttu-id="2bc71-147">Anwendung/x-PKCS12</span><span class="sxs-lookup"><span data-stu-id="2bc71-147">application/x-pkcs12</span></span>
+- <span data-ttu-id="2bc71-148">Application/x-PEM-Datei</span><span class="sxs-lookup"><span data-stu-id="2bc71-148">application/x-pem-file</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: application/x-pkcs12, application/x-pem-file
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-149">-SubjectName</span><span class="sxs-lookup"><span data-stu-id="2bc71-149">-SubjectName</span></span>
+<span data-ttu-id="2bc71-150">Gibt den Namen des Antragstellers des Zertifikats an.</span><span class="sxs-lookup"><span data-stu-id="2bc71-150">Specifies the subject name of the certificate.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SubjectName
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: DNSNames
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-151">-ValidityInMonths</span><span class="sxs-lookup"><span data-stu-id="2bc71-151">-ValidityInMonths</span></span>
+<span data-ttu-id="2bc71-152">Gibt an, wie viele Monate das Zertifikat gültig ist.</span><span class="sxs-lookup"><span data-stu-id="2bc71-152">Specifies the number of months the certificate is valid.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-153">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="2bc71-153">-Confirm</span></span>
+<span data-ttu-id="2bc71-154">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="2bc71-154">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-155">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="2bc71-155">-WhatIf</span></span>
+<span data-ttu-id="2bc71-156">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2bc71-156">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="2bc71-157">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2bc71-157">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bc71-158">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2bc71-158">CommonParameters</span></span>
+<span data-ttu-id="2bc71-159">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2bc71-159">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2bc71-160">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="2bc71-160">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="2bc71-161">Eingaben</span><span class="sxs-lookup"><span data-stu-id="2bc71-161">INPUTS</span></span>
+
+### <span data-ttu-id="2bc71-162">System. String</span><span class="sxs-lookup"><span data-stu-id="2bc71-162">System.String</span></span>
+
+### <span data-ttu-id="2bc71-163">System. Collections. Generic. List ' 1 [[System. String, mscorlib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089]]</span><span class="sxs-lookup"><span data-stu-id="2bc71-163">System.Collections.Generic.List\`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</span></span>
+
+### <span data-ttu-id="2bc71-164">System. Nullable ' 1 [[System. Int32, mscorlib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089]]</span><span class="sxs-lookup"><span data-stu-id="2bc71-164">System.Nullable\`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</span></span>
+
+### <span data-ttu-id="2bc71-165">System. Management. Automation. Switchparameter</span><span class="sxs-lookup"><span data-stu-id="2bc71-165">System.Management.Automation.SwitchParameter</span></span>
+
+### <span data-ttu-id="2bc71-166">System. Collections. Generic. List ' 1 [[System. Security. Cryptography. X509Certificates. X509KeyUsageFlags, System, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089]]</span><span class="sxs-lookup"><span data-stu-id="2bc71-166">System.Collections.Generic.List\`1[[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</span></span>
+
+## <span data-ttu-id="2bc71-167">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="2bc71-167">OUTPUTS</span></span>
+
+### <span data-ttu-id="2bc71-168">Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="2bc71-168">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy</span></span>
+
+## <span data-ttu-id="2bc71-169">Notizen</span><span class="sxs-lookup"><span data-stu-id="2bc71-169">NOTES</span></span>
+
+## <span data-ttu-id="2bc71-170">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="2bc71-170">RELATED LINKS</span></span>
+
+[<span data-ttu-id="2bc71-171">Get-AzureKeyVaultCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="2bc71-171">Get-AzureKeyVaultCertificatePolicy</span></span>](./Get-AzureKeyVaultCertificatePolicy.md)
+
+[<span data-ttu-id="2bc71-172">Satz-AzureKeyVaultCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="2bc71-172">Set-AzureKeyVaultCertificatePolicy</span></span>](./Set-AzureKeyVaultCertificatePolicy.md)
+
