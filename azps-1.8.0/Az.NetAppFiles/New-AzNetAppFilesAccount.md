@@ -1,0 +1,170 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+Module Name: Az.NetAppFiles
+online version: https://docs.microsoft.com/en-us/powershell/module/az.netappfiles/new-aznetappfilesaccount
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesAccount.md
+ms.openlocfilehash: 87febe648a845d595f35c1a14b024fbd97824be1
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93660982"
+---
+# New-AzNetAppFilesAccount
+
+## Synopsis
+Erstellt ein neues Azure NetApp-Dateien (ANF)-Konto.
+
+## Syntax
+
+```
+New-AzNetAppFilesAccount -ResourceGroupName <String> -Location <String> [-Tag <Hashtable>] -Name <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet **New-AzNetAppFilesAccount** erstellt ein ANF-Konto.
+
+## Beispiele
+
+### Beispiel 1: Erstellen eines ANF-Kontos
+```
+PS C:\>New-AzNetAppFilesAccount -ResourceGroupName "MyRG" -Name "MyAnfAccount" -l "westus2"
+
+Output:
+
+Location          : westus2
+Id                : /subscriptions/mySubs/resourceGroups/MyRG/providers/Microsoft.NetApp/netAppAccounts/MyAnfAccount
+Name              : MyAnfAccount
+Type              : Microsoft.NetApp/netAppAccounts
+Tags              :
+ProvisioningState : Succeeded
+```
+
+Mit diesem Befehl wird das neue ANF-Konto "MyAnfAccount" erstellt.
+
+## Parameter
+
+### -DefaultProfile
+Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Standort
+Der Speicherort der Ressource
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Der Name des ANF-Kontos
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: AccountName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Die Ressourcengruppe des ANF-Kontos
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+Eine Hashtable, die Ressourcenkategorien darstellt
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Bestätigen
+Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
+Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.
+Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+### Keine
+
+## Ausgaben
+
+### Microsoft. Azure. Commands. NetAppFiles. Models. PSNetAppFilesAccount
+
+## Notizen
+
+## Verwandte Links
