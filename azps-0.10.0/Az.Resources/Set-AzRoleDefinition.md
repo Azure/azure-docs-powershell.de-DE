@@ -1,0 +1,135 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+Module Name: Az.Resources
+ms.assetid: 115A7612-4856-47AE-AEE4-918350CD7009
+online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/set-Azroledefinition
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Set-AzRoleDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Set-AzRoleDefinition.md
+ms.openlocfilehash: 79ff5a54da704e66895e280c8a2e8a93731d2083
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93843175"
+---
+# <span data-ttu-id="d6d8c-101">Set-AzRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-101">Set-AzRoleDefinition</span></span>
+
+## <span data-ttu-id="d6d8c-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="d6d8c-102">SYNOPSIS</span></span>
+<span data-ttu-id="d6d8c-103">Ändert eine benutzerdefinierte Rolle in Azure RBAC.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-103">Modifies a custom role in Azure RBAC.</span></span>
+<span data-ttu-id="d6d8c-104">Stellen Sie die geänderte Rollendefinition entweder als JSON-Datei oder als PSRoleDefinition bereit.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-104">Provide the modified role definition either as a JSON file or as a PSRoleDefinition.</span></span>
+<span data-ttu-id="d6d8c-105">Verwenden Sie zuerst den Befehl Get-AzRoleDefinition, um die benutzerdefinierte Rolle abzurufen, die Sie ändern möchten.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-105">First, use the Get-AzRoleDefinition command to retrieve the custom role that you wish to modify.</span></span>
+<span data-ttu-id="d6d8c-106">Ändern Sie dann die Eigenschaften, die Sie ändern möchten.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-106">Then, modify the properties that you wish to change.</span></span>
+<span data-ttu-id="d6d8c-107">Speichern Sie die Rollendefinition schließlich mit diesem Befehl.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-107">Finally, save the role definition using this command.</span></span>
+
+## <span data-ttu-id="d6d8c-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6d8c-108">SYNTAX</span></span>
+
+### <span data-ttu-id="d6d8c-109">InputFileParameterSet</span><span class="sxs-lookup"><span data-stu-id="d6d8c-109">InputFileParameterSet</span></span>
+```
+Set-AzRoleDefinition -InputFile <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="d6d8c-110">RoleDefinitionParameterSet</span><span class="sxs-lookup"><span data-stu-id="d6d8c-110">RoleDefinitionParameterSet</span></span>
+```
+Set-AzRoleDefinition -Role <PSRoleDefinition> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="d6d8c-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6d8c-111">DESCRIPTION</span></span>
+<span data-ttu-id="d6d8c-112">Das Set-AzRoleDefinition-Cmdlet aktualisiert eine vorhandene benutzerdefinierte Rolle in Azure Role-Based Zugriffssteuerung.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-112">The Set-AzRoleDefinition cmdlet updates an existing custom role in Azure Role-Based Access Control.</span></span>
+<span data-ttu-id="d6d8c-113">Stellen Sie die aktualisierte Rollendefinition als Eingabe für den Befehl als JSON-Datei oder als PSRoleDefinition-Objekt bereit.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-113">Provide the updated role definition as an input to the command as a JSON file or a PSRoleDefinition object.</span></span>
+<span data-ttu-id="d6d8c-114">Die Rollendefinition für die aktualisierte benutzerdefinierte Rolle muss die ID und alle anderen erforderlichen Eigenschaften der Rolle enthalten, auch wenn Sie nicht aktualisiert werden: DisplayName, Description, Actions, AssignableScopes.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-114">The role definition for the updated custom role MUST contain the Id and all other required properties of the role even if they are not updated: DisplayName, Description, Actions, AssignableScopes.</span></span>
+<span data-ttu-id="d6d8c-115">Notacts, dataactions, NotDataActions sind optional.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-115">NotActions, DataActions, NotDataActions are optional.</span></span>
+<span data-ttu-id="d6d8c-116">Im folgenden finden Sie ein Beispiel für eine aktualisierte Rollendefinition JSON für Set-AzRoleDefinition {"ID": "52a6cc13-ff92-47a8-a39b-2a8205c3087e", "Name": "aktualisierte Rolle", "Beschreibung": "kann alle Ressourcen überwachen und virtuelle Computer starten und neu starten", "Aktionen": \[ " */Read", "Microsoft. ClassicCompute/VirtualMachines/Restart/Aktion"; "Microsoft. ClassicCompute/VirtualMachines/Start/Action" \] ; "notacts": \[ "* /Write" \] ; "Daten Aktionen": \[ "Microsoft. Storage/storageAccounts/blobServices/Container/BLOBs/Read" \] ; "NotDataActions": \[ "Microsoft. Storage/storageAccounts/blobServices/Container/BLOBs/Write" \] , "AssignableScopes": \[ "/Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" \] }</span><span class="sxs-lookup"><span data-stu-id="d6d8c-116">Following is a sample updated role definition json for Set-AzRoleDefinition { "Id": "52a6cc13-ff92-47a8-a39b-2a8205c3087e", "Name": "Updated Role", "Description": "Can monitor all resources and start and restart virtual machines", "Actions": \[ " */read", "Microsoft.ClassicCompute/virtualmachines/restart/action", "Microsoft.ClassicCompute/virtualmachines/start/action" \], "NotActions": \[ "* /write" \], "DataActions": \[ "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read" \], "NotDataActions": \[ "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write" \], "AssignableScopes": \["/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"\] }</span></span>
+
+## <span data-ttu-id="d6d8c-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="d6d8c-117">EXAMPLES</span></span>
+
+### <span data-ttu-id="d6d8c-118">Aktualisieren mit PSRoleDefinitionObject</span><span class="sxs-lookup"><span data-stu-id="d6d8c-118">Update using PSRoleDefinitionObject</span></span>
+```
+PS C:\> $roleDef = Get-AzRoleDefinition "Contoso On-Call"
+          PS C:\> $roleDef.Actions.Add("Microsoft.ClassicCompute/virtualmachines/start/action")
+          PS C:\> $roleDef.Description = "Can monitor all resources and start and restart virtual machines"
+          PS C:\> $roleDef.AssignableScopes = @("/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")
+
+          PS C:\> Set-AzRoleDefinition -Role $roleDef
+```
+
+### <span data-ttu-id="d6d8c-119">Erstellen mit JSON-Datei</span><span class="sxs-lookup"><span data-stu-id="d6d8c-119">Create using JSON file</span></span>
+```
+PS C:\> Set-AzRoleDefinition -InputFile C:\Temp\roleDefinition.json
+```
+
+## <span data-ttu-id="d6d8c-120">Parameter</span><span class="sxs-lookup"><span data-stu-id="d6d8c-120">PARAMETERS</span></span>
+
+### <span data-ttu-id="d6d8c-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d6d8c-121">-DefaultProfile</span></span>
+<span data-ttu-id="d6d8c-122">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="d6d8c-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d6d8c-123">-Eingabefeld</span><span class="sxs-lookup"><span data-stu-id="d6d8c-123">-InputFile</span></span>
+<span data-ttu-id="d6d8c-124">Der Dateiname mit einer einzelnen JSON-Rollendefinition, die aktualisiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-124">File name containing a single json role definition to be updated.</span></span>
+<span data-ttu-id="d6d8c-125">Schließen Sie nur die Eigenschaften ein, die in der JSON aktualisiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-125">Only include the properties that are to be updated in the JSON.</span></span>
+<span data-ttu-id="d6d8c-126">Die ID-Eigenschaft ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-126">Id property is Required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: InputFileParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d6d8c-127">-Role</span><span class="sxs-lookup"><span data-stu-id="d6d8c-127">-Role</span></span>
+<span data-ttu-id="d6d8c-128">Rollen Definitionsobjekt, das aktualisiert werden soll</span><span class="sxs-lookup"><span data-stu-id="d6d8c-128">Role definition object to be updated</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
+Parameter Sets: RoleDefinitionParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d6d8c-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d6d8c-129">CommonParameters</span></span>
+<span data-ttu-id="d6d8c-130">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d6d8c-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d6d8c-131">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="d6d8c-131">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="d6d8c-132">Eingaben</span><span class="sxs-lookup"><span data-stu-id="d6d8c-132">INPUTS</span></span>
+
+### <span data-ttu-id="d6d8c-133">Microsoft. Azure. Commands. resources. Models. Authorization. PSRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-133">Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition</span></span>
+<span data-ttu-id="d6d8c-134">Parameter: role (ByValue)</span><span class="sxs-lookup"><span data-stu-id="d6d8c-134">Parameters: Role (ByValue)</span></span>
+
+## <span data-ttu-id="d6d8c-135">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="d6d8c-135">OUTPUTS</span></span>
+
+### <span data-ttu-id="d6d8c-136">Microsoft. Azure. Commands. resources. Models. Authorization. PSRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-136">Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition</span></span>
+
+## <span data-ttu-id="d6d8c-137">Notizen</span><span class="sxs-lookup"><span data-stu-id="d6d8c-137">NOTES</span></span>
+<span data-ttu-id="d6d8c-138">Schlüsselwörter: Azure, AZ, arm, Ressource, Verwaltung, Manager, Ressource, Gruppe, Vorlage, Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="d6d8c-138">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
+
+## <span data-ttu-id="d6d8c-139">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="d6d8c-139">RELATED LINKS</span></span>
+
+[<span data-ttu-id="d6d8c-140">Get-AzProviderOperation</span><span class="sxs-lookup"><span data-stu-id="d6d8c-140">Get-AzProviderOperation</span></span>](./Get-AzProviderOperation.md)
+
+[<span data-ttu-id="d6d8c-141">Get-AzRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-141">Get-AzRoleDefinition</span></span>](./Get-AzRoleDefinition.md)
+
+[<span data-ttu-id="d6d8c-142">Neu – AzRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-142">New-AzRoleDefinition</span></span>](./New-AzRoleDefinition.md)
+
+[<span data-ttu-id="d6d8c-143">Remove-AzRoleDefinition</span><span class="sxs-lookup"><span data-stu-id="d6d8c-143">Remove-AzRoleDefinition</span></span>](./Remove-AzRoleDefinition.md)
+
