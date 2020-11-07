@@ -1,0 +1,185 @@
+---
+external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
+Module Name: AzureRM.Tags
+ms.assetid: 66B25541-0FA5-46CF-90D8-FE9527BE11C6
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Remove-AzureRmTag.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Remove-AzureRmTag.md
+ms.openlocfilehash: 909781b8cd441daab8bf5f567404a5e99e88cd0d
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93664406"
+---
+# <span data-ttu-id="cff89-101">Remove-AzureRmTag</span><span class="sxs-lookup"><span data-stu-id="cff89-101">Remove-AzureRmTag</span></span>
+
+## <span data-ttu-id="cff89-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="cff89-102">SYNOPSIS</span></span>
+<span data-ttu-id="cff89-103">Löscht vordefinierte Azure-Tags oder-Werte.</span><span class="sxs-lookup"><span data-stu-id="cff89-103">Deletes predefined Azure tags or values.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="cff89-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cff89-104">SYNTAX</span></span>
+
+```
+Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="cff89-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cff89-105">DESCRIPTION</span></span>
+<span data-ttu-id="cff89-106">Das Cmdlet **Remove-AzureRmTag** löscht vordefinierte Azure-Tags und-Werte aus Ihrem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="cff89-106">The **Remove-AzureRmTag** cmdlet deletes predefined Azure tags and values from your subscription.</span></span>
+<span data-ttu-id="cff89-107">Verwenden Sie den *value* -Parameter, um bestimmte Werte aus einem vordefinierten Tag zu löschen.</span><span class="sxs-lookup"><span data-stu-id="cff89-107">To delete particular values from a predefined tag, use the *Value* parameter.</span></span>
+<span data-ttu-id="cff89-108">Standardmäßig löscht **Remove-AzureRmTag** das angegebene Tag und alle seine Werte. Sie können eine Kategorie oder einen Wert, der aktuell auf eine Ressource oder eine Ressourcengruppe angewendet wird, nicht löschen.</span><span class="sxs-lookup"><span data-stu-id="cff89-108">By default, **Remove-AzureRmTag** deletes the specified tag and all of its values.You cannot delete a tag or value that is currently applied to a resource or resource group.</span></span>
+
+<span data-ttu-id="cff89-109">Verwenden Sie vor der Verwendung von **Remove-AzureRmTag** den *Tag* -Parameter des Set-AzureRMResourceGroup-Cmdlets, um das Tag oder die Werte aus der Ressourcen-oder Ressourcengruppe zu löschen.</span><span class="sxs-lookup"><span data-stu-id="cff89-109">Before using **Remove-AzureRmTag** , use the *Tag* parameter of the Set-AzureRMResourceGroup cmdlet to delete the tag or values from the resource or resource group.</span></span>
+
+<span data-ttu-id="cff89-110">Das Azure-Tags-Modul, in dem **Remove-AzureRmTag** enthalten ist, kann Ihnen bei der Verwaltung Ihrer vordefinierten Azure-Tags helfen.</span><span class="sxs-lookup"><span data-stu-id="cff89-110">The Azure Tags module that **Remove-AzureRmTag** is part of can help you manage your predefined Azure tags.</span></span>
+<span data-ttu-id="cff89-111">Bei einem Azure-Tag handelt es sich um ein Name-Wert-Paar, mit dem Sie Ihre Azure-Ressourcen und Ressourcengruppen kategorisieren können, beispielsweise nach Abteilung oder Kostenstelle, oder um Notizen oder Kommentare zu Ressourcen und Gruppen zu überwachen.</span><span class="sxs-lookup"><span data-stu-id="cff89-111">An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.</span></span>
+
+<span data-ttu-id="cff89-112">Sie können Tags in einem einzigen Schritt definieren und anwenden, doch mit vordefinierten Tags können Sie standardmäßige, konsistente, vorhersagbare Namen und Werte für die Tags in Ihrem Abonnement einrichten.</span><span class="sxs-lookup"><span data-stu-id="cff89-112">You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.</span></span>
+<span data-ttu-id="cff89-113">Wenn das Abonnement vordefinierte Tags enthält, können Sie nicht definierte Tags oder Werte auf eine Ressource oder eine Ressourcengruppe im Abonnement anwenden.</span><span class="sxs-lookup"><span data-stu-id="cff89-113">If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.</span></span>
+
+## <span data-ttu-id="cff89-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="cff89-114">EXAMPLES</span></span>
+
+### <span data-ttu-id="cff89-115">Beispiel 1: Löschen eines vordefinierten Tags</span><span class="sxs-lookup"><span data-stu-id="cff89-115">Example 1: Delete a predefined tag</span></span>
+```
+PS C:\>Remove-AzureRmTag -Name "Department"
+```
+
+<span data-ttu-id="cff89-116">Mit diesem Befehl wird das vordefinierte Tag "Department" und alle zugehörigen Ressourcen gelöscht.</span><span class="sxs-lookup"><span data-stu-id="cff89-116">This command deletes the predefined tag named Department and all of its resources.</span></span>
+<span data-ttu-id="cff89-117">Wenn das Tag auf Ressourcen oder Ressourcengruppen angewendet wurde, schlägt der Befehl fehl.</span><span class="sxs-lookup"><span data-stu-id="cff89-117">If the tag has been applied to any resources or resource groups, the command fails.</span></span>
+
+### <span data-ttu-id="cff89-118">Beispiel 2: Löschen eines Werts aus einem vordefinierten Tag</span><span class="sxs-lookup"><span data-stu-id="cff89-118">Example 2: Delete a value from a predefined tag</span></span>
+```
+PS C:\>Remove-AzureRmTag -Name "Department" -Value "HumanResources" -PassThru
+Name:   Department
+Count:  14
+Values: 
+
+        Name        Count
+        =========   =====
+
+        Finance        2
+        IT            12
+```
+
+<span data-ttu-id="cff89-119">Dieser Befehl löscht den HumanResources-Wert aus dem vordefinierten Department-Tag.</span><span class="sxs-lookup"><span data-stu-id="cff89-119">This command deletes the HumanResources value from the predefined Department tag.</span></span>
+<span data-ttu-id="cff89-120">Die Kategorie wird nicht gelöscht.</span><span class="sxs-lookup"><span data-stu-id="cff89-120">It does not delete the tag.</span></span>
+<span data-ttu-id="cff89-121">Wenn der Wert auf Ressourcen oder Ressourcengruppen angewendet wurde, schlägt der Befehl fehl.</span><span class="sxs-lookup"><span data-stu-id="cff89-121">If the value has been applied to any resources or resource groups, the command fails.</span></span>
+
+## <span data-ttu-id="cff89-122">Parameter</span><span class="sxs-lookup"><span data-stu-id="cff89-122">PARAMETERS</span></span>
+
+### <span data-ttu-id="cff89-123">-Name</span><span class="sxs-lookup"><span data-stu-id="cff89-123">-Name</span></span>
+<span data-ttu-id="cff89-124">Gibt den Namen der zu löschenden Kategorie an.</span><span class="sxs-lookup"><span data-stu-id="cff89-124">Specifies the name of the tag to be deleted.</span></span>
+<span data-ttu-id="cff89-125">Standardmäßig entfernt **Remove-AzureRmTag** das angegebene Tag und alle seine Werte.</span><span class="sxs-lookup"><span data-stu-id="cff89-125">By default, **Remove-AzureRmTag** removes the specified tag and all of its values.</span></span>
+<span data-ttu-id="cff89-126">Verwenden Sie den *Wert* -Parameter, um ausgewählte Werte zu löschen, aber die Kategorie nicht zu löschen.</span><span class="sxs-lookup"><span data-stu-id="cff89-126">To delete selected values, but not delete the tag, use the *Value* parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-127">-PassThru</span><span class="sxs-lookup"><span data-stu-id="cff89-127">-PassThru</span></span>
+<span data-ttu-id="cff89-128">Gibt ein Objekt zurück, das das gelöschte Tag oder das resultierende Tag mit gelöschten Werten darstellt.</span><span class="sxs-lookup"><span data-stu-id="cff89-128">Returns an object that represents the deleted tag or the resulting tag with deleted valued.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-129">-Wert</span><span class="sxs-lookup"><span data-stu-id="cff89-129">-Value</span></span>
+<span data-ttu-id="cff89-130">Löscht die angegebenen Werte aus dem vordefinierten Tag, löscht das Tag aber nicht.</span><span class="sxs-lookup"><span data-stu-id="cff89-130">Deletes the specified values from the predefined tag, but does not delete the tag.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-131">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="cff89-131">-Confirm</span></span>
+<span data-ttu-id="cff89-132">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="cff89-132">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="cff89-133">-WhatIf</span></span>
+<span data-ttu-id="cff89-134">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="cff89-134">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="cff89-135">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cff89-135">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-136">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="cff89-136">-DefaultProfile</span></span>
+<span data-ttu-id="cff89-137">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="cff89-137">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cff89-138">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cff89-138">CommonParameters</span></span>
+<span data-ttu-id="cff89-139">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cff89-139">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cff89-140">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="cff89-140">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="cff89-141">Eingaben</span><span class="sxs-lookup"><span data-stu-id="cff89-141">INPUTS</span></span>
+
+### <span data-ttu-id="cff89-142">Keine</span><span class="sxs-lookup"><span data-stu-id="cff89-142">None</span></span>
+
+## <span data-ttu-id="cff89-143">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="cff89-143">OUTPUTS</span></span>
+
+### <span data-ttu-id="cff89-144">None oder Microsoft. Azure. Commands. Tags. Model. PSTag</span><span class="sxs-lookup"><span data-stu-id="cff89-144">None or Microsoft.Azure.Commands.Tags.Model.PSTag</span></span>
+
+## <span data-ttu-id="cff89-145">Notizen</span><span class="sxs-lookup"><span data-stu-id="cff89-145">NOTES</span></span>
+
+## <span data-ttu-id="cff89-146">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="cff89-146">RELATED LINKS</span></span>
+
+[<span data-ttu-id="cff89-147">Get-AzureRmTag</span><span class="sxs-lookup"><span data-stu-id="cff89-147">Get-AzureRmTag</span></span>](./Get-AzureRmTag.md)
+
+[<span data-ttu-id="cff89-148">Neu – AzureRmTag</span><span class="sxs-lookup"><span data-stu-id="cff89-148">New-AzureRmTag</span></span>](./New-AzureRmTag.md)
+
+
