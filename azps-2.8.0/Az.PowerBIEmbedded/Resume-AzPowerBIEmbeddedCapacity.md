@@ -1,0 +1,204 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.PowerBI.dll-Help.xml
+Module Name: Az.PowerBIEmbedded
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.powerbiembedded/resume-azpowerbiembeddedcapacity
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Resume-AzPowerBIEmbeddedCapacity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/PowerBIEmbedded/PowerBIEmbedded/help/Resume-AzPowerBIEmbeddedCapacity.md
+ms.openlocfilehash: 83d6dd250865bc8f1fc7fd70256742a58bd68de0
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93824532"
+---
+# <span data-ttu-id="08cf3-101">Resume-AzPowerBIEmbeddedCapacity</span><span class="sxs-lookup"><span data-stu-id="08cf3-101">Resume-AzPowerBIEmbeddedCapacity</span></span>
+
+## <span data-ttu-id="08cf3-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="08cf3-102">SYNOPSIS</span></span>
+<span data-ttu-id="08cf3-103">Setzt eine Instanz der eingebetteten PowerBI-Kapazität fort.</span><span class="sxs-lookup"><span data-stu-id="08cf3-103">Resumes an instance of PowerBI Embedded Capacity.</span></span>
+
+## <span data-ttu-id="08cf3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="08cf3-104">SYNTAX</span></span>
+
+### <span data-ttu-id="08cf3-105">ByNameAndResourceGroup (Standard)</span><span class="sxs-lookup"><span data-stu-id="08cf3-105">ByNameAndResourceGroup (Default)</span></span>
+```
+Resume-AzPowerBIEmbeddedCapacity [-Name] <String> [-ResourceGroupName <String>] [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="08cf3-106">ByResourceId</span><span class="sxs-lookup"><span data-stu-id="08cf3-106">ByResourceId</span></span>
+```
+Resume-AzPowerBIEmbeddedCapacity [-ResourceId] <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="08cf3-107">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="08cf3-107">ByInputObject</span></span>
+```
+Resume-AzPowerBIEmbeddedCapacity [-InputObject] <PSPowerBIEmbeddedCapacity> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="08cf3-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="08cf3-108">DESCRIPTION</span></span>
+<span data-ttu-id="08cf3-109">Das Resume-AzPowerBIEmbeddedCapacity-Cmdlet setzt eine Instanz der eingebetteten PowerBI-Kapazität fort</span><span class="sxs-lookup"><span data-stu-id="08cf3-109">The Resume-AzPowerBIEmbeddedCapacity cmdlet resumes an instance of PowerBI Embedded Capacity</span></span>
+
+## <span data-ttu-id="08cf3-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="08cf3-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="08cf3-111">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="08cf3-111">Example 1</span></span>
+```
+PS C:\> Resume-AzPowerBIEmbeddedCapacity -Name "testcapacity" -ResourceGroupName "testRG" -PassThru
+Type                   : Microsoft.PowerBIDedicated/capacities
+Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
+ResourceGroup          : testRG
+Name                   : testcapacity
+Location               : West Central US
+State                  : Succeeded
+Administrator          : {admin@microsoft.com}
+Sku                    : A1
+Tier                   : PBIE_Azure
+Tag                    : {}
+```
+
+<span data-ttu-id="08cf3-112">Dieser Befehl setzt eine angehaltene Kapazität mit dem Namen testcapacity in der testRG</span><span class="sxs-lookup"><span data-stu-id="08cf3-112">This command will resume a paused capacity named testcapacity in the resourcegroup testRG</span></span>
+
+## <span data-ttu-id="08cf3-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="08cf3-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="08cf3-114">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="08cf3-114">-DefaultProfile</span></span>
+<span data-ttu-id="08cf3-115">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="08cf3-115">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-116">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="08cf3-116">-InputObject</span></span>
+<span data-ttu-id="08cf3-117">Eingabeobjekt für die Rohrverlegung</span><span class="sxs-lookup"><span data-stu-id="08cf3-117">Input object for Piping</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
+Parameter Sets: ByInputObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-118">-Name</span><span class="sxs-lookup"><span data-stu-id="08cf3-118">-Name</span></span>
+<span data-ttu-id="08cf3-119">Name der eingebetteten PowerBI-Kapazität</span><span class="sxs-lookup"><span data-stu-id="08cf3-119">Name of the PowerBI Embedded Capacity</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNameAndResourceGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-120">-PassThru</span><span class="sxs-lookup"><span data-stu-id="08cf3-120">-PassThru</span></span>
+<span data-ttu-id="08cf3-121">{{Fill passthru Description}}</span><span class="sxs-lookup"><span data-stu-id="08cf3-121">{{Fill PassThru Description}}</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-122">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="08cf3-122">-ResourceGroupName</span></span>
+<span data-ttu-id="08cf3-123">Name der Azure-Ressourcengruppe, zu der die Kapazität gehört</span><span class="sxs-lookup"><span data-stu-id="08cf3-123">Name of the Azure resource group to which the capacity belongs</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByNameAndResourceGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-124">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="08cf3-124">-ResourceId</span></span>
+<span data-ttu-id="08cf3-125">Azure-Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="08cf3-125">Azure resource ID</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByResourceId
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-126">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="08cf3-126">-Confirm</span></span>
+<span data-ttu-id="08cf3-127">Fordert den Benutzer auf, zu bestätigen, dass der Vorgang ausgeführt werden soll</span><span class="sxs-lookup"><span data-stu-id="08cf3-127">Prompts user to confirm whether to perform the operation</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-128">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="08cf3-128">-WhatIf</span></span>
+<span data-ttu-id="08cf3-129">Beschreibt die Aktionen, die vom aktuellen Vorgang ausgeführt werden, ohne diese tatsächlich auszuführen</span><span class="sxs-lookup"><span data-stu-id="08cf3-129">Describes the actions the current operation will perform without actually performing them</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="08cf3-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="08cf3-130">CommonParameters</span></span>
+<span data-ttu-id="08cf3-131">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="08cf3-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="08cf3-132">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="08cf3-132">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="08cf3-133">Eingaben</span><span class="sxs-lookup"><span data-stu-id="08cf3-133">INPUTS</span></span>
+
+### <span data-ttu-id="08cf3-134">System. String</span><span class="sxs-lookup"><span data-stu-id="08cf3-134">System.String</span></span>
+
+### <span data-ttu-id="08cf3-135">Microsoft. Azure. Commands. PowerBI. Models. PSPowerBIEmbeddedCapacity</span><span class="sxs-lookup"><span data-stu-id="08cf3-135">Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity</span></span>
+
+## <span data-ttu-id="08cf3-136">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="08cf3-136">OUTPUTS</span></span>
+
+### <span data-ttu-id="08cf3-137">Microsoft. Azure. Commands. PowerBI. Models. PSPowerBIEmbeddedCapacity</span><span class="sxs-lookup"><span data-stu-id="08cf3-137">Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity</span></span>
+
+## <span data-ttu-id="08cf3-138">Notizen</span><span class="sxs-lookup"><span data-stu-id="08cf3-138">NOTES</span></span>
+
+## <span data-ttu-id="08cf3-139">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="08cf3-139">RELATED LINKS</span></span>
+
+[<span data-ttu-id="08cf3-140">Get-AzPowerBIEmbeddedCapacity</span><span class="sxs-lookup"><span data-stu-id="08cf3-140">Get-AzPowerBIEmbeddedCapacity</span></span>](./Get-AzPowerBIEmbeddedCapacity.md)
+
+[<span data-ttu-id="08cf3-141">Suspend-AzPowerBIEmbeddedCapacity</span><span class="sxs-lookup"><span data-stu-id="08cf3-141">Suspend-AzPowerBIEmbeddedCapacity</span></span>](./Suspend-AzPowerBIEmbeddedCapacity.md)
