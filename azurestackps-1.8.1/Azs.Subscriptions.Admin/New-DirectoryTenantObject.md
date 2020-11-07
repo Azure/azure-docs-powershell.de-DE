@@ -1,0 +1,140 @@
+---
+external help file: Azs.Subscriptions.Admin-help.xml
+Module Name: Azs.Subscriptions.Admin
+online version: ''
+schema: 2.0.0
+ms.openlocfilehash: 20b70e2eeb1aa2d98f595dfe7bbe3075174c1f64
+ms.sourcegitcommit: fb95591c45bb5f12b98e0690938d18f2ec611897
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "93828139"
+---
+# <span data-ttu-id="69628-101">New-DirectoryTenantObject</span><span class="sxs-lookup"><span data-stu-id="69628-101">New-DirectoryTenantObject</span></span>
+
+## <span data-ttu-id="69628-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="69628-102">SYNOPSIS</span></span>
+<span data-ttu-id="69628-103">Verzeichnis Mandant.</span><span class="sxs-lookup"><span data-stu-id="69628-103">Directory tenant.</span></span>
+
+## <span data-ttu-id="69628-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="69628-104">SYNTAX</span></span>
+
+```
+New-DirectoryTenantObject [[-Id] <String>] [[-Type] <String>]
+ [[-Tags] <System.Collections.Generic.Dictionary`2[System.String,System.String]>] [[-Name] <String>]
+ [[-TenantId] <String>] [[-Location] <String>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="69628-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="69628-105">DESCRIPTION</span></span>
+<span data-ttu-id="69628-106">Verzeichnis Mandant.</span><span class="sxs-lookup"><span data-stu-id="69628-106">Directory tenant.</span></span>
+
+## <span data-ttu-id="69628-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="69628-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="69628-108">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="69628-108">Example 1</span></span>
+```
+PS C:\> {{ Add example code here }}
+```
+
+<span data-ttu-id="69628-109">{{Add Example Description here}}</span><span class="sxs-lookup"><span data-stu-id="69628-109">{{ Add example description here }}</span></span>
+
+## <span data-ttu-id="69628-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="69628-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="69628-111">-ID</span><span class="sxs-lookup"><span data-stu-id="69628-111">-Id</span></span>
+<span data-ttu-id="69628-112">Der URI der Ressource.</span><span class="sxs-lookup"><span data-stu-id="69628-112">URI of the resource.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-113">-Standort</span><span class="sxs-lookup"><span data-stu-id="69628-113">-Location</span></span>
+<span data-ttu-id="69628-114">Der Speicherort der Ressource.</span><span class="sxs-lookup"><span data-stu-id="69628-114">Location of the resource.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-115">-Name</span><span class="sxs-lookup"><span data-stu-id="69628-115">-Name</span></span>
+<span data-ttu-id="69628-116">Der Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="69628-116">Name of the resource.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-117">-Tags</span><span class="sxs-lookup"><span data-stu-id="69628-117">-Tags</span></span>
+<span data-ttu-id="69628-118">Liste der Schlüssel-Wert-Paare</span><span class="sxs-lookup"><span data-stu-id="69628-118">List of key-value pairs.</span></span>
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-119">-Mandanten-Nr</span><span class="sxs-lookup"><span data-stu-id="69628-119">-TenantId</span></span>
+<span data-ttu-id="69628-120">Eindeutige Mandanten-ID.</span><span class="sxs-lookup"><span data-stu-id="69628-120">Tenant unique identifier.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-121">-Typ</span><span class="sxs-lookup"><span data-stu-id="69628-121">-Type</span></span>
+<span data-ttu-id="69628-122">Der Typ der Ressource.</span><span class="sxs-lookup"><span data-stu-id="69628-122">Type of resource.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69628-123">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="69628-123">CommonParameters</span></span>
+<span data-ttu-id="69628-124">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="69628-124">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="69628-125">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="69628-125">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="69628-126">Eingaben</span><span class="sxs-lookup"><span data-stu-id="69628-126">INPUTS</span></span>
+
+## <span data-ttu-id="69628-127">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="69628-127">OUTPUTS</span></span>
+
+## <span data-ttu-id="69628-128">Notizen</span><span class="sxs-lookup"><span data-stu-id="69628-128">NOTES</span></span>
+
+## <span data-ttu-id="69628-129">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="69628-129">RELATED LINKS</span></span>
+
