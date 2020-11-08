@@ -1,0 +1,495 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+Module Name: Az.Compute
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azgalleryimagedefinition
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzGalleryImageDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/New-AzGalleryImageDefinition.md
+ms.openlocfilehash: aaba7580e2ffd00a2e5a9e61dd087e6af6359513
+ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "93995266"
+---
+# <span data-ttu-id="e66f2-101">New-AzGalleryImageDefinition</span><span class="sxs-lookup"><span data-stu-id="e66f2-101">New-AzGalleryImageDefinition</span></span>
+
+## <span data-ttu-id="e66f2-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="e66f2-102">SYNOPSIS</span></span>
+<span data-ttu-id="e66f2-103">Erstellen einer Katalogbild Definition</span><span class="sxs-lookup"><span data-stu-id="e66f2-103">Create a gallery image definition.</span></span>
+
+## <span data-ttu-id="e66f2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e66f2-104">SYNTAX</span></span>
+
+```
+New-AzGalleryImageDefinition [-ResourceGroupName] <String> [-GalleryName] <String> [-Name] <String> [-AsJob]
+ [-Location] <String> -Publisher <String> -Offer <String> -Sku <String> -OsState <OperatingSystemStateTypes>
+ -OsType <OperatingSystemTypes> [-Description <String>] [-DisallowedDiskType <String[]>]
+ [-EndOfLifeDate <DateTime>] [-Eula <String>] [-HyperVGeneration <String>] [-MinimumMemory <Int32>]
+ [-MinimumVCPU <Int32>] [-MaximumMemory <Int32>] [-MaximumVCPU <Int32>] [-PrivacyStatementUri <String>]
+ [-PurchasePlanName <String>] [-PurchasePlanProduct <String>] [-PurchasePlanPublisher <String>]
+ [-ReleaseNoteUri <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="e66f2-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e66f2-105">DESCRIPTION</span></span>
+<span data-ttu-id="e66f2-106">Erstellen einer Katalogbild Definition</span><span class="sxs-lookup"><span data-stu-id="e66f2-106">Create a gallery image definition.</span></span>
+
+## <span data-ttu-id="e66f2-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="e66f2-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="e66f2-108">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="e66f2-108">Example 1</span></span>
+```powershell
+PS C:\> New-AzGalleryImageDefinition -ResourceGroupName $resourceGroupName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -Description $description -Eula $eula -PrivacyStatementUri $privacyStatementUri -ReleaseNoteUri $releaseNoteUri -DisallowedDiskType $disallowedDiskTypes -EndOfLifeDate $endOfLifeDate -MinimumMemory $minMemory -MaximumMemory $maxMemory -MinimumVCPU $minVCPU -MaximumVCPU $maxVCPU -PurchasePlanName $purchasePlanName -PurchasePlanProduct $purchasePlanProduct -PurchasePlanPublisher $purchasePlanPublisher
+```
+
+<span data-ttu-id="e66f2-109">Erstellen einer Katalogbild Definition</span><span class="sxs-lookup"><span data-stu-id="e66f2-109">Create a gallery image definition.</span></span>
+
+## <span data-ttu-id="e66f2-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="e66f2-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="e66f2-111">-AsJob</span><span class="sxs-lookup"><span data-stu-id="e66f2-111">-AsJob</span></span>
+<span data-ttu-id="e66f2-112">Ausführen eines Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="e66f2-112">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="e66f2-113">-DefaultProfile</span></span>
+<span data-ttu-id="e66f2-114">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="e66f2-114">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-115">-Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e66f2-115">-Description</span></span>
+<span data-ttu-id="e66f2-116">Die Beschreibung der Galerie-Bild Definitions Ressource.</span><span class="sxs-lookup"><span data-stu-id="e66f2-116">The description of the gallery image Definition resource.</span></span> 
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-117">-DisallowedDiskType</span><span class="sxs-lookup"><span data-stu-id="e66f2-117">-DisallowedDiskType</span></span>
+<span data-ttu-id="e66f2-118">Die nicht zulässigen Datenträgertypen</span><span class="sxs-lookup"><span data-stu-id="e66f2-118">The disallowed disk types.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-119">-EndOfLifeDate</span><span class="sxs-lookup"><span data-stu-id="e66f2-119">-EndOfLifeDate</span></span>
+<span data-ttu-id="e66f2-120">Das Ende des Lebenszyklus der Galeriebild Definition</span><span class="sxs-lookup"><span data-stu-id="e66f2-120">The end of life date of the gallery Image Definition</span></span>
+
+```yaml
+Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-121">-EULA</span><span class="sxs-lookup"><span data-stu-id="e66f2-121">-Eula</span></span>
+<span data-ttu-id="e66f2-122">Die EULA-Vereinbarung für die Katalogbild Definition.</span><span class="sxs-lookup"><span data-stu-id="e66f2-122">The Eula agreement for the gallery Image Definition.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-123">-Galeriename</span><span class="sxs-lookup"><span data-stu-id="e66f2-123">-GalleryName</span></span>
+<span data-ttu-id="e66f2-124">Der Name des Katalogs.</span><span class="sxs-lookup"><span data-stu-id="e66f2-124">The name of the gallery.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-125">-HyperVGeneration</span><span class="sxs-lookup"><span data-stu-id="e66f2-125">-HyperVGeneration</span></span>
+<span data-ttu-id="e66f2-126">Die Hypervisor-Generierung des virtuellen Computers.</span><span class="sxs-lookup"><span data-stu-id="e66f2-126">The hypervisor generation of the Virtual Machine.</span></span> <span data-ttu-id="e66f2-127">Nur auf Betriebssystemdatenträger anwendbar.</span><span class="sxs-lookup"><span data-stu-id="e66f2-127">Applicable to OS disks only.</span></span>  <span data-ttu-id="e66f2-128">Zulässige Werte sind v1 und v2.</span><span class="sxs-lookup"><span data-stu-id="e66f2-128">Allowed values are V1 and V2.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-129">-Standort</span><span class="sxs-lookup"><span data-stu-id="e66f2-129">-Location</span></span>
+<span data-ttu-id="e66f2-130">Ressourcen Standort</span><span class="sxs-lookup"><span data-stu-id="e66f2-130">Resource location</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-131">-MaximumMemory</span><span class="sxs-lookup"><span data-stu-id="e66f2-131">-MaximumMemory</span></span>
+<span data-ttu-id="e66f2-132">Das Maximum des empfohlenen Speichers</span><span class="sxs-lookup"><span data-stu-id="e66f2-132">The maximum of the recommended memory</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-133">-MaximumVCPU</span><span class="sxs-lookup"><span data-stu-id="e66f2-133">-MaximumVCPU</span></span>
+<span data-ttu-id="e66f2-134">Das Maximum des empfohlenen CPU-Kerns</span><span class="sxs-lookup"><span data-stu-id="e66f2-134">The maximum of the recommended CPU core</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-135">-MinimumMemory</span><span class="sxs-lookup"><span data-stu-id="e66f2-135">-MinimumMemory</span></span>
+<span data-ttu-id="e66f2-136">Das Mindeste des empfohlenen Speichers</span><span class="sxs-lookup"><span data-stu-id="e66f2-136">The minimum of the recommended memory</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-137">-MinimumVCPU</span><span class="sxs-lookup"><span data-stu-id="e66f2-137">-MinimumVCPU</span></span>
+<span data-ttu-id="e66f2-138">Das Mindeste des empfohlenen CPU-Kerns</span><span class="sxs-lookup"><span data-stu-id="e66f2-138">The minimum of the recommended CPU core</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-139">-Name</span><span class="sxs-lookup"><span data-stu-id="e66f2-139">-Name</span></span>
+<span data-ttu-id="e66f2-140">Der Name der Katalogbild Definition.</span><span class="sxs-lookup"><span data-stu-id="e66f2-140">The name of the gallery image definition.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: GalleryImageDefinitionName
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-141">-Angebot</span><span class="sxs-lookup"><span data-stu-id="e66f2-141">-Offer</span></span>
+<span data-ttu-id="e66f2-142">Der Name des Angebots zur Katalogbild Definition.</span><span class="sxs-lookup"><span data-stu-id="e66f2-142">The name of the gallery Image Definition offer.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-143">-OsState</span><span class="sxs-lookup"><span data-stu-id="e66f2-143">-OsState</span></span>
+<span data-ttu-id="e66f2-144">Status des Betriebssystems</span><span class="sxs-lookup"><span data-stu-id="e66f2-144">The state of OS</span></span>
+
+```yaml
+Type: Microsoft.Azure.Management.Compute.Models.OperatingSystemStateTypes
+Parameter Sets: (All)
+Aliases:
+Accepted values: Generalized, Specialized
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-145">-OsType</span><span class="sxs-lookup"><span data-stu-id="e66f2-145">-OsType</span></span>
+<span data-ttu-id="e66f2-146">Der Typ des Betriebssystems</span><span class="sxs-lookup"><span data-stu-id="e66f2-146">The type of OS</span></span>
+
+```yaml
+Type: Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes
+Parameter Sets: (All)
+Aliases:
+Accepted values: Windows, Linux
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-147">-PrivacyStatementUri</span><span class="sxs-lookup"><span data-stu-id="e66f2-147">-PrivacyStatementUri</span></span>
+<span data-ttu-id="e66f2-148">Der URI für Datenschutzbestimmungen.</span><span class="sxs-lookup"><span data-stu-id="e66f2-148">The privacy statement uri.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-149">-Publisher</span><span class="sxs-lookup"><span data-stu-id="e66f2-149">-Publisher</span></span>
+<span data-ttu-id="e66f2-150">Der Name des Katalogs für Bild Definitions Bilder in Publisher.</span><span class="sxs-lookup"><span data-stu-id="e66f2-150">The name of the gallery Image Definition publisher.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-151">-PurchasePlanName</span><span class="sxs-lookup"><span data-stu-id="e66f2-151">-PurchasePlanName</span></span>
+<span data-ttu-id="e66f2-152">Die ID für den Einkaufsplan.</span><span class="sxs-lookup"><span data-stu-id="e66f2-152">The ID for the purchase plan.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-153">-PurchasePlanProduct</span><span class="sxs-lookup"><span data-stu-id="e66f2-153">-PurchasePlanProduct</span></span>
+<span data-ttu-id="e66f2-154">Die Produkt-ID für den Einkaufsplan.</span><span class="sxs-lookup"><span data-stu-id="e66f2-154">The product ID for the purchase plan.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-155">-PurchasePlanPublisher</span><span class="sxs-lookup"><span data-stu-id="e66f2-155">-PurchasePlanPublisher</span></span>
+<span data-ttu-id="e66f2-156">Die Herausgeber-ID für den Einkaufsplan.</span><span class="sxs-lookup"><span data-stu-id="e66f2-156">The publisher ID for the purchase plan.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-157">-ReleaseNoteUri</span><span class="sxs-lookup"><span data-stu-id="e66f2-157">-ReleaseNoteUri</span></span>
+<span data-ttu-id="e66f2-158">Der Versionshinweis-URI.</span><span class="sxs-lookup"><span data-stu-id="e66f2-158">The release note uri.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-159">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="e66f2-159">-ResourceGroupName</span></span>
+<span data-ttu-id="e66f2-160">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="e66f2-160">The name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-161">-SKU</span><span class="sxs-lookup"><span data-stu-id="e66f2-161">-Sku</span></span>
+<span data-ttu-id="e66f2-162">Der Name der Katalogbild Definitions-SKU.</span><span class="sxs-lookup"><span data-stu-id="e66f2-162">The name of the gallery Image Definition SKU.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-163">-Tag</span><span class="sxs-lookup"><span data-stu-id="e66f2-163">-Tag</span></span>
+<span data-ttu-id="e66f2-164">Ressourcenkategorien</span><span class="sxs-lookup"><span data-stu-id="e66f2-164">Resource tags</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-165">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="e66f2-165">-Confirm</span></span>
+<span data-ttu-id="e66f2-166">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="e66f2-166">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-167">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="e66f2-167">-WhatIf</span></span>
+<span data-ttu-id="e66f2-168">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e66f2-168">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="e66f2-169">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e66f2-169">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e66f2-170">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e66f2-170">CommonParameters</span></span>
+<span data-ttu-id="e66f2-171">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e66f2-171">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e66f2-172">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="e66f2-172">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="e66f2-173">Eingaben</span><span class="sxs-lookup"><span data-stu-id="e66f2-173">INPUTS</span></span>
+
+### <span data-ttu-id="e66f2-174">System. String</span><span class="sxs-lookup"><span data-stu-id="e66f2-174">System.String</span></span>
+
+### <span data-ttu-id="e66f2-175">Microsoft. Azure. Management. Compute. Models. OperatingSystemStateTypes</span><span class="sxs-lookup"><span data-stu-id="e66f2-175">Microsoft.Azure.Management.Compute.Models.OperatingSystemStateTypes</span></span>
+
+### <span data-ttu-id="e66f2-176">Microsoft. Azure. Management. Compute. Models. OperatingSystemTypes</span><span class="sxs-lookup"><span data-stu-id="e66f2-176">Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes</span></span>
+
+### <span data-ttu-id="e66f2-177">System. DateTime</span><span class="sxs-lookup"><span data-stu-id="e66f2-177">System.DateTime</span></span>
+
+### <span data-ttu-id="e66f2-178">System. Collections. Hashtable</span><span class="sxs-lookup"><span data-stu-id="e66f2-178">System.Collections.Hashtable</span></span>
+
+### <span data-ttu-id="e66f2-179">System. Int32</span><span class="sxs-lookup"><span data-stu-id="e66f2-179">System.Int32</span></span>
+
+### <span data-ttu-id="e66f2-180">System. String []</span><span class="sxs-lookup"><span data-stu-id="e66f2-180">System.String[]</span></span>
+
+## <span data-ttu-id="e66f2-181">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="e66f2-181">OUTPUTS</span></span>
+
+### <span data-ttu-id="e66f2-182">Microsoft. Azure. Commands. Compute. Automation. Models. PSGalleryImage</span><span class="sxs-lookup"><span data-stu-id="e66f2-182">Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImage</span></span>
+
+## <span data-ttu-id="e66f2-183">Notizen</span><span class="sxs-lookup"><span data-stu-id="e66f2-183">NOTES</span></span>
+
+## <span data-ttu-id="e66f2-184">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="e66f2-184">RELATED LINKS</span></span>
