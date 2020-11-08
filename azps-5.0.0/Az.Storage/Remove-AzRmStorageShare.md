@@ -1,0 +1,259 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+Module Name: Az.Storage
+online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/remove-azrmstorageshare
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Remove-AzRmStorageShare.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Remove-AzRmStorageShare.md
+ms.openlocfilehash: bff7a79513cc8eb0047860f9edd00c6c37c5f1b0
+ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "94179534"
+---
+# <span data-ttu-id="c997f-101">Remove-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="c997f-101">Remove-AzRmStorageShare</span></span>
+
+## <span data-ttu-id="c997f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="c997f-102">SYNOPSIS</span></span>
+<span data-ttu-id="c997f-103">Entfernt eine Speicherdatei Freigabe.</span><span class="sxs-lookup"><span data-stu-id="c997f-103">Removes a Storage file share.</span></span>
+
+## <span data-ttu-id="c997f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c997f-104">SYNTAX</span></span>
+
+### <span data-ttu-id="c997f-105">Kontoname (Standard)</span><span class="sxs-lookup"><span data-stu-id="c997f-105">AccountName (Default)</span></span>
+```
+Remove-AzRmStorageShare [-ResourceGroupName] <String> [-StorageAccountName] <String> -Name <String> [-Force]
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="c997f-106">Kontoobject</span><span class="sxs-lookup"><span data-stu-id="c997f-106">AccountObject</span></span>
+```
+Remove-AzRmStorageShare -Name <String> -StorageAccount <PSStorageAccount> [-Force] [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="c997f-107">ShareResourceId</span><span class="sxs-lookup"><span data-stu-id="c997f-107">ShareResourceId</span></span>
+```
+Remove-AzRmStorageShare [-ResourceId] <String> [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="c997f-108">Freigebenobjekt</span><span class="sxs-lookup"><span data-stu-id="c997f-108">ShareObject</span></span>
+```
+Remove-AzRmStorageShare -InputObject <PSShare> [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="c997f-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c997f-109">DESCRIPTION</span></span>
+<span data-ttu-id="c997f-110">Das Cmdlet " **New-AzRmStorageShare** " entfernt eine Speicherdatei Freigabe.</span><span class="sxs-lookup"><span data-stu-id="c997f-110">The **New-AzRmStorageShare** cmdlet removes a Storage file share.</span></span>
+
+## <span data-ttu-id="c997f-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c997f-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="c997f-112">Beispiel 1: Entfernen einer Speicherdatei Freigabe mit dem Namen des speicherkontos und dem Freigabenamen</span><span class="sxs-lookup"><span data-stu-id="c997f-112">Example 1: Remove a Storage file share with Storage account name and share name</span></span>
+```
+PS C:\>Remove-AzRmStorageShare -ResourceGroupName "myResourceGroup" -StorageAccountName "myStorageAccount" -Name "myshare"
+```
+
+<span data-ttu-id="c997f-113">Dieser Befehl entfernt eine Speicherdatei Freigabe mit dem Namen des speicherkontos und dem Freigabenamen.</span><span class="sxs-lookup"><span data-stu-id="c997f-113">This command removes a Storage file share with Storage account name and share name.</span></span>
+
+### <span data-ttu-id="c997f-114">Beispiel 2: Entfernen einer Speicherdatei Freigabe mit dem Speicherkonto Objekt und dem Freigabenamen</span><span class="sxs-lookup"><span data-stu-id="c997f-114">Example 2: Remove a Storage file share with Storage account object and share name</span></span>
+```
+PS C:\>$accountObject = Get-AzStorageAccount -ResourceGroupName "myResourceGroup" -StorageAccountName "myStorageAccount"
+PS C:\>Remove-AzRmStorageShare -StorageAccount $accountObject -Name "myshare"
+```
+
+<span data-ttu-id="c997f-115">Dieser Befehl entfernt eine Speicherdatei Freigabe mit dem Speicherkonto Objekt und dem Freigabenamen.</span><span class="sxs-lookup"><span data-stu-id="c997f-115">This command removes a Storage file share with Storage account object and share name.</span></span>
+
+### <span data-ttu-id="c997f-116">Beispiel 3: Entfernen aller Speicherdatei Freigaben in einem Speicherkonto mit Pipeline</span><span class="sxs-lookup"><span data-stu-id="c997f-116">Example 3: Remove all Storage file shares in a Storage account with pipeline</span></span>
+```
+PS C:\>Get-AzStorageShare -ResourceGroupName "myResourceGroup" -StorageAccountName "myStorageAccount" | Remove-AzRmStorageShare -Force
+```
+
+<span data-ttu-id="c997f-117">Dieser Befehl entfernt alle Speicherdatei Freigaben in einem Speicherkonto mit Pipeline.</span><span class="sxs-lookup"><span data-stu-id="c997f-117">This command removes all Storage file shares in a Storage account with pipeline.</span></span>
+
+## <span data-ttu-id="c997f-118">Parameter</span><span class="sxs-lookup"><span data-stu-id="c997f-118">PARAMETERS</span></span>
+
+### <span data-ttu-id="c997f-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c997f-119">-DefaultProfile</span></span>
+<span data-ttu-id="c997f-120">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c997f-120">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-121">-Force</span><span class="sxs-lookup"><span data-stu-id="c997f-121">-Force</span></span>
+<span data-ttu-id="c997f-122">Erzwingen des Entfernens der Freigabe und des gesamten Inhalts</span><span class="sxs-lookup"><span data-stu-id="c997f-122">Force to remove the Share and all content in it</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-123">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="c997f-123">-InputObject</span></span>
+<span data-ttu-id="c997f-124">Speicherfreigabe Objekt</span><span class="sxs-lookup"><span data-stu-id="c997f-124">Storage Share object</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSShare
+Parameter Sets: ShareObject
+Aliases: Share
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-125">-Name</span><span class="sxs-lookup"><span data-stu-id="c997f-125">-Name</span></span>
+<span data-ttu-id="c997f-126">Freigabe Name</span><span class="sxs-lookup"><span data-stu-id="c997f-126">Share Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: AccountName, AccountObject
+Aliases: N, ShareName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-127">-PassThru</span><span class="sxs-lookup"><span data-stu-id="c997f-127">-PassThru</span></span>
+<span data-ttu-id="c997f-128">Gibt an, dass dieses Cmdlet einen **booleschen Wert** zurückgibt, der den Erfolg des Vorgangs widerspiegelt.</span><span class="sxs-lookup"><span data-stu-id="c997f-128">Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.</span></span>
+<span data-ttu-id="c997f-129">Standardmäßig gibt dieses Cmdlet keinen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="c997f-129">By default, this cmdlet does not return a value.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-130">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="c997f-130">-ResourceGroupName</span></span>
+<span data-ttu-id="c997f-131">Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="c997f-131">Resource Group Name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: AccountName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-132">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="c997f-132">-ResourceId</span></span>
+<span data-ttu-id="c997f-133">Geben Sie eine Dateifreigabe-Ressourcen-ID ein.</span><span class="sxs-lookup"><span data-stu-id="c997f-133">Input a File Share Resource Id.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ShareResourceId
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-134">-StorageAccount</span><span class="sxs-lookup"><span data-stu-id="c997f-134">-StorageAccount</span></span>
+<span data-ttu-id="c997f-135">Speicherkonto Objekt</span><span class="sxs-lookup"><span data-stu-id="c997f-135">Storage account object</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount
+Parameter Sets: AccountObject
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-136">-StorageAccountName</span><span class="sxs-lookup"><span data-stu-id="c997f-136">-StorageAccountName</span></span>
+<span data-ttu-id="c997f-137">Name des speicherkontos</span><span class="sxs-lookup"><span data-stu-id="c997f-137">Storage Account Name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: AccountName
+Aliases: AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-138">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="c997f-138">-Confirm</span></span>
+<span data-ttu-id="c997f-139">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="c997f-139">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-140">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c997f-140">-WhatIf</span></span>
+<span data-ttu-id="c997f-141">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c997f-141">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="c997f-142">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c997f-142">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c997f-143">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c997f-143">CommonParameters</span></span>
+<span data-ttu-id="c997f-144">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c997f-144">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c997f-145">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="c997f-145">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="c997f-146">Eingaben</span><span class="sxs-lookup"><span data-stu-id="c997f-146">INPUTS</span></span>
+
+### <span data-ttu-id="c997f-147">System. String</span><span class="sxs-lookup"><span data-stu-id="c997f-147">System.String</span></span>
+
+### <span data-ttu-id="c997f-148">Microsoft. Azure. Commands. Management. Storage. Models. PSStorageAccount</span><span class="sxs-lookup"><span data-stu-id="c997f-148">Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount</span></span>
+
+### <span data-ttu-id="c997f-149">Microsoft. Azure. Commands. Management. Storage. Models. PSShare</span><span class="sxs-lookup"><span data-stu-id="c997f-149">Microsoft.Azure.Commands.Management.Storage.Models.PSShare</span></span>
+
+## <span data-ttu-id="c997f-150">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="c997f-150">OUTPUTS</span></span>
+
+### <span data-ttu-id="c997f-151">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="c997f-151">System.Boolean</span></span>
+
+## <span data-ttu-id="c997f-152">Notizen</span><span class="sxs-lookup"><span data-stu-id="c997f-152">NOTES</span></span>
+
+## <span data-ttu-id="c997f-153">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="c997f-153">RELATED LINKS</span></span>
