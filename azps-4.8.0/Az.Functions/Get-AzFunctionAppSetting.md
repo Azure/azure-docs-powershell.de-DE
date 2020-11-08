@@ -1,0 +1,331 @@
+---
+external help file: ''
+Module Name: Az.Functions
+online version: https://docs.microsoft.com/en-us/powershell/module/az.functions/get-azfunctionappsetting
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Get-AzFunctionAppSetting.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Functions/help/Get-AzFunctionAppSetting.md
+ms.openlocfilehash: 1049c4b69f0d64c9b18063618ee09018fd224196
+ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "94175146"
+---
+# <span data-ttu-id="4f241-101">Get-AzFunctionAppSetting</span><span class="sxs-lookup"><span data-stu-id="4f241-101">Get-AzFunctionAppSetting</span></span>
+
+## <span data-ttu-id="4f241-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="4f241-102">SYNOPSIS</span></span>
+<span data-ttu-id="4f241-103">Ruft App-Einstellungen für eine Funktions-APP ab.</span><span class="sxs-lookup"><span data-stu-id="4f241-103">Gets app settings for a function app.</span></span>
+
+## <span data-ttu-id="4f241-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4f241-104">SYNTAX</span></span>
+
+### <span data-ttu-id="4f241-105">ByName (Standard)</span><span class="sxs-lookup"><span data-stu-id="4f241-105">ByName (Default)</span></span>
+```
+Get-AzFunctionAppSetting -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### <span data-ttu-id="4f241-106">ByObjectInput</span><span class="sxs-lookup"><span data-stu-id="4f241-106">ByObjectInput</span></span>
+```
+Get-AzFunctionAppSetting -InputObject <ISite> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="4f241-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4f241-107">DESCRIPTION</span></span>
+<span data-ttu-id="4f241-108">Ruft App-Einstellungen für eine Funktions-APP ab.</span><span class="sxs-lookup"><span data-stu-id="4f241-108">Gets app settings for a function app.</span></span>
+
+## <span data-ttu-id="4f241-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="4f241-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="4f241-110">Beispiel 1: Abrufen der App-Einstellungen einer Funktions-APP.</span><span class="sxs-lookup"><span data-stu-id="4f241-110">Example 1: Get the app settings of a function app.</span></span>
+```powershell
+PS C:\> Get-AzFunctionAppSetting -Name MyAppName -ResourceGroupName MyResourceGroupName
+```
+
+<span data-ttu-id="4f241-111">Mit diesem Befehl werden die App-Einstellungen einer Funktions-APP abgerufen.</span><span class="sxs-lookup"><span data-stu-id="4f241-111">This command gets the app settings of a function app.</span></span>
+
+## <span data-ttu-id="4f241-112">Parameter</span><span class="sxs-lookup"><span data-stu-id="4f241-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="4f241-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="4f241-113">-DefaultProfile</span></span>
+
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-114">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="4f241-114">-InputObject</span></span>
+<span data-ttu-id="4f241-115">Informationen zum Erstellen finden Sie unter Abschnitt "Notizen" für Inputobject-Eigenschaften und Erstellen einer Hashtabelle.</span><span class="sxs-lookup"><span data-stu-id="4f241-115">To construct, see NOTES section for INPUTOBJECT properties and create a hash table.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20190801.ISite
+Parameter Sets: ByObjectInput
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-116">-Name</span><span class="sxs-lookup"><span data-stu-id="4f241-116">-Name</span></span>
+<span data-ttu-id="4f241-117">Der Name der Funktions-APP.</span><span class="sxs-lookup"><span data-stu-id="4f241-117">Name of the function app.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-118">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="4f241-118">-ResourceGroupName</span></span>
+<span data-ttu-id="4f241-119">Der Name der Ressourcengruppe, zu der die Ressource gehört.</span><span class="sxs-lookup"><span data-stu-id="4f241-119">Name of the resource group to which the resource belongs.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-120">-Abonnement-Nr</span><span class="sxs-lookup"><span data-stu-id="4f241-120">-SubscriptionId</span></span>
+<span data-ttu-id="4f241-121">Die Azure-Abonnement-ID.</span><span class="sxs-lookup"><span data-stu-id="4f241-121">The Azure subscription ID.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-122">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="4f241-122">-Confirm</span></span>
+<span data-ttu-id="4f241-123">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="4f241-123">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-124">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="4f241-124">-WhatIf</span></span>
+<span data-ttu-id="4f241-125">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="4f241-125">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="4f241-126">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="4f241-126">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="4f241-127">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4f241-127">CommonParameters</span></span>
+<span data-ttu-id="4f241-128">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="4f241-128">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4f241-129">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="4f241-129">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="4f241-130">Eingaben</span><span class="sxs-lookup"><span data-stu-id="4f241-130">INPUTS</span></span>
+
+### <span data-ttu-id="4f241-131">Microsoft. Azure. PowerShell. Cmdlets. Functions. Models. Api20190801. ISite</span><span class="sxs-lookup"><span data-stu-id="4f241-131">Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20190801.ISite</span></span>
+
+## <span data-ttu-id="4f241-132">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="4f241-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="4f241-133">Microsoft. Azure. PowerShell. Cmdlets. Functions. Models. Api20190801. IStringDictionary</span><span class="sxs-lookup"><span data-stu-id="4f241-133">Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20190801.IStringDictionary</span></span>
+
+## <span data-ttu-id="4f241-134">Notizen</span><span class="sxs-lookup"><span data-stu-id="4f241-134">NOTES</span></span>
+
+<span data-ttu-id="4f241-135">Aliase</span><span class="sxs-lookup"><span data-stu-id="4f241-135">ALIASES</span></span>
+
+<span data-ttu-id="4f241-136">komplexe Parameter Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4f241-136">COMPLEX PARAMETER PROPERTIES</span></span>
+
+<span data-ttu-id="4f241-137">Wenn Sie die unten beschriebenen Parameter erstellen möchten, erstellen Sie eine Hashtabelle mit den entsprechenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="4f241-137">To create the parameters described below, construct a hash table containing the appropriate properties.</span></span> <span data-ttu-id="4f241-138">Wenn Sie Informationen zu Hashtabellen erhalten, führen Sie Get-Help about_Hash_Tables aus.</span><span class="sxs-lookup"><span data-stu-id="4f241-138">For information on hash tables, run Get-Help about_Hash_Tables.</span></span>
+
+
+<span data-ttu-id="4f241-139">Inputobject <ISite> :</span><span class="sxs-lookup"><span data-stu-id="4f241-139">INPUTOBJECT <ISite>:</span></span> 
+  - <span data-ttu-id="4f241-140">`Location <String>`: Ressourcen Standort.</span><span class="sxs-lookup"><span data-stu-id="4f241-140">`Location <String>`: Resource Location.</span></span>
+  - <span data-ttu-id="4f241-141">`CloningInfoSourceWebAppId <String>`: Arm-Ressourcen-ID der Quell-app.</span><span class="sxs-lookup"><span data-stu-id="4f241-141">`CloningInfoSourceWebAppId <String>`: ARM resource ID of the source app.</span></span> <span data-ttu-id="4f241-142">Die APP-Ressourcen-ID hat das Format/Subscriptions/{subId}/resourceGroups/{resourceGroupName}/Providers/Microsoft.Web/Sites/{Sitename} für Produktions Steckplätze und/Subscriptions/{subId}/resourceGroups/{resourceGroupName}/Providers/Microsoft.Web/Sites/{Sitename}/Slots/{slotName} für andere Slots.</span><span class="sxs-lookup"><span data-stu-id="4f241-142">App resource ID is of the form         /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and         /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.</span></span>
+  - <span data-ttu-id="4f241-143">`[Kind <String>]`: Art der Ressource.</span><span class="sxs-lookup"><span data-stu-id="4f241-143">`[Kind <String>]`: Kind of resource.</span></span>
+  - <span data-ttu-id="4f241-144">`[Tag <IResourceTags>]`: Ressourcenkategorien.</span><span class="sxs-lookup"><span data-stu-id="4f241-144">`[Tag <IResourceTags>]`: Resource tags.</span></span>
+    - <span data-ttu-id="4f241-145">`[(Any) <String>]`: Gibt an, dass einer Eigenschaft dieses Objekt hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4f241-145">`[(Any) <String>]`: This indicates any property can be added to this object.</span></span>
+  - <span data-ttu-id="4f241-146">`[ClientAffinityEnabled <Boolean?>]`: <code>true</code> um die Clientaffinität zu <code>false</code> aktivieren, können Sie das Senden von Sitzungs Affinitäts Cookies beenden, die Clientanforderungen in derselben Sitzung an dieselbe Instanz weiterleiten.</span><span class="sxs-lookup"><span data-stu-id="4f241-146">`[ClientAffinityEnabled <Boolean?>]`: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance.</span></span> <span data-ttu-id="4f241-147">Standardwert ist <code>true</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-147">Default is <code>true</code>.</span></span>
+  - <span data-ttu-id="4f241-148">`[ClientCertEnabled <Boolean?>]`: <code>true</code> um die Clientzertifikatauthentifizierung (MTLS-gegenseitige Authentifizierung) zu aktivieren, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-148">`[ClientCertEnabled <Boolean?>]`: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>.</span></span> <span data-ttu-id="4f241-149">Standardwert ist <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-149">Default is <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-150">`[ClientCertExclusionPath <String>]`: Clientzertifikatauthentifizierung durch Kommas getrennte Ausschluss Pfade</span><span class="sxs-lookup"><span data-stu-id="4f241-150">`[ClientCertExclusionPath <String>]`: client certificate authentication comma-separated exclusion paths</span></span>
+  - <span data-ttu-id="4f241-151">`[CloningInfoAppSettingsOverride <ICloningInfoAppSettingsOverrides>]`: Anwendungseinstellung Außerkraftsetzungen für geklonte app.</span><span class="sxs-lookup"><span data-stu-id="4f241-151">`[CloningInfoAppSettingsOverride <ICloningInfoAppSettingsOverrides>]`: Application setting overrides for cloned app.</span></span> <span data-ttu-id="4f241-152">Wenn diese Einstellungen angegeben sind, überschreiben Sie die von der Quell-App geklonten Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="4f241-152">If specified, these settings override the settings cloned         from source app.</span></span> <span data-ttu-id="4f241-153">Andernfalls bleiben die Anwendungseinstellungen aus der Quell-APP erhalten.</span><span class="sxs-lookup"><span data-stu-id="4f241-153">Otherwise, application settings from source app are retained.</span></span>
+    - <span data-ttu-id="4f241-154">`[(Any) <String>]`: Gibt an, dass einer Eigenschaft dieses Objekt hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4f241-154">`[(Any) <String>]`: This indicates any property can be added to this object.</span></span>
+  - <span data-ttu-id="4f241-155">`[CloningInfoCloneCustomHostName <Boolean?>]`: <code>true</code> zum Klonen von benutzerdefinierten Hostnamen aus der Quell-App; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-155">`[CloningInfoCloneCustomHostName <Boolean?>]`: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-156">`[CloningInfoCloneSourceControl <Boolean?>]`: <code>true</code> zum Klonen der Quellcodeverwaltung aus der Quell-App; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-156">`[CloningInfoCloneSourceControl <Boolean?>]`: <code>true</code> to clone source control from source app; otherwise, <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-157">`[CloningInfoConfigureLoadBalancing <Boolean?>]`: <code>true</code> zum Konfigurieren des Lastenausgleichs für die Quell-und Ziel-app.</span><span class="sxs-lookup"><span data-stu-id="4f241-157">`[CloningInfoConfigureLoadBalancing <Boolean?>]`: <code>true</code> to configure load balancing for source and destination app.</span></span>
+  - <span data-ttu-id="4f241-158">`[CloningInfoCorrelationId <String>]`: Korrelations-ID des Cloning-Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="4f241-158">`[CloningInfoCorrelationId <String>]`: Correlation ID of cloning operation.</span></span> <span data-ttu-id="4f241-159">Diese ID bindet mehrere Cloning-Vorgänge zusammen, um denselben Snapshot zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="4f241-159">This ID ties multiple cloning operations         together to use the same snapshot.</span></span>
+  - <span data-ttu-id="4f241-160">`[CloningInfoHostingEnvironment <String>]`: App-Dienstumgebung.</span><span class="sxs-lookup"><span data-stu-id="4f241-160">`[CloningInfoHostingEnvironment <String>]`: App Service Environment.</span></span>
+  - <span data-ttu-id="4f241-161">`[CloningInfoOverwrite <Boolean?>]`: <code>true</code> zum Überschreiben der Ziel-App; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-161">`[CloningInfoOverwrite <Boolean?>]`: <code>true</code> to overwrite destination app; otherwise, <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-162">`[CloningInfoSourceWebAppLocation <String>]`: Standort der Quell-App Ex: West-und Nordeuropa</span><span class="sxs-lookup"><span data-stu-id="4f241-162">`[CloningInfoSourceWebAppLocation <String>]`: Location of source app ex: West US or North Europe</span></span>
+  - <span data-ttu-id="4f241-163">`[CloningInfoTrafficManagerProfileId <String>]`: Arm-Ressourcen-ID des zu verwendenden Traffic Manager-Profils, falls vorhanden.</span><span class="sxs-lookup"><span data-stu-id="4f241-163">`[CloningInfoTrafficManagerProfileId <String>]`: ARM resource ID of the Traffic Manager profile to use, if it exists.</span></span> <span data-ttu-id="4f241-164">Die Datenverkehrs-Manager-Ressourcen-ID hat das Format/Subscriptions/{subId}/resourceGroups/{resourceGroupName}/Providers/Microsoft.Network/trafficManagerProfiles/{ProfileName}.</span><span class="sxs-lookup"><span data-stu-id="4f241-164">Traffic Manager resource ID is of the form         /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.</span></span>
+  - <span data-ttu-id="4f241-165">`[CloningInfoTrafficManagerProfileName <String>]`: Name des zu erstellenden Traffic Manager-Profils.</span><span class="sxs-lookup"><span data-stu-id="4f241-165">`[CloningInfoTrafficManagerProfileName <String>]`: Name of Traffic Manager profile to create.</span></span> <span data-ttu-id="4f241-166">Dies ist nur erforderlich, wenn das Traffic Manager-Profil noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="4f241-166">This is only needed if Traffic Manager profile does not already exist.</span></span>
+  - <span data-ttu-id="4f241-167">`[Config <ISiteConfig>]`: Konfiguration der app.</span><span class="sxs-lookup"><span data-stu-id="4f241-167">`[Config <ISiteConfig>]`: Configuration of the app.</span></span>
+    - <span data-ttu-id="4f241-168">`IsPushEnabled <Boolean>`: Ruft ein Flag ab, das angibt, ob der Push-Endpunkt aktiviert ist, oder legt dieses fest.</span><span class="sxs-lookup"><span data-stu-id="4f241-168">`IsPushEnabled <Boolean>`: Gets or sets a flag indicating whether the Push endpoint is enabled.</span></span>
+    - <span data-ttu-id="4f241-169">`[ActionMinProcessExecutionTime <String>]`: Minimale Zeitdauer, die der Prozess ausführen muss, bevor die Aktion ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="4f241-169">`[ActionMinProcessExecutionTime <String>]`: Minimum time the process must execute         before taking the action</span></span>
+    - <span data-ttu-id="4f241-170">`[ActionType <AutoHealActionType?>]`: Vordefinierte Aktion, die ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="4f241-170">`[ActionType <AutoHealActionType?>]`: Predefined action to be taken.</span></span>
+    - <span data-ttu-id="4f241-171">`[AlwaysOn <Boolean?>]`: <code>true</code> Wenn immer aktiviert ist; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-171">`[AlwaysOn <Boolean?>]`: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-172">`[ApiDefinitionUrl <String>]`: Die URL der API-Definition.</span><span class="sxs-lookup"><span data-stu-id="4f241-172">`[ApiDefinitionUrl <String>]`: The URL of the API definition.</span></span>
+    - <span data-ttu-id="4f241-173">`[ApiManagementConfigId <String>]`: APIM-Api-Bezeichner.</span><span class="sxs-lookup"><span data-stu-id="4f241-173">`[ApiManagementConfigId <String>]`: APIM-Api Identifier.</span></span>
+    - <span data-ttu-id="4f241-174">`[AppCommandLine <String>]`: App-Befehlszeile zum Starten.</span><span class="sxs-lookup"><span data-stu-id="4f241-174">`[AppCommandLine <String>]`: App command line to launch.</span></span>
+    - <span data-ttu-id="4f241-175">`[AppSetting <INameValuePair[]>]`: Anwendungseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="4f241-175">`[AppSetting <INameValuePair[]>]`: Application settings.</span></span>
+      - <span data-ttu-id="4f241-176">`[Name <String>]`: Pair-Name.</span><span class="sxs-lookup"><span data-stu-id="4f241-176">`[Name <String>]`: Pair name.</span></span>
+      - <span data-ttu-id="4f241-177">`[Value <String>]`: Pair-Wert.</span><span class="sxs-lookup"><span data-stu-id="4f241-177">`[Value <String>]`: Pair value.</span></span>
+    - <span data-ttu-id="4f241-178">`[AutoHealEnabled <Boolean?>]`: <code>true</code> Wenn Auto Heal aktiviert ist; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-178">`[AutoHealEnabled <Boolean?>]`: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-179">`[AutoSwapSlotName <String>]`: Automatisches austauschen des Steckplatz namens.</span><span class="sxs-lookup"><span data-stu-id="4f241-179">`[AutoSwapSlotName <String>]`: Auto-swap slot name.</span></span>
+    - <span data-ttu-id="4f241-180">`[ConnectionString <IConnStringInfo[]>]`: Verbindungszeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="4f241-180">`[ConnectionString <IConnStringInfo[]>]`: Connection strings.</span></span>
+      - <span data-ttu-id="4f241-181">`[ConnectionString <String>]`: Wert der Verbindungszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="4f241-181">`[ConnectionString <String>]`: Connection string value.</span></span>
+      - <span data-ttu-id="4f241-182">`[Name <String>]`: Name der Verbindungszeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="4f241-182">`[Name <String>]`: Name of connection string.</span></span>
+      - <span data-ttu-id="4f241-183">`[Type <ConnectionStringType?>]`: Typ der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="4f241-183">`[Type <ConnectionStringType?>]`: Type of database.</span></span>
+    - <span data-ttu-id="4f241-184">`[CorAllowedOrigin <String[]>]`: Ruft die Liste der Ursprünge ab, die für die über-Origin-Aufrufe zulässig sein sollen (beispielsweise: http://example.com:12345) .</span><span class="sxs-lookup"><span data-stu-id="4f241-184">`[CorAllowedOrigin <String[]>]`: Gets or sets the list of origins that should be allowed to make cross-origin         calls (for example: http://example.com:12345).</span></span> <span data-ttu-id="4f241-185">Verwenden Sie "\*", um alle zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4f241-185">Use "\*" to allow all.</span></span>
+    - <span data-ttu-id="4f241-186">`[CorSupportCredentials <Boolean?>]`: Ruft ab oder legt fest, ob CORS-Anforderungen mit Anmeldeinformationen zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="4f241-186">`[CorSupportCredentials <Boolean?>]`: Gets or sets whether CORS requests with credentials are allowed.</span></span> <span data-ttu-id="4f241-187">Weitere Informationen finden Sie unter         https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials         .</span><span class="sxs-lookup"><span data-stu-id="4f241-187">See         https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials         for more details.</span></span>
+    - <span data-ttu-id="4f241-188">`[CustomActionExe <String>]`: Ausführbare Datei, die ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="4f241-188">`[CustomActionExe <String>]`: Executable to be run.</span></span>
+    - <span data-ttu-id="4f241-189">`[CustomActionParameter <String>]`: Parameter für die ausführbare Datei.</span><span class="sxs-lookup"><span data-stu-id="4f241-189">`[CustomActionParameter <String>]`: Parameters for the executable.</span></span>
+    - <span data-ttu-id="4f241-190">`[DefaultDocument <String[]>]`: Standarddokumente.</span><span class="sxs-lookup"><span data-stu-id="4f241-190">`[DefaultDocument <String[]>]`: Default documents.</span></span>
+    - <span data-ttu-id="4f241-191">`[DetailedErrorLoggingEnabled <Boolean?>]`: <code>true</code> Wenn die detaillierte Fehlerprotokollierung aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-191">`[DetailedErrorLoggingEnabled <Boolean?>]`: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-192">`[DocumentRoot <String>]`: Dokumentstamm.</span><span class="sxs-lookup"><span data-stu-id="4f241-192">`[DocumentRoot <String>]`: Document root.</span></span>
+    - <span data-ttu-id="4f241-193">`[DynamicTagsJson <String>]`: Ruft eine JSON-Zeichenfolge ab, die eine Liste der dynamischen Tags enthält, die aus benutzeransprüchen im Push-Registrierungs Endpunkt ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="4f241-193">`[DynamicTagsJson <String>]`: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.</span></span>
+    - <span data-ttu-id="4f241-194">`[ExperimentRampUpRule <IRampUpRule[]>]`: Liste der Weiterverfolgungs Regeln.</span><span class="sxs-lookup"><span data-stu-id="4f241-194">`[ExperimentRampUpRule <IRampUpRule[]>]`: List of ramp-up rules.</span></span>
+      - <span data-ttu-id="4f241-195">`[ActionHostName <String>]`: Hostname eines Slots, in den der Datenverkehr umgeleitet wird, wenn entschieden wird.</span><span class="sxs-lookup"><span data-stu-id="4f241-195">`[ActionHostName <String>]`: Hostname of a slot to which the traffic will be redirected if decided to.</span></span> <span data-ttu-id="4f241-196">Z.b..</span><span class="sxs-lookup"><span data-stu-id="4f241-196">E.g.</span></span> <span data-ttu-id="4f241-197">MyApp-Stage.azurewebsites.net.</span><span class="sxs-lookup"><span data-stu-id="4f241-197">myapp-stage.azurewebsites.net.</span></span>
+      - <span data-ttu-id="4f241-198">`[ChangeDecisionCallbackUrl <String>]`: Benutzerdefinierter Entscheidungs Algorithmus kann in TiPCallback Site Extension bereitgestellt werden, die URL angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="4f241-198">`[ChangeDecisionCallbackUrl <String>]`: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified.</span></span> <span data-ttu-id="4f241-199">Informationen finden Sie unter TiPCallback Site Extension für das Gerüst und die Verträge.</span><span class="sxs-lookup"><span data-stu-id="4f241-199">See TiPCallback site extension for the scaffold and contracts.</span></span>         <span data-ttu-id="4f241-200"> https://www.siteextensions.net/packages/TiPCallback/</span><span class="sxs-lookup"><span data-stu-id="4f241-200">https://www.siteextensions.net/packages/TiPCallback/</span></span>
+      - <span data-ttu-id="4f241-201">`[ChangeIntervalInMinute <Int32?>]`: Gibt das Intervall in Minuten an, um ReroutePercentage neu auszuwerten.</span><span class="sxs-lookup"><span data-stu-id="4f241-201">`[ChangeIntervalInMinute <Int32?>]`: Specifies interval in minutes to reevaluate ReroutePercentage.</span></span>
+      - <span data-ttu-id="4f241-202">`[ChangeStep <Double?>]`: Im Szenario für das automatische Hochfahren ist dies der Schritt zum hinzufügen/entfernen, <code>ReroutePercentage</code> bis er \n <code>MinReroutePercentage</code> oder erreicht         <code>MaxReroutePercentage</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-202">`[ChangeStep <Double?>]`: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or         <code>MaxReroutePercentage</code>.</span></span> <span data-ttu-id="4f241-203">Website Metriken werden überprüft alle N Minuten <code>ChangeIntervalInMinutes</code> , die im .\nCustom-Entscheidungs Algorithmus angegeben sind, können in TiPCallback Site Extension bereitgestellt werden, in der URL angegeben werden kann <code>ChangeDecisionCallbackUrl</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-203">Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm         can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.</span></span>
+      - <span data-ttu-id="4f241-204">`[MaxReroutePercentage <Double?>]`: Gibt die obere Grenze an, unter der ReroutePercentage bleibt.</span><span class="sxs-lookup"><span data-stu-id="4f241-204">`[MaxReroutePercentage <Double?>]`: Specifies upper boundary below which ReroutePercentage will stay.</span></span>
+      - <span data-ttu-id="4f241-205">`[MinReroutePercentage <Double?>]`: Gibt die untere Grenze an, über der ReroutePercentage bleibt.</span><span class="sxs-lookup"><span data-stu-id="4f241-205">`[MinReroutePercentage <Double?>]`: Specifies lower boundary above which ReroutePercentage will stay.</span></span>
+      - <span data-ttu-id="4f241-206">`[Name <String>]`: Name der Routingregel</span><span class="sxs-lookup"><span data-stu-id="4f241-206">`[Name <String>]`: Name of the routing rule.</span></span> <span data-ttu-id="4f241-207">Der empfohlene Name lautet, auf den Steckplatz zu zeigen, der den Datenverkehr im Experiment empfängt.</span><span class="sxs-lookup"><span data-stu-id="4f241-207">The recommended name would be to point to the slot which will receive the traffic in the experiment.</span></span>
+      - <span data-ttu-id="4f241-208">`[ReroutePercentage <Double?>]`: Prozentsatz des Datenverkehrs, zu dem umgeleitet wird <code>ActionHostName</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-208">`[ReroutePercentage <Double?>]`: Percentage of the traffic which will be redirected to <code>ActionHostName</code>.</span></span>
+    - <span data-ttu-id="4f241-209">`[FtpsState <FtpsState?>]`: Zustand des FTP/FTP-Diensts</span><span class="sxs-lookup"><span data-stu-id="4f241-209">`[FtpsState <FtpsState?>]`: State of FTP / FTPS service</span></span>
+    - <span data-ttu-id="4f241-210">`[HandlerMapping <IHandlerMapping[]>]`: Handler-Zuordnungen.</span><span class="sxs-lookup"><span data-stu-id="4f241-210">`[HandlerMapping <IHandlerMapping[]>]`: Handler mappings.</span></span>
+      - <span data-ttu-id="4f241-211">`[Argument <String>]`: Befehlszeilenargumente, die an den Skriptprozessor übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="4f241-211">`[Argument <String>]`: Command-line arguments to be passed to the script processor.</span></span>
+      - <span data-ttu-id="4f241-212">`[Extension <String>]`: Anforderungen mit dieser Erweiterung werden mithilfe der angegebenen FastCGI-Anwendung verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="4f241-212">`[Extension <String>]`: Requests with this extension will be handled using the specified FastCGI application.</span></span>
+      - <span data-ttu-id="4f241-213">`[ScriptProcessor <String>]`: Der absolute Pfad zur FastCGI-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="4f241-213">`[ScriptProcessor <String>]`: The absolute path to the FastCGI application.</span></span>
+    - <span data-ttu-id="4f241-214">`[HealthCheckPath <String>]`: Pfad für Integritätsprüfung</span><span class="sxs-lookup"><span data-stu-id="4f241-214">`[HealthCheckPath <String>]`: Health check path</span></span>
+    - <span data-ttu-id="4f241-215">`[Http20Enabled <Boolean?>]`: Http20Enabled: konfiguriert eine Website, um Clients die Verbindung über http 2.0 zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4f241-215">`[Http20Enabled <Boolean?>]`: Http20Enabled: configures a web site to allow clients to connect over http2.0</span></span>
+    - <span data-ttu-id="4f241-216">`[HttpLoggingEnabled <Boolean?>]`: <code>true</code> Wenn die HTTP-Protokollierung aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-216">`[HttpLoggingEnabled <Boolean?>]`: <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-217">`[IPSecurityRestriction <IIPSecurityRestriction[]>]`: IP-Sicherheitseinschränkungen für Main.</span><span class="sxs-lookup"><span data-stu-id="4f241-217">`[IPSecurityRestriction <IIPSecurityRestriction[]>]`: IP security restrictions for main.</span></span>
+      - <span data-ttu-id="4f241-218">`[Action <String>]`: Gewähren oder Verweigern des Zugriffs für diesen IP-Bereich.</span><span class="sxs-lookup"><span data-stu-id="4f241-218">`[Action <String>]`: Allow or Deny access for this IP range.</span></span>
+      - <span data-ttu-id="4f241-219">`[Description <String>]`: Beschreibung der IP-Einschränkungs Regel</span><span class="sxs-lookup"><span data-stu-id="4f241-219">`[Description <String>]`: IP restriction rule description.</span></span>
+      - <span data-ttu-id="4f241-220">`[IPAddress <String>]`: IP-Adresse die Sicherheitsbeschränkung ist gültig für.</span><span class="sxs-lookup"><span data-stu-id="4f241-220">`[IPAddress <String>]`: IP address the security restriction is valid for.</span></span>         <span data-ttu-id="4f241-221">Sie kann in Form einer reinen IPv4-Adresse (erforderliche Subnetzmaske-Eigenschaft) oder CIDR-Notation wie IPv4/Mask (Leading Bit Match) erfolgen.</span><span class="sxs-lookup"><span data-stu-id="4f241-221">It can be in form of pure ipv4 address (required SubnetMask property) or         CIDR notation such as ipv4/mask (leading bit match).</span></span> <span data-ttu-id="4f241-222">Für CIDR darf keine Subnetzmaske-Eigenschaft angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="4f241-222">For CIDR,         SubnetMask property must not be specified.</span></span>
+      - <span data-ttu-id="4f241-223">`[Name <String>]`: Name der IP-Einschränkungs Regel</span><span class="sxs-lookup"><span data-stu-id="4f241-223">`[Name <String>]`: IP restriction rule name.</span></span>
+      - <span data-ttu-id="4f241-224">`[Priority <Int32?>]`: Priorität der IP-Einschränkungs Regel</span><span class="sxs-lookup"><span data-stu-id="4f241-224">`[Priority <Int32?>]`: Priority of IP restriction rule.</span></span>
+      - <span data-ttu-id="4f241-225">`[SubnetMask <String>]`: Subnetzmaske für den Bereich der IP-Adressen, für die die Einschränkung gültig ist.</span><span class="sxs-lookup"><span data-stu-id="4f241-225">`[SubnetMask <String>]`: Subnet mask for the range of IP addresses the restriction is valid for.</span></span>
+      - <span data-ttu-id="4f241-226">`[SubnetTrafficTag <Int32?>]`: (interner) Subnet Traffic-Tag</span><span class="sxs-lookup"><span data-stu-id="4f241-226">`[SubnetTrafficTag <Int32?>]`: (internal) Subnet traffic tag</span></span>
+      - <span data-ttu-id="4f241-227">`[Tag <IPFilterTag?>]`: Definiert, wofür dieser IP-Filter verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4f241-227">`[Tag <IPFilterTag?>]`: Defines what this IP filter will be used for.</span></span> <span data-ttu-id="4f241-228">Dadurch wird die IP-Filterung für Proxys unterstützt.</span><span class="sxs-lookup"><span data-stu-id="4f241-228">This is to support IP filtering on proxies.</span></span>
+      - <span data-ttu-id="4f241-229">`[VnetSubnetResourceId <String>]`: Virtuelle Netzwerk-Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="4f241-229">`[VnetSubnetResourceId <String>]`: Virtual network resource id</span></span>
+      - <span data-ttu-id="4f241-230">`[VnetTrafficTag <Int32?>]`: (intern) vnet Traffic-Tag</span><span class="sxs-lookup"><span data-stu-id="4f241-230">`[VnetTrafficTag <Int32?>]`: (internal) Vnet traffic tag</span></span>
+    - <span data-ttu-id="4f241-231">`[JavaContainer <String>]`: Java-Container.</span><span class="sxs-lookup"><span data-stu-id="4f241-231">`[JavaContainer <String>]`: Java container.</span></span>
+    - <span data-ttu-id="4f241-232">`[JavaContainerVersion <String>]`: Java-Container Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-232">`[JavaContainerVersion <String>]`: Java container version.</span></span>
+    - <span data-ttu-id="4f241-233">`[JavaVersion <String>]`: Java-Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-233">`[JavaVersion <String>]`: Java version.</span></span>
+    - <span data-ttu-id="4f241-234">`[LimitMaxDiskSizeInMb <Int64?>]`: Maximal zulässige Datenträgergröße in MB.</span><span class="sxs-lookup"><span data-stu-id="4f241-234">`[LimitMaxDiskSizeInMb <Int64?>]`: Maximum allowed disk size usage in MB.</span></span>
+    - <span data-ttu-id="4f241-235">`[LimitMaxMemoryInMb <Int64?>]`: Maximal zulässige Speicherauslastung in MB.</span><span class="sxs-lookup"><span data-stu-id="4f241-235">`[LimitMaxMemoryInMb <Int64?>]`: Maximum allowed memory usage in MB.</span></span>
+    - <span data-ttu-id="4f241-236">`[LimitMaxPercentageCpu <Double?>]`: Maximal zulässige CPU-Auslastung Prozentsatz.</span><span class="sxs-lookup"><span data-stu-id="4f241-236">`[LimitMaxPercentageCpu <Double?>]`: Maximum allowed CPU usage percentage.</span></span>
+    - <span data-ttu-id="4f241-237">`[LinuxFxVersion <String>]`: Linux-App-Framework und-Version</span><span class="sxs-lookup"><span data-stu-id="4f241-237">`[LinuxFxVersion <String>]`: Linux App Framework and version</span></span>
+    - <span data-ttu-id="4f241-238">`[LoadBalancing <SiteLoadBalancing?>]`: Lastenausgleich für Websites.</span><span class="sxs-lookup"><span data-stu-id="4f241-238">`[LoadBalancing <SiteLoadBalancing?>]`: Site load balancing.</span></span>
+    - <span data-ttu-id="4f241-239">`[LocalMySqlEnabled <Boolean?>]`: <code>true</code> um lokales MySQL zu aktivieren, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-239">`[LocalMySqlEnabled <Boolean?>]`: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-240">`[LogsDirectorySizeLimit <Int32?>]`: Maximale Größe des http-Logs-Verzeichnisses.</span><span class="sxs-lookup"><span data-stu-id="4f241-240">`[LogsDirectorySizeLimit <Int32?>]`: HTTP logs directory size limit.</span></span>
+    - <span data-ttu-id="4f241-241">`[MachineKeyDecryption <String>]`: Algorithmus, der für die Entschlüsselung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4f241-241">`[MachineKeyDecryption <String>]`: Algorithm used for decryption.</span></span>
+    - <span data-ttu-id="4f241-242">`[MachineKeyDecryptionKey <String>]`: Entschlüsselungsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="4f241-242">`[MachineKeyDecryptionKey <String>]`: Decryption key.</span></span>
+    - <span data-ttu-id="4f241-243">`[MachineKeyValidation <String>]`: MachineKey-Validierung.</span><span class="sxs-lookup"><span data-stu-id="4f241-243">`[MachineKeyValidation <String>]`: MachineKey validation.</span></span>
+    - <span data-ttu-id="4f241-244">`[MachineKeyValidationKey <String>]`: Gültigkeits Taste.</span><span class="sxs-lookup"><span data-stu-id="4f241-244">`[MachineKeyValidationKey <String>]`: Validation key.</span></span>
+    - <span data-ttu-id="4f241-245">`[ManagedPipelineMode <ManagedPipelineMode?>]`: Verwalteter Pipelinemodus.</span><span class="sxs-lookup"><span data-stu-id="4f241-245">`[ManagedPipelineMode <ManagedPipelineMode?>]`: Managed pipeline mode.</span></span>
+    - <span data-ttu-id="4f241-246">`[ManagedServiceIdentityId <Int32?>]`: Verwaltete Dienst Identitäts-ID</span><span class="sxs-lookup"><span data-stu-id="4f241-246">`[ManagedServiceIdentityId <Int32?>]`: Managed Service Identity Id</span></span>
+    - <span data-ttu-id="4f241-247">`[MinTlsVersion <SupportedTlsVersions?>]`: MinTlsVersion: konfiguriert die für SSL-Anforderungen erforderliche minimale Version von TLS</span><span class="sxs-lookup"><span data-stu-id="4f241-247">`[MinTlsVersion <SupportedTlsVersions?>]`: MinTlsVersion: configures the minimum version of TLS required for SSL requests</span></span>
+    - <span data-ttu-id="4f241-248">`[NetFrameworkVersion <String>]`: .NET Framework-Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-248">`[NetFrameworkVersion <String>]`: .NET Framework version.</span></span>
+    - <span data-ttu-id="4f241-249">`[NodeVersion <String>]`: Version von Node.js.</span><span class="sxs-lookup"><span data-stu-id="4f241-249">`[NodeVersion <String>]`: Version of Node.js.</span></span>
+    - <span data-ttu-id="4f241-250">`[NumberOfWorker <Int32?>]`: Anzahl der Mitarbeiter.</span><span class="sxs-lookup"><span data-stu-id="4f241-250">`[NumberOfWorker <Int32?>]`: Number of workers.</span></span>
+    - <span data-ttu-id="4f241-251">`[PhpVersion <String>]`: PHP-Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-251">`[PhpVersion <String>]`: Version of PHP.</span></span>
+    - <span data-ttu-id="4f241-252">`[PowerShellVersion <String>]`: PowerShell-Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-252">`[PowerShellVersion <String>]`: Version of PowerShell.</span></span>
+    - <span data-ttu-id="4f241-253">`[PreWarmedInstanceCount <Int32?>]`: Anzahl der vorgewärmten Instanzen.</span><span class="sxs-lookup"><span data-stu-id="4f241-253">`[PreWarmedInstanceCount <Int32?>]`: Number of preWarmed instances.</span></span>         <span data-ttu-id="4f241-254">Diese Einstellung gilt nur für den Verbrauch und die elastischen Pläne.</span><span class="sxs-lookup"><span data-stu-id="4f241-254">This setting only applies to the Consumption and Elastic Plans</span></span>
+    - <span data-ttu-id="4f241-255">`[PublishingUsername <String>]`: Veröffentlichungs Benutzername.</span><span class="sxs-lookup"><span data-stu-id="4f241-255">`[PublishingUsername <String>]`: Publishing user name.</span></span>
+    - <span data-ttu-id="4f241-256">`[PushKind <String>]`: Art der Ressource.</span><span class="sxs-lookup"><span data-stu-id="4f241-256">`[PushKind <String>]`: Kind of resource.</span></span>
+    - <span data-ttu-id="4f241-257">`[PythonVersion <String>]`: Version von Python.</span><span class="sxs-lookup"><span data-stu-id="4f241-257">`[PythonVersion <String>]`: Version of Python.</span></span>
+    - <span data-ttu-id="4f241-258">`[RemoteDebuggingEnabled <Boolean?>]`: <code>true</code> Wenn das Remotedebuggen aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-258">`[RemoteDebuggingEnabled <Boolean?>]`: <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-259">`[RemoteDebuggingVersion <String>]`: Remote Debugging-Version.</span><span class="sxs-lookup"><span data-stu-id="4f241-259">`[RemoteDebuggingVersion <String>]`: Remote debugging version.</span></span>
+    - <span data-ttu-id="4f241-260">`[RequestCount <Int32?>]`: Anzahl anfordern.</span><span class="sxs-lookup"><span data-stu-id="4f241-260">`[RequestCount <Int32?>]`: Request Count.</span></span>
+    - <span data-ttu-id="4f241-261">`[RequestTimeInterval <String>]`: Zeitintervall.</span><span class="sxs-lookup"><span data-stu-id="4f241-261">`[RequestTimeInterval <String>]`: Time interval.</span></span>
+    - <span data-ttu-id="4f241-262">`[RequestTracingEnabled <Boolean?>]`: <code>true</code> Wenn die Anforderungs Ablaufverfolgung aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-262">`[RequestTracingEnabled <Boolean?>]`: <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-263">`[RequestTracingExpirationTime <DateTime?>]`: Ablaufzeit der Ablaufverfolgung anfordern.</span><span class="sxs-lookup"><span data-stu-id="4f241-263">`[RequestTracingExpirationTime <DateTime?>]`: Request tracing expiration time.</span></span>
+    - <span data-ttu-id="4f241-264">`[ScmIPSecurityRestriction <IIPSecurityRestriction[]>]`: IP-Sicherheitseinschränkungen für SCM.</span><span class="sxs-lookup"><span data-stu-id="4f241-264">`[ScmIPSecurityRestriction <IIPSecurityRestriction[]>]`: IP security restrictions for scm.</span></span>
+    - <span data-ttu-id="4f241-265">`[ScmIPSecurityRestrictionsUseMain <Boolean?>]`: IP-Sicherheitseinschränkungen für SCM, um Main zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="4f241-265">`[ScmIPSecurityRestrictionsUseMain <Boolean?>]`: IP security restrictions for scm to use main.</span></span>
+    - <span data-ttu-id="4f241-266">`[ScmType <ScmType?>]`: SCM-Typ.</span><span class="sxs-lookup"><span data-stu-id="4f241-266">`[ScmType <ScmType?>]`: SCM type.</span></span>
+    - <span data-ttu-id="4f241-267">`[SlowRequestCount <Int32?>]`: Anzahl anfordern.</span><span class="sxs-lookup"><span data-stu-id="4f241-267">`[SlowRequestCount <Int32?>]`: Request Count.</span></span>
+    - <span data-ttu-id="4f241-268">`[SlowRequestTimeInterval <String>]`: Zeitintervall.</span><span class="sxs-lookup"><span data-stu-id="4f241-268">`[SlowRequestTimeInterval <String>]`: Time interval.</span></span>
+    - <span data-ttu-id="4f241-269">`[SlowRequestTimeTaken <String>]`: Zeitaufwand.</span><span class="sxs-lookup"><span data-stu-id="4f241-269">`[SlowRequestTimeTaken <String>]`: Time taken.</span></span>
+    - <span data-ttu-id="4f241-270">`[TagWhitelistJson <String>]`: Ruft eine JSON-Zeichenfolge mit einer Liste von Tags ab, die für die Verwendung durch den Push-Registrierungs Endpunkt whitelisted sind, oder legt diese fest.</span><span class="sxs-lookup"><span data-stu-id="4f241-270">`[TagWhitelistJson <String>]`: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.</span></span>
+    - <span data-ttu-id="4f241-271">`[TagsRequiringAuth <String>]`: Ruft eine JSON-Zeichenfolge mit einer Liste von Tags ab, für die die Benutzerauthentifizierung im Push-Registrierungs Endpunkt verwendet werden muss, oder legt diese fest.</span><span class="sxs-lookup"><span data-stu-id="4f241-271">`[TagsRequiringAuth <String>]`: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.</span></span>         <span data-ttu-id="4f241-272">Tags können aus alphanumerischen Zeichen und folgendem bestehen: "_"; "@"; "#"; "."; ":"; "-".</span><span class="sxs-lookup"><span data-stu-id="4f241-272">Tags can consist of alphanumeric characters and the following:         '_', '@', '#', '.', ':', '-'.</span></span>         <span data-ttu-id="4f241-273">Die Validierung sollte am PushRequestHandler durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="4f241-273">Validation should be performed at the PushRequestHandler.</span></span>
+    - <span data-ttu-id="4f241-274">`[TracingOption <String>]`: Ablaufverfolgungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="4f241-274">`[TracingOption <String>]`: Tracing options.</span></span>
+    - <span data-ttu-id="4f241-275">`[TriggerPrivateBytesInKb <Int32?>]`: Eine Regel, die auf privaten Bytes basiert.</span><span class="sxs-lookup"><span data-stu-id="4f241-275">`[TriggerPrivateBytesInKb <Int32?>]`: A rule based on private bytes.</span></span>
+    - <span data-ttu-id="4f241-276">`[TriggerStatusCode <IStatusCodesBasedTrigger[]>]`: Eine Regel, die auf Statuscodes basiert.</span><span class="sxs-lookup"><span data-stu-id="4f241-276">`[TriggerStatusCode <IStatusCodesBasedTrigger[]>]`: A rule based on status codes.</span></span>
+      - <span data-ttu-id="4f241-277">`[Count <Int32?>]`: Anzahl anfordern.</span><span class="sxs-lookup"><span data-stu-id="4f241-277">`[Count <Int32?>]`: Request Count.</span></span>
+      - <span data-ttu-id="4f241-278">`[Status <Int32?>]`: HTTP-Statuscode.</span><span class="sxs-lookup"><span data-stu-id="4f241-278">`[Status <Int32?>]`: HTTP status code.</span></span>
+      - <span data-ttu-id="4f241-279">`[SubStatus <Int32?>]`: Untergeordneten Status anfordern.</span><span class="sxs-lookup"><span data-stu-id="4f241-279">`[SubStatus <Int32?>]`: Request Sub Status.</span></span>
+      - <span data-ttu-id="4f241-280">`[TimeInterval <String>]`: Zeitintervall.</span><span class="sxs-lookup"><span data-stu-id="4f241-280">`[TimeInterval <String>]`: Time interval.</span></span>
+      - <span data-ttu-id="4f241-281">`[Win32Status <Int32?>]`: Win32-Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="4f241-281">`[Win32Status <Int32?>]`: Win32 error code.</span></span>
+    - <span data-ttu-id="4f241-282">`[Use32BitWorkerProcess <Boolean?>]`: <code>true</code> So verwenden Sie den 32-Bit-Workerprozess; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-282">`[Use32BitWorkerProcess <Boolean?>]`: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-283">`[VirtualApplication <IVirtualApplication[]>]`: Virtuelle Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="4f241-283">`[VirtualApplication <IVirtualApplication[]>]`: Virtual applications.</span></span>
+      - <span data-ttu-id="4f241-284">`[PhysicalPath <String>]`: Physikalischer Pfad.</span><span class="sxs-lookup"><span data-stu-id="4f241-284">`[PhysicalPath <String>]`: Physical path.</span></span>
+      - <span data-ttu-id="4f241-285">`[PreloadEnabled <Boolean?>]`: <code>true</code> Wenn das Vorabladen aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-285">`[PreloadEnabled <Boolean?>]`: <code>true</code> if preloading is enabled; otherwise, <code>false</code>.</span></span>
+      - <span data-ttu-id="4f241-286">`[VirtualDirectory <IVirtualDirectory[]>]`: Virtuelle Verzeichnisse für virtuelle Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="4f241-286">`[VirtualDirectory <IVirtualDirectory[]>]`: Virtual directories for virtual application.</span></span>
+        - <span data-ttu-id="4f241-287">`[PhysicalPath <String>]`: Physikalischer Pfad.</span><span class="sxs-lookup"><span data-stu-id="4f241-287">`[PhysicalPath <String>]`: Physical path.</span></span>
+        - <span data-ttu-id="4f241-288">`[VirtualPath <String>]`: Pfad zur virtuellen Anwendung.</span><span class="sxs-lookup"><span data-stu-id="4f241-288">`[VirtualPath <String>]`: Path to virtual application.</span></span>
+      - <span data-ttu-id="4f241-289">`[VirtualPath <String>]`: Virtueller Pfad.</span><span class="sxs-lookup"><span data-stu-id="4f241-289">`[VirtualPath <String>]`: Virtual path.</span></span>
+    - <span data-ttu-id="4f241-290">`[VnetName <String>]`: Virtueller Netzwerkname.</span><span class="sxs-lookup"><span data-stu-id="4f241-290">`[VnetName <String>]`: Virtual Network name.</span></span>
+    - <span data-ttu-id="4f241-291">`[WebSocketsEnabled <Boolean?>]`: <code>true</code> Wenn WebSocket aktiviert ist; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-291">`[WebSocketsEnabled <Boolean?>]`: <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.</span></span>
+    - <span data-ttu-id="4f241-292">`[WindowsFxVersion <String>]`: Xenon-App-Framework und-Version</span><span class="sxs-lookup"><span data-stu-id="4f241-292">`[WindowsFxVersion <String>]`: Xenon App Framework and version</span></span>
+    - <span data-ttu-id="4f241-293">`[XManagedServiceIdentityId <Int32?>]`: Explizite verwaltete Dienst Identitäts-ID</span><span class="sxs-lookup"><span data-stu-id="4f241-293">`[XManagedServiceIdentityId <Int32?>]`: Explicit Managed Service Identity Id</span></span>
+  - <span data-ttu-id="4f241-294">`[ContainerSize <Int32?>]`: Größe des Funktions Containers.</span><span class="sxs-lookup"><span data-stu-id="4f241-294">`[ContainerSize <Int32?>]`: Size of the function container.</span></span>
+  - <span data-ttu-id="4f241-295">`[DailyMemoryTimeQuota <Int32?>]`: Maximal zulässige tägliche Speicherzeit Kontingent (gilt nur für dynamische Apps).</span><span class="sxs-lookup"><span data-stu-id="4f241-295">`[DailyMemoryTimeQuota <Int32?>]`: Maximum allowed daily memory-time quota (applicable on dynamic apps only).</span></span>
+  - <span data-ttu-id="4f241-296">`[Enabled <Boolean?>]`: <code>true</code> Wenn die App aktiviert ist, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-296">`[Enabled <Boolean?>]`: <code>true</code> if the app is enabled; otherwise, <code>false</code>.</span></span> <span data-ttu-id="4f241-297">Wenn dieser Wert auf "false" festgelegt wird, wird die APP deaktiviert (übernimmt die APP offline).</span><span class="sxs-lookup"><span data-stu-id="4f241-297">Setting this value to false disables the app (takes the app offline).</span></span>
+  - <span data-ttu-id="4f241-298">`[HostNameSslState <IHostNameSslState[]>]`: Hostname SSL-Status werden verwendet, um die SSL-Bindungen für die Hostnamen der APP zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="4f241-298">`[HostNameSslState <IHostNameSslState[]>]`: Hostname SSL states are used to manage the SSL bindings for app's hostnames.</span></span>
+    - <span data-ttu-id="4f241-299">`[HostType <HostType?>]`: Gibt an, ob der Hostname ein Standard-oder Repository-Hostname ist.</span><span class="sxs-lookup"><span data-stu-id="4f241-299">`[HostType <HostType?>]`: Indicates whether the hostname is a standard or repository hostname.</span></span>
+    - <span data-ttu-id="4f241-300">`[Name <String>]`Hostname.</span><span class="sxs-lookup"><span data-stu-id="4f241-300">`[Name <String>]`: Hostname.</span></span>
+    - <span data-ttu-id="4f241-301">`[SslState <SslState?>]`: SSL-Typ.</span><span class="sxs-lookup"><span data-stu-id="4f241-301">`[SslState <SslState?>]`: SSL type.</span></span>
+    - <span data-ttu-id="4f241-302">`[Thumbprint <String>]`: Fingerabdruck des SSL-Zertifikats.</span><span class="sxs-lookup"><span data-stu-id="4f241-302">`[Thumbprint <String>]`: SSL certificate thumbprint.</span></span>
+    - <span data-ttu-id="4f241-303">`[ToUpdate <Boolean?>]`: Auf <code>true</code> , um vorhandenen Hostnamen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="4f241-303">`[ToUpdate <Boolean?>]`: Set to <code>true</code> to update existing hostname.</span></span>
+    - <span data-ttu-id="4f241-304">`[VirtualIP <String>]`: Virtuelle IP-Adresse, die dem Hostnamen zugewiesen ist, wenn IP-basiertes SSL aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="4f241-304">`[VirtualIP <String>]`: Virtual IP address assigned to the hostname if IP based SSL is enabled.</span></span>
+  - <span data-ttu-id="4f241-305">`[HostNamesDisabled <Boolean?>]`: <code>true</code> zum Deaktivieren der öffentlichen hostnames der APP; andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-305">`[HostNamesDisabled <Boolean?>]`: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.</span></span>          <span data-ttu-id="4f241-306">Wenn <code>true</code> die app nur über API-Verwaltungsprozess zugänglich ist.</span><span class="sxs-lookup"><span data-stu-id="4f241-306">If <code>true</code>, the app is only accessible via API management process.</span></span>
+  - <span data-ttu-id="4f241-307">`[HostingEnvironmentProfileId <String>]`: Ressourcen-ID der APP-Dienstumgebung.</span><span class="sxs-lookup"><span data-stu-id="4f241-307">`[HostingEnvironmentProfileId <String>]`: Resource ID of the App Service Environment.</span></span>
+  - <span data-ttu-id="4f241-308">`[HttpsOnly <Boolean?>]`: HttpsOnly: konfiguriert eine Website so, dass nur HTTPS-Anforderungen akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="4f241-308">`[HttpsOnly <Boolean?>]`: HttpsOnly: configures a web site to accept only https requests.</span></span> <span data-ttu-id="4f241-309">Probleme beim Umleiten für HTTP-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4f241-309">Issues redirect for         http requests</span></span>
+  - <span data-ttu-id="4f241-310">`[HyperV <Boolean?>]`: Hyper-V-Sandbox.</span><span class="sxs-lookup"><span data-stu-id="4f241-310">`[HyperV <Boolean?>]`: Hyper-V sandbox.</span></span>
+  - <span data-ttu-id="4f241-311">`[IdentityType <ManagedServiceIdentityType?>]`: Typ der verwalteten Dienstidentität.</span><span class="sxs-lookup"><span data-stu-id="4f241-311">`[IdentityType <ManagedServiceIdentityType?>]`: Type of managed service identity.</span></span>
+  - <span data-ttu-id="4f241-312">`[IdentityUserAssignedIdentity <IManagedServiceIdentityUserAssignedIdentities>]`: Die Liste der Benutzer zugewiesenen Identitäten, die der Ressource zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="4f241-312">`[IdentityUserAssignedIdentity <IManagedServiceIdentityUserAssignedIdentities>]`: The list of user assigned identities associated with the resource.</span></span> <span data-ttu-id="4f241-313">Die Schlüssel Verweise für das Benutzer-ID-Wörterbuch sind arm-Ressourcen-IDs im folgenden Format: "/Subscriptions/{SubscriptionId}/resourceGroups/{resourceGroupName}/Providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}</span><span class="sxs-lookup"><span data-stu-id="4f241-313">The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}</span></span>
+    - <span data-ttu-id="4f241-314">`[(Any) <IComponents1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties>]`: Gibt an, dass einer Eigenschaft dieses Objekt hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4f241-314">`[(Any) <IComponents1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties>]`: This indicates any property can be added to this object.</span></span>
+  - <span data-ttu-id="4f241-315">`[IsXenon <Boolean?>]`: Veraltet: Hyper-V-Sandbox.</span><span class="sxs-lookup"><span data-stu-id="4f241-315">`[IsXenon <Boolean?>]`: Obsolete: Hyper-V sandbox.</span></span>
+  - <span data-ttu-id="4f241-316">`[RedundancyMode <RedundancyMode?>]`: Website Redundanzmodus</span><span class="sxs-lookup"><span data-stu-id="4f241-316">`[RedundancyMode <RedundancyMode?>]`: Site redundancy mode</span></span>
+  - <span data-ttu-id="4f241-317">`[Reserved <Boolean?>]`: <code>true</code> Wenn reserviert; andernfalls; <code>false</code></span><span class="sxs-lookup"><span data-stu-id="4f241-317">`[Reserved <Boolean?>]`: <code>true</code> if reserved; otherwise, <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-318">`[ScmSiteAlsoStopped <Boolean?>]`: <code>true</code> um die SCM-Website (KUDU) zu beenden, wenn die APP angehalten wird, andernfalls <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-318">`[ScmSiteAlsoStopped <Boolean?>]`: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>.</span></span> <span data-ttu-id="4f241-319">Der Standardwert ist <code>false</code> .</span><span class="sxs-lookup"><span data-stu-id="4f241-319">The default is <code>false</code>.</span></span>
+  - <span data-ttu-id="4f241-320">`[ServerFarmId <String>]`: Ressourcen-ID des zugehörigen App-Service Plans, formatiert als: "/Subscriptions/{subscriptionID}/resourceGroups/{GroupName}/Providers/Microsoft.Web/Serverfarms/{appServicePlanName}"</span><span class="sxs-lookup"><span data-stu-id="4f241-320">`[ServerFarmId <String>]`: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".</span></span>
+
+## <span data-ttu-id="4f241-321">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="4f241-321">RELATED LINKS</span></span>
+
