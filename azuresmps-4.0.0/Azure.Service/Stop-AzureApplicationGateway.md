@@ -1,0 +1,92 @@
+---
+external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+ms.assetid: 17BA2ED5-E347-45C0-AF20-CDD288469514
+online version: ''
+schema: 2.0.0
+ms.openlocfilehash: a07afcadb2207f2e4377601abfa6094bc3293328
+ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "94006614"
+---
+# Stop-AzureApplicationGateway
+
+## Synopsis
+Beendet ein Anwendungsgateway.
+
+## Syntax
+
+```
+Stop-AzureApplicationGateway -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet **Stop-AzureApplicationGateway** beendet ein Anwendungsgateway.
+
+## Beispiele
+
+### Beispiel 1: Beenden eines Anwendungs Gateways
+```
+PS C:\> Stop-AzureApplicationGateway -Name "ApplicationGateway06"
+```
+
+Dieser Befehl beendet das Anwendungsgateway mit dem Namen ApplicationGateway06.
+
+## Parameter
+
+### -Name
+Gibt den Namen des Anwendungs Gateways an, das mit diesem Cmdlet beendet wird.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Profil
+Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
+
+```yaml
+Type: AzureSMProfile
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+### System. String
+
+## Ausgaben
+
+### Microsoft. WindowsAzure. Management. ApplicationGateway. Models. ApplicationGatewayOperationResponse
+
+## Notizen
+
+## Verwandte Links
+
+[Get-AzureApplicationGateway](./Get-AzureApplicationGateway.md)
+
+[Neu – AzureApplicationGateway](./New-AzureApplicationGateway.md)
+
+[Remove-AzureApplicationGateway](./Remove-AzureApplicationGateway.md)
+
+[Anfang-AzureApplicationGateway](./Start-AzureApplicationGateway.md)
+
+[Update-AzureApplicationGateway](./Update-AzureApplicationGateway.md)

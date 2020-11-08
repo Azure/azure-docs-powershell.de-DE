@@ -1,0 +1,127 @@
+---
+external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+ms.assetid: 8A269A53-8FB2-4D4E-8FBB-A84BE658F75F
+online version: ''
+schema: 2.0.0
+ms.openlocfilehash: 002834bda663dda1c9ebe5f24bb0f1aa0007655c
+ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "94006538"
+---
+# Get-AzureOSDisk
+
+## Synopsis
+Ruft den Betriebssystemdatenträger eines Azure Virtual Machine ab.
+
+## Syntax
+
+```
+Get-AzureOSDisk -VM <IPersistentVM> [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet " **Get-AzureOSDisk** " Ruft den Betriebssystemdatenträger eines Azure Virtual Machine ab.
+
+## Beispiele
+
+### Beispiel 1: Abrufen eines Betriebssystemdatenträgers
+```
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02" | Get-AzureOSDisk
+```
+
+Dieser Befehl ruft den virtuellen Computer mit dem Namen VirtualMachine02 im Dienst ContosoService mit dem Cmdlet **Get-AzureVM** ab.
+Der Befehl übergibt den virtuellen Computer mithilfe des Pipelineoperators an das aktuelle Cmdlet.
+Das aktuelle Cmdlet ruft den Betriebssystemdatenträger dieses virtuellen Computers ab.
+
+## Parameter
+
+### -Information
+Gibt an, wie dieses Cmdlet auf ein Informationsereignis reagiert.
+
+Die zulässigen Werte für diesen Parameter lauten wie folgt:
+
+- Weiterhin
+- Ignorieren
+- Erkundigen
+- SilentlyContinue
+- Beenden
+- Anhalten
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Gibt eine Informations Variable an.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Profil
+Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
+
+```yaml
+Type: AzureSMProfile
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VM
+Gibt den virtuellen Computer an, für den dieses Cmdlet den Betriebssystemdatenträger abruft.
+Verwenden Sie das Cmdlet **Get-AzureVM** , um ein Objekt eines virtuellen Computers zu erhalten.
+
+```yaml
+Type: IPersistentVM
+Parameter Sets: (All)
+Aliases: InputObject
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## Eingaben
+
+## Ausgaben
+
+## Notizen
+
+## Verwandte Links
+
+[Get-AzureDataDisk](./Get-AzureDataDisk.md)
+
+[Satz-AzureOSDisk](./Set-AzureOSDisk.md)
+
+
