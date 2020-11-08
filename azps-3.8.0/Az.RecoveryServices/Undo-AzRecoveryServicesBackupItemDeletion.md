@@ -1,0 +1,163 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+Module Name: Az.RecoveryServices
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/undo-azrecoveryservicesbackupitemdeletion
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Undo-AzRecoveryServicesBackupItemDeletion.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Undo-AzRecoveryServicesBackupItemDeletion.md
+ms.openlocfilehash: 80d03117278073b7b80b9c910a5ee4101a9db09a
+ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "93996313"
+---
+# <span data-ttu-id="d99ce-101">Undo-AzRecoveryServicesBackupItemDeletion</span><span class="sxs-lookup"><span data-stu-id="d99ce-101">Undo-AzRecoveryServicesBackupItemDeletion</span></span>
+
+## <span data-ttu-id="d99ce-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="d99ce-102">SYNOPSIS</span></span>
+<span data-ttu-id="d99ce-103">Pausiert ein Soft-Deleted-Element</span><span class="sxs-lookup"><span data-stu-id="d99ce-103">Rehydrates a soft-deleted Item</span></span>
+
+## <span data-ttu-id="d99ce-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d99ce-104">SYNTAX</span></span>
+
+```
+Undo-AzRecoveryServicesBackupItemDeletion [-Item] <ItemBase> [-Force] [-VaultId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="d99ce-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d99ce-105">DESCRIPTION</span></span>
+<span data-ttu-id="d99ce-106">Mit dem Undo-AzRecoveryServicesBackupItemDeletion-Cmdlet wird ein Soft-Deleted-Element pausiert.</span><span class="sxs-lookup"><span data-stu-id="d99ce-106">The Undo-AzRecoveryServicesBackupItemDeletion cmdlet rehydrates a soft-deleted item.</span></span>
+<span data-ttu-id="d99ce-107">Setzen Sie den Vault-Kontext mithilfe des Set-AzRecoveryServicesVaultContext-Cmdlets, bevor Sie das aktuelle Cmdlet verwenden.</span><span class="sxs-lookup"><span data-stu-id="d99ce-107">Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.</span></span>
+
+## <span data-ttu-id="d99ce-108">Beispiele</span><span class="sxs-lookup"><span data-stu-id="d99ce-108">EXAMPLES</span></span>
+
+### <span data-ttu-id="d99ce-109">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="d99ce-109">Example 1</span></span>
+```powershell
+PS C:\> $Cont = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM
+PS C:\> $PI = Get-AzRecoveryServicesBackupItem -Container $Cont[0] -WorkloadType AzureVM 
+PS C:\> Disable-AzRecoveryServicesBackupProtection -Item $PI[0] -RemoveRecoveryPoints
+PS C:\> $PI = Get-AzRecoveryServicesBackupItem -Container $Cont[0] -WorkloadType AzureVM 
+PS C:\> Undo-AzRecoveryServicesBackupItemDeletion -Item $PI[0]
+```
+
+<span data-ttu-id="d99ce-110">Der erste Befehl ruft ein Array von Sicherungs Containern ab und speichert es dann im $CONT-Array.</span><span class="sxs-lookup"><span data-stu-id="d99ce-110">The first command gets an array of backup containers, and then stores it in the $Cont array.</span></span>
+<span data-ttu-id="d99ce-111">Der zweite Befehl ruft das Sicherungselement ab, das dem ersten Containerelement entspricht, und speichert es dann in der $Pi Variablen.</span><span class="sxs-lookup"><span data-stu-id="d99ce-111">The second command gets the Backup item corresponding to the first container item, and then stores it in the $PI variable.</span></span>
+<span data-ttu-id="d99ce-112">Der dritte Befehl deaktiviert den Sicherungsschutz für das Element in $Pi \[ 0 \] und platziert das Element in einem softdeleted-Zustand.</span><span class="sxs-lookup"><span data-stu-id="d99ce-112">The third command disables Backup protection for the item in $PI\[0\] and puts the item in a softdeleted state.</span></span>
+<span data-ttu-id="d99ce-113">Der vierte Befehl das neue Element, das sich in einem softdeleted-Zustand befindet.</span><span class="sxs-lookup"><span data-stu-id="d99ce-113">The fourth command the new item which is in a softdeleted state.</span></span>
+<span data-ttu-id="d99ce-114">Mit dem letzten Befehl wird die softdeleted-VM rehydriert.</span><span class="sxs-lookup"><span data-stu-id="d99ce-114">The last command rehydrates the softdeleted VM.</span></span>
+
+## <span data-ttu-id="d99ce-115">Parameter</span><span class="sxs-lookup"><span data-stu-id="d99ce-115">PARAMETERS</span></span>
+
+### <span data-ttu-id="d99ce-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d99ce-116">-DefaultProfile</span></span>
+<span data-ttu-id="d99ce-117">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="d99ce-117">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-118">-Force</span><span class="sxs-lookup"><span data-stu-id="d99ce-118">-Force</span></span>
+<span data-ttu-id="d99ce-119">Force deaktiviert den Sicherungsschutz (verhindert das Bestätigungsdialogfeld).</span><span class="sxs-lookup"><span data-stu-id="d99ce-119">Force disables backup protection (prevents confirmation dialog).</span></span>
+<span data-ttu-id="d99ce-120">Dieser Parameter ist optional.</span><span class="sxs-lookup"><span data-stu-id="d99ce-120">This parameter is optional.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-121">-Item</span><span class="sxs-lookup"><span data-stu-id="d99ce-121">-Item</span></span>
+<span data-ttu-id="d99ce-122">Gibt das Sicherungselement an, für das dieses Cmdlet den Schutz deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="d99ce-122">Specifies the Backup item for which this cmdlet disables protection.</span></span>
+<span data-ttu-id="d99ce-123">Verwenden Sie zum Abrufen eines AzureRmRecoveryServicesBackupItem das Get-AzRecoveryServicesBackupItem-Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="d99ce-123">To obtain an AzureRmRecoveryServicesBackupItem , use the Get-AzRecoveryServicesBackupItem cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-124">-Tresor</span><span class="sxs-lookup"><span data-stu-id="d99ce-124">-VaultId</span></span>
+<span data-ttu-id="d99ce-125">Arm-ID des Speichers für Wiederherstellungsdienste</span><span class="sxs-lookup"><span data-stu-id="d99ce-125">ARM ID of the Recovery Services Vault.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-126">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="d99ce-126">-Confirm</span></span>
+<span data-ttu-id="d99ce-127">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="d99ce-127">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-128">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d99ce-128">-WhatIf</span></span>
+<span data-ttu-id="d99ce-129">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d99ce-129">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="d99ce-130">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="d99ce-130">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d99ce-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d99ce-131">CommonParameters</span></span>
+<span data-ttu-id="d99ce-132">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d99ce-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d99ce-133">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="d99ce-133">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="d99ce-134">Eingaben</span><span class="sxs-lookup"><span data-stu-id="d99ce-134">INPUTS</span></span>
+
+### <span data-ttu-id="d99ce-135">Microsoft. Azure. Commands. RecoveryServices. Backup. Cmdlets. Models. ItemBase</span><span class="sxs-lookup"><span data-stu-id="d99ce-135">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase</span></span>
+
+### <span data-ttu-id="d99ce-136">System. String</span><span class="sxs-lookup"><span data-stu-id="d99ce-136">System.String</span></span>
+
+## <span data-ttu-id="d99ce-137">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="d99ce-137">OUTPUTS</span></span>
+
+### <span data-ttu-id="d99ce-138">Microsoft. Azure. Commands. RecoveryServices. Backup. Cmdlets. Models. JobBase</span><span class="sxs-lookup"><span data-stu-id="d99ce-138">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase</span></span>
+
+## <span data-ttu-id="d99ce-139">Notizen</span><span class="sxs-lookup"><span data-stu-id="d99ce-139">NOTES</span></span>
+
+## <span data-ttu-id="d99ce-140">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="d99ce-140">RELATED LINKS</span></span>
+
+[<span data-ttu-id="d99ce-141">Get-AzRecoveryServicesBackupContainer</span><span class="sxs-lookup"><span data-stu-id="d99ce-141">Get-AzRecoveryServicesBackupContainer</span></span>]()
+
+[<span data-ttu-id="d99ce-142">Get-AzRecoveryServicesBackupItem</span><span class="sxs-lookup"><span data-stu-id="d99ce-142">Get-AzRecoveryServicesBackupItem</span></span>]()
+

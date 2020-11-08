@@ -1,0 +1,160 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: Az.ApiManagement
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementidentityprovider
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementIdentityProvider.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementIdentityProvider.md
+ms.openlocfilehash: 4909c9d9b9a7fa1af1e4353c63256ed73d229f57
+ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "93996856"
+---
+# <span data-ttu-id="c8e84-101">Remove-AzApiManagementIdentityProvider</span><span class="sxs-lookup"><span data-stu-id="c8e84-101">Remove-AzApiManagementIdentityProvider</span></span>
+
+## <span data-ttu-id="c8e84-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="c8e84-102">SYNOPSIS</span></span>
+<span data-ttu-id="c8e84-103">Entfernt eine vorhandene Identität Anbieterkonfiguration.</span><span class="sxs-lookup"><span data-stu-id="c8e84-103">Removes an existing Identity Provider Configuration.</span></span>
+
+## <span data-ttu-id="c8e84-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c8e84-104">SYNTAX</span></span>
+
+```
+Remove-AzApiManagementIdentityProvider -Context <PsApiManagementContext>
+ -Type <PsApiManagementIdentityProviderType> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="c8e84-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c8e84-105">DESCRIPTION</span></span>
+<span data-ttu-id="c8e84-106">Entfernt eine vorhandene Identität Anbieterkonfiguration.</span><span class="sxs-lookup"><span data-stu-id="c8e84-106">Removes an existing Identity Provider Configuration.</span></span>
+
+## <span data-ttu-id="c8e84-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c8e84-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="c8e84-108">Entfernt die Einstellungen des Facebook-Identitätsanbieters aus dem ApiManagement-Dienst</span><span class="sxs-lookup"><span data-stu-id="c8e84-108">Removes the Facebook identity provider settings from ApiManagement service</span></span>
+```
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementIdentityProvider -Context $apimContext -Type 'Facebook' -PassThru
+```
+
+<span data-ttu-id="c8e84-109">Löscht die Konfiguration in Bezug auf die Konfiguration des Facebook-Identitätsanbieters.</span><span class="sxs-lookup"><span data-stu-id="c8e84-109">Deletes configuration related to Facebook Identity provider configuration.</span></span>
+
+## <span data-ttu-id="c8e84-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="c8e84-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="c8e84-111">-Context</span><span class="sxs-lookup"><span data-stu-id="c8e84-111">-Context</span></span>
+<span data-ttu-id="c8e84-112">Instanz von PsApiManagementContext.</span><span class="sxs-lookup"><span data-stu-id="c8e84-112">Instance of PsApiManagementContext.</span></span>
+<span data-ttu-id="c8e84-113">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c8e84-113">This parameter is required.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-114">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c8e84-114">-DefaultProfile</span></span>
+<span data-ttu-id="c8e84-115">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="c8e84-115">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-116">-PassThru</span><span class="sxs-lookup"><span data-stu-id="c8e84-116">-PassThru</span></span>
+<span data-ttu-id="c8e84-117">Gibt an, dass dieses Cmdlet den Wert $true zurückgibt, wenn der Vorgang erfolgreich ausgeführt wird oder $false andernfalls.</span><span class="sxs-lookup"><span data-stu-id="c8e84-117">Indicates that this cmdlet returns a value of $True if the operation succeeds or $False otherwise.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-118">-Typ</span><span class="sxs-lookup"><span data-stu-id="c8e84-118">-Type</span></span>
+<span data-ttu-id="c8e84-119">Bezeichner eines vorhandenen Identitätsanbieters.</span><span class="sxs-lookup"><span data-stu-id="c8e84-119">Identifier of an existing Identity Provider.</span></span>
+<span data-ttu-id="c8e84-120">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c8e84-120">This parameter is required.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Facebook, Google, Microsoft, Twitter, Aad, AadB2C
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-121">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="c8e84-121">-Confirm</span></span>
+<span data-ttu-id="c8e84-122">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="c8e84-122">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-123">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c8e84-123">-WhatIf</span></span>
+<span data-ttu-id="c8e84-124">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c8e84-124">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="c8e84-125">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c8e84-125">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="c8e84-126">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c8e84-126">CommonParameters</span></span>
+<span data-ttu-id="c8e84-127">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c8e84-127">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c8e84-128">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="c8e84-128">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="c8e84-129">Eingaben</span><span class="sxs-lookup"><span data-stu-id="c8e84-129">INPUTS</span></span>
+
+### <span data-ttu-id="c8e84-130">Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="c8e84-130">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+
+### <span data-ttu-id="c8e84-131">Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementIdentityProviderType</span><span class="sxs-lookup"><span data-stu-id="c8e84-131">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType</span></span>
+
+### <span data-ttu-id="c8e84-132">System. Management. Automation. Switchparameter</span><span class="sxs-lookup"><span data-stu-id="c8e84-132">System.Management.Automation.SwitchParameter</span></span>
+
+## <span data-ttu-id="c8e84-133">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="c8e84-133">OUTPUTS</span></span>
+
+### <span data-ttu-id="c8e84-134">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="c8e84-134">System.Boolean</span></span>
+
+## <span data-ttu-id="c8e84-135">Notizen</span><span class="sxs-lookup"><span data-stu-id="c8e84-135">NOTES</span></span>
+
+## <span data-ttu-id="c8e84-136">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="c8e84-136">RELATED LINKS</span></span>
+
+[<span data-ttu-id="c8e84-137">Neu – AzApiManagementIdentityProvider</span><span class="sxs-lookup"><span data-stu-id="c8e84-137">New-AzApiManagementIdentityProvider</span></span>](./New-AzApiManagementIdentityProvider.md)
+
+[<span data-ttu-id="c8e84-138">Get-AzApiManagementIdentityProvider</span><span class="sxs-lookup"><span data-stu-id="c8e84-138">Get-AzApiManagementIdentityProvider</span></span>](./Get-AzApiManagementIdentityProvider.md)
+
+[<span data-ttu-id="c8e84-139">Satz-AzApiManagementIdentityProvider</span><span class="sxs-lookup"><span data-stu-id="c8e84-139">Set-AzApiManagementIdentityProvider</span></span>](./Set-AzApiManagementIdentityProvider.md)
+
