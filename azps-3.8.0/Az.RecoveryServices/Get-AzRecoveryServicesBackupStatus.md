@@ -1,0 +1,161 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+Module Name: Az.RecoveryServices
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupstatus
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupStatus.md
+ms.openlocfilehash: 1e10fe2aa534e236c99468ec672e6a0eeadae469
+ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "94004925"
+---
+# <span data-ttu-id="60d5a-101">Get-AzRecoveryServicesBackupStatus</span><span class="sxs-lookup"><span data-stu-id="60d5a-101">Get-AzRecoveryServicesBackupStatus</span></span>
+
+## <span data-ttu-id="60d5a-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="60d5a-102">SYNOPSIS</span></span>
+<span data-ttu-id="60d5a-103">Überprüft, ob Ihre Arm-Ressource gesichert wird.</span><span class="sxs-lookup"><span data-stu-id="60d5a-103">Checks whether your ARM resource is backed up or not.</span></span>
+
+## <span data-ttu-id="60d5a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="60d5a-104">SYNTAX</span></span>
+
+### <span data-ttu-id="60d5a-105">Name (Standard)</span><span class="sxs-lookup"><span data-stu-id="60d5a-105">Name (Default)</span></span>
+```
+Get-AzRecoveryServicesBackupStatus -Name <String> -ResourceGroupName <String> -Type <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="60d5a-106">IdWorkload</span><span class="sxs-lookup"><span data-stu-id="60d5a-106">IdWorkload</span></span>
+```
+Get-AzRecoveryServicesBackupStatus -Type <String> -ResourceId <String> -ProtectableObjectName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="60d5a-107">ID</span><span class="sxs-lookup"><span data-stu-id="60d5a-107">Id</span></span>
+```
+Get-AzRecoveryServicesBackupStatus -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="60d5a-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="60d5a-108">DESCRIPTION</span></span>
+<span data-ttu-id="60d5a-109">Der Befehl gibt NULL/Empty zurück, wenn die angegebene Ressource unter einem Vault für Wiederherstellungsdienste im Abonnement nicht geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-109">The command returns null/empty if the specified resource is not protected under any Recovery Services vault in the subscription.</span></span> <span data-ttu-id="60d5a-110">Wenn es geschützt ist, werden die entsprechenden Tresor-Details zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="60d5a-110">If it is protected, the relevant vault details will be returned.</span></span>
+
+## <span data-ttu-id="60d5a-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="60d5a-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="60d5a-112">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="60d5a-112">Example 1</span></span>
+```
+PS C:\> $status = Get-AzRecoveryServicesBackupStatus -Name "myAzureVM" -ResourceGroupName "myAzureVMRG" -ResourceType "AzureVM"
+PS C:\> If ($status.BackedUp -eq $false) {
+$vault = Get-AzRecoveryServicesVault -Name "testvault" -ResourceGroupName "vaultResourceGroup"
+$defPolicy = Get-AzRecoveryServicesBackupProtectionPolicy -Vault $vault -WorkloadType "AzureVM"
+Enable-AzRecoveryServicesBackupProtection -Vault $vault -Policy $defpol -Name "myAzureVM" -ResourceGroupName "myAzureVMRG"
+}
+```
+
+## <span data-ttu-id="60d5a-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="60d5a-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="60d5a-114">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="60d5a-114">-DefaultProfile</span></span>
+<span data-ttu-id="60d5a-115">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="60d5a-115">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-116">-Name</span><span class="sxs-lookup"><span data-stu-id="60d5a-116">-Name</span></span>
+<span data-ttu-id="60d5a-117">Der Name der Azure-Ressource, deren repräsentatives Element überprüft werden muss, wenn es bereits durch einen Vault für Wiederherstellungsdienste im Abonnement geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-117">Name of the Azure Resource whose representative item needs to be checked if it is already protected by some Recovery Services Vault in the subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Name
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-118">-ProtectableObjectName</span><span class="sxs-lookup"><span data-stu-id="60d5a-118">-ProtectableObjectName</span></span>
+<span data-ttu-id="60d5a-119">Der Name der Azure-Ressource, deren repräsentatives Element überprüft werden muss, wenn es bereits durch einen Vault für Wiederherstellungsdienste im Abonnement geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-119">Name of the Azure Resource whose representative item needs to be checked if it is already protected by some Recovery Services Vault in the subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IdWorkload
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="60d5a-120">-ResourceGroupName</span></span>
+<span data-ttu-id="60d5a-121">Der Name der Ressourcengruppe der Azure-Ressource, deren repräsentatives Element überprüft werden muss, wenn es bereits durch einige RecoveryServices-Tresor im Abonnement geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-121">Name of the resource group of the Azure Resource whose representative item needs to be checked if it is already protected by some RecoveryServices Vault in the subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Name
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-122">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="60d5a-122">-ResourceId</span></span>
+<span data-ttu-id="60d5a-123">Die ID der Azure-Ressource, deren repräsentatives Element überprüft werden muss, wenn es bereits durch einige RecoveryServices-Tresor im Abonnement geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-123">ID of the Azure Resource whose representative item needs to be checked if it is already protected by some RecoveryServices Vault in the subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: IdWorkload, Id
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-124">-Typ</span><span class="sxs-lookup"><span data-stu-id="60d5a-124">-Type</span></span>
+<span data-ttu-id="60d5a-125">Der Name der Azure-Ressource, deren repräsentatives Element überprüft werden muss, wenn es bereits durch einen Vault für Wiederherstellungsdienste im Abonnement geschützt ist.</span><span class="sxs-lookup"><span data-stu-id="60d5a-125">Name of the Azure Resource whose representative item needs to be checked if it is already protected by some Recovery Services Vault in the subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Name, IdWorkload
+Aliases:
+Accepted values: AzureVM, AzureFiles
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="60d5a-126">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="60d5a-126">CommonParameters</span></span>
+<span data-ttu-id="60d5a-127">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="60d5a-127">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="60d5a-128">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="60d5a-128">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="60d5a-129">Eingaben</span><span class="sxs-lookup"><span data-stu-id="60d5a-129">INPUTS</span></span>
+
+### <span data-ttu-id="60d5a-130">System. String</span><span class="sxs-lookup"><span data-stu-id="60d5a-130">System.String</span></span>
+
+## <span data-ttu-id="60d5a-131">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="60d5a-131">OUTPUTS</span></span>
+
+### <span data-ttu-id="60d5a-132">Microsoft. Azure. Commands. RecoveryServices. Backup. Cmdlets. Models. ResourceBackupStatus</span><span class="sxs-lookup"><span data-stu-id="60d5a-132">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ResourceBackupStatus</span></span>
+
+## <span data-ttu-id="60d5a-133">Notizen</span><span class="sxs-lookup"><span data-stu-id="60d5a-133">NOTES</span></span>
+
+## <span data-ttu-id="60d5a-134">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="60d5a-134">RELATED LINKS</span></span>
