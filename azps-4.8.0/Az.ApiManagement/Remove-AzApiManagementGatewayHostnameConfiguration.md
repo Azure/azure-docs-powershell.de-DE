@@ -1,0 +1,214 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: Az.ApiManagement
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementgatewayhostnameconfiguration
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementGatewayHostnameConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementGatewayHostnameConfiguration.md
+ms.openlocfilehash: e1999387cc2beb5a55fba3aef771a76440804f22
+ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "94008753"
+---
+# <span data-ttu-id="7067f-101">Remove-AzApiManagementGatewayHostnameConfiguration</span><span class="sxs-lookup"><span data-stu-id="7067f-101">Remove-AzApiManagementGatewayHostnameConfiguration</span></span>
+
+## <span data-ttu-id="7067f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="7067f-102">SYNOPSIS</span></span>
+<span data-ttu-id="7067f-103">Entfernt eine Hostname-Konfiguration vom vorhandenen Gateway.</span><span class="sxs-lookup"><span data-stu-id="7067f-103">Removes a hostname configuration from the existing Gateway.</span></span>
+
+## <span data-ttu-id="7067f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7067f-104">SYNTAX</span></span>
+
+### <span data-ttu-id="7067f-105">ContextParameterSetName (Standard)</span><span class="sxs-lookup"><span data-stu-id="7067f-105">ContextParameterSetName (Default)</span></span>
+```
+Remove-AzApiManagementGatewayHostnameConfiguration -Context <PsApiManagementContext> -GatewayId <String>
+ -GatewayHostnameConfigurationId <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="7067f-106">ByInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="7067f-106">ByInputObjectParameterSet</span></span>
+```
+Remove-AzApiManagementGatewayHostnameConfiguration -InputObject <PsApiManagementGatewayHostnameConfiguration>
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="7067f-107">ByResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="7067f-107">ByResourceIdParameterSet</span></span>
+```
+Remove-AzApiManagementGatewayHostnameConfiguration -ResourceId <String> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="7067f-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7067f-108">DESCRIPTION</span></span>
+<span data-ttu-id="7067f-109">Das Cmdlet **Remove-AzApiManagementGatewayHostnameConfiguration** entfernt eine Hostname-Konfiguration aus dem vorhandenen Gateway.</span><span class="sxs-lookup"><span data-stu-id="7067f-109">The **Remove-AzApiManagementGatewayHostnameConfiguration** cmdlet removes a hostname configuration from the existing Gateway.</span></span>
+
+## <span data-ttu-id="7067f-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="7067f-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="7067f-111">Beispiel 1: Entfernen einer vorhandenen Gateway-Hostname-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="7067f-111">Example 1: Remove an existing gateway hostname configuration</span></span>
+```powershell
+PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementGatewayHostnameConfiguration -Context $apimContext -GatewayId "g0001" -GatewayHostnameConfigurationId "h0001" -Force
+```
+
+<span data-ttu-id="7067f-112">Mit diesem Befehl wird eine vorhandene Gateway-Hostname-Konfiguration entfernt, und der Benutzer wird nicht zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="7067f-112">This command removes an existing gateway hostname configuration and does not prompt the user for confirmation.</span></span>
+
+## <span data-ttu-id="7067f-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="7067f-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="7067f-114">-Context</span><span class="sxs-lookup"><span data-stu-id="7067f-114">-Context</span></span>
+<span data-ttu-id="7067f-115">Instanz von PsApiManagementContext.</span><span class="sxs-lookup"><span data-stu-id="7067f-115">Instance of PsApiManagementContext.</span></span>
+<span data-ttu-id="7067f-116">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7067f-116">This parameter is required.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
+Parameter Sets: ContextParameterSetName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7067f-117">-DefaultProfile</span></span>
+<span data-ttu-id="7067f-118">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="7067f-118">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-119">-GatewayHostnameConfigurationId</span><span class="sxs-lookup"><span data-stu-id="7067f-119">-GatewayHostnameConfigurationId</span></span>
+<span data-ttu-id="7067f-120">Bezeichner der vorhandenen Gateway-Hostname-Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="7067f-120">Identifier of existing gateway hostname configuration.</span></span>
+<span data-ttu-id="7067f-121">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7067f-121">This parameter is required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ContextParameterSetName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-122">-Gatewayserver</span><span class="sxs-lookup"><span data-stu-id="7067f-122">-GatewayId</span></span>
+<span data-ttu-id="7067f-123">Bezeichner des vorhandenen Gateways.</span><span class="sxs-lookup"><span data-stu-id="7067f-123">Identifier of existing gateway.</span></span>
+<span data-ttu-id="7067f-124">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7067f-124">This parameter is required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ContextParameterSetName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-125">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="7067f-125">-InputObject</span></span>
+<span data-ttu-id="7067f-126">Instanz von PsApiManagementGatewayHostnameConfiguration.</span><span class="sxs-lookup"><span data-stu-id="7067f-126">Instance of PsApiManagementGatewayHostnameConfiguration.</span></span> <span data-ttu-id="7067f-127">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7067f-127">This parameter is required.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGatewayHostnameConfiguration
+Parameter Sets: ByInputObjectParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="7067f-128">-PassThru</span></span>
+<span data-ttu-id="7067f-129">Wenn angegeben, wird true geschrieben, falls der Vorgang erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="7067f-129">If specified will write true in case operation succeeds.</span></span>
+<span data-ttu-id="7067f-130">Dieser Parameter ist optional.</span><span class="sxs-lookup"><span data-stu-id="7067f-130">This parameter is optional.</span></span>
+<span data-ttu-id="7067f-131">Der Standardwert ist "false".</span><span class="sxs-lookup"><span data-stu-id="7067f-131">Default value is false.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-132">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="7067f-132">-ResourceId</span></span>
+<span data-ttu-id="7067f-133">Arm-GatewayHostnameConfiguration.</span><span class="sxs-lookup"><span data-stu-id="7067f-133">Arm ResourceId of the GatewayHostnameConfiguration.</span></span> <span data-ttu-id="7067f-134">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7067f-134">This parameter is required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByResourceIdParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-135">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="7067f-135">-Confirm</span></span>
+<span data-ttu-id="7067f-136">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="7067f-136">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-137">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7067f-137">-WhatIf</span></span>
+<span data-ttu-id="7067f-138">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="7067f-138">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="7067f-139">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="7067f-139">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7067f-140">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7067f-140">CommonParameters</span></span>
+<span data-ttu-id="7067f-141">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7067f-141">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7067f-142">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7067f-142">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="7067f-143">Eingaben</span><span class="sxs-lookup"><span data-stu-id="7067f-143">INPUTS</span></span>
+
+### <span data-ttu-id="7067f-144">Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="7067f-144">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+
+### <span data-ttu-id="7067f-145">System. String</span><span class="sxs-lookup"><span data-stu-id="7067f-145">System.String</span></span>
+
+### <span data-ttu-id="7067f-146">System. Management. Automation. Switchparameter</span><span class="sxs-lookup"><span data-stu-id="7067f-146">System.Management.Automation.SwitchParameter</span></span>
+
+## <span data-ttu-id="7067f-147">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="7067f-147">OUTPUTS</span></span>
+
+### <span data-ttu-id="7067f-148">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="7067f-148">System.Boolean</span></span>
+
+## <span data-ttu-id="7067f-149">Notizen</span><span class="sxs-lookup"><span data-stu-id="7067f-149">NOTES</span></span>
+
+## <span data-ttu-id="7067f-150">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="7067f-150">RELATED LINKS</span></span>
