@@ -1,0 +1,190 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.StorageSync.dll-Help.xml
+Module Name: Az.StorageSync
+online version: https://docs.microsoft.com/en-us/powershell/module/Az.storagesync/register-Azstoragesyncserver
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Register-AzStorageSyncServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/StorageSync/StorageSync/help/Register-AzStorageSyncServer.md
+ms.openlocfilehash: bb1ce6f9ff7e846c2f485665cafad700fa4c825b
+ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "94010366"
+---
+# <span data-ttu-id="958c8-101">Register-AzStorageSyncServer</span><span class="sxs-lookup"><span data-stu-id="958c8-101">Register-AzStorageSyncServer</span></span>
+
+## <span data-ttu-id="958c8-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="958c8-102">SYNOPSIS</span></span>
+<span data-ttu-id="958c8-103">Mit diesem Befehl wird ein Server für einen Speicher Synchronisierungsdienst registriert, der eine Vertrauensstellung herstellt.</span><span class="sxs-lookup"><span data-stu-id="958c8-103">This command registers a server to a storage sync service which creates a trust relationship.</span></span> <span data-ttu-id="958c8-104">PowerShell oder das Azure-Portal kann dann verwendet werden, um die Synchronisierung auf diesem Server zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="958c8-104">PowerShell or the Azure portal can then be used to configure sync on this server.</span></span>
+
+## <span data-ttu-id="958c8-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="958c8-105">SYNTAX</span></span>
+
+### <span data-ttu-id="958c8-106">StringParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="958c8-106">StringParameterSet (Default)</span></span>
+```
+Register-AzStorageSyncServer [-ResourceGroupName] <String> [-StorageSyncServiceName] <String> [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="958c8-107">Objectparameterset</span><span class="sxs-lookup"><span data-stu-id="958c8-107">ObjectParameterSet</span></span>
+```
+Register-AzStorageSyncServer [-ParentObject] <PSStorageSyncService> [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="958c8-108">ParentStringParameterSet</span><span class="sxs-lookup"><span data-stu-id="958c8-108">ParentStringParameterSet</span></span>
+```
+Register-AzStorageSyncServer [-ParentResourceId] <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="958c8-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="958c8-109">DESCRIPTION</span></span>
+<span data-ttu-id="958c8-110">Mit diesem Befehl wird ein Server für einen Speicher Synchronisierungsdienst, die Ressource der obersten Ebene für Azure-Dateisynchronisierung, registriert. Es wird eine Vertrauensstellung zwischen Server-und Speicher Synchronisierungsdienst erstellt, die sichere Datenübertragung und Verwaltungs Kanäle gewährleistet.</span><span class="sxs-lookup"><span data-stu-id="958c8-110">This command registers a server to a storage sync service, the top-level resource for Azure File Sync. A trust relationship between server and storage sync service is created that ensures secure data transfer and management channels.</span></span> <span data-ttu-id="958c8-111">PowerShell oder das Azure-Portal kann dann verwendet werden, um die Synchronisierungen auf diesem Server zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="958c8-111">PowerShell or the Azure portal can then be used to configure what syncs on this server.</span></span> <span data-ttu-id="958c8-112">Ein Server kann nur für einen einzelnen Speicher Synchronisierungsdienst registriert werden.</span><span class="sxs-lookup"><span data-stu-id="958c8-112">A server can only be registered to a single storage sync service.</span></span> <span data-ttu-id="958c8-113">Wenn Server jemals an der Synchronisierung desselben Satzes von Dateien teilnehmen müssen, registrieren Sie diese beim gleichen Speicher Synchronisierungsdienst.</span><span class="sxs-lookup"><span data-stu-id="958c8-113">If servers ever need to participate in syncing the same set of files, register them to the same storage sync service.</span></span>
+<span data-ttu-id="958c8-114">Der Befehl muss lokal auf dem Server ausgeführt werden, der registriert werden soll, entweder direkt oder über eine Remote-PowerShell-Sitzung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="958c8-114">The command must be run locally on the server that is to be registered - either executed directly or via a remote PowerShell session.</span></span> <span data-ttu-id="958c8-115">Ein Remotecomputer Objekt kann nicht akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="958c8-115">A remote computer object cannot be accepted.</span></span>
+
+## <span data-ttu-id="958c8-116">Beispiele</span><span class="sxs-lookup"><span data-stu-id="958c8-116">EXAMPLES</span></span>
+
+### <span data-ttu-id="958c8-117">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="958c8-117">Example 1</span></span>
+```powershell
+PS C:\> Register-AzStorageSyncServer -ResourceGroupName "myResourceGroup" -StorageSyncServiceName "myStorageSyncServiceName"
+```
+
+<span data-ttu-id="958c8-118">Mit diesem Befehl wird der lokale Server registriert, auf dem dieser Befehl ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="958c8-118">This command will register the local server this command is run on.</span></span>
+
+## <span data-ttu-id="958c8-119">Parameter</span><span class="sxs-lookup"><span data-stu-id="958c8-119">PARAMETERS</span></span>
+
+### <span data-ttu-id="958c8-120">-AsJob</span><span class="sxs-lookup"><span data-stu-id="958c8-120">-AsJob</span></span>
+<span data-ttu-id="958c8-121">Ausführen eines Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="958c8-121">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-122">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="958c8-122">-DefaultProfile</span></span>
+<span data-ttu-id="958c8-123">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="958c8-123">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-124">-ParentObject</span><span class="sxs-lookup"><span data-stu-id="958c8-124">-ParentObject</span></span>
+<span data-ttu-id="958c8-125">StorageSyncService-Objekt, normalerweise durch den Parameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="958c8-125">StorageSyncService Object, normally passed through the parameter.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService
+Parameter Sets: ObjectParameterSet
+Aliases: StorageSyncService
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-126">-ParentResourceId</span><span class="sxs-lookup"><span data-stu-id="958c8-126">-ParentResourceId</span></span>
+<span data-ttu-id="958c8-127">StorageSyncService übergeordnete Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="958c8-127">StorageSyncService Parent Resource Id</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ParentStringParameterSet
+Aliases: StorageSyncServiceId
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-128">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="958c8-128">-ResourceGroupName</span></span>
+<span data-ttu-id="958c8-129">Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="958c8-129">Resource Group Name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: StringParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-130">-StorageSyncServiceName</span><span class="sxs-lookup"><span data-stu-id="958c8-130">-StorageSyncServiceName</span></span>
+<span data-ttu-id="958c8-131">Der Name des StorageSyncService.</span><span class="sxs-lookup"><span data-stu-id="958c8-131">Name of the StorageSyncService.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: StringParameterSet
+Aliases: ParentName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-132">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="958c8-132">-Confirm</span></span>
+<span data-ttu-id="958c8-133">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="958c8-133">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-134">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="958c8-134">-WhatIf</span></span>
+<span data-ttu-id="958c8-135">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="958c8-135">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="958c8-136">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="958c8-136">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="958c8-137">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="958c8-137">CommonParameters</span></span>
+<span data-ttu-id="958c8-138">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="958c8-138">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="958c8-139">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="958c8-139">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="958c8-140">Eingaben</span><span class="sxs-lookup"><span data-stu-id="958c8-140">INPUTS</span></span>
+
+### <span data-ttu-id="958c8-141">System. String</span><span class="sxs-lookup"><span data-stu-id="958c8-141">System.String</span></span>
+
+### <span data-ttu-id="958c8-142">Microsoft. Azure. Commands. StorageSync. Models. PSStorageSyncService</span><span class="sxs-lookup"><span data-stu-id="958c8-142">Microsoft.Azure.Commands.StorageSync.Models.PSStorageSyncService</span></span>
+
+## <span data-ttu-id="958c8-143">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="958c8-143">OUTPUTS</span></span>
+
+### <span data-ttu-id="958c8-144">Microsoft. Azure. Commands. StorageSync. Models. PSRegisteredServer</span><span class="sxs-lookup"><span data-stu-id="958c8-144">Microsoft.Azure.Commands.StorageSync.Models.PSRegisteredServer</span></span>
+
+## <span data-ttu-id="958c8-145">Notizen</span><span class="sxs-lookup"><span data-stu-id="958c8-145">NOTES</span></span>
+
+## <span data-ttu-id="958c8-146">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="958c8-146">RELATED LINKS</span></span>
