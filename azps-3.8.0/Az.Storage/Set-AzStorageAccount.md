@@ -1,0 +1,516 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+Module Name: Az.Storage
+ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
+online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/set-azstorageaccount
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Set-AzStorageAccount.md
+ms.openlocfilehash: ca6bc95d0da6e9793b2bb26ab12362bb74d9212a
+ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "93995925"
+---
+# Set-AzStorageAccount
+
+## Synopsis
+Ändert ein Speicherkonto.
+
+## Syntax
+
+### StorageEncryption (Standard)
+```
+Set-AzStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-SkuName <String>]
+ [-AccessTier <String>] [-CustomDomainName <String>] [-UseSubDomain <Boolean>] [-Tag <Hashtable>]
+ [-EnableHttpsTrafficOnly <Boolean>] [-StorageEncryption] [-AssignIdentity]
+ [-NetworkRuleSet <PSNetworkRuleSet>] [-UpgradeToStorageV2]
+ [-EnableAzureActiveDirectoryDomainServicesForFile <Boolean>] [-EnableLargeFileShare] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### KeyvaultEncryption
+```
+Set-AzStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-SkuName <String>]
+ [-AccessTier <String>] [-CustomDomainName <String>] [-UseSubDomain <Boolean>] [-Tag <Hashtable>]
+ [-EnableHttpsTrafficOnly <Boolean>] [-KeyvaultEncryption] -KeyName <String> -KeyVersion <String>
+ -KeyVaultUri <String> [-AssignIdentity] [-NetworkRuleSet <PSNetworkRuleSet>] [-UpgradeToStorageV2]
+ [-EnableAzureActiveDirectoryDomainServicesForFile <Boolean>] [-EnableLargeFileShare] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## Beschreibung
+Das Cmdlet " **Satz-AzStorageAccount** " ändert ein Azure Storage-Konto.
+Sie können dieses Cmdlet verwenden, um den Kontotyp zu ändern, eine Kundendomäne zu aktualisieren oder Tags für ein Speicherkonto einzurichten.
+
+## Beispiele
+
+### Beispiel 1: Einrichten des Speicher Kontotyps
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -Type "Standard_RAGRS"
+```
+
+Dieser Befehl legt den Typ des speicherkontos auf Standard_RAGRS fest.
+
+### Beispiel 2: Einrichten einer benutzerdefinierten Domäne für ein Speicherkonto
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -CustomDomainName "www.contoso.com" -UseSubDomain $True
+```
+
+Mit diesem Befehl wird eine benutzerdefinierte Domäne für ein Speicherkonto festgelegt.
+
+### Beispiel 3: Einrichten des Zugriffsstufen Werts
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -AccessTier Cool
+```
+
+Mit dem Befehl wird der Wert der Access-Ebene auf "cool" festgelegt.
+
+### Beispiel 4: Einrichten der benutzerdefinierten Domäne und der Tags
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -CustomDomainName "www.domainname.com" -UseSubDomain $true -Tag @{tag0="value0";tag1="value1";tag2="value2"}
+```
+
+Der Befehl legt die benutzerdefinierte Domäne und die Tags für ein Speicherkonto fest.
+
+### Beispiel 5: Konfigurieren der Schlüsselquelle für Verschlüsselung auf keyvault
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -AssignIdentity
+PS C:\>$account = Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount"
+
+PS C:\>$keyVault = New-AzKeyVault -VaultName "MyKeyVault" -ResourceGroupName "MyResourceGroup" -Location "EastUS2"
+PS C:\>$key = Add-AzKeyVaultKey -VaultName "MyKeyVault" -Name "MyKey" -Destination 'Software'
+PS C:\>Set-AzKeyVaultAccessPolicy -VaultName "MyKeyVault" -ObjectId $account.Identity.PrincipalId -PermissionsToKeys wrapkey,unwrapkey,get
+
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -KeyvaultEncryption -KeyName $key.Name -KeyVersion $key.Version -KeyVaultUri $keyVault.VaultUri
+```
+
+Mit diesem Befehl wird die Verschlüsselungs-keySource mit einem neu erstellten keyvault gesetzt.
+
+### Beispiel 6: Verschlüsselungs-keySource auf "Microsoft. Storage" setzen
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -StorageEncryption
+```
+
+Mit diesem Befehl wird die Verschlüsselungs-keySource auf "Microsoft. Storage" gesetzt.
+
+### Beispiel 7: Festlegen der NetworkRuleSet-Eigenschaft eines speicherkontos mit JSON
+```
+PS C:\>Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -NetworkRuleSet (@{bypass="Logging,Metrics";
+    ipRules=(@{IPAddressOrRange="20.11.0.0/16";Action="allow"},
+            @{IPAddressOrRange="10.0.0.0/7";Action="allow"});
+    virtualNetworkRules=(@{VirtualNetworkResourceId="/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1";Action="allow"},
+                        @{VirtualNetworkResourceId="/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/subnet2";Action="allow"});
+    defaultAction="allow"})
+```
+
+Dieser Befehl legt die NetworkRuleSet-Eigenschaft eines speicherkontos mit JSON fest.
+
+### Beispiel 8: Abrufen der NetworkRuleSet-Eigenschaft von einem Speicherkonto und festlegen auf ein anderes Speicherkonto
+```
+PS C:\> $networkRuleSet = (Get-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount").NetworkRuleSet 
+PS C:\> Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount2" -NetworkRuleSet $networkRuleSet
+```
+
+Dieser erste Befehl ruft die NetworkRuleSet-Eigenschaft von einem Speicherkonto ab, und der zweite Befehl legt Sie auf ein anderes Speicherkonto fest. 
+
+### Beispiel 9: Upgraden eines speicherkontos mit der Art "Speicher" oder "BlobStorage" auf "StorageV2" Art Storage-Konto
+```
+PS C:\> Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -UpgradeToStorageV2
+```
+
+Mit dem Befehl wird ein Speicherkonto mit der Art "Speicher" oder "BlobStorage" auf "StorageV2"-Speicherkonto aktualisiert.
+
+### Beispiel 10: Aktualisieren eines speicherkontos durch Aktivieren von Azure-Dateien Aad DS-Authentifizierung.
+```
+PS C:\> Set-AzStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "mystorageaccount" -EnableAzureActiveDirectoryDomainServicesForFile $true
+```
+
+Der Befehl Aktualisieren eines speicherkontos durch Aktivieren von Azure-Dateien Aad DS-Authentifizierung.
+
+## Parameter
+
+### -AccessTier
+Gibt die Zugriffsebene des speicherkontos an, das von diesem Cmdlet geändert wird.
+Die akzeptablen Werte für diesen Parameter sind: heiß und cool.
+Wenn Sie die Zugriffsebene ändern, kann dies zu zusätzlichen Gebühren führen. Weitere Informationen finden Sie unter [Azure-BLOB-Speicher: heiße und kühle Speicherebenen](http://go.microsoft.com/fwlink/?LinkId=786482).
+Wenn das Speicherkonto eine Art StorageV2 oder BlobStorage hat, können Sie den *AccessTier* -Parameter angeben. Wenn das Speicherkonto eine Art Speicher ist, geben Sie den *AccessTier* -Parameter nicht an.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Hot, Cool
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+Ausführen eines Cmdlets im Hintergrund
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignIdentity
+Generieren und Zuweisen einer neuen Speicherkonto Identität für dieses Speicherkonto für die Verwendung mit Schlüssel Verwaltungsdiensten wie Azure keyvault
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomDomainName
+Gibt den Namen der benutzerdefinierten Domäne an.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAzureActiveDirectoryDomainServicesForFile
+Aktivieren Sie Azure-Dateien Azure Active Directory-Domänendienst Authentifizierung für das Speicherkonto.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableHttpsTrafficOnly
+Gibt an, ob das Speicherkonto nur HTTPS-Datenverkehr aktiviert.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableLargeFileShare
+Gibt an, ob das Speicherkonto große Dateifreigaben mit mehr als 5 tib-Kapazität unterstützenkann. Sobald das Konto aktiviert ist, kann das Feature nicht deaktiviert werden. Wird derzeit nur für LRS-und ZRS-Replikationstypen unterstützt, daher sind Konto Konvertierungen in Geo-redundante Konten nicht möglich. Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2086047
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Erzwingt, dass die Änderung in das Speicherkonto geschrieben wird.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyName
+Wenn Sie-KeyvaultEncryption verwenden, um die Verschlüsselung mit Key Vault zu aktivieren, geben Sie die KeyName-Eigenschaft mit dieser Option an.
+
+```yaml
+Type: System.String
+Parameter Sets: KeyvaultEncryption
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyvaultEncryption
+Gibt an, ob Sie Microsoft keyvault für die Verschlüsselungsschlüssel verwenden möchten, wenn Sie die Speicherdienst Verschlüsselung verwenden. Wenn keyName, keyversion und KeyVaultUri eingestellt sind, wird keySource auf Microsoft. keyvault festgesetzt, ob dieser Parameter festgesetzt ist oder nicht. 
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: KeyvaultEncryption
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyVaultUri
+Verwenden Sie bei Verwendung der Schlüssel Vault-Verschlüsselung durch Angabe des-KeyvaultEncryption-Parameters diese Option, um den URI für den schlüsseltresor anzugeben.
+
+```yaml
+Type: System.String
+Parameter Sets: KeyvaultEncryption
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Keyversion
+Verwenden Sie bei Verwendung der Schlüssel Vault-Verschlüsselung durch Angabe des-KeyvaultEncryption-Parameters diese Option, um den URI für die Schlüssel Version anzugeben.
+
+```yaml
+Type: System.String
+Parameter Sets: KeyvaultEncryption
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Gibt den Namen des zu ändernden speicherkontos an.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkRuleSet
+NetworkRuleSet wird verwendet, um eine Reihe von Konfigurationsregeln für Firewalls und virtuelle Netzwerke zu definieren sowie Werte für Netzwerkeigenschaften festzulegen, beispielsweise Dienste, die die Regeln umgehen dürfen, und die Behandlung von Anforderungen, die keiner der definierten Regeln entsprechen.
+
+```yaml
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Gibt den Namen der Ressourcengruppe an, in der das Speicherkonto geändert werden soll.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuName
+Gibt den SKU-Namen des speicherkontos an.
+Die zulässigen Werte für diesen Parameter lauten wie folgt:
+- Standard_LRS-lokal redundanter Speicherplatz.
+- Standard_ZRS Zone – redundanter Speicherplatz.
+- Standard_GRS-Geo-redundanter Speicher.
+- Standard_RAGRS Lesezugriff Geo-redundanter Speicher.
+- Premium_LRS-Premium-lokal redundanter Speicherplatz.
+- Standard_GZRS-Geo-redundante Zone – redundanter Speicherplatz.
+- Standard_RAGZRS-Read Access Geo-redundant Zone-redundanter Speicher.
+Standard_ZRS-und Premium_LRS Typen können nicht in andere Kontotypen geändert werden.
+Sie können andere Kontotypen nicht in Standard_ZRS oder Premium_LRS ändern.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: StorageAccountType, AccountType, Type
+Accepted values: Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS, Premium_LRS, Standard_GZRS, Standard_RAGZRS
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageEncryption
+Gibt an, ob die Speicherkonto Verschlüsselung für die Verwendung von Microsoft-verwalteten Schlüsseln festgesetzt werden soll.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: StorageEncryption
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+Schlüssel-Wert-Paare in Form einer Hashtabelle, die als Tags auf dem Server definiert ist. Beispiel: @ {Key0 = "value0"; key1 = $NULL; key2 = "Value2"}
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UpgradeToStorageV2
+Upgrade des speicherkontos Art von Speicher-oder BlobStorage auf StorageV2.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSubDomain
+Gibt an, ob die indirekte CNAME-Validierung aktiviert werden soll.
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Bestätigen
+Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
+Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## Eingaben
+
+### System. String
+
+### System. Collections. Hashtable
+
+## Ausgaben
+
+### Microsoft. Azure. Commands. Management. Storage. Models. PSStorageAccount
+
+## Notizen
+
+## Verwandte Links
+
+[Get-AzStorageAccount](./Get-AzStorageAccount.md)
+
+[Neu – AzStorageAccount](./New-AzStorageAccount.md)
+
+[Remove-AzStorageAccount](./Remove-AzStorageAccount.md)
