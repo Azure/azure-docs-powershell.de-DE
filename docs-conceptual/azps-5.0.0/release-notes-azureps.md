@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 913532fa5a8937f7ba4cc1ce21c5879f3920fc7f
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 4ab5639cfb997c5f9ee1286e6eacb97ef775239a
+ms.sourcegitcommit: 63181e0af0e4468b0530fdb0495ed4d44bdfd1c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753587"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134861"
 ---
 # <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 
@@ -46,7 +46,7 @@ ms.locfileid: "92753587"
 * Optionale Parameter „Tier“, „MaxSharesCount“, „DiskIOPSReadOnly“ und „DiskMBpsReadOnly“ dem Cmdlet „New-AzDiskUpdateConfig“ hinzugefügt. 
 
 #### <a name="azcontainerregistry"></a>Az.ContainerRegistry
-* [Breaking Change] API-Version auf 2020-05-01 aktualisiert
+* [Breaking Change] API-Version auf 2019-05-01 aktualisiert
 * [Breaking Change] SKU „Classic“ und Parameter „StorageAccountName“ aus „New-AzContainerRegistry“ entfernt
 * Neue Cmdlets hinzugefügt: „Connect-AzContainerRegistry“, „Import-AzContainerRegistry“, „Get-AzContainerRegistryUsage“, „New-AzContainerRegistryNetworkRule“, „Set-AzContainerRegistryNetworkRule“
 * Neuen Parameter „NetworkRuleSet“ zu „Update-AzContainerRegistry“ hinzugefügt
