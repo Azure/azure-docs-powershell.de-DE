@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
-ms.openlocfilehash: b6d5d7b68726d1e5121491a6b4c5b371a9ec7cec
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 4c9a1c544b08f0bed4dbade12e0f75d28f3ba24a
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93820816"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395287"
 ---
 # Add-AzVMSecret
 
@@ -30,7 +30,7 @@ Das Cmdlet **Add-AzVMSecret** fügt einem virtuellen Computer einen Schlüssel h
 Mit diesem Wert können Sie dem virtuellen Computer ein Zertifikat hinzufügen.
 Das Kennwort muss in einem schlüsseltresor gespeichert werden.
 Weitere Informationen zu Key Vault finden Sie unter [Was ist Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
-Weitere Informationen zu den Cmdlets finden Sie unter [Azure Key Vault-Cmdlets](https://msdn.microsoft.com/library/azure/dn868052.aspx) in der Microsoft Developer Network Library oder im Cmdlet " [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) ".
+Weitere Informationen zu den Cmdlets finden Sie unter [Azure Key Vault-Cmdlets](/powershell/module/az.keyvault) oder dem Cmdlet " [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) ".
 
 ## Beispiele
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -CertificateUrl
 Gibt die URL an, die auf ein schlüsseltresor-Kennwort verweist, das ein Zertifikat enthält.
-Bei dem Zertifikat handelt es sich um die Base64-Codierung des folgenden JSON-Objekts (JavaScript Object Notation), das in UTF-8 codiert ist: {"Data": " \< Base64-codierte Datei \> ", "Datentyp": " \< Dateiformat \> ", "Kennwort": " \< PFX-Datei-Kennwort \> "} zurzeit akzeptiert Datentyp nur PFX-Dateien.
+Bei dem Zertifikat handelt es sich um die Base64-Codierung des folgenden JSON-Objekts (JavaScript Object Notation), das in UTF-8 codiert ist: {"Daten": " \<Base64-encoded-file\> ", "Datentyp": " \<file-format\> ", "Kennwort": " \<pfx-file-password\> "} der Datentyp akzeptiert derzeit nur PFX-Dateien.
 
 ```yaml
 Type: System.String

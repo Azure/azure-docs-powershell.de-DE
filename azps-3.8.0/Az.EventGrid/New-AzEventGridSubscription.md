@@ -5,12 +5,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
-ms.openlocfilehash: a2b8ba54a812f405d634066881c32b6b0467eeab
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 1e2ac4d8763376da6854b3c5d1551e4213f25f60
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93845131"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395304"
 ---
 # New-AzEventGridSubscription
 
@@ -113,21 +113,21 @@ Wenn Sie ein Ereignisabonnement für eine unterstützte Azure-Ressource erstelle
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroup -TopicName Topic1 -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Erstellt ein neues Ereignisabonnement \` EventSubscription1 \` zu einem Azure-Ereignis Raster Thema \` THEMA1 hat \` in der Ressourcengruppe \` MyResourceGroupName \` mit dem Zielendpunkt des webhooks https://requestb.in/19qlscd1 . Dieses Ereignisabonnement verwendet Standardfilter.
+Erstellt ein neues Ereignisabonnement \` EventSubscription1 \` zu einem Azure-Ereignis Raster Thema \` THEMA1 hat \` in der Ressourcengruppe \` MyResourceGroupName \` mit dem Zielendpunkt des webhooks `https://requestb.in/19qlscd1` . Dieses Ereignisabonnement verwendet Standardfilter.
 
 ### Beispiel 2
 ```powershell
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroupName -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 zu einer Ressourcengruppe \` MyResourceGroupName \` mit dem Zielweb-Zielendpunkt https://requestb.in/19qlscd1 . Dieses Ereignisabonnement verwendet Standardfilter.
+Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 zu einer Ressourcengruppe \` MyResourceGroupName \` mit dem Zielweb-Zielendpunkt `https://requestb.in/19qlscd1` . Dieses Ereignisabonnement verwendet Standardfilter.
 
 ### Beispiel 3
 ```powershell
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 des aktuell ausgewählten Azure-Abonnements mit dem webhook-Zielendpunkt https://requestb.in/19qlscd1 . Dieses Ereignisabonnement verwendet Standardfilter.
+Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 des aktuell ausgewählten Azure-Abonnements mit dem webhook-Zielendpunkt `https://requestb.in/19qlscd1` . Dieses Ereignisabonnement verwendet Standardfilter.
 
 ### Beispiel 4
 ```powershell
@@ -136,7 +136,7 @@ PS C:\> $labels = "Finance", "HR"
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1 -SubjectBeginsWith "TestPrefix" -SubjectEndsWith "TestSuffix" -IncludedEventType $includedEventTypes -Label $labels
 ```
 
-Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 des aktuell ausgewählten Azure-Abonnements mit dem webhook-Zielendpunkt https://requestb.in/19qlscd1 . Dieses Ereignisabonnement gibt die zusätzlichen Filter für Ereignistypen und Betreff an, und nur Ereignisse, die diesen Filtern entsprechen, werden an den Zielendpunkt übermittelt.
+Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 des aktuell ausgewählten Azure-Abonnements mit dem webhook-Zielendpunkt `https://requestb.in/19qlscd1` . Dieses Ereignisabonnement gibt die zusätzlichen Filter für Ereignistypen und Betreff an, und nur Ereignisse, die diesen Filtern entsprechen, werden an den Zielendpunkt übermittelt.
 
 ### Beispiel 5
 ```powershell
@@ -150,7 +150,7 @@ Erstellt ein neues Ereignisabonnement \` EventSubscription1 \` des aktuell ausge
 PS C:\> New-AzEventGridSubscription -ResourceId "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace" -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 zu einem EventHub-Namespace mit dem angegebenen webhook https://requestb.in/19qlscd1 -Zielendpunkt. Dieses Ereignisabonnement verwendet Standardfilter.
+Erstellt ein neues Ereignisabonnement \` \` -EventSubscription1 zu einem EventHub-Namespace mit dem angegebenen webhook `https://requestb.in/19qlscd1` -Zielendpunkt. Dieses Ereignisabonnement verwendet Standardfilter.
 
 ## Parameter
 

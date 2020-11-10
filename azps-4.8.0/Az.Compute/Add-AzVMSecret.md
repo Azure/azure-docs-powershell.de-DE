@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
-ms.openlocfilehash: b2209b3e9d7c7dcf01a05af277dd5106e70fd8b2
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 059aedf6ca3b5c229092f9ce536d23a8fc602830
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94166469"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395338"
 ---
 # Add-AzVMSecret
 
@@ -30,7 +30,7 @@ Das Cmdlet **Add-AzVMSecret** fügt einem virtuellen Computer einen Schlüssel h
 Mit diesem Wert können Sie dem virtuellen Computer ein Zertifikat hinzufügen.
 Das Kennwort muss in einem schlüsseltresor gespeichert werden.
 Weitere Informationen zu Key Vault finden Sie unter [Was ist Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
-Weitere Informationen zu den Cmdlets finden Sie unter [Azure Key Vault-Cmdlets](https://msdn.microsoft.com/library/azure/dn868052.aspx) in der Microsoft Developer Network Library oder im Cmdlet " [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) ".
+Weitere Informationen zu den Cmdlets finden Sie unter [Azure Key Vault-Cmdlets](/powershell/module/az.keyvault) oder dem Cmdlet " [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) ".
 
 ## Beispiele
 
