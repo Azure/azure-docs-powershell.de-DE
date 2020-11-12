@@ -1,16 +1,17 @@
 ---
 title: Erste Schritte mit Azure PowerShell
-description: ''
+description: Erste Schritte mit Azure PowerShell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 04/24/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 6281ac5f6ec8941e0d5c1755f90f99552db9aa92
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 68b2b50afdd2dc79bdbd8f8b203a7cd3664c4973
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001958"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407441"
 ---
 # <a name="get-started-with-azure-powershell"></a>Erste Schritte mit Azure PowerShell
 
@@ -33,7 +34,7 @@ Melden Sie sich mit dem Cmdlet [Connect-AzAccount](/powershell/module/az.account
 Connect-AzAccount
 ```
 
-Azure-Clouddienste verfügen über Umgebungen, die jeweils mit den regionalen Gesetzen zum Umgang mit Daten konform sind. Verwenden Sie für Konten in einer regionalen Cloud den Parameter **Environment**, um sich anzumelden. Rufen Sie den Namen der Umgebung für Ihre Region mithilfe des Cmdlets [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) ab.
+Azure-Clouddienste verfügen über Umgebungen, die jeweils mit den regionalen Gesetzen zum Umgang mit Daten konform sind. Verwenden Sie für Konten in einer regionalen Cloud den Parameter **Environment** , um sich anzumelden. Rufen Sie den Namen der Umgebung für Ihre Region mithilfe des Cmdlets [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) ab.
 Geben Sie beispielsweise Folgendes ein, um sich bei Azure China 21Vianet anzumelden:
 
 ```azurepowershell-interactive

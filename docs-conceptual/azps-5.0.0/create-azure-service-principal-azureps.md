@@ -3,14 +3,15 @@ title: Verwenden von Azure-Dienstprinzipalen mit Azure PowerShell
 description: Hier erfahren Sie, wie Sie mit Azure PowerShell Dienstprinzipale erstellen und verwenden.
 ms.devlang: powershell
 ms.topic: conceptual
+ms.service: azure-powershell
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3c876454560e4ad421e6d32a8ca8b30a651fd8af
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: a5640ded6fc8c6478084374f7808450f6a99d6e5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753762"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407645"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Erstellen eines Azure-Dienstprinzipals mit Azure PowerShell
 
@@ -19,6 +20,11 @@ Für automatisierte Tools, die Azure-Dienste verwenden, sollten stets eingeschr�
 Ein Azure-Dienstprinzipal ist eine Identität, die zur Verwendung mit Anwendungen, gehosteten Diensten und automatisierten Tools für den Zugriff auf Azure-Ressourcen erstellt wird. Dieser Zugriff wird durch die dem Dienstprinzipal zugewiesenen Rollen eingeschränkt. Dadurch können Sie steuern, auf welcher Ebene auf welche Ressourcen zugegriffen werden kann. Aus Sicherheitsgründen wird stets empfohlen, Dienstprinzipale mit automatisierten Tools zu verwenden, statt ihnen die Anmeldung mit einer Benutzeridentität zu erlauben.
 
 In diesem Artikel wird Schritt für Schritt erläutert, wie Sie mit Azure PowerShell einen Dienstprinzipal erstellen, Informationen zu ihm abrufen und ihn zurücksetzen.
+
+> [!WARNING]
+> Wenn Sie mithilfe des Befehls [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) einen Dienstprinzipal erstellen, enthält die Ausgabe Anmeldeinformationen, die geschützt werden müssen. Schließen Sie diese Anmeldeinformationen nicht in Ihren Code ein, und checken Sie sie nicht in Ihre Quellcodeverwaltung ein. Verwenden Sie als Alternative ggf. [verwaltete Identitäten](/azure/active-directory/managed-identities-azure-resources/overview), um zu vermeiden, dass die Verwendung von Anmeldeinformationen erforderlich ist.
+>
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) weist dem Dienstprinzipal standardmäßig auf Abonnementebene die Rolle [Mitwirkender](/azure/role-based-access-control/built-in-roles#contributor) zu. Um das Risiko eines kompromittierten Dienstprinzipals zu verringern, weisen Sie eine spezifischere Rolle zu, und schränken Sie den Bereich auf eine Ressource oder Ressourcengruppe ein. Weitere Informationen finden Sie unter [Schritte zum Hinzufügen einer Rollenzuweisung](/azure/role-based-access-control/role-assignments-steps).
 
 ## <a name="create-a-service-principal"></a>Erstellen eines Dienstprinzipals
 
@@ -33,7 +39,7 @@ Für Dienstprinzipale stehen zwei Authentifizierungstypen zur Verfügung: Kennwo
 ### <a name="password-based-authentication"></a>Kennwortbasierte Authentifizierung
 
 > [!IMPORTANT]
-> Die Standardrolle für einen Dienstprinzipal mit kennwortbasierter Authentifizierung ist **Mitwirkender** . Diese Rolle besitzt uneingeschränkte Berechtigungen für Lese- und Schreibvorgänge in einem Azure-Konto. Informationen zum Verwalten von Rollenzuweisungen finden Sie unter [Verwalten von Dienstprinzipalrollen](#manage-service-principal-roles).
+> Die Standardrolle für einen Dienstprinzipal mit kennwortbasierter Authentifizierung ist **Mitwirkender**. Diese Rolle besitzt uneingeschränkte Berechtigungen für Lese- und Schreibvorgänge in einem Azure-Konto. Informationen zum Verwalten von Rollenzuweisungen finden Sie unter [Verwalten von Dienstprinzipalrollen](#manage-service-principal-roles).
 
 Ohne weitere Authentifizierungsparameter wird die kennwortbasierte Authentifizierung mit einem für Sie erstellten zufälligen Kennwort verwendet. Diese Methode wird empfohlen, wenn Sie die kennwortbasierte Authentifizierung verwenden möchten.
 
@@ -112,7 +118,7 @@ Für die Verwaltung von Rollenzuweisungen stehen in Azure PowerShell folgende Cm
 - [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
 - [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
-Die Standardrolle für einen Dienstprinzipal mit kennwortbasierter Authentifizierung ist **Mitwirkender** . Diese Rolle besitzt uneingeschränkte Berechtigungen für Lese- und Schreibvorgänge in einem Azure-Konto. Die Rolle **Leser** ist stärker eingeschränkt und bietet schreibgeschützten Zugriff. Weitere Informationen zur rollenbasierten Zugriffssteuerung (Role-Based Access Control, RBAC) finden Sie unter [Rollenbasierte Zugriffssteuerung: Integrierte Rollen](/azure/active-directory/role-based-access-built-in-roles).
+Die Standardrolle für einen Dienstprinzipal mit kennwortbasierter Authentifizierung ist **Mitwirkender**. Diese Rolle besitzt uneingeschränkte Berechtigungen für Lese- und Schreibvorgänge in einem Azure-Konto. Die Rolle **Leser** ist stärker eingeschränkt und bietet schreibgeschützten Zugriff. Weitere Informationen zur rollenbasierten Zugriffssteuerung (Role-Based Access Control, RBAC) finden Sie unter [Rollenbasierte Zugriffssteuerung: Integrierte Rollen](/azure/active-directory/role-based-access-built-in-roles).
 
 Das folgende Beispiel fügt die Rolle **Leser** hinzu und entfernt die Rolle **Mitwirkender** :
 

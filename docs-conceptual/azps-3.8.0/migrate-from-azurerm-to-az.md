@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/10/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 83860dd5abfbb1c3da94de6813bceca1bbb0fca7
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: a0a6fcbc0a7bdae507ff5e16dd844e8425c929d5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89240776"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408954"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Migrieren von Azure PowerShell von AzureRM zum Az-Modul
 
@@ -85,4 +86,4 @@ Auch wenn Sie bis zu diesem Zeitpunkt nur kleine, einfache Änderungen an Ihren 
 Sobald Sie die Migration abgeschlossen haben und nicht mehr auf das Aliasverhalten angewiesen sind, wird empfohlen, Aliase zu deaktivieren. Dies erfolgt mit dem Cmdlet [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias).
 
 > [!IMPORTANT]
-> Wenn Sie dieses Cmdlet ausführen, __stellen Sie sicher__, dass Sie es für jeden `-Scope` aufrufen, für den `Enable-AzureRmAlias` aufgerufen wurde, ansonsten kann es auf Ihrem System noch Skripts geben, die sich auf das Aliasverhalten verlassen.
+> Wenn Sie dieses Cmdlet ausführen, __stellen Sie sicher__ , dass Sie es für jeden `-Scope` aufrufen, für den `Enable-AzureRmAlias` aufgerufen wurde, ansonsten kann es auf Ihrem System noch Skripts geben, die sich auf das Aliasverhalten verlassen.

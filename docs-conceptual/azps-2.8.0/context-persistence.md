@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 99c3d594c6d774152a4594a2eed7c7c3209bdbe9
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: e428106fcc525cc8836af954897faa3f6c169990
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244159"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408011"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell-Kontextobjekte
 
@@ -22,11 +23,11 @@ In diesem Artikel wird die Verwaltung von Azure-Kontexten behandelt, nicht die V
 
 Bei Azure-Kontexten handelt es sich um PowerShell-Objekte, die Ihr aktives Abonnement, für das Befehle ausgeführt werden sollen, sowie die Authentifizierungsinformationen darstellen, die zum Herstellen einer Verbindung mit einer Azure-Cloud erforderlich sind. Mit Azure-Kontexten muss Azure PowerShell Ihr Konto nicht bei jedem Abonnementwechsel erneut authentifizieren. Ein Azure-Kontext umfasst Folgendes:
 
-* Das _Konto_, das für die Anmeldung bei Azure mit [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) verwendet wurde. In Azure-Kontexten werden Benutzer, Anwendungs-IDs und Dienstprinzipale aus Kontosicht gleich behandelt.
-* Das aktive _Abonnement_ – ein Servicevertrag mit Microsoft für die Erstellung und Ausführung von Azure-Ressourcen, die einem _Mandanten_ zugeordnet sind. Mandanten werden in der Dokumentation oder im Zusammenhang mit Active Directory häufig als _Organisationen_ bezeichnet.
-* Ein Verweis auf einen _Tokencache_ – ein gespeichertes Authentifizierungstoken für den Zugriff auf eine Azure-Cloud. Speicherort und Aufbewahrungsdauer dieses Tokens hängen von den [Einstellungen für die automatische Kontextspeicherung](#save-azure-contexts-across-powershell-sessions) ab.
+* Das _Konto_ , das für die Anmeldung bei Azure mit [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) verwendet wurde. In Azure-Kontexten werden Benutzer, Anwendungs-IDs und Dienstprinzipale aus Kontosicht gleich behandelt.
+* Das aktive _Abonnement_  – ein Servicevertrag mit Microsoft für die Erstellung und Ausführung von Azure-Ressourcen, die einem _Mandanten_ zugeordnet sind. Mandanten werden in der Dokumentation oder im Zusammenhang mit Active Directory häufig als _Organisationen_ bezeichnet.
+* Ein Verweis auf einen _Tokencache_  – ein gespeichertes Authentifizierungstoken für den Zugriff auf eine Azure-Cloud. Speicherort und Aufbewahrungsdauer dieses Tokens hängen von den [Einstellungen für die automatische Kontextspeicherung](#save-azure-contexts-across-powershell-sessions) ab.
 
-Weitere Informationen zu diesen Begriffen finden Sie [hier](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Von Azure-Kontexten verwendete Authentifizierungstoken unterscheiden sich nicht von anderen gespeicherten Token einer beständigen Sitzung. 
+Weitere Informationen zu diesen Begriffen finden Sie [hier](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Von Azure-Kontexten verwendete Authentifizierungstoken unterscheiden sich nicht von anderen gespeicherten Token einer beständigen Sitzung.
 
 Wenn Sie sich mit `Connect-AzAccount` anmelden, wird mindestens ein Azure-Kontext für Ihr Standardabonnement erstellt. Bei dem von `Connect-AzAccount` zurückgegebenen Objekt handelt es sich um den Azure-Standardkontext, der für die restliche PowerShell-Sitzung verwendet wird.
 
@@ -47,7 +48,7 @@ $context = Get-Context -Name "mycontext"
 Kontextnamen können sich vom Namen des zugeordneten Abonnements unterscheiden.
 
 > [!IMPORTANT]
-> Bei den verfügbaren Azure-Kontexten handelt es sich __nicht__ immer um Ihre verfügbaren Abonnements. Azure-Kontexte stellen nur lokal gespeicherte Informationen dar. Ihre Abonnements können Sie mithilfe des Cmdlets [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription?view=azps-1.8.0) abrufen.
+> Bei den verfügbaren Azure-Kontexten handelt es sich __nicht__ immer um Ihre verfügbaren Abonnements. Azure-Kontexte stellen nur lokal gespeicherte Informationen dar. Ihre Abonnements können Sie mithilfe des Cmdlets [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription) abrufen.
 
 ## <a name="create-a-new-azure-context-from-subscription-information"></a>Erstellen eines neuen Azure-Kontexts auf der Grundlage von Abonnementinformationen
 
@@ -134,7 +135,7 @@ So löschen Sie Azure-Kontexte und -Anmeldeinformationen:
   Zur Abmeldung können Sie entweder das Konto oder den Kontext verwenden:
 
   ```azurepowershell-interactive
-  Disconnect-AzAccount # Disconnect active account 
+  Disconnect-AzAccount # Disconnect active account
   Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
 
   Disconnect-AzAccount -ContextName "subscription2" # Disconnect by context name
@@ -144,7 +145,7 @@ So löschen Sie Azure-Kontexte und -Anmeldeinformationen:
   Beim Trennen der Verbindung werden gespeicherte Authentifizierungstoken entfernt und gespeicherte Kontexte gelöscht, die dem getrennten Benutzer oder Kontext zugeordnet sind.
 * Verwenden Sie [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). Dieses Cmdlet entfernt zuverlässig gespeicherte Kontexte und Authentifizierungstoken und meldet Sie außerdem ab.
 * Verwenden Sie zum Entfernen eines Kontexts das Cmdlet [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
-  
+
   ```azurepowershell-interactive
   Remove-AzContext -Name "mycontext" # Remove by name
   Get-AzContext -Name "mycontext" | Remove-AzContext # Remove by piping Azure context object

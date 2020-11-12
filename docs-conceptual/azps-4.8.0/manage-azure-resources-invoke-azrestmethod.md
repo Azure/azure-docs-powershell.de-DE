@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/24/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 55d7cc06178257a9288e2d27f810d1180369ddc4
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 5fdb8543630198d141d42626dc3a8b85f0bcdaa7
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001927"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407305"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Verwalten von Azure-Ressourcen mit Invoke-AzRestMethod
 
@@ -53,7 +54,7 @@ Die Definition für die ACR-Version „2019-12-01-preview“ befindet sich an fo
 
 Sie können den öffentlichen Zugriff auf die vorhandene ACR-Instanz `myacr` in der Ressourcengruppe `myresourcegroup` mithilfe des Cmdlets `Invoke-AzRestMethod` deaktivieren.
 
-Wenn Sie den Zugriff auf das öffentliche Netzwerk deaktivieren möchten, senden Sie einen **PATCH**-Aufruf an die API, der den Wert des Parameters `publicNetwokAccess` wie im folgenden Beispiel gezeigt ändert:
+Wenn Sie den Zugriff auf das öffentliche Netzwerk deaktivieren möchten, senden Sie einen **PATCH** -Aufruf an die API, der den Wert des Parameters `publicNetwokAccess` wie im folgenden Beispiel gezeigt ändert:
 
 ```azurepowershell-interactive
 $patchParams = @{
