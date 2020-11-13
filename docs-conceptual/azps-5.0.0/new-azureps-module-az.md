@@ -5,12 +5,13 @@ ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 0771bc474f43d8bbf392f2eba10da2e320d30556
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 2643c1fbbe9be06112d2a1a377838a8cb1e7737b
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753607"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410008"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
@@ -30,7 +31,7 @@ Größere Updates können umständlich sein, daher ist es wichtig, dass Sie erfa
 Die größte und wichtigste Änderung ist, dass PowerShell seit der Einführung von [PowerShell](/powershell/scripting/overview) auf Basis der .NET Standard-Bibliothek ein plattformübergreifendes Produkt ist.
 Wir sind bestrebt, den Azure-Support auf allen Plattformen bereitzustellen. Dies bedeutet, dass die Azure PowerShell-Module aktualisiert werden müssen, um .NET Standard zu verwenden und mit PowerShell Core kompatibel zu sein. Anstatt das bestehende AzureRM-Modul zu verwenden und komplexe Änderungen vorzunehmen, um diese Unterstützung zu implementieren, wurde das Az-Modul erstellt.
 
-Die Erstellung eines neuen Moduls ermöglichte es unseren Technikern, auch das Design und die Benennung von Cmdlets und Modulen zu vereinheitlichen. Alle Module beginnen jetzt mit dem Präfix `Az.` und Cmdlets verwenden alle die Form _Verb_-`Az`_Nomen_ . Früher waren Cmdlet-Namen nicht nur länger, sondern es gab auch Inkonsistenzen bei Cmdlet-Namen.
+Die Erstellung eines neuen Moduls ermöglichte es unseren Technikern, auch das Design und die Benennung von Cmdlets und Modulen zu vereinheitlichen. Alle Module beginnen jetzt mit dem Präfix `Az.` und Cmdlets verwenden alle die Form _Verb_-`Az`_Nomen_. Früher waren Cmdlet-Namen nicht nur länger, sondern es gab auch Inkonsistenzen bei Cmdlet-Namen.
 
 Auch die Anzahl der Module wurde verringert: Einige Module, die dieselben Diensten verwendet haben, wurden zusammengeführt. Cmdlets auf Verwaltungs- und Datenebene sind jetzt in einzelnen Modulen für ihre Dienste zusammengefasst. Für diejenigen, die Abhängigkeiten und Importvorgänge manuell verwalten, vereinfacht dies die Situation erheblich.
 
