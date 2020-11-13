@@ -5,45 +5,46 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/24/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2d8a3c04388bfc5028811f6d1b6caf2c6fce4147
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: ebe18c24881f146b7cf885892c7869cd7167d511
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753671"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410195"
 ---
-# <a name="migration-guide-for-az-200"></a><span data-ttu-id="9cd26-103">Migrationsleitfaden für Az 2.0.0</span><span class="sxs-lookup"><span data-stu-id="9cd26-103">Migration Guide for Az 2.0.0</span></span>
+# <a name="migration-guide-for-az-200"></a><span data-ttu-id="1ed82-103">Migrationsleitfaden für Az 2.0.0</span><span class="sxs-lookup"><span data-stu-id="1ed82-103">Migration Guide for Az 2.0.0</span></span>
 
-<span data-ttu-id="9cd26-104">In diesem Dokument werden die Änderungen beschrieben, die zwischen den Versionen 1.0.0 und 2.0.0 von Az vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="9cd26-104">This document describes the changes between the 1.0.0 and 2.0.0 versions of Az</span></span> 
+<span data-ttu-id="1ed82-104">In diesem Dokument werden die Änderungen beschrieben, die zwischen den Versionen 1.0.0 und 2.0.0 von Az vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="1ed82-104">This document describes the changes between the 1.0.0 and 2.0.0 versions of Az</span></span> 
 
-## <a name="table-of-contents"></a><span data-ttu-id="9cd26-105">Inhaltsverzeichnis</span><span class="sxs-lookup"><span data-stu-id="9cd26-105">Table of Contents</span></span>
-- [<span data-ttu-id="9cd26-106">Grundlegende Änderungen am Modul</span><span class="sxs-lookup"><span data-stu-id="9cd26-106">Module breaking changes</span></span>](#module-breaking-changes)
-  - [<span data-ttu-id="9cd26-107">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="9cd26-107">Az.Compute</span></span>](#azcompute)
-  - [<span data-ttu-id="9cd26-108">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="9cd26-108">Az.HDInsight</span></span>](#azhdinsight)
-  - [<span data-ttu-id="9cd26-109">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="9cd26-109">Az.Storage</span></span>](#azstorage)
+## <a name="table-of-contents"></a><span data-ttu-id="1ed82-105">Inhaltsverzeichnis</span><span class="sxs-lookup"><span data-stu-id="1ed82-105">Table of Contents</span></span>
+- [<span data-ttu-id="1ed82-106">Grundlegende Änderungen am Modul</span><span class="sxs-lookup"><span data-stu-id="1ed82-106">Module breaking changes</span></span>](#module-breaking-changes)
+  - [<span data-ttu-id="1ed82-107">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="1ed82-107">Az.Compute</span></span>](#azcompute)
+  - [<span data-ttu-id="1ed82-108">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="1ed82-108">Az.HDInsight</span></span>](#azhdinsight)
+  - [<span data-ttu-id="1ed82-109">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="1ed82-109">Az.Storage</span></span>](#azstorage)
 
-## <a name="module-breaking-changes"></a><span data-ttu-id="9cd26-110">Grundlegende Änderungen am Modul</span><span class="sxs-lookup"><span data-stu-id="9cd26-110">Module breaking changes</span></span>
+## <a name="module-breaking-changes"></a><span data-ttu-id="1ed82-110">Grundlegende Änderungen am Modul</span><span class="sxs-lookup"><span data-stu-id="1ed82-110">Module breaking changes</span></span>
 
-### <a name="azcompute"></a><span data-ttu-id="9cd26-111">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="9cd26-111">Az.Compute</span></span>
+### <a name="azcompute"></a><span data-ttu-id="1ed82-111">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="1ed82-111">Az.Compute</span></span>
 
-- <span data-ttu-id="9cd26-112">Der Parameter `Managed` wurde aus den Cmdlets `New-AzAvailabilitySet` und `Update-AzAvailabilitySet` entfernt, um die Verwendung von ```Sku = Aligned``` zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-112">Removed `Managed` Parameter from `New-AzAvailabilitySet` and `Update-AzAvailabilitySet` cmdlets in favor of using ```Sku = Aligned```</span></span>
+- <span data-ttu-id="1ed82-112">Der Parameter `Managed` wurde aus den Cmdlets `New-AzAvailabilitySet` und `Update-AzAvailabilitySet` entfernt, um die Verwendung von ```Sku = Aligned``` zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-112">Removed `Managed` Parameter from `New-AzAvailabilitySet` and `Update-AzAvailabilitySet` cmdlets in favor of using ```Sku = Aligned```</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-113">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-113">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-113">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-113">Before</span></span>
 
   ```powershell
   Update-AzAvailabilitySet -Managed
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-114">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-114">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-114">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-114">After</span></span>
 
   ```powershell
   Update-AzAvailabilitySet -Sku Aligned
   ```
-- <span data-ttu-id="9cd26-115">Aus Konsistenzgründen wurde der Parameter `Image` aus den Parametersätzen „ByName“ und „ByResourceId“ in `Update-AzImage` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-115">For consistency, removed `Image` parameter from 'ByName' and 'ByResourceId' parameter sets in `Update-AzImage`</span></span> 
+- <span data-ttu-id="1ed82-115">Aus Konsistenzgründen wurde der Parameter `Image` aus den Parametersätzen „ByName“ und „ByResourceId“ in `Update-AzImage` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-115">For consistency, removed `Image` parameter from 'ByName' and 'ByResourceId' parameter sets in `Update-AzImage`</span></span> 
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-116">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-116">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-116">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-116">Before</span></span>
 
-  <span data-ttu-id="9cd26-117">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber das übergebene „ImageName“ nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-117">Note that the below code is functional, but the passed-in ImageName is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-117">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber das übergebene „ImageName“ nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-117">Note that the below code is functional, but the passed-in ImageName is not used, so removing this parameter has no functional impact.</span></span>
 
   ```powershell
   Update-AzImage -ResourceGroupName $Rg -ImageName $Name -Image $Image -Tag $tags
@@ -51,7 +52,7 @@ ms.locfileid: "92753671"
   Update-AzImage -ResourceId $Id -Image $Image -Tag $tags
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-118">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-118">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-118">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-118">After</span></span>
 
   ```powershell
   Update-AzImage -ResourceGroupName $Rg -ImageName $Name -Tag $tags
@@ -59,18 +60,18 @@ ms.locfileid: "92753671"
   Update-AzImage -ResourceId $Id -Tag $tags
   ```
 
-- <span data-ttu-id="9cd26-119">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Restart-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-119">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Restart-AzVM`</span></span>
+- <span data-ttu-id="1ed82-119">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Restart-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-119">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Restart-AzVM`</span></span>
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-120">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-120">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-120">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-120">Before</span></span>
 
-  <span data-ttu-id="9cd26-121">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-121">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-121">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-121">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
   ```powershell
   Restart-AzVM -InputObject $VM -Name $Name 
 
   Restart-AzVM -ResourceId $Id -Name $Name
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-122">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-122">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-122">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-122">After</span></span>
 
   ```powershell
   Restart-AzVM -InputObject $VM
@@ -78,11 +79,11 @@ ms.locfileid: "92753671"
   Restart-AzVM -ResourceId $Id
   ```
 
-- <span data-ttu-id="9cd26-123">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Start-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-123">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Start-AzVM`</span></span>
+- <span data-ttu-id="1ed82-123">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Start-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-123">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Start-AzVM`</span></span>
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-124">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-124">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-124">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-124">Before</span></span>
 
-  <span data-ttu-id="9cd26-125">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-125">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-125">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-125">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
 
   ```powershell
   Start-AzVM -InputObject $VM -Name $Name 
@@ -90,7 +91,7 @@ ms.locfileid: "92753671"
   Start-AzVM -ResourceId $Id -Name $Name
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-126">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-126">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-126">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-126">After</span></span>
 
   ```powershell
   Start-AzVM -InputObject $VM
@@ -98,11 +99,11 @@ ms.locfileid: "92753671"
   Start-AzVM -ResourceId $Id
   ```
 
-- <span data-ttu-id="9cd26-127">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Stop-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-127">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Stop-AzVM`</span></span>
+- <span data-ttu-id="1ed82-127">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Stop-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-127">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Stop-AzVM`</span></span>
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-128">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-128">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-128">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-128">Before</span></span>
 
-  <span data-ttu-id="9cd26-129">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-129">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-129">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-129">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
 
   ```powershell
   Stop-AzVM -InputObject $VM -Name $Name 
@@ -110,7 +111,7 @@ ms.locfileid: "92753671"
   Stop-AzVM -ResourceId $Id -Name $Name
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-130">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-130">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-130">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-130">After</span></span>
 
   ```powershell
   Stop-AzVM -InputObject $VM
@@ -118,11 +119,11 @@ ms.locfileid: "92753671"
   Stop-AzVM -ResourceId $Id
   ```
 
-- <span data-ttu-id="9cd26-131">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Remove-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-131">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Remove-AzVM`</span></span>
+- <span data-ttu-id="1ed82-131">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Remove-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-131">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Remove-AzVM`</span></span>
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-132">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-132">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-132">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-132">Before</span></span>
 
-  <span data-ttu-id="9cd26-133">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-133">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-133">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-133">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
 
   ```powershell
   Remove-AzVM -InputObject $VM -Name $Name
@@ -130,7 +131,7 @@ ms.locfileid: "92753671"
   Remove-AzVM -ResourceId $Id -Name $Name 
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-134">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-134">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-134">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-134">After</span></span>
 
   ```powershell
   Remove-AzVM -InputObject $VM 
@@ -138,11 +139,11 @@ ms.locfileid: "92753671"
   Remove-AzVM -ResourceId $Id 
   ```
 
-- <span data-ttu-id="9cd26-135">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Set-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-135">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Set-AzVM`</span></span>
+- <span data-ttu-id="1ed82-135">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Set-AzVM` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-135">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Set-AzVM`</span></span>
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-136">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-136">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-136">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-136">Before</span></span>
 
-  <span data-ttu-id="9cd26-137">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-137">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  <span data-ttu-id="1ed82-137">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-137">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
 
   ```powershell
   Set-AzVM -InputObject $VM -Name $Name ...
@@ -150,7 +151,7 @@ ms.locfileid: "92753671"
   Set-AzVM -ResourceId $Id -Name $Name ...
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-138">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-138">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-138">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-138">After</span></span>
 
   ```powershell
   Set-AzVM -InputObject $VM ...
@@ -158,25 +159,25 @@ ms.locfileid: "92753671"
   Set-AzVM -ResourceId $Id ...
   ```
 
-- <span data-ttu-id="9cd26-139">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Save-AzVMImage` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-139">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Save-AzVMImage`</span></span> 
+- <span data-ttu-id="1ed82-139">Aus Konsistenzgründen wurde der Parameter `Name` aus den Parametersätzen „ByObject“ und „ByResourceId“ in `Save-AzVMImage` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-139">For consistency, removed `Name` parameter from 'ByObject' and 'ByResourceId' parameter sets in `Save-AzVMImage`</span></span> 
   
-  #### <a name="before"></a><span data-ttu-id="9cd26-140">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-140">Before</span></span>
-  <span data-ttu-id="9cd26-141">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="9cd26-141">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-140">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-140">Before</span></span>
+  <span data-ttu-id="1ed82-141">Beachten Sie, dass der nachfolgende Code funktionsfähig ist, aber der übergebene Name nicht verwendet wird, sodass das Entfernen dieses Parameters keine Auswirkung auf die Funktion hat.</span><span class="sxs-lookup"><span data-stu-id="1ed82-141">Note that the below code is functional, but the passed-in Name is not used, so removing this parameter has no functional impact.</span></span>
   ```powershell
   Save-AzVMImage -InputObject $VM -Name $Name ...
 
   Save-AzVMImage -ResourceId $Id -Name $Name ...
   ```
-  #### <a name="after"></a><span data-ttu-id="9cd26-142">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-142">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-142">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-142">After</span></span>
   ```powershell
   Save-AzVMImage -InputObject $VM ...
 
   Save-AzVMImage -ResourceId $Id ...
   ```
 
-- <span data-ttu-id="9cd26-143">Die ProtectionPolicy-Eigenschaft wurde hinzugefügt, um die Eigenschaft `ProtectFromScaleIn` in `PSVirtualMachineScaleSetVM` zu kapseln.</span><span class="sxs-lookup"><span data-stu-id="9cd26-143">Added ProtectionPolicy property to encapsulate `ProtectFromScaleIn` property in `PSVirtualMachineScaleSetVM`</span></span>
+- <span data-ttu-id="1ed82-143">Die ProtectionPolicy-Eigenschaft wurde hinzugefügt, um die Eigenschaft `ProtectFromScaleIn` in `PSVirtualMachineScaleSetVM` zu kapseln.</span><span class="sxs-lookup"><span data-stu-id="1ed82-143">Added ProtectionPolicy property to encapsulate `ProtectFromScaleIn` property in `PSVirtualMachineScaleSetVM`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-144">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-144">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-144">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-144">Before</span></span>
 
   ```powershell
   $vmss = Get-AzVMssVM ...
@@ -189,7 +190,7 @@ ms.locfileid: "92753671"
   $vmss.ProtectFromScaleIn = $true
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-145">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-145">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-145">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-145">After</span></span>
 
   ```powershell
   $vmss = Get-AzVMssVM ...
@@ -203,9 +204,9 @@ ms.locfileid: "92753671"
 
   ```
 
-- <span data-ttu-id="9cd26-146">Die ```EncryptionSettingsCollection```-Eigenschaft wurde hinzugefügt, um die `EncryptionSettings` Eigenschaft in `PSDisk` einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-146">Added ```EncryptionSettingsCollection``` Property to enclose `EncryptionSettings` property in `PSDisk`</span></span>
+- <span data-ttu-id="1ed82-146">Die ```EncryptionSettingsCollection```-Eigenschaft wurde hinzugefügt, um die `EncryptionSettings` Eigenschaft in `PSDisk` einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-146">Added ```EncryptionSettingsCollection``` Property to enclose `EncryptionSettings` property in `PSDisk`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-147">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-147">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-147">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-147">Before</span></span>
 
   ```powershell
   $disk = New-AzDisk ... | Set-AzDiskDiskEncrytionKey ...
@@ -221,7 +222,7 @@ ms.locfileid: "92753671"
   $update.EncryptionSettings
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-148">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-148">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-148">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-148">After</span></span>
 
   ```powershell
   $disk = New-AzDisk ... | Set-AzDiskDiskEncrytionKey ...
@@ -237,9 +238,9 @@ ms.locfileid: "92753671"
   $update.EncryptionSettingsCollection.EncryptionSettings
   ```
 
-- <span data-ttu-id="9cd26-149">Die ```EncryptionSettingsCollection```-Eigenschaft wurde hinzugefügt, um die `EncryptionSettings` Eigenschaft in `PSSnapshot` einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-149">Added ```EncryptionSettingsCollection``` Property to enclose `EncryptionSettings` property in `PSSnapshot`</span></span>
+- <span data-ttu-id="1ed82-149">Die ```EncryptionSettingsCollection```-Eigenschaft wurde hinzugefügt, um die `EncryptionSettings` Eigenschaft in `PSSnapshot` einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-149">Added ```EncryptionSettingsCollection``` Property to enclose `EncryptionSettings` property in `PSSnapshot`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-150">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-150">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-150">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-150">Before</span></span>
 
   ```powershell
   $snap = New-AzSnapshotConfig ... | Set-AzSnapshotDiskEncryptionKey ...
@@ -255,7 +256,7 @@ ms.locfileid: "92753671"
   $update.EncryptionSettings
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-151">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-151">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-151">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-151">After</span></span>
 
   ```powershell
   $snap = New-AzSnapshotConfig ... | Set-AzSnapshotDiskEncryptionKey ...
@@ -271,97 +272,97 @@ ms.locfileid: "92753671"
   $update.EncryptionSettingsCollection.EncryptionSettings
   ```
 
-- <span data-ttu-id="9cd26-152">Die `VirtualMachineProfile`-Eigenschaft wurde aus `PSVirtualMachineScaleSet` entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-152">Removed `VirtualMachineProfile` property from `PSVirtualMachineScaleSet`</span></span>
+- <span data-ttu-id="1ed82-152">Die `VirtualMachineProfile`-Eigenschaft wurde aus `PSVirtualMachineScaleSet` entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-152">Removed `VirtualMachineProfile` property from `PSVirtualMachineScaleSet`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-153">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-153">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-153">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-153">Before</span></span>
 
   ```powershell
   $vmss = New-AzVMSSConfig ...
   $vmss.VirtualMachineProfile.AdditionalCapabilities.UltraSSDEnabled = $true
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-154">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-154">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-154">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-154">After</span></span>
 
   ```powershell
   $vmss = New-AzVMSSConfig ...
   $vmss.AdditionalCapabilities.UltraSSDEnabled = $true
   ```
 
-- <span data-ttu-id="9cd26-155">Cmdlet `Set-AzVMBootDiagnostic` entfernt Alias für `Set-AzVMBootDiagnostics`.</span><span class="sxs-lookup"><span data-stu-id="9cd26-155">Cmdlet `Set-AzVMBootDiagnostic` removed alias to `Set-AzVMBootDiagnostics`</span></span>
+- <span data-ttu-id="1ed82-155">Cmdlet `Set-AzVMBootDiagnostic` entfernt Alias für `Set-AzVMBootDiagnostics`.</span><span class="sxs-lookup"><span data-stu-id="1ed82-155">Cmdlet `Set-AzVMBootDiagnostic` removed alias to `Set-AzVMBootDiagnostics`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-156">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-156">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-156">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-156">Before</span></span>
 
-  <span data-ttu-id="9cd26-157">Es werden veraltete Aliasnamen verwendet.</span><span class="sxs-lookup"><span data-stu-id="9cd26-157">Using deprecated alias</span></span>
+  <span data-ttu-id="1ed82-157">Es werden veraltete Aliasnamen verwendet.</span><span class="sxs-lookup"><span data-stu-id="1ed82-157">Using deprecated alias</span></span>
 
   ```powershell
   Set-AzVMBootDiagnostics
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-158">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-158">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-158">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-158">After</span></span>
 
   ```powershell
   Set-AzVMBootDIagnostic
   ```
 
-- <span data-ttu-id="9cd26-159">Cmdlet `Export-AzLogAnalyticThrottledRequest` entfernt Alias für `Export-AzLogAnalyticThrottledRequests`.</span><span class="sxs-lookup"><span data-stu-id="9cd26-159">Cmdlet `Export-AzLogAnalyticThrottledRequest` removed alias to `Export-AzLogAnalyticThrottledRequests`</span></span>
+- <span data-ttu-id="1ed82-159">Cmdlet `Export-AzLogAnalyticThrottledRequest` entfernt Alias für `Export-AzLogAnalyticThrottledRequests`.</span><span class="sxs-lookup"><span data-stu-id="1ed82-159">Cmdlet `Export-AzLogAnalyticThrottledRequest` removed alias to `Export-AzLogAnalyticThrottledRequests`</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-160">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-160">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-160">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-160">Before</span></span>
 
-  <span data-ttu-id="9cd26-161">Es werden veraltete Aliasnamen verwendet.</span><span class="sxs-lookup"><span data-stu-id="9cd26-161">Using deprectaed alias</span></span>
+  <span data-ttu-id="1ed82-161">Es werden veraltete Aliasnamen verwendet.</span><span class="sxs-lookup"><span data-stu-id="1ed82-161">Using deprectaed alias</span></span>
 
   ```powershell
   Export-AzLogAnalyticThrottledRequests
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-162">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-162">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-162">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-162">After</span></span>
 
   ```powershell
   Export-AzLogAnalyticThrottledRequest
   ```
 
-### <a name="azhdinsight"></a><span data-ttu-id="9cd26-163">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="9cd26-163">Az.HDInsight</span></span>
+### <a name="azhdinsight"></a><span data-ttu-id="1ed82-163">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="1ed82-163">Az.HDInsight</span></span>
 
-- <span data-ttu-id="9cd26-164">Die Cmdlets `Grant-AzHDInsightHttpServicesAccess` und `Revoke-AzHDInsightHttpServicesAccess` wurden entfernt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-164">Removed the `Grant-AzHDInsightHttpServicesAccess` and `Revoke-AzHDInsightHttpServicesAccess` cmdlets.</span></span> <span data-ttu-id="9cd26-165">Diese sind nicht mehr erforderlich, da der HTTP-Zugriff auf alle HDInsight-Cluster immer aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="9cd26-165">These are no longer necessary because HTTP access is always enabled on all HDInsight clusters.</span></span>
-- <span data-ttu-id="9cd26-166">Ein neues `Set-AzHDInsightGatewayCredential`-Cmdlet wurde hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="9cd26-166">Added a new `Set-AzHDInsightGatewayCredential`  cmdlet.</span></span> <span data-ttu-id="9cd26-167">Verwenden Sie dieses Cmdlet, um den HTTP-Benutzernamen und das Kennwort für das Gateway zu ändern (ersetzt `Grant-AzHDInsightHttpServicesAccess`).</span><span class="sxs-lookup"><span data-stu-id="9cd26-167">Use this cmdlet to change the gateway HTTP username and password (replaces `Grant-AzHDInsightHttpServicesAccess`).</span></span>
-- <span data-ttu-id="9cd26-168">Das Cmdlet `Get-AzHDInsightJobOutput` wurde aktualisiert, um den detaillierten rollenbasierten Zugriff auf den Speicherschlüssel zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-168">Updated the `Get-AzHDInsightJobOutput` cmdlet to support granular role-based access to the storage key.</span></span>
-    - <span data-ttu-id="9cd26-169">Benutzer mit den Rollen HDInsight-Clusteroperator, -mitwirkender oder -besitzer sind davon nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-169">Users with HDInsight Cluster Operator, Contributor, or Owner roles will not be affected.</span></span>
-    - <span data-ttu-id="9cd26-170">Benutzer, die nur über die Rolle „Leser“ verfügen, müssen den Parameter `DefaultStorageAccountKey` explizit angeben.</span><span class="sxs-lookup"><span data-stu-id="9cd26-170">Users with only the Reader role will need to specify `DefaultStorageAccountKey` parameter explicitly.</span></span>
+- <span data-ttu-id="1ed82-164">Die Cmdlets `Grant-AzHDInsightHttpServicesAccess` und `Revoke-AzHDInsightHttpServicesAccess` wurden entfernt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-164">Removed the `Grant-AzHDInsightHttpServicesAccess` and `Revoke-AzHDInsightHttpServicesAccess` cmdlets.</span></span> <span data-ttu-id="1ed82-165">Diese sind nicht mehr erforderlich, da der HTTP-Zugriff auf alle HDInsight-Cluster immer aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="1ed82-165">These are no longer necessary because HTTP access is always enabled on all HDInsight clusters.</span></span>
+- <span data-ttu-id="1ed82-166">Ein neues `Set-AzHDInsightGatewayCredential`-Cmdlet wurde hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1ed82-166">Added a new `Set-AzHDInsightGatewayCredential`  cmdlet.</span></span> <span data-ttu-id="1ed82-167">Verwenden Sie dieses Cmdlet, um den HTTP-Benutzernamen und das Kennwort für das Gateway zu ändern (ersetzt `Grant-AzHDInsightHttpServicesAccess`).</span><span class="sxs-lookup"><span data-stu-id="1ed82-167">Use this cmdlet to change the gateway HTTP username and password (replaces `Grant-AzHDInsightHttpServicesAccess`).</span></span>
+- <span data-ttu-id="1ed82-168">Das Cmdlet `Get-AzHDInsightJobOutput` wurde aktualisiert, um den detaillierten rollenbasierten Zugriff auf den Speicherschlüssel zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-168">Updated the `Get-AzHDInsightJobOutput` cmdlet to support granular role-based access to the storage key.</span></span>
+    - <span data-ttu-id="1ed82-169">Benutzer mit den Rollen HDInsight-Clusteroperator, -mitwirkender oder -besitzer sind davon nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-169">Users with HDInsight Cluster Operator, Contributor, or Owner roles will not be affected.</span></span>
+    - <span data-ttu-id="1ed82-170">Benutzer, die nur über die Rolle „Leser“ verfügen, müssen den Parameter `DefaultStorageAccountKey` explizit angeben.</span><span class="sxs-lookup"><span data-stu-id="1ed82-170">Users with only the Reader role will need to specify `DefaultStorageAccountKey` parameter explicitly.</span></span>
 
-<span data-ttu-id="9cd26-171">Weitere Informationen zu diesen rollenbasierten Zugriffsänderungen finden Sie unter [aka.ms/hdi-config-update](https://aka.ms/hdi-config-update).</span><span class="sxs-lookup"><span data-stu-id="9cd26-171">For more information about these role-based access changes, see [aka.ms/hdi-config-update](https://aka.ms/hdi-config-update)</span></span>
+<span data-ttu-id="1ed82-171">Weitere Informationen zu diesen rollenbasierten Zugriffsänderungen finden Sie unter [aka.ms/hdi-config-update](https://aka.ms/hdi-config-update).</span><span class="sxs-lookup"><span data-stu-id="1ed82-171">For more information about these role-based access changes, see [aka.ms/hdi-config-update](https://aka.ms/hdi-config-update)</span></span>
 
-  #### <a name="before"></a><span data-ttu-id="9cd26-172">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-172">Before</span></span>
+  #### <a name="before"></a><span data-ttu-id="1ed82-172">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-172">Before</span></span>
 
   ```powershell
   Grant-AzHDInsightHttpServicesAccess -ClusterName $cluster -HttpCredential $credential
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-173">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-173">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-173">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-173">After</span></span>
 
   ```powershell
   Set-AzHDInsightGatewayCredential -ClusterName $cluster -HttpCredential $credential
   ```
 
-###  <a name="users-with-only-reader-role-for-cmdlet-get-azhdinsightjoboutput"></a><span data-ttu-id="9cd26-174">Benutzer, die nur über die Rolle „Leser“ für das Cmdlet „Get-AzHDInsightJobOutput“ verfügen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-174">Users with only Reader role for cmdlet Get-AzHDInsightJobOutput</span></span>
+###  <a name="users-with-only-reader-role-for-cmdlet-get-azhdinsightjoboutput"></a><span data-ttu-id="1ed82-174">Benutzer, die nur über die Rolle „Leser“ für das Cmdlet „Get-AzHDInsightJobOutput“ verfügen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-174">Users with only Reader role for cmdlet Get-AzHDInsightJobOutput</span></span>
 
-  ####  <a name="before"></a><span data-ttu-id="9cd26-175">vor</span><span class="sxs-lookup"><span data-stu-id="9cd26-175">Before</span></span>
+  ####  <a name="before"></a><span data-ttu-id="1ed82-175">vor</span><span class="sxs-lookup"><span data-stu-id="1ed82-175">Before</span></span>
 
   ```powershell
   Get-AzHDInsightJobOutput  -ClusterName $clusterName -JobId $jobId
   ```
 
-  #### <a name="after"></a><span data-ttu-id="9cd26-176">Nach</span><span class="sxs-lookup"><span data-stu-id="9cd26-176">After</span></span>
+  #### <a name="after"></a><span data-ttu-id="1ed82-176">Nach</span><span class="sxs-lookup"><span data-stu-id="1ed82-176">After</span></span>
 
   ```powershell
   Get-AzHDInsightJobOutput  -ClusterName $clusterName -JobId $jobId -DefaultStorageAccountKey $storageAccountKey
   ```
 
-### <a name="azstorage"></a><span data-ttu-id="9cd26-177">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="9cd26-177">Az.Storage</span></span>
+### <a name="azstorage"></a><span data-ttu-id="1ed82-177">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="1ed82-177">Az.Storage</span></span>
 
-- <span data-ttu-id="9cd26-178">Namespaces für Typen, die von den Cmdlets „Blob“, „Warteschlange“ und „Datei“ zurückgegeben werden, haben ihren Namespace von `Microsoft.WindowsAzure.Storage` zu `Microsoft.Azure.Storage` geändert.</span><span class="sxs-lookup"><span data-stu-id="9cd26-178">Namespaces for types returned from Blob, Queue, and File cmdlets have changed their namespace from `Microsoft.WindowsAzure.Storage` to `Microsoft.Azure.Storage`.</span></span>  <span data-ttu-id="9cd26-179">Obwohl es sich hierbei technisch gesehen nicht um eine Breaking Change-Änderung gemäß der Breaking Change-Richtlinie handelt, kann es erforderlich sein, einige Änderungen im Code vorzunehmen, die die Methoden des Storage .NET SDKs verwenden, um mit den von diesen Cmdlets zurückgegebenen Objekten zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="9cd26-179">While this is not technically a breaking change according to the breaking change policy, it may require some changes in code that uses the methods from the Storage .Net SDK to interact with the objects returned from these cmdlets.</span></span>
+- <span data-ttu-id="1ed82-178">Namespaces für Typen, die von den Cmdlets „Blob“, „Warteschlange“ und „Datei“ zurückgegeben werden, haben ihren Namespace von `Microsoft.WindowsAzure.Storage` zu `Microsoft.Azure.Storage` geändert.</span><span class="sxs-lookup"><span data-stu-id="1ed82-178">Namespaces for types returned from Blob, Queue, and File cmdlets have changed their namespace from `Microsoft.WindowsAzure.Storage` to `Microsoft.Azure.Storage`.</span></span>  <span data-ttu-id="1ed82-179">Obwohl es sich hierbei technisch gesehen nicht um eine Breaking Change-Änderung gemäß der Breaking Change-Richtlinie handelt, kann es erforderlich sein, einige Änderungen im Code vorzunehmen, die die Methoden des Storage .NET SDKs verwenden, um mit den von diesen Cmdlets zurückgegebenen Objekten zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="1ed82-179">While this is not technically a breaking change according to the breaking change policy, it may require some changes in code that uses the methods from the Storage .Net SDK to interact with the objects returned from these cmdlets.</span></span>
 
-  #### <a name="example-1--add-a-message-to-a-queue-change-cloudqueuemessage-object-namespace"></a><span data-ttu-id="9cd26-180">Beispiel 1:  Hinzufügen einer Nachricht zu einer Warteschlange (CloudQueueMessage-Objektnamespace wird geändert)</span><span class="sxs-lookup"><span data-stu-id="9cd26-180">Example 1:  Add a message to a Queue (change CloudQueueMessage object namespace)</span></span>
+  #### <a name="example-1--add-a-message-to-a-queue-change-cloudqueuemessage-object-namespace"></a><span data-ttu-id="1ed82-180">Beispiel 1:  Hinzufügen einer Nachricht zu einer Warteschlange (CloudQueueMessage-Objektnamespace wird geändert)</span><span class="sxs-lookup"><span data-stu-id="1ed82-180">Example 1:  Add a message to a Queue (change CloudQueueMessage object namespace)</span></span>
 
-  <span data-ttu-id="9cd26-181">Vorher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-181">Before:</span></span> 
+  <span data-ttu-id="1ed82-181">Vorher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-181">Before:</span></span> 
 
   ```powershell
   $queue = Get-AzStorageQueue –Name $queueName –Context $ctx
@@ -369,7 +370,7 @@ ms.locfileid: "92753671"
   $queue.CloudQueue.AddMessageAsync($QueueMessage)
   ```
 
-  <span data-ttu-id="9cd26-182">Nachher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-182">After:</span></span>
+  <span data-ttu-id="1ed82-182">Nachher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-182">After:</span></span>
 
   ```powershell
   $queue = Get-AzStorageQueue –Name $queueName –Context $ctx
@@ -377,9 +378,9 @@ ms.locfileid: "92753671"
   $queue.CloudQueue.AddMessageAsync($QueueMessage)
   ```
 
-  #### <a name="example-2--fetch-blobfile-attributes-with-accesscondition-change-accesscondition-object-namespace"></a><span data-ttu-id="9cd26-183">Beispiel 2:  Abrufen von Blob-/Dateiattributen mit AccessCondition (AccessCondition-Objektnamespace wird geändert)</span><span class="sxs-lookup"><span data-stu-id="9cd26-183">Example 2:  Fetch Blob/File Attributes with AccessCondition (change AccessCondition object namespace)</span></span>
+  #### <a name="example-2--fetch-blobfile-attributes-with-accesscondition-change-accesscondition-object-namespace"></a><span data-ttu-id="1ed82-183">Beispiel 2:  Abrufen von Blob-/Dateiattributen mit AccessCondition (AccessCondition-Objektnamespace wird geändert)</span><span class="sxs-lookup"><span data-stu-id="1ed82-183">Example 2:  Fetch Blob/File Attributes with AccessCondition (change AccessCondition object namespace)</span></span>
 
-  <span data-ttu-id="9cd26-184">Vorher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-184">Before:</span></span> 
+  <span data-ttu-id="1ed82-184">Vorher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-184">Before:</span></span> 
 
   ```powershell
   $accessCondition= New-Object Microsoft.WindowsAzure.Storage.AccessCondition
@@ -391,7 +392,7 @@ ms.locfileid: "92753671"
   $file.FetchAttributes($accessCondition)
   ```
 
-  <span data-ttu-id="9cd26-185">Nachher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-185">After:</span></span>
+  <span data-ttu-id="1ed82-185">Nachher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-185">After:</span></span>
 
   ```powershell
   $accessCondition= New-Object Microsoft.Azure.Storage.AccessCondition
@@ -403,18 +404,18 @@ ms.locfileid: "92753671"
   $file.FetchAttributes($accessCondition)
   ```
 
-- <span data-ttu-id="9cd26-186">Obwohl es sich hierbei technisch gesehen nicht um eine Breaking Change-Änderung handelt, werden Sie feststellen, dass sich die Ausgabeunterschiede in der Sku.Name-Eigenschaft von Speicherkonten, die von `New/Get/Set-AzStorageAccount`-Änderungen zurückgegeben wurden, wie folgt darstellen.</span><span class="sxs-lookup"><span data-stu-id="9cd26-186">While not technically a breaking change, you will notice output differences in the Sku.Name property of Storage Accounts returned from  `New/Get/Set-AzStorageAccount` changes are as follows.</span></span> <span data-ttu-id="9cd26-187">(Nach der Änderung sind aus- und eingegebenes „SkuName“ ausgerichtet.)</span><span class="sxs-lookup"><span data-stu-id="9cd26-187">(After the change, output and input SkuName are aligned.)</span></span>
-  - <span data-ttu-id="9cd26-188">„StandardLRS“ -> „Standard_LRS“;</span><span class="sxs-lookup"><span data-stu-id="9cd26-188">"StandardLRS" -> "Standard_LRS";</span></span>
-  - <span data-ttu-id="9cd26-189">„StandardGRS“ -> „Standard_GRS“;</span><span class="sxs-lookup"><span data-stu-id="9cd26-189">"StandardGRS" -> "Standard_GRS";</span></span>
-  - <span data-ttu-id="9cd26-190">„StandardRAGRS“ -> „Standard_RAGRS“;</span><span class="sxs-lookup"><span data-stu-id="9cd26-190">"StandardRAGRS" -> "Standard_RAGRS";</span></span>
-  - <span data-ttu-id="9cd26-191">„StandardZRS“ -> „Standard_ZRS“;</span><span class="sxs-lookup"><span data-stu-id="9cd26-191">"StandardZRS" -> "Standard_ZRS";</span></span>
-  - <span data-ttu-id="9cd26-192">„PremiumLRS“ -> „Premium_LRS“;</span><span class="sxs-lookup"><span data-stu-id="9cd26-192">"PremiumLRS" -> "Premium_LRS";</span></span>
+- <span data-ttu-id="1ed82-186">Obwohl es sich hierbei technisch gesehen nicht um eine Breaking Change-Änderung handelt, werden Sie feststellen, dass sich die Ausgabeunterschiede in der Sku.Name-Eigenschaft von Speicherkonten, die von `New/Get/Set-AzStorageAccount`-Änderungen zurückgegeben wurden, wie folgt darstellen.</span><span class="sxs-lookup"><span data-stu-id="1ed82-186">While not technically a breaking change, you will notice output differences in the Sku.Name property of Storage Accounts returned from  `New/Get/Set-AzStorageAccount` changes are as follows.</span></span> <span data-ttu-id="1ed82-187">(Nach der Änderung sind aus- und eingegebenes „SkuName“ ausgerichtet.)</span><span class="sxs-lookup"><span data-stu-id="1ed82-187">(After the change, output and input SkuName are aligned.)</span></span>
+  - <span data-ttu-id="1ed82-188">„StandardLRS“ -> „Standard_LRS“;</span><span class="sxs-lookup"><span data-stu-id="1ed82-188">"StandardLRS" -> "Standard_LRS";</span></span>
+  - <span data-ttu-id="1ed82-189">„StandardGRS“ -> „Standard_GRS“;</span><span class="sxs-lookup"><span data-stu-id="1ed82-189">"StandardGRS" -> "Standard_GRS";</span></span>
+  - <span data-ttu-id="1ed82-190">„StandardRAGRS“ -> „Standard_RAGRS“;</span><span class="sxs-lookup"><span data-stu-id="1ed82-190">"StandardRAGRS" -> "Standard_RAGRS";</span></span>
+  - <span data-ttu-id="1ed82-191">„StandardZRS“ -> „Standard_ZRS“;</span><span class="sxs-lookup"><span data-stu-id="1ed82-191">"StandardZRS" -> "Standard_ZRS";</span></span>
+  - <span data-ttu-id="1ed82-192">„PremiumLRS“ -> „Premium_LRS“;</span><span class="sxs-lookup"><span data-stu-id="1ed82-192">"PremiumLRS" -> "Premium_LRS";</span></span>
 
-- <span data-ttu-id="9cd26-193">Das standardmäßige Dienstverhalten beim Erstellen eines Speicherkontos ohne Angabe einer Art hat sich geändert.</span><span class="sxs-lookup"><span data-stu-id="9cd26-193">The default service behavior when creating a storage account withous specifying a Kind has changed.</span></span>  <span data-ttu-id="9cd26-194">In früheren Versionen, als ein Speicherkonto ohne `Kind` angegeben wurde, wurde das Speicherkonto der Art `Storage` verwendet. In der neuen Version `StorageV2` ist der Standardwert `Kind`.</span><span class="sxs-lookup"><span data-stu-id="9cd26-194">In previous versions, when a storage account was created with no `Kind` specified, the Storage account Kind of `Storage` was used, in the new version `StorageV2` is the default `Kind` value.</span></span> <span data-ttu-id="9cd26-195">Wenn Sie ein V1-Speicherkonto der Art „Storage“ erstellen müssen, fügen Sie den Parameter „-Kind Storage“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="9cd26-195">If you need to create a V1 Storage account with Kind 'Storage', add parameter '-Kind Storage'</span></span>
+- <span data-ttu-id="1ed82-193">Das standardmäßige Dienstverhalten beim Erstellen eines Speicherkontos ohne Angabe einer Art hat sich geändert.</span><span class="sxs-lookup"><span data-stu-id="1ed82-193">The default service behavior when creating a storage account withous specifying a Kind has changed.</span></span>  <span data-ttu-id="1ed82-194">In früheren Versionen, als ein Speicherkonto ohne `Kind` angegeben wurde, wurde das Speicherkonto der Art `Storage` verwendet. In der neuen Version `StorageV2` ist der Standardwert `Kind`.</span><span class="sxs-lookup"><span data-stu-id="1ed82-194">In previous versions, when a storage account was created with no `Kind` specified, the Storage account Kind of `Storage` was used, in the new version `StorageV2` is the default `Kind` value.</span></span> <span data-ttu-id="1ed82-195">Wenn Sie ein V1-Speicherkonto der Art „Storage“ erstellen müssen, fügen Sie den Parameter „-Kind Storage“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="1ed82-195">If you need to create a V1 Storage account with Kind 'Storage', add parameter '-Kind Storage'</span></span>
 
-  #### <a name="example--create-a-storage-account-default-kind-change"></a><span data-ttu-id="9cd26-196">Beispiel: Erstellen eines Speicherkontos (Änderung der Standardart)</span><span class="sxs-lookup"><span data-stu-id="9cd26-196">Example : Create a storage Account (Default Kind change)</span></span>  
+  #### <a name="example--create-a-storage-account-default-kind-change"></a><span data-ttu-id="1ed82-196">Beispiel: Erstellen eines Speicherkontos (Änderung der Standardart)</span><span class="sxs-lookup"><span data-stu-id="1ed82-196">Example : Create a storage Account (Default Kind change)</span></span>  
 
-  <span data-ttu-id="9cd26-197">Vorher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-197">Before:</span></span>
+  <span data-ttu-id="1ed82-197">Vorher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-197">Before:</span></span>
 
   ```powershell
   PS c:\> New-AzStorageAccount -ResourceGroupName groupname -Name accountname -SkuName Standard_LRS -Location "westus"
@@ -424,7 +425,7 @@ ms.locfileid: "92753671"
   accountname        groupname         westus   StandardLRS Storage   Hot        4/17/2018 10:34:32 AM Succeeded         False
   ```
 
-  <span data-ttu-id="9cd26-198">Nachher:</span><span class="sxs-lookup"><span data-stu-id="9cd26-198">After:</span></span>
+  <span data-ttu-id="1ed82-198">Nachher:</span><span class="sxs-lookup"><span data-stu-id="1ed82-198">After:</span></span>
 
   ```powershell
   PS c:\> New-AzStorageAccount -ResourceGroupName groupname -Name accountname -SkuName Standard_LRS -Location "westus"

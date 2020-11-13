@@ -5,831 +5,832 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2929d7ebaf26e069b12c5b6451e333255ae740af
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: c6880e4c09339ec6a3e192480fde9e1f85cbca5f
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244329"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409498"
 ---
-# <a name="azure-powershell-release-notes"></a><span data-ttu-id="ca33d-103">Versionshinweise zu Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="ca33d-103">Azure PowerShell release notes</span></span>
-## <a name="280---october-2019"></a><span data-ttu-id="ca33d-104">2.8.0: Oktober 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-104">2.8.0 - October 2019</span></span>
-### <a name="general"></a><span data-ttu-id="ca33d-105">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ca33d-105">General</span></span>
-* <span data-ttu-id="ca33d-106">Az.HealthcareApis-Release 1.0.0</span><span class="sxs-lookup"><span data-stu-id="ca33d-106">Az.HealthcareApis 1.0.0 release</span></span>
+# <a name="azure-powershell-release-notes"></a><span data-ttu-id="f6333-103">Versionshinweise zu Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="f6333-103">Azure PowerShell release notes</span></span>
+## <a name="280---october-2019"></a><span data-ttu-id="f6333-104">2.8.0: Oktober 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-104">2.8.0 - October 2019</span></span>
+### <a name="general"></a><span data-ttu-id="f6333-105">Allgemein</span><span class="sxs-lookup"><span data-stu-id="f6333-105">General</span></span>
+* <span data-ttu-id="f6333-106">Az.HealthcareApis-Release 1.0.0</span><span class="sxs-lookup"><span data-stu-id="f6333-106">Az.HealthcareApis 1.0.0 release</span></span>
 
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-107">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-107">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-108">Telemetriedaten und URL-Umschreibung für generierte Module aktualisiert, Windows-Komponententests korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-108">Update telemetry and url rewriting for generated modules, fix windows unit tests.</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-107">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-107">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-108">Telemetriedaten und URL-Umschreibung für generierte Module aktualisiert, Windows-Komponententests korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-108">Update telemetry and url rewriting for generated modules, fix windows unit tests.</span></span>
 
-#### <a name="azapimanagement"></a><span data-ttu-id="ca33d-109">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-109">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-110">**Set-AzApiManagementApi**: Unterstützung für die Aktualisierung der API in „ApiVersionSet“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-110">**Set-AzApiManagementApi** - Added support for Updating Api into ApiVersionSet</span></span>
-    - <span data-ttu-id="ca33d-111">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/10068</span><span class="sxs-lookup"><span data-stu-id="ca33d-111">Fix for issue https://github.com/Azure/azure-powershell/issues/10068</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="f6333-109">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-109">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-110">**Set-AzApiManagementApi** : Unterstützung für die Aktualisierung der API in „ApiVersionSet“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-110">**Set-AzApiManagementApi** - Added support for Updating Api into ApiVersionSet</span></span>
+    - <span data-ttu-id="f6333-111">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/10068</span><span class="sxs-lookup"><span data-stu-id="f6333-111">Fix for issue https://github.com/Azure/azure-powershell/issues/10068</span></span>
 
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-112">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-112">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-113">Cmdlet „New-AzureAutomationSoftwareUpdateConfiguration“ für den Parameter für die Linux-Neustarteinstellung korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-113">Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter.</span></span>
+#### <a name="azautomation"></a><span data-ttu-id="f6333-112">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-112">Az.Automation</span></span>
+* <span data-ttu-id="f6333-113">Cmdlet „New-AzureAutomationSoftwareUpdateConfiguration“ für den Parameter für die Linux-Neustarteinstellung korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-113">Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter.</span></span>
 
-#### <a name="azbatch"></a><span data-ttu-id="ca33d-114">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="ca33d-114">Az.Batch</span></span>
-* <span data-ttu-id="ca33d-115">**Get-AzBatchNodeAgentSku** ist veraltet und wird in Version 2.0.0 durch **Get-AzBatchSupportImage** ersetzt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-115">**Get-AzBatchNodeAgentSku** is deprecated and will be replaced by **Get-AzBatchSupportImage** in version 2.0.0.</span></span>
+#### <a name="azbatch"></a><span data-ttu-id="f6333-114">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="f6333-114">Az.Batch</span></span>
+* <span data-ttu-id="f6333-115">**Get-AzBatchNodeAgentSku** ist veraltet und wird in Version 2.0.0 durch **Get-AzBatchSupportImage** ersetzt.</span><span class="sxs-lookup"><span data-stu-id="f6333-115">**Get-AzBatchNodeAgentSku** is deprecated and will be replaced by **Get-AzBatchSupportImage** in version 2.0.0.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-116">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-116">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-117">Parameter „Priority“, „EvictionPolicy“ und „MaxPrice“ zu den Cmdlets „“New-AzVM“ und „New-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-117">Add Priority, EvictionPolicy, and MaxPrice parameters to New-AzVM and New-AzVmss cmdlets</span></span>
-* <span data-ttu-id="ca33d-118">Warnmeldung und Hilfedokument für die Cmdlets „Add-AzVMAdditionalUnattendContent“ und „Add-AzVMSshPublicKey“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-118">Fix warning message and help document for Add-AzVMAdditionalUnattendContent and Add-AzVMSshPublicKey cmdlets</span></span>
-* <span data-ttu-id="ca33d-119">Ausnahme „-skipVmBackup“ Linux-VMs mit verwalteten Datenträgern für „Set-AzVMDiskEncryptionExtension“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-119">Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension.</span></span>
-* <span data-ttu-id="ca33d-120">Fehler beim Aktualisieren von Verschlüsselungseinstellungen in „Set-AzVMDiskEncryptionExtension“ korrigiert (zweistufiges Szenario)</span><span class="sxs-lookup"><span data-stu-id="ca33d-120">Fix bug in update encryption settings in Set-AzVMDiskEncryptionExtension, two pass scenario.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="f6333-116">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-116">Az.Compute</span></span>
+* <span data-ttu-id="f6333-117">Parameter „Priority“, „EvictionPolicy“ und „MaxPrice“ zu den Cmdlets „“New-AzVM“ und „New-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-117">Add Priority, EvictionPolicy, and MaxPrice parameters to New-AzVM and New-AzVmss cmdlets</span></span>
+* <span data-ttu-id="f6333-118">Warnmeldung und Hilfedokument für die Cmdlets „Add-AzVMAdditionalUnattendContent“ und „Add-AzVMSshPublicKey“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-118">Fix warning message and help document for Add-AzVMAdditionalUnattendContent and Add-AzVMSshPublicKey cmdlets</span></span>
+* <span data-ttu-id="f6333-119">Ausnahme „-skipVmBackup“ Linux-VMs mit verwalteten Datenträgern für „Set-AzVMDiskEncryptionExtension“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-119">Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension.</span></span>
+* <span data-ttu-id="f6333-120">Fehler beim Aktualisieren von Verschlüsselungseinstellungen in „Set-AzVMDiskEncryptionExtension“ korrigiert (zweistufiges Szenario)</span><span class="sxs-lookup"><span data-stu-id="f6333-120">Fix bug in update encryption settings in Set-AzVMDiskEncryptionExtension, two pass scenario.</span></span>
 
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-121">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-121">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-122">CRUD-Befehle für ADF V2-Datenfluss hinzugefügt: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow und Get-AzDataFactoryV2DataFlow</span><span class="sxs-lookup"><span data-stu-id="ca33d-122">Adding CRUD commands for ADF V2 data flow: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow, and Get-AzDataFactoryV2DataFlow.</span></span>
-* <span data-ttu-id="ca33d-123">Aktionsbefehle für Debugsitzung für ADF V2-Datenfluss hinzugefügt: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand und Stop-AzDataFactoryV2DataFlowDebugSession</span><span class="sxs-lookup"><span data-stu-id="ca33d-123">Adding action commands for ADF V2 data flow debug Session: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand and Stop-AzDataFactoryV2DataFlowDebugSession.</span></span>
-* <span data-ttu-id="ca33d-124">Version des ADF .NET SDK auf 4.2.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-124">Update ADF .Net SDK version to 4.2.0</span></span>
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-121">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-121">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-122">CRUD-Befehle für ADF V2-Datenfluss hinzugefügt: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow und Get-AzDataFactoryV2DataFlow</span><span class="sxs-lookup"><span data-stu-id="f6333-122">Adding CRUD commands for ADF V2 data flow: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow, and Get-AzDataFactoryV2DataFlow.</span></span>
+* <span data-ttu-id="f6333-123">Aktionsbefehle für Debugsitzung für ADF V2-Datenfluss hinzugefügt: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand und Stop-AzDataFactoryV2DataFlowDebugSession</span><span class="sxs-lookup"><span data-stu-id="f6333-123">Adding action commands for ADF V2 data flow debug Session: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand and Stop-AzDataFactoryV2DataFlowDebugSession.</span></span>
+* <span data-ttu-id="f6333-124">Version des ADF .NET SDK auf 4.2.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-124">Update ADF .Net SDK version to 4.2.0</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-125">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-125">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-126">Kontoüberprüfung korrigiert, sodass Konten mit „-“ ohne Domäne übermittelt werden können</span><span class="sxs-lookup"><span data-stu-id="ca33d-126">Fix account validation so that accounts with '-' can be passed without domain</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-125">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-125">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-126">Kontoüberprüfung korrigiert, sodass Konten mit „-“ ohne Domäne übermittelt werden können</span><span class="sxs-lookup"><span data-stu-id="f6333-126">Fix account validation so that accounts with '-' can be passed without domain</span></span>
 
-#### <a name="azhealthcareapis"></a><span data-ttu-id="ca33d-127">Az.HealthcareApis</span><span class="sxs-lookup"><span data-stu-id="ca33d-127">Az.HealthcareApis</span></span>
-* <span data-ttu-id="ca33d-128">PowerShell-Version auf 1.0.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-128">Updated the powershell version to 1.0.0</span></span>
-* <span data-ttu-id="ca33d-129">SDK-Version auf 1.0.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-129">Updated the SDK version to 1.0.2</span></span>
-* <span data-ttu-id="ca33d-130">Aktualisierung in Tests, um auf neue SDK-Version zu verweisen</span><span class="sxs-lookup"><span data-stu-id="ca33d-130">Update in tests to refer to new SDK version</span></span>
-* <span data-ttu-id="ca33d-131">Ausgabestruktur von geschachtelt in vereinfacht geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-131">Updated the output structure from nested to flattened.</span></span>
+#### <a name="azhealthcareapis"></a><span data-ttu-id="f6333-127">Az.HealthcareApis</span><span class="sxs-lookup"><span data-stu-id="f6333-127">Az.HealthcareApis</span></span>
+* <span data-ttu-id="f6333-128">PowerShell-Version auf 1.0.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-128">Updated the powershell version to 1.0.0</span></span>
+* <span data-ttu-id="f6333-129">SDK-Version auf 1.0.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-129">Updated the SDK version to 1.0.2</span></span>
+* <span data-ttu-id="f6333-130">Aktualisierung in Tests, um auf neue SDK-Version zu verweisen</span><span class="sxs-lookup"><span data-stu-id="f6333-130">Update in tests to refer to new SDK version</span></span>
+* <span data-ttu-id="f6333-131">Ausgabestruktur von geschachtelt in vereinfacht geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-131">Updated the output structure from nested to flattened.</span></span>
 
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-132">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-132">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-133">Neue Routingquelle hinzugefügt: DigitalTwinChangeEvents</span><span class="sxs-lookup"><span data-stu-id="ca33d-133">Add new routing source: DigitalTwinChangeEvents</span></span>
-* <span data-ttu-id="ca33d-134">Kleinere Fehlerbehebung: „Get-AzIothub“ gibt „subscriptionId“ nicht zurück.</span><span class="sxs-lookup"><span data-stu-id="ca33d-134">Minor bug fix: Get-AzIothub not returning subscriptionId</span></span>
+#### <a name="aziothub"></a><span data-ttu-id="f6333-132">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-132">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-133">Neue Routingquelle hinzugefügt: DigitalTwinChangeEvents</span><span class="sxs-lookup"><span data-stu-id="f6333-133">Add new routing source: DigitalTwinChangeEvents</span></span>
+* <span data-ttu-id="f6333-134">Kleinere Fehlerbehebung: „Get-AzIothub“ gibt „subscriptionId“ nicht zurück.</span><span class="sxs-lookup"><span data-stu-id="f6333-134">Minor bug fix: Get-AzIothub not returning subscriptionId</span></span>
 
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-135">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-135">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-136">Neue Aktionsgruppenempfänger für „New-AzActionGroupReceiver“ hinzugefügt:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span><span class="sxs-lookup"><span data-stu-id="ca33d-136">New action group receivers added for New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span></span>
-* <span data-ttu-id="ca33d-137">Verwendung des allgemeinen Warnungsschemas für Empfänger aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-137">Use common alert schema enabled for the receivers.</span></span> <span data-ttu-id="ca33d-138">Dies gilt nicht für SMS, Azure App-Pushbenachrichtigungen, ITSM und Sprachempfänger.</span><span class="sxs-lookup"><span data-stu-id="ca33d-138">This is not applicable for SMS, Azure App push , ITSM and Voice recievers</span></span>
-* <span data-ttu-id="ca33d-139">Webhooks unterstützen nun die Azure Active Directory-Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="ca33d-139">Webhooks now supports Azure active directory authentication.</span></span>
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-135">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-135">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-136">Neue Aktionsgruppenempfänger für „New-AzActionGroupReceiver“ hinzugefügt:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span><span class="sxs-lookup"><span data-stu-id="f6333-136">New action group receivers added for New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span></span>
+* <span data-ttu-id="f6333-137">Verwendung des allgemeinen Warnungsschemas für Empfänger aktiviert.</span><span class="sxs-lookup"><span data-stu-id="f6333-137">Use common alert schema enabled for the receivers.</span></span> <span data-ttu-id="f6333-138">Dies gilt nicht für SMS, Azure App-Pushbenachrichtigungen, ITSM und Sprachempfänger.</span><span class="sxs-lookup"><span data-stu-id="f6333-138">This is not applicable for SMS, Azure App push , ITSM and Voice recievers</span></span>
+* <span data-ttu-id="f6333-139">Webhooks unterstützen nun die Azure Active Directory-Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="f6333-139">Webhooks now supports Azure active directory authentication.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-140">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-140">Az.Network</span></span>
-* <span data-ttu-id="ca33d-141">Neues Cmdlet „Get-AzAvailableServiceAlias“ hinzugefügt, das zum Abrufen der Aliase aufgerufen werden kann, die für Dienstendpunktrichtlinien verwendet werden können</span><span class="sxs-lookup"><span data-stu-id="ca33d-141">Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.</span></span>
-* <span data-ttu-id="ca33d-142">Unterstützung für das Hinzufügen von Verbindungen von Datenverkehrsselektoren zu Virtual Network-Gatewayverbindungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-142">Added support for the adding traffic selectors to Virtual Network Gateway Connections</span></span>
-    - <span data-ttu-id="ca33d-143">Neu hinzugefügte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-143">New cmdlets added:</span></span>
-        - <span data-ttu-id="ca33d-144">New-AzIpsecTrafficSelectorPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-144">New-AzIpsecTrafficSelectorPolicy</span></span>
-    - <span data-ttu-id="ca33d-145">Cmdlets mit optionalem Parameter „-TrafficSelectorPolicies“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-145">Cmdlets updated with optional parameter -TrafficSelectorPolicies</span></span>
-        - <span data-ttu-id="ca33d-146">New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-146">New-AzVirtualNetworkGatewayConnection</span></span>
-        - <span data-ttu-id="ca33d-147">Set-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-147">Set-AzVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="ca33d-148">Unterstützung für ESP- und AH-Protokolle in Konfigurationen von Netzwerksicherheitsregeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-148">Add support for ESP and AH protocols in network security rule configurations</span></span>
-    - <span data-ttu-id="ca33d-149">Aktualisierte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-149">Updated cmdlets:</span></span>
-        - <span data-ttu-id="ca33d-150">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-150">Add-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="ca33d-151">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-151">New-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="ca33d-152">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-152">Set-AzNetworkSecurityRuleConfig</span></span>
-* <span data-ttu-id="ca33d-153">Verbesserte Behandlung von Ausnahmen in Cortex-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-153">Improve handling of exceptions in Cortex cmdlets</span></span>
-* <span data-ttu-id="ca33d-154">Neue Generationen und SKUs für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="ca33d-154">New Generations and SKUs for VirtualNetworkGateways</span></span>
-  - <span data-ttu-id="ca33d-155">Einführung neuer Generationen für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="ca33d-155">Introduce new Generations for VirtualNetworkGateways.</span></span>
-  - <span data-ttu-id="ca33d-156">Einführung neuer SKUs mit höherem Durchsatz für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="ca33d-156">Introduce new high throughput SKUs for VirtualNetworkGateways.</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-140">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-140">Az.Network</span></span>
+* <span data-ttu-id="f6333-141">Neues Cmdlet „Get-AzAvailableServiceAlias“ hinzugefügt, das zum Abrufen der Aliase aufgerufen werden kann, die für Dienstendpunktrichtlinien verwendet werden können</span><span class="sxs-lookup"><span data-stu-id="f6333-141">Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.</span></span>
+* <span data-ttu-id="f6333-142">Unterstützung für das Hinzufügen von Verbindungen von Datenverkehrsselektoren zu Virtual Network-Gatewayverbindungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-142">Added support for the adding traffic selectors to Virtual Network Gateway Connections</span></span>
+    - <span data-ttu-id="f6333-143">Neu hinzugefügte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-143">New cmdlets added:</span></span>
+        - <span data-ttu-id="f6333-144">New-AzIpsecTrafficSelectorPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-144">New-AzIpsecTrafficSelectorPolicy</span></span>
+    - <span data-ttu-id="f6333-145">Cmdlets mit optionalem Parameter „-TrafficSelectorPolicies“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-145">Cmdlets updated with optional parameter -TrafficSelectorPolicies</span></span>
+        - <span data-ttu-id="f6333-146">New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-146">New-AzVirtualNetworkGatewayConnection</span></span>
+        - <span data-ttu-id="f6333-147">Set-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-147">Set-AzVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="f6333-148">Unterstützung für ESP- und AH-Protokolle in Konfigurationen von Netzwerksicherheitsregeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-148">Add support for ESP and AH protocols in network security rule configurations</span></span>
+    - <span data-ttu-id="f6333-149">Aktualisierte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-149">Updated cmdlets:</span></span>
+        - <span data-ttu-id="f6333-150">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-150">Add-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="f6333-151">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-151">New-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="f6333-152">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-152">Set-AzNetworkSecurityRuleConfig</span></span>
+* <span data-ttu-id="f6333-153">Verbesserte Behandlung von Ausnahmen in Cortex-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-153">Improve handling of exceptions in Cortex cmdlets</span></span>
+* <span data-ttu-id="f6333-154">Neue Generationen und SKUs für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="f6333-154">New Generations and SKUs for VirtualNetworkGateways</span></span>
+  - <span data-ttu-id="f6333-155">Einführung neuer Generationen für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="f6333-155">Introduce new Generations for VirtualNetworkGateways.</span></span>
+  - <span data-ttu-id="f6333-156">Einführung neuer SKUs mit höherem Durchsatz für VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="f6333-156">Introduce new high throughput SKUs for VirtualNetworkGateways.</span></span>
 
-#### <a name="azrediscache"></a><span data-ttu-id="ca33d-157">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="ca33d-157">Az.RedisCache</span></span>
-* <span data-ttu-id="ca33d-158">Referenzdokumentation zu „Set-AzRedisCache“ aktualisiert, um fehlende Werte für den Parameter „-Size“ aufzunehmen</span><span class="sxs-lookup"><span data-stu-id="ca33d-158">Updated 'Set-AzRedisCache' reference documentation to include missing values for '-Size' parameter</span></span>
+#### <a name="azrediscache"></a><span data-ttu-id="f6333-157">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="f6333-157">Az.RedisCache</span></span>
+* <span data-ttu-id="f6333-158">Referenzdokumentation zu „Set-AzRedisCache“ aktualisiert, um fehlende Werte für den Parameter „-Size“ aufzunehmen</span><span class="sxs-lookup"><span data-stu-id="f6333-158">Updated 'Set-AzRedisCache' reference documentation to include missing values for '-Size' parameter</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="ca33d-159">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-159">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-160">Unterstützung für das Festlegen des Active Directory-Administrators für verwaltete Instanz hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-160">Add support for setting Active Directory Administrator on Managed Instance</span></span>
+#### <a name="azsql"></a><span data-ttu-id="f6333-159">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-159">Az.Sql</span></span>
+* <span data-ttu-id="f6333-160">Unterstützung für das Festlegen des Active Directory-Administrators für verwaltete Instanz hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-160">Add support for setting Active Directory Administrator on Managed Instance</span></span>
 
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-161">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-161">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-162">Storage-Clientbibliothek auf 11.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-162">Upgrade Storage Client Library to 11.1.0</span></span>
-* <span data-ttu-id="ca33d-163">Auflisten von Containern mit der API der Verwaltungsebene, wird mit „NextPageLink“ aufgelistet</span><span class="sxs-lookup"><span data-stu-id="ca33d-163">List containers with Management plane API, will list with NextPageLink</span></span>
-    -  <span data-ttu-id="ca33d-164">Get-AzRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="ca33d-164">Get-AzRmStorageContainer</span></span>
-* <span data-ttu-id="ca33d-165">Auflisten von Storage-Konten aus Abonnements, wird mit „NextPageLink“ aufgelistet</span><span class="sxs-lookup"><span data-stu-id="ca33d-165">List Storage accounts from subscription, will list with NextPageLink</span></span>
-    -  <span data-ttu-id="ca33d-166">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-166">Get-AzStorageAccount</span></span>
+#### <a name="azstorage"></a><span data-ttu-id="f6333-161">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-161">Az.Storage</span></span>
+* <span data-ttu-id="f6333-162">Storage-Clientbibliothek auf 11.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-162">Upgrade Storage Client Library to 11.1.0</span></span>
+* <span data-ttu-id="f6333-163">Auflisten von Containern mit der API der Verwaltungsebene, wird mit „NextPageLink“ aufgelistet</span><span class="sxs-lookup"><span data-stu-id="f6333-163">List containers with Management plane API, will list with NextPageLink</span></span>
+    -  <span data-ttu-id="f6333-164">Get-AzRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="f6333-164">Get-AzRmStorageContainer</span></span>
+* <span data-ttu-id="f6333-165">Auflisten von Storage-Konten aus Abonnements, wird mit „NextPageLink“ aufgelistet</span><span class="sxs-lookup"><span data-stu-id="f6333-165">List Storage accounts from subscription, will list with NextPageLink</span></span>
+    -  <span data-ttu-id="f6333-166">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-166">Get-AzStorageAccount</span></span>
 
-#### <a name="azstoragesync"></a><span data-ttu-id="ca33d-167">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="ca33d-167">Az.StorageSync</span></span>
-* <span data-ttu-id="ca33d-168">Problem 9810 in „Reset-AzStorageSyncServerCertificate“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-168">Fix Issue 9810 in Reset-AzStorageSyncServerCertificate.</span></span>
+#### <a name="azstoragesync"></a><span data-ttu-id="f6333-167">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="f6333-167">Az.StorageSync</span></span>
+* <span data-ttu-id="f6333-168">Problem 9810 in „Reset-AzStorageSyncServerCertificate“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-168">Fix Issue 9810 in Reset-AzStorageSyncServerCertificate.</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-169">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-169">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-170">Fehler beim Aktualisieren von ASP einer App mit „Set-AzWebApp“</span><span class="sxs-lookup"><span data-stu-id="ca33d-170">Set-AzWebApp updating ASP of an app was failing</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-169">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-169">Az.Websites</span></span>
+* <span data-ttu-id="f6333-170">Fehler beim Aktualisieren von ASP einer App mit „Set-AzWebApp“</span><span class="sxs-lookup"><span data-stu-id="f6333-170">Set-AzWebApp updating ASP of an app was failing</span></span>
 
-## <a name="270---september-2019"></a><span data-ttu-id="ca33d-171">2.7.0: September 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-171">2.7.0 - September 2019</span></span>
-#### <a name="azapimanagement"></a><span data-ttu-id="ca33d-172">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-172">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-173">Beschreibung des Parameters „-Format“ in der Referenzdokumentation für „Set-AzApiManagementPolicy“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-173">Update '-Format' parameter description in 'Set-AzApiManagementPolicy' reference documentation</span></span>
-* <span data-ttu-id="ca33d-174">Verweise des veralteten Cmdlets „Update-AzApiManagementDeployment“ aus Referenzdokumentation entfernt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-174">Removed references of deprecated cmdlet 'Update-AzApiManagementDeployment' from reference documentation.</span></span> <span data-ttu-id="ca33d-175">Verwenden Sie stattdessen „Set-AzApiManagement“.</span><span class="sxs-lookup"><span data-stu-id="ca33d-175">Use 'Set-AzApiManagement' instead.</span></span>
+## <a name="270---september-2019"></a><span data-ttu-id="f6333-171">2.7.0: September 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-171">2.7.0 - September 2019</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="f6333-172">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-172">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-173">Beschreibung des Parameters „-Format“ in der Referenzdokumentation für „Set-AzApiManagementPolicy“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-173">Update '-Format' parameter description in 'Set-AzApiManagementPolicy' reference documentation</span></span>
+* <span data-ttu-id="f6333-174">Verweise des veralteten Cmdlets „Update-AzApiManagementDeployment“ aus Referenzdokumentation entfernt.</span><span class="sxs-lookup"><span data-stu-id="f6333-174">Removed references of deprecated cmdlet 'Update-AzApiManagementDeployment' from reference documentation.</span></span> <span data-ttu-id="f6333-175">Verwenden Sie stattdessen „Set-AzApiManagement“.</span><span class="sxs-lookup"><span data-stu-id="f6333-175">Use 'Set-AzApiManagement' instead.</span></span>
 
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-176">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-176">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-177">Tippfehler im Beispiel in der Referenzdokumentation für „Register-AzAutomationDscNode“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-177">Fixed example typo in reference documentation for 'Register-AzAutomationDscNode'</span></span>
-* <span data-ttu-id="ca33d-178">Erläuterung zur Betriebssystemeinschränkung zu „Register-AzAutomationDSCNode“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-178">Added clarification on OS restriction to Register-AzAutomationDSCNode</span></span>
-* <span data-ttu-id="ca33d-179">Nullverweisausnahme des Cmdlets „Start-AzAutomationRunbook“ für die Option „-Wait“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-179">Fixed Start-AzAutomationRunbook cmdlet Null reference exception for -Wait option.</span></span>
+#### <a name="azautomation"></a><span data-ttu-id="f6333-176">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-176">Az.Automation</span></span>
+* <span data-ttu-id="f6333-177">Tippfehler im Beispiel in der Referenzdokumentation für „Register-AzAutomationDscNode“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-177">Fixed example typo in reference documentation for 'Register-AzAutomationDscNode'</span></span>
+* <span data-ttu-id="f6333-178">Erläuterung zur Betriebssystemeinschränkung zu „Register-AzAutomationDSCNode“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-178">Added clarification on OS restriction to Register-AzAutomationDSCNode</span></span>
+* <span data-ttu-id="f6333-179">Nullverweisausnahme des Cmdlets „Start-AzAutomationRunbook“ für die Option „-Wait“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-179">Fixed Start-AzAutomationRunbook cmdlet Null reference exception for -Wait option.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-180">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-180">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-181">Parameter „UploadSizeInBytes“ zu „New-AzDiskConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-181">Add UploadSizeInBytes parameter tp New-AzDiskConfig</span></span>
-* <span data-ttu-id="ca33d-182">Inkrementeller Parameter zu „New-AzSnapshotConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-182">Add Incremental parameter to New-AzSnapshotConfig</span></span>
-* <span data-ttu-id="ca33d-183">Feature für VM mit niedriger Priorität hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-183">Add a low priority virtual machine feature:</span></span>
-    - <span data-ttu-id="ca33d-184">Parameter „MaxPrice“, „EvictionPolicy“ und „Priority“ zu New-AzVMConfig hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-184">MaxPrice, EvictionPolicy and Priority parameters are added to New-AzVMConfig.</span></span>
-    - <span data-ttu-id="ca33d-185">Parameter „MaxPrice“ zu den Cmdlets „New-AzVmssConfig“, „Update-AzVM“ und „Update-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-185">MaxPrice parameter is added to New-AzVmssConfig, Update-AzVM and Update-AzVmss cmdlets.</span></span>
-* <span data-ttu-id="ca33d-186">Fehlerbehebung für VM-Verweis für das Cmdlet „Get-AzAvailabilitySet“, wenn alle Verfügbarkeitsgruppen im Abonnement aufgelistet werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-186">Fix VM reference issue for Get-AzAvailabilitySet cmdlet when it lists all availability sets in the subscription.</span></span>
-* <span data-ttu-id="ca33d-187">Nullausnahme für „Get-AzRemoteDesktopFile“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-187">Fix the null exception for Get-AzRemoteDesktopFile.</span></span>
-* <span data-ttu-id="ca33d-188">VHD-Suchmethode für Position relativ zum Ende korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-188">Fix VHD Seek method for end-relative position.</span></span>
-* <span data-ttu-id="ca33d-189">Problem mit UltraSSD für „New-AzVM“ und „Update-AzVM“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-189">Fix UltraSSD issue for New-AzVM and Update-AzVM.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="f6333-180">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-180">Az.Compute</span></span>
+* <span data-ttu-id="f6333-181">Parameter „UploadSizeInBytes“ zu „New-AzDiskConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-181">Add UploadSizeInBytes parameter tp New-AzDiskConfig</span></span>
+* <span data-ttu-id="f6333-182">Inkrementeller Parameter zu „New-AzSnapshotConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-182">Add Incremental parameter to New-AzSnapshotConfig</span></span>
+* <span data-ttu-id="f6333-183">Feature für VM mit niedriger Priorität hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="f6333-183">Add a low priority virtual machine feature:</span></span>
+    - <span data-ttu-id="f6333-184">Parameter „MaxPrice“, „EvictionPolicy“ und „Priority“ zu New-AzVMConfig hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-184">MaxPrice, EvictionPolicy and Priority parameters are added to New-AzVMConfig.</span></span>
+    - <span data-ttu-id="f6333-185">Parameter „MaxPrice“ zu den Cmdlets „New-AzVmssConfig“, „Update-AzVM“ und „Update-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-185">MaxPrice parameter is added to New-AzVmssConfig, Update-AzVM and Update-AzVmss cmdlets.</span></span>
+* <span data-ttu-id="f6333-186">Fehlerbehebung für VM-Verweis für das Cmdlet „Get-AzAvailabilitySet“, wenn alle Verfügbarkeitsgruppen im Abonnement aufgelistet werden</span><span class="sxs-lookup"><span data-stu-id="f6333-186">Fix VM reference issue for Get-AzAvailabilitySet cmdlet when it lists all availability sets in the subscription.</span></span>
+* <span data-ttu-id="f6333-187">Nullausnahme für „Get-AzRemoteDesktopFile“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-187">Fix the null exception for Get-AzRemoteDesktopFile.</span></span>
+* <span data-ttu-id="f6333-188">VHD-Suchmethode für Position relativ zum Ende korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-188">Fix VHD Seek method for end-relative position.</span></span>
+* <span data-ttu-id="f6333-189">Problem mit UltraSSD für „New-AzVM“ und „Update-AzVM“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-189">Fix UltraSSD issue for New-AzVM and Update-AzVM.</span></span>
 
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-190">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-190">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-191">Drei neue Befehle für ADF V2 hinzugefügt: Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription und Get-AzDataFactoryV2TriggerSubscriptionStatus</span><span class="sxs-lookup"><span data-stu-id="ca33d-191">Adding 3 new commands for ADF V2 - Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription, and Get-AzDataFactoryV2TriggerSubscriptionStatus</span></span>
-* <span data-ttu-id="ca33d-192">Version des ADF .NET SDK auf 4.1.3 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-192">Updated ADF .Net SDK version to 4.1.3</span></span>
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-190">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-190">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-191">Drei neue Befehle für ADF V2 hinzugefügt: Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription und Get-AzDataFactoryV2TriggerSubscriptionStatus</span><span class="sxs-lookup"><span data-stu-id="f6333-191">Adding 3 new commands for ADF V2 - Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription, and Get-AzDataFactoryV2TriggerSubscriptionStatus</span></span>
+* <span data-ttu-id="f6333-192">Version des ADF .NET SDK auf 4.1.3 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-192">Updated ADF .Net SDK version to 4.1.3</span></span>
 
-#### <a name="azhdinsight"></a><span data-ttu-id="ca33d-193">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="ca33d-193">Az.HDInsight</span></span>
-* <span data-ttu-id="ca33d-194">Hinweis auf Breaking Changes hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-194">Call out breaking changes</span></span>
+#### <a name="azhdinsight"></a><span data-ttu-id="f6333-193">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="f6333-193">Az.HDInsight</span></span>
+* <span data-ttu-id="f6333-194">Hinweis auf Breaking Changes hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-194">Call out breaking changes</span></span>
 
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-195">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-195">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-196">Unterstützung zum Aufrufen eines Failovers für einen IoT-Hub zur geografisch gekoppelten Notfallwiederherstellungsregion hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-196">Add support to invoke failover for an IotHub to the geo-paired disaster recovery region.</span></span>
-* <span data-ttu-id="ca33d-197">Unterstützung zum Verwalten der Nachrichtenanreicherung für einen IoT-Hub hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-197">Add support to manage message enrichment for an IotHub.</span></span> <span data-ttu-id="ca33d-198">Die folgenden Cmdlets sind neu:</span><span class="sxs-lookup"><span data-stu-id="ca33d-198">New cmdlets are:</span></span>
-    - <span data-ttu-id="ca33d-199">Add-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="ca33d-199">Add-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="ca33d-200">Get-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="ca33d-200">Get-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="ca33d-201">Remove-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="ca33d-201">Remove-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="ca33d-202">Set-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="ca33d-202">Set-AzIotHubMessageEnrichment</span></span>
+#### <a name="aziothub"></a><span data-ttu-id="f6333-195">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-195">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-196">Unterstützung zum Aufrufen eines Failovers für einen IoT-Hub zur geografisch gekoppelten Notfallwiederherstellungsregion hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-196">Add support to invoke failover for an IotHub to the geo-paired disaster recovery region.</span></span>
+* <span data-ttu-id="f6333-197">Unterstützung zum Verwalten der Nachrichtenanreicherung für einen IoT-Hub hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-197">Add support to manage message enrichment for an IotHub.</span></span> <span data-ttu-id="f6333-198">Die folgenden Cmdlets sind neu:</span><span class="sxs-lookup"><span data-stu-id="f6333-198">New cmdlets are:</span></span>
+    - <span data-ttu-id="f6333-199">Add-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="f6333-199">Add-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="f6333-200">Get-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="f6333-200">Get-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="f6333-201">Remove-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="f6333-201">Remove-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="f6333-202">Set-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="f6333-202">Set-AzIotHubMessageEnrichment</span></span>
 
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-203">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-203">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-204">Verweis auf das aktuelle Monitor SDK, d. h. 0.24.1-preview</span><span class="sxs-lookup"><span data-stu-id="ca33d-204">Pointing to the most recent Monitor SDK, i.e. 0.24.1-preview</span></span>
-   - <span data-ttu-id="ca33d-205">Geringfügige Änderungen an den Metrik-Cmdlets vorgenommen, d. h. die Einheitenenumeration unterstützt verschiedene neue Werte.</span><span class="sxs-lookup"><span data-stu-id="ca33d-205">Adds non-braking changes to the Metrics cmdlets, i.e. the Unit enumeration supports several new values.</span></span> <span data-ttu-id="ca33d-206">Dabei handelt es sich um schreibgeschützte Cmdlets, sodass keine Änderungen an der Eingabe der Cmdlets erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="ca33d-206">These are read-only cmdlets, so there would be no change in the input of the cmdlets.</span></span>
-   - <span data-ttu-id="ca33d-207">Die API-Version der **ActionGroups**-Anforderungen lautet jetzt **2019-06-01** (zuvor **2018-03-01**).</span><span class="sxs-lookup"><span data-stu-id="ca33d-207">The api-version of the **ActionGroups** requests is now **2019-06-01**, before it was **2018-03-01**.</span></span> <span data-ttu-id="ca33d-208">Die Szenariotests wurden aktualisiert, um diese Änderung zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-208">The scenario tests have been updated to accommodate for this change.</span></span>
-   - <span data-ttu-id="ca33d-209">Die Konstruktoren für die Klassen **EmailReceiver** und **WebhookReceiver** haben ein neues obligatorisches Argument hinzugefügt, d. h. einen booleschen Wert namens **useCommonAlertSchema**.</span><span class="sxs-lookup"><span data-stu-id="ca33d-209">The constructors for the classes **EmailReceiver** and **WebhookReceiver** added one new mandatory argument, i.e. a Boolean value called **useCommonAlertSchema**.</span></span> <span data-ttu-id="ca33d-210">Derzeit ist der Wert auf **false** festgelegt, damit sich dieser Breaking Change nicht auf die Cmdlets auswirkt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-210">Currently, the value is fixed to **false** to hide this breaking change from the cmdlets.</span></span> <span data-ttu-id="ca33d-211">**HINWEIS:** Dies ist eine vorübergehende Änderung, die vom Team für Warnungen validiert werden muss.</span><span class="sxs-lookup"><span data-stu-id="ca33d-211">**NOTE**: this is a temporary change that must be validated by the Alerts team.</span></span>
-   - <span data-ttu-id="ca33d-212">Die Reihenfolge der Argumente für den Konstruktor der Klasse **Source** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-212">The order of the arguments for the constructor of the class **Source** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="ca33d-213">Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="ca33d-213">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
-   - <span data-ttu-id="ca33d-214">Die Reihenfolge der Argumente für den Konstruktor der Klasse **AlertingAction** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-214">The order of the arguments for the constructor of the class **AlertingAction** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="ca33d-215">Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="ca33d-215">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
-* <span data-ttu-id="ca33d-216">Unterstützung von Kriterien für dynamische Schwellwerte für Metrikwarnung v2</span><span class="sxs-lookup"><span data-stu-id="ca33d-216">Support Dynamic Threshold criteria for metric alert V2</span></span>
-    - <span data-ttu-id="ca33d-217">New-AzMetricAlertRuleV2Criteria: Erstellt nun auch Kriterien für dynamische Schwellwerte.</span><span class="sxs-lookup"><span data-stu-id="ca33d-217">New-AzMetricAlertRuleV2Criteria: now creats dynamic threshold criteria also</span></span>
-    - <span data-ttu-id="ca33d-218">Add-AzMetricAlertRuleV2: Akzeptiert nun auch Kriterien für dynamische Schwellwerte.</span><span class="sxs-lookup"><span data-stu-id="ca33d-218">Add-AzMetricAlertRuleV2: now accept dynamic threshold criteria also</span></span>
-* <span data-ttu-id="ca33d-219">Verbesserungen an den Cmdlets für geplante Abfrageregeln (Scheduled Query Rule, SQR)</span><span class="sxs-lookup"><span data-stu-id="ca33d-219">Improvements in Scheduled Query Rule cmdlets (SQR)</span></span>
- - <span data-ttu-id="ca33d-220">Cmdlets akzeptieren den Parameter „Location“ in zwei Formaten: entweder den Standort (z. B. „eastus“) oder den Anzeigenamen des Standorts (z. B. „USA, Osten“)</span><span class="sxs-lookup"><span data-stu-id="ca33d-220">Cmdlets will accept 'Location' paramater in both formats, either the location (e.g. eastus) or the location display name (e.g. East US)</span></span>
- - <span data-ttu-id="ca33d-221">Parameter „Enabled“ in Hilfedateien ordnungsgemäß dargestellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-221">Illustrated 'Enabled' parameter in help files properly</span></span>
- - <span data-ttu-id="ca33d-222">Beispiele für optionalen Parameter „ActionGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-222">Added examples for 'ActionGroup' optional parameter</span></span>
- - <span data-ttu-id="ca33d-223">Hilfedateien insgesamt verbessert</span><span class="sxs-lookup"><span data-stu-id="ca33d-223">Overall improved help files</span></span>
-* <span data-ttu-id="ca33d-224">Fehler beim Bestimmen des Bereichstyps für „Set-AzActionRule“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-224">Fix bug in determining scope type for 'Set-AzActionRule'</span></span>
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-203">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-203">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-204">Verweis auf das aktuelle Monitor SDK, d. h. 0.24.1-preview</span><span class="sxs-lookup"><span data-stu-id="f6333-204">Pointing to the most recent Monitor SDK, i.e. 0.24.1-preview</span></span>
+   - <span data-ttu-id="f6333-205">Geringfügige Änderungen an den Metrik-Cmdlets vorgenommen, d. h. die Einheitenenumeration unterstützt verschiedene neue Werte.</span><span class="sxs-lookup"><span data-stu-id="f6333-205">Adds non-braking changes to the Metrics cmdlets, i.e. the Unit enumeration supports several new values.</span></span> <span data-ttu-id="f6333-206">Dabei handelt es sich um schreibgeschützte Cmdlets, sodass keine Änderungen an der Eingabe der Cmdlets erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="f6333-206">These are read-only cmdlets, so there would be no change in the input of the cmdlets.</span></span>
+   - <span data-ttu-id="f6333-207">Die API-Version der **ActionGroups** -Anforderungen lautet jetzt **2019-06-01** (zuvor **2018-03-01** ).</span><span class="sxs-lookup"><span data-stu-id="f6333-207">The api-version of the **ActionGroups** requests is now **2019-06-01** , before it was **2018-03-01**.</span></span> <span data-ttu-id="f6333-208">Die Szenariotests wurden aktualisiert, um diese Änderung zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="f6333-208">The scenario tests have been updated to accommodate for this change.</span></span>
+   - <span data-ttu-id="f6333-209">Die Konstruktoren für die Klassen **EmailReceiver** und **WebhookReceiver** haben ein neues obligatorisches Argument hinzugefügt, d. h. einen booleschen Wert namens **useCommonAlertSchema**.</span><span class="sxs-lookup"><span data-stu-id="f6333-209">The constructors for the classes **EmailReceiver** and **WebhookReceiver** added one new mandatory argument, i.e. a Boolean value called **useCommonAlertSchema**.</span></span> <span data-ttu-id="f6333-210">Derzeit ist der Wert auf **false** festgelegt, damit sich dieser Breaking Change nicht auf die Cmdlets auswirkt.</span><span class="sxs-lookup"><span data-stu-id="f6333-210">Currently, the value is fixed to **false** to hide this breaking change from the cmdlets.</span></span> <span data-ttu-id="f6333-211">**HINWEIS:** Dies ist eine vorübergehende Änderung, die vom Team für Warnungen validiert werden muss.</span><span class="sxs-lookup"><span data-stu-id="f6333-211">**NOTE** : this is a temporary change that must be validated by the Alerts team.</span></span>
+   - <span data-ttu-id="f6333-212">Die Reihenfolge der Argumente für den Konstruktor der Klasse **Source** (in Bezug auf die Klasse **ScheduledQueryRuleSource** ) hat sich seit dem vorherigen SDK geändert.</span><span class="sxs-lookup"><span data-stu-id="f6333-212">The order of the arguments for the constructor of the class **Source** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="f6333-213">Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="f6333-213">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
+   - <span data-ttu-id="f6333-214">Die Reihenfolge der Argumente für den Konstruktor der Klasse **AlertingAction** (in Bezug auf die Klasse **ScheduledQueryRuleSource** ) hat sich seit dem vorherigen SDK geändert.</span><span class="sxs-lookup"><span data-stu-id="f6333-214">The order of the arguments for the constructor of the class **AlertingAction** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="f6333-215">Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="f6333-215">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
+* <span data-ttu-id="f6333-216">Unterstützung von Kriterien für dynamische Schwellwerte für Metrikwarnung v2</span><span class="sxs-lookup"><span data-stu-id="f6333-216">Support Dynamic Threshold criteria for metric alert V2</span></span>
+    - <span data-ttu-id="f6333-217">New-AzMetricAlertRuleV2Criteria: Erstellt nun auch Kriterien für dynamische Schwellwerte.</span><span class="sxs-lookup"><span data-stu-id="f6333-217">New-AzMetricAlertRuleV2Criteria: now creats dynamic threshold criteria also</span></span>
+    - <span data-ttu-id="f6333-218">Add-AzMetricAlertRuleV2: Akzeptiert nun auch Kriterien für dynamische Schwellwerte.</span><span class="sxs-lookup"><span data-stu-id="f6333-218">Add-AzMetricAlertRuleV2: now accept dynamic threshold criteria also</span></span>
+* <span data-ttu-id="f6333-219">Verbesserungen an den Cmdlets für geplante Abfrageregeln (Scheduled Query Rule, SQR)</span><span class="sxs-lookup"><span data-stu-id="f6333-219">Improvements in Scheduled Query Rule cmdlets (SQR)</span></span>
+ - <span data-ttu-id="f6333-220">Cmdlets akzeptieren den Parameter „Location“ in zwei Formaten: entweder den Standort (z. B. „eastus“) oder den Anzeigenamen des Standorts (z. B. „USA, Osten“)</span><span class="sxs-lookup"><span data-stu-id="f6333-220">Cmdlets will accept 'Location' paramater in both formats, either the location (e.g. eastus) or the location display name (e.g. East US)</span></span>
+ - <span data-ttu-id="f6333-221">Parameter „Enabled“ in Hilfedateien ordnungsgemäß dargestellt</span><span class="sxs-lookup"><span data-stu-id="f6333-221">Illustrated 'Enabled' parameter in help files properly</span></span>
+ - <span data-ttu-id="f6333-222">Beispiele für optionalen Parameter „ActionGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-222">Added examples for 'ActionGroup' optional parameter</span></span>
+ - <span data-ttu-id="f6333-223">Hilfedateien insgesamt verbessert</span><span class="sxs-lookup"><span data-stu-id="f6333-223">Overall improved help files</span></span>
+* <span data-ttu-id="f6333-224">Fehler beim Bestimmen des Bereichstyps für „Set-AzActionRule“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-224">Fix bug in determining scope type for 'Set-AzActionRule'</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-225">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-225">Az.Network</span></span>
-* <span data-ttu-id="ca33d-226">Fehlerhaftes Beispiel in der Referenzdokumentation zu „New-AzApplicationGateway“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-226">Fix incorrect example in 'New-AzApplicationGateway' reference documentation</span></span>
-* <span data-ttu-id="ca33d-227">Hinweis in der Referenzdokumentation zu „Get-AzNetworkWatcherPacketCapture“ zum Abrufen aller Eigenschaften für eine Paketerfassung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-227">Add note in 'Get-AzNetworkWatcherPacketCapture' reference documentation about retrieving all properties for a packet capture</span></span>
-* <span data-ttu-id="ca33d-228">Beispiel in der Referenzdokumentation zu „Test-AzNetworkWatcherIPFlow“ korrigiert, um die Netzwerkadapter ordnungsgemäß aufzulisten</span><span class="sxs-lookup"><span data-stu-id="ca33d-228">Fixed example in 'Test-AzNetworkWatcherIPFlow' reference documentation to correctly enumerate NICs</span></span>
-* <span data-ttu-id="ca33d-229">Cloudausnahmeanalyse verbessert, um ggf. zusätzliche Details anzuzeigen</span><span class="sxs-lookup"><span data-stu-id="ca33d-229">Improved cloud exception parsing to display additional details if they are present</span></span>
-* <span data-ttu-id="ca33d-230">Cloudausnahmeanalyse verbessert, um zusätzlichen Typ der SDK-Ausnahme zu verarbeiten</span><span class="sxs-lookup"><span data-stu-id="ca33d-230">Improved cloud exception parsing to handle additional type of SDK exception</span></span>
-* <span data-ttu-id="ca33d-231">Falsche Zuordnung der Sicherheitsregelmodelle korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-231">Fixed incorrect mapping of Security Rule models</span></span>
-* <span data-ttu-id="ca33d-232">Eigenschaften zur Netzwerkschnittstelle für das Feature für die private IP-Adresse hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-232">Added properties to network interface for private ip feature</span></span>
-    - <span data-ttu-id="ca33d-233">Eigenschaft „PrivateEndpoint“ als Typ „PSResourceId“ zu „PSNetworkInterface“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-233">Added property 'PrivateEndpoint' as type of PSResourceId to PSNetworkInterface</span></span>
-    - <span data-ttu-id="ca33d-234">Eigenschaft „PrivateLinkConnectionProperties“ als Typ „PSIpConfigurationConnectivityInformation“ zu „PSNetworkInterfaceIPConfiguration“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-234">Added property 'PrivateLinkConnectionProperties' as type of PSIpConfigurationConnectivityInformation to PSNetworkInterfaceIPConfiguration</span></span>
-    - <span data-ttu-id="ca33d-235">Neue Modellklasse „PSIpConfigurationConnectivityInformation“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-235">Added new model class PSIpConfigurationConnectivityInformation</span></span>
-* <span data-ttu-id="ca33d-236">Neues ApplicationRuleProtocolType-Element „mssql“ für Azure Firewall-Ressource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-236">Added new ApplicationRuleProtocolType 'mssql' for Azure Firewall resource</span></span>
-* <span data-ttu-id="ca33d-237">Unterstützung von Mehrfachverbindungen in Virtual WAN</span><span class="sxs-lookup"><span data-stu-id="ca33d-237">MultiLink support in Virtual WAN</span></span>
-    - <span data-ttu-id="ca33d-238">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-238">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-239">New-AzVpnSiteLink</span><span class="sxs-lookup"><span data-stu-id="ca33d-239">New-AzVpnSiteLink</span></span>
-        - <span data-ttu-id="ca33d-240">New-AzVpnSiteLinkConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-240">New-AzVpnSiteLinkConnection</span></span>
-    - <span data-ttu-id="ca33d-241">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="ca33d-241">Updated cmdlet:</span></span>
-        - <span data-ttu-id="ca33d-242">New-VpnSite</span><span class="sxs-lookup"><span data-stu-id="ca33d-242">New-VpnSite</span></span>
-        - <span data-ttu-id="ca33d-243">Update-VpnSite</span><span class="sxs-lookup"><span data-stu-id="ca33d-243">Update-VpnSite</span></span>
-        - <span data-ttu-id="ca33d-244">New-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-244">New-VpnConnection</span></span>
-        - <span data-ttu-id="ca33d-245">Update-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-245">Update-VpnConnection</span></span>
-* <span data-ttu-id="ca33d-246">Dokumente für einige PowerShell-Beispiele korrigiert, sodass Az-Cmdlets anstelle von AzureRM-Cmdlets verwendet werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-246">Fixed documents for some PowerShell examples to use Az cmdlets instead of AzureRM cmdlets</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-225">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-225">Az.Network</span></span>
+* <span data-ttu-id="f6333-226">Fehlerhaftes Beispiel in der Referenzdokumentation zu „New-AzApplicationGateway“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-226">Fix incorrect example in 'New-AzApplicationGateway' reference documentation</span></span>
+* <span data-ttu-id="f6333-227">Hinweis in der Referenzdokumentation zu „Get-AzNetworkWatcherPacketCapture“ zum Abrufen aller Eigenschaften für eine Paketerfassung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-227">Add note in 'Get-AzNetworkWatcherPacketCapture' reference documentation about retrieving all properties for a packet capture</span></span>
+* <span data-ttu-id="f6333-228">Beispiel in der Referenzdokumentation zu „Test-AzNetworkWatcherIPFlow“ korrigiert, um die Netzwerkadapter ordnungsgemäß aufzulisten</span><span class="sxs-lookup"><span data-stu-id="f6333-228">Fixed example in 'Test-AzNetworkWatcherIPFlow' reference documentation to correctly enumerate NICs</span></span>
+* <span data-ttu-id="f6333-229">Cloudausnahmeanalyse verbessert, um ggf. zusätzliche Details anzuzeigen</span><span class="sxs-lookup"><span data-stu-id="f6333-229">Improved cloud exception parsing to display additional details if they are present</span></span>
+* <span data-ttu-id="f6333-230">Cloudausnahmeanalyse verbessert, um zusätzlichen Typ der SDK-Ausnahme zu verarbeiten</span><span class="sxs-lookup"><span data-stu-id="f6333-230">Improved cloud exception parsing to handle additional type of SDK exception</span></span>
+* <span data-ttu-id="f6333-231">Falsche Zuordnung der Sicherheitsregelmodelle korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-231">Fixed incorrect mapping of Security Rule models</span></span>
+* <span data-ttu-id="f6333-232">Eigenschaften zur Netzwerkschnittstelle für das Feature für die private IP-Adresse hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-232">Added properties to network interface for private ip feature</span></span>
+    - <span data-ttu-id="f6333-233">Eigenschaft „PrivateEndpoint“ als Typ „PSResourceId“ zu „PSNetworkInterface“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-233">Added property 'PrivateEndpoint' as type of PSResourceId to PSNetworkInterface</span></span>
+    - <span data-ttu-id="f6333-234">Eigenschaft „PrivateLinkConnectionProperties“ als Typ „PSIpConfigurationConnectivityInformation“ zu „PSNetworkInterfaceIPConfiguration“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-234">Added property 'PrivateLinkConnectionProperties' as type of PSIpConfigurationConnectivityInformation to PSNetworkInterfaceIPConfiguration</span></span>
+    - <span data-ttu-id="f6333-235">Neue Modellklasse „PSIpConfigurationConnectivityInformation“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-235">Added new model class PSIpConfigurationConnectivityInformation</span></span>
+* <span data-ttu-id="f6333-236">Neues ApplicationRuleProtocolType-Element „mssql“ für Azure Firewall-Ressource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-236">Added new ApplicationRuleProtocolType 'mssql' for Azure Firewall resource</span></span>
+* <span data-ttu-id="f6333-237">Unterstützung von Mehrfachverbindungen in Virtual WAN</span><span class="sxs-lookup"><span data-stu-id="f6333-237">MultiLink support in Virtual WAN</span></span>
+    - <span data-ttu-id="f6333-238">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-238">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-239">New-AzVpnSiteLink</span><span class="sxs-lookup"><span data-stu-id="f6333-239">New-AzVpnSiteLink</span></span>
+        - <span data-ttu-id="f6333-240">New-AzVpnSiteLinkConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-240">New-AzVpnSiteLinkConnection</span></span>
+    - <span data-ttu-id="f6333-241">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="f6333-241">Updated cmdlet:</span></span>
+        - <span data-ttu-id="f6333-242">New-VpnSite</span><span class="sxs-lookup"><span data-stu-id="f6333-242">New-VpnSite</span></span>
+        - <span data-ttu-id="f6333-243">Update-VpnSite</span><span class="sxs-lookup"><span data-stu-id="f6333-243">Update-VpnSite</span></span>
+        - <span data-ttu-id="f6333-244">New-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-244">New-VpnConnection</span></span>
+        - <span data-ttu-id="f6333-245">Update-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-245">Update-VpnConnection</span></span>
+* <span data-ttu-id="f6333-246">Dokumente für einige PowerShell-Beispiele korrigiert, sodass Az-Cmdlets anstelle von AzureRM-Cmdlets verwendet werden</span><span class="sxs-lookup"><span data-stu-id="f6333-246">Fixed documents for some PowerShell examples to use Az cmdlets instead of AzureRM cmdlets</span></span>
 
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-247">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-247">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-248">AzureVMpolicy-Objekt mit ProtectedItemsCount-Attribut aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-248">Update AzureVMpolicy Object with ProtectedItemsCount Attribute</span></span>
-* <span data-ttu-id="ca33d-249">Tests für VM-Richtlinie und Wiederherstellung des ursprünglichen Speicherkontos hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-249">Added Tests for VM policy and Original Storage Account Restore</span></span>
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-247">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-247">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-248">AzureVMpolicy-Objekt mit ProtectedItemsCount-Attribut aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-248">Update AzureVMpolicy Object with ProtectedItemsCount Attribute</span></span>
+* <span data-ttu-id="f6333-249">Tests für VM-Richtlinie und Wiederherstellung des ursprünglichen Speicherkontos hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-249">Added Tests for VM policy and Original Storage Account Restore</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="ca33d-250">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-250">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-251">Fehler behoben, aufgrund dessen „New-AzRoleAssignment“ nicht ohne den Parameter „Scope“ aufgerufen werden konnte</span><span class="sxs-lookup"><span data-stu-id="ca33d-251">Fix bug where New-AzRoleAssignment could not be called without parameter Scope.</span></span>
+#### <a name="azresources"></a><span data-ttu-id="f6333-250">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-250">Az.Resources</span></span>
+* <span data-ttu-id="f6333-251">Fehler behoben, aufgrund dessen „New-AzRoleAssignment“ nicht ohne den Parameter „Scope“ aufgerufen werden konnte</span><span class="sxs-lookup"><span data-stu-id="f6333-251">Fix bug where New-AzRoleAssignment could not be called without parameter Scope.</span></span>
 
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-252">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-252">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-253">Tippfehler im Beispiel für die Referenzdokumentation „Update-AzServiceFabricReliability“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-253">Fixed typo in example for 'Update-AzServiceFabricReliability' reference documentation</span></span>
-* <span data-ttu-id="ca33d-254">Neue Cmdlets zum Verwalten von Anwendung und Diensten hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-254">Adding new cmdlets to manage appliaction and services:</span></span>
-    - <span data-ttu-id="ca33d-255">New-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="ca33d-255">New-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="ca33d-256">New-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="ca33d-256">New-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="ca33d-257">New-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="ca33d-257">New-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="ca33d-258">New-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="ca33d-258">New-AzServiceFabricService</span></span>
-    - <span data-ttu-id="ca33d-259">Update-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="ca33d-259">Update-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="ca33d-260">Get-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="ca33d-260">Get-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="ca33d-261">Get-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="ca33d-261">Get-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="ca33d-262">Get-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="ca33d-262">Get-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="ca33d-263">Get-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="ca33d-263">Get-AzServiceFabricService</span></span>
-    - <span data-ttu-id="ca33d-264">Remove-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="ca33d-264">Remove-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="ca33d-265">Remove-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="ca33d-265">Remove-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="ca33d-266">Remove-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="ca33d-266">Remove-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="ca33d-267">Remove-AzServiceFabricServic</span><span class="sxs-lookup"><span data-stu-id="ca33d-267">Remove-AzServiceFabricServic</span></span>
-* <span data-ttu-id="ca33d-268">Service Fabric SDK auf Version 1.2.0 aktualisiert, die API-Version 2019-03-01 des Service Fabric-Ressourcenanbieters verwendet</span><span class="sxs-lookup"><span data-stu-id="ca33d-268">Upgraded Service Fabric SDK to version 1.2.0 which uses service fabric resource provider api-version 2019-03-01.</span></span>
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-252">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-252">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-253">Tippfehler im Beispiel für die Referenzdokumentation „Update-AzServiceFabricReliability“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-253">Fixed typo in example for 'Update-AzServiceFabricReliability' reference documentation</span></span>
+* <span data-ttu-id="f6333-254">Neue Cmdlets zum Verwalten von Anwendung und Diensten hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="f6333-254">Adding new cmdlets to manage appliaction and services:</span></span>
+    - <span data-ttu-id="f6333-255">New-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="f6333-255">New-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="f6333-256">New-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="f6333-256">New-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="f6333-257">New-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="f6333-257">New-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="f6333-258">New-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="f6333-258">New-AzServiceFabricService</span></span>
+    - <span data-ttu-id="f6333-259">Update-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="f6333-259">Update-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="f6333-260">Get-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="f6333-260">Get-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="f6333-261">Get-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="f6333-261">Get-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="f6333-262">Get-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="f6333-262">Get-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="f6333-263">Get-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="f6333-263">Get-AzServiceFabricService</span></span>
+    - <span data-ttu-id="f6333-264">Remove-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="f6333-264">Remove-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="f6333-265">Remove-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="f6333-265">Remove-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="f6333-266">Remove-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="f6333-266">Remove-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="f6333-267">Remove-AzServiceFabricServic</span><span class="sxs-lookup"><span data-stu-id="f6333-267">Remove-AzServiceFabricServic</span></span>
+* <span data-ttu-id="f6333-268">Service Fabric SDK auf Version 1.2.0 aktualisiert, die API-Version 2019-03-01 des Service Fabric-Ressourcenanbieters verwendet</span><span class="sxs-lookup"><span data-stu-id="f6333-268">Upgraded Service Fabric SDK to version 1.2.0 which uses service fabric resource provider api-version 2019-03-01.</span></span>
 
-#### <a name="azsignalr"></a><span data-ttu-id="ca33d-269">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="ca33d-269">Az.SignalR</span></span>
-* <span data-ttu-id="ca33d-270">Cmdlets „Update“, „Restart“, „CheckNameAvailability“ und „GetUsage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-270">Add Update, Restart, CheckNameAvailability, GetUsage Cmdlets</span></span>
+#### <a name="azsignalr"></a><span data-ttu-id="f6333-269">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="f6333-269">Az.SignalR</span></span>
+* <span data-ttu-id="f6333-270">Cmdlets „Update“, „Restart“, „CheckNameAvailability“ und „GetUsage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-270">Add Update, Restart, CheckNameAvailability, GetUsage Cmdlets</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="ca33d-271">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-271">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-272">Beispiel in der Referenzdokumentation für „Get-AzSqlElasticPool“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-272">Update example in reference documentation for 'Get-AzSqlElasticPool'</span></span>
-* <span data-ttu-id="ca33d-273">V-Kern-Beispiel zum Erstellen eines Pools für elastische Datenbanken hinzugefügt (New-AzSqlElasticPool)</span><span class="sxs-lookup"><span data-stu-id="ca33d-273">Added vCore example to creating an elastic pool (New-AzSqlElasticPool).</span></span>
-* <span data-ttu-id="ca33d-274">Überprüfung von „EmailAddresses“ sowie Validierung, dass „EmailAdmins“ nicht auf „false“ festgelegt ist, in „Set-AzSqlServerAdvancedThreatProtectionPolicy“ und „Set-AzSqlDatabaseAdvancedThreatProtectionPolicy“ entfernt, wenn „EmailAddresses“ leer ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-274">Remove the validation of EmailAddresses and the check that EmailAdmins is not false in case EmailAddresses is empty in Set-AzSqlServerAdvancedThreatProtectionPolicy and Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span></span>
-* <span data-ttu-id="ca33d-275">Entfernen der Einstellungen für Server-/Datenbanküberwachung aktiviert, wenn mehrere Diagnoseeinstellungen vorhanden sind, die eine Überwachungskategorie ermöglichen</span><span class="sxs-lookup"><span data-stu-id="ca33d-275">Enabled removal of server/database auditing settings when multiple diagnostic settings that enable audit category exist.</span></span>
-* <span data-ttu-id="ca33d-276">Überprüfung von E-Mail-Adressen in mehreren Cmdlets für die SQL-Sicherheitsrisikobewertung korrigiert (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting und Update-AzSqlInstanceVulnerabilityAssessmentSetting)</span><span class="sxs-lookup"><span data-stu-id="ca33d-276">Fix email addresses validation in multiple Sql Vulnerability Assessment cmdlets (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting and Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span></span>
+#### <a name="azsql"></a><span data-ttu-id="f6333-271">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-271">Az.Sql</span></span>
+* <span data-ttu-id="f6333-272">Beispiel in der Referenzdokumentation für „Get-AzSqlElasticPool“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-272">Update example in reference documentation for 'Get-AzSqlElasticPool'</span></span>
+* <span data-ttu-id="f6333-273">V-Kern-Beispiel zum Erstellen eines Pools für elastische Datenbanken hinzugefügt (New-AzSqlElasticPool)</span><span class="sxs-lookup"><span data-stu-id="f6333-273">Added vCore example to creating an elastic pool (New-AzSqlElasticPool).</span></span>
+* <span data-ttu-id="f6333-274">Überprüfung von „EmailAddresses“ sowie Validierung, dass „EmailAdmins“ nicht auf „false“ festgelegt ist, in „Set-AzSqlServerAdvancedThreatProtectionPolicy“ und „Set-AzSqlDatabaseAdvancedThreatProtectionPolicy“ entfernt, wenn „EmailAddresses“ leer ist</span><span class="sxs-lookup"><span data-stu-id="f6333-274">Remove the validation of EmailAddresses and the check that EmailAdmins is not false in case EmailAddresses is empty in Set-AzSqlServerAdvancedThreatProtectionPolicy and Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span></span>
+* <span data-ttu-id="f6333-275">Entfernen der Einstellungen für Server-/Datenbanküberwachung aktiviert, wenn mehrere Diagnoseeinstellungen vorhanden sind, die eine Überwachungskategorie ermöglichen</span><span class="sxs-lookup"><span data-stu-id="f6333-275">Enabled removal of server/database auditing settings when multiple diagnostic settings that enable audit category exist.</span></span>
+* <span data-ttu-id="f6333-276">Überprüfung von E-Mail-Adressen in mehreren Cmdlets für die SQL-Sicherheitsrisikobewertung korrigiert (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting und Update-AzSqlInstanceVulnerabilityAssessmentSetting)</span><span class="sxs-lookup"><span data-stu-id="f6333-276">Fix email addresses validation in multiple Sql Vulnerability Assessment cmdlets (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting and Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span></span>
 
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-277">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-277">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-278">Beispiel in der Referenzdokumentation für „Get-AzStorageAccountKey“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-278">Updated example in reference documentation for 'Get-AzStorageAccountKey'</span></span>
-* <span data-ttu-id="ca33d-279">Beim Upload/Download von Azure-Dateien wird das Beibehalten der SMB-Eigenschaften der Quelldateien (Dateiattribute, Zeitpunkt der Dateierstellung, letzter Schreibzugriff für die Datei) in der Zieldatei unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-279">In upload/Downalod Azure File,support perserve the source File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the destination file</span></span>
-    -  <span data-ttu-id="ca33d-280">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-280">Set-AzStorageFileContent</span></span>
-    -  <span data-ttu-id="ca33d-281">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-281">Get-AzStorageFileContent</span></span>
-* <span data-ttu-id="ca33d-282">Fehler beim Hochladen von Blockblobs mit Eigenschaften/Metadaten für das für einen Container aktivierte ImmutabilityPolicy-Element behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-282">Fix Upload block blob with properties/metadate fail on container enabled ImmutabilityPolicy.</span></span>
-    -  <span data-ttu-id="ca33d-283">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-283">Set-AzStorageBlobContent</span></span>
-* <span data-ttu-id="ca33d-284">Unterstützung für die Verwaltung von Azure-Dateifreigaben mit der API der Verwaltungsebene</span><span class="sxs-lookup"><span data-stu-id="ca33d-284">Support manage Azure File shares with Management plane API</span></span>
-    -  <span data-ttu-id="ca33d-285">New-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="ca33d-285">New-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="ca33d-286">Get-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="ca33d-286">Get-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="ca33d-287">Update-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="ca33d-287">Update-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="ca33d-288">Remove-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="ca33d-288">Remove-AzRmStorageShare</span></span>
+#### <a name="azstorage"></a><span data-ttu-id="f6333-277">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-277">Az.Storage</span></span>
+* <span data-ttu-id="f6333-278">Beispiel in der Referenzdokumentation für „Get-AzStorageAccountKey“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-278">Updated example in reference documentation for 'Get-AzStorageAccountKey'</span></span>
+* <span data-ttu-id="f6333-279">Beim Upload/Download von Azure-Dateien wird das Beibehalten der SMB-Eigenschaften der Quelldateien (Dateiattribute, Zeitpunkt der Dateierstellung, letzter Schreibzugriff für die Datei) in der Zieldatei unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f6333-279">In upload/Downalod Azure File,support perserve the source File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the destination file</span></span>
+    -  <span data-ttu-id="f6333-280">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="f6333-280">Set-AzStorageFileContent</span></span>
+    -  <span data-ttu-id="f6333-281">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="f6333-281">Get-AzStorageFileContent</span></span>
+* <span data-ttu-id="f6333-282">Fehler beim Hochladen von Blockblobs mit Eigenschaften/Metadaten für das für einen Container aktivierte ImmutabilityPolicy-Element behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-282">Fix Upload block blob with properties/metadate fail on container enabled ImmutabilityPolicy.</span></span>
+    -  <span data-ttu-id="f6333-283">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="f6333-283">Set-AzStorageBlobContent</span></span>
+* <span data-ttu-id="f6333-284">Unterstützung für die Verwaltung von Azure-Dateifreigaben mit der API der Verwaltungsebene</span><span class="sxs-lookup"><span data-stu-id="f6333-284">Support manage Azure File shares with Management plane API</span></span>
+    -  <span data-ttu-id="f6333-285">New-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="f6333-285">New-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="f6333-286">Get-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="f6333-286">Get-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="f6333-287">Update-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="f6333-287">Update-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="f6333-288">Remove-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="f6333-288">Remove-AzRmStorageShare</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-289">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-289">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-290">Problem behoben, aufgrund dessen Web-App-Tags beim Migrieren der App zum neuen ASP gelöscht wurden</span><span class="sxs-lookup"><span data-stu-id="ca33d-290">Fixing issue where webapp Tags were getting deleted when migrating App to new ASP</span></span>
-* <span data-ttu-id="ca33d-291">„Publish-AzureWebapp“ für die Verwendung unter Linux und Windows korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-291">Fixing the Publish-AzureWebapp to work across Linux and windows</span></span>
-* <span data-ttu-id="ca33d-292">Beispiel in Referenzdokumentation „Get-AzWebAppPublishingProfile“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-292">Update example in 'Get-AzWebAppPublishingProfile' reference documentation</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-289">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-289">Az.Websites</span></span>
+* <span data-ttu-id="f6333-290">Problem behoben, aufgrund dessen Web-App-Tags beim Migrieren der App zum neuen ASP gelöscht wurden</span><span class="sxs-lookup"><span data-stu-id="f6333-290">Fixing issue where webapp Tags were getting deleted when migrating App to new ASP</span></span>
+* <span data-ttu-id="f6333-291">„Publish-AzureWebapp“ für die Verwendung unter Linux und Windows korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-291">Fixing the Publish-AzureWebapp to work across Linux and windows</span></span>
+* <span data-ttu-id="f6333-292">Beispiel in Referenzdokumentation „Get-AzWebAppPublishingProfile“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-292">Update example in 'Get-AzWebAppPublishingProfile' reference documentation</span></span>
 
-## <a name="260---august-2019"></a><span data-ttu-id="ca33d-293">2.6.0: August 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-293">2.6.0 - August 2019</span></span>
-#### <a name="general"></a><span data-ttu-id="ca33d-294">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ca33d-294">General</span></span>
-* <span data-ttu-id="ca33d-295">Verschiedene Tippfehler in zahlreichen Modulen korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-295">Fixed miscellaneous typos across numerous modules</span></span>
+## <a name="260---august-2019"></a><span data-ttu-id="f6333-293">2.6.0: August 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-293">2.6.0 - August 2019</span></span>
+#### <a name="general"></a><span data-ttu-id="f6333-294">Allgemein</span><span class="sxs-lookup"><span data-stu-id="f6333-294">General</span></span>
+* <span data-ttu-id="f6333-295">Verschiedene Tippfehler in zahlreichen Modulen korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-295">Fixed miscellaneous typos across numerous modules</span></span>
 
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-296">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-296">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-297">Unterstützung der benutzerseitig zugewiesenen MSI in Azure Functions-Authentifizierung (#9479)</span><span class="sxs-lookup"><span data-stu-id="ca33d-297">Support user-assigned MSI in Azure Functiosn Authentication (#9479)</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-296">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-296">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-297">Unterstützung der benutzerseitig zugewiesenen MSI in Azure Functions-Authentifizierung (#9479)</span><span class="sxs-lookup"><span data-stu-id="f6333-297">Support user-assigned MSI in Azure Functiosn Authentication (#9479)</span></span>
 
-#### <a name="azaks"></a><span data-ttu-id="ca33d-298">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="ca33d-298">Az.Aks</span></span>
-* <span data-ttu-id="ca33d-299">Problem mit der Ausgabe für „Get-AzAks“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-299">Fix issue with output for 'Get-AzAks'</span></span>
-    * <span data-ttu-id="ca33d-300">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9847</span><span class="sxs-lookup"><span data-stu-id="ca33d-300">More information here: https://github.com/Azure/azure-powershell/issues/9847</span></span>
+#### <a name="azaks"></a><span data-ttu-id="f6333-298">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="f6333-298">Az.Aks</span></span>
+* <span data-ttu-id="f6333-299">Problem mit der Ausgabe für „Get-AzAks“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-299">Fix issue with output for 'Get-AzAks'</span></span>
+    * <span data-ttu-id="f6333-300">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9847</span><span class="sxs-lookup"><span data-stu-id="f6333-300">More information here: https://github.com/Azure/azure-powershell/issues/9847</span></span>
 
-#### <a name="azapimanagement"></a><span data-ttu-id="ca33d-301">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-301">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-302">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/9351</span><span class="sxs-lookup"><span data-stu-id="ca33d-302">Fix for issue https://github.com/Azure/azure-powershell/issues/9351</span></span>
-    - <span data-ttu-id="ca33d-303">.NET-NuGet-Version aktualisiert, die keine Einschränkungen für „productId“, „apiId“, „groupId“ und „userId“ erzwingt</span><span class="sxs-lookup"><span data-stu-id="ca33d-303">Update .net nuget version, which does not enforce restrictions on productId, apiId, groupId and userId</span></span>
-* <span data-ttu-id="ca33d-304">**Get-AzApiManagementProduct:** Unterstützung für das Abfragen von Produkten mithilfe der API hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-304">**Get-AzApiManagementProduct** - Added support for querying products using Api.</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="f6333-301">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-301">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-302">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/9351</span><span class="sxs-lookup"><span data-stu-id="f6333-302">Fix for issue https://github.com/Azure/azure-powershell/issues/9351</span></span>
+    - <span data-ttu-id="f6333-303">.NET-NuGet-Version aktualisiert, die keine Einschränkungen für „productId“, „apiId“, „groupId“ und „userId“ erzwingt</span><span class="sxs-lookup"><span data-stu-id="f6333-303">Update .net nuget version, which does not enforce restrictions on productId, apiId, groupId and userId</span></span>
+* <span data-ttu-id="f6333-304">**Get-AzApiManagementProduct:** Unterstützung für das Abfragen von Produkten mithilfe der API hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-304">**Get-AzApiManagementProduct** - Added support for querying products using Api.</span></span>
   https://github.com/Azure/azure-powershell/issues/9482
-* <span data-ttu-id="ca33d-305">**New-AzApiManagementApiRevision:** Problem behoben, aufgrund dessen „ApiRevisionDescription“ beim Erstellen einer neuen API-Revision nicht festgelegt wurde https://github.com/Azure/azure-powershell/issues/9752</span><span class="sxs-lookup"><span data-stu-id="ca33d-305">**New-AzApiManagementApiRevision** - Fix for issue where ApiRevisionDescription was not being set when creating new api revision https://github.com/Azure/azure-powershell/issues/9752</span></span>
-* <span data-ttu-id="ca33d-306">Tippfehler im Modell „PsApiManagementOAuth2AuthrozationServer“ korrigiert: PsApiManagementOAuth2AuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="ca33d-306">Fixed typo in model 'PsApiManagementOAuth2AuthrozationServer' to 'PsApiManagementOAuth2AuthorizationServer'</span></span>
-
-#### <a name="azbatch"></a><span data-ttu-id="ca33d-307">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="ca33d-307">Az.Batch</span></span>
-* <span data-ttu-id="ca33d-308">Tippfehler in Hilfemeldung und Dokumentation korrigiert (Großschreibung von „Windows“)</span><span class="sxs-lookup"><span data-stu-id="ca33d-308">Fixed typo in help message and documentation to capitalize Windows</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="ca33d-309">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="ca33d-309">Az.Cdn</span></span>
-* <span data-ttu-id="ca33d-310">Tippfehler im Hilfsprogramm für die CDN-Modulkonvertierung korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-310">Fixed a typo in CDN module conversion helper</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-311">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-311">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-312">VmssId zum Cmdlet „New-AzVMConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-312">Add VmssId to New-AzVMConfig cmdlet</span></span>
-* <span data-ttu-id="ca33d-313">Parameter „TerminateScheduledEvents“ und „TerminateScheduledEventNotBeforeTimeoutInMinutes“ zu „New-AzVmssConfig“ und „Update-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-313">Add TerminateScheduledEvents and TerminateScheduledEventNotBeforeTimeoutInMinutes parameters to New-AzVmssConfig and Update-AzVmss</span></span>
-* <span data-ttu-id="ca33d-314">HyperVGeneration-Eigenschaft zu VM-Imageobjekt hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-314">Add HyperVGeneration property to VM image object</span></span>
-* <span data-ttu-id="ca33d-315">Host- und HostGroup-Features hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-315">Add Host and HostGroup features</span></span>
-    - <span data-ttu-id="ca33d-316">Neue Cmdlets:   New-AzHostGroup, New-AzHost, Get-AzHostGroup, Get-AzHost, Remove-AzHostGroup, Remove-AzHost</span><span class="sxs-lookup"><span data-stu-id="ca33d-316">New cmdlets:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span></span>
-    - <span data-ttu-id="ca33d-317">Parameter „HostId“ zu „New-AzVMConfig“ und „New-AzVM“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-317">HostId parameter is added to New-AzVMConfig and New-AzVM</span></span>
-* <span data-ttu-id="ca33d-318">Beispiel in der Dokumentation zu „Invoke-AzVMRunCommand“ zur Verwendung des richtigen Parameternamens aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-318">Update example in 'Invoke-AzVMRunCommand' documentation to use correct parameter name</span></span>
-* <span data-ttu-id="ca33d-319">Beschreibung für „-VolumeType“ in der Referenzdokumentation zu „Set-AzVMDiskEncryptionExtension“ und „Set-AzVmssDiskEncryptionExtension“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-319">Update '-VolumeType' description in 'Set-AzVMDiskEncryptionExtension' and 'Set-AzVmssDiskEncryptionExtension' reference documentation</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-320">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-320">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-321">Tippfehler in der Dokumentation zu „New-AzDataFactoryEncryptValue“ korrigiert (Großschreibung von „Windows“)</span><span class="sxs-lookup"><span data-stu-id="ca33d-321">Fix typo to capitalize 'Windows' in 'New-AzDataFactoryEncryptValue' documentation</span></span>
-* <span data-ttu-id="ca33d-322">Version des ADF .NET SDK auf 4.1.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-322">Updated ADF .Net SDK version to 4.1.2</span></span>
-* <span data-ttu-id="ca33d-323">Parameter „DataProxyIntegrationRuntimeName“, „DataProxyStagingLinkedServiceName“ und „DataProxyStagingPath“ für Befehl „Set-AzureRmDataFactoryV2IntegrationRuntime“ hinzugefügt, um die Einrichtung der selbstgehosteten Integration Runtime als Proxy für die SSIS Integration Runtime zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="ca33d-323">Add parameter 'DataProxyIntegrationRuntimeName', 'DataProxyStagingLinkedServiceName' and 'DataProxyStagingPath' for 'Set-AzureRmDataFactoryV2IntegrationRuntime' cmd to enable set up Self-Hosted Integration Runtime as a proxy for SSIS Integration Runtime</span></span>
-* <span data-ttu-id="ca33d-324">„PSTriggerRun“ zum Anzeigen der ausgelösten Pipelines, Meldungen und Eigenschaften und „PSActivityRun“ zum Anzeigen des Aktivitätstyps aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-324">Updated PSTriggerRun to show the triggered pipelines, message and properties, and PSActivityRun to show the activity type</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-325">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-325">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-326">Hängen von „Get-DataLakeStoreDeletedItem“ aufgrund von Fehlern oder Remoteausnahmen behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-326">Fix hanging of Get-DataLakeStoreDeletedItem for any errors or remote exceptions.</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="ca33d-327">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-327">Az.EventHub</span></span>
-* <span data-ttu-id="ca33d-328">Behebung des Problems #9658: Tippfehler im Parameter „VirtualNteworkRule“ in „Set-AzEventHubNetworkRuleSet“</span><span class="sxs-lookup"><span data-stu-id="ca33d-328">Fix for issue #9658 : Typo VirtualNteworkRule parameter in Set-AzEventHubNetworkRuleSet</span></span>
-* <span data-ttu-id="ca33d-329">Behebung des Problems #9558: „Set-AzEventHubNamespace“ verwendet PATCH anstelle von PUT.</span><span class="sxs-lookup"><span data-stu-id="ca33d-329">Fix for issue #9558 : Set-AzEventHubNamespace is using PATCH instead of PUT</span></span>
-* <span data-ttu-id="ca33d-330">Parameter „EnableKafka“ zum Cmdlet „Set-AzEventHubNamespace“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-330">added EnableKafka parameter to Set-AzEventHubNamespace cmdlet</span></span>
-* <span data-ttu-id="ca33d-331">Behebung des Problems #9786: Erstellen einer Regel mit Rechten, die nur das Lauschen zulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-331">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
-
-#### <a name="azmarketplaceordering"></a><span data-ttu-id="ca33d-332">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="ca33d-332">Az.MarketplaceOrdering</span></span>
-* <span data-ttu-id="ca33d-333">Tippfehler („Azure“ in Kleinbuchstaben) in der Dokumentation korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-333">Fixed documentation typo where 'Azure' was all lowercase letters</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-334">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-334">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-335">Falscher Parametername in der Hilfedokumentation korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-335">Fixed incorrect parameter name in help documentation</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-336">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-336">Az.Network</span></span>
-* <span data-ttu-id="ca33d-337">„New-AzPrivateLinkServiceIpConfig“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-337">Updated New-AzPrivateLinkServiceIpConfig</span></span>
-    - <span data-ttu-id="ca33d-338">Parameter „PublicIpAddress“ ausgemustert, da er auf Serverseite nie verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="ca33d-338">Deprecated the paramster 'PublicIpAddress' since this is never used in the server side.</span></span>
-    - <span data-ttu-id="ca33d-339">Optionaler Parameter „Primary“ hinzugefügt, der angibt, ob die aktuelle IP-Konfiguration die primäre ist oder nicht</span><span class="sxs-lookup"><span data-stu-id="ca33d-339">Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.</span></span>
-* <span data-ttu-id="ca33d-340">Verbesserte Verarbeitung der Anforderungsfehlerausnahme aus dem SDK: Behebt das Problem, dass vorherige SDK-Ausnahmen nicht richtig behandelt wurden, was dazu führt, dass Schlüsselfehlerdetails nicht angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-340">Improved handling of request error exception from SDK   -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed</span></span>
-* <span data-ttu-id="ca33d-341">Validierungslogik für Ipv6-IP-Präfix angepasst, damit auf die richtige IPv6-Präfixlänge geprüft wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-341">Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length.</span></span>
-* <span data-ttu-id="ca33d-342">„Get-AzVirtualNetworkSubnetConfig“ aktualisiert: Parametersatz zum Abrufen nach Subnetzressourcen-ID hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-342">Updated Get-AzVirtualNetworkSubnetConfig: Added parameter set to get by subnet resource id.</span></span>
-* <span data-ttu-id="ca33d-343">Aktualisierte Beschreibung des Location-Parameters für „AzNetworkServiceTag“</span><span class="sxs-lookup"><span data-stu-id="ca33d-343">Updated description of Location parameter for AzNetworkServiceTag</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-344">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-344">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-345">Aktualisierte Dokumentation für „New-AzOperationalInsightsLinuxSyslogDataSource“</span><span class="sxs-lookup"><span data-stu-id="ca33d-345">Updated documentation for 'New-AzOperationalInsightsLinuxSyslogDataSource'</span></span>
-    - <span data-ttu-id="ca33d-346">Beispiel hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-346">Added example</span></span>
-    - <span data-ttu-id="ca33d-347">Beschreibung für den Parameter „-Name“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-347">Updated description for '-Name' parameter</span></span>
-* <span data-ttu-id="ca33d-348">Beispiel für „New-AzOperationalInsightsWindowsEventDataSource“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-348">Added an example for New-AzOperationalInsightsWindowsEventDataSource</span></span>
-* <span data-ttu-id="ca33d-349">Beschreibung des Parameters „-Name“ für „New-AzOperationalInsightsWindowsEventDataSource“ geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-349">Changed the description of the -Name parameter for New-AzOperationalInsightsWindowsEventDataSource</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-350">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-350">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-351">„Get-AzRecoveryServicesBackupJobDetail.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-351">Update 'Get-AzRecoveryServicesBackupJobDetail.md'</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-352">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-352">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-353">Unterstützung für die neue API-Version 2019-05-10 für Microsoft.Resource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-353">Add support for new api version 2019-05-10 for Microsoft.Resource</span></span>
-    - <span data-ttu-id="ca33d-354">Unterstützung für „copy.count = 0“ für Variablen, Ressourcen und Eigenschaften hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-354">Add support for 'copy.count = 0' for variables, resources and properties</span></span>
-    - <span data-ttu-id="ca33d-355">Ressourcen mit „condition = false“ oder „copy.count = 0“ werden im vollständigen Modus gelöscht.</span><span class="sxs-lookup"><span data-stu-id="ca33d-355">Resources with 'condition = false' or 'copy.count = 0' will be deleted in complete mode</span></span>
-* <span data-ttu-id="ca33d-356">Beispiel zum Hinzufügen einer Richtlinie auf Abonnementebene zur Hilfedokumentation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-356">Add an example of assigning policy at subscription level to help doc</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-357">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-357">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-358">Behebung des Problems #9658: Tippfehler für Parameter „VirtualNetworkRule“ in „Set-AzServiceBusNetworkRuleSet“</span><span class="sxs-lookup"><span data-stu-id="ca33d-358">Fix for issue #9658 : Typo VirtualNetworkRule parameter in Set-AzServiceBusNetworkRuleSet</span></span>
-* <span data-ttu-id="ca33d-359">Behebung des Problems #9786: Erstellen einer Regel mit Rechten, die nur das Lauschen zulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-359">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
-* <span data-ttu-id="ca33d-360">Neuer Befehl „Test-AzServiceBusNameAvailability“ zum Überprüfen der Verfügbarkeit des Namens für Warteschlange und Thema hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-360">Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-361">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-361">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-362">Fehler bei Cmdlets zum Hinzufügen des Knotentyps korrigiert:</span><span class="sxs-lookup"><span data-stu-id="ca33d-362">Fix add node type cmdlet bugs:</span></span>
-    - <span data-ttu-id="ca33d-363">Fehler „NullReferenceException“, wenn die Ressourcengruppe andere VMSS enthielt, die nicht mit dem Service Fabric-Cluster in Zusammenhang stehen</span><span class="sxs-lookup"><span data-stu-id="ca33d-363">NullReferenceException bug when resource group had other vmss not related to the service fabric cluster.</span></span> <span data-ttu-id="ca33d-364">Problembehebung: https://github.com/Azure/azure-powershell/issues/8681</span><span class="sxs-lookup"><span data-stu-id="ca33d-364">Fixes issue: https://github.com/Azure/azure-powershell/issues/8681</span></span>
-    - <span data-ttu-id="ca33d-365">Fehler behoben, aufgrund dessen bei einem Cmdlet ein Fehler auftrat, wenn sich „virtualNetwork“ in einer anderen Ressourcengruppe befand als der Cluster</span><span class="sxs-lookup"><span data-stu-id="ca33d-365">Fix bug where cmdlet failed if virtualNetwork was in a different resource group that the cluster.</span></span> <span data-ttu-id="ca33d-366">Problembehebung: https://github.com/Azure/azure-powershell/issues/8407</span><span class="sxs-lookup"><span data-stu-id="ca33d-366">fixes issue: https://github.com/Azure/azure-powershell/issues/8407</span></span>
-    - <span data-ttu-id="ca33d-367">Cmdlet „Add-AzServiceFabricApplicationCertificate“ ausgemustert</span><span class="sxs-lookup"><span data-stu-id="ca33d-367">Deprecating Add-AzServiceFabricApplicationCertificate cmdlet</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-368">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-368">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-369">Dokumentation alter Überwachungs-Cmdlets aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-369">Update documentation of old Auditing cmdlets.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-370">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-370">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-371">Hilfe für „Get/Close-AzStorageFileHandle“ aktualisiert (weitere Szenarien zu Cmdlet-Beispielen hinzugefügt und Parameterbeschreibungen aktualisiert)</span><span class="sxs-lookup"><span data-stu-id="ca33d-371">Update help for Get/Close-AzStorageFileHandle, by add more scenarios to cmdlet examples and update parameter descriptions</span></span>
-* <span data-ttu-id="ca33d-372">Unterstützung von „StandardBlobTier“ in Uploadblobs und Kopierblobs</span><span class="sxs-lookup"><span data-stu-id="ca33d-372">Support StandardBlobTier in upload blob and copy blob</span></span>
-    -  <span data-ttu-id="ca33d-373">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-373">Set-AzStorageBlobContent</span></span>
-    -  <span data-ttu-id="ca33d-374">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="ca33d-374">Start-AzStorageBlobCopy</span></span>
-* <span data-ttu-id="ca33d-375">Unterstützung der Aktivierungspriorität im Kopierblob</span><span class="sxs-lookup"><span data-stu-id="ca33d-375">Support Rehydrate Priority in copy blob</span></span>
-    -  <span data-ttu-id="ca33d-376">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="ca33d-376">Start-AzStorageBlobCopy</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-377">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-377">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-378">Hinzufügen von Erläuterungen zum Parameter „-AppSettings“ in „Set-AzWebApp“ und „Set-AzWebAppSlot“</span><span class="sxs-lookup"><span data-stu-id="ca33d-378">Add clarification around -AppSettings parameter in Set-AzWebApp and Set-AzWebAppSlot</span></span>
-
-## <a name="250---july-2019"></a><span data-ttu-id="ca33d-379">2.5.0: Juli 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-379">2.5.0 - July 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-380">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-380">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-381">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-381">Update common code to use latest version of ClientRuntime</span></span>
-
-#### <a name="azapplicationinsights"></a><span data-ttu-id="ca33d-382">Az.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-382">Az.ApplicationInsights</span></span>
-* <span data-ttu-id="ca33d-383">Tippfehler im Beispiel in der Dokumentation zu „Remove-AzApplicationInsightsApiKey“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-383">Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-384">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-384">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-385">Tippfehler in der Ressourcenzeichenfolge korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-385">Fix typo in resource string</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-386">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-386">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-387">Unterstützung für NetworkRuleSet hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-387">Added NetworkRuleSet support.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-388">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-388">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-389">Fehlende Eigenschaften (ComputerName, OsName, OsVersion und HyperVGeneration) des Objekts für die VM-Instanzenansicht hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-389">Add missing properties (ComputerName, OsName, OsVersion and HyperVGeneration) of VM instance view object.</span></span>
-
-#### <a name="azcontainerregistry"></a><span data-ttu-id="ca33d-390">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="ca33d-390">Az.ContainerRegistry</span></span>
-* <span data-ttu-id="ca33d-391">Tippfehler in „Remove-AzContainerRegistryReplication“ für den Replikationsparameter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-391">Fix typo in Remove-AzContainerRegistryReplication for Replication parameter</span></span>
-    - <span data-ttu-id="ca33d-392">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9633.</span><span class="sxs-lookup"><span data-stu-id="ca33d-392">More information here https://github.com/Azure/azure-powershell/issues/9633</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-393">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-393">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-394">Version des ADF .NET SDK auf 4.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-394">Updated ADF .Net SDK version to 4.1.0</span></span>
-* <span data-ttu-id="ca33d-395">Tippfehler in der Dokumentation für „Get-AzDataFactoryV2PipelineRun“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-395">Fix typo in documentation for 'Get-AzDataFactoryV2PipelineRun'</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="ca33d-396">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-396">Az.EventHub</span></span>
-* <span data-ttu-id="ca33d-397">Neues Cmdlet zum Erstellen eines SAS-Token hinzugefügt: New-AzEventHubAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="ca33d-397">Added new cmmdlet added for generating SAS token : New-AzEventHubAuthorizationRuleSASToken</span></span>
-* <span data-ttu-id="ca33d-398">Überprüfung und Fehlermeldung für Berechtigungen für „authorizationrules“ hinzugefügt, wenn nur „Verwalten“ zugewiesen wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-398">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="ca33d-399">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-399">Az.KeyVault</span></span>
-* <span data-ttu-id="ca33d-400">Unterstützung zum Angeben von KeySize für Zertifikatsrichtlinien hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-400">Added support to specify the KeySize for Certificate Policies</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="ca33d-401">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="ca33d-401">Az.LogicApp</span></span>
-* <span data-ttu-id="ca33d-402">Korrektur für „Get-AzIntegrationAccountMap“ zum Auflisten aller Zuordnungstypen</span><span class="sxs-lookup"><span data-stu-id="ca33d-402">Fix for Get-AzIntegrationAccountMap to list all map types</span></span>
-    - <span data-ttu-id="ca33d-403">Neuer MapType-Parameter für Filterung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-403">Added new MapType parameter for filtering</span></span>
-
-#### <a name="azmanagedservices"></a><span data-ttu-id="ca33d-404">Az.ManagedServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-404">Az.ManagedServices</span></span>
-* <span data-ttu-id="ca33d-405">Unterstützung für API-Version 2019-06-01 (GA) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-405">Added support for api version 2019-06-01 (GA)</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-406">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-406">Az.Network</span></span>
-* <span data-ttu-id="ca33d-407">Unterstützung für privaten Endpunkt und privaten Verknüpfungsdienst hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-407">Add support for private endpoint and private link service</span></span>
-    - <span data-ttu-id="ca33d-408">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-408">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-409">Set-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="ca33d-409">Set-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="ca33d-410">Set-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="ca33d-410">Set-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="ca33d-411">Approve-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-411">Approve-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="ca33d-412">Deny-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-412">Deny-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="ca33d-413">Get-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-413">Get-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="ca33d-414">Remove-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-414">Remove-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="ca33d-415">Test-AzPrivateLinkServiceVisibility</span><span class="sxs-lookup"><span data-stu-id="ca33d-415">Test-AzPrivateLinkServiceVisibility</span></span>
-        - <span data-ttu-id="ca33d-416">Get-AzAutoApprovedPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="ca33d-416">Get-AzAutoApprovedPrivateLinkService</span></span>
-* <span data-ttu-id="ca33d-417">Folgende Befehle für das Feature aktualisiert: Flag PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies für Subnetz in VirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="ca33d-417">Updated below commands for feature: PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies flag on Subnet in Virtualnetwork</span></span>
-    - <span data-ttu-id="ca33d-418">„New-AzVirtualNetworkSubnetConfig“, „Set-AzVirtualNetworkSubnetConfig“ und „Add-AzVirtualNetworkSubnetConfig“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-418">Updated New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span></span>
-        - <span data-ttu-id="ca33d-419">Optionaler Parameter „-PrivateEndpointNetworkPoliciesFlag“ hinzugefügt, der konfiguriert, ob Netzwerkrichtlinien auf den privaten Endpunkt in diesem Subnetz angewendet werden sollen</span><span class="sxs-lookup"><span data-stu-id="ca33d-419">Added optional parameter -PrivateEndpointNetworkPoliciesFlag that configures whether to apply network policies on private endpoint in this subnet.</span></span>
-        - <span data-ttu-id="ca33d-420">Optionaler Parameter „-PrivateLinkServiceNetworkPoliciesFlag“ hinzugefügt, der konfiguriert, ob Netzwerkrichtlinien auf den Privat Link-Dienst in diesem Subnetz angewendet werden sollen</span><span class="sxs-lookup"><span data-stu-id="ca33d-420">Added optional parameter -PrivateLinkServiceNetworkPoliciesFlag that configures whether to apply network policies network policies on private link service in this subnet.</span></span>
-* <span data-ttu-id="ca33d-421">Der Cmdlet-Parameter „ServiceName“ von AzPrivateLinkService wurde aus Gründen der Abwärtskompatibilität in „Name“ mit dem Alias „ServiceName“ umbenannt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-421">AzPrivateLinkService's cmdlet parameter 'ServiceName' was renamed to 'Name' with an alias 'ServiceName' for backward compatibility</span></span>
-* <span data-ttu-id="ca33d-422">ICMP-Protokoll für Konfigurationen von Netzwerksicherheitsregeln aktiviert</span><span class="sxs-lookup"><span data-stu-id="ca33d-422">Enable ICMP protocol for network security rule configurations</span></span>
-    - <span data-ttu-id="ca33d-423">Aktualisierte Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-423">Updated cmdlets</span></span>
-        - <span data-ttu-id="ca33d-424">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-424">Add-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="ca33d-425">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-425">New-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="ca33d-426">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-426">Set-AzNetworkSecurityRuleConfig</span></span>
-* <span data-ttu-id="ca33d-427">ConnectionProtocolType (Ikev1/Ikev2) als konfigurierbarer Parameter für „New-AzVirtualNetworkGatewayConnection“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-427">Add ConnectionProtocolType (Ikev1/Ikev2) as a configurable parameter for New-AzVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="ca33d-428">PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-428">Add PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration</span></span>
-    - <span data-ttu-id="ca33d-429">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="ca33d-429">Updated cmdlet:</span></span>
-        - <span data-ttu-id="ca33d-430">New-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-430">New-AzLoadBalancerFrontendIpConfig</span></span>
-        - <span data-ttu-id="ca33d-431">Add-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-431">Add-AzLoadBalancerFrontendIpConfig</span></span>
-        - <span data-ttu-id="ca33d-432">Set-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-432">Set-AzLoadBalancerFrontendIpConfig</span></span>
-* <span data-ttu-id="ca33d-433">Application Gateway-Befehl „New-AzApplicationGatewayProbeConfig“ zur Unterstützung des benutzerdefinierten Ports im Test aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-433">Application Gateway New-AzApplicationGatewayProbeConfig command update for supporting custom port in Probe</span></span>
-    - <span data-ttu-id="ca33d-434">„New-AzApplicationGatewayProbeConfig“ aktualisiert: Optionaler Parameter „Port“ hinzugefügt, der zum Testen des Back-End-Servers verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ca33d-434">Updated New-AzApplicationGatewayProbeConfig: Added optional parameter Port which is used for probing backend server.</span></span> <span data-ttu-id="ca33d-435">Dieser Parameter gilt für Standard_V2 und WAF_V2 SKU.</span><span class="sxs-lookup"><span data-stu-id="ca33d-435">This parameter is applicable for Standard_V2 and WAF_V2 SKU.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-436">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-436">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-437">Standardversion für gespeicherte Suchvorgänge auf 1 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-437">Updated default version for saved searches to be 1.</span></span>
-* <span data-ttu-id="ca33d-438">Verarbeitung des regulären NULL-Ausdrucks in benutzerdefinierten Protokollen korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-438">Fixed custom log null regex handling</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-439">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-439">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-440">„Get-AzRecoveryServicesBackupJob.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-440">Update 'Get-AzRecoveryServicesBackupJob.md'</span></span>
-* <span data-ttu-id="ca33d-441">„Get-AzRecoveryServicesBackupContainer.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-441">Update 'Get-AzRecoveryServicesBackupContainer.md'</span></span>
-* <span data-ttu-id="ca33d-442">„Get-AzRecoveryServicesVault.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-442">Update 'Get-AzRecoveryServicesVault.md'</span></span>
-* <span data-ttu-id="ca33d-443">„Wait-AzRecoveryServicesBackupJob.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-443">Update 'Wait-AzRecoveryServicesBackupJob.md'</span></span>
-* <span data-ttu-id="ca33d-444">„Set-AzRecoveryServicesVaultContext.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-444">Update 'Set-AzRecoveryServicesVaultContext.md'</span></span>
-* <span data-ttu-id="ca33d-445">„Get-AzRecoveryServicesBackupItem.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-445">Update 'Get-AzRecoveryServicesBackupItem.md'</span></span>
-* <span data-ttu-id="ca33d-446">„Get-AzRecoveryServicesBackupRecoveryPoint.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-446">Update 'Get-AzRecoveryServicesBackupRecoveryPoint.md'</span></span>
-* <span data-ttu-id="ca33d-447">„Restore-AzRecoveryServicesBackupItem.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-447">Update 'Restore-AzRecoveryServicesBackupItem.md'</span></span>
-* <span data-ttu-id="ca33d-448">Dienstaufruf zum Aufheben der Containerregistrierung für Azure-Dateifreigabe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-448">Updated service call for Unregistering container for Azure File Share</span></span>
-* <span data-ttu-id="ca33d-449">„Set-AzRecoveryServicesAsrAlertSetting.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-449">Update 'Set-AzRecoveryServicesAsrAlertSetting.md'</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-450">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-450">Az.Resources</span></span>
-- <span data-ttu-id="ca33d-451">Fehlendes Cmdlet entfernt, auf das in der Dokumentation zu „New-AzResourceGroupDeployment“ verwiesen wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-451">Remove missing cmdlet referenced in 'New-AzResourceGroupDeployment' documentation</span></span>
-- <span data-ttu-id="ca33d-452">Richtlinien-Cmdlets zur Verwendung der neuen API-Version 2019-01-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-452">Updated policy cmdlets to use new api version 2019-01-01</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-453">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-453">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-454">Neues Cmdlet zum Erstellen eines SAS-Token hinzugefügt: New-AzServiceBusAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="ca33d-454">Added new cmmdlet added for generating SAS token : New-AzServiceBusAuthorizationRuleSASToken</span></span>
-* <span data-ttu-id="ca33d-455">Überprüfung und Fehlermeldung für Berechtigungen für „authorizationrules“ hinzugefügt, wenn nur „Verwalten“ zugewiesen wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-455">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-456">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-456">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-457">Fehlende Beispiele für Cmdlet „Set-AzSqlDatabaseSecondary“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-457">Fix missing examples for Set-AzSqlDatabaseSecondary cmdlet</span></span>
-* <span data-ttu-id="ca33d-458">Festlegen wiederkehrender Überprüfungen der Sicherheitsrisikobewertung ohne Angabe von E-Mail-Adressen korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-458">Fix set Vulnerability Assessment recurring scans without providing any email addresses</span></span>
-* <span data-ttu-id="ca33d-459">Tippfehler in einer Warnmeldung korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-459">Fix a small typo in a warining message.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-460">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-460">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-461">Beispiel in Referenzdokumentation für „Get-AzStorageAccount“ aktualisiert, sodass der richtige Parametername verwendet wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-461">Update example in reference documentation for 'Get-AzStorageAccount' to use correct parameter name</span></span>
-
-#### <a name="azstoragesync"></a><span data-ttu-id="ca33d-462">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="ca33d-462">Az.StorageSync</span></span>
-* <span data-ttu-id="ca33d-463">Cmdlet „Invoke-AzStorageSyncChangeDetection“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-463">Adding Invoke-AzStorageSyncChangeDetection cmdlet.</span></span>
-* <span data-ttu-id="ca33d-464">Problem 9551 zur Berücksichtigung von „TierFilesOlderThanDays“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-464">Fix Issue 9551 for honoring TierFilesOlderThanDays</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-465">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-465">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-466">Problem behoben, aufgrund dessen einige SiteConfig-Eigenschaften von „Get-AzWebApp“ und „Set-AzWebApp“ nicht zurückgegeben wurden</span><span class="sxs-lookup"><span data-stu-id="ca33d-466">Fixing a bug where some SiteConfig properties were not returned by Get-AzWebApp and Set-AzWebApp</span></span>
-* <span data-ttu-id="ca33d-467">Neuer Standortparameter zu „Get-AzDeletedWebApp“ und „Restore-AzDeletedWebApp“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-467">Adds a new Location parameter to Get-AzDeletedWebApp and Restore-AzDeletedWebApp</span></span>
-* <span data-ttu-id="ca33d-468">Fehler beim Klonen von Web-App-Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-468">Fixes a bug with cloning web app slots using New-AzWebApp -IncludeSourceWebAppSlots</span></span>
-
-## <a name="240---july-2019"></a><span data-ttu-id="ca33d-469">2.4.0 – Juli 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-469">2.4.0 - July 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-470">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-470">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-471">Unterstützung für Profil-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-471">Add support for profile cmdlets</span></span>
-* <span data-ttu-id="ca33d-472">Unterstützung für Umgebungen und Datenebenen in generierten Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-472">Add support for environments and data planes in generated cmdlets</span></span>
-* <span data-ttu-id="ca33d-473">Korrektur eines Fehlers, bei dem in einigen Fällen ein falscher Endpunkt für Datenebenen-Cmdlets in Windows PowerShell verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="ca33d-473">Fix bug where incorrect endpoint was being used in some cases for data plane cmdlets in Windows PowerShell</span></span>
-
-#### <a name="azadvisor"></a><span data-ttu-id="ca33d-474">Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="ca33d-474">Az.Advisor</span></span>
-* <span data-ttu-id="ca33d-475">Allgemein verfügbares Release von Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="ca33d-475">GA release of Az.Advisor</span></span>
-* <span data-ttu-id="ca33d-476">Dieses Modul ist nun als Teil des `Az`-Rollup-Moduls enthalten.</span><span class="sxs-lookup"><span data-stu-id="ca33d-476">This module is now included as a part of the roll-up `Az` module</span></span>
-
-#### <a name="azapimanagement"></a><span data-ttu-id="ca33d-477">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-477">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-478">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8671</span><span class="sxs-lookup"><span data-stu-id="ca33d-478">Fix for issue https://github.com/Azure/azure-powershell/issues/8671</span></span>
-    - <span data-ttu-id="ca33d-479">**Get-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="ca33d-479">**Get-AzApiManagementSubscription**</span></span>
-        - <span data-ttu-id="ca33d-480">Unterstützung für Abfragen von Abonnements nach Benutzer und Produkt hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-480">Added support for querying subscriptions by User and Product</span></span>
-        - <span data-ttu-id="ca33d-481">Unterstützung für Abfragen anhand des Umfangs hinzugefügt, „/“, „/apis“, „/apis/echo-api“</span><span class="sxs-lookup"><span data-stu-id="ca33d-481">Added support for querying using Scope '/', '/apis', '/apis/echo-api'</span></span>
-* <span data-ttu-id="ca33d-482">Behebung von Problem https://github.com/Azure/azure-powershell/issues/9307 und https://github.com/Azure/azure-powershell/issues/8432</span><span class="sxs-lookup"><span data-stu-id="ca33d-482">Fix for issue https://github.com/Azure/azure-powershell/issues/9307 and https://github.com/Azure/azure-powershell/issues/8432</span></span>
-    - <span data-ttu-id="ca33d-483">**Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="ca33d-483">**Import-AzApiManagementApi**</span></span>
-        - <span data-ttu-id="ca33d-484">Unterstützung für die Angabe von „ApiVersion“ und „ApiVersionSetId“ beim Importieren von APIs hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-484">Added support for specifying 'ApiVersion' and 'ApiVersionSetId' when importing Apis</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-485">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-485">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-486">Fehler beim Cmdlet „Set-AzAutomationConnectionFieldValue“ für die Verarbeitung des Zeichenfolgewerts behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-486">Fixed Set-AzAutomationConnectionFieldValue cmdlet bug to handle string value.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-487">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-487">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-488">Parameter „HyperVGeneration“ zu New-AzImageConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-488">Add HyperVGeneration parameter to New-AzImageConfig</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-489">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-489">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-490">Aktualisierung der Ausgabe von ADF-Cmdlets für das Abrufen von Aktivitäts-, Pipeline- und Auslöserausführungen, um die Pipe „Select-Object“ zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="ca33d-490">Updating the output of get activity runs, get pipeline runs, and get trigger runs ADF cmdlets to support Select-Object pipe.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="ca33d-491">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="ca33d-491">Az.EventGrid</span></span>
-* <span data-ttu-id="ca33d-492">Tippfehler in Dokumentation zu 'New-AzEventGridSubscription' behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-492">Fix typo in 'New-AzEventGridSubscription' documentation</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-493">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-493">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-494">Unterstützung für das erneute Generieren von Autorisierungsrichtlinienschlüsseln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-494">Add support to regenerate authorization policy keys.</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-495">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-495">Az.Network</span></span>
-* <span data-ttu-id="ca33d-496">„RoutingPreference“ zu öffentlichen IP-Tags hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-496">Added 'RoutingPreference' to public ip tags</span></span>
-* <span data-ttu-id="ca33d-497">Beispiele für Referenzdokumentation zu „Get-AzNetworkServiceTag“ verbessert</span><span class="sxs-lookup"><span data-stu-id="ca33d-497">Improve examples for 'Get-AzNetworkServiceTag' reference documentation</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="ca33d-498">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-498">Az.PolicyInsights</span></span>
-* <span data-ttu-id="ca33d-499">Fehlerbehebung für Nullverweis in Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="ca33d-499">Fix null reference issue in Get-AzPolicyState</span></span>
-    - <span data-ttu-id="ca33d-500">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9446</span><span class="sxs-lookup"><span data-stu-id="ca33d-500">More information here: https://github.com/Azure/azure-powershell/issues/9446</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-501">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-501">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-502">Zurückgegebenes CustomLog-Datenquellenmodell in Get-AzOperationalInsightsDataSource korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-502">Fixed CustomLog datasource model returned in Get-AzOperationalInsightsDataSource</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-503">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-503">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-504">Fehlerbehebung für Befehl „get-policy“ IaaSVMs</span><span class="sxs-lookup"><span data-stu-id="ca33d-504">Fix for get-policy command for IaaSVMs</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-505">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-505">Az.Resources</span></span>
-    - <span data-ttu-id="ca33d-506">Hilfetext für Parameter „-Top“ von „Get-AzPolicyState“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-506">Fix help text for Get-AzPolicyState -Top parameter</span></span>
-    - <span data-ttu-id="ca33d-507">Clientseitige Unterstützung von Paginierung für „Get-AzPolicyAlias“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-507">Add client-side paging support for Get-AzPolicyAlias</span></span>
-    - <span data-ttu-id="ca33d-508">Neue Parameter für „Set-AzPolicyAssignment“, „-PolicyParameters“ und „-PolicyParametersObject“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-508">Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject</span></span>
-    - <span data-ttu-id="ca33d-509">Einige Aktualisierungen von Dokumentationen und Beispielen für Policy-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-509">Handful of doc and example updates for Policy cmdlets</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-510">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-510">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-511">Korrektur für Problem Nr. 4938: „New-AzureRmServiceBusQueue“ gibt beim Festlegen von „MaxSizeInMegabytes“ „BadRequest“ zurück</span><span class="sxs-lookup"><span data-stu-id="ca33d-511">Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-512">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-512">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-513">Instanzfailovergruppen-Cmdlets aus Vorschauversion in öffentliche Version hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-513">Add Instance Failover Group cmdlets from preview release to public release</span></span>
-* <span data-ttu-id="ca33d-514">Unterstützung von Azure SQL Server\Datenbanküberwachung mit neuen Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-514">Support Azure SQL Server\Database Auditing with new cmdlets.</span></span>
-    - <span data-ttu-id="ca33d-515">Set-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-515">Set-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="ca33d-516">Get-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-516">Get-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="ca33d-517">Remove-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-517">Remove-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="ca33d-518">Set-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-518">Set-AzSqlDatabaseAudit</span></span>
-    - <span data-ttu-id="ca33d-519">Get-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-519">Get-AzSqlDatabaseAudit</span></span>
-    - <span data-ttu-id="ca33d-520">Remove-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="ca33d-520">Remove-AzSqlDatabaseAudit</span></span>
-* <span data-ttu-id="ca33d-521">E-Mail-Einschränkungen aus Einstellungen der Sicherheitsrisikobewertung entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-521">Remove email constraints from Vulnerability Assessment settings</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-522">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-522">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-523">Zwei Parameter („-IndexDocument“ und „-ErrorDocument404Path“) in folgendem Cmdlet von erforderlich in optional geändert:</span><span class="sxs-lookup"><span data-stu-id="ca33d-523">Change 2 parameters '-IndexDocument' and '-ErrorDocument404Path' from required to optional  in cmdlet:</span></span>
-    -  <span data-ttu-id="ca33d-524">Enable-AzStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="ca33d-524">Enable-AzStorageStaticWebsite</span></span>
-* <span data-ttu-id="ca33d-525">Hilfe zu „Get-AzStorageBlobContent“ mit neuem Beispiel ergänzt</span><span class="sxs-lookup"><span data-stu-id="ca33d-525">Update help of Get-AzStorageBlobContent by add an example</span></span>
-* <span data-ttu-id="ca33d-526">Anzeige von mehr Fehlerinformationen beim Fehlschlagen eines Cmdlets mit „StorageException“</span><span class="sxs-lookup"><span data-stu-id="ca33d-526">Show more error information when cmdlet failed with StorageException</span></span>
-* <span data-ttu-id="ca33d-527">Unterstützung für das Erstellen oder Aktualisieren von Speicherkonten mit Azure Files AAD-DS-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="ca33d-527">Support create or update Storage account with Azure Files AAD DS Authentication</span></span>
-    -  <span data-ttu-id="ca33d-528">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-528">New-AzStorageAccount</span></span>
-    -  <span data-ttu-id="ca33d-529">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-529">Set-AzStorageAccount</span></span>
-* <span data-ttu-id="ca33d-530">Unterstützung für das Auflisten oder Schließen von Dateihandles einer Dateifreigabe, eines Dateiverzeichnisses oder einer Datei</span><span class="sxs-lookup"><span data-stu-id="ca33d-530">Support list or close file handles of a file share, file directory or a file</span></span>
-    - <span data-ttu-id="ca33d-531">Get-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="ca33d-531">Get-AzStorageFileHandle</span></span>
-    - <span data-ttu-id="ca33d-532">Close-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="ca33d-532">Close-AzStorageFileHandle</span></span>
-
-#### <a name="azstoragesync"></a><span data-ttu-id="ca33d-533">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="ca33d-533">Az.StorageSync</span></span>
-* <span data-ttu-id="ca33d-534">Dieses Modul ist nun als Teil des `Az`-Rollup-Moduls enthalten.</span><span class="sxs-lookup"><span data-stu-id="ca33d-534">This module is now included as a part of the roll-up `Az` module</span></span>
-
-## <a name="232---june-2019"></a><span data-ttu-id="ca33d-535">2.3.2 – Juni 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-535">2.3.2 - June 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-536">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-536">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-537">Fehler behoben, aufgrund dessen in manchen Fällen eine falsche URL für Funktionsaufrufe verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="ca33d-537">Fix bug with incorrect URL being used in some cases for Functions calls</span></span>
-    - <span data-ttu-id="ca33d-538">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8983</span><span class="sxs-lookup"><span data-stu-id="ca33d-538">More information here: https://github.com/Azure/azure-powershell/issues/8983</span></span>
-* <span data-ttu-id="ca33d-539">Problem mit Aliasen zwischen AzureRM und Azure-Cmdlets behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-539">Fix Issue with aliases from AzureRM to Az cmdlets</span></span>
-  - <span data-ttu-id="ca33d-540">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span><span class="sxs-lookup"><span data-stu-id="ca33d-540">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span></span>
-  - <span data-ttu-id="ca33d-541">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span><span class="sxs-lookup"><span data-stu-id="ca33d-541">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-542">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-542">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-543">Die einfachen Parametersätze „New-AzVm“ und „New-AzVmss“ akzeptieren jetzt den Parameter „ProximityPlacementGroup“.</span><span class="sxs-lookup"><span data-stu-id="ca33d-543">New-AzVm and New-AzVmss simple parameter sets now accept the 'ProximityPlacementGroup' parameter.</span></span>
-* <span data-ttu-id="ca33d-544">Tippfehler in der Referenzdokumentation für „New-AzVM“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-544">Fix typo in 'New-AzVM' reference documentation</span></span>
-
-#### <a name="azdns"></a><span data-ttu-id="ca33d-545">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="ca33d-545">Az.Dns</span></span>
-* <span data-ttu-id="ca33d-546">Tippfehler in den Hilfebeispielen zu „Set-AzDnsZone“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-546">Fixed a typo in 'Set-AzDnsZone' help examples.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="ca33d-547">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="ca33d-547">Az.EventGrid</span></span>
-* <span data-ttu-id="ca33d-548">Zur Verwendung der API-Version 2019-06-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-548">Updated to use the 2019-06-01 API version.</span></span>
-* <span data-ttu-id="ca33d-549">Neue Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-549">New cmdlets:</span></span>
-    - <span data-ttu-id="ca33d-550">New-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="ca33d-550">New-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="ca33d-551">Erstellt eine neue Azure Event Grid-Domäne.</span><span class="sxs-lookup"><span data-stu-id="ca33d-551">Creates a new Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="ca33d-552">Get-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="ca33d-552">Get-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="ca33d-553">Ruft die Details einer Event Grid-Domäne oder eine Liste aller Event Grid-Domänen im aktuellen Azure-Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="ca33d-553">Gets the details of an Event Grid Domain, or gets a list of all Event Grid Domains in the current Azure subscription.</span></span>
-    - <span data-ttu-id="ca33d-554">Remove-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="ca33d-554">Remove-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="ca33d-555">Entfernt eine Azure Event Grid-Domäne.</span><span class="sxs-lookup"><span data-stu-id="ca33d-555">Removes an Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="ca33d-556">New-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="ca33d-556">New-AzureRmEventGridDomainKey</span></span>
-        - <span data-ttu-id="ca33d-557">Generiert den freigegebenen Zugriffsschlüssel für eine Azure Event Grid-Domäne erneut.</span><span class="sxs-lookup"><span data-stu-id="ca33d-557">Regenerates the shared access key for an Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="ca33d-558">Get-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="ca33d-558">Get-AzureRmEventGridDomainKey</span></span>
-        - <span data-ttu-id="ca33d-559">Ruft die freigegebenen Zugriffsschlüssel ab, die zum Veröffentlichen von Ereignissen in einer Event Grid-Domäne verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-559">Gets the shared access keys used to publish events to an Event Grid Domain.</span></span>
-    - <span data-ttu-id="ca33d-560">New-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="ca33d-560">New-AzureRmEventGridDomainTopic:</span></span>
-        - <span data-ttu-id="ca33d-561">Erstellt ein neues Azure Event Grid-Domänenthema.</span><span class="sxs-lookup"><span data-stu-id="ca33d-561">Creates a new Azure Event Grid Domain Topic.</span></span>
-    - <span data-ttu-id="ca33d-562">Get-AzureRmEventGridDomainTopic</span><span class="sxs-lookup"><span data-stu-id="ca33d-562">Get-AzureRmEventGridDomainTopic</span></span>
-        - <span data-ttu-id="ca33d-563">Ruft die Details eines Event Grid-Domänenthemas oder eine Liste aller Event Grid-Domänenthemen unter der jeweiligen Event Grid-Domäne im aktuellen Azure-Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="ca33d-563">Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure</span></span>
-    - <span data-ttu-id="ca33d-564">Remove-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="ca33d-564">Remove-AzureRmEventGridDomainTopic:</span></span>
-        - <span data-ttu-id="ca33d-565">Entfernt ein vorhandenes Azure Event Grid-Domänenthema.</span><span class="sxs-lookup"><span data-stu-id="ca33d-565">Removes an existing Azure Event Grid Domain Topic.</span></span>
-* <span data-ttu-id="ca33d-566">Aktualisierte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-566">Updated cmdlets:</span></span>
-    - <span data-ttu-id="ca33d-567">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="ca33d-567">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span></span>
-        - <span data-ttu-id="ca33d-568">Neue erforderliche Parameter zur Unterstützung des Pipings für die neue Event Grid-Domäne und das Event Grid-Domänenthema hinzugefügt, um das Erstellen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-568">Add new mandatory parameters to support piping for the new Event Grid Domain and Event Grid Domain Topic to allow creating new event subscription under these resources.</span></span>
-        - <span data-ttu-id="ca33d-569">Neue erforderliche Parameter zum Angeben des neuen Event Grid-Domänennamens und/oder Namens des Event Grid-Domänenthemas hinzugefügt, um das Erstellen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-569">Add new mandatory parameters for specifying the new Event Grid Domain name and/or Event Grid Domain Topic name to allow creating new event subscription under these resources.</span></span>
-        - <span data-ttu-id="ca33d-570">Neue Parametersätze für Domänen und Domänenthemen hinzugefügt, um die Wiederverwendung vorhandener Parameter zuzulassen (‚z. B. „EndPointType“, „SubjectBeginsWith“ usw.)</span><span class="sxs-lookup"><span data-stu-id="ca33d-570">Add new Parameter sets for domains and domain topics to allow reusing existing parameters (e.g., EndPointType, SubjectBeginsWith, etc).</span></span>
-        - <span data-ttu-id="ca33d-571">Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-571">Add new optional parameters for specifying:</span></span>
-            - <span data-ttu-id="ca33d-572">Ablaufdatum des Ereignisabonnements</span><span class="sxs-lookup"><span data-stu-id="ca33d-572">Event subscription expiration date,</span></span>
-            - <span data-ttu-id="ca33d-573">Erweiterte Filterparameter</span><span class="sxs-lookup"><span data-stu-id="ca33d-573">Advanced filtering parameters.</span></span>
-        - <span data-ttu-id="ca33d-574">Neue Enumeration für „servicebusqueue“ als Ziel hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-574">Add new enum for servicebusqueue as destination.</span></span>
-        - <span data-ttu-id="ca33d-575">Verwendung der Option „All“ in „-IncludedEventType“ gesperrt und wie folgt ersetzt</span><span class="sxs-lookup"><span data-stu-id="ca33d-575">Disallow usage of 'All' in -IncludedEventType option and replace it with</span></span>
-    - <span data-ttu-id="ca33d-576">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="ca33d-576">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span></span>
-        - <span data-ttu-id="ca33d-577">Neue optionale Parameter („Top“, „ODataQuery“ und „NextLink“) zur Unterstützung der Ergebnispaginierung und -filterung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-577">Add new optional parameters (Top, ODataQuery and NextLink) to support results pagination and filtering.</span></span>
-    - <span data-ttu-id="ca33d-578">Remove-AzureRmEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="ca33d-578">Remove-AzureRmEventGridSubscription</span></span>
-        - <span data-ttu-id="ca33d-579">Neue erforderliche Parameter zur Unterstützung des Pipings für die Event Grid-Domäne und das Event Grid-Domänenthema hinzugefügt, um das Entfernen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-579">Add new mandatory parameters to support piping for Event Grid Domain and Event Grid Domain Topic to allow removing existing event subscription under these resources.</span></span>
-        - <span data-ttu-id="ca33d-580">Neue erforderliche Parameter zum Angeben des Event Grid-Domänennamens und/oder Event Grid-Domänenthemanamens hinzugefügt, um das Entfernen vorhandener Ereignisabonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="ca33d-580">Add new mandatory parameters for specifying the Event Grid Domain name and/or Event Grid Domain Topic name to allow removing existing event subscription under these resources.</span></span>
-
-#### <a name="azfrontdoor"></a><span data-ttu-id="ca33d-581">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="ca33d-581">Az.FrontDoor</span></span>
-* <span data-ttu-id="ca33d-582">New-AzFrontDoorWafMatchConditionObject</span><span class="sxs-lookup"><span data-stu-id="ca33d-582">New-AzFrontDoorWafMatchConditionObject</span></span>
-    - <span data-ttu-id="ca33d-583">Unterstützung von Transformationen und neuen Wert für den Operator zum automatischen Vervollständigen (RegEx) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-583">Add transforms support and new operator auto-complete value (RegEx)</span></span>
-* <span data-ttu-id="ca33d-584">New-AzFrontDoorWafManagedRuleObject</span><span class="sxs-lookup"><span data-stu-id="ca33d-584">New-AzFrontDoorWafManagedRuleObject</span></span>
-    - <span data-ttu-id="ca33d-585">Neue Werte für automatisches Vervollständigen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-585">Add new auto-complete values</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-586">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-586">Az.Network</span></span>
-* <span data-ttu-id="ca33d-587">Unterstützung für Virtual Network-Gatewayressourcen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-587">Add support for Virtual Network Gateway Resource</span></span>
-    - <span data-ttu-id="ca33d-588">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-588">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-589">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span><span class="sxs-lookup"><span data-stu-id="ca33d-589">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span></span>
-* <span data-ttu-id="ca33d-590">AvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="ca33d-590">Add AvailablePrivateEndpointType</span></span>
-    - <span data-ttu-id="ca33d-591">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-591">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-592">Get-AzAvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="ca33d-592">Get-AzAvailablePrivateEndpointType</span></span>
-* <span data-ttu-id="ca33d-593">„PrivatePrivateLinkService“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-593">Add PrivatePrivateLinkService</span></span>
-    - <span data-ttu-id="ca33d-594">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-594">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-595">Get-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="ca33d-595">Get-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="ca33d-596">New-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="ca33d-596">New-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="ca33d-597">Remove-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="ca33d-597">Remove-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="ca33d-598">New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-598">New-AzPrivateLinkServiceIpConfig</span></span>
-        - <span data-ttu-id="ca33d-599">Set-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-599">Set-AzPrivateEndpointConnection</span></span>
-* <span data-ttu-id="ca33d-600">„PrivateEndpoint“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-600">Add PrivateEndpoint</span></span>
-    - <span data-ttu-id="ca33d-601">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-601">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-602">Get-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="ca33d-602">Get-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="ca33d-603">New-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="ca33d-603">New-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="ca33d-604">Remove-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="ca33d-604">Remove-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="ca33d-605">New-AzPrivateLinkServiceConnection</span><span class="sxs-lookup"><span data-stu-id="ca33d-605">New-AzPrivateLinkServiceConnection</span></span>
-* <span data-ttu-id="ca33d-606">Folgende Befehle für das Feature aktualisiert: UseLocalAzureIpAddress-Flag für „VpnConnection“</span><span class="sxs-lookup"><span data-stu-id="ca33d-606">Updated below commands for feature: UseLocalAzureIpAddress flag on VpnConnection</span></span>
-    - <span data-ttu-id="ca33d-607">„New-AzVpnConnection§ „ aktualisiert: Optionaler Parameter „-UseLocalAzureIpAddress“ hinzugefügt, mit dem angegeben werden kann, dass die lokale Azure-IP-Adresse beim Initiieren der Verbindung als Quelladresse verwendet werden soll</span><span class="sxs-lookup"><span data-stu-id="ca33d-607">Updated New-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
-    - <span data-ttu-id="ca33d-608">„Set-AzVpnConnection“ aktualisiert: Optionaler Parameter „-UseLocalAzureIpAddress“ hinzugefügt, mit dem angegeben werden kann, dass die lokale Azure-IP-Adresse beim Initiieren der Verbindung als Quelladresse verwendet werden soll</span><span class="sxs-lookup"><span data-stu-id="ca33d-608">Updated Set-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
-* <span data-ttu-id="ca33d-609">Schreibgeschütztes Feld „PeeredConnections“ beim ExpressRoute-Peering hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-609">Added readonly field PeeredConnections in ExpressRoute peering.</span></span>
-* <span data-ttu-id="ca33d-610">Schreibgeschütztes Feld „GlobalReachEnabled“ in ExpressRoute hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-610">Added readonly field GlobalReachEnabled in ExpressRoute.</span></span>
-* <span data-ttu-id="ca33d-611">Breaking Change-Attribut hinzugefügt, um auf das veraltete Feld „AllowGlobalReach“ im ExpressRouteCircuit-Modell hinzuweisen</span><span class="sxs-lookup"><span data-stu-id="ca33d-611">Added breaking change attribute to call out deprecation of AllowGlobalReach field in ExpressRouteCircuit model</span></span>
-* <span data-ttu-id="ca33d-612">Fehler 8756 bei der Verwendung von „TargetListenerID“ mit AzApplicationGatewayRedirectConfiguration-Cmdlets behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-612">Fixed Issue 8756 Error using TargetListenerID with AzApplicationGatewayRedirectConfiguration cmdlets</span></span>
-* <span data-ttu-id="ca33d-613">Fehler in „New-AzApplicationGatewayPathRuleConfig“ behoben, aufgrund dessen der Regelsatz für erneutes Generieren nicht festgelegt werden konnte</span><span class="sxs-lookup"><span data-stu-id="ca33d-613">Fixed bug in New-AzApplicationGatewayPathRuleConfig that prevented the rewrite ruleset from being set.</span></span>
-* <span data-ttu-id="ca33d-614">Fehler bei der Anzeige von „VirtualNetworkTaps“ in „NetworkInterfaceIpConfiguration“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-614">Fixed displaying of VirtualNetworkTaps in NetworkInterfaceIpConfiguration</span></span>
-* <span data-ttu-id="ca33d-615">Cortex-Get-Cmdlets zum Auflisten aller Komponenten korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-615">Fixed Cortex Get cmdlets for list all part</span></span>
-* <span data-ttu-id="ca33d-616">Problem beim Erstellen des festen VirtualHub-Verweises für ExpressRouteGateways behoben (VpnGateway)</span><span class="sxs-lookup"><span data-stu-id="ca33d-616">Fixed VirtualHub reference creation for ExpressRouteGateways, VpnGateway</span></span>
-* <span data-ttu-id="ca33d-617">Unterstützung für Verfügbarkeitszonen in AzureFirewall und NatGateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-617">Added support for Availability Zones in AzureFirewall and NatGateway</span></span>
-* <span data-ttu-id="ca33d-618">Cmdlet „Get-AzNetworkServiceTag“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-618">Added cmdlet Get-AzNetworkServiceTag</span></span>
-* <span data-ttu-id="ca33d-619">Unterstützung für mehrere öffentliche IP-Adressen für Azure Firewall hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-619">Add support for multiple public IP addresses for Azure Firewall</span></span>
-    - <span data-ttu-id="ca33d-620">New-AzFirewall-Cmdlet aktualisiert:</span><span class="sxs-lookup"><span data-stu-id="ca33d-620">Updated New-AzFirewall cmdlet:</span></span>
-        - <span data-ttu-id="ca33d-621">Parameter „-PublicIpAddress“ hinzugefügt, der ein oder mehre öffentliche IP-Adressobjekte akzeptiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-621">Added parameter -PublicIpAddress which accepts one or more Public IP Address objects</span></span>
-        - <span data-ttu-id="ca33d-622">Parameter „- VirtualNetwork“ hinzugefügt, der ein Virtual Network-Objekt akzeptiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-622">Added parameter -VirtualNetwork which accepts a Virtual Network object</span></span>
-        - <span data-ttu-id="ca33d-623">Methoden „AddPublicIpAddress“ und „RemovePublicIpAddress“ für Firewallobjekte hinzugefügt (akzeptieren ein öffentliches IP-Adressobjekt als Eingabe)</span><span class="sxs-lookup"><span data-stu-id="ca33d-623">Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input</span></span>
-        - <span data-ttu-id="ca33d-624">Parameter „-PublicIpName“ und „-VirtualNetworkName“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-624">Deprecated parameters -PublicIpName and -VirtualNetworkName</span></span>
-* <span data-ttu-id="ca33d-625">Folgende Befehle für das Feature aktualisiert: VpnClient-AAD-Authentifizierungsoptionen auf die Gatewayressource des virtuellen Netzwerkgateways festgelegt</span><span class="sxs-lookup"><span data-stu-id="ca33d-625">Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.</span></span>
-    - <span data-ttu-id="ca33d-626">„New-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-626">Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
-    - <span data-ttu-id="ca33d-627">„Set-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-627">Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
-    - <span data-ttu-id="ca33d-628">„Set-AzVirtualNetworkGateway“ aktualisiert: Optionaler Switch-Parameter „RemoveAadAuthentication“ zum Entfernen von VpnClient-AAD-Authentifizierungsoptionen aus dem Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-628">Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-629">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-629">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-630">Tarif **pergb2018** im Befehl „New-AzureRmOperationalInsightsWorkspace“ aktivieren</span><span class="sxs-lookup"><span data-stu-id="ca33d-630">Enable **pergb2018** pricing tier in 'New-AzureRmOperationalInsightsWorkspace' command</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-631">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-631">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-632">Unterstützung für zusätzliche Optionen zum Exportieren von Vorlagen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-632">Support for additional Template Export options</span></span>
-    - <span data-ttu-id="ca33d-633">Parameter „-SkipResourceNameParameterization“ zu „Export-AzResourceGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-633">Add '-SkipResourceNameParameterization' parameter to Export-AzResourceGroup</span></span>
-    - <span data-ttu-id="ca33d-634">Parameter -SkipAllParameterization“ zu „Export-AzResourceGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-634">Add '-SkipAllParameterization' parameter to Export-AzResourceGroup</span></span>
-    - <span data-ttu-id="ca33d-635">Parameter „-Resource“ zu „Export-AzResourceGroup“ hinzugefügt, um das Filtern exportierter Ressourcen zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="ca33d-635">Add '-Resource' parameter to Export-AzResourceGroup for exported resource filtering</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-636">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-636">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-637">Problem beim Hinzufügen des Zertifikats mit „ByExistingKeyVault“ behoben (Abruf des falschen Fingerabdrucks in manchen Fällen)</span><span class="sxs-lookup"><span data-stu-id="ca33d-637">Fix add certificate ByExistingKeyVault getting the wrong thumbprint in some cases</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-638">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-638">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-639">Suffix des Advanced Threat Protection-Endpunkts korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-639">Fix Advanced Threat Protection storage endpoint suffix</span></span>
-* <span data-ttu-id="ca33d-640">Durch Advanced Data Security ermöglichte Außerkraftsetzungen der Advanced Threat Protection-Richtlinie korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-640">Fix Advanced Data Security enable overrides Advanced Threat Protection policy</span></span>
-* <span data-ttu-id="ca33d-641">Neue Cmdlets für „Management.Sql“ ermöglichen Kunden das Hinzufügen von TDE-Schlüsseln und Festlegen der TDE-Schutzvorrichtung für verwaltete Instanzen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-641">New Cmdlets for Management.Sql to allow customers to add TDE keys and set TDE protector for managed instances</span></span>
-   - <span data-ttu-id="ca33d-642">Add-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="ca33d-642">Add-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="ca33d-643">Get-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="ca33d-643">Get-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="ca33d-644">Remove-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="ca33d-644">Remove-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="ca33d-645">Get-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="ca33d-645">Get-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
-   - <span data-ttu-id="ca33d-646">Set-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="ca33d-646">Set-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-647">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-647">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-648">Unterstützung von „FileStorage“ und „SkuName Premium_ZRS“ beim Erstellen eines Speicherkontos</span><span class="sxs-lookup"><span data-stu-id="ca33d-648">Support Kind FileStorage and SkuName Premium_ZRS when create Storage account</span></span>
-    - <span data-ttu-id="ca33d-649">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-649">New-AzStorageAccount</span></span>
-* <span data-ttu-id="ca33d-650">Überarbeitete Beschreibung des Cmdlets für die Unveränderlichkeit von Blobs</span><span class="sxs-lookup"><span data-stu-id="ca33d-650">Clarified description of blob immutability cmdlet</span></span>
-    -  <span data-ttu-id="ca33d-651">Remove-AzRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-651">Remove-AzRmStorageContainerImmutabilityPolicy</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-652">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-652">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-653">Optimiert „Get-AzWebAppCertificate“, um nach der Ressourcengruppe auf dem Server zu filtern (nicht auf dem Client)</span><span class="sxs-lookup"><span data-stu-id="ca33d-653">Optimizes Get-AzWebAppCertificate to filter by resource group on the server instead of the client</span></span>
-* <span data-ttu-id="ca33d-654">Switch-Parameter „-UseDisasterRecovery“ für „Get-AzWebAppSnapshot“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-654">Adds -UseDisasterRecovery switch parameter to Get-AzWebAppSnapshot</span></span>
-
-## <a name="220---june-2019"></a><span data-ttu-id="ca33d-655">2.2.0 – Juni 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-655">2.2.0 - June 2019</span></span>
-#### <a name="azcdn"></a><span data-ttu-id="ca33d-656">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="ca33d-656">Az.Cdn</span></span>
-* <span data-ttu-id="ca33d-657">Es wurden Cmdlets aktualisiert, um das rulesEngine-Feature basierend auf der API-Version 2019-04-15 zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-657">Updated cmdlets to support rulesEngine feature based on API version 2019-04-15.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-658">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-658">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-659">Der Parameter `NoWait` wurde hinzugefügt, der den Vorgang startet und sofort zurückkehrt, bevor der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="ca33d-659">Added `NoWait` parameter that starts the operation and returns immediately, before the operation is completed.</span></span>
-    - <span data-ttu-id="ca33d-660">Aktualisierte Cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span><span class="sxs-lookup"><span data-stu-id="ca33d-660">Updated cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="ca33d-661">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-661">Az.EventHub</span></span>
-* <span data-ttu-id="ca33d-662">Fehlerbehebung für #9231 – Get-AzEventHubNamespace gibt keine Tags zurück</span><span class="sxs-lookup"><span data-stu-id="ca33d-662">Fix for #9231 - Get-AzEventHubNamespace does not return tags</span></span>
-* <span data-ttu-id="ca33d-663">Fehlerbehebung für #9230 – Get-AzEventHubNamespace gibt ResourceGroup anstelle von ResourceGroupName zurück</span><span class="sxs-lookup"><span data-stu-id="ca33d-663">Fix for #9230 - Get-AzEventHubNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-664">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-664">Az.Network</span></span>
-* <span data-ttu-id="ca33d-665">ResourceId und InputObject wurden für NAT Gateway aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-665">Update ResourceId and InputObject for Nat Gateway</span></span>
-    - <span data-ttu-id="ca33d-666">Es wurde ein Alias für ResourceId und InputObjectr hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-666">Add alias for ResourceId and InputObject</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="ca33d-667">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-667">Az.PolicyInsights</span></span>
-* <span data-ttu-id="ca33d-668">Fehlerbehebung für Nullverweis in Get-AzPolicyEvent</span><span class="sxs-lookup"><span data-stu-id="ca33d-668">Fix Null reference issue in Get-AzPolicyEvent</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-669">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-669">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-670">Minimale Aufbewahrung in Tagen für IaaSVM-Richtlinie wurde von 1 in 7 geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-670">IaaSVM policy minimum retention in days changed to 7 from 1</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-671">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-671">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-672">Fehlerbehebung für #9182 – Get-AzServiceBusNamespace gibt ResourceGroup anstelle von ResourceGroupName zurück</span><span class="sxs-lookup"><span data-stu-id="ca33d-672">Fix for issue #9182 - Get-AzServiceBusNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-673">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-673">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-674">Tippfehler in Fehlermeldung für Update-AzServiceFabricReliability wurde behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-674">Fix typo in error message for 'Update-AzServiceFabricReliability'</span></span>
-* <span data-ttu-id="ca33d-675">Fehlendes Zeichen in Service Fabric-Befehlszeilen wurde behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-675">Fix missing character in Service Fabric cmdlines</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-676">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-676">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-677">Der DnsZonePartner-Parameter für das Cmdlet New-AzureSqlInstance wurde hinzugefügt, um AutoDr für verwaltete Instanzen zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="ca33d-677">Add DnsZonePartner Parameter for New-AzureSqlInstance cmdlet to support AutoDr for Managed Instance.</span></span>
-* <span data-ttu-id="ca33d-678">Das Cmdlet Get-AzSqlDatabaseSecureConnectionPolicy wird eingestellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-678">Deprecating Get-AzSqlDatabaseSecureConnectionPolicy cmdlet</span></span>
-* <span data-ttu-id="ca33d-679">Cmdlets zum Schutz vor Bedrohungen werden in „Advanced Threat Protection“ (Erweiterter Schutz vor Bedrohungen) umbenannt</span><span class="sxs-lookup"><span data-stu-id="ca33d-679">Rename Threat Detection cmdlets to Advanced Threat Protection</span></span>
-* <span data-ttu-id="ca33d-680">New-AzSqlInstance – Die Parameter StorageSizeInGB und LicenseType sind jetzt optional</span><span class="sxs-lookup"><span data-stu-id="ca33d-680">New-AzSqlInstance -StorageSizeInGB and -LicenseType parameters are now optional.</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-681">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-681">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-682">Das Problem, bei dem die Verwendung von Set-AzWebApp und Set-AzWebAppSlot mit der -WebApp-Eigenschaft die Tags entfernt hat, wurde behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-682">fixes the issue where using  Set-AzWebApp and Set-AzWebAppSlot with -WebApp property was removing the tags</span></span>
-
-## <a name="210---may-2019"></a><span data-ttu-id="ca33d-683">2.1.0 – Mai 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-683">2.1.0 - May 2019</span></span>
-#### <a name="azapimanagement"></a><span data-ttu-id="ca33d-684">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-684">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-685">Es wurden neue Cmdlets zum Verwalten der Diagnose im globalen sowie im API-Bereich erstellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-685">Created new Cmdlets for managing diagnostics at the global and API Scope</span></span>
-    - <span data-ttu-id="ca33d-686">**Get-AzApiManagementDiagnostic**: Abrufen der Diagnose, die im globalen oder im API-Bereich konfiguriert wurde</span><span class="sxs-lookup"><span data-stu-id="ca33d-686">**Get-AzApiManagementDiagnostic** - Get the diagnostics configured a global or api Scope</span></span>
-    - <span data-ttu-id="ca33d-687">**New-AzApiManagementDiagnostic**: Erstellen neuer Diagnosen im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="ca33d-687">**New-AzApiManagementDiagnostic** - Create new diagnostics at the global scope or api Scope</span></span>
-    - <span data-ttu-id="ca33d-688">**New-AzApiManagementHttpMessageDiagnostic**: Erstellen einer Diagnoseeinstellung für die zu protokollierenden Kopfzeilen und für die Größe der Bytes für den Text</span><span class="sxs-lookup"><span data-stu-id="ca33d-688">**New-AzApiManagementHttpMessageDiagnostic** - Create diagnostic setting for which Headers to log and the size of Body Bytes</span></span>
-    - <span data-ttu-id="ca33d-689">**New-AzApiManagementPipelineDiagnosticSetting**: Erstellen von Diagnoseeinstellungen für ein-/ausgehende HTTP-Nachrichten für das Gateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-689">**New-AzApiManagementPipelineDiagnosticSetting** - Create Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.</span></span>
-    - <span data-ttu-id="ca33d-690">**New-AzApiManagementSamplingSetting**: Erstellen der Einstellung „Sampling“ für die Anforderungen/Antworten für eine Diagnose</span><span class="sxs-lookup"><span data-stu-id="ca33d-690">**New-AzApiManagementSamplingSetting** - Create Sampling Setting  for the requests/response for a diagnostic</span></span>
-    - <span data-ttu-id="ca33d-691">**Remove-AzApiManagementDiagnostic**: Entfernen einer Diagnoseentität im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="ca33d-691">**Remove-AzApiManagementDiagnostic** - Remove a diagnostic entity at global or api scope</span></span>
-    - <span data-ttu-id="ca33d-692">**Set-AzApiManagementDiagnostic**: Aktualisieren einer Diagnoseentität im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="ca33d-692">**Set-AzApiManagementDiagnostic** - Update a diagnostic Entity at global or api scope</span></span>
-* <span data-ttu-id="ca33d-693">Es wurden neue Cmdlets für die Cacheverwaltung im ApiManagement-Dienst erstellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-693">Created new Cmdlets for managing Cache in ApiManagement service</span></span>
-    - <span data-ttu-id="ca33d-694">**Get-AzApiManagementCache**: Abrufen der Details des durch den Bezeichner angegebenen Caches oder aller Caches</span><span class="sxs-lookup"><span data-stu-id="ca33d-694">**Get-AzApiManagementCache** - Get the details of the Cache specified by identifier or all caches</span></span>
-    - <span data-ttu-id="ca33d-695">**New-AzApiManagementCache**: Erstellen eines neuen „standardmäßigen“ Caches oder eines Caches in einer bestimmten „Region“ von Azure</span><span class="sxs-lookup"><span data-stu-id="ca33d-695">**New-AzApiManagementCache** - Create a new 'default' Cache or Cache in a particular azure 'region'</span></span>
-    - <span data-ttu-id="ca33d-696">**Remove-AzApiManagementCache**: Entfernen eines Caches</span><span class="sxs-lookup"><span data-stu-id="ca33d-696">**Remove-AzApiManagementCache** - Remove a cache</span></span>
-    - <span data-ttu-id="ca33d-697">**Update-AzApiManagementCache**: Aktualisieren eines Caches</span><span class="sxs-lookup"><span data-stu-id="ca33d-697">**Update-AzApiManagementCache** - Update a cache</span></span>
-* <span data-ttu-id="ca33d-698">Es wurden neue Cmdlets zur Verwaltung von API-Schemas erstellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-698">Created new Cmdlets for managing API Schema</span></span>
-    - <span data-ttu-id="ca33d-699">**New-AzApiManagementSchema**: Erstellen eines neuen Schemas für eine API</span><span class="sxs-lookup"><span data-stu-id="ca33d-699">**New-AzApiManagementSchema** - Create a new Schema for an API</span></span>
-    - <span data-ttu-id="ca33d-700">**Get-AzApiManagementSchema**: Abrufen des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="ca33d-700">**Get-AzApiManagementSchema** - Get the schemas configured in the API</span></span>
-    - <span data-ttu-id="ca33d-701">**Remove-AzApiManagementSchema**: Entfernen des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="ca33d-701">**Remove-AzApiManagementSchema** - Remove the schema configured in the API</span></span>
-    - <span data-ttu-id="ca33d-702">**Set-AzApiManagementSchema**: Aktualisieren des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="ca33d-702">**Set-AzApiManagementSchema** - Update the schema configured in the API</span></span>
-* <span data-ttu-id="ca33d-703">Es wurde ein neues Cmdlet zum Generieren eines Benutzertokens erstellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-703">Created new Cmdlet for generating a User Token.</span></span>
-    - <span data-ttu-id="ca33d-704">**New-AzApiManagementUserToken**: Generieren eines neuen Benutzertokens, das standardmäßig für acht Stunden gültig ist. Mit diesem Cmdlet kann das Token für den „GIT“-Benutzer generiert werden./</span><span class="sxs-lookup"><span data-stu-id="ca33d-704">**New-AzApiManagementUserToken** - Generate a new User Token valid for 8 hours by default.Token for the 'GIT' user can be generated using this cmdlet./</span></span>
-* <span data-ttu-id="ca33d-705">Es wurde ein neues Cmdlet zum Abrufen des Netzwerkstatus erstellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-705">Created a new cmdlet to retrieving the Network Status</span></span>
-    - <span data-ttu-id="ca33d-706">**Get-AzApiManagementNetworkStatus**: Abrufen der Netzwerkstatuskonnektivität von Ressourcen, von denen der API Management-Dienst abhängig ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-706">**Get-AzApiManagementNetworkStatus** - Get the Network status connectivity of resources on which API Management service depends on.</span></span> <span data-ttu-id="ca33d-707">Dies ist hilfreich, wenn Sie den ApiManagement-Dienst in einem virtuellen Netzwerk bereitstellen und überprüfen, ob eine der Abhängigkeiten fehlerhaft ist.</span><span class="sxs-lookup"><span data-stu-id="ca33d-707">This is useful when deploying ApiManagement service into a Virtual Network and validing whether any of the dependencies are broken.</span></span>
-* <span data-ttu-id="ca33d-708">Das Cmdlet **New-AzApiManagement** wurde zum Verwalten des ApiManagement-Diensts aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-708">Updated cmdlet **New-AzApiManagement** to manage ApiManagement service</span></span>
-    - <span data-ttu-id="ca33d-709">Die Unterstützung für die neue SKU „Consumption“ wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-709">Added support for the new 'Consumption' SKU</span></span>
-    - <span data-ttu-id="ca33d-710">Die Unterstützung zum Aktivieren des Flags „EnableClientCertificate“ für die neue SKU „Consumption“ wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-710">Added support to turn the 'EnableClientCertificate' flag on for 'Consumption' SKU</span></span>
-    - <span data-ttu-id="ca33d-711">Das neue Cmdlet **New-AzApiManagementSslSetting** ermöglicht die Konfiguration der „TLS/SSL“-Einstellung für „Back-End“ und „Front-End“</span><span class="sxs-lookup"><span data-stu-id="ca33d-711">The new cmdlet **New-AzApiManagementSslSetting** allows configuring 'TLS/SSL' setting on the 'Backend' and 'Frontend'.</span></span> <span data-ttu-id="ca33d-712">Dies kann auch dazu verwendet werden, um „Verschlüsselungen“ wie „3DES“ und „ServerProtokolle“ wie „Http2“ für das „Front-End“ eines ApiManagement-Diensts zu konfigurieren</span><span class="sxs-lookup"><span data-stu-id="ca33d-712">This can also be used to configure 'Ciphers' like '3DES' and 'ServerProtocols' like 'Http2' on the 'Frontend' of an ApiManagement service.</span></span>
-    - <span data-ttu-id="ca33d-713">Die Unterstützung für die Konfiguration des Hostnamens „DeveloperPortal“ wurde zum ApiManagement-Dienst hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-713">Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.</span></span>
-* <span data-ttu-id="ca33d-714">Die **Get-AzApiManagementSsoToken**-Cmdlets wurden aktualisiert, um das Objekt „PsApiManagement“ als Eingabe zu übernehmen</span><span class="sxs-lookup"><span data-stu-id="ca33d-714">Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input</span></span>
-* <span data-ttu-id="ca33d-715">Das Cmdlet wurde aktualisiert, um Fehlermeldungen inline anzuzeigen</span><span class="sxs-lookup"><span data-stu-id="ca33d-715">Updated the cmdlet to display Error Messages inline</span></span>
-     > <span data-ttu-id="ca33d-716">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Fehlercode: ValidationError-Fehlermeldung: Mindestens ein Feld enthält ungültige Werte: Fehlerdetails: [Code=ValidationError, Message=Fehler in Element 'log-to-eventhub' in Zeile 3, Spalte 10: Protokollierungstool nicht gefunden, Target=log-to-eventhub]</span><span class="sxs-lookup"><span data-stu-id="ca33d-716">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Error Code: ValidationError Error Message: One or more fields contain incorrect values: Error Details:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span></span>
-* <span data-ttu-id="ca33d-717">Cmdlet **Export-AzApiManagementApi** wurde für den Export von APIs im Format „OpenApi 3.0“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-717">Updated cmdlet **Export-AzApiManagementApi** to export APIs in 'OpenApi 3.0' format</span></span>
-* <span data-ttu-id="ca33d-718">Cmdlet **Import-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-718">Updated cmdlet **Import-AzApiManagementApi**</span></span>
-    - <span data-ttu-id="ca33d-719">Zum Importieren der API aus der „OpenApi 3.0“-Dokumentspezifikation</span><span class="sxs-lookup"><span data-stu-id="ca33d-719">To import Api from 'OpenApi 3.0' document specification</span></span>
-    - <span data-ttu-id="ca33d-720">Zur Außerkraftsetzung der „PsApiManagementSchema“-Eigenschaft, die in einem beliebigen Dokument („Swagger“, „Wadl“, „Wsdl“, „OpenApi“) angegeben ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-720">To override the 'PsApiManagementSchema' property specified in any ('Swagger', 'Wadl', 'Wsdl', 'OpenApi') document.</span></span>
-    - <span data-ttu-id="ca33d-721">Zur Außerkraftsetzung der „ServiceUrl“-Eigenschaft, die in einem beliebigen Dokument angegeben ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-721">To override the 'ServiceUrl' property specified in any document.</span></span>
-* <span data-ttu-id="ca33d-722">Cmdlet **Get-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ zurückzugeben</span><span class="sxs-lookup"><span data-stu-id="ca33d-722">Updated cmdlet **Get-AzApiManagementPolicy** to return policy in Non-Xml escaped 'format' using 'rawxml'</span></span>
-* <span data-ttu-id="ca33d-723">Cmdlet **Set-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ und im Format mit XML-Escapezeichen mit „xml“ zurückzugeben</span><span class="sxs-lookup"><span data-stu-id="ca33d-723">Updated cmdlet **Set-AzApiManagementPolicy** to accept policy in Non-Xml escaped 'format' using 'rawxml' and Xml escaped using 'xml'</span></span>
-* <span data-ttu-id="ca33d-724">Cmdlet **New-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-724">Updated cmdlet **New-AzApiManagementApi**</span></span>
-    - <span data-ttu-id="ca33d-725">Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver</span><span class="sxs-lookup"><span data-stu-id="ca33d-725">To configure API with 'OpenId' authorization server.</span></span>
-    - <span data-ttu-id="ca33d-726">Zum Erstellen einer API in einem „ApiVersionSet“</span><span class="sxs-lookup"><span data-stu-id="ca33d-726">To create an API in an 'ApiVersionSet'</span></span>
-    - <span data-ttu-id="ca33d-727">Zum Klonen einer API mithilfe von „SourceApiId“ und „SourceApiRevision“</span><span class="sxs-lookup"><span data-stu-id="ca33d-727">To clone an API using 'SourceApiId' and 'SourceApiRevision'.</span></span>
-    - <span data-ttu-id="ca33d-728">Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich</span><span class="sxs-lookup"><span data-stu-id="ca33d-728">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span>
-* <span data-ttu-id="ca33d-729">Cmdlet **Set-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-729">Updated cmdlet **Set-AzApiManagementApi**</span></span>
-    - <span data-ttu-id="ca33d-730">Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver</span><span class="sxs-lookup"><span data-stu-id="ca33d-730">To configure API with 'OpenId' authorization server.</span></span>
-    - <span data-ttu-id="ca33d-731">Zum Aktualisieren einer API in einem „ApiVersionSet“</span><span class="sxs-lookup"><span data-stu-id="ca33d-731">To updated an API into an 'ApiVersionSet'</span></span>
-    - <span data-ttu-id="ca33d-732">Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich</span><span class="sxs-lookup"><span data-stu-id="ca33d-732">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span>
-* <span data-ttu-id="ca33d-733">Cmdlet **New-AzApiManagementRevision** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-733">Updated cmdlet **New-AzApiManagementRevision**</span></span>
-    - <span data-ttu-id="ca33d-734">Zum Klonen (Kopiertags, Produkte, Vorgänge und Richtlinien) einer vorhandenen Version mithilfe von „SourceApiRevision“</span><span class="sxs-lookup"><span data-stu-id="ca33d-734">To clone (copy tags, products, operations and policies) an existing revision using 'SourceApiRevision'.</span></span> <span data-ttu-id="ca33d-735">Die neue Version übernimmt die „ApiId“ des übergeordneten Elements</span><span class="sxs-lookup"><span data-stu-id="ca33d-735">The new Revision assumes the 'ApiId' of the parent.</span></span>
-    - <span data-ttu-id="ca33d-736">Zum Bereitstellen einer „ApiRevisionDescription“</span><span class="sxs-lookup"><span data-stu-id="ca33d-736">To provide an 'ApiRevisionDescription'</span></span>
-    - <span data-ttu-id="ca33d-737">Zur Außerkraftsetzung der „ServiceUrl“ beim Klonen einer API</span><span class="sxs-lookup"><span data-stu-id="ca33d-737">To override the 'ServiceUrl' when cloning an API.</span></span>
-* <span data-ttu-id="ca33d-738">Cmdlet **New-AzApiManagementIdentityProvider** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-738">Updated cmdlet **New-AzApiManagementIdentityProvider**</span></span>
-    - <span data-ttu-id="ca33d-739">Zum Konfigurieren von „AAD“ oder „AADB2C“ mit einer „Authority“</span><span class="sxs-lookup"><span data-stu-id="ca33d-739">To configure 'AAD' or 'AADB2C' with an 'Authority'</span></span>
-    - <span data-ttu-id="ca33d-740">Zum Einrichten von „SignupPolicy“, „SigninPolicy“, „ProfileEditingPolicy“ und „PasswordResetPolicy“</span><span class="sxs-lookup"><span data-stu-id="ca33d-740">To setup 'SignupPolicy', 'SigninPolicy', 'ProfileEditingPolicy' and 'PasswordResetPolicy'</span></span>
-* <span data-ttu-id="ca33d-741">Cmdlet **New-AzApiManagementSubscription** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-741">Updated cmdlet **New-AzApiManagementSubscription**</span></span>
-    - <span data-ttu-id="ca33d-742">Zum Berücksichtigen für das neue „SubscriptonModel“ mithilfe von „Scope“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="ca33d-742">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
-    - <span data-ttu-id="ca33d-743">Zum Berücksichtigen für das alte Abonnementmodell mithilfe von „ProductId“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="ca33d-743">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
-    - <span data-ttu-id="ca33d-744">Die Unterstützung zum Aktivieren von „AllowTracing“ auf Abonnementebene wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-744">Add support to enable 'AllowTracing' at the subscription level.</span></span>
-* <span data-ttu-id="ca33d-745">Cmdlet **Set-AzApiManagementSubscription** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-745">Updated cmdlet **Set-AzApiManagementSubscription**</span></span>
-    - <span data-ttu-id="ca33d-746">Zum Berücksichtigen für das neue „SubscriptonModel“ mithilfe von „Scope“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="ca33d-746">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
-    - <span data-ttu-id="ca33d-747">Zum Berücksichtigen für das alte Abonnementmodell mithilfe von „ProductId“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="ca33d-747">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
-    - <span data-ttu-id="ca33d-748">Die Unterstützung zum Aktivieren von „AllowTracing“ auf Abonnementebene wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-748">Add support to enable 'AllowTracing' at the subscription level.</span></span>
-* <span data-ttu-id="ca33d-749">Folgende Cmdlets wurden aktualisiert, um „ResourceId“ als Eingabe zu akzeptieren</span><span class="sxs-lookup"><span data-stu-id="ca33d-749">Updated following cmdlets to accept 'ResourceId' as input</span></span>
-    - <span data-ttu-id="ca33d-750">'New-AzApiManagementContext'</span><span class="sxs-lookup"><span data-stu-id="ca33d-750">'New-AzApiManagementContext'</span></span>
-        > <span data-ttu-id="ca33d-751">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span><span class="sxs-lookup"><span data-stu-id="ca33d-751">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span></span>
-    - <span data-ttu-id="ca33d-752">'Get-AzApiManagementApiRelease'</span><span class="sxs-lookup"><span data-stu-id="ca33d-752">'Get-AzApiManagementApiRelease'</span></span>
-        > <span data-ttu-id="ca33d-753">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span><span class="sxs-lookup"><span data-stu-id="ca33d-753">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span></span>
-    - <span data-ttu-id="ca33d-754">'Get-AzApiManagementApiVersionSet'</span><span class="sxs-lookup"><span data-stu-id="ca33d-754">'Get-AzApiManagementApiVersionSet'</span></span>
-        > <span data-ttu-id="ca33d-755">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span><span class="sxs-lookup"><span data-stu-id="ca33d-755">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span></span>
-    - <span data-ttu-id="ca33d-756">'Get-AzApiManagementAuthorizationServer'</span><span class="sxs-lookup"><span data-stu-id="ca33d-756">'Get-AzApiManagementAuthorizationServer'</span></span>
-    - <span data-ttu-id="ca33d-757">'Get-AzApiManagementBackend'</span><span class="sxs-lookup"><span data-stu-id="ca33d-757">'Get-AzApiManagementBackend'</span></span>
-        > <span data-ttu-id="ca33d-758">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-758">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span></span>
-    - <span data-ttu-id="ca33d-759">'Get-AzApiManagementCertificate'</span><span class="sxs-lookup"><span data-stu-id="ca33d-759">'Get-AzApiManagementCertificate'</span></span>
-    - <span data-ttu-id="ca33d-760">'Remove-AzApiManagementApiVersionSet'</span><span class="sxs-lookup"><span data-stu-id="ca33d-760">'Remove-AzApiManagementApiVersionSet'</span></span>
-    - <span data-ttu-id="ca33d-761">'Remove-AzApiManagementSubscription'</span><span class="sxs-lookup"><span data-stu-id="ca33d-761">'Remove-AzApiManagementSubscription'</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-762">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-762">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-763">Get-AzAutomationJobOutputRecord wurde aktualisiert, um JSON- und Textdatensatzwerte zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="ca33d-763">Updated Get-AzAutomationJobOutputRecord to handle JSON and Text record values.</span></span>
-    - <span data-ttu-id="ca33d-764">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/7977</span><span class="sxs-lookup"><span data-stu-id="ca33d-764">Fix for issue https://github.com/Azure/azure-powershell/issues/7977</span></span>
-    - <span data-ttu-id="ca33d-765">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8600</span><span class="sxs-lookup"><span data-stu-id="ca33d-765">Fix for issue https://github.com/Azure/azure-powershell/issues/8600</span></span>
-* <span data-ttu-id="ca33d-766">Das Verhalten von Start-AzAutomationDscCompilationJob wurde geändert, um den Auftrag einfach zu starten, anstatt auf dessen Abschluss zu warten</span><span class="sxs-lookup"><span data-stu-id="ca33d-766">Changed behavior for Start-AzAutomationDscCompilationJob to just start the job instead of waiting for its completion.</span></span>
-    * <span data-ttu-id="ca33d-767">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8347</span><span class="sxs-lookup"><span data-stu-id="ca33d-767">Fix for issue https://github.com/Azure/azure-powershell/issues/8347</span></span>
-* <span data-ttu-id="ca33d-768">Fehlerbehebung für Get-AzAutomationDscNode, wenn die Verwendung von „-Name“ alle Knoten zurückgibt</span><span class="sxs-lookup"><span data-stu-id="ca33d-768">Fix for Get-AzAutomationDscNode when using -Name returns all node.</span></span> <span data-ttu-id="ca33d-769">Jetzt wird nur der übereinstimmende Knoten zurückgegeben</span><span class="sxs-lookup"><span data-stu-id="ca33d-769">Now it returns matching node only.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-770">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-770">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-771">Parameter „ProtectFromScaleIn“ und „ProtectFromScaleSetAction“ wurden zum Cmdlet „Update-AzVmssVM“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-771">Add ProtectFromScaleIn and ProtectFromScaleSetAction parameters to Update-AzVmssVM cmdlet.</span></span>
-* <span data-ttu-id="ca33d-772">Der jetzt festgelegte wimple-Parameter „New-AzVM“ verwendet standardmäßig einen verfügbaren Standort, wenn „East US“ (USA, Osten) nicht unterstützt wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-772">New-AzVM wimple parameter set now uses by default an available location if 'East US' is not supported</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-773">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-773">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-774">Das ADLS-SDK wurde aktualisiert, um „HttpClient“ zu verwenden und Datenebenentests wurden mit dem Azure-Framework integriert</span><span class="sxs-lookup"><span data-stu-id="ca33d-774">Update the ADLS sdk to use httpclient, integrate dataplane testing with azure framework</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-775">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-775">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-776">Fehlerbehebung bei falschen Parameternamen in Hilfebeispielen</span><span class="sxs-lookup"><span data-stu-id="ca33d-776">Fixed incorrect parameter names in help examples</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-777">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-777">Az.Network</span></span>
-* <span data-ttu-id="ca33d-778">DisableBgpRoutePropagation-Flag wurde zur Ausgabe der effektiven Routentabelle hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-778">Add DisableBgpRoutePropagation flag to Effective Route Table output</span></span>
-    - <span data-ttu-id="ca33d-779">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="ca33d-779">Updated cmdlet:</span></span>
-        - <span data-ttu-id="ca33d-780">Get-AzEffectiveRouteTable</span><span class="sxs-lookup"><span data-stu-id="ca33d-780">Get-AzEffectiveRouteTable</span></span>
-* <span data-ttu-id="ca33d-781">Fehlerbehebung von doppeltem Bindestrich in Dokumentation von New-AzApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="ca33d-781">Fix double dash in New-AzApplicationGatewayTrustedRootCertificate documentation</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-782">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-782">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-783">Neues Cmdlet „Get-AzureRmDenyAssignment“ zum Abrufen von Ablehnungszuweisungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-783">Add new cmdlet Get-AzureRmDenyAssignment for retrieving deny assignments</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-784">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-784">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-785">„Advanced Threat Protection“-Cmdlets in „Advanced Data Security“ umbenennen und Sicherheitsrisikobewertung standardmäßig aktivieren</span><span class="sxs-lookup"><span data-stu-id="ca33d-785">Rename Advanced Threat Protection cmdlets to Advanced Data Security and enable Vulnerability Assessment by default</span></span>
-
-## <a name="200---may-2019"></a><span data-ttu-id="ca33d-786">2.0.0: Mai 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-786">2.0.0 - May 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-787">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-787">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-788">Authentifizierungsbibliothek aktualisiert, um ADFS-Probleme mit der Authentifizierung per Benutzername/Kennwort zu beheben</span><span class="sxs-lookup"><span data-stu-id="ca33d-788">Update Authentication Library to fix ADFS issues with username/password auth</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-789">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-789">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-790">Ausschließliche Anzeige des Bing-Haftungsausschlusses für Bing-Suchdienste</span><span class="sxs-lookup"><span data-stu-id="ca33d-790">Only display Bing disclaimer for Bing Search Services.</span></span>
-* <span data-ttu-id="ca33d-791">Fehler behoben, der zu einem Fehler bei der Kontoerstellung führte</span><span class="sxs-lookup"><span data-stu-id="ca33d-791">Improve error when create account failed.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-792">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-792">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-793">Feature für die Näherungsplatzierungsgruppe</span><span class="sxs-lookup"><span data-stu-id="ca33d-793">Proximity placement group feature.</span></span>
-    - <span data-ttu-id="ca33d-794">Die folgenden neuen Cmdlets wurden hinzugefügt:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span><span class="sxs-lookup"><span data-stu-id="ca33d-794">The following new cmdlets are added:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span></span>
-    - <span data-ttu-id="ca33d-795">Der neue Parameter „ProximityPlacementGroupId“ wurde zu den folgenden Cmdlets hinzugefügt:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-795">The new parameter, ProximityPlacementGroupId, is added to the following cmdlets:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span></span>
-* <span data-ttu-id="ca33d-796">Der Parameter „StorageAccountType“ wurde zu „New-AzGalleryImageVersion“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-796">StorageAccountType parameter is added to New-AzGalleryImageVersion.</span></span>
-* <span data-ttu-id="ca33d-797">„TargetRegion“ von „New-AzGalleryImageVersion“ kann „StorageAccountType“ enthalten.</span><span class="sxs-lookup"><span data-stu-id="ca33d-797">TargetRegion of New-AzGalleryImageVersion can contain StorageAccountType.</span></span>
-* <span data-ttu-id="ca33d-798">Switch-Parameter „SkipShutdown“ wurde zu „Stop-AzVM“ und „Stop-AzVmss“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-798">SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss</span></span>
-* <span data-ttu-id="ca33d-799">Aktuelle Änderungen</span><span class="sxs-lookup"><span data-stu-id="ca33d-799">Breaking changes</span></span>
-    - <span data-ttu-id="ca33d-800">„Set-AzVMBootDiagnostics“ in „Set-AzVMBootDiagnostic“ geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-800">Set-AzVMBootDiagnostics is changed to Set-AzVMBootDiagnostic.</span></span>
-    - <span data-ttu-id="ca33d-801">„Export-AzLogAnalyticThrottledRequests“ in „Export-AzLogAnalyticThrottledRequests“ geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-801">Export-AzLogAnalyticThrottledRequests is changed to Export-AzLogAnalyticThrottledRequests.</span></span>
-
-#### <a name="azdeploymentmanager"></a><span data-ttu-id="ca33d-802">Az.DeploymentManager</span><span class="sxs-lookup"><span data-stu-id="ca33d-802">Az.DeploymentManager</span></span>
-* <span data-ttu-id="ca33d-803">Erste allgemein verfügbare Version der Azure-Bereitstellungs-Manager-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-803">First Generally Available release of Azure Deployment Manager cmdlets</span></span>
-
-#### <a name="azdns"></a><span data-ttu-id="ca33d-804">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="ca33d-804">Az.Dns</span></span>
-* <span data-ttu-id="ca33d-805">Automatische Delegierung des DNS-Namenservers</span><span class="sxs-lookup"><span data-stu-id="ca33d-805">Automatic DNS NameServer Delegation</span></span>
-    - <span data-ttu-id="ca33d-806">Das Cmdlet zum Erstellen einer DNS-Zone akzeptiert den übergeordneten Zonennamen als zusätzlichen optionalen Parameter.</span><span class="sxs-lookup"><span data-stu-id="ca33d-806">Create DNS zone cmdlet accepts parent zone name as additional optional parameter.</span></span>
-    - <span data-ttu-id="ca33d-807">NS-Einträge in der übergeordneten Zone für neu erstellte untergeordnete Zone hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-807">Adds NS records in the parent zone for newly created child zone.</span></span>
-
-#### <a name="azfrontdoor"></a><span data-ttu-id="ca33d-808">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="ca33d-808">Az.FrontDoor</span></span>
-* <span data-ttu-id="ca33d-809">Erste allgemein verfügbare Version der Azure Frontdoor-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-809">First Generally Available Release of Azure FrontDoor cmdlets</span></span>
-* <span data-ttu-id="ca33d-810">WAF-Cmdlets so umbenannt, dass sie „Waf“ enthalten</span><span class="sxs-lookup"><span data-stu-id="ca33d-810">Rename WAF cmdlets to include 'Waf'</span></span>
+* <span data-ttu-id="f6333-305">**New-AzApiManagementApiRevision:** Problem behoben, aufgrund dessen „ApiRevisionDescription“ beim Erstellen einer neuen API-Revision nicht festgelegt wurde https://github.com/Azure/azure-powershell/issues/9752</span><span class="sxs-lookup"><span data-stu-id="f6333-305">**New-AzApiManagementApiRevision** - Fix for issue where ApiRevisionDescription was not being set when creating new api revision https://github.com/Azure/azure-powershell/issues/9752</span></span>
+* <span data-ttu-id="f6333-306">Tippfehler im Modell „PsApiManagementOAuth2AuthrozationServer“ korrigiert: PsApiManagementOAuth2AuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="f6333-306">Fixed typo in model 'PsApiManagementOAuth2AuthrozationServer' to 'PsApiManagementOAuth2AuthorizationServer'</span></span>
+
+#### <a name="azbatch"></a><span data-ttu-id="f6333-307">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="f6333-307">Az.Batch</span></span>
+* <span data-ttu-id="f6333-308">Tippfehler in Hilfemeldung und Dokumentation korrigiert (Großschreibung von „Windows“)</span><span class="sxs-lookup"><span data-stu-id="f6333-308">Fixed typo in help message and documentation to capitalize Windows</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="f6333-309">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="f6333-309">Az.Cdn</span></span>
+* <span data-ttu-id="f6333-310">Tippfehler im Hilfsprogramm für die CDN-Modulkonvertierung korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-310">Fixed a typo in CDN module conversion helper</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-311">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-311">Az.Compute</span></span>
+* <span data-ttu-id="f6333-312">VmssId zum Cmdlet „New-AzVMConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-312">Add VmssId to New-AzVMConfig cmdlet</span></span>
+* <span data-ttu-id="f6333-313">Parameter „TerminateScheduledEvents“ und „TerminateScheduledEventNotBeforeTimeoutInMinutes“ zu „New-AzVmssConfig“ und „Update-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-313">Add TerminateScheduledEvents and TerminateScheduledEventNotBeforeTimeoutInMinutes parameters to New-AzVmssConfig and Update-AzVmss</span></span>
+* <span data-ttu-id="f6333-314">HyperVGeneration-Eigenschaft zu VM-Imageobjekt hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-314">Add HyperVGeneration property to VM image object</span></span>
+* <span data-ttu-id="f6333-315">Host- und HostGroup-Features hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-315">Add Host and HostGroup features</span></span>
+    - <span data-ttu-id="f6333-316">Neue Cmdlets:   New-AzHostGroup, New-AzHost, Get-AzHostGroup, Get-AzHost, Remove-AzHostGroup, Remove-AzHost</span><span class="sxs-lookup"><span data-stu-id="f6333-316">New cmdlets:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span></span>
+    - <span data-ttu-id="f6333-317">Parameter „HostId“ zu „New-AzVMConfig“ und „New-AzVM“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-317">HostId parameter is added to New-AzVMConfig and New-AzVM</span></span>
+* <span data-ttu-id="f6333-318">Beispiel in der Dokumentation zu „Invoke-AzVMRunCommand“ zur Verwendung des richtigen Parameternamens aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-318">Update example in 'Invoke-AzVMRunCommand' documentation to use correct parameter name</span></span>
+* <span data-ttu-id="f6333-319">Beschreibung für „-VolumeType“ in der Referenzdokumentation zu „Set-AzVMDiskEncryptionExtension“ und „Set-AzVmssDiskEncryptionExtension“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-319">Update '-VolumeType' description in 'Set-AzVMDiskEncryptionExtension' and 'Set-AzVmssDiskEncryptionExtension' reference documentation</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-320">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-320">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-321">Tippfehler in der Dokumentation zu „New-AzDataFactoryEncryptValue“ korrigiert (Großschreibung von „Windows“)</span><span class="sxs-lookup"><span data-stu-id="f6333-321">Fix typo to capitalize 'Windows' in 'New-AzDataFactoryEncryptValue' documentation</span></span>
+* <span data-ttu-id="f6333-322">Version des ADF .NET SDK auf 4.1.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-322">Updated ADF .Net SDK version to 4.1.2</span></span>
+* <span data-ttu-id="f6333-323">Parameter „DataProxyIntegrationRuntimeName“, „DataProxyStagingLinkedServiceName“ und „DataProxyStagingPath“ für Befehl „Set-AzureRmDataFactoryV2IntegrationRuntime“ hinzugefügt, um die Einrichtung der selbstgehosteten Integration Runtime als Proxy für die SSIS Integration Runtime zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="f6333-323">Add parameter 'DataProxyIntegrationRuntimeName', 'DataProxyStagingLinkedServiceName' and 'DataProxyStagingPath' for 'Set-AzureRmDataFactoryV2IntegrationRuntime' cmd to enable set up Self-Hosted Integration Runtime as a proxy for SSIS Integration Runtime</span></span>
+* <span data-ttu-id="f6333-324">„PSTriggerRun“ zum Anzeigen der ausgelösten Pipelines, Meldungen und Eigenschaften und „PSActivityRun“ zum Anzeigen des Aktivitätstyps aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-324">Updated PSTriggerRun to show the triggered pipelines, message and properties, and PSActivityRun to show the activity type</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-325">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-325">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-326">Hängen von „Get-DataLakeStoreDeletedItem“ aufgrund von Fehlern oder Remoteausnahmen behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-326">Fix hanging of Get-DataLakeStoreDeletedItem for any errors or remote exceptions.</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="f6333-327">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="f6333-327">Az.EventHub</span></span>
+* <span data-ttu-id="f6333-328">Behebung des Problems #9658: Tippfehler im Parameter „VirtualNteworkRule“ in „Set-AzEventHubNetworkRuleSet“</span><span class="sxs-lookup"><span data-stu-id="f6333-328">Fix for issue #9658 : Typo VirtualNteworkRule parameter in Set-AzEventHubNetworkRuleSet</span></span>
+* <span data-ttu-id="f6333-329">Behebung des Problems #9558: „Set-AzEventHubNamespace“ verwendet PATCH anstelle von PUT.</span><span class="sxs-lookup"><span data-stu-id="f6333-329">Fix for issue #9558 : Set-AzEventHubNamespace is using PATCH instead of PUT</span></span>
+* <span data-ttu-id="f6333-330">Parameter „EnableKafka“ zum Cmdlet „Set-AzEventHubNamespace“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-330">added EnableKafka parameter to Set-AzEventHubNamespace cmdlet</span></span>
+* <span data-ttu-id="f6333-331">Behebung des Problems #9786: Erstellen einer Regel mit Rechten, die nur das Lauschen zulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-331">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
+
+#### <a name="azmarketplaceordering"></a><span data-ttu-id="f6333-332">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="f6333-332">Az.MarketplaceOrdering</span></span>
+* <span data-ttu-id="f6333-333">Tippfehler („Azure“ in Kleinbuchstaben) in der Dokumentation korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-333">Fixed documentation typo where 'Azure' was all lowercase letters</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-334">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-334">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-335">Falscher Parametername in der Hilfedokumentation korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-335">Fixed incorrect parameter name in help documentation</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-336">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-336">Az.Network</span></span>
+* <span data-ttu-id="f6333-337">„New-AzPrivateLinkServiceIpConfig“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-337">Updated New-AzPrivateLinkServiceIpConfig</span></span>
+    - <span data-ttu-id="f6333-338">Parameter „PublicIpAddress“ ausgemustert, da er auf Serverseite nie verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="f6333-338">Deprecated the paramster 'PublicIpAddress' since this is never used in the server side.</span></span>
+    - <span data-ttu-id="f6333-339">Optionaler Parameter „Primary“ hinzugefügt, der angibt, ob die aktuelle IP-Konfiguration die primäre ist oder nicht</span><span class="sxs-lookup"><span data-stu-id="f6333-339">Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.</span></span>
+* <span data-ttu-id="f6333-340">Verbesserte Verarbeitung der Anforderungsfehlerausnahme aus dem SDK: Behebt das Problem, dass vorherige SDK-Ausnahmen nicht richtig behandelt wurden, was dazu führt, dass Schlüsselfehlerdetails nicht angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="f6333-340">Improved handling of request error exception from SDK   -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed</span></span>
+* <span data-ttu-id="f6333-341">Validierungslogik für Ipv6-IP-Präfix angepasst, damit auf die richtige IPv6-Präfixlänge geprüft wird</span><span class="sxs-lookup"><span data-stu-id="f6333-341">Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length.</span></span>
+* <span data-ttu-id="f6333-342">„Get-AzVirtualNetworkSubnetConfig“ aktualisiert: Parametersatz zum Abrufen nach Subnetzressourcen-ID hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-342">Updated Get-AzVirtualNetworkSubnetConfig: Added parameter set to get by subnet resource id.</span></span>
+* <span data-ttu-id="f6333-343">Aktualisierte Beschreibung des Location-Parameters für „AzNetworkServiceTag“</span><span class="sxs-lookup"><span data-stu-id="f6333-343">Updated description of Location parameter for AzNetworkServiceTag</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-344">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-344">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-345">Aktualisierte Dokumentation für „New-AzOperationalInsightsLinuxSyslogDataSource“</span><span class="sxs-lookup"><span data-stu-id="f6333-345">Updated documentation for 'New-AzOperationalInsightsLinuxSyslogDataSource'</span></span>
+    - <span data-ttu-id="f6333-346">Beispiel hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-346">Added example</span></span>
+    - <span data-ttu-id="f6333-347">Beschreibung für den Parameter „-Name“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-347">Updated description for '-Name' parameter</span></span>
+* <span data-ttu-id="f6333-348">Beispiel für „New-AzOperationalInsightsWindowsEventDataSource“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-348">Added an example for New-AzOperationalInsightsWindowsEventDataSource</span></span>
+* <span data-ttu-id="f6333-349">Beschreibung des Parameters „-Name“ für „New-AzOperationalInsightsWindowsEventDataSource“ geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-349">Changed the description of the -Name parameter for New-AzOperationalInsightsWindowsEventDataSource</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-350">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-350">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-351">„Get-AzRecoveryServicesBackupJobDetail.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-351">Update 'Get-AzRecoveryServicesBackupJobDetail.md'</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-352">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-352">Az.Resources</span></span>
+* <span data-ttu-id="f6333-353">Unterstützung für die neue API-Version 2019-05-10 für Microsoft.Resource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-353">Add support for new api version 2019-05-10 for Microsoft.Resource</span></span>
+    - <span data-ttu-id="f6333-354">Unterstützung für „copy.count = 0“ für Variablen, Ressourcen und Eigenschaften hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-354">Add support for 'copy.count = 0' for variables, resources and properties</span></span>
+    - <span data-ttu-id="f6333-355">Ressourcen mit „condition = false“ oder „copy.count = 0“ werden im vollständigen Modus gelöscht.</span><span class="sxs-lookup"><span data-stu-id="f6333-355">Resources with 'condition = false' or 'copy.count = 0' will be deleted in complete mode</span></span>
+* <span data-ttu-id="f6333-356">Beispiel zum Hinzufügen einer Richtlinie auf Abonnementebene zur Hilfedokumentation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-356">Add an example of assigning policy at subscription level to help doc</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-357">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-357">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-358">Behebung des Problems #9658: Tippfehler für Parameter „VirtualNetworkRule“ in „Set-AzServiceBusNetworkRuleSet“</span><span class="sxs-lookup"><span data-stu-id="f6333-358">Fix for issue #9658 : Typo VirtualNetworkRule parameter in Set-AzServiceBusNetworkRuleSet</span></span>
+* <span data-ttu-id="f6333-359">Behebung des Problems #9786: Erstellen einer Regel mit Rechten, die nur das Lauschen zulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-359">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
+* <span data-ttu-id="f6333-360">Neuer Befehl „Test-AzServiceBusNameAvailability“ zum Überprüfen der Verfügbarkeit des Namens für Warteschlange und Thema hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-360">Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-361">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-361">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-362">Fehler bei Cmdlets zum Hinzufügen des Knotentyps korrigiert:</span><span class="sxs-lookup"><span data-stu-id="f6333-362">Fix add node type cmdlet bugs:</span></span>
+    - <span data-ttu-id="f6333-363">Fehler „NullReferenceException“, wenn die Ressourcengruppe andere VMSS enthielt, die nicht mit dem Service Fabric-Cluster in Zusammenhang stehen</span><span class="sxs-lookup"><span data-stu-id="f6333-363">NullReferenceException bug when resource group had other vmss not related to the service fabric cluster.</span></span> <span data-ttu-id="f6333-364">Problembehebung: https://github.com/Azure/azure-powershell/issues/8681</span><span class="sxs-lookup"><span data-stu-id="f6333-364">Fixes issue: https://github.com/Azure/azure-powershell/issues/8681</span></span>
+    - <span data-ttu-id="f6333-365">Fehler behoben, aufgrund dessen bei einem Cmdlet ein Fehler auftrat, wenn sich „virtualNetwork“ in einer anderen Ressourcengruppe befand als der Cluster</span><span class="sxs-lookup"><span data-stu-id="f6333-365">Fix bug where cmdlet failed if virtualNetwork was in a different resource group that the cluster.</span></span> <span data-ttu-id="f6333-366">Problembehebung: https://github.com/Azure/azure-powershell/issues/8407</span><span class="sxs-lookup"><span data-stu-id="f6333-366">fixes issue: https://github.com/Azure/azure-powershell/issues/8407</span></span>
+    - <span data-ttu-id="f6333-367">Cmdlet „Add-AzServiceFabricApplicationCertificate“ ausgemustert</span><span class="sxs-lookup"><span data-stu-id="f6333-367">Deprecating Add-AzServiceFabricApplicationCertificate cmdlet</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-368">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-368">Az.Sql</span></span>
+* <span data-ttu-id="f6333-369">Dokumentation alter Überwachungs-Cmdlets aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-369">Update documentation of old Auditing cmdlets.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-370">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-370">Az.Storage</span></span>
+* <span data-ttu-id="f6333-371">Hilfe für „Get/Close-AzStorageFileHandle“ aktualisiert (weitere Szenarien zu Cmdlet-Beispielen hinzugefügt und Parameterbeschreibungen aktualisiert)</span><span class="sxs-lookup"><span data-stu-id="f6333-371">Update help for Get/Close-AzStorageFileHandle, by add more scenarios to cmdlet examples and update parameter descriptions</span></span>
+* <span data-ttu-id="f6333-372">Unterstützung von „StandardBlobTier“ in Uploadblobs und Kopierblobs</span><span class="sxs-lookup"><span data-stu-id="f6333-372">Support StandardBlobTier in upload blob and copy blob</span></span>
+    -  <span data-ttu-id="f6333-373">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="f6333-373">Set-AzStorageBlobContent</span></span>
+    -  <span data-ttu-id="f6333-374">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="f6333-374">Start-AzStorageBlobCopy</span></span>
+* <span data-ttu-id="f6333-375">Unterstützung der Aktivierungspriorität im Kopierblob</span><span class="sxs-lookup"><span data-stu-id="f6333-375">Support Rehydrate Priority in copy blob</span></span>
+    -  <span data-ttu-id="f6333-376">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="f6333-376">Start-AzStorageBlobCopy</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-377">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-377">Az.Websites</span></span>
+* <span data-ttu-id="f6333-378">Hinzufügen von Erläuterungen zum Parameter „-AppSettings“ in „Set-AzWebApp“ und „Set-AzWebAppSlot“</span><span class="sxs-lookup"><span data-stu-id="f6333-378">Add clarification around -AppSettings parameter in Set-AzWebApp and Set-AzWebAppSlot</span></span>
+
+## <a name="250---july-2019"></a><span data-ttu-id="f6333-379">2.5.0: Juli 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-379">2.5.0 - July 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-380">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-380">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-381">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="f6333-381">Update common code to use latest version of ClientRuntime</span></span>
+
+#### <a name="azapplicationinsights"></a><span data-ttu-id="f6333-382">Az.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-382">Az.ApplicationInsights</span></span>
+* <span data-ttu-id="f6333-383">Tippfehler im Beispiel in der Dokumentation zu „Remove-AzApplicationInsightsApiKey“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-383">Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-384">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-384">Az.Automation</span></span>
+* <span data-ttu-id="f6333-385">Tippfehler in der Ressourcenzeichenfolge korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-385">Fix typo in resource string</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-386">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-386">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-387">Unterstützung für NetworkRuleSet hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-387">Added NetworkRuleSet support.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-388">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-388">Az.Compute</span></span>
+* <span data-ttu-id="f6333-389">Fehlende Eigenschaften (ComputerName, OsName, OsVersion und HyperVGeneration) des Objekts für die VM-Instanzenansicht hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-389">Add missing properties (ComputerName, OsName, OsVersion and HyperVGeneration) of VM instance view object.</span></span>
+
+#### <a name="azcontainerregistry"></a><span data-ttu-id="f6333-390">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="f6333-390">Az.ContainerRegistry</span></span>
+* <span data-ttu-id="f6333-391">Tippfehler in „Remove-AzContainerRegistryReplication“ für den Replikationsparameter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-391">Fix typo in Remove-AzContainerRegistryReplication for Replication parameter</span></span>
+    - <span data-ttu-id="f6333-392">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9633.</span><span class="sxs-lookup"><span data-stu-id="f6333-392">More information here https://github.com/Azure/azure-powershell/issues/9633</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-393">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-393">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-394">Version des ADF .NET SDK auf 4.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-394">Updated ADF .Net SDK version to 4.1.0</span></span>
+* <span data-ttu-id="f6333-395">Tippfehler in der Dokumentation für „Get-AzDataFactoryV2PipelineRun“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-395">Fix typo in documentation for 'Get-AzDataFactoryV2PipelineRun'</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="f6333-396">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="f6333-396">Az.EventHub</span></span>
+* <span data-ttu-id="f6333-397">Neues Cmdlet zum Erstellen eines SAS-Token hinzugefügt: New-AzEventHubAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="f6333-397">Added new cmmdlet added for generating SAS token : New-AzEventHubAuthorizationRuleSASToken</span></span>
+* <span data-ttu-id="f6333-398">Überprüfung und Fehlermeldung für Berechtigungen für „authorizationrules“ hinzugefügt, wenn nur „Verwalten“ zugewiesen wird</span><span class="sxs-lookup"><span data-stu-id="f6333-398">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="f6333-399">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-399">Az.KeyVault</span></span>
+* <span data-ttu-id="f6333-400">Unterstützung zum Angeben von KeySize für Zertifikatsrichtlinien hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-400">Added support to specify the KeySize for Certificate Policies</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="f6333-401">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="f6333-401">Az.LogicApp</span></span>
+* <span data-ttu-id="f6333-402">Korrektur für „Get-AzIntegrationAccountMap“ zum Auflisten aller Zuordnungstypen</span><span class="sxs-lookup"><span data-stu-id="f6333-402">Fix for Get-AzIntegrationAccountMap to list all map types</span></span>
+    - <span data-ttu-id="f6333-403">Neuer MapType-Parameter für Filterung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-403">Added new MapType parameter for filtering</span></span>
+
+#### <a name="azmanagedservices"></a><span data-ttu-id="f6333-404">Az.ManagedServices</span><span class="sxs-lookup"><span data-stu-id="f6333-404">Az.ManagedServices</span></span>
+* <span data-ttu-id="f6333-405">Unterstützung für API-Version 2019-06-01 (GA) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-405">Added support for api version 2019-06-01 (GA)</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-406">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-406">Az.Network</span></span>
+* <span data-ttu-id="f6333-407">Unterstützung für privaten Endpunkt und privaten Verknüpfungsdienst hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-407">Add support for private endpoint and private link service</span></span>
+    - <span data-ttu-id="f6333-408">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-408">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-409">Set-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="f6333-409">Set-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="f6333-410">Set-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="f6333-410">Set-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="f6333-411">Approve-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-411">Approve-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="f6333-412">Deny-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-412">Deny-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="f6333-413">Get-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-413">Get-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="f6333-414">Remove-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-414">Remove-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="f6333-415">Test-AzPrivateLinkServiceVisibility</span><span class="sxs-lookup"><span data-stu-id="f6333-415">Test-AzPrivateLinkServiceVisibility</span></span>
+        - <span data-ttu-id="f6333-416">Get-AzAutoApprovedPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="f6333-416">Get-AzAutoApprovedPrivateLinkService</span></span>
+* <span data-ttu-id="f6333-417">Folgende Befehle für das Feature aktualisiert: Flag PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies für Subnetz in VirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="f6333-417">Updated below commands for feature: PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies flag on Subnet in Virtualnetwork</span></span>
+    - <span data-ttu-id="f6333-418">„New-AzVirtualNetworkSubnetConfig“, „Set-AzVirtualNetworkSubnetConfig“ und „Add-AzVirtualNetworkSubnetConfig“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-418">Updated New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span></span>
+        - <span data-ttu-id="f6333-419">Optionaler Parameter „-PrivateEndpointNetworkPoliciesFlag“ hinzugefügt, der konfiguriert, ob Netzwerkrichtlinien auf den privaten Endpunkt in diesem Subnetz angewendet werden sollen</span><span class="sxs-lookup"><span data-stu-id="f6333-419">Added optional parameter -PrivateEndpointNetworkPoliciesFlag that configures whether to apply network policies on private endpoint in this subnet.</span></span>
+        - <span data-ttu-id="f6333-420">Optionaler Parameter „-PrivateLinkServiceNetworkPoliciesFlag“ hinzugefügt, der konfiguriert, ob Netzwerkrichtlinien auf den Privat Link-Dienst in diesem Subnetz angewendet werden sollen</span><span class="sxs-lookup"><span data-stu-id="f6333-420">Added optional parameter -PrivateLinkServiceNetworkPoliciesFlag that configures whether to apply network policies network policies on private link service in this subnet.</span></span>
+* <span data-ttu-id="f6333-421">Der Cmdlet-Parameter „ServiceName“ von AzPrivateLinkService wurde aus Gründen der Abwärtskompatibilität in „Name“ mit dem Alias „ServiceName“ umbenannt.</span><span class="sxs-lookup"><span data-stu-id="f6333-421">AzPrivateLinkService's cmdlet parameter 'ServiceName' was renamed to 'Name' with an alias 'ServiceName' for backward compatibility</span></span>
+* <span data-ttu-id="f6333-422">ICMP-Protokoll für Konfigurationen von Netzwerksicherheitsregeln aktiviert</span><span class="sxs-lookup"><span data-stu-id="f6333-422">Enable ICMP protocol for network security rule configurations</span></span>
+    - <span data-ttu-id="f6333-423">Aktualisierte Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-423">Updated cmdlets</span></span>
+        - <span data-ttu-id="f6333-424">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-424">Add-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="f6333-425">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-425">New-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="f6333-426">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-426">Set-AzNetworkSecurityRuleConfig</span></span>
+* <span data-ttu-id="f6333-427">ConnectionProtocolType (Ikev1/Ikev2) als konfigurierbarer Parameter für „New-AzVirtualNetworkGatewayConnection“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-427">Add ConnectionProtocolType (Ikev1/Ikev2) as a configurable parameter for New-AzVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="f6333-428">PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-428">Add PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration</span></span>
+    - <span data-ttu-id="f6333-429">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="f6333-429">Updated cmdlet:</span></span>
+        - <span data-ttu-id="f6333-430">New-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-430">New-AzLoadBalancerFrontendIpConfig</span></span>
+        - <span data-ttu-id="f6333-431">Add-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-431">Add-AzLoadBalancerFrontendIpConfig</span></span>
+        - <span data-ttu-id="f6333-432">Set-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-432">Set-AzLoadBalancerFrontendIpConfig</span></span>
+* <span data-ttu-id="f6333-433">Application Gateway-Befehl „New-AzApplicationGatewayProbeConfig“ zur Unterstützung des benutzerdefinierten Ports im Test aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-433">Application Gateway New-AzApplicationGatewayProbeConfig command update for supporting custom port in Probe</span></span>
+    - <span data-ttu-id="f6333-434">„New-AzApplicationGatewayProbeConfig“ aktualisiert: Optionaler Parameter „Port“ hinzugefügt, der zum Testen des Back-End-Servers verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f6333-434">Updated New-AzApplicationGatewayProbeConfig: Added optional parameter Port which is used for probing backend server.</span></span> <span data-ttu-id="f6333-435">Dieser Parameter gilt für Standard_V2 und WAF_V2 SKU.</span><span class="sxs-lookup"><span data-stu-id="f6333-435">This parameter is applicable for Standard_V2 and WAF_V2 SKU.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-436">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-436">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-437">Standardversion für gespeicherte Suchvorgänge auf 1 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-437">Updated default version for saved searches to be 1.</span></span>
+* <span data-ttu-id="f6333-438">Verarbeitung des regulären NULL-Ausdrucks in benutzerdefinierten Protokollen korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-438">Fixed custom log null regex handling</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-439">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-439">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-440">„Get-AzRecoveryServicesBackupJob.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-440">Update 'Get-AzRecoveryServicesBackupJob.md'</span></span>
+* <span data-ttu-id="f6333-441">„Get-AzRecoveryServicesBackupContainer.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-441">Update 'Get-AzRecoveryServicesBackupContainer.md'</span></span>
+* <span data-ttu-id="f6333-442">„Get-AzRecoveryServicesVault.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-442">Update 'Get-AzRecoveryServicesVault.md'</span></span>
+* <span data-ttu-id="f6333-443">„Wait-AzRecoveryServicesBackupJob.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-443">Update 'Wait-AzRecoveryServicesBackupJob.md'</span></span>
+* <span data-ttu-id="f6333-444">„Set-AzRecoveryServicesVaultContext.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-444">Update 'Set-AzRecoveryServicesVaultContext.md'</span></span>
+* <span data-ttu-id="f6333-445">„Get-AzRecoveryServicesBackupItem.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-445">Update 'Get-AzRecoveryServicesBackupItem.md'</span></span>
+* <span data-ttu-id="f6333-446">„Get-AzRecoveryServicesBackupRecoveryPoint.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-446">Update 'Get-AzRecoveryServicesBackupRecoveryPoint.md'</span></span>
+* <span data-ttu-id="f6333-447">„Restore-AzRecoveryServicesBackupItem.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-447">Update 'Restore-AzRecoveryServicesBackupItem.md'</span></span>
+* <span data-ttu-id="f6333-448">Dienstaufruf zum Aufheben der Containerregistrierung für Azure-Dateifreigabe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-448">Updated service call for Unregistering container for Azure File Share</span></span>
+* <span data-ttu-id="f6333-449">„Set-AzRecoveryServicesAsrAlertSetting.md“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-449">Update 'Set-AzRecoveryServicesAsrAlertSetting.md'</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-450">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-450">Az.Resources</span></span>
+- <span data-ttu-id="f6333-451">Fehlendes Cmdlet entfernt, auf das in der Dokumentation zu „New-AzResourceGroupDeployment“ verwiesen wird</span><span class="sxs-lookup"><span data-stu-id="f6333-451">Remove missing cmdlet referenced in 'New-AzResourceGroupDeployment' documentation</span></span>
+- <span data-ttu-id="f6333-452">Richtlinien-Cmdlets zur Verwendung der neuen API-Version 2019-01-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-452">Updated policy cmdlets to use new api version 2019-01-01</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-453">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-453">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-454">Neues Cmdlet zum Erstellen eines SAS-Token hinzugefügt: New-AzServiceBusAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="f6333-454">Added new cmmdlet added for generating SAS token : New-AzServiceBusAuthorizationRuleSASToken</span></span>
+* <span data-ttu-id="f6333-455">Überprüfung und Fehlermeldung für Berechtigungen für „authorizationrules“ hinzugefügt, wenn nur „Verwalten“ zugewiesen wird</span><span class="sxs-lookup"><span data-stu-id="f6333-455">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-456">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-456">Az.Sql</span></span>
+* <span data-ttu-id="f6333-457">Fehlende Beispiele für Cmdlet „Set-AzSqlDatabaseSecondary“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-457">Fix missing examples for Set-AzSqlDatabaseSecondary cmdlet</span></span>
+* <span data-ttu-id="f6333-458">Festlegen wiederkehrender Überprüfungen der Sicherheitsrisikobewertung ohne Angabe von E-Mail-Adressen korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-458">Fix set Vulnerability Assessment recurring scans without providing any email addresses</span></span>
+* <span data-ttu-id="f6333-459">Tippfehler in einer Warnmeldung korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-459">Fix a small typo in a warining message.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-460">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-460">Az.Storage</span></span>
+* <span data-ttu-id="f6333-461">Beispiel in Referenzdokumentation für „Get-AzStorageAccount“ aktualisiert, sodass der richtige Parametername verwendet wird</span><span class="sxs-lookup"><span data-stu-id="f6333-461">Update example in reference documentation for 'Get-AzStorageAccount' to use correct parameter name</span></span>
+
+#### <a name="azstoragesync"></a><span data-ttu-id="f6333-462">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="f6333-462">Az.StorageSync</span></span>
+* <span data-ttu-id="f6333-463">Cmdlet „Invoke-AzStorageSyncChangeDetection“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-463">Adding Invoke-AzStorageSyncChangeDetection cmdlet.</span></span>
+* <span data-ttu-id="f6333-464">Problem 9551 zur Berücksichtigung von „TierFilesOlderThanDays“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-464">Fix Issue 9551 for honoring TierFilesOlderThanDays</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-465">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-465">Az.Websites</span></span>
+* <span data-ttu-id="f6333-466">Problem behoben, aufgrund dessen einige SiteConfig-Eigenschaften von „Get-AzWebApp“ und „Set-AzWebApp“ nicht zurückgegeben wurden</span><span class="sxs-lookup"><span data-stu-id="f6333-466">Fixing a bug where some SiteConfig properties were not returned by Get-AzWebApp and Set-AzWebApp</span></span>
+* <span data-ttu-id="f6333-467">Neuer Standortparameter zu „Get-AzDeletedWebApp“ und „Restore-AzDeletedWebApp“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-467">Adds a new Location parameter to Get-AzDeletedWebApp and Restore-AzDeletedWebApp</span></span>
+* <span data-ttu-id="f6333-468">Fehler beim Klonen von Web-App-Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-468">Fixes a bug with cloning web app slots using New-AzWebApp -IncludeSourceWebAppSlots</span></span>
+
+## <a name="240---july-2019"></a><span data-ttu-id="f6333-469">2.4.0 – Juli 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-469">2.4.0 - July 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-470">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-470">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-471">Unterstützung für Profil-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-471">Add support for profile cmdlets</span></span>
+* <span data-ttu-id="f6333-472">Unterstützung für Umgebungen und Datenebenen in generierten Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-472">Add support for environments and data planes in generated cmdlets</span></span>
+* <span data-ttu-id="f6333-473">Korrektur eines Fehlers, bei dem in einigen Fällen ein falscher Endpunkt für Datenebenen-Cmdlets in Windows PowerShell verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="f6333-473">Fix bug where incorrect endpoint was being used in some cases for data plane cmdlets in Windows PowerShell</span></span>
+
+#### <a name="azadvisor"></a><span data-ttu-id="f6333-474">Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="f6333-474">Az.Advisor</span></span>
+* <span data-ttu-id="f6333-475">Allgemein verfügbares Release von Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="f6333-475">GA release of Az.Advisor</span></span>
+* <span data-ttu-id="f6333-476">Dieses Modul ist nun als Teil des `Az`-Rollup-Moduls enthalten.</span><span class="sxs-lookup"><span data-stu-id="f6333-476">This module is now included as a part of the roll-up `Az` module</span></span>
+
+#### <a name="azapimanagement"></a><span data-ttu-id="f6333-477">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-477">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-478">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8671</span><span class="sxs-lookup"><span data-stu-id="f6333-478">Fix for issue https://github.com/Azure/azure-powershell/issues/8671</span></span>
+    - <span data-ttu-id="f6333-479">**Get-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="f6333-479">**Get-AzApiManagementSubscription**</span></span>
+        - <span data-ttu-id="f6333-480">Unterstützung für Abfragen von Abonnements nach Benutzer und Produkt hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-480">Added support for querying subscriptions by User and Product</span></span>
+        - <span data-ttu-id="f6333-481">Unterstützung für Abfragen anhand des Umfangs hinzugefügt, „/“, „/apis“, „/apis/echo-api“</span><span class="sxs-lookup"><span data-stu-id="f6333-481">Added support for querying using Scope '/', '/apis', '/apis/echo-api'</span></span>
+* <span data-ttu-id="f6333-482">Behebung von Problem https://github.com/Azure/azure-powershell/issues/9307 und https://github.com/Azure/azure-powershell/issues/8432</span><span class="sxs-lookup"><span data-stu-id="f6333-482">Fix for issue https://github.com/Azure/azure-powershell/issues/9307 and https://github.com/Azure/azure-powershell/issues/8432</span></span>
+    - <span data-ttu-id="f6333-483">**Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="f6333-483">**Import-AzApiManagementApi**</span></span>
+        - <span data-ttu-id="f6333-484">Unterstützung für die Angabe von „ApiVersion“ und „ApiVersionSetId“ beim Importieren von APIs hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-484">Added support for specifying 'ApiVersion' and 'ApiVersionSetId' when importing Apis</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-485">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-485">Az.Automation</span></span>
+* <span data-ttu-id="f6333-486">Fehler beim Cmdlet „Set-AzAutomationConnectionFieldValue“ für die Verarbeitung des Zeichenfolgewerts behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-486">Fixed Set-AzAutomationConnectionFieldValue cmdlet bug to handle string value.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-487">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-487">Az.Compute</span></span>
+* <span data-ttu-id="f6333-488">Parameter „HyperVGeneration“ zu New-AzImageConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-488">Add HyperVGeneration parameter to New-AzImageConfig</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-489">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-489">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-490">Aktualisierung der Ausgabe von ADF-Cmdlets für das Abrufen von Aktivitäts-, Pipeline- und Auslöserausführungen, um die Pipe „Select-Object“ zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="f6333-490">Updating the output of get activity runs, get pipeline runs, and get trigger runs ADF cmdlets to support Select-Object pipe.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="f6333-491">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="f6333-491">Az.EventGrid</span></span>
+* <span data-ttu-id="f6333-492">Tippfehler in Dokumentation zu 'New-AzEventGridSubscription' behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-492">Fix typo in 'New-AzEventGridSubscription' documentation</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="f6333-493">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-493">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-494">Unterstützung für das erneute Generieren von Autorisierungsrichtlinienschlüsseln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-494">Add support to regenerate authorization policy keys.</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-495">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-495">Az.Network</span></span>
+* <span data-ttu-id="f6333-496">„RoutingPreference“ zu öffentlichen IP-Tags hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-496">Added 'RoutingPreference' to public ip tags</span></span>
+* <span data-ttu-id="f6333-497">Beispiele für Referenzdokumentation zu „Get-AzNetworkServiceTag“ verbessert</span><span class="sxs-lookup"><span data-stu-id="f6333-497">Improve examples for 'Get-AzNetworkServiceTag' reference documentation</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="f6333-498">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-498">Az.PolicyInsights</span></span>
+* <span data-ttu-id="f6333-499">Fehlerbehebung für Nullverweis in Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="f6333-499">Fix null reference issue in Get-AzPolicyState</span></span>
+    - <span data-ttu-id="f6333-500">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/9446</span><span class="sxs-lookup"><span data-stu-id="f6333-500">More information here: https://github.com/Azure/azure-powershell/issues/9446</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-501">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-501">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-502">Zurückgegebenes CustomLog-Datenquellenmodell in Get-AzOperationalInsightsDataSource korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-502">Fixed CustomLog datasource model returned in Get-AzOperationalInsightsDataSource</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-503">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-503">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-504">Fehlerbehebung für Befehl „get-policy“ IaaSVMs</span><span class="sxs-lookup"><span data-stu-id="f6333-504">Fix for get-policy command for IaaSVMs</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-505">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-505">Az.Resources</span></span>
+    - <span data-ttu-id="f6333-506">Hilfetext für Parameter „-Top“ von „Get-AzPolicyState“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-506">Fix help text for Get-AzPolicyState -Top parameter</span></span>
+    - <span data-ttu-id="f6333-507">Clientseitige Unterstützung von Paginierung für „Get-AzPolicyAlias“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-507">Add client-side paging support for Get-AzPolicyAlias</span></span>
+    - <span data-ttu-id="f6333-508">Neue Parameter für „Set-AzPolicyAssignment“, „-PolicyParameters“ und „-PolicyParametersObject“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-508">Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject</span></span>
+    - <span data-ttu-id="f6333-509">Einige Aktualisierungen von Dokumentationen und Beispielen für Policy-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-509">Handful of doc and example updates for Policy cmdlets</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-510">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-510">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-511">Korrektur für Problem Nr. 4938: „New-AzureRmServiceBusQueue“ gibt beim Festlegen von „MaxSizeInMegabytes“ „BadRequest“ zurück</span><span class="sxs-lookup"><span data-stu-id="f6333-511">Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-512">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-512">Az.Sql</span></span>
+* <span data-ttu-id="f6333-513">Instanzfailovergruppen-Cmdlets aus Vorschauversion in öffentliche Version hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-513">Add Instance Failover Group cmdlets from preview release to public release</span></span>
+* <span data-ttu-id="f6333-514">Unterstützung von Azure SQL Server\Datenbanküberwachung mit neuen Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-514">Support Azure SQL Server\Database Auditing with new cmdlets.</span></span>
+    - <span data-ttu-id="f6333-515">Set-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-515">Set-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="f6333-516">Get-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-516">Get-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="f6333-517">Remove-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-517">Remove-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="f6333-518">Set-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-518">Set-AzSqlDatabaseAudit</span></span>
+    - <span data-ttu-id="f6333-519">Get-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-519">Get-AzSqlDatabaseAudit</span></span>
+    - <span data-ttu-id="f6333-520">Remove-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="f6333-520">Remove-AzSqlDatabaseAudit</span></span>
+* <span data-ttu-id="f6333-521">E-Mail-Einschränkungen aus Einstellungen der Sicherheitsrisikobewertung entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-521">Remove email constraints from Vulnerability Assessment settings</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-522">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-522">Az.Storage</span></span>
+* <span data-ttu-id="f6333-523">Zwei Parameter („-IndexDocument“ und „-ErrorDocument404Path“) in folgendem Cmdlet von erforderlich in optional geändert:</span><span class="sxs-lookup"><span data-stu-id="f6333-523">Change 2 parameters '-IndexDocument' and '-ErrorDocument404Path' from required to optional  in cmdlet:</span></span>
+    -  <span data-ttu-id="f6333-524">Enable-AzStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="f6333-524">Enable-AzStorageStaticWebsite</span></span>
+* <span data-ttu-id="f6333-525">Hilfe zu „Get-AzStorageBlobContent“ mit neuem Beispiel ergänzt</span><span class="sxs-lookup"><span data-stu-id="f6333-525">Update help of Get-AzStorageBlobContent by add an example</span></span>
+* <span data-ttu-id="f6333-526">Anzeige von mehr Fehlerinformationen beim Fehlschlagen eines Cmdlets mit „StorageException“</span><span class="sxs-lookup"><span data-stu-id="f6333-526">Show more error information when cmdlet failed with StorageException</span></span>
+* <span data-ttu-id="f6333-527">Unterstützung für das Erstellen oder Aktualisieren von Speicherkonten mit Azure Files AAD-DS-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="f6333-527">Support create or update Storage account with Azure Files AAD DS Authentication</span></span>
+    -  <span data-ttu-id="f6333-528">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-528">New-AzStorageAccount</span></span>
+    -  <span data-ttu-id="f6333-529">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-529">Set-AzStorageAccount</span></span>
+* <span data-ttu-id="f6333-530">Unterstützung für das Auflisten oder Schließen von Dateihandles einer Dateifreigabe, eines Dateiverzeichnisses oder einer Datei</span><span class="sxs-lookup"><span data-stu-id="f6333-530">Support list or close file handles of a file share, file directory or a file</span></span>
+    - <span data-ttu-id="f6333-531">Get-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="f6333-531">Get-AzStorageFileHandle</span></span>
+    - <span data-ttu-id="f6333-532">Close-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="f6333-532">Close-AzStorageFileHandle</span></span>
+
+#### <a name="azstoragesync"></a><span data-ttu-id="f6333-533">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="f6333-533">Az.StorageSync</span></span>
+* <span data-ttu-id="f6333-534">Dieses Modul ist nun als Teil des `Az`-Rollup-Moduls enthalten.</span><span class="sxs-lookup"><span data-stu-id="f6333-534">This module is now included as a part of the roll-up `Az` module</span></span>
+
+## <a name="232---june-2019"></a><span data-ttu-id="f6333-535">2.3.2 – Juni 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-535">2.3.2 - June 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-536">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-536">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-537">Fehler behoben, aufgrund dessen in manchen Fällen eine falsche URL für Funktionsaufrufe verwendet wurde</span><span class="sxs-lookup"><span data-stu-id="f6333-537">Fix bug with incorrect URL being used in some cases for Functions calls</span></span>
+    - <span data-ttu-id="f6333-538">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8983</span><span class="sxs-lookup"><span data-stu-id="f6333-538">More information here: https://github.com/Azure/azure-powershell/issues/8983</span></span>
+* <span data-ttu-id="f6333-539">Problem mit Aliasen zwischen AzureRM und Azure-Cmdlets behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-539">Fix Issue with aliases from AzureRM to Az cmdlets</span></span>
+  - <span data-ttu-id="f6333-540">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span><span class="sxs-lookup"><span data-stu-id="f6333-540">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span></span>
+  - <span data-ttu-id="f6333-541">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span><span class="sxs-lookup"><span data-stu-id="f6333-541">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-542">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-542">Az.Compute</span></span>
+* <span data-ttu-id="f6333-543">Die einfachen Parametersätze „New-AzVm“ und „New-AzVmss“ akzeptieren jetzt den Parameter „ProximityPlacementGroup“.</span><span class="sxs-lookup"><span data-stu-id="f6333-543">New-AzVm and New-AzVmss simple parameter sets now accept the 'ProximityPlacementGroup' parameter.</span></span>
+* <span data-ttu-id="f6333-544">Tippfehler in der Referenzdokumentation für „New-AzVM“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-544">Fix typo in 'New-AzVM' reference documentation</span></span>
+
+#### <a name="azdns"></a><span data-ttu-id="f6333-545">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="f6333-545">Az.Dns</span></span>
+* <span data-ttu-id="f6333-546">Tippfehler in den Hilfebeispielen zu „Set-AzDnsZone“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-546">Fixed a typo in 'Set-AzDnsZone' help examples.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="f6333-547">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="f6333-547">Az.EventGrid</span></span>
+* <span data-ttu-id="f6333-548">Zur Verwendung der API-Version 2019-06-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-548">Updated to use the 2019-06-01 API version.</span></span>
+* <span data-ttu-id="f6333-549">Neue Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-549">New cmdlets:</span></span>
+    - <span data-ttu-id="f6333-550">New-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="f6333-550">New-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="f6333-551">Erstellt eine neue Azure Event Grid-Domäne.</span><span class="sxs-lookup"><span data-stu-id="f6333-551">Creates a new Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="f6333-552">Get-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="f6333-552">Get-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="f6333-553">Ruft die Details einer Event Grid-Domäne oder eine Liste aller Event Grid-Domänen im aktuellen Azure-Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="f6333-553">Gets the details of an Event Grid Domain, or gets a list of all Event Grid Domains in the current Azure subscription.</span></span>
+    - <span data-ttu-id="f6333-554">Remove-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="f6333-554">Remove-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="f6333-555">Entfernt eine Azure Event Grid-Domäne.</span><span class="sxs-lookup"><span data-stu-id="f6333-555">Removes an Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="f6333-556">New-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="f6333-556">New-AzureRmEventGridDomainKey</span></span>
+        - <span data-ttu-id="f6333-557">Generiert den freigegebenen Zugriffsschlüssel für eine Azure Event Grid-Domäne erneut.</span><span class="sxs-lookup"><span data-stu-id="f6333-557">Regenerates the shared access key for an Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="f6333-558">Get-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="f6333-558">Get-AzureRmEventGridDomainKey</span></span>
+        - <span data-ttu-id="f6333-559">Ruft die freigegebenen Zugriffsschlüssel ab, die zum Veröffentlichen von Ereignissen in einer Event Grid-Domäne verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f6333-559">Gets the shared access keys used to publish events to an Event Grid Domain.</span></span>
+    - <span data-ttu-id="f6333-560">New-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="f6333-560">New-AzureRmEventGridDomainTopic:</span></span>
+        - <span data-ttu-id="f6333-561">Erstellt ein neues Azure Event Grid-Domänenthema.</span><span class="sxs-lookup"><span data-stu-id="f6333-561">Creates a new Azure Event Grid Domain Topic.</span></span>
+    - <span data-ttu-id="f6333-562">Get-AzureRmEventGridDomainTopic</span><span class="sxs-lookup"><span data-stu-id="f6333-562">Get-AzureRmEventGridDomainTopic</span></span>
+        - <span data-ttu-id="f6333-563">Ruft die Details eines Event Grid-Domänenthemas oder eine Liste aller Event Grid-Domänenthemen unter der jeweiligen Event Grid-Domäne im aktuellen Azure-Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="f6333-563">Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure</span></span>
+    - <span data-ttu-id="f6333-564">Remove-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="f6333-564">Remove-AzureRmEventGridDomainTopic:</span></span>
+        - <span data-ttu-id="f6333-565">Entfernt ein vorhandenes Azure Event Grid-Domänenthema.</span><span class="sxs-lookup"><span data-stu-id="f6333-565">Removes an existing Azure Event Grid Domain Topic.</span></span>
+* <span data-ttu-id="f6333-566">Aktualisierte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-566">Updated cmdlets:</span></span>
+    - <span data-ttu-id="f6333-567">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="f6333-567">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span></span>
+        - <span data-ttu-id="f6333-568">Neue erforderliche Parameter zur Unterstützung des Pipings für die neue Event Grid-Domäne und das Event Grid-Domänenthema hinzugefügt, um das Erstellen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-568">Add new mandatory parameters to support piping for the new Event Grid Domain and Event Grid Domain Topic to allow creating new event subscription under these resources.</span></span>
+        - <span data-ttu-id="f6333-569">Neue erforderliche Parameter zum Angeben des neuen Event Grid-Domänennamens und/oder Namens des Event Grid-Domänenthemas hinzugefügt, um das Erstellen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-569">Add new mandatory parameters for specifying the new Event Grid Domain name and/or Event Grid Domain Topic name to allow creating new event subscription under these resources.</span></span>
+        - <span data-ttu-id="f6333-570">Neue Parametersätze für Domänen und Domänenthemen hinzugefügt, um die Wiederverwendung vorhandener Parameter zuzulassen (‚z. B. „EndPointType“, „SubjectBeginsWith“ usw.)</span><span class="sxs-lookup"><span data-stu-id="f6333-570">Add new Parameter sets for domains and domain topics to allow reusing existing parameters (e.g., EndPointType, SubjectBeginsWith, etc).</span></span>
+        - <span data-ttu-id="f6333-571">Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="f6333-571">Add new optional parameters for specifying:</span></span>
+            - <span data-ttu-id="f6333-572">Ablaufdatum des Ereignisabonnements</span><span class="sxs-lookup"><span data-stu-id="f6333-572">Event subscription expiration date,</span></span>
+            - <span data-ttu-id="f6333-573">Erweiterte Filterparameter</span><span class="sxs-lookup"><span data-stu-id="f6333-573">Advanced filtering parameters.</span></span>
+        - <span data-ttu-id="f6333-574">Neue Enumeration für „servicebusqueue“ als Ziel hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-574">Add new enum for servicebusqueue as destination.</span></span>
+        - <span data-ttu-id="f6333-575">Verwendung der Option „All“ in „-IncludedEventType“ gesperrt und wie folgt ersetzt</span><span class="sxs-lookup"><span data-stu-id="f6333-575">Disallow usage of 'All' in -IncludedEventType option and replace it with</span></span>
+    - <span data-ttu-id="f6333-576">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="f6333-576">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span></span>
+        - <span data-ttu-id="f6333-577">Neue optionale Parameter („Top“, „ODataQuery“ und „NextLink“) zur Unterstützung der Ergebnispaginierung und -filterung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-577">Add new optional parameters (Top, ODataQuery and NextLink) to support results pagination and filtering.</span></span>
+    - <span data-ttu-id="f6333-578">Remove-AzureRmEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="f6333-578">Remove-AzureRmEventGridSubscription</span></span>
+        - <span data-ttu-id="f6333-579">Neue erforderliche Parameter zur Unterstützung des Pipings für die Event Grid-Domäne und das Event Grid-Domänenthema hinzugefügt, um das Entfernen neuer Abonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-579">Add new mandatory parameters to support piping for Event Grid Domain and Event Grid Domain Topic to allow removing existing event subscription under these resources.</span></span>
+        - <span data-ttu-id="f6333-580">Neue erforderliche Parameter zum Angeben des Event Grid-Domänennamens und/oder Event Grid-Domänenthemanamens hinzugefügt, um das Entfernen vorhandener Ereignisabonnements unter diesen Ressourcen zuzulassen</span><span class="sxs-lookup"><span data-stu-id="f6333-580">Add new mandatory parameters for specifying the Event Grid Domain name and/or Event Grid Domain Topic name to allow removing existing event subscription under these resources.</span></span>
+
+#### <a name="azfrontdoor"></a><span data-ttu-id="f6333-581">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="f6333-581">Az.FrontDoor</span></span>
+* <span data-ttu-id="f6333-582">New-AzFrontDoorWafMatchConditionObject</span><span class="sxs-lookup"><span data-stu-id="f6333-582">New-AzFrontDoorWafMatchConditionObject</span></span>
+    - <span data-ttu-id="f6333-583">Unterstützung von Transformationen und neuen Wert für den Operator zum automatischen Vervollständigen (RegEx) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-583">Add transforms support and new operator auto-complete value (RegEx)</span></span>
+* <span data-ttu-id="f6333-584">New-AzFrontDoorWafManagedRuleObject</span><span class="sxs-lookup"><span data-stu-id="f6333-584">New-AzFrontDoorWafManagedRuleObject</span></span>
+    - <span data-ttu-id="f6333-585">Neue Werte für automatisches Vervollständigen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-585">Add new auto-complete values</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-586">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-586">Az.Network</span></span>
+* <span data-ttu-id="f6333-587">Unterstützung für Virtual Network-Gatewayressourcen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-587">Add support for Virtual Network Gateway Resource</span></span>
+    - <span data-ttu-id="f6333-588">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-588">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-589">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span><span class="sxs-lookup"><span data-stu-id="f6333-589">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span></span>
+* <span data-ttu-id="f6333-590">AvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="f6333-590">Add AvailablePrivateEndpointType</span></span>
+    - <span data-ttu-id="f6333-591">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-591">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-592">Get-AzAvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="f6333-592">Get-AzAvailablePrivateEndpointType</span></span>
+* <span data-ttu-id="f6333-593">„PrivatePrivateLinkService“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-593">Add PrivatePrivateLinkService</span></span>
+    - <span data-ttu-id="f6333-594">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-594">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-595">Get-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="f6333-595">Get-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="f6333-596">New-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="f6333-596">New-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="f6333-597">Remove-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="f6333-597">Remove-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="f6333-598">New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-598">New-AzPrivateLinkServiceIpConfig</span></span>
+        - <span data-ttu-id="f6333-599">Set-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-599">Set-AzPrivateEndpointConnection</span></span>
+* <span data-ttu-id="f6333-600">„PrivateEndpoint“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-600">Add PrivateEndpoint</span></span>
+    - <span data-ttu-id="f6333-601">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-601">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-602">Get-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="f6333-602">Get-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="f6333-603">New-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="f6333-603">New-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="f6333-604">Remove-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="f6333-604">Remove-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="f6333-605">New-AzPrivateLinkServiceConnection</span><span class="sxs-lookup"><span data-stu-id="f6333-605">New-AzPrivateLinkServiceConnection</span></span>
+* <span data-ttu-id="f6333-606">Folgende Befehle für das Feature aktualisiert: UseLocalAzureIpAddress-Flag für „VpnConnection“</span><span class="sxs-lookup"><span data-stu-id="f6333-606">Updated below commands for feature: UseLocalAzureIpAddress flag on VpnConnection</span></span>
+    - <span data-ttu-id="f6333-607">„New-AzVpnConnection§ „ aktualisiert: Optionaler Parameter „-UseLocalAzureIpAddress“ hinzugefügt, mit dem angegeben werden kann, dass die lokale Azure-IP-Adresse beim Initiieren der Verbindung als Quelladresse verwendet werden soll</span><span class="sxs-lookup"><span data-stu-id="f6333-607">Updated New-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
+    - <span data-ttu-id="f6333-608">„Set-AzVpnConnection“ aktualisiert: Optionaler Parameter „-UseLocalAzureIpAddress“ hinzugefügt, mit dem angegeben werden kann, dass die lokale Azure-IP-Adresse beim Initiieren der Verbindung als Quelladresse verwendet werden soll</span><span class="sxs-lookup"><span data-stu-id="f6333-608">Updated Set-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
+* <span data-ttu-id="f6333-609">Schreibgeschütztes Feld „PeeredConnections“ beim ExpressRoute-Peering hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-609">Added readonly field PeeredConnections in ExpressRoute peering.</span></span>
+* <span data-ttu-id="f6333-610">Schreibgeschütztes Feld „GlobalReachEnabled“ in ExpressRoute hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-610">Added readonly field GlobalReachEnabled in ExpressRoute.</span></span>
+* <span data-ttu-id="f6333-611">Breaking Change-Attribut hinzugefügt, um auf das veraltete Feld „AllowGlobalReach“ im ExpressRouteCircuit-Modell hinzuweisen</span><span class="sxs-lookup"><span data-stu-id="f6333-611">Added breaking change attribute to call out deprecation of AllowGlobalReach field in ExpressRouteCircuit model</span></span>
+* <span data-ttu-id="f6333-612">Fehler 8756 bei der Verwendung von „TargetListenerID“ mit AzApplicationGatewayRedirectConfiguration-Cmdlets behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-612">Fixed Issue 8756 Error using TargetListenerID with AzApplicationGatewayRedirectConfiguration cmdlets</span></span>
+* <span data-ttu-id="f6333-613">Fehler in „New-AzApplicationGatewayPathRuleConfig“ behoben, aufgrund dessen der Regelsatz für erneutes Generieren nicht festgelegt werden konnte</span><span class="sxs-lookup"><span data-stu-id="f6333-613">Fixed bug in New-AzApplicationGatewayPathRuleConfig that prevented the rewrite ruleset from being set.</span></span>
+* <span data-ttu-id="f6333-614">Fehler bei der Anzeige von „VirtualNetworkTaps“ in „NetworkInterfaceIpConfiguration“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-614">Fixed displaying of VirtualNetworkTaps in NetworkInterfaceIpConfiguration</span></span>
+* <span data-ttu-id="f6333-615">Cortex-Get-Cmdlets zum Auflisten aller Komponenten korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-615">Fixed Cortex Get cmdlets for list all part</span></span>
+* <span data-ttu-id="f6333-616">Problem beim Erstellen des festen VirtualHub-Verweises für ExpressRouteGateways behoben (VpnGateway)</span><span class="sxs-lookup"><span data-stu-id="f6333-616">Fixed VirtualHub reference creation for ExpressRouteGateways, VpnGateway</span></span>
+* <span data-ttu-id="f6333-617">Unterstützung für Verfügbarkeitszonen in AzureFirewall und NatGateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-617">Added support for Availability Zones in AzureFirewall and NatGateway</span></span>
+* <span data-ttu-id="f6333-618">Cmdlet „Get-AzNetworkServiceTag“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-618">Added cmdlet Get-AzNetworkServiceTag</span></span>
+* <span data-ttu-id="f6333-619">Unterstützung für mehrere öffentliche IP-Adressen für Azure Firewall hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-619">Add support for multiple public IP addresses for Azure Firewall</span></span>
+    - <span data-ttu-id="f6333-620">New-AzFirewall-Cmdlet aktualisiert:</span><span class="sxs-lookup"><span data-stu-id="f6333-620">Updated New-AzFirewall cmdlet:</span></span>
+        - <span data-ttu-id="f6333-621">Parameter „-PublicIpAddress“ hinzugefügt, der ein oder mehre öffentliche IP-Adressobjekte akzeptiert</span><span class="sxs-lookup"><span data-stu-id="f6333-621">Added parameter -PublicIpAddress which accepts one or more Public IP Address objects</span></span>
+        - <span data-ttu-id="f6333-622">Parameter „- VirtualNetwork“ hinzugefügt, der ein Virtual Network-Objekt akzeptiert</span><span class="sxs-lookup"><span data-stu-id="f6333-622">Added parameter -VirtualNetwork which accepts a Virtual Network object</span></span>
+        - <span data-ttu-id="f6333-623">Methoden „AddPublicIpAddress“ und „RemovePublicIpAddress“ für Firewallobjekte hinzugefügt (akzeptieren ein öffentliches IP-Adressobjekt als Eingabe)</span><span class="sxs-lookup"><span data-stu-id="f6333-623">Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input</span></span>
+        - <span data-ttu-id="f6333-624">Parameter „-PublicIpName“ und „-VirtualNetworkName“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="f6333-624">Deprecated parameters -PublicIpName and -VirtualNetworkName</span></span>
+* <span data-ttu-id="f6333-625">Folgende Befehle für das Feature aktualisiert: VpnClient-AAD-Authentifizierungsoptionen auf die Gatewayressource des virtuellen Netzwerkgateways festgelegt</span><span class="sxs-lookup"><span data-stu-id="f6333-625">Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.</span></span>
+    - <span data-ttu-id="f6333-626">„New-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-626">Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
+    - <span data-ttu-id="f6333-627">„Set-AzVirtualNetworkGateway“ aktualisiert: Optionale Parameter „AadTenantUri“, „AadAudienceId“ und „AadIssuerUri“ zum Festlegen der VpnClient-AAD-Authentifizierungsoptionen auf dem Gateway hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-627">Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
+    - <span data-ttu-id="f6333-628">„Set-AzVirtualNetworkGateway“ aktualisiert: Optionaler Switch-Parameter „RemoveAadAuthentication“ zum Entfernen von VpnClient-AAD-Authentifizierungsoptionen aus dem Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-628">Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-629">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-629">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-630">Tarif **pergb2018** im Befehl „New-AzureRmOperationalInsightsWorkspace“ aktivieren</span><span class="sxs-lookup"><span data-stu-id="f6333-630">Enable **pergb2018** pricing tier in 'New-AzureRmOperationalInsightsWorkspace' command</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-631">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-631">Az.Resources</span></span>
+* <span data-ttu-id="f6333-632">Unterstützung für zusätzliche Optionen zum Exportieren von Vorlagen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-632">Support for additional Template Export options</span></span>
+    - <span data-ttu-id="f6333-633">Parameter „-SkipResourceNameParameterization“ zu „Export-AzResourceGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-633">Add '-SkipResourceNameParameterization' parameter to Export-AzResourceGroup</span></span>
+    - <span data-ttu-id="f6333-634">Parameter -SkipAllParameterization“ zu „Export-AzResourceGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-634">Add '-SkipAllParameterization' parameter to Export-AzResourceGroup</span></span>
+    - <span data-ttu-id="f6333-635">Parameter „-Resource“ zu „Export-AzResourceGroup“ hinzugefügt, um das Filtern exportierter Ressourcen zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="f6333-635">Add '-Resource' parameter to Export-AzResourceGroup for exported resource filtering</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-636">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-636">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-637">Problem beim Hinzufügen des Zertifikats mit „ByExistingKeyVault“ behoben (Abruf des falschen Fingerabdrucks in manchen Fällen)</span><span class="sxs-lookup"><span data-stu-id="f6333-637">Fix add certificate ByExistingKeyVault getting the wrong thumbprint in some cases</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-638">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-638">Az.Sql</span></span>
+* <span data-ttu-id="f6333-639">Suffix des Advanced Threat Protection-Endpunkts korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-639">Fix Advanced Threat Protection storage endpoint suffix</span></span>
+* <span data-ttu-id="f6333-640">Durch Advanced Data Security ermöglichte Außerkraftsetzungen der Advanced Threat Protection-Richtlinie korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-640">Fix Advanced Data Security enable overrides Advanced Threat Protection policy</span></span>
+* <span data-ttu-id="f6333-641">Neue Cmdlets für „Management.Sql“ ermöglichen Kunden das Hinzufügen von TDE-Schlüsseln und Festlegen der TDE-Schutzvorrichtung für verwaltete Instanzen.</span><span class="sxs-lookup"><span data-stu-id="f6333-641">New Cmdlets for Management.Sql to allow customers to add TDE keys and set TDE protector for managed instances</span></span>
+   - <span data-ttu-id="f6333-642">Add-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="f6333-642">Add-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="f6333-643">Get-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="f6333-643">Get-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="f6333-644">Remove-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="f6333-644">Remove-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="f6333-645">Get-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="f6333-645">Get-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
+   - <span data-ttu-id="f6333-646">Set-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="f6333-646">Set-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-647">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-647">Az.Storage</span></span>
+* <span data-ttu-id="f6333-648">Unterstützung von „FileStorage“ und „SkuName Premium_ZRS“ beim Erstellen eines Speicherkontos</span><span class="sxs-lookup"><span data-stu-id="f6333-648">Support Kind FileStorage and SkuName Premium_ZRS when create Storage account</span></span>
+    - <span data-ttu-id="f6333-649">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-649">New-AzStorageAccount</span></span>
+* <span data-ttu-id="f6333-650">Überarbeitete Beschreibung des Cmdlets für die Unveränderlichkeit von Blobs</span><span class="sxs-lookup"><span data-stu-id="f6333-650">Clarified description of blob immutability cmdlet</span></span>
+    -  <span data-ttu-id="f6333-651">Remove-AzRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-651">Remove-AzRmStorageContainerImmutabilityPolicy</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-652">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-652">Az.Websites</span></span>
+* <span data-ttu-id="f6333-653">Optimiert „Get-AzWebAppCertificate“, um nach der Ressourcengruppe auf dem Server zu filtern (nicht auf dem Client)</span><span class="sxs-lookup"><span data-stu-id="f6333-653">Optimizes Get-AzWebAppCertificate to filter by resource group on the server instead of the client</span></span>
+* <span data-ttu-id="f6333-654">Switch-Parameter „-UseDisasterRecovery“ für „Get-AzWebAppSnapshot“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-654">Adds -UseDisasterRecovery switch parameter to Get-AzWebAppSnapshot</span></span>
+
+## <a name="220---june-2019"></a><span data-ttu-id="f6333-655">2.2.0 – Juni 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-655">2.2.0 - June 2019</span></span>
+#### <a name="azcdn"></a><span data-ttu-id="f6333-656">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="f6333-656">Az.Cdn</span></span>
+* <span data-ttu-id="f6333-657">Es wurden Cmdlets aktualisiert, um das rulesEngine-Feature basierend auf der API-Version 2019-04-15 zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="f6333-657">Updated cmdlets to support rulesEngine feature based on API version 2019-04-15.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-658">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-658">Az.Compute</span></span>
+* <span data-ttu-id="f6333-659">Der Parameter `NoWait` wurde hinzugefügt, der den Vorgang startet und sofort zurückkehrt, bevor der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="f6333-659">Added `NoWait` parameter that starts the operation and returns immediately, before the operation is completed.</span></span>
+    - <span data-ttu-id="f6333-660">Aktualisierte Cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span><span class="sxs-lookup"><span data-stu-id="f6333-660">Updated cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="f6333-661">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="f6333-661">Az.EventHub</span></span>
+* <span data-ttu-id="f6333-662">Fehlerbehebung für #9231 – Get-AzEventHubNamespace gibt keine Tags zurück</span><span class="sxs-lookup"><span data-stu-id="f6333-662">Fix for #9231 - Get-AzEventHubNamespace does not return tags</span></span>
+* <span data-ttu-id="f6333-663">Fehlerbehebung für #9230 – Get-AzEventHubNamespace gibt ResourceGroup anstelle von ResourceGroupName zurück</span><span class="sxs-lookup"><span data-stu-id="f6333-663">Fix for #9230 - Get-AzEventHubNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-664">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-664">Az.Network</span></span>
+* <span data-ttu-id="f6333-665">ResourceId und InputObject wurden für NAT Gateway aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-665">Update ResourceId and InputObject for Nat Gateway</span></span>
+    - <span data-ttu-id="f6333-666">Es wurde ein Alias für ResourceId und InputObjectr hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-666">Add alias for ResourceId and InputObject</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="f6333-667">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-667">Az.PolicyInsights</span></span>
+* <span data-ttu-id="f6333-668">Fehlerbehebung für Nullverweis in Get-AzPolicyEvent</span><span class="sxs-lookup"><span data-stu-id="f6333-668">Fix Null reference issue in Get-AzPolicyEvent</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-669">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-669">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-670">Minimale Aufbewahrung in Tagen für IaaSVM-Richtlinie wurde von 1 in 7 geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-670">IaaSVM policy minimum retention in days changed to 7 from 1</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-671">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-671">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-672">Fehlerbehebung für #9182 – Get-AzServiceBusNamespace gibt ResourceGroup anstelle von ResourceGroupName zurück</span><span class="sxs-lookup"><span data-stu-id="f6333-672">Fix for issue #9182 - Get-AzServiceBusNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-673">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-673">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-674">Tippfehler in Fehlermeldung für Update-AzServiceFabricReliability wurde behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-674">Fix typo in error message for 'Update-AzServiceFabricReliability'</span></span>
+* <span data-ttu-id="f6333-675">Fehlendes Zeichen in Service Fabric-Befehlszeilen wurde behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-675">Fix missing character in Service Fabric cmdlines</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-676">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-676">Az.Sql</span></span>
+* <span data-ttu-id="f6333-677">Der DnsZonePartner-Parameter für das Cmdlet New-AzureSqlInstance wurde hinzugefügt, um AutoDr für verwaltete Instanzen zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="f6333-677">Add DnsZonePartner Parameter for New-AzureSqlInstance cmdlet to support AutoDr for Managed Instance.</span></span>
+* <span data-ttu-id="f6333-678">Das Cmdlet Get-AzSqlDatabaseSecureConnectionPolicy wird eingestellt</span><span class="sxs-lookup"><span data-stu-id="f6333-678">Deprecating Get-AzSqlDatabaseSecureConnectionPolicy cmdlet</span></span>
+* <span data-ttu-id="f6333-679">Cmdlets zum Schutz vor Bedrohungen werden in „Advanced Threat Protection“ (Erweiterter Schutz vor Bedrohungen) umbenannt</span><span class="sxs-lookup"><span data-stu-id="f6333-679">Rename Threat Detection cmdlets to Advanced Threat Protection</span></span>
+* <span data-ttu-id="f6333-680">New-AzSqlInstance – Die Parameter StorageSizeInGB und LicenseType sind jetzt optional</span><span class="sxs-lookup"><span data-stu-id="f6333-680">New-AzSqlInstance -StorageSizeInGB and -LicenseType parameters are now optional.</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-681">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-681">Az.Websites</span></span>
+* <span data-ttu-id="f6333-682">Das Problem, bei dem die Verwendung von Set-AzWebApp und Set-AzWebAppSlot mit der -WebApp-Eigenschaft die Tags entfernt hat, wurde behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-682">fixes the issue where using  Set-AzWebApp and Set-AzWebAppSlot with -WebApp property was removing the tags</span></span>
+
+## <a name="210---may-2019"></a><span data-ttu-id="f6333-683">2.1.0 – Mai 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-683">2.1.0 - May 2019</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="f6333-684">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-684">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-685">Es wurden neue Cmdlets zum Verwalten der Diagnose im globalen sowie im API-Bereich erstellt</span><span class="sxs-lookup"><span data-stu-id="f6333-685">Created new Cmdlets for managing diagnostics at the global and API Scope</span></span>
+    - <span data-ttu-id="f6333-686">**Get-AzApiManagementDiagnostic** : Abrufen der Diagnose, die im globalen oder im API-Bereich konfiguriert wurde</span><span class="sxs-lookup"><span data-stu-id="f6333-686">**Get-AzApiManagementDiagnostic** - Get the diagnostics configured a global or api Scope</span></span>
+    - <span data-ttu-id="f6333-687">**New-AzApiManagementDiagnostic** : Erstellen neuer Diagnosen im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="f6333-687">**New-AzApiManagementDiagnostic** - Create new diagnostics at the global scope or api Scope</span></span>
+    - <span data-ttu-id="f6333-688">**New-AzApiManagementHttpMessageDiagnostic** : Erstellen einer Diagnoseeinstellung für die zu protokollierenden Kopfzeilen und für die Größe der Bytes für den Text</span><span class="sxs-lookup"><span data-stu-id="f6333-688">**New-AzApiManagementHttpMessageDiagnostic** - Create diagnostic setting for which Headers to log and the size of Body Bytes</span></span>
+    - <span data-ttu-id="f6333-689">**New-AzApiManagementPipelineDiagnosticSetting** : Erstellen von Diagnoseeinstellungen für ein-/ausgehende HTTP-Nachrichten für das Gateway</span><span class="sxs-lookup"><span data-stu-id="f6333-689">**New-AzApiManagementPipelineDiagnosticSetting** - Create Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.</span></span>
+    - <span data-ttu-id="f6333-690">**New-AzApiManagementSamplingSetting** : Erstellen der Einstellung „Sampling“ für die Anforderungen/Antworten für eine Diagnose</span><span class="sxs-lookup"><span data-stu-id="f6333-690">**New-AzApiManagementSamplingSetting** - Create Sampling Setting  for the requests/response for a diagnostic</span></span>
+    - <span data-ttu-id="f6333-691">**Remove-AzApiManagementDiagnostic** : Entfernen einer Diagnoseentität im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="f6333-691">**Remove-AzApiManagementDiagnostic** - Remove a diagnostic entity at global or api scope</span></span>
+    - <span data-ttu-id="f6333-692">**Set-AzApiManagementDiagnostic** : Aktualisieren einer Diagnoseentität im globalen oder API-Bereich</span><span class="sxs-lookup"><span data-stu-id="f6333-692">**Set-AzApiManagementDiagnostic** - Update a diagnostic Entity at global or api scope</span></span>
+* <span data-ttu-id="f6333-693">Es wurden neue Cmdlets für die Cacheverwaltung im ApiManagement-Dienst erstellt</span><span class="sxs-lookup"><span data-stu-id="f6333-693">Created new Cmdlets for managing Cache in ApiManagement service</span></span>
+    - <span data-ttu-id="f6333-694">**Get-AzApiManagementCache** : Abrufen der Details des durch den Bezeichner angegebenen Caches oder aller Caches</span><span class="sxs-lookup"><span data-stu-id="f6333-694">**Get-AzApiManagementCache** - Get the details of the Cache specified by identifier or all caches</span></span>
+    - <span data-ttu-id="f6333-695">**New-AzApiManagementCache** : Erstellen eines neuen „standardmäßigen“ Caches oder eines Caches in einer bestimmten „Region“ von Azure</span><span class="sxs-lookup"><span data-stu-id="f6333-695">**New-AzApiManagementCache** - Create a new 'default' Cache or Cache in a particular azure 'region'</span></span>
+    - <span data-ttu-id="f6333-696">**Remove-AzApiManagementCache** : Entfernen eines Caches</span><span class="sxs-lookup"><span data-stu-id="f6333-696">**Remove-AzApiManagementCache** - Remove a cache</span></span>
+    - <span data-ttu-id="f6333-697">**Update-AzApiManagementCache** : Aktualisieren eines Caches</span><span class="sxs-lookup"><span data-stu-id="f6333-697">**Update-AzApiManagementCache** - Update a cache</span></span>
+* <span data-ttu-id="f6333-698">Es wurden neue Cmdlets zur Verwaltung von API-Schemas erstellt</span><span class="sxs-lookup"><span data-stu-id="f6333-698">Created new Cmdlets for managing API Schema</span></span>
+    - <span data-ttu-id="f6333-699">**New-AzApiManagementSchema** : Erstellen eines neuen Schemas für eine API</span><span class="sxs-lookup"><span data-stu-id="f6333-699">**New-AzApiManagementSchema** - Create a new Schema for an API</span></span>
+    - <span data-ttu-id="f6333-700">**Get-AzApiManagementSchema** : Abrufen des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="f6333-700">**Get-AzApiManagementSchema** - Get the schemas configured in the API</span></span>
+    - <span data-ttu-id="f6333-701">**Remove-AzApiManagementSchema** : Entfernen des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="f6333-701">**Remove-AzApiManagementSchema** - Remove the schema configured in the API</span></span>
+    - <span data-ttu-id="f6333-702">**Set-AzApiManagementSchema** : Aktualisieren des in der API konfigurierten Schemas</span><span class="sxs-lookup"><span data-stu-id="f6333-702">**Set-AzApiManagementSchema** - Update the schema configured in the API</span></span>
+* <span data-ttu-id="f6333-703">Es wurde ein neues Cmdlet zum Generieren eines Benutzertokens erstellt</span><span class="sxs-lookup"><span data-stu-id="f6333-703">Created new Cmdlet for generating a User Token.</span></span>
+    - <span data-ttu-id="f6333-704">**New-AzApiManagementUserToken** : Generieren eines neuen Benutzertokens, das standardmäßig für acht Stunden gültig ist. Mit diesem Cmdlet kann das Token für den „GIT“-Benutzer generiert werden./</span><span class="sxs-lookup"><span data-stu-id="f6333-704">**New-AzApiManagementUserToken** - Generate a new User Token valid for 8 hours by default.Token for the 'GIT' user can be generated using this cmdlet./</span></span>
+* <span data-ttu-id="f6333-705">Es wurde ein neues Cmdlet zum Abrufen des Netzwerkstatus erstellt</span><span class="sxs-lookup"><span data-stu-id="f6333-705">Created a new cmdlet to retrieving the Network Status</span></span>
+    - <span data-ttu-id="f6333-706">**Get-AzApiManagementNetworkStatus** : Abrufen der Netzwerkstatuskonnektivität von Ressourcen, von denen der API Management-Dienst abhängig ist</span><span class="sxs-lookup"><span data-stu-id="f6333-706">**Get-AzApiManagementNetworkStatus** - Get the Network status connectivity of resources on which API Management service depends on.</span></span> <span data-ttu-id="f6333-707">Dies ist hilfreich, wenn Sie den ApiManagement-Dienst in einem virtuellen Netzwerk bereitstellen und überprüfen, ob eine der Abhängigkeiten fehlerhaft ist.</span><span class="sxs-lookup"><span data-stu-id="f6333-707">This is useful when deploying ApiManagement service into a Virtual Network and validing whether any of the dependencies are broken.</span></span>
+* <span data-ttu-id="f6333-708">Das Cmdlet **New-AzApiManagement** wurde zum Verwalten des ApiManagement-Diensts aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-708">Updated cmdlet **New-AzApiManagement** to manage ApiManagement service</span></span>
+    - <span data-ttu-id="f6333-709">Die Unterstützung für die neue SKU „Consumption“ wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-709">Added support for the new 'Consumption' SKU</span></span>
+    - <span data-ttu-id="f6333-710">Die Unterstützung zum Aktivieren des Flags „EnableClientCertificate“ für die neue SKU „Consumption“ wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-710">Added support to turn the 'EnableClientCertificate' flag on for 'Consumption' SKU</span></span>
+    - <span data-ttu-id="f6333-711">Das neue Cmdlet **New-AzApiManagementSslSetting** ermöglicht die Konfiguration der „TLS/SSL“-Einstellung für „Back-End“ und „Front-End“</span><span class="sxs-lookup"><span data-stu-id="f6333-711">The new cmdlet **New-AzApiManagementSslSetting** allows configuring 'TLS/SSL' setting on the 'Backend' and 'Frontend'.</span></span> <span data-ttu-id="f6333-712">Dies kann auch dazu verwendet werden, um „Verschlüsselungen“ wie „3DES“ und „ServerProtokolle“ wie „Http2“ für das „Front-End“ eines ApiManagement-Diensts zu konfigurieren</span><span class="sxs-lookup"><span data-stu-id="f6333-712">This can also be used to configure 'Ciphers' like '3DES' and 'ServerProtocols' like 'Http2' on the 'Frontend' of an ApiManagement service.</span></span>
+    - <span data-ttu-id="f6333-713">Die Unterstützung für die Konfiguration des Hostnamens „DeveloperPortal“ wurde zum ApiManagement-Dienst hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-713">Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.</span></span>
+* <span data-ttu-id="f6333-714">Die **Get-AzApiManagementSsoToken** -Cmdlets wurden aktualisiert, um das Objekt „PsApiManagement“ als Eingabe zu übernehmen</span><span class="sxs-lookup"><span data-stu-id="f6333-714">Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input</span></span>
+* <span data-ttu-id="f6333-715">Das Cmdlet wurde aktualisiert, um Fehlermeldungen inline anzuzeigen</span><span class="sxs-lookup"><span data-stu-id="f6333-715">Updated the cmdlet to display Error Messages inline</span></span>
+     > <span data-ttu-id="f6333-716">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Fehlercode: ValidationError-Fehlermeldung: Mindestens ein Feld enthält ungültige Werte: Fehlerdetails: [Code=ValidationError, Message=Fehler in Element 'log-to-eventhub' in Zeile 3, Spalte 10: Protokollierungstool nicht gefunden, Target=log-to-eventhub]</span><span class="sxs-lookup"><span data-stu-id="f6333-716">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Error Code: ValidationError Error Message: One or more fields contain incorrect values: Error Details:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span></span>
+* <span data-ttu-id="f6333-717">Cmdlet **Export-AzApiManagementApi** wurde für den Export von APIs im Format „OpenApi 3.0“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-717">Updated cmdlet **Export-AzApiManagementApi** to export APIs in 'OpenApi 3.0' format</span></span>
+* <span data-ttu-id="f6333-718">Cmdlet **Import-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-718">Updated cmdlet **Import-AzApiManagementApi**</span></span>
+    - <span data-ttu-id="f6333-719">Zum Importieren der API aus der „OpenApi 3.0“-Dokumentspezifikation</span><span class="sxs-lookup"><span data-stu-id="f6333-719">To import Api from 'OpenApi 3.0' document specification</span></span>
+    - <span data-ttu-id="f6333-720">Zur Außerkraftsetzung der „PsApiManagementSchema“-Eigenschaft, die in einem beliebigen Dokument („Swagger“, „Wadl“, „Wsdl“, „OpenApi“) angegeben ist</span><span class="sxs-lookup"><span data-stu-id="f6333-720">To override the 'PsApiManagementSchema' property specified in any ('Swagger', 'Wadl', 'Wsdl', 'OpenApi') document.</span></span>
+    - <span data-ttu-id="f6333-721">Zur Außerkraftsetzung der „ServiceUrl“-Eigenschaft, die in einem beliebigen Dokument angegeben ist</span><span class="sxs-lookup"><span data-stu-id="f6333-721">To override the 'ServiceUrl' property specified in any document.</span></span>
+* <span data-ttu-id="f6333-722">Cmdlet **Get-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ zurückzugeben</span><span class="sxs-lookup"><span data-stu-id="f6333-722">Updated cmdlet **Get-AzApiManagementPolicy** to return policy in Non-Xml escaped 'format' using 'rawxml'</span></span>
+* <span data-ttu-id="f6333-723">Cmdlet **Set-AzApiManagementPolicy** wurde aktualisiert, um die Richtlinie im Format ohne XML-Escapezeichen mit „rawxml“ und im Format mit XML-Escapezeichen mit „xml“ zurückzugeben</span><span class="sxs-lookup"><span data-stu-id="f6333-723">Updated cmdlet **Set-AzApiManagementPolicy** to accept policy in Non-Xml escaped 'format' using 'rawxml' and Xml escaped using 'xml'</span></span>
+* <span data-ttu-id="f6333-724">Cmdlet **New-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-724">Updated cmdlet **New-AzApiManagementApi**</span></span>
+    - <span data-ttu-id="f6333-725">Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver</span><span class="sxs-lookup"><span data-stu-id="f6333-725">To configure API with 'OpenId' authorization server.</span></span>
+    - <span data-ttu-id="f6333-726">Zum Erstellen einer API in einem „ApiVersionSet“</span><span class="sxs-lookup"><span data-stu-id="f6333-726">To create an API in an 'ApiVersionSet'</span></span>
+    - <span data-ttu-id="f6333-727">Zum Klonen einer API mithilfe von „SourceApiId“ und „SourceApiRevision“</span><span class="sxs-lookup"><span data-stu-id="f6333-727">To clone an API using 'SourceApiId' and 'SourceApiRevision'.</span></span>
+    - <span data-ttu-id="f6333-728">Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich</span><span class="sxs-lookup"><span data-stu-id="f6333-728">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span>
+* <span data-ttu-id="f6333-729">Cmdlet **Set-AzApiManagementApi** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-729">Updated cmdlet **Set-AzApiManagementApi**</span></span>
+    - <span data-ttu-id="f6333-730">Zum Konfigurieren der API mit dem „OpenId“-Autorisierungsserver</span><span class="sxs-lookup"><span data-stu-id="f6333-730">To configure API with 'OpenId' authorization server.</span></span>
+    - <span data-ttu-id="f6333-731">Zum Aktualisieren einer API in einem „ApiVersionSet“</span><span class="sxs-lookup"><span data-stu-id="f6333-731">To updated an API into an 'ApiVersionSet'</span></span>
+    - <span data-ttu-id="f6333-732">Möglichkeit zum Konfigurieren von „SubscriptionRequired“ im API-Bereich</span><span class="sxs-lookup"><span data-stu-id="f6333-732">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span>
+* <span data-ttu-id="f6333-733">Cmdlet **New-AzApiManagementRevision** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-733">Updated cmdlet **New-AzApiManagementRevision**</span></span>
+    - <span data-ttu-id="f6333-734">Zum Klonen (Kopiertags, Produkte, Vorgänge und Richtlinien) einer vorhandenen Version mithilfe von „SourceApiRevision“</span><span class="sxs-lookup"><span data-stu-id="f6333-734">To clone (copy tags, products, operations and policies) an existing revision using 'SourceApiRevision'.</span></span> <span data-ttu-id="f6333-735">Die neue Version übernimmt die „ApiId“ des übergeordneten Elements</span><span class="sxs-lookup"><span data-stu-id="f6333-735">The new Revision assumes the 'ApiId' of the parent.</span></span>
+    - <span data-ttu-id="f6333-736">Zum Bereitstellen einer „ApiRevisionDescription“</span><span class="sxs-lookup"><span data-stu-id="f6333-736">To provide an 'ApiRevisionDescription'</span></span>
+    - <span data-ttu-id="f6333-737">Zur Außerkraftsetzung der „ServiceUrl“ beim Klonen einer API</span><span class="sxs-lookup"><span data-stu-id="f6333-737">To override the 'ServiceUrl' when cloning an API.</span></span>
+* <span data-ttu-id="f6333-738">Cmdlet **New-AzApiManagementIdentityProvider** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-738">Updated cmdlet **New-AzApiManagementIdentityProvider**</span></span>
+    - <span data-ttu-id="f6333-739">Zum Konfigurieren von „AAD“ oder „AADB2C“ mit einer „Authority“</span><span class="sxs-lookup"><span data-stu-id="f6333-739">To configure 'AAD' or 'AADB2C' with an 'Authority'</span></span>
+    - <span data-ttu-id="f6333-740">Zum Einrichten von „SignupPolicy“, „SigninPolicy“, „ProfileEditingPolicy“ und „PasswordResetPolicy“</span><span class="sxs-lookup"><span data-stu-id="f6333-740">To setup 'SignupPolicy', 'SigninPolicy', 'ProfileEditingPolicy' and 'PasswordResetPolicy'</span></span>
+* <span data-ttu-id="f6333-741">Cmdlet **New-AzApiManagementSubscription** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-741">Updated cmdlet **New-AzApiManagementSubscription**</span></span>
+    - <span data-ttu-id="f6333-742">Zum Berücksichtigen für das neue „SubscriptonModel“ mithilfe von „Scope“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="f6333-742">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
+    - <span data-ttu-id="f6333-743">Zum Berücksichtigen für das alte Abonnementmodell mithilfe von „ProductId“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="f6333-743">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
+    - <span data-ttu-id="f6333-744">Die Unterstützung zum Aktivieren von „AllowTracing“ auf Abonnementebene wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-744">Add support to enable 'AllowTracing' at the subscription level.</span></span>
+* <span data-ttu-id="f6333-745">Cmdlet **Set-AzApiManagementSubscription** wurde aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-745">Updated cmdlet **Set-AzApiManagementSubscription**</span></span>
+    - <span data-ttu-id="f6333-746">Zum Berücksichtigen für das neue „SubscriptonModel“ mithilfe von „Scope“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="f6333-746">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
+    - <span data-ttu-id="f6333-747">Zum Berücksichtigen für das alte Abonnementmodell mithilfe von „ProductId“ und „UserId“</span><span class="sxs-lookup"><span data-stu-id="f6333-747">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
+    - <span data-ttu-id="f6333-748">Die Unterstützung zum Aktivieren von „AllowTracing“ auf Abonnementebene wurde hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-748">Add support to enable 'AllowTracing' at the subscription level.</span></span>
+* <span data-ttu-id="f6333-749">Folgende Cmdlets wurden aktualisiert, um „ResourceId“ als Eingabe zu akzeptieren</span><span class="sxs-lookup"><span data-stu-id="f6333-749">Updated following cmdlets to accept 'ResourceId' as input</span></span>
+    - <span data-ttu-id="f6333-750">'New-AzApiManagementContext'</span><span class="sxs-lookup"><span data-stu-id="f6333-750">'New-AzApiManagementContext'</span></span>
+        > <span data-ttu-id="f6333-751">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span><span class="sxs-lookup"><span data-stu-id="f6333-751">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span></span>
+    - <span data-ttu-id="f6333-752">'Get-AzApiManagementApiRelease'</span><span class="sxs-lookup"><span data-stu-id="f6333-752">'Get-AzApiManagementApiRelease'</span></span>
+        > <span data-ttu-id="f6333-753">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span><span class="sxs-lookup"><span data-stu-id="f6333-753">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span></span>
+    - <span data-ttu-id="f6333-754">'Get-AzApiManagementApiVersionSet'</span><span class="sxs-lookup"><span data-stu-id="f6333-754">'Get-AzApiManagementApiVersionSet'</span></span>
+        > <span data-ttu-id="f6333-755">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span><span class="sxs-lookup"><span data-stu-id="f6333-755">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span></span>
+    - <span data-ttu-id="f6333-756">'Get-AzApiManagementAuthorizationServer'</span><span class="sxs-lookup"><span data-stu-id="f6333-756">'Get-AzApiManagementAuthorizationServer'</span></span>
+    - <span data-ttu-id="f6333-757">'Get-AzApiManagementBackend'</span><span class="sxs-lookup"><span data-stu-id="f6333-757">'Get-AzApiManagementBackend'</span></span>
+        > <span data-ttu-id="f6333-758">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span><span class="sxs-lookup"><span data-stu-id="f6333-758">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span></span>
+    - <span data-ttu-id="f6333-759">'Get-AzApiManagementCertificate'</span><span class="sxs-lookup"><span data-stu-id="f6333-759">'Get-AzApiManagementCertificate'</span></span>
+    - <span data-ttu-id="f6333-760">'Remove-AzApiManagementApiVersionSet'</span><span class="sxs-lookup"><span data-stu-id="f6333-760">'Remove-AzApiManagementApiVersionSet'</span></span>
+    - <span data-ttu-id="f6333-761">'Remove-AzApiManagementSubscription'</span><span class="sxs-lookup"><span data-stu-id="f6333-761">'Remove-AzApiManagementSubscription'</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-762">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-762">Az.Automation</span></span>
+* <span data-ttu-id="f6333-763">Get-AzAutomationJobOutputRecord wurde aktualisiert, um JSON- und Textdatensatzwerte zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="f6333-763">Updated Get-AzAutomationJobOutputRecord to handle JSON and Text record values.</span></span>
+    - <span data-ttu-id="f6333-764">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/7977</span><span class="sxs-lookup"><span data-stu-id="f6333-764">Fix for issue https://github.com/Azure/azure-powershell/issues/7977</span></span>
+    - <span data-ttu-id="f6333-765">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8600</span><span class="sxs-lookup"><span data-stu-id="f6333-765">Fix for issue https://github.com/Azure/azure-powershell/issues/8600</span></span>
+* <span data-ttu-id="f6333-766">Das Verhalten von Start-AzAutomationDscCompilationJob wurde geändert, um den Auftrag einfach zu starten, anstatt auf dessen Abschluss zu warten</span><span class="sxs-lookup"><span data-stu-id="f6333-766">Changed behavior for Start-AzAutomationDscCompilationJob to just start the job instead of waiting for its completion.</span></span>
+    * <span data-ttu-id="f6333-767">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8347</span><span class="sxs-lookup"><span data-stu-id="f6333-767">Fix for issue https://github.com/Azure/azure-powershell/issues/8347</span></span>
+* <span data-ttu-id="f6333-768">Fehlerbehebung für Get-AzAutomationDscNode, wenn die Verwendung von „-Name“ alle Knoten zurückgibt</span><span class="sxs-lookup"><span data-stu-id="f6333-768">Fix for Get-AzAutomationDscNode when using -Name returns all node.</span></span> <span data-ttu-id="f6333-769">Jetzt wird nur der übereinstimmende Knoten zurückgegeben</span><span class="sxs-lookup"><span data-stu-id="f6333-769">Now it returns matching node only.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-770">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-770">Az.Compute</span></span>
+* <span data-ttu-id="f6333-771">Parameter „ProtectFromScaleIn“ und „ProtectFromScaleSetAction“ wurden zum Cmdlet „Update-AzVmssVM“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-771">Add ProtectFromScaleIn and ProtectFromScaleSetAction parameters to Update-AzVmssVM cmdlet.</span></span>
+* <span data-ttu-id="f6333-772">Der jetzt festgelegte wimple-Parameter „New-AzVM“ verwendet standardmäßig einen verfügbaren Standort, wenn „East US“ (USA, Osten) nicht unterstützt wird</span><span class="sxs-lookup"><span data-stu-id="f6333-772">New-AzVM wimple parameter set now uses by default an available location if 'East US' is not supported</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-773">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-773">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-774">Das ADLS-SDK wurde aktualisiert, um „HttpClient“ zu verwenden und Datenebenentests wurden mit dem Azure-Framework integriert</span><span class="sxs-lookup"><span data-stu-id="f6333-774">Update the ADLS sdk to use httpclient, integrate dataplane testing with azure framework</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-775">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-775">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-776">Fehlerbehebung bei falschen Parameternamen in Hilfebeispielen</span><span class="sxs-lookup"><span data-stu-id="f6333-776">Fixed incorrect parameter names in help examples</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-777">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-777">Az.Network</span></span>
+* <span data-ttu-id="f6333-778">DisableBgpRoutePropagation-Flag wurde zur Ausgabe der effektiven Routentabelle hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-778">Add DisableBgpRoutePropagation flag to Effective Route Table output</span></span>
+    - <span data-ttu-id="f6333-779">Aktualisiertes Cmdlet:</span><span class="sxs-lookup"><span data-stu-id="f6333-779">Updated cmdlet:</span></span>
+        - <span data-ttu-id="f6333-780">Get-AzEffectiveRouteTable</span><span class="sxs-lookup"><span data-stu-id="f6333-780">Get-AzEffectiveRouteTable</span></span>
+* <span data-ttu-id="f6333-781">Fehlerbehebung von doppeltem Bindestrich in Dokumentation von New-AzApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="f6333-781">Fix double dash in New-AzApplicationGatewayTrustedRootCertificate documentation</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-782">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-782">Az.Resources</span></span>
+* <span data-ttu-id="f6333-783">Neues Cmdlet „Get-AzureRmDenyAssignment“ zum Abrufen von Ablehnungszuweisungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-783">Add new cmdlet Get-AzureRmDenyAssignment for retrieving deny assignments</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-784">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-784">Az.Sql</span></span>
+* <span data-ttu-id="f6333-785">„Advanced Threat Protection“-Cmdlets in „Advanced Data Security“ umbenennen und Sicherheitsrisikobewertung standardmäßig aktivieren</span><span class="sxs-lookup"><span data-stu-id="f6333-785">Rename Advanced Threat Protection cmdlets to Advanced Data Security and enable Vulnerability Assessment by default</span></span>
+
+## <a name="200---may-2019"></a><span data-ttu-id="f6333-786">2.0.0: Mai 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-786">2.0.0 - May 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-787">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-787">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-788">Authentifizierungsbibliothek aktualisiert, um ADFS-Probleme mit der Authentifizierung per Benutzername/Kennwort zu beheben</span><span class="sxs-lookup"><span data-stu-id="f6333-788">Update Authentication Library to fix ADFS issues with username/password auth</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-789">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-789">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-790">Ausschließliche Anzeige des Bing-Haftungsausschlusses für Bing-Suchdienste</span><span class="sxs-lookup"><span data-stu-id="f6333-790">Only display Bing disclaimer for Bing Search Services.</span></span>
+* <span data-ttu-id="f6333-791">Fehler behoben, der zu einem Fehler bei der Kontoerstellung führte</span><span class="sxs-lookup"><span data-stu-id="f6333-791">Improve error when create account failed.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-792">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-792">Az.Compute</span></span>
+* <span data-ttu-id="f6333-793">Feature für die Näherungsplatzierungsgruppe</span><span class="sxs-lookup"><span data-stu-id="f6333-793">Proximity placement group feature.</span></span>
+    - <span data-ttu-id="f6333-794">Die folgenden neuen Cmdlets wurden hinzugefügt:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span><span class="sxs-lookup"><span data-stu-id="f6333-794">The following new cmdlets are added:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span></span>
+    - <span data-ttu-id="f6333-795">Der neue Parameter „ProximityPlacementGroupId“ wurde zu den folgenden Cmdlets hinzugefügt:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-795">The new parameter, ProximityPlacementGroupId, is added to the following cmdlets:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span></span>
+* <span data-ttu-id="f6333-796">Der Parameter „StorageAccountType“ wurde zu „New-AzGalleryImageVersion“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-796">StorageAccountType parameter is added to New-AzGalleryImageVersion.</span></span>
+* <span data-ttu-id="f6333-797">„TargetRegion“ von „New-AzGalleryImageVersion“ kann „StorageAccountType“ enthalten.</span><span class="sxs-lookup"><span data-stu-id="f6333-797">TargetRegion of New-AzGalleryImageVersion can contain StorageAccountType.</span></span>
+* <span data-ttu-id="f6333-798">Switch-Parameter „SkipShutdown“ wurde zu „Stop-AzVM“ und „Stop-AzVmss“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-798">SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss</span></span>
+* <span data-ttu-id="f6333-799">Aktuelle Änderungen</span><span class="sxs-lookup"><span data-stu-id="f6333-799">Breaking changes</span></span>
+    - <span data-ttu-id="f6333-800">„Set-AzVMBootDiagnostics“ in „Set-AzVMBootDiagnostic“ geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-800">Set-AzVMBootDiagnostics is changed to Set-AzVMBootDiagnostic.</span></span>
+    - <span data-ttu-id="f6333-801">„Export-AzLogAnalyticThrottledRequests“ in „Export-AzLogAnalyticThrottledRequests“ geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-801">Export-AzLogAnalyticThrottledRequests is changed to Export-AzLogAnalyticThrottledRequests.</span></span>
+
+#### <a name="azdeploymentmanager"></a><span data-ttu-id="f6333-802">Az.DeploymentManager</span><span class="sxs-lookup"><span data-stu-id="f6333-802">Az.DeploymentManager</span></span>
+* <span data-ttu-id="f6333-803">Erste allgemein verfügbare Version der Azure-Bereitstellungs-Manager-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-803">First Generally Available release of Azure Deployment Manager cmdlets</span></span>
+
+#### <a name="azdns"></a><span data-ttu-id="f6333-804">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="f6333-804">Az.Dns</span></span>
+* <span data-ttu-id="f6333-805">Automatische Delegierung des DNS-Namenservers</span><span class="sxs-lookup"><span data-stu-id="f6333-805">Automatic DNS NameServer Delegation</span></span>
+    - <span data-ttu-id="f6333-806">Das Cmdlet zum Erstellen einer DNS-Zone akzeptiert den übergeordneten Zonennamen als zusätzlichen optionalen Parameter.</span><span class="sxs-lookup"><span data-stu-id="f6333-806">Create DNS zone cmdlet accepts parent zone name as additional optional parameter.</span></span>
+    - <span data-ttu-id="f6333-807">NS-Einträge in der übergeordneten Zone für neu erstellte untergeordnete Zone hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-807">Adds NS records in the parent zone for newly created child zone.</span></span>
+
+#### <a name="azfrontdoor"></a><span data-ttu-id="f6333-808">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="f6333-808">Az.FrontDoor</span></span>
+* <span data-ttu-id="f6333-809">Erste allgemein verfügbare Version der Azure Frontdoor-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-809">First Generally Available Release of Azure FrontDoor cmdlets</span></span>
+* <span data-ttu-id="f6333-810">WAF-Cmdlets so umbenannt, dass sie „Waf“ enthalten</span><span class="sxs-lookup"><span data-stu-id="f6333-810">Rename WAF cmdlets to include 'Waf'</span></span>
     - `Get-AzFrontDoorFireWallPolicy --> Get-AzFrontDoorWafPolicy`
     - `New-AzFrontDoorCustomRuleObject --> New-AzFrontDoorWafCustomRuleObject`
     - `New-AzFrontDoorFireWallPolicy --> New-AzFrontDoorWafPolicy`
@@ -839,919 +840,919 @@ ms.locfileid: "89244329"
     - `New-AzFrontDoorRuleGroupOverrideObject --> New-AzFrontDoorWafRuleGroupOverrideObject`
     - `Remove-AzFrontDoorFireWallPolicy --> Remove-AzFrontDoorWafPolicy`
     - `Update-AzFrontDoorFireWallPolicy --> Update-AzFrontDoorWafPolicy`
-#### <a name="azhdinsight"></a><span data-ttu-id="ca33d-811">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="ca33d-811">Az.HDInsight</span></span>
-* <span data-ttu-id="ca33d-812">Zwei Cmdlets entfernt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-812">Removed two cmdlets:</span></span>
-    - <span data-ttu-id="ca33d-813">Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="ca33d-813">Grant-AzHDInsightHttpServicesAccess</span></span>
-    - <span data-ttu-id="ca33d-814">Revoke-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="ca33d-814">Revoke-AzHDInsightHttpServicesAccess</span></span>
-* <span data-ttu-id="ca33d-815">Neues Cmdlet „Set-AzHDInsightGatewayCredential“ hinzugefügt, um „Grant-AzHDInsightHttpServicesAccess“ zu ersetzen</span><span class="sxs-lookup"><span data-stu-id="ca33d-815">Added a new cmdlet Set-AzHDInsightGatewayCredential to replace Grant-AzHDInsightHttpServicesAccess</span></span>
-* <span data-ttu-id="ca33d-816">Cmdlet „Get-AzHDInsightJobOutput“ aktualisiert, um zwischen Leserrolle und HDInsight-Bedienerrolle zu unterscheiden:</span><span class="sxs-lookup"><span data-stu-id="ca33d-816">Update cmdlet Get-AzHDInsightJobOutput to distinguish reader role and hdinsight operator role:</span></span>
-    - <span data-ttu-id="ca33d-817">Benutzer mit der Rolle „Leser“ müssen den Parameter „DefaultStorageAccountKey“ explizit angeben, andernfalls treten Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="ca33d-817">Users with reader role need to specify 'DefaultStorageAccountKey' parameter explicitly, otherwise error occurs.</span></span>
-    - <span data-ttu-id="ca33d-818">Benutzer mit der Rolle des HDInsight-Bedieners sind nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-818">Users with hdinsight operator role will not be affected.</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-819">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-819">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-820">Neue Cmdlets für SQR-API (Scheduled Query Rule, geplante Abfrageregel)</span><span class="sxs-lookup"><span data-stu-id="ca33d-820">New cmdlets for SQR API (Scheduled Query Rule)</span></span>
-    - <span data-ttu-id="ca33d-821">New-AzScheduledQueryRuleAlertingAction</span><span class="sxs-lookup"><span data-stu-id="ca33d-821">New-AzScheduledQueryRuleAlertingAction</span></span>
-    - <span data-ttu-id="ca33d-822">New-AzScheduledQueryRuleAznsActionGroup</span><span class="sxs-lookup"><span data-stu-id="ca33d-822">New-AzScheduledQueryRuleAznsActionGroup</span></span>
-    - <span data-ttu-id="ca33d-823">New-AzScheduledQueryRuleLogMetricTrigger</span><span class="sxs-lookup"><span data-stu-id="ca33d-823">New-AzScheduledQueryRuleLogMetricTrigger</span></span>
-    - <span data-ttu-id="ca33d-824">New-AzScheduledQueryRuleSchedule</span><span class="sxs-lookup"><span data-stu-id="ca33d-824">New-AzScheduledQueryRuleSchedule</span></span>
-    - <span data-ttu-id="ca33d-825">New-AzScheduledQueryRuleSource</span><span class="sxs-lookup"><span data-stu-id="ca33d-825">New-AzScheduledQueryRuleSource</span></span>
-    - <span data-ttu-id="ca33d-826">New-AzScheduledQueryRuleTriggerCondition</span><span class="sxs-lookup"><span data-stu-id="ca33d-826">New-AzScheduledQueryRuleTriggerCondition</span></span>
-    - <span data-ttu-id="ca33d-827">New-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-827">New-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="ca33d-828">Get-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-828">Get-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="ca33d-829">Set-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-829">Set-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="ca33d-830">Update-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-830">Update-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="ca33d-831">Remove-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-831">Remove-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="ca33d-832">[Weitere Informationen](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) zur SQR-API</span><span class="sxs-lookup"><span data-stu-id="ca33d-832">[More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API</span></span>
-    - <span data-ttu-id="ca33d-833">„Az.Monitor.md“ aktualisiert, um Cmdlets für metrikbasierte GenV2-Warnungsregel (nicht klassisch) einzuschließen</span><span class="sxs-lookup"><span data-stu-id="ca33d-833">Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-834">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-834">Az.Network</span></span>
-* <span data-ttu-id="ca33d-835">Unterstützung für NAT-Gatewayressource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-835">Add support for Nat Gateway Resource</span></span>
-    - <span data-ttu-id="ca33d-836">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-836">New cmdlets</span></span>
-        - <span data-ttu-id="ca33d-837">New-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-837">New-AzNatGateway</span></span>
-        - <span data-ttu-id="ca33d-838">Get-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-838">Get-AzNatGateway</span></span>
-        - <span data-ttu-id="ca33d-839">Set-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-839">Set-AzNatGateway</span></span>
-        - <span data-ttu-id="ca33d-840">Remove-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-840">Remove-AzNatGateway</span></span>
-   - <span data-ttu-id="ca33d-841">Aktualisierte Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-841">Updated cmdlets</span></span>
-        - <span data-ttu-id="ca33d-842">New-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="ca33d-842">New-AzureVirtualNetworkSubnetConfigCommand</span></span>
-        - <span data-ttu-id="ca33d-843">Add-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="ca33d-843">Add-AzureVirtualNetworkSubnetConfigCommand</span></span>
-* <span data-ttu-id="ca33d-844">Folgende Befehle für das Feature aktualisiert: Benutzerdefinierte Routen für Brooklyn-Gateway festgelegt/entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-844">Updated below commands for feature: Custom routes set/remove on Brooklyn Gateway.</span></span>
-    - <span data-ttu-id="ca33d-845">„New-AzVirtualNetworkGateway“ aktualisiert: Zusätzlicher optionaler Parameter „-CustomRoute“ hinzugefügt, um die Adresspräfixe als benutzerdefinierte Routen für das Gateway festlegen zu können.</span><span class="sxs-lookup"><span data-stu-id="ca33d-845">Updated New-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
-    - <span data-ttu-id="ca33d-846">„Set-AzVirtualNetworkGateway“ aktualisiert: Zusätzlicher optionaler Parameter „-CustomRoute“ hinzugefügt, um die Adresspräfixe als benutzerdefinierte Routen für das Gateway festlegen zu können.</span><span class="sxs-lookup"><span data-stu-id="ca33d-846">Updated Set-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="ca33d-847">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-847">Az.PolicyInsights</span></span>
-* <span data-ttu-id="ca33d-848">Unterstützung für die Abfrage von Richtlinienauswertungsdetails</span><span class="sxs-lookup"><span data-stu-id="ca33d-848">Support for querying policy evaluation details.</span></span>
-    - <span data-ttu-id="ca33d-849">Parameter „-Expand“ zu „Get-AzPolicyState“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-849">Add '-Expand' parameter to Get-AzPolicyState.</span></span> <span data-ttu-id="ca33d-850">Unterstützung für „-Expand PolicyEvaluationDetails“</span><span class="sxs-lookup"><span data-stu-id="ca33d-850">Support '-Expand PolicyEvaluationDetails'.</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-851">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-851">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-852">Unterstützung für abonnementübergreifende Azure-zu-Azure-Sitewiederherstellung</span><span class="sxs-lookup"><span data-stu-id="ca33d-852">Support for Cross subscription Azure to Azure site recovery.</span></span>
-* <span data-ttu-id="ca33d-853">Markierung anstehender wichtiger Änderungen für Azure Site Recovery</span><span class="sxs-lookup"><span data-stu-id="ca33d-853">Marking upcoming breaking changes for Azure Site Recovery.</span></span>
-* <span data-ttu-id="ca33d-854">Fehlerbehebung für Azure Site Recovery-Wiederherstellungsplan und -Aktionsplan</span><span class="sxs-lookup"><span data-stu-id="ca33d-854">Fix for Azure Site Recovery recovery plan end action plan.</span></span>
-* <span data-ttu-id="ca33d-855">Fehlerbehebung für die Aktualisierung der Azure Site Recovery-Netzwerkzuordnung für Azure zu Azure</span><span class="sxs-lookup"><span data-stu-id="ca33d-855">Fix for Azure Site Recovery Update network mapping for Azure to Azure.</span></span>
-* <span data-ttu-id="ca33d-856">Fehlerbehebung für die Aktualisierung der Azure Site Recovery-Schutzrichtung für Azure zu Azure für verwaltete Datenträger</span><span class="sxs-lookup"><span data-stu-id="ca33d-856">Fix for Azure Site Recovery update protection direction for Azure to Azure for managed disk.</span></span>
-* <span data-ttu-id="ca33d-857">Weitere kleinere Korrekturen</span><span class="sxs-lookup"><span data-stu-id="ca33d-857">Other minor fixes.</span></span>
-
-#### <a name="azrelay"></a><span data-ttu-id="ca33d-858">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="ca33d-858">Az.Relay</span></span>
-* <span data-ttu-id="ca33d-859">Korrektur von Tippfehlern in Kundennachrichten</span><span class="sxs-lookup"><span data-stu-id="ca33d-859">Fix typos in customer-facing messages</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-860">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-860">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-861">Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-861">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-862">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-862">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-863">Upgrade auf Speicherclientbibliothek 10.0.1 (Namespace aller Objekte von diesem SDK von „Microsoft.WindowsAzure.Storage. *“ in „Microsoft.Azure.Storage.* “ geändert)</span><span class="sxs-lookup"><span data-stu-id="ca33d-863">Upgrade to Storage Client Library 10.0.1 (the namespace of all objects from this SDK change from 'Microsoft.WindowsAzure.Storage.*' to 'Microsoft.Azure.Storage.*')</span></span>
-* <span data-ttu-id="ca33d-864">Upgrade auf Microsoft.Azure.Management.Storage 11.0.0, um die neue API-Version 2019-04-01 zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="ca33d-864">Upgrade to Microsoft.Azure.Management.Storage 11.0.0, to support new API version 2019-04-01.</span></span>
-* <span data-ttu-id="ca33d-865">Art des Standardspeicherkontos bei der Speicherkontoerstellung von „Storage“ in „StorageV2“ geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-865">The default Storage account Kind in Create Storage account change from 'Storage' to 'StorageV2'</span></span>
-    - <span data-ttu-id="ca33d-866">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-866">New-AzStorageAccount</span></span>
-* <span data-ttu-id="ca33d-867">Vom Speicherkonto-Cmdlet ausgegebener SKU-Name (Sku.Name) durch Hinzufügen eines Unterstrichs an SKU-Eingabename angepasst (Beispiel: „StandardLRS“ > „Standard_LRS“).</span><span class="sxs-lookup"><span data-stu-id="ca33d-867">Change the Storage account cmdlet output Sku.Name to be aligned with input SkuName by add '-', like 'StandardLRS' change to 'Standard_LRS'</span></span>
-    - <span data-ttu-id="ca33d-868">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-868">New-AzStorageAccount</span></span>
-    - <span data-ttu-id="ca33d-869">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-869">Get-AzStorageAccount</span></span>
-    - <span data-ttu-id="ca33d-870">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-870">Set-AzStorageAccount</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-871">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-871">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-872">Die Eigenschaft „Kind“ wird nun für PSSite-Objekte festgelegt, die von „Get-AzWebApp“ zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-872">'Kind' property will now be set for PSSite objects returned by Get-AzWebApp</span></span>
-* <span data-ttu-id="ca33d-873">„Get-AzWebApp\*Metrics“ und „Get-AzAppServicePlanMetrics“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-873">Get-AzWebApp\*Metrics and Get-AzAppServicePlanMetrics marked deprecated</span></span>
-
-## <a name="180---april-2019"></a><span data-ttu-id="ca33d-874">1.8.0: April 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-874">1.8.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="ca33d-875">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="ca33d-875">Highlights since the last major release</span></span>
-* <span data-ttu-id="ca33d-876">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="ca33d-876">General availability of `Az` module</span></span>
-* <span data-ttu-id="ca33d-877">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="ca33d-877">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="ca33d-878">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="ca33d-878">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="ca33d-879">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-879">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="ca33d-880">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-880">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="ca33d-881">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-881">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="ca33d-882">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-882">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-883">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-883">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-884">„Uninstall-AzureRm“ aktualisiert, um Module unter Mac ordnungsgemäß zu löschen</span><span class="sxs-lookup"><span data-stu-id="ca33d-884">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
-
-#### <a name="azbatch"></a><span data-ttu-id="ca33d-885">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="ca33d-885">Az.Batch</span></span>
-* <span data-ttu-id="ca33d-886">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-886">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="ca33d-887">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="ca33d-887">Az.Cdn</span></span>
-* <span data-ttu-id="ca33d-888">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-888">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-889">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-889">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-890">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-890">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-891">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-891">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-892">Problem mit der AEM-Installation behoben, wenn die Ressourcen-IDs von Datenträgern Ressourcengruppen in Kleinbuchstaben enthielten</span><span class="sxs-lookup"><span data-stu-id="ca33d-892">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
-* <span data-ttu-id="ca33d-893">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-893">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-894">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-894">Fix documentation for wildcards</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-895">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-895">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-896">„SsisProperties“ hinzugefügt, falls „NodeCount“ für verwaltete Integration Runtime nicht NULL ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-896">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-897">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-897">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-898">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-898">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="ca33d-899">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="ca33d-899">Az.EventGrid</span></span>
-* <span data-ttu-id="ca33d-900">Hilfetext für Endpunkt aktualisiert, um anzugeben, dass Ressourcen erstellt werden müssen, bevor die Cmdlets zum Erstellen/Aktualisieren von Ereignisabonnements verwendet werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-900">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="ca33d-901">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-901">Az.EventHub</span></span>
-* <span data-ttu-id="ca33d-902">Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-902">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
-
-#### <a name="azhdinsight"></a><span data-ttu-id="ca33d-903">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="ca33d-903">Az.HDInsight</span></span>
-* <span data-ttu-id="ca33d-904">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-904">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-905">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-905">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-906">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-906">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="ca33d-907">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-907">Az.KeyVault</span></span>
-* <span data-ttu-id="ca33d-908">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-908">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-909">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-909">Fix documentation for wildcards</span></span>
-
-#### <a name="azmachinelearning"></a><span data-ttu-id="ca33d-910">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="ca33d-910">Az.MachineLearning</span></span>
-* <span data-ttu-id="ca33d-911">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-911">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmedia"></a><span data-ttu-id="ca33d-912">Az.Media</span><span class="sxs-lookup"><span data-stu-id="ca33d-912">Az.Media</span></span>
-* <span data-ttu-id="ca33d-913">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-913">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-914">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-914">Az.Monitor</span></span>
-  * <span data-ttu-id="ca33d-915">Neue Cmdlets für metrikbasierte GenV2-Warnungsregel (nicht klassisch)</span><span class="sxs-lookup"><span data-stu-id="ca33d-915">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
-      - <span data-ttu-id="ca33d-916">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="ca33d-916">New-AzMetricAlertRuleV2DimensionSelection</span></span>
-      - <span data-ttu-id="ca33d-917">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="ca33d-917">New-AzMetricAlertRuleV2Criteria</span></span>
-      - <span data-ttu-id="ca33d-918">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="ca33d-918">Remove-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="ca33d-919">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="ca33d-919">Get-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="ca33d-920">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="ca33d-920">Add-AzMetricAlertRuleV2</span></span>
-  * <span data-ttu-id="ca33d-921">Monitor SDK auf Version 0.22.0-preview aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-921">Updated Monitor SDK to version 0.22.0-preview</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-922">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-922">Az.Network</span></span>
-* <span data-ttu-id="ca33d-923">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-923">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-924">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-924">Fix documentation for wildcards</span></span>
-
-#### <a name="aznotificationhubs"></a><span data-ttu-id="ca33d-925">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="ca33d-925">Az.NotificationHubs</span></span>
-* <span data-ttu-id="ca33d-926">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-926">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-927">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-927">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-928">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-928">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azpowerbiembedded"></a><span data-ttu-id="ca33d-929">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="ca33d-929">Az.PowerBIEmbedded</span></span>
-* <span data-ttu-id="ca33d-930">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-930">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-931">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-931">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-932">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-932">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-933">Tabellenformat für SQL auf Azure-VM aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-933">Updated table format for SQL in azure VM</span></span>
-* <span data-ttu-id="ca33d-934">Alternative Methode zum Abrufen des Speicherorts in „AzureFileShare“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-934">Added alternate method to fetch location in AzureFileShare</span></span>
-* <span data-ttu-id="ca33d-935">„ScheduleRunDays“ in SchedulePolicy-Objekt gemäß Zeitzone aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-935">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
-
-#### <a name="azrediscache"></a><span data-ttu-id="ca33d-936">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="ca33d-936">Az.RedisCache</span></span>
-* <span data-ttu-id="ca33d-937">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-937">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-938">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-938">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-939">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-939">Fix documentation for wildcards</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-940">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-940">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-941">Abhängigkeit vom Monitor SDK durch allgemeinen Code ersetzt</span><span class="sxs-lookup"><span data-stu-id="ca33d-941">Replace dependency on Monitor SDK with common code</span></span>
-* <span data-ttu-id="ca33d-942">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-942">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-943">Verbesserter Prozess für Klassifizierung mehrerer Spalten</span><span class="sxs-lookup"><span data-stu-id="ca33d-943">Enhanced process of multiple columns classification.</span></span>
-* <span data-ttu-id="ca33d-944">SKU-Eigenschaften (SKU-Name, Familie, Kapazität) in Antwort von „Get-AzSqlServerServiceObjective“ aufgenommen und standardmäßig als Tabelle formatiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-944">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
-* <span data-ttu-id="ca33d-945">Möglichkeit zum Ausführen von „Get-AzSqlServerServiceObjective“ nach Standort, ohne dass bereits ein Server in der Region vorhanden sein muss</span><span class="sxs-lookup"><span data-stu-id="ca33d-945">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
-* <span data-ttu-id="ca33d-946">Unterstützung für Zeitzonenparameter bei der Erstellung einer verwalteten Instanz</span><span class="sxs-lookup"><span data-stu-id="ca33d-946">Support for time zone parameter in Managed Instance create.</span></span>
-* <span data-ttu-id="ca33d-947">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-947">Fix documentation for wildcards</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-948">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-948">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-949">„Set-AzWebApp“ und „Set-AzWebAppSlot“ korrigiert, sodass die Tags bei der Ausführung nicht entfernt werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-949">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
-* <span data-ttu-id="ca33d-950">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ca33d-950">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="ca33d-951">WebSites SDK aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-951">Updated the WebSites SDK.</span></span>
-* <span data-ttu-id="ca33d-952">AdminSiteName-Eigenschaft aus „PSAppServicePlan“ entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-952">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
-
-## <a name="170---april-2019"></a><span data-ttu-id="ca33d-953">1.7.0: April 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-953">1.7.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="ca33d-954">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="ca33d-954">Highlights since the last major release</span></span>
-* <span data-ttu-id="ca33d-955">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="ca33d-955">General availability of `Az` module</span></span>
-* <span data-ttu-id="ca33d-956">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="ca33d-956">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="ca33d-957">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="ca33d-957">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="ca33d-958">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-958">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="ca33d-959">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-959">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="ca33d-960">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-960">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="ca33d-961">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-961">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-962">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-962">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-963">„Add-AzEnvironment“ und „Set-AzEnvironment“ aktualisiert, um den Parameter „AzureAnalysisServicesEndpointResourceId“ zu akzeptieren</span><span class="sxs-lookup"><span data-stu-id="ca33d-963">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="ca33d-964">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-964">Az.AnalysisServices</span></span>
-* <span data-ttu-id="ca33d-965">ServiceClient wird in Cmdlets für die Datenebene verwendet, und die ursprüngliche Authentifizierungslogik wird entfernt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-965">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
-* <span data-ttu-id="ca33d-966">„Add-AzureASAccount“ wird als Wrapper von „Connect-AzAccount“ festgelegt, um einen Breaking Change zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-966">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-967">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-967">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-968">Fehler des Cmdlets „Fixed New-AzAutomationSoftwareUpdateConfiguration“ für Einschlüsse behoben.</span><span class="sxs-lookup"><span data-stu-id="ca33d-968">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="ca33d-969">Die Parameter „IncludedKbNumber“ und „IncludedPackageNameMask“ sollten nun funktionieren.</span><span class="sxs-lookup"><span data-stu-id="ca33d-969">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
-* <span data-ttu-id="ca33d-970">Fehlerbehebung für eine dynamische Gruppe der Azure Automation-Updateverwaltung</span><span class="sxs-lookup"><span data-stu-id="ca33d-970">Bug fix for azure automation update management dynamic group</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-971">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-971">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-972">Parameter „HyperVGeneration“ zu „New-AzDiskConfig“ und „New-AzSnapshotConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-972">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
-* <span data-ttu-id="ca33d-973">Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten</span><span class="sxs-lookup"><span data-stu-id="ca33d-973">Allow VM creation with galley image from other tenants.</span></span>
-
-#### <a name="azcontainerinstance"></a><span data-ttu-id="ca33d-974">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-974">Az.ContainerInstance</span></span>
-* <span data-ttu-id="ca33d-975">Problem im Parameter „-Command“ von „New-AzContainerGroup“ behoben, das dazu führte, dass ein nachgestelltes leeres Argument hinzugefügt wurde</span><span class="sxs-lookup"><span data-stu-id="ca33d-975">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-976">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-976">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-977">Version des ADF .NET SDK auf 3.0.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-977">Updated ADF .Net SDK version to 3.0.2</span></span>
-* <span data-ttu-id="ca33d-978">Cmdlet „Set-AzDataFactoryV2“ mit zusätzlichen Parametern für RepoConfiguration-Einstellungen aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-978">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-979">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-979">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-980">Verarbeitung von Anbietern für „Get-AzResource“ bei der Angabe der Parameter „-ResourceId“ oder „-ResourceGroupName“, „-Name“ und „-ResourceType“ verbessert</span><span class="sxs-lookup"><span data-stu-id="ca33d-980">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
-* <span data-ttu-id="ca33d-981">Fehlerbehandlung für „Test-AzDeployment“ und „Test-AzResourceGroupDeployment“ verbessert</span><span class="sxs-lookup"><span data-stu-id="ca33d-981">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
-    - <span data-ttu-id="ca33d-982">Behandlung von außerhalb der Bereitstellungsüberprüfung aufgetretenen Fehlern und stattdessen Aufnahme in die Ausgabe des Befehls</span><span class="sxs-lookup"><span data-stu-id="ca33d-982">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
-    - <span data-ttu-id="ca33d-983">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="ca33d-983">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-* <span data-ttu-id="ca33d-984">Switch-Parameter „-IgnoreDynamicParameters“ zu Bereitstellungs-Cmdlets hinzugefügt, um Aufforderung in Skript- und Auftragsszenarien zu überspringen</span><span class="sxs-lookup"><span data-stu-id="ca33d-984">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
-    - <span data-ttu-id="ca33d-985">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="ca33d-985">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-986">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-986">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-987">Unterstützung für Klassifizierung von Datenbankdaten</span><span class="sxs-lookup"><span data-stu-id="ca33d-987">Support Database Data Classification.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-988">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-988">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-989">Melden eines ausführlichen Fehlers beim Erstellen des Storage-Kontexts mit dem Parameter „-UseConnectedAccount“, aber ohne Azure-Anmeldekonto</span><span class="sxs-lookup"><span data-stu-id="ca33d-989">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
-    - <span data-ttu-id="ca33d-990">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="ca33d-990">New-AzStorageContext</span></span>
-* <span data-ttu-id="ca33d-991">Unterstützung für das Verwalten von Blobdiensteigenschaften eines bestimmten Storage-Kontos mit einer API der Verwaltungsebene</span><span class="sxs-lookup"><span data-stu-id="ca33d-991">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
-    - <span data-ttu-id="ca33d-992">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="ca33d-992">Update-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="ca33d-993">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="ca33d-993">Get-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="ca33d-994">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-994">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
-    - <span data-ttu-id="ca33d-995">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-995">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
-* <span data-ttu-id="ca33d-996">Unterstützung von „-AsJob“ für Cmdlets für den Upload und Download von Blobs und Dateien</span><span class="sxs-lookup"><span data-stu-id="ca33d-996">-AsJob support for Blob and file upload and download cmdlets</span></span>
-    - <span data-ttu-id="ca33d-997">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-997">Get-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="ca33d-998">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-998">Set-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="ca33d-999">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-999">Get-AzStorageFileContent</span></span>
-    - <span data-ttu-id="ca33d-1000">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="ca33d-1000">Set-AzStorageFileContent</span></span>
-
-## <a name="160---march-2019"></a><span data-ttu-id="ca33d-1001">1.6.0: März 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1001">1.6.0 - March 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="ca33d-1002">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="ca33d-1002">Highlights since the last major release</span></span>
-* <span data-ttu-id="ca33d-1003">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="ca33d-1003">General availability of `Az` module</span></span>
-* <span data-ttu-id="ca33d-1004">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1004">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="ca33d-1005">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1005">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="ca33d-1006">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1006">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="ca33d-1007">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1007">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="ca33d-1008">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1008">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1009">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1009">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-1010">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-1010">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1011">Änderung an der Azure Automation-Updateverwaltung, um die folgenden neuen Features zu unterstützen:</span><span class="sxs-lookup"><span data-stu-id="ca33d-1011">Azure automation update management change to support the following new features :</span></span>
-    * <span data-ttu-id="ca33d-1012">Dynamische Gruppierung</span><span class="sxs-lookup"><span data-stu-id="ca33d-1012">Dynamic grouping</span></span>
-    * <span data-ttu-id="ca33d-1013">Pre-/Post-Skripts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1013">Pre-Post script</span></span>
-    * <span data-ttu-id="ca33d-1014">Neustarteinstellung</span><span class="sxs-lookup"><span data-stu-id="ca33d-1014">Reboot Setting</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1015">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1015">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1016">Problem mit der Pfadauflösung in „Get-AzVmBootDiagnosticsData“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1016">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
-* <span data-ttu-id="ca33d-1017">Computeclientbibliothek auf 25.0.0. aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1017">Update Compute client library to 25.0.0.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="ca33d-1018">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-1018">Az.KeyVault</span></span>
-* <span data-ttu-id="ca33d-1019">Unterstützung für Platzhalterzeichen zu KeyVault-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1019">Added wildcard support to KeyVault cmdlets</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1020">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1020">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1021">Threat Intelligence-Unterstützung für Azure Firewall hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1021">Add Threat Intelligence support for Azure Firewall</span></span>
-* <span data-ttu-id="ca33d-1022">Ressource der obersten Ebene für Application Gateway-Firewallrichtlinie und benutzerdefinierte Regeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1022">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1023">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1023">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-1024">SnapshotRetentionInDays in Azure-VM-Richtlinie hinzugefügt, um sofortigen Wiederherstellungspunkt zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="ca33d-1024">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
-* <span data-ttu-id="ca33d-1025">Pipe-Unterstützung für das Aufheben der Registrierung eines Containers hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1025">Added pipe support for unregister container</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1026">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1026">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1027">Unterstützung für Platzhalterzeichen für Get-AzResource und Get-AzResourceGroup aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1027">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
-* <span data-ttu-id="ca33d-1028">Anmeldeinformationen aktualisiert, die beim Senden generischer Aufrufe an ARM verwendet werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1028">Update credentials used when making generic calls to ARM</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1029">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1029">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1030">Der Cmdlet-Parameter der Bedrohungserkennung (ExcludeDetectionType) wurde von „DetectionType“ in „string[]“ geändert, um ihn zukunftssicher zu machen, wenn neue DetectionTypes-Elemente hinzugefügt werden, und um AutoVervollständigen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1030">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-1031">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1031">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-1032">Unterstützung von Get-/Set-/Remove-Verwaltungsrichtlinien für Speicherkonto hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1032">Support Get/Set/Remove Management Policy on a Storage account</span></span>
-    - <span data-ttu-id="ca33d-1033">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1033">Set-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="ca33d-1034">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1034">Get-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="ca33d-1035">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1035">Remove-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="ca33d-1036">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="ca33d-1036">Add-AzStorageAccountManagementPolicyAction</span></span>
-    - <span data-ttu-id="ca33d-1037">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="ca33d-1037">New-AzStorageAccountManagementPolicyFilter</span></span>
-    - <span data-ttu-id="ca33d-1038">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-1038">New-AzStorageAccountManagementPolicyRule</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-1039">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1039">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-1040">ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte</span><span class="sxs-lookup"><span data-stu-id="ca33d-1040">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span>
-
-## <a name="150---march-2019"></a><span data-ttu-id="ca33d-1041">1.5.0: März 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1041">1.5.0 - March 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-1042">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1042">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-1043">Der Befehl „Register-AzModule“ wurde hinzugefügt, um von AutoRest generierte Cmdlets zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1043">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
-* <span data-ttu-id="ca33d-1044">Beispiele für „Connect-AzAccount“ wurden aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1044">Update examples for Connect-AzAccount</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-1045">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-1045">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1046">Problem behoben, das beim Abrufen bestimmter monatlicher Zeitpläne in verschiedenen Azure Automation-Cmdlets auftrat</span><span class="sxs-lookup"><span data-stu-id="ca33d-1046">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
-* <span data-ttu-id="ca33d-1047">„Get-AzAutomationDscNode“ wurde korrigiert, da nur die 20 obersten Knoten zurückgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1047">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="ca33d-1048">Jetzt werden alle Knoten zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1048">Now it returns all nodes</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="ca33d-1049">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="ca33d-1049">Az.Cdn</span></span>
-* <span data-ttu-id="ca33d-1050">Neue Powershell-Cmdlets zum Aktivieren/Deaktivieren von HTTPS für benutzerdefinierte Domänen hinzugefügt und alte Cmdlets außer Betrieb genommen</span><span class="sxs-lookup"><span data-stu-id="ca33d-1050">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1051">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1051">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1052">Unterstützung für Platzhalterzeichen zu Get-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1052">Add wildcard support to Get cmdlets</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-1053">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-1053">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-1054">Version des ADF .NET SDK auf 3.0.1 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1054">Updated ADF .Net SDK version to 3.0.1</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="ca33d-1055">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="ca33d-1055">Az.LogicApp</span></span>
-* <span data-ttu-id="ca33d-1056">„ListWorkflows“ wurde korrigiert, da nur die erste Seite mit Ergebnissen abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1056">Fix for ListWorkflows only retrieving the first page of results</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1057">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1057">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1058">Unterstützung für Platzhalterzeichen zu Network-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1058">Add wildcard support to Network cmdlets</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1059">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1059">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-1060">SQL Server jetzt in Azure-VM-Support enthalten</span><span class="sxs-lookup"><span data-stu-id="ca33d-1060">Added Sql server in Azure VM support</span></span>
-* <span data-ttu-id="ca33d-1061">SDK-Update</span><span class="sxs-lookup"><span data-stu-id="ca33d-1061">SDK Update</span></span>
-* <span data-ttu-id="ca33d-1062">VMappContainer-Überprüfung in „Get-ProtectableItem“ entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1062">Removed VMappContainer check in Get-ProtectableItem</span></span>
-* <span data-ttu-id="ca33d-1063">„Name“ und „ServerName“ als Parameter für „Get-ProtectableItem“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1063">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1064">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1064">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1065">Parameter `-TemplateObject` zu Bereitstellungs-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1065">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
-    - <span data-ttu-id="ca33d-1066">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/2933</span><span class="sxs-lookup"><span data-stu-id="ca33d-1066">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
-* <span data-ttu-id="ca33d-1067">Problem beim Piping des Ergebnisses von `Get-AzResource` an `Set-AzResource` behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1067">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
-    - <span data-ttu-id="ca33d-1068">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8240</span><span class="sxs-lookup"><span data-stu-id="ca33d-1068">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
-* <span data-ttu-id="ca33d-1069">Problem mit JSON-Datentypänderung beim Ausführen von `Set-AzResource` behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1069">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
-    - <span data-ttu-id="ca33d-1070">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7930</span><span class="sxs-lookup"><span data-stu-id="ca33d-1070">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1071">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1071">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1072">„AuditingEndpointsCommunicator“ wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1072">Updating AuditingEndpointsCommunicator.</span></span>
-    - <span data-ttu-id="ca33d-1073">Das Verhalten eines Grenzfalls beim Erstellen neuer Diagnoseeinstellungen wurde korrigiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1073">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-1074">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1074">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-1075">Unterstützung von „Kind BlockBlobStorage“ beim Erstellen eines Speicherkontos: New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="ca33d-1075">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
-
-## <a name="140---february-2019"></a><span data-ttu-id="ca33d-1076">1.4.0 – Februar 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1076">1.4.0 - February 2019</span></span>
-#### <a name="azanalysisservices"></a><span data-ttu-id="ca33d-1077">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1077">Az.AnalysisServices</span></span>
-* <span data-ttu-id="ca33d-1078">Cmdlet „AddAzureASAccount“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1078">Deprecated AddAzureASAccount cmdlet</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-1079">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-1079">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1080">Hilfe für „Import-AzAutomationDscNodeConfiguration“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1080">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
-* <span data-ttu-id="ca33d-1081">Überprüfung des Konfigurationsnamens zu Cmdlet „Import-AzAutomationDscConfiguration“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1081">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
-* <span data-ttu-id="ca33d-1082">Fehlerbehandlung für Cmdlet „Import-AzAutomationDscConfiguration“ verbessert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1082">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-1083">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1083">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-1084">„CustomSubdomainName“ als neuer optionaler Parameter für Cmdlet „New-AzCognitiveServicesAccount“ hinzugefügt, das zum Angeben der Unterdomäne für die Ressource verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1084">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1085">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1085">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1086">Problem mit ID-Parametersätzen behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1086">Fix issue with ID parameter sets</span></span>
-* <span data-ttu-id="ca33d-1087">„Get-AzVMExtension“ aktualisiert, sodass alle installierten Erweiterungen aufgelistet werden, wenn der Name-Parameter nicht angegeben ist</span><span class="sxs-lookup"><span data-stu-id="ca33d-1087">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
-* <span data-ttu-id="ca33d-1088">Parameter „Tag“ und „ResourceId“ zum Cmdlet „Update-AzImage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1088">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
-* <span data-ttu-id="ca33d-1089">„Get-AzVmssVM“ ohne Instanz-ID und mit „InstanceView“ können virtuelle VMSS-Computer mit Instanzansicht auflisten.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1089">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1090">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1090">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-1091">Cmdlets zum Auflisten und Wiederherstellen gelöschter ADL-Elemente hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1091">Add cmdlets for ADL deleted item enumerate and restore</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="ca33d-1092">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-1092">Az.EventHub</span></span>
-* <span data-ttu-id="ca33d-1093">Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1093">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="ca33d-1094">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-1094">Az.KeyVault</span></span>
-* <span data-ttu-id="ca33d-1095">Kennzeichnung in „Set-AzKeyVaultSecret“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1095">Fix tagging on Set-AzKeyVaultSecret</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="ca33d-1096">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="ca33d-1096">Az.LogicApp</span></span>
-* <span data-ttu-id="ca33d-1097">SKU „Basic“ für Integrationskonten hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1097">Add in Basic sku for Integration Accounts</span></span>
-* <span data-ttu-id="ca33d-1098">XSLT 2.0, XSLT 3.0 und Liquid-Zuordnungstypen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1098">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
-* <span data-ttu-id="ca33d-1099">Neue Cmdlets für Integrationskonto-Assemblys</span><span class="sxs-lookup"><span data-stu-id="ca33d-1099">New cmdlets for Integration Account Assemblies</span></span>
-    - <span data-ttu-id="ca33d-1100">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="ca33d-1100">Get-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="ca33d-1101">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="ca33d-1101">New-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="ca33d-1102">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="ca33d-1102">Remove-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="ca33d-1103">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="ca33d-1103">Set-AzIntegrationAccountAssembly</span></span>
-* <span data-ttu-id="ca33d-1104">Neue Cmdlets für Integrationskonto-Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1104">New cmdlets for Integration Account Batch Configuration</span></span>
-    - <span data-ttu-id="ca33d-1105">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1105">Get-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="ca33d-1106">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1106">New-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="ca33d-1107">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1107">Remove-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="ca33d-1108">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1108">Set-AzIntegrationAccountBatchConfiguration</span></span>
-* <span data-ttu-id="ca33d-1109">Logik-App-SDK auf Version 4.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1109">Update Logic App SDK to version 4.1.0</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="ca33d-1110">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-1110">Az.Monitor</span></span>
-* <span data-ttu-id="ca33d-1111">Hilfe für „Get-AzMetric“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1111">Update help for Get-AzMetric</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1112">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1112">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1113">Hilfebeispiel für „Add-AzApplicationGatewayCustomError“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1113">Update help example for Add-AzApplicationGatewayCustomError</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-1114">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-1114">Az.OperationalInsights</span></span>
-* <span data-ttu-id="ca33d-1115">Zusätzliche Unterstützung für Datenquelle von „New-ApplicationInsights“ und „Get-ApplicationInsights“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1115">Additional support for New and Get ApplicationInsights data source.</span></span>
-    - <span data-ttu-id="ca33d-1116">Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1116">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span>
-    - <span data-ttu-id="ca33d-1117">Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1117">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1118">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1118">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1119">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="ca33d-1119">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="ca33d-1120">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="ca33d-1120">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
-* <span data-ttu-id="ca33d-1121">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/6219</span><span class="sxs-lookup"><span data-stu-id="ca33d-1121">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
-* <span data-ttu-id="ca33d-1122">Fehler korrigiert, der die wiederholte Erstellung von „KeyCredentials“ verhindert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1122">Fix bug preventing repeat creation of KeyCredentials</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1123">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1123">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1124">Unterstützung für SQL DB Hyperscale-Tarif hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1124">Add support for SQL DB Hyperscale tier</span></span>
-* <span data-ttu-id="ca33d-1125">Fehler korrigiert, aufgrund dessen die Wiederherstellung wegen der Festlegung unnötiger Eigenschaften in der Wiederherstellungsanforderung fehlschlagen konnte</span><span class="sxs-lookup"><span data-stu-id="ca33d-1125">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-1126">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1126">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-1127">Beispiel in „Get-AzWebAppSlotMetrics“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1127">Correct example in Get-AzWebAppSlotMetrics</span></span>
-
-## <a name="130---february-2019"></a><span data-ttu-id="ca33d-1128">1.3.0: Februar 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1128">1.3.0 - February 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-1129">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1129">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-1130">Update auf die aktuelle Version von ClientRuntime durchgeführt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1130">Update to latest version of ClientRuntime</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="ca33d-1131">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1131">Az.AnalysisServices</span></span>
-<span data-ttu-id="ca33d-1132">Allgemeine Verfügbarkeit für Az.AnalysisServices-Modul</span><span class="sxs-lookup"><span data-stu-id="ca33d-1132">General availability for Az.AnalysisServices module.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1133">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1133">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1134">AEM-Erweiterung: Unterstützung für UltraSSD und P60-, P70- und P80-Datenträger hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1134">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
-* <span data-ttu-id="ca33d-1135">Hilfebeschreibung für „Set-AzVMBootDiagnostics“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1135">Update help description for Set-AzVMBootDiagnostics</span></span>
-* <span data-ttu-id="ca33d-1136">Hilfebeschreibung und Beispiel für „Update-AzImage“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1136">Update help description and example for Update-AzImage</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1137">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1137">Az.RecoveryServices</span></span>
-<span data-ttu-id="ca33d-1138">Allgemeine Verfügbarkeit für Az.RecoveryServices-Modul.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1138">General availability for Az.RecoveryServices module.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1139">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1139">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1140">Kennzeichnung für Ressourcengruppen korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1140">Fix tagging for resource groups</span></span>
-    - <span data-ttu-id="ca33d-1141">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="ca33d-1141">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="ca33d-1142">Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1142">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span>
-    - <span data-ttu-id="ca33d-1143">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="ca33d-1143">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1144">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1144">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1145">Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1145">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
-* <span data-ttu-id="ca33d-1146">Problem behoben, bei dem eine fehlende Anmeldung am Azure-Konto bei der Ausführung von SQL-Cmdlets zu einer nullref-Ausnahme führt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1146">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
-* <span data-ttu-id="ca33d-1147">nullref-Ausnahme in Get-AzSqlCapability korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1147">Fixed null ref exception in Get-AzSqlCapability</span></span>
-
-## <a name="121---january-2019"></a><span data-ttu-id="ca33d-1148">1.2.1: Januar 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1148">1.2.1 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-1149">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1149">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-1150">Release mit richtiger Version der Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="ca33d-1150">Release with correct version of Authentication</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="ca33d-1151">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1151">Az.AnalysisServices</span></span>
-* <span data-ttu-id="ca33d-1152">Release mit aktualisierter Authentifizierungsabhängigkeit</span><span class="sxs-lookup"><span data-stu-id="ca33d-1152">Release with updated Authentication dependency</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1153">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1153">Az.RecoveryServices</span></span>
-* <span data-ttu-id="ca33d-1154">Release mit aktualisierter Authentifizierungsabhängigkeit</span><span class="sxs-lookup"><span data-stu-id="ca33d-1154">Release with updated Authentication dependency</span></span>
-
-## <a name="120---january-2019"></a><span data-ttu-id="ca33d-1155">1.2.0: Januar 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1155">1.2.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-1156">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1156">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-1157">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1157">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="ca33d-1158">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1158">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="ca33d-1159">Warnmeldung in PS Core für „Uninstall-AzureRm“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1159">Add warning message in PS Core for Uninstall-AzureRm</span></span>
-
-#### <a name="azaks"></a><span data-ttu-id="ca33d-1160">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="ca33d-1160">Az.Aks</span></span>
-* <span data-ttu-id="ca33d-1161">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1161">Update incorrect online help URLs</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="ca33d-1162">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-1162">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1163">Unterstützung für Python 2-Runbooks hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1163">Added support for Python 2 runbooks</span></span>
-* <span data-ttu-id="ca33d-1164">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1164">Update incorrect online help URLs</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="ca33d-1165">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="ca33d-1165">Az.Cdn</span></span>
-* <span data-ttu-id="ca33d-1166">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1166">Update incorrect online help URLs</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1167">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1167">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1168">Cmdlet „Invoke-AzVMReimage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1168">Add Invoke-AzVMReimage cmdlet</span></span>
-* <span data-ttu-id="ca33d-1169">Parameter „TempDisk“ zu „Set-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1169">Add TempDisk parameter to Set-AzVmss</span></span>
-* <span data-ttu-id="ca33d-1170">Warnmeldung von „New-AzVM“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1170">Fix the warning message of New-AzVM</span></span>
-
-#### <a name="azcontainerregistry"></a><span data-ttu-id="ca33d-1171">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="ca33d-1171">Az.ContainerRegistry</span></span>
-* <span data-ttu-id="ca33d-1172">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1172">Update incorrect online help URLs</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="ca33d-1173">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="ca33d-1173">Az.DataFactory</span></span>
-* <span data-ttu-id="ca33d-1174">Version des ADF .NET SDK auf 3.0.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1174">Updated ADF .Net SDK version to 3.0.0</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1175">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1175">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-1176">Problem mit ADLS-Endpunkt bei Verwendung von MSI behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1176">Fix issue with ADLS endpoint when using MSI</span></span>
-    - <span data-ttu-id="ca33d-1177">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7462</span><span class="sxs-lookup"><span data-stu-id="ca33d-1177">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
-* <span data-ttu-id="ca33d-1178">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1178">Update incorrect online help URLs</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-1179">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-1179">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-1180">Codierungsformat zu Cmdlet „Add-IotHubRoutingEndpoint“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1180">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="ca33d-1181">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-1181">Az.KeyVault</span></span>
-* <span data-ttu-id="ca33d-1182">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1182">Update incorrect online help URLs</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1183">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1183">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1184">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1184">Update incorrect online help URLs</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1185">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1185">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1186">Fehlerhafte Beispiele in Referenzdokumentation zu „New-AzADAppCredential“ und „New-AzADSpCredential“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1186">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
-* <span data-ttu-id="ca33d-1187">Problem behoben, bei dem der Pfad für den Parameter „-TemplateFile“ nicht aufgelöst wurde, bevor Cmdlets für die Bereitstellung von Ressourcengruppen ausgeführt wurden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1187">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
-* <span data-ttu-id="ca33d-1188">Az.Resources: Richtige Dokumentation für Standardwert von „New-AzureRmPolicyDefinition -Mode“ bereitgestellt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1188">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
-* <span data-ttu-id="ca33d-1189">Az.Resources: Behebung des Problems: https://github.com/Azure/azure-powershell/issues/7522</span><span class="sxs-lookup"><span data-stu-id="ca33d-1189">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
-* <span data-ttu-id="ca33d-1190">Az.Resources: Behebung des Problems: https://github.com/Azure/azure-powershell/issues/5747</span><span class="sxs-lookup"><span data-stu-id="ca33d-1190">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
-* <span data-ttu-id="ca33d-1191">Formatierungsproblem für Objekt „PSResourceGroupDeployment“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1191">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
-    - <span data-ttu-id="ca33d-1192">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/2123</span><span class="sxs-lookup"><span data-stu-id="ca33d-1192">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-1193">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-1193">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-1194">Rollback beim Hinzufügen eines Zertifikats zum VMSS-Modell, Auslösung einer Ausnahme. Fehlerbehebung: https://github.com/Azure/service-fabric-issues/issues/932</span><span class="sxs-lookup"><span data-stu-id="ca33d-1194">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
-* <span data-ttu-id="ca33d-1195">Einige Fehlermeldungen wurden korrigiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1195">Fix some error messages.</span></span>
-* <span data-ttu-id="ca33d-1196">Fehler bei Clustererstellung mit ARM-Standardvorlage für „New-AzServiceFabriCluster“ behoben, bei dem die Migration zu Az nicht funktioniert hat.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1196">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
-* <span data-ttu-id="ca33d-1197">Fehler behoben beim Hinzufügen eines Cluster-/Anwendungszertifikats ausschließlich zu VM Scale Sets, die zum Cluster gehören, indem die Cluster-ID in der Erweiterung überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1197">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="ca33d-1198">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="ca33d-1198">Az.SignalR</span></span>
-* <span data-ttu-id="ca33d-1199">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1199">Update incorrect online help URLs</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1200">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1200">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1201">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1201">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="ca33d-1202">Parameterbeschreibung für den Parameter „LicenseType“ mit möglichen Werten aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1202">Updated parameter description for LicenseType parameter with possible values</span></span>
-* <span data-ttu-id="ca33d-1203">Fehler behoben, bei dem die Aktualisierung der Identität der verwalteten Instanz nicht funktioniert hat, wenn es sich um die einzige aktualisierte Eigenschaft gehandelt hat</span><span class="sxs-lookup"><span data-stu-id="ca33d-1203">Fix for updating managed instance identity not working when it is the only updated property</span></span>
-* <span data-ttu-id="ca33d-1204">Unterstützung für die benutzerdefinierte Sortierung auf verwalteter Instanz</span><span class="sxs-lookup"><span data-stu-id="ca33d-1204">Support for custom collation on managed instance</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-1205">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1205">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-1206">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1206">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="ca33d-1207">Ausführliche Fehlermeldung beim Abrufen/Festlegen der klassischen Protokollierung bzw. Metriken für Storage Premium-Konto, da für das Storage Premium-Konto die klassische Protokollierung bzw. Metriken nicht unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1207">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
-    - <span data-ttu-id="ca33d-1208">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="ca33d-1208">Get/Set-AzStorageServiceLoggingProperty</span></span>
-    - <span data-ttu-id="ca33d-1209">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="ca33d-1209">Get/Set-AzStorageServiceMetricsProperty</span></span>
-
-#### <a name="aztrafficmanager"></a><span data-ttu-id="ca33d-1210">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="ca33d-1210">Az.TrafficManager</span></span>
-* <span data-ttu-id="ca33d-1211">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1211">Update incorrect online help URLs</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-1212">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1212">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-1213">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1213">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="ca33d-1214">„New-AzWebAppSSLBinding“ korrigiert, damit das Zertifikat in die richtige Ressourcengruppe bzw. an den richtigen Speicherort hochgeladen wird, wenn die App in einer ASE gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1214">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
-* <span data-ttu-id="ca33d-1215">„New-AzWebAppSSLBinding“ korrigiert, damit die Tags beim Binden eines SSL-Zertifikats an eine App nicht überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1215">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
-
-## <a name="110---january-2019"></a><span data-ttu-id="ca33d-1216">1.1.0 – Januar 2019</span><span class="sxs-lookup"><span data-stu-id="ca33d-1216">1.1.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="ca33d-1217">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1217">Az.Accounts</span></span>
-* <span data-ttu-id="ca33d-1218">Bereich „Local“ zu „Enable-AzureRmAlias“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1218">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1219">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1219">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1220">Name ist jetzt optional im ID-Parametersatz für „Restart/Start/Stop/Remove/Set-AzVM“ und „Save-AzVMImage“</span><span class="sxs-lookup"><span data-stu-id="ca33d-1220">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
-* <span data-ttu-id="ca33d-1221">Beschreibung der ID in Hilfedateien aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1221">Updated the description of ID in help files</span></span>
-* <span data-ttu-id="ca33d-1222">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1222">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1223">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1223">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-1224">Aktualisierung der SDK-Version der Datenebene auf 1.1.14 für SDK-Fehlerbehebungen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1224">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
-    - <span data-ttu-id="ca33d-1225">Behandlung von negativen acesstime- and modificationtime-Werten für „getfilestatus“ und „liststatus“ korrigiert, asynchrones Abbruchtoken korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1225">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="ca33d-1226">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="ca33d-1226">Az.EventGrid</span></span>
-* <span data-ttu-id="ca33d-1227">Zur Verwendung der API-Version 2019-01-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1227">Updated to use the 2019-01-01 API version.</span></span>
-* <span data-ttu-id="ca33d-1228">Aktualisierung der folgenden Cmdlets zur Unterstützung des neuen Szenarios in der API-Version 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="ca33d-1228">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
-    - <span data-ttu-id="ca33d-1229">New-AzureRmEventGridSubscription: Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-1229">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="ca33d-1230">Gültigkeitsdauer des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="ca33d-1230">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="ca33d-1231">Maximale Anzahl von Übermittlungsversuchen für die Ereignisse</span><span class="sxs-lookup"><span data-stu-id="ca33d-1231">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="ca33d-1232">Endpunkt für unzustellbare Nachrichten</span><span class="sxs-lookup"><span data-stu-id="ca33d-1232">Dead letter endpoint.</span></span>
-    - <span data-ttu-id="ca33d-1233">Update-AzureRmEventGridSubscription: Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="ca33d-1233">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="ca33d-1234">Gültigkeitsdauer des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="ca33d-1234">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="ca33d-1235">Maximale Anzahl von Übermittlungsversuchen für die Ereignisse</span><span class="sxs-lookup"><span data-stu-id="ca33d-1235">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="ca33d-1236">Endpunkt für unzustellbare Nachrichten</span><span class="sxs-lookup"><span data-stu-id="ca33d-1236">Dead letter endpoint.</span></span>
-* <span data-ttu-id="ca33d-1237">Neue Enumerationswerte („storageQueue“ und „hybridConnection“) für die EndpointType-Option in den Cmdlets „New-AzureRmEventGridSubscription“ und „Update-AzureRmEventGridSubscription“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1237">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
-* <span data-ttu-id="ca33d-1238">Anzeige einer Warnmeldung, wenn das Erstellen oder Aktualisieren des Ereignisabonnements voraussichtlich eine manuelle Aktion des Benutzers zur Folge hat</span><span class="sxs-lookup"><span data-stu-id="ca33d-1238">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="ca33d-1239">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="ca33d-1239">Az.IotHub</span></span>
-* <span data-ttu-id="ca33d-1240">Auf die aktuelle Version des Iot Hub SDK aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1240">Updated to the latest version of the IotHub SDK</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="ca33d-1241">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="ca33d-1241">Az.LogicApp</span></span>
-* <span data-ttu-id="ca33d-1242">„Get-AzLogicApp“ listet alle Apps ohne angegebenen Namen auf</span><span class="sxs-lookup"><span data-stu-id="ca33d-1242">Get-AzLogicApp lists all without specified Name</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1243">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1243">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1244">Problem mit dem Parametersatz bei Angabe der Parameter „-ODataQuery“ und „-ResourceId“ für „Get-AzResource“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1244">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
-    - <span data-ttu-id="ca33d-1245">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7875</span><span class="sxs-lookup"><span data-stu-id="ca33d-1245">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
-* <span data-ttu-id="ca33d-1246">Behandlung des Parameters „-Custom“ in „New/Set-AzPolicyDefinition“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1246">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="ca33d-1247">Tippfehler in der Dokumentation für „New-AzDeployment“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1247">Fix typo in New-AzDeployment documentation</span></span>
-* <span data-ttu-id="ca33d-1248">Parameter „-MailNickname“ als obligatorisch festgelegt für „New-AzADUser“</span><span class="sxs-lookup"><span data-stu-id="ca33d-1248">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
-    - <span data-ttu-id="ca33d-1249">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8220</span><span class="sxs-lookup"><span data-stu-id="ca33d-1249">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="ca33d-1250">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="ca33d-1250">Az.SignalR</span></span>
-* <span data-ttu-id="ca33d-1251">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1251">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1252">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1252">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1253">Abhängigkeit des Speicherverwaltungsclients zur allgemeinen SDK-Implementierung konvertiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1253">Converted the Storage management client dependency to the common SDK implementation.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="ca33d-1254">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1254">Az.Storage</span></span>
-* <span data-ttu-id="ca33d-1255">Festlegung des „StorageAccountName“ des Speicherkontexts als tatsächlichen Namen des Speicherkontos, wenn dieser mit „SAS-Token“, „OAuth“ oder „Anonym“ erstellt wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1255">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
-    - <span data-ttu-id="ca33d-1256">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="ca33d-1256">New-AzStorageContext</span></span>
-* <span data-ttu-id="ca33d-1257">Erstellen von SAS-Token des Blob-Momentaufnahmeobjekts mit dem Parameter „-FullUri“, Festlegung des zurückgegebenen URI als Momentaufnahme-URI</span><span class="sxs-lookup"><span data-stu-id="ca33d-1257">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
-    - <span data-ttu-id="ca33d-1258">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="ca33d-1258">New-AzStorageBlobSASToken</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-1259">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1259">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-1260">Fehler bei der Datumsanalyse in „Get-AzDeletedWebApp“ behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1260">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
-* <span data-ttu-id="ca33d-1261">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1261">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-## <a name="100---december-2018"></a><span data-ttu-id="ca33d-1262">1.0.0 – Dezember 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1262">1.0.0 - December 2018</span></span>
-### <a name="general"></a><span data-ttu-id="ca33d-1263">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ca33d-1263">General</span></span>
-
-- <span data-ttu-id="ca33d-1264">Allgemeine Verfügbarkeit des Az-Moduls</span><span class="sxs-lookup"><span data-stu-id="ca33d-1264">General Availability of Az Module</span></span>
-- <span data-ttu-id="ca33d-1265">Onlinehilfe für jedes Modul</span><span class="sxs-lookup"><span data-stu-id="ca33d-1265">Online help for each module</span></span>
-- <span data-ttu-id="ca33d-1266">Ausführlichere Informationen und eine Roadmap finden Sie auf der [Seite mit der Ankündigung zu Az](https://aka.ms/azps-announce).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1266">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
-- <span data-ttu-id="ca33d-1267">Informationen zur Migration aus AzureRM finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1267">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
-
-### <a name="azaccounts"></a><span data-ttu-id="ca33d-1268">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="ca33d-1268">Az.Accounts</span></span>
-- <span data-ttu-id="ca33d-1269">Geändert von Az.Profile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1269">Changed from Az.Profile</span></span>
-- <span data-ttu-id="ca33d-1270">Feste Tabellenformate für Profil- und Kontexttypen</span><span class="sxs-lookup"><span data-stu-id="ca33d-1270">Fixed table formats for profile and context types</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="ca33d-1271">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-1271">Az.ApiManagement</span></span>
-- <span data-ttu-id="ca33d-1272">Korrekturen für #7002</span><span class="sxs-lookup"><span data-stu-id="ca33d-1272">Fixes for #7002</span></span>
-- <span data-ttu-id="ca33d-1273">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1273">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbatch"></a><span data-ttu-id="ca33d-1274">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="ca33d-1274">Az.Batch</span></span>
-- <span data-ttu-id="ca33d-1275">Möglichkeit zum Anzeigen der ausgeführten Version des Azure Batch-Knoten-Agents auf den VMs eines Pools mit der neuen `NodeAgentInformation`-Eigenschaft für `PSComputeNode` hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1275">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
-- <span data-ttu-id="ca33d-1276">Der `Caching`-Standardwert für `PSDataDisk` lautet jetzt nicht mehr `None`, sondern `ReadWrite`.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1276">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
-- <span data-ttu-id="ca33d-1277">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1277">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbilling"></a><span data-ttu-id="ca33d-1278">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="ca33d-1278">Az.Billing</span></span>
-- <span data-ttu-id="ca33d-1279">Kombination von Billing-, Consumption- und UsageAggregates-Cmdlets. Ausführliche Informationen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1279">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azcognitivservices"></a><span data-ttu-id="ca33d-1280">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1280">Az.CognitivServices</span></span>
-- <span data-ttu-id="ca33d-1281">Vervollständigungen für SkuName und Typem für den Vorgang New-AzureRmCognitiveServicesAccount hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1281">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
-- <span data-ttu-id="ca33d-1282">GetSkusWithAccountParamSetName-Parametersatz aus Get-AzCognitiveServicesAccountSkus entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1282">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="ca33d-1283">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1283">Az.ContainerInstance</span></span>
-- <span data-ttu-id="ca33d-1284">ManagedIdentity-Unterstützung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1284">Added ManagedIdentity support</span></span>
-
-### <a name="azdatalakeanalytics"></a><span data-ttu-id="ca33d-1285">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="ca33d-1285">Az.DataLakeAnalytics</span></span>
-- <span data-ttu-id="ca33d-1286">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1286">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1287">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1287">Az.DataLakeStore</span></span>
-- <span data-ttu-id="ca33d-1288">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1288">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azmonitor"></a><span data-ttu-id="ca33d-1289">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="ca33d-1289">Az.Monitor</span></span>
-- <span data-ttu-id="ca33d-1290">Az.Insights in Az.Monitor umbenannt und weitere weniger wichtige grundlegende Änderungen durchgeführt. Informationen hierzu finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1290">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azkeyvault"></a><span data-ttu-id="ca33d-1291">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="ca33d-1291">Az.KeyVault</span></span>
-- <span data-ttu-id="ca33d-1292">Veraltete PurgeDisabled-Eigenschaft aus Ausgabetypen entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1292">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
-
-### <a name="azmachinelearning"></a><span data-ttu-id="ca33d-1293">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="ca33d-1293">Az.MachineLearning</span></span>
-- <span data-ttu-id="ca33d-1294">Cmdlets des Az.MachineLearningCompute-Moduls eingebunden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1294">Included cmdlets from Az.MachineLearningCompute module</span></span>
-
-### <a name="azmedia"></a><span data-ttu-id="ca33d-1295">Az.Media</span><span class="sxs-lookup"><span data-stu-id="ca33d-1295">Az.Media</span></span>
-- <span data-ttu-id="ca33d-1296">Veralteten -Tags-Alias aus New-AzMediaService entfernt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1296">Remove deprecated -Tags alias from New-AzMediaService</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="ca33d-1297">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1297">Az.Network</span></span>
-<span data-ttu-id="ca33d-1298">Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1298">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
-    - <span data-ttu-id="ca33d-1299">Neu hinzugefügte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-1299">New cmdlets added:</span></span>
-        - <span data-ttu-id="ca33d-1300">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1300">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1301">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1301">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1302">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1302">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1303">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1303">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1304">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1304">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1305">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-1305">New-AzureRmApplicationGatewayRewriteRule</span></span>
-        - <span data-ttu-id="ca33d-1306">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="ca33d-1306">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
-        - <span data-ttu-id="ca33d-1307">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="ca33d-1307">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
-    - <span data-ttu-id="ca33d-1308">Cmdlets mit optionalem Parameter -RewriteRuleSet aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1308">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
-        - <span data-ttu-id="ca33d-1309">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="ca33d-1309">New-AzureRmApplicationGateway</span></span>
-        - <span data-ttu-id="ca33d-1310">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-1310">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="ca33d-1311">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="ca33d-1311">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="ca33d-1312">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-1312">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
-        - <span data-ttu-id="ca33d-1313">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-1313">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
-        - <span data-ttu-id="ca33d-1314">New-AzureRmApplicationGatewayUrlPathMapConfig: KeyVault-Unterstützung mithilfe von Identität zum Application Gateway hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1314">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
-    - <span data-ttu-id="ca33d-1315">Cmdlets mit optionalem Parameter aktualisiert: -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="ca33d-1315">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
-        - <span data-ttu-id="ca33d-1316">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="ca33d-1316">Add-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="ca33d-1317">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="ca33d-1317">New-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="ca33d-1318">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="ca33d-1318">Set-AzApplicationGatewaySslCertificate</span></span>
-    - <span data-ttu-id="ca33d-1319">Cmdlet New-AzApplicationGateway mit optionalem Parameter -UserAssignedIdentity aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1319">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
-- <span data-ttu-id="ca33d-1320">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1320">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azoperationalinsights"></a><span data-ttu-id="ca33d-1321">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-1321">Az.OperationalInsights</span></span>
-- <span data-ttu-id="ca33d-1322">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1322">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azprofile"></a><span data-ttu-id="ca33d-1323">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1323">Az.Profile</span></span>
-- <span data-ttu-id="ca33d-1324">Modulnamen in Az.Accounts geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1324">Changed module name to Az.Accounts</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1325">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1325">Az.RecoveryServices</span></span>
-- <span data-ttu-id="ca33d-1326">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1326">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="ca33d-1327">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1327">Az.Resources</span></span>
-- <span data-ttu-id="ca33d-1328">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1328">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="ca33d-1329">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-1329">Az.ServiceFabric</span></span>
-- <span data-ttu-id="ca33d-1330">Unterstützung für das Angeben des Zertifikats anhand des allgemeinen Namens und Fingerabdrucks</span><span class="sxs-lookup"><span data-stu-id="ca33d-1330">Support specfying certificate by common name and thumbprint</span></span>
-- <span data-ttu-id="ca33d-1331">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1331">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azsignalr"></a><span data-ttu-id="ca33d-1332">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="ca33d-1332">Az.SIgnalR</span></span>
-- <span data-ttu-id="ca33d-1333">Allgemeine Verfügbarkeit für PowerShell-Cmdlets für SIgnalR</span><span class="sxs-lookup"><span data-stu-id="ca33d-1333">General Availability for PowerShell cmdlets for SIgnalR</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="ca33d-1334">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1334">Az.Sql</span></span>
-- <span data-ttu-id="ca33d-1335">Neue Erkennungstypen Data_Exfiltration und Unsafe_Action zu Cmdlets für Bedrohungserkennung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1335">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
-- <span data-ttu-id="ca33d-1336">Dokumentationsbeispiele für Cmdlets für SQL-Überwachung aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1336">Updated documentation examples for Sql Auditing cmdlets</span></span>
-- <span data-ttu-id="ca33d-1337">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1337">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="ca33d-1338">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1338">Az.Storage</span></span>
-- <span data-ttu-id="ca33d-1339">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1339">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="ca33d-1340">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1340">Az.Websites</span></span>
-- <span data-ttu-id="ca33d-1341">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="ca33d-1341">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-## <a name="070---december-2018"></a><span data-ttu-id="ca33d-1342">0.7.0 – Dezember 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1342">0.7.0 - December 2018</span></span>
-
-### <a name="general"></a><span data-ttu-id="ca33d-1343">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ca33d-1343">General</span></span>
-
-* <span data-ttu-id="ca33d-1344">Geringe Änderungen für anstehenden Übergang von AzureRM zu Az</span><span class="sxs-lookup"><span data-stu-id="ca33d-1344">Minor changes for upcoming AzureRM to Az transition</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="ca33d-1345">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1345">Az.Compute</span></span>
-
-* <span data-ttu-id="ca33d-1346">Unterstützung für UltraSSD und Katalogimages in einfachen Parametersätzen für `New-AzVm(ss)`-Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1346">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1347">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1347">Az.DataLakeStore</span></span>
-
-* <span data-ttu-id="ca33d-1348">Nachgestellten Schrägstrich für die Domäne des ADLS-Kontos korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1348">Fix the trailing slash of the domain of adls account</span></span>
-
-### <a name="azfrontdoor"></a><span data-ttu-id="ca33d-1349">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="ca33d-1349">Az.FrontDoor</span></span>
-
-* <span data-ttu-id="ca33d-1350">Einige fehlerhafte Links behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1350">Fixed some broken links</span></span>
-    - <span data-ttu-id="ca33d-1351">In den Artikeln zu New-AzureRmFrontDoor und Set-AzureRmFrontDoor den Artikel-Link zum Cmdlet „New-AzureRmFrontDoorHealthProbeSettingObject“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1351">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
-    - <span data-ttu-id="ca33d-1352">Im Artikel zu New-AzureRmFrontDoorManagedRuleObject den Artikel-Link zum Cmdlet „New-AzureRmFrontDoorRuleGroupOverrideObject“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1352">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="ca33d-1353">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1353">Az.RecoveryServices</span></span>
-
-* <span data-ttu-id="ca33d-1354">Clientseitige Validierungen für Wiederherstellungsvorgänge von Azure-Dateifreigaben hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1354">Added client side validations for Azure File Share restore operations.</span></span>
-* <span data-ttu-id="ca33d-1355">storageAccountName und storageAccountResourceGroupName für AFS-Wiederherstellung optional gemacht.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1355">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="ca33d-1356">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1356">Az.Resources</span></span>
-
-* <span data-ttu-id="ca33d-1357">Fehlerbehebung für https://github.com/Azure/azure-powershell/issues/7679</span><span class="sxs-lookup"><span data-stu-id="ca33d-1357">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
-    - <span data-ttu-id="ca33d-1358">Get-AzureRmRoleAssignment für die Verwendung des Abonnementbereichs aktualisiert, wenn dieser beim Anfordern von klassischen Administratoren angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1358">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="ca33d-1359">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1359">Az.Sql</span></span>
-
-* <span data-ttu-id="ca33d-1360">Geringe Änderungen für anstehenden Übergang von AzureRM zu Az</span><span class="sxs-lookup"><span data-stu-id="ca33d-1360">Minor changes for upcoming AzureRM to Az transition</span></span>
-* <span data-ttu-id="ca33d-1361">Problem mit der Verwendung von Get-AzureRmSqlDatabaseVulnerabilityAssessment mit .NET Core behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1361">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
-* <span data-ttu-id="ca33d-1362">Dokumentation mit Hilfemeldungen zu Cmdlets für die SQL-Überwachung geändert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1362">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="ca33d-1363">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1363">Az.Storage</span></span>
-
-* <span data-ttu-id="ca33d-1364">-EnableHierarchicalNamespace zu New-AzureRmStorageAccount hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1364">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
-* <span data-ttu-id="ca33d-1365">Problem behoben, bei dem für das Copy File-Cmdlet am Ziel kein Quellkontext wiederverwendet werden kann, wenn -DestContext nicht eingegeben wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1365">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
-    - <span data-ttu-id="ca33d-1366">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1366">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="ca33d-1367">Unterstützung der Konfiguration von statischen Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1367">Support Static Website configuration</span></span>
-    - <span data-ttu-id="ca33d-1368">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="ca33d-1368">Enable-AzureStorageStaticWebsite</span></span>
-    - <span data-ttu-id="ca33d-1369">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="ca33d-1369">Disable-AzureStorageStaticWebsite</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="ca33d-1370">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1370">Az.Websites</span></span>
-
-* <span data-ttu-id="ca33d-1371">Set-AzureRmWebApp und Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="ca33d-1371">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span>
-    - <span data-ttu-id="ca33d-1372">Neuen Parameter (-AzureStoragePath) zum Angeben von Azure Storage-Pfaden hinzugefügt, die in Windows- und Linux-Container-Apps bereitgestellt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1372">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="ca33d-1373">Verwenden Sie die Ausgabe des neuen Cmdlets New-AzureRmWebAppAzureStoragePath als Parameter zum Festlegen der Azure Storage-Pfade.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1373">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
-
-## <a name="061---november-2018"></a><span data-ttu-id="ca33d-1374">0.6.1 – November 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1374">0.6.1 - November 2018</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="ca33d-1375">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="ca33d-1375">Az.ApiManagement</span></span>
-* <span data-ttu-id="ca33d-1376">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1376">Update dependencies for type mapping issue</span></span>
-
-### <a name="azautomation"></a><span data-ttu-id="ca33d-1377">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="ca33d-1377">Az.Automation</span></span>
-* <span data-ttu-id="ca33d-1378">Swagger-basierte Azure Automation-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="ca33d-1378">Swagger based Azure Automation cmdlets</span></span>
-* <span data-ttu-id="ca33d-1379">Cmdlets zur Updateverwaltung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1379">Added Update Management cmdlets</span></span>
-* <span data-ttu-id="ca33d-1380">Cmdlets zur Quellcodeverwaltung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1380">Added Source Control cmdlets</span></span>
-* <span data-ttu-id="ca33d-1381">Cmdlet „Remove-AzureRmAutomationHybridWorkerGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1381">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
-* <span data-ttu-id="ca33d-1382">DSC-Befehl für die Knotenregistrierung korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1382">Fixed the DSC Register Node command</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="ca33d-1383">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1383">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1384">Identitätsproblem für SystemAssigned-Identität korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1384">Fixed identity issue for SystemAssigned identity</span></span>
-* <span data-ttu-id="ca33d-1385">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1385">Update dependencies for type mapping issue</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="ca33d-1386">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1386">Az.ContainerInstance</span></span>
-* <span data-ttu-id="ca33d-1387">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1387">Update dependencies for type mapping issue</span></span>
-
-### <a name="azmarketplaceordering"></a><span data-ttu-id="ca33d-1388">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="ca33d-1388">Az.MarketplaceOrdering</span></span>
-* <span data-ttu-id="ca33d-1389">Beschreibung der Beispiele für Marketplace-Cmdlets aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1389">update the examples description for marketplace cmdlets</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="ca33d-1390">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1390">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1391">Folgende Cmdlets hinzugefügt: New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span><span class="sxs-lookup"><span data-stu-id="ca33d-1391">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
-* <span data-ttu-id="ca33d-1392">ICMP wieder unterstützten AzureFirewall-Netzwerkprotokollen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1392">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
-* <span data-ttu-id="ca33d-1393">Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1393">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span>
-* <span data-ttu-id="ca33d-1394">Probleme mit Arbeitsspeicherauslastung in der VirtualNetwork-Zuordnung behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1394">Fix issues with memory usage in VirtualNetwork map</span></span>
-
-### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="ca33d-1395">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="ca33d-1395">Az.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="ca33d-1396">Problem beim Ändern der Richtlinie für eine geschützte Dateifreigabe behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1396">Fix for modifying policy for a protected file share.</span></span>
-* <span data-ttu-id="ca33d-1397">Richtlinienzeitzone in Großschreibung geändert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1397">Converted policy timezone to uppercase.</span></span>
-
-### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="ca33d-1398">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="ca33d-1398">Az.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="ca33d-1399">Korrigiertes Beispiel in „New-AzureRmRecoveryServicesAsrProtectableItem“</span><span class="sxs-lookup"><span data-stu-id="ca33d-1399">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
-* <span data-ttu-id="ca33d-1400">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1400">Update dependencies for type mapping issue</span></span>
-
-### <a name="azrelay"></a><span data-ttu-id="ca33d-1401">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="ca33d-1401">Az.Relay</span></span>
-* <span data-ttu-id="ca33d-1402">Optionaler Parameter „-KeyValue“ zu Cmdlet „New-AzureRmRelayKey“ hinzugefügt, der dem Benutzer das Angeben von „KeyValue“ ermöglicht</span><span class="sxs-lookup"><span data-stu-id="ca33d-1402">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="ca33d-1403">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1403">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1404">Hilfedokumentation für ressourcenidentitätsbezogene Parameter in `New-AzureRmPolicyAssignment` und `Set-AzureRmPolicyAssignment` aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1404">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
-* <span data-ttu-id="ca33d-1405">Beispiel für „New-AzureRmPolicyDefinition“ hinzugefügt, das „-Metadata“ nutzt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1405">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
-* <span data-ttu-id="ca33d-1406">Korrektur, um Beibehaltung von Groß-/Kleinschreibung in Tagschlüsseln in „NetStandard“ zu ermöglichen: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="ca33d-1406">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="ca33d-1407">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-1407">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-1408">Benachrichtigung über veraltete Elemente für anstehende wichtige Änderungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1408">Add deprecation messages for upcoming breaking changes</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="ca33d-1409">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1409">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1410">Neue Cmdlets für CRUD-Vorgänge in verwalteten Azure SQL-Datenbank-Instanzen und verwalteten Azure SQL-Datenbanken hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1410">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
-    - <span data-ttu-id="ca33d-1411">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1411">Get-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="ca33d-1412">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1412">New-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="ca33d-1413">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1413">Set-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="ca33d-1414">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="ca33d-1414">Remove-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="ca33d-1415">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="ca33d-1415">Get-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="ca33d-1416">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="ca33d-1416">New-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="ca33d-1417">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="ca33d-1417">Restore-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="ca33d-1418">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="ca33d-1418">Remove-AzureRmSqlInstanceDatabase</span></span>
-* <span data-ttu-id="ca33d-1419">Erweiterte Verwaltung von Überwachungsrichtlinien auf einem Server oder in einer Datenbank aktiviert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1419">Enabled Extended Auditing Policy management on a server or a database.</span></span>
-    - <span data-ttu-id="ca33d-1420">Neuer Parameter (PredicateExpression) hinzugefügt, um die Filterung von Überwachungsprotokollen zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="ca33d-1420">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
-    - <span data-ttu-id="ca33d-1421">Cmdlets wurden angepasst, sodass sie SQL-Clients anstelle von Legacyclients verwenden.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1421">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
-    - <span data-ttu-id="ca33d-1422">Set-AzureRmSqlServerAuditing</span><span class="sxs-lookup"><span data-stu-id="ca33d-1422">Set-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="ca33d-1423">Get-AzureRmSqlServerAuditing</span><span class="sxs-lookup"><span data-stu-id="ca33d-1423">Get-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="ca33d-1424">Set-AzureRmSqlDatabaseAuditing</span><span class="sxs-lookup"><span data-stu-id="ca33d-1424">Set-AzureRmSqlDatabaseAuditing.</span></span>
-    - <span data-ttu-id="ca33d-1425">Get-AzureRmSqlDatabaseAuditing</span><span class="sxs-lookup"><span data-stu-id="ca33d-1425">Get-AzureRmSqlDatabaseAuditing.</span></span>
-* <span data-ttu-id="ca33d-1426">Problem bei Verwendung von „Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings“ mit festgelegtem Parameter für den Speicherkontonamen behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1426">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
-
-## <a name="050---november-2018"></a><span data-ttu-id="ca33d-1427">0.5.0 – November 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1427">0.5.0 - November 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="ca33d-1428">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ca33d-1428">General</span></span>
-* <span data-ttu-id="ca33d-1429">Ressourcenvervollständigungen für viele Kern-Cmdlets hinzugefügt (diese ermöglichen das Durchlaufen von vorhandenen Ressourcennamen per TAB-TASTE, wenn Cmdlets interaktiv aufgerufen werden)</span><span class="sxs-lookup"><span data-stu-id="ca33d-1429">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
-
-#### <a name="azprofile"></a><span data-ttu-id="ca33d-1430">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1430">Az.Profile</span></span>
-* <span data-ttu-id="ca33d-1431">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1431">Update common code to use latest version of ClientRuntime</span></span>
-* <span data-ttu-id="ca33d-1432">Parameter „TenantId“ im Cmdlet „Connect-AzAccount“ in „Tenant“ umbenannt und Alias für „TenantId“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1432">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
-* <span data-ttu-id="ca33d-1433">Beschreibung von „TenantId“ für „Connect-AzAccount“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1433">Updated TenantId description for Connect-AzAccount</span></span>
-* <span data-ttu-id="ca33d-1434">Fehlermeldung für fehlgeschlagene Anmeldung bei Angabe der Mandantendomäne korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1434">Fix error message for failed login when providing tenant domain</span></span>
+#### <a name="azhdinsight"></a><span data-ttu-id="f6333-811">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="f6333-811">Az.HDInsight</span></span>
+* <span data-ttu-id="f6333-812">Zwei Cmdlets entfernt:</span><span class="sxs-lookup"><span data-stu-id="f6333-812">Removed two cmdlets:</span></span>
+    - <span data-ttu-id="f6333-813">Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="f6333-813">Grant-AzHDInsightHttpServicesAccess</span></span>
+    - <span data-ttu-id="f6333-814">Revoke-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="f6333-814">Revoke-AzHDInsightHttpServicesAccess</span></span>
+* <span data-ttu-id="f6333-815">Neues Cmdlet „Set-AzHDInsightGatewayCredential“ hinzugefügt, um „Grant-AzHDInsightHttpServicesAccess“ zu ersetzen</span><span class="sxs-lookup"><span data-stu-id="f6333-815">Added a new cmdlet Set-AzHDInsightGatewayCredential to replace Grant-AzHDInsightHttpServicesAccess</span></span>
+* <span data-ttu-id="f6333-816">Cmdlet „Get-AzHDInsightJobOutput“ aktualisiert, um zwischen Leserrolle und HDInsight-Bedienerrolle zu unterscheiden:</span><span class="sxs-lookup"><span data-stu-id="f6333-816">Update cmdlet Get-AzHDInsightJobOutput to distinguish reader role and hdinsight operator role:</span></span>
+    - <span data-ttu-id="f6333-817">Benutzer mit der Rolle „Leser“ müssen den Parameter „DefaultStorageAccountKey“ explizit angeben, andernfalls treten Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="f6333-817">Users with reader role need to specify 'DefaultStorageAccountKey' parameter explicitly, otherwise error occurs.</span></span>
+    - <span data-ttu-id="f6333-818">Benutzer mit der Rolle des HDInsight-Bedieners sind nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="f6333-818">Users with hdinsight operator role will not be affected.</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-819">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-819">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-820">Neue Cmdlets für SQR-API (Scheduled Query Rule, geplante Abfrageregel)</span><span class="sxs-lookup"><span data-stu-id="f6333-820">New cmdlets for SQR API (Scheduled Query Rule)</span></span>
+    - <span data-ttu-id="f6333-821">New-AzScheduledQueryRuleAlertingAction</span><span class="sxs-lookup"><span data-stu-id="f6333-821">New-AzScheduledQueryRuleAlertingAction</span></span>
+    - <span data-ttu-id="f6333-822">New-AzScheduledQueryRuleAznsActionGroup</span><span class="sxs-lookup"><span data-stu-id="f6333-822">New-AzScheduledQueryRuleAznsActionGroup</span></span>
+    - <span data-ttu-id="f6333-823">New-AzScheduledQueryRuleLogMetricTrigger</span><span class="sxs-lookup"><span data-stu-id="f6333-823">New-AzScheduledQueryRuleLogMetricTrigger</span></span>
+    - <span data-ttu-id="f6333-824">New-AzScheduledQueryRuleSchedule</span><span class="sxs-lookup"><span data-stu-id="f6333-824">New-AzScheduledQueryRuleSchedule</span></span>
+    - <span data-ttu-id="f6333-825">New-AzScheduledQueryRuleSource</span><span class="sxs-lookup"><span data-stu-id="f6333-825">New-AzScheduledQueryRuleSource</span></span>
+    - <span data-ttu-id="f6333-826">New-AzScheduledQueryRuleTriggerCondition</span><span class="sxs-lookup"><span data-stu-id="f6333-826">New-AzScheduledQueryRuleTriggerCondition</span></span>
+    - <span data-ttu-id="f6333-827">New-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="f6333-827">New-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="f6333-828">Get-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="f6333-828">Get-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="f6333-829">Set-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="f6333-829">Set-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="f6333-830">Update-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="f6333-830">Update-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="f6333-831">Remove-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="f6333-831">Remove-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="f6333-832">[Weitere Informationen](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) zur SQR-API</span><span class="sxs-lookup"><span data-stu-id="f6333-832">[More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API</span></span>
+    - <span data-ttu-id="f6333-833">„Az.Monitor.md“ aktualisiert, um Cmdlets für metrikbasierte GenV2-Warnungsregel (nicht klassisch) einzuschließen</span><span class="sxs-lookup"><span data-stu-id="f6333-833">Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-834">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-834">Az.Network</span></span>
+* <span data-ttu-id="f6333-835">Unterstützung für NAT-Gatewayressource hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-835">Add support for Nat Gateway Resource</span></span>
+    - <span data-ttu-id="f6333-836">Neue Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-836">New cmdlets</span></span>
+        - <span data-ttu-id="f6333-837">New-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="f6333-837">New-AzNatGateway</span></span>
+        - <span data-ttu-id="f6333-838">Get-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="f6333-838">Get-AzNatGateway</span></span>
+        - <span data-ttu-id="f6333-839">Set-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="f6333-839">Set-AzNatGateway</span></span>
+        - <span data-ttu-id="f6333-840">Remove-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="f6333-840">Remove-AzNatGateway</span></span>
+   - <span data-ttu-id="f6333-841">Aktualisierte Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-841">Updated cmdlets</span></span>
+        - <span data-ttu-id="f6333-842">New-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="f6333-842">New-AzureVirtualNetworkSubnetConfigCommand</span></span>
+        - <span data-ttu-id="f6333-843">Add-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="f6333-843">Add-AzureVirtualNetworkSubnetConfigCommand</span></span>
+* <span data-ttu-id="f6333-844">Folgende Befehle für das Feature aktualisiert: Benutzerdefinierte Routen für Brooklyn-Gateway festgelegt/entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-844">Updated below commands for feature: Custom routes set/remove on Brooklyn Gateway.</span></span>
+    - <span data-ttu-id="f6333-845">„New-AzVirtualNetworkGateway“ aktualisiert: Zusätzlicher optionaler Parameter „-CustomRoute“ hinzugefügt, um die Adresspräfixe als benutzerdefinierte Routen für das Gateway festlegen zu können.</span><span class="sxs-lookup"><span data-stu-id="f6333-845">Updated New-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
+    - <span data-ttu-id="f6333-846">„Set-AzVirtualNetworkGateway“ aktualisiert: Zusätzlicher optionaler Parameter „-CustomRoute“ hinzugefügt, um die Adresspräfixe als benutzerdefinierte Routen für das Gateway festlegen zu können.</span><span class="sxs-lookup"><span data-stu-id="f6333-846">Updated Set-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="f6333-847">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-847">Az.PolicyInsights</span></span>
+* <span data-ttu-id="f6333-848">Unterstützung für die Abfrage von Richtlinienauswertungsdetails</span><span class="sxs-lookup"><span data-stu-id="f6333-848">Support for querying policy evaluation details.</span></span>
+    - <span data-ttu-id="f6333-849">Parameter „-Expand“ zu „Get-AzPolicyState“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-849">Add '-Expand' parameter to Get-AzPolicyState.</span></span> <span data-ttu-id="f6333-850">Unterstützung für „-Expand PolicyEvaluationDetails“</span><span class="sxs-lookup"><span data-stu-id="f6333-850">Support '-Expand PolicyEvaluationDetails'.</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-851">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-851">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-852">Unterstützung für abonnementübergreifende Azure-zu-Azure-Sitewiederherstellung</span><span class="sxs-lookup"><span data-stu-id="f6333-852">Support for Cross subscription Azure to Azure site recovery.</span></span>
+* <span data-ttu-id="f6333-853">Markierung anstehender wichtiger Änderungen für Azure Site Recovery</span><span class="sxs-lookup"><span data-stu-id="f6333-853">Marking upcoming breaking changes for Azure Site Recovery.</span></span>
+* <span data-ttu-id="f6333-854">Fehlerbehebung für Azure Site Recovery-Wiederherstellungsplan und -Aktionsplan</span><span class="sxs-lookup"><span data-stu-id="f6333-854">Fix for Azure Site Recovery recovery plan end action plan.</span></span>
+* <span data-ttu-id="f6333-855">Fehlerbehebung für die Aktualisierung der Azure Site Recovery-Netzwerkzuordnung für Azure zu Azure</span><span class="sxs-lookup"><span data-stu-id="f6333-855">Fix for Azure Site Recovery Update network mapping for Azure to Azure.</span></span>
+* <span data-ttu-id="f6333-856">Fehlerbehebung für die Aktualisierung der Azure Site Recovery-Schutzrichtung für Azure zu Azure für verwaltete Datenträger</span><span class="sxs-lookup"><span data-stu-id="f6333-856">Fix for Azure Site Recovery update protection direction for Azure to Azure for managed disk.</span></span>
+* <span data-ttu-id="f6333-857">Weitere kleinere Korrekturen</span><span class="sxs-lookup"><span data-stu-id="f6333-857">Other minor fixes.</span></span>
+
+#### <a name="azrelay"></a><span data-ttu-id="f6333-858">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="f6333-858">Az.Relay</span></span>
+* <span data-ttu-id="f6333-859">Korrektur von Tippfehlern in Kundennachrichten</span><span class="sxs-lookup"><span data-stu-id="f6333-859">Fix typos in customer-facing messages</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-860">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-860">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-861">Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-861">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-862">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-862">Az.Storage</span></span>
+* <span data-ttu-id="f6333-863">Upgrade auf Speicherclientbibliothek 10.0.1 (Namespace aller Objekte von diesem SDK von „Microsoft.WindowsAzure.Storage. *“ in „Microsoft.Azure.Storage.* “ geändert)</span><span class="sxs-lookup"><span data-stu-id="f6333-863">Upgrade to Storage Client Library 10.0.1 (the namespace of all objects from this SDK change from 'Microsoft.WindowsAzure.Storage. *' to 'Microsoft.Azure.Storage.* ')</span></span>
+* <span data-ttu-id="f6333-864">Upgrade auf Microsoft.Azure.Management.Storage 11.0.0, um die neue API-Version 2019-04-01 zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="f6333-864">Upgrade to Microsoft.Azure.Management.Storage 11.0.0, to support new API version 2019-04-01.</span></span>
+* <span data-ttu-id="f6333-865">Art des Standardspeicherkontos bei der Speicherkontoerstellung von „Storage“ in „StorageV2“ geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-865">The default Storage account Kind in Create Storage account change from 'Storage' to 'StorageV2'</span></span>
+    - <span data-ttu-id="f6333-866">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-866">New-AzStorageAccount</span></span>
+* <span data-ttu-id="f6333-867">Vom Speicherkonto-Cmdlet ausgegebener SKU-Name (Sku.Name) durch Hinzufügen eines Unterstrichs an SKU-Eingabename angepasst (Beispiel: „StandardLRS“ > „Standard_LRS“).</span><span class="sxs-lookup"><span data-stu-id="f6333-867">Change the Storage account cmdlet output Sku.Name to be aligned with input SkuName by add '-', like 'StandardLRS' change to 'Standard_LRS'</span></span>
+    - <span data-ttu-id="f6333-868">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-868">New-AzStorageAccount</span></span>
+    - <span data-ttu-id="f6333-869">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-869">Get-AzStorageAccount</span></span>
+    - <span data-ttu-id="f6333-870">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-870">Set-AzStorageAccount</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-871">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-871">Az.Websites</span></span>
+* <span data-ttu-id="f6333-872">Die Eigenschaft „Kind“ wird nun für PSSite-Objekte festgelegt, die von „Get-AzWebApp“ zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="f6333-872">'Kind' property will now be set for PSSite objects returned by Get-AzWebApp</span></span>
+* <span data-ttu-id="f6333-873">„Get-AzWebApp\*Metrics“ und „Get-AzAppServicePlanMetrics“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="f6333-873">Get-AzWebApp\*Metrics and Get-AzAppServicePlanMetrics marked deprecated</span></span>
+
+## <a name="180---april-2019"></a><span data-ttu-id="f6333-874">1.8.0: April 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-874">1.8.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="f6333-875">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="f6333-875">Highlights since the last major release</span></span>
+* <span data-ttu-id="f6333-876">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="f6333-876">General availability of `Az` module</span></span>
+* <span data-ttu-id="f6333-877">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="f6333-877">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="f6333-878">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="f6333-878">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="f6333-879">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-879">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="f6333-880">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-880">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="f6333-881">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-881">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="f6333-882">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-882">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-883">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-883">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-884">„Uninstall-AzureRm“ aktualisiert, um Module unter Mac ordnungsgemäß zu löschen</span><span class="sxs-lookup"><span data-stu-id="f6333-884">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
+
+#### <a name="azbatch"></a><span data-ttu-id="f6333-885">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="f6333-885">Az.Batch</span></span>
+* <span data-ttu-id="f6333-886">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-886">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="f6333-887">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="f6333-887">Az.Cdn</span></span>
+* <span data-ttu-id="f6333-888">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-888">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-889">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-889">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-890">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-890">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-891">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-891">Az.Compute</span></span>
+* <span data-ttu-id="f6333-892">Problem mit der AEM-Installation behoben, wenn die Ressourcen-IDs von Datenträgern Ressourcengruppen in Kleinbuchstaben enthielten</span><span class="sxs-lookup"><span data-stu-id="f6333-892">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
+* <span data-ttu-id="f6333-893">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-893">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-894">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-894">Fix documentation for wildcards</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-895">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-895">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-896">„SsisProperties“ hinzugefügt, falls „NodeCount“ für verwaltete Integration Runtime nicht NULL ist</span><span class="sxs-lookup"><span data-stu-id="f6333-896">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-897">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-897">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-898">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-898">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="f6333-899">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="f6333-899">Az.EventGrid</span></span>
+* <span data-ttu-id="f6333-900">Hilfetext für Endpunkt aktualisiert, um anzugeben, dass Ressourcen erstellt werden müssen, bevor die Cmdlets zum Erstellen/Aktualisieren von Ereignisabonnements verwendet werden</span><span class="sxs-lookup"><span data-stu-id="f6333-900">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="f6333-901">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="f6333-901">Az.EventHub</span></span>
+* <span data-ttu-id="f6333-902">Neue Cmdlets für „NetworkRuleSet“ des Namespace hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-902">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
+
+#### <a name="azhdinsight"></a><span data-ttu-id="f6333-903">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="f6333-903">Az.HDInsight</span></span>
+* <span data-ttu-id="f6333-904">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-904">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="f6333-905">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-905">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-906">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-906">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="f6333-907">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-907">Az.KeyVault</span></span>
+* <span data-ttu-id="f6333-908">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-908">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-909">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-909">Fix documentation for wildcards</span></span>
+
+#### <a name="azmachinelearning"></a><span data-ttu-id="f6333-910">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="f6333-910">Az.MachineLearning</span></span>
+* <span data-ttu-id="f6333-911">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-911">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmedia"></a><span data-ttu-id="f6333-912">Az.Media</span><span class="sxs-lookup"><span data-stu-id="f6333-912">Az.Media</span></span>
+* <span data-ttu-id="f6333-913">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-913">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-914">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-914">Az.Monitor</span></span>
+  * <span data-ttu-id="f6333-915">Neue Cmdlets für metrikbasierte GenV2-Warnungsregel (nicht klassisch)</span><span class="sxs-lookup"><span data-stu-id="f6333-915">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
+      - <span data-ttu-id="f6333-916">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="f6333-916">New-AzMetricAlertRuleV2DimensionSelection</span></span>
+      - <span data-ttu-id="f6333-917">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="f6333-917">New-AzMetricAlertRuleV2Criteria</span></span>
+      - <span data-ttu-id="f6333-918">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="f6333-918">Remove-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="f6333-919">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="f6333-919">Get-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="f6333-920">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="f6333-920">Add-AzMetricAlertRuleV2</span></span>
+  * <span data-ttu-id="f6333-921">Monitor SDK auf Version 0.22.0-preview aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-921">Updated Monitor SDK to version 0.22.0-preview</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-922">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-922">Az.Network</span></span>
+* <span data-ttu-id="f6333-923">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-923">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-924">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-924">Fix documentation for wildcards</span></span>
+
+#### <a name="aznotificationhubs"></a><span data-ttu-id="f6333-925">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="f6333-925">Az.NotificationHubs</span></span>
+* <span data-ttu-id="f6333-926">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-926">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-927">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-927">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-928">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-928">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azpowerbiembedded"></a><span data-ttu-id="f6333-929">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="f6333-929">Az.PowerBIEmbedded</span></span>
+* <span data-ttu-id="f6333-930">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-930">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-931">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-931">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-932">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-932">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-933">Tabellenformat für SQL auf Azure-VM aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-933">Updated table format for SQL in azure VM</span></span>
+* <span data-ttu-id="f6333-934">Alternative Methode zum Abrufen des Speicherorts in „AzureFileShare“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-934">Added alternate method to fetch location in AzureFileShare</span></span>
+* <span data-ttu-id="f6333-935">„ScheduleRunDays“ in SchedulePolicy-Objekt gemäß Zeitzone aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-935">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
+
+#### <a name="azrediscache"></a><span data-ttu-id="f6333-936">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="f6333-936">Az.RedisCache</span></span>
+* <span data-ttu-id="f6333-937">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-937">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-938">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-938">Az.Resources</span></span>
+* <span data-ttu-id="f6333-939">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-939">Fix documentation for wildcards</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-940">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-940">Az.Sql</span></span>
+* <span data-ttu-id="f6333-941">Abhängigkeit vom Monitor SDK durch allgemeinen Code ersetzt</span><span class="sxs-lookup"><span data-stu-id="f6333-941">Replace dependency on Monitor SDK with common code</span></span>
+* <span data-ttu-id="f6333-942">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-942">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-943">Verbesserter Prozess für Klassifizierung mehrerer Spalten</span><span class="sxs-lookup"><span data-stu-id="f6333-943">Enhanced process of multiple columns classification.</span></span>
+* <span data-ttu-id="f6333-944">SKU-Eigenschaften (SKU-Name, Familie, Kapazität) in Antwort von „Get-AzSqlServerServiceObjective“ aufgenommen und standardmäßig als Tabelle formatiert</span><span class="sxs-lookup"><span data-stu-id="f6333-944">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
+* <span data-ttu-id="f6333-945">Möglichkeit zum Ausführen von „Get-AzSqlServerServiceObjective“ nach Standort, ohne dass bereits ein Server in der Region vorhanden sein muss</span><span class="sxs-lookup"><span data-stu-id="f6333-945">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
+* <span data-ttu-id="f6333-946">Unterstützung für Zeitzonenparameter bei der Erstellung einer verwalteten Instanz</span><span class="sxs-lookup"><span data-stu-id="f6333-946">Support for time zone parameter in Managed Instance create.</span></span>
+* <span data-ttu-id="f6333-947">Dokumentation für Platzhalter korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-947">Fix documentation for wildcards</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-948">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-948">Az.Websites</span></span>
+* <span data-ttu-id="f6333-949">„Set-AzWebApp“ und „Set-AzWebAppSlot“ korrigiert, sodass die Tags bei der Ausführung nicht entfernt werden</span><span class="sxs-lookup"><span data-stu-id="f6333-949">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
+* <span data-ttu-id="f6333-950">Cmdlets, die Nomen im Plural enthalten, auf Nomen im Singular aktualisiert. Namen im Plural wurden als veraltet gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="f6333-950">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="f6333-951">WebSites SDK aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-951">Updated the WebSites SDK.</span></span>
+* <span data-ttu-id="f6333-952">AdminSiteName-Eigenschaft aus „PSAppServicePlan“ entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-952">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
+
+## <a name="170---april-2019"></a><span data-ttu-id="f6333-953">1.7.0: April 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-953">1.7.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="f6333-954">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="f6333-954">Highlights since the last major release</span></span>
+* <span data-ttu-id="f6333-955">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="f6333-955">General availability of `Az` module</span></span>
+* <span data-ttu-id="f6333-956">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="f6333-956">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="f6333-957">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="f6333-957">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="f6333-958">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-958">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="f6333-959">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-959">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="f6333-960">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-960">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="f6333-961">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-961">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-962">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-962">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-963">„Add-AzEnvironment“ und „Set-AzEnvironment“ aktualisiert, um den Parameter „AzureAnalysisServicesEndpointResourceId“ zu akzeptieren</span><span class="sxs-lookup"><span data-stu-id="f6333-963">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="f6333-964">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="f6333-964">Az.AnalysisServices</span></span>
+* <span data-ttu-id="f6333-965">ServiceClient wird in Cmdlets für die Datenebene verwendet, und die ursprüngliche Authentifizierungslogik wird entfernt.</span><span class="sxs-lookup"><span data-stu-id="f6333-965">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
+* <span data-ttu-id="f6333-966">„Add-AzureASAccount“ wird als Wrapper von „Connect-AzAccount“ festgelegt, um einen Breaking Change zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="f6333-966">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-967">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-967">Az.Automation</span></span>
+* <span data-ttu-id="f6333-968">Fehler des Cmdlets „Fixed New-AzAutomationSoftwareUpdateConfiguration“ für Einschlüsse behoben.</span><span class="sxs-lookup"><span data-stu-id="f6333-968">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="f6333-969">Die Parameter „IncludedKbNumber“ und „IncludedPackageNameMask“ sollten nun funktionieren.</span><span class="sxs-lookup"><span data-stu-id="f6333-969">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
+* <span data-ttu-id="f6333-970">Fehlerbehebung für eine dynamische Gruppe der Azure Automation-Updateverwaltung</span><span class="sxs-lookup"><span data-stu-id="f6333-970">Bug fix for azure automation update management dynamic group</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-971">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-971">Az.Compute</span></span>
+* <span data-ttu-id="f6333-972">Parameter „HyperVGeneration“ zu „New-AzDiskConfig“ und „New-AzSnapshotConfig“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-972">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
+* <span data-ttu-id="f6333-973">Zulassen der VM-Erstellung mit einem Katalogimage aus anderen Mandanten</span><span class="sxs-lookup"><span data-stu-id="f6333-973">Allow VM creation with galley image from other tenants.</span></span>
+
+#### <a name="azcontainerinstance"></a><span data-ttu-id="f6333-974">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-974">Az.ContainerInstance</span></span>
+* <span data-ttu-id="f6333-975">Problem im Parameter „-Command“ von „New-AzContainerGroup“ behoben, das dazu führte, dass ein nachgestelltes leeres Argument hinzugefügt wurde</span><span class="sxs-lookup"><span data-stu-id="f6333-975">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-976">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-976">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-977">Version des ADF .NET SDK auf 3.0.2 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-977">Updated ADF .Net SDK version to 3.0.2</span></span>
+* <span data-ttu-id="f6333-978">Cmdlet „Set-AzDataFactoryV2“ mit zusätzlichen Parametern für RepoConfiguration-Einstellungen aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-978">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-979">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-979">Az.Resources</span></span>
+* <span data-ttu-id="f6333-980">Verarbeitung von Anbietern für „Get-AzResource“ bei der Angabe der Parameter „-ResourceId“ oder „-ResourceGroupName“, „-Name“ und „-ResourceType“ verbessert</span><span class="sxs-lookup"><span data-stu-id="f6333-980">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
+* <span data-ttu-id="f6333-981">Fehlerbehandlung für „Test-AzDeployment“ und „Test-AzResourceGroupDeployment“ verbessert</span><span class="sxs-lookup"><span data-stu-id="f6333-981">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
+    - <span data-ttu-id="f6333-982">Behandlung von außerhalb der Bereitstellungsüberprüfung aufgetretenen Fehlern und stattdessen Aufnahme in die Ausgabe des Befehls</span><span class="sxs-lookup"><span data-stu-id="f6333-982">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
+    - <span data-ttu-id="f6333-983">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="f6333-983">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+* <span data-ttu-id="f6333-984">Switch-Parameter „-IgnoreDynamicParameters“ zu Bereitstellungs-Cmdlets hinzugefügt, um Aufforderung in Skript- und Auftragsszenarien zu überspringen</span><span class="sxs-lookup"><span data-stu-id="f6333-984">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
+    - <span data-ttu-id="f6333-985">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="f6333-985">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-986">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-986">Az.Sql</span></span>
+* <span data-ttu-id="f6333-987">Unterstützung für Klassifizierung von Datenbankdaten</span><span class="sxs-lookup"><span data-stu-id="f6333-987">Support Database Data Classification.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-988">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-988">Az.Storage</span></span>
+* <span data-ttu-id="f6333-989">Melden eines ausführlichen Fehlers beim Erstellen des Storage-Kontexts mit dem Parameter „-UseConnectedAccount“, aber ohne Azure-Anmeldekonto</span><span class="sxs-lookup"><span data-stu-id="f6333-989">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
+    - <span data-ttu-id="f6333-990">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="f6333-990">New-AzStorageContext</span></span>
+* <span data-ttu-id="f6333-991">Unterstützung für das Verwalten von Blobdiensteigenschaften eines bestimmten Storage-Kontos mit einer API der Verwaltungsebene</span><span class="sxs-lookup"><span data-stu-id="f6333-991">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
+    - <span data-ttu-id="f6333-992">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="f6333-992">Update-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="f6333-993">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="f6333-993">Get-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="f6333-994">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-994">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
+    - <span data-ttu-id="f6333-995">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-995">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
+* <span data-ttu-id="f6333-996">Unterstützung von „-AsJob“ für Cmdlets für den Upload und Download von Blobs und Dateien</span><span class="sxs-lookup"><span data-stu-id="f6333-996">-AsJob support for Blob and file upload and download cmdlets</span></span>
+    - <span data-ttu-id="f6333-997">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="f6333-997">Get-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="f6333-998">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="f6333-998">Set-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="f6333-999">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="f6333-999">Get-AzStorageFileContent</span></span>
+    - <span data-ttu-id="f6333-1000">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="f6333-1000">Set-AzStorageFileContent</span></span>
+
+## <a name="160---march-2019"></a><span data-ttu-id="f6333-1001">1.6.0: März 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1001">1.6.0 - March 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="f6333-1002">Highlights seit der letzten Hauptversion</span><span class="sxs-lookup"><span data-stu-id="f6333-1002">Highlights since the last major release</span></span>
+* <span data-ttu-id="f6333-1003">Allgemeine Verfügbarkeit des `Az`-Moduls</span><span class="sxs-lookup"><span data-stu-id="f6333-1003">General availability of `Az` module</span></span>
+* <span data-ttu-id="f6333-1004">Weitere Informationen zum `Az`-Modul finden Sie unter folgendem Link: https://aka.ms/azps-announce.</span><span class="sxs-lookup"><span data-stu-id="f6333-1004">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="f6333-1005">Vervollständigung für Location, ResourceGroup und ResourceName hinzugefügt: https://azure.microsoft.com/blog/completers-in-azure-powershell/.</span><span class="sxs-lookup"><span data-stu-id="f6333-1005">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="f6333-1006">Unterstützung für Platzhalter zu Get-Cmdlets für Az.Compute und Az.Network hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1006">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="f6333-1007">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1007">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="f6333-1008">Unterstützung für Python 2-Runbooks in Az.Automation hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1008">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="f6333-1009">Az.LogicApp: Neue Cmdlets für Integrationskonto-Assemblys und -Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1009">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-1010">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-1010">Az.Automation</span></span>
+* <span data-ttu-id="f6333-1011">Änderung an der Azure Automation-Updateverwaltung, um die folgenden neuen Features zu unterstützen:</span><span class="sxs-lookup"><span data-stu-id="f6333-1011">Azure automation update management change to support the following new features :</span></span>
+    * <span data-ttu-id="f6333-1012">Dynamische Gruppierung</span><span class="sxs-lookup"><span data-stu-id="f6333-1012">Dynamic grouping</span></span>
+    * <span data-ttu-id="f6333-1013">Pre-/Post-Skripts</span><span class="sxs-lookup"><span data-stu-id="f6333-1013">Pre-Post script</span></span>
+    * <span data-ttu-id="f6333-1014">Neustarteinstellung</span><span class="sxs-lookup"><span data-stu-id="f6333-1014">Reboot Setting</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1015">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1015">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1016">Problem mit der Pfadauflösung in „Get-AzVmBootDiagnosticsData“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1016">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
+* <span data-ttu-id="f6333-1017">Computeclientbibliothek auf 25.0.0. aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1017">Update Compute client library to 25.0.0.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="f6333-1018">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-1018">Az.KeyVault</span></span>
+* <span data-ttu-id="f6333-1019">Unterstützung für Platzhalterzeichen zu KeyVault-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1019">Added wildcard support to KeyVault cmdlets</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1020">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1020">Az.Network</span></span>
+* <span data-ttu-id="f6333-1021">Threat Intelligence-Unterstützung für Azure Firewall hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1021">Add Threat Intelligence support for Azure Firewall</span></span>
+* <span data-ttu-id="f6333-1022">Ressource der obersten Ebene für Application Gateway-Firewallrichtlinie und benutzerdefinierte Regeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1022">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1023">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1023">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-1024">SnapshotRetentionInDays in Azure-VM-Richtlinie hinzugefügt, um sofortigen Wiederherstellungspunkt zu unterstützen</span><span class="sxs-lookup"><span data-stu-id="f6333-1024">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
+* <span data-ttu-id="f6333-1025">Pipe-Unterstützung für das Aufheben der Registrierung eines Containers hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1025">Added pipe support for unregister container</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1026">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1026">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1027">Unterstützung für Platzhalterzeichen für Get-AzResource und Get-AzResourceGroup aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1027">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
+* <span data-ttu-id="f6333-1028">Anmeldeinformationen aktualisiert, die beim Senden generischer Aufrufe an ARM verwendet werden</span><span class="sxs-lookup"><span data-stu-id="f6333-1028">Update credentials used when making generic calls to ARM</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1029">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1029">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1030">Der Cmdlet-Parameter der Bedrohungserkennung (ExcludeDetectionType) wurde von „DetectionType“ in „string[]“ geändert, um ihn zukunftssicher zu machen, wenn neue DetectionTypes-Elemente hinzugefügt werden, und um AutoVervollständigen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="f6333-1030">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-1031">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1031">Az.Storage</span></span>
+* <span data-ttu-id="f6333-1032">Unterstützung von Get-/Set-/Remove-Verwaltungsrichtlinien für Speicherkonto hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1032">Support Get/Set/Remove Management Policy on a Storage account</span></span>
+    - <span data-ttu-id="f6333-1033">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-1033">Set-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="f6333-1034">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-1034">Get-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="f6333-1035">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="f6333-1035">Remove-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="f6333-1036">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="f6333-1036">Add-AzStorageAccountManagementPolicyAction</span></span>
+    - <span data-ttu-id="f6333-1037">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="f6333-1037">New-AzStorageAccountManagementPolicyFilter</span></span>
+    - <span data-ttu-id="f6333-1038">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="f6333-1038">New-AzStorageAccountManagementPolicyRule</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-1039">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1039">Az.Websites</span></span>
+* <span data-ttu-id="f6333-1040">ARM-Vorlagenfehler behoben, der zu einem Problem beim Klonen aller Slots mithilfe von „New-AzWebApp -IncludeSourceWebAppSlots“ führte</span><span class="sxs-lookup"><span data-stu-id="f6333-1040">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span>
+
+## <a name="150---march-2019"></a><span data-ttu-id="f6333-1041">1.5.0: März 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1041">1.5.0 - March 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-1042">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1042">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-1043">Der Befehl „Register-AzModule“ wurde hinzugefügt, um von AutoRest generierte Cmdlets zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="f6333-1043">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
+* <span data-ttu-id="f6333-1044">Beispiele für „Connect-AzAccount“ wurden aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1044">Update examples for Connect-AzAccount</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-1045">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-1045">Az.Automation</span></span>
+* <span data-ttu-id="f6333-1046">Problem behoben, das beim Abrufen bestimmter monatlicher Zeitpläne in verschiedenen Azure Automation-Cmdlets auftrat</span><span class="sxs-lookup"><span data-stu-id="f6333-1046">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
+* <span data-ttu-id="f6333-1047">„Get-AzAutomationDscNode“ wurde korrigiert, da nur die 20 obersten Knoten zurückgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="f6333-1047">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="f6333-1048">Jetzt werden alle Knoten zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="f6333-1048">Now it returns all nodes</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="f6333-1049">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="f6333-1049">Az.Cdn</span></span>
+* <span data-ttu-id="f6333-1050">Neue Powershell-Cmdlets zum Aktivieren/Deaktivieren von HTTPS für benutzerdefinierte Domänen hinzugefügt und alte Cmdlets außer Betrieb genommen</span><span class="sxs-lookup"><span data-stu-id="f6333-1050">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1051">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1051">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1052">Unterstützung für Platzhalterzeichen zu Get-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1052">Add wildcard support to Get cmdlets</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-1053">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-1053">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-1054">Version des ADF .NET SDK auf 3.0.1 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1054">Updated ADF .Net SDK version to 3.0.1</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="f6333-1055">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="f6333-1055">Az.LogicApp</span></span>
+* <span data-ttu-id="f6333-1056">„ListWorkflows“ wurde korrigiert, da nur die erste Seite mit Ergebnissen abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="f6333-1056">Fix for ListWorkflows only retrieving the first page of results</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1057">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1057">Az.Network</span></span>
+* <span data-ttu-id="f6333-1058">Unterstützung für Platzhalterzeichen zu Network-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1058">Add wildcard support to Network cmdlets</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1059">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1059">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-1060">SQL Server jetzt in Azure-VM-Support enthalten</span><span class="sxs-lookup"><span data-stu-id="f6333-1060">Added Sql server in Azure VM support</span></span>
+* <span data-ttu-id="f6333-1061">SDK-Update</span><span class="sxs-lookup"><span data-stu-id="f6333-1061">SDK Update</span></span>
+* <span data-ttu-id="f6333-1062">VMappContainer-Überprüfung in „Get-ProtectableItem“ entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-1062">Removed VMappContainer check in Get-ProtectableItem</span></span>
+* <span data-ttu-id="f6333-1063">„Name“ und „ServerName“ als Parameter für „Get-ProtectableItem“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1063">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1064">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1064">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1065">Parameter `-TemplateObject` zu Bereitstellungs-Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1065">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
+    - <span data-ttu-id="f6333-1066">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/2933</span><span class="sxs-lookup"><span data-stu-id="f6333-1066">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
+* <span data-ttu-id="f6333-1067">Problem beim Piping des Ergebnisses von `Get-AzResource` an `Set-AzResource` behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1067">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
+    - <span data-ttu-id="f6333-1068">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8240</span><span class="sxs-lookup"><span data-stu-id="f6333-1068">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
+* <span data-ttu-id="f6333-1069">Problem mit JSON-Datentypänderung beim Ausführen von `Set-AzResource` behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1069">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
+    - <span data-ttu-id="f6333-1070">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7930</span><span class="sxs-lookup"><span data-stu-id="f6333-1070">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1071">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1071">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1072">„AuditingEndpointsCommunicator“ wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1072">Updating AuditingEndpointsCommunicator.</span></span>
+    - <span data-ttu-id="f6333-1073">Das Verhalten eines Grenzfalls beim Erstellen neuer Diagnoseeinstellungen wurde korrigiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1073">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-1074">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1074">Az.Storage</span></span>
+* <span data-ttu-id="f6333-1075">Unterstützung von „Kind BlockBlobStorage“ beim Erstellen eines Speicherkontos: New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="f6333-1075">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
+
+## <a name="140---february-2019"></a><span data-ttu-id="f6333-1076">1.4.0 – Februar 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1076">1.4.0 - February 2019</span></span>
+#### <a name="azanalysisservices"></a><span data-ttu-id="f6333-1077">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1077">Az.AnalysisServices</span></span>
+* <span data-ttu-id="f6333-1078">Cmdlet „AddAzureASAccount“ als veraltet markiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1078">Deprecated AddAzureASAccount cmdlet</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-1079">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-1079">Az.Automation</span></span>
+* <span data-ttu-id="f6333-1080">Hilfe für „Import-AzAutomationDscNodeConfiguration“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1080">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
+* <span data-ttu-id="f6333-1081">Überprüfung des Konfigurationsnamens zu Cmdlet „Import-AzAutomationDscConfiguration“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1081">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
+* <span data-ttu-id="f6333-1082">Fehlerbehandlung für Cmdlet „Import-AzAutomationDscConfiguration“ verbessert</span><span class="sxs-lookup"><span data-stu-id="f6333-1082">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-1083">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1083">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-1084">„CustomSubdomainName“ als neuer optionaler Parameter für Cmdlet „New-AzCognitiveServicesAccount“ hinzugefügt, das zum Angeben der Unterdomäne für die Ressource verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f6333-1084">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1085">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1085">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1086">Problem mit ID-Parametersätzen behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1086">Fix issue with ID parameter sets</span></span>
+* <span data-ttu-id="f6333-1087">„Get-AzVMExtension“ aktualisiert, sodass alle installierten Erweiterungen aufgelistet werden, wenn der Name-Parameter nicht angegeben ist</span><span class="sxs-lookup"><span data-stu-id="f6333-1087">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
+* <span data-ttu-id="f6333-1088">Parameter „Tag“ und „ResourceId“ zum Cmdlet „Update-AzImage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1088">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
+* <span data-ttu-id="f6333-1089">„Get-AzVmssVM“ ohne Instanz-ID und mit „InstanceView“ können virtuelle VMSS-Computer mit Instanzansicht auflisten.</span><span class="sxs-lookup"><span data-stu-id="f6333-1089">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1090">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1090">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-1091">Cmdlets zum Auflisten und Wiederherstellen gelöschter ADL-Elemente hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1091">Add cmdlets for ADL deleted item enumerate and restore</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="f6333-1092">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="f6333-1092">Az.EventHub</span></span>
+* <span data-ttu-id="f6333-1093">Neue boolesche Eigenschaft „SkipEmptyArchives“ zum Überspringen leerer Archive in Klasse „CaptureDescription“ von EventHub hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1093">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="f6333-1094">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-1094">Az.KeyVault</span></span>
+* <span data-ttu-id="f6333-1095">Kennzeichnung in „Set-AzKeyVaultSecret“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1095">Fix tagging on Set-AzKeyVaultSecret</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="f6333-1096">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="f6333-1096">Az.LogicApp</span></span>
+* <span data-ttu-id="f6333-1097">SKU „Basic“ für Integrationskonten hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1097">Add in Basic sku for Integration Accounts</span></span>
+* <span data-ttu-id="f6333-1098">XSLT 2.0, XSLT 3.0 und Liquid-Zuordnungstypen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1098">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
+* <span data-ttu-id="f6333-1099">Neue Cmdlets für Integrationskonto-Assemblys</span><span class="sxs-lookup"><span data-stu-id="f6333-1099">New cmdlets for Integration Account Assemblies</span></span>
+    - <span data-ttu-id="f6333-1100">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="f6333-1100">Get-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="f6333-1101">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="f6333-1101">New-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="f6333-1102">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="f6333-1102">Remove-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="f6333-1103">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="f6333-1103">Set-AzIntegrationAccountAssembly</span></span>
+* <span data-ttu-id="f6333-1104">Neue Cmdlets für Integrationskonto-Batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1104">New cmdlets for Integration Account Batch Configuration</span></span>
+    - <span data-ttu-id="f6333-1105">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1105">Get-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="f6333-1106">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1106">New-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="f6333-1107">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1107">Remove-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="f6333-1108">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1108">Set-AzIntegrationAccountBatchConfiguration</span></span>
+* <span data-ttu-id="f6333-1109">Logik-App-SDK auf Version 4.1.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1109">Update Logic App SDK to version 4.1.0</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="f6333-1110">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-1110">Az.Monitor</span></span>
+* <span data-ttu-id="f6333-1111">Hilfe für „Get-AzMetric“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1111">Update help for Get-AzMetric</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1112">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1112">Az.Network</span></span>
+* <span data-ttu-id="f6333-1113">Hilfebeispiel für „Add-AzApplicationGatewayCustomError“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1113">Update help example for Add-AzApplicationGatewayCustomError</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-1114">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-1114">Az.OperationalInsights</span></span>
+* <span data-ttu-id="f6333-1115">Zusätzliche Unterstützung für Datenquelle von „New-ApplicationInsights“ und „Get-ApplicationInsights“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1115">Additional support for New and Get ApplicationInsights data source.</span></span>
+    - <span data-ttu-id="f6333-1116">Neue Art von „ApplicationInsights“ zum Abrufen von bestimmten und von allen ApplicationInsights-Datenquellen für einen Workspace hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1116">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span>
+    - <span data-ttu-id="f6333-1117">Cmdlet „New-AzOperationalInsightsApplicationInsightsDataSource“ zum Erstellen einer Datenquelle anhand des angegebenen Ressourcenparameters für „Application-Insights“ hinzugefügt: „subscriptionId“, „resourceGroupName“ und „name“.</span><span class="sxs-lookup"><span data-stu-id="f6333-1117">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1118">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1118">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1119">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="f6333-1119">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="f6333-1120">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="f6333-1120">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
+* <span data-ttu-id="f6333-1121">Behebung des Problems: https://github.com/Azure/azure-powershell/issues/6219</span><span class="sxs-lookup"><span data-stu-id="f6333-1121">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
+* <span data-ttu-id="f6333-1122">Fehler korrigiert, der die wiederholte Erstellung von „KeyCredentials“ verhindert</span><span class="sxs-lookup"><span data-stu-id="f6333-1122">Fix bug preventing repeat creation of KeyCredentials</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1123">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1123">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1124">Unterstützung für SQL DB Hyperscale-Tarif hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1124">Add support for SQL DB Hyperscale tier</span></span>
+* <span data-ttu-id="f6333-1125">Fehler korrigiert, aufgrund dessen die Wiederherstellung wegen der Festlegung unnötiger Eigenschaften in der Wiederherstellungsanforderung fehlschlagen konnte</span><span class="sxs-lookup"><span data-stu-id="f6333-1125">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-1126">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1126">Az.Websites</span></span>
+* <span data-ttu-id="f6333-1127">Beispiel in „Get-AzWebAppSlotMetrics“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1127">Correct example in Get-AzWebAppSlotMetrics</span></span>
+
+## <a name="130---february-2019"></a><span data-ttu-id="f6333-1128">1.3.0: Februar 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1128">1.3.0 - February 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-1129">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1129">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-1130">Update auf die aktuelle Version von ClientRuntime durchgeführt</span><span class="sxs-lookup"><span data-stu-id="f6333-1130">Update to latest version of ClientRuntime</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="f6333-1131">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1131">Az.AnalysisServices</span></span>
+<span data-ttu-id="f6333-1132">Allgemeine Verfügbarkeit für Az.AnalysisServices-Modul</span><span class="sxs-lookup"><span data-stu-id="f6333-1132">General availability for Az.AnalysisServices module.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1133">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1133">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1134">AEM-Erweiterung: Unterstützung für UltraSSD und P60-, P70- und P80-Datenträger hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1134">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
+* <span data-ttu-id="f6333-1135">Hilfebeschreibung für „Set-AzVMBootDiagnostics“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1135">Update help description for Set-AzVMBootDiagnostics</span></span>
+* <span data-ttu-id="f6333-1136">Hilfebeschreibung und Beispiel für „Update-AzImage“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1136">Update help description and example for Update-AzImage</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1137">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1137">Az.RecoveryServices</span></span>
+<span data-ttu-id="f6333-1138">Allgemeine Verfügbarkeit für Az.RecoveryServices-Modul.</span><span class="sxs-lookup"><span data-stu-id="f6333-1138">General availability for Az.RecoveryServices module.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1139">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1139">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1140">Kennzeichnung für Ressourcengruppen korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1140">Fix tagging for resource groups</span></span>
+    - <span data-ttu-id="f6333-1141">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="f6333-1141">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="f6333-1142">Problem behoben, bei dem „-ErrorAction“ von `Get-AzureRmRoleAssignment` nicht berücksichtigt wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1142">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span>
+    - <span data-ttu-id="f6333-1143">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="f6333-1143">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1144">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1144">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1145">Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1145">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
+* <span data-ttu-id="f6333-1146">Problem behoben, bei dem eine fehlende Anmeldung am Azure-Konto bei der Ausführung von SQL-Cmdlets zu einer nullref-Ausnahme führt</span><span class="sxs-lookup"><span data-stu-id="f6333-1146">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
+* <span data-ttu-id="f6333-1147">nullref-Ausnahme in Get-AzSqlCapability korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1147">Fixed null ref exception in Get-AzSqlCapability</span></span>
+
+## <a name="121---january-2019"></a><span data-ttu-id="f6333-1148">1.2.1: Januar 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1148">1.2.1 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-1149">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1149">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-1150">Release mit richtiger Version der Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="f6333-1150">Release with correct version of Authentication</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="f6333-1151">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1151">Az.AnalysisServices</span></span>
+* <span data-ttu-id="f6333-1152">Release mit aktualisierter Authentifizierungsabhängigkeit</span><span class="sxs-lookup"><span data-stu-id="f6333-1152">Release with updated Authentication dependency</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1153">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1153">Az.RecoveryServices</span></span>
+* <span data-ttu-id="f6333-1154">Release mit aktualisierter Authentifizierungsabhängigkeit</span><span class="sxs-lookup"><span data-stu-id="f6333-1154">Release with updated Authentication dependency</span></span>
+
+## <a name="120---january-2019"></a><span data-ttu-id="f6333-1155">1.2.0: Januar 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1155">1.2.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-1156">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1156">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-1157">Interaktive und Benutzername/Kennwort-Authentifizierung ausschließlich für Windows PowerShell 5.1 hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1157">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="f6333-1158">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1158">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="f6333-1159">Warnmeldung in PS Core für „Uninstall-AzureRm“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1159">Add warning message in PS Core for Uninstall-AzureRm</span></span>
+
+#### <a name="azaks"></a><span data-ttu-id="f6333-1160">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="f6333-1160">Az.Aks</span></span>
+* <span data-ttu-id="f6333-1161">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1161">Update incorrect online help URLs</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="f6333-1162">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-1162">Az.Automation</span></span>
+* <span data-ttu-id="f6333-1163">Unterstützung für Python 2-Runbooks hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1163">Added support for Python 2 runbooks</span></span>
+* <span data-ttu-id="f6333-1164">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1164">Update incorrect online help URLs</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="f6333-1165">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="f6333-1165">Az.Cdn</span></span>
+* <span data-ttu-id="f6333-1166">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1166">Update incorrect online help URLs</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1167">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1167">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1168">Cmdlet „Invoke-AzVMReimage“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1168">Add Invoke-AzVMReimage cmdlet</span></span>
+* <span data-ttu-id="f6333-1169">Parameter „TempDisk“ zu „Set-AzVmss“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1169">Add TempDisk parameter to Set-AzVmss</span></span>
+* <span data-ttu-id="f6333-1170">Warnmeldung von „New-AzVM“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1170">Fix the warning message of New-AzVM</span></span>
+
+#### <a name="azcontainerregistry"></a><span data-ttu-id="f6333-1171">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="f6333-1171">Az.ContainerRegistry</span></span>
+* <span data-ttu-id="f6333-1172">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1172">Update incorrect online help URLs</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="f6333-1173">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="f6333-1173">Az.DataFactory</span></span>
+* <span data-ttu-id="f6333-1174">Version des ADF .NET SDK auf 3.0.0 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1174">Updated ADF .Net SDK version to 3.0.0</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1175">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1175">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-1176">Problem mit ADLS-Endpunkt bei Verwendung von MSI behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1176">Fix issue with ADLS endpoint when using MSI</span></span>
+    - <span data-ttu-id="f6333-1177">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7462</span><span class="sxs-lookup"><span data-stu-id="f6333-1177">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
+* <span data-ttu-id="f6333-1178">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1178">Update incorrect online help URLs</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="f6333-1179">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-1179">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-1180">Codierungsformat zu Cmdlet „Add-IotHubRoutingEndpoint“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1180">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="f6333-1181">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-1181">Az.KeyVault</span></span>
+* <span data-ttu-id="f6333-1182">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1182">Update incorrect online help URLs</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1183">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1183">Az.Network</span></span>
+* <span data-ttu-id="f6333-1184">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1184">Update incorrect online help URLs</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1185">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1185">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1186">Fehlerhafte Beispiele in Referenzdokumentation zu „New-AzADAppCredential“ und „New-AzADSpCredential“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1186">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
+* <span data-ttu-id="f6333-1187">Problem behoben, bei dem der Pfad für den Parameter „-TemplateFile“ nicht aufgelöst wurde, bevor Cmdlets für die Bereitstellung von Ressourcengruppen ausgeführt wurden</span><span class="sxs-lookup"><span data-stu-id="f6333-1187">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
+* <span data-ttu-id="f6333-1188">Az.Resources: Richtige Dokumentation für Standardwert von „New-AzureRmPolicyDefinition -Mode“ bereitgestellt</span><span class="sxs-lookup"><span data-stu-id="f6333-1188">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
+* <span data-ttu-id="f6333-1189">Az.Resources: Behebung des Problems: https://github.com/Azure/azure-powershell/issues/7522</span><span class="sxs-lookup"><span data-stu-id="f6333-1189">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
+* <span data-ttu-id="f6333-1190">Az.Resources: Behebung des Problems: https://github.com/Azure/azure-powershell/issues/5747</span><span class="sxs-lookup"><span data-stu-id="f6333-1190">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
+* <span data-ttu-id="f6333-1191">Formatierungsproblem für Objekt „PSResourceGroupDeployment“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1191">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
+    - <span data-ttu-id="f6333-1192">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/2123</span><span class="sxs-lookup"><span data-stu-id="f6333-1192">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-1193">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-1193">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-1194">Rollback beim Hinzufügen eines Zertifikats zum VMSS-Modell, Auslösung einer Ausnahme. Fehlerbehebung: https://github.com/Azure/service-fabric-issues/issues/932</span><span class="sxs-lookup"><span data-stu-id="f6333-1194">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
+* <span data-ttu-id="f6333-1195">Einige Fehlermeldungen wurden korrigiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1195">Fix some error messages.</span></span>
+* <span data-ttu-id="f6333-1196">Fehler bei Clustererstellung mit ARM-Standardvorlage für „New-AzServiceFabriCluster“ behoben, bei dem die Migration zu Az nicht funktioniert hat.</span><span class="sxs-lookup"><span data-stu-id="f6333-1196">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
+* <span data-ttu-id="f6333-1197">Fehler behoben beim Hinzufügen eines Cluster-/Anwendungszertifikats ausschließlich zu VM Scale Sets, die zum Cluster gehören, indem die Cluster-ID in der Erweiterung überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="f6333-1197">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="f6333-1198">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="f6333-1198">Az.SignalR</span></span>
+* <span data-ttu-id="f6333-1199">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1199">Update incorrect online help URLs</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1200">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1200">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1201">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1201">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="f6333-1202">Parameterbeschreibung für den Parameter „LicenseType“ mit möglichen Werten aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1202">Updated parameter description for LicenseType parameter with possible values</span></span>
+* <span data-ttu-id="f6333-1203">Fehler behoben, bei dem die Aktualisierung der Identität der verwalteten Instanz nicht funktioniert hat, wenn es sich um die einzige aktualisierte Eigenschaft gehandelt hat</span><span class="sxs-lookup"><span data-stu-id="f6333-1203">Fix for updating managed instance identity not working when it is the only updated property</span></span>
+* <span data-ttu-id="f6333-1204">Unterstützung für die benutzerdefinierte Sortierung auf verwalteter Instanz</span><span class="sxs-lookup"><span data-stu-id="f6333-1204">Support for custom collation on managed instance</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-1205">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1205">Az.Storage</span></span>
+* <span data-ttu-id="f6333-1206">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1206">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="f6333-1207">Ausführliche Fehlermeldung beim Abrufen/Festlegen der klassischen Protokollierung bzw. Metriken für Storage Premium-Konto, da für das Storage Premium-Konto die klassische Protokollierung bzw. Metriken nicht unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="f6333-1207">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
+    - <span data-ttu-id="f6333-1208">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="f6333-1208">Get/Set-AzStorageServiceLoggingProperty</span></span>
+    - <span data-ttu-id="f6333-1209">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="f6333-1209">Get/Set-AzStorageServiceMetricsProperty</span></span>
+
+#### <a name="aztrafficmanager"></a><span data-ttu-id="f6333-1210">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="f6333-1210">Az.TrafficManager</span></span>
+* <span data-ttu-id="f6333-1211">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1211">Update incorrect online help URLs</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-1212">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1212">Az.Websites</span></span>
+* <span data-ttu-id="f6333-1213">Fehlerhafte URLs für Onlinehilfe aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1213">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="f6333-1214">„New-AzWebAppSSLBinding“ korrigiert, damit das Zertifikat in die richtige Ressourcengruppe bzw. an den richtigen Speicherort hochgeladen wird, wenn die App in einer ASE gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="f6333-1214">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
+* <span data-ttu-id="f6333-1215">„New-AzWebAppSSLBinding“ korrigiert, damit die Tags beim Binden eines SSL-Zertifikats an eine App nicht überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="f6333-1215">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
+
+## <a name="110---january-2019"></a><span data-ttu-id="f6333-1216">1.1.0 – Januar 2019</span><span class="sxs-lookup"><span data-stu-id="f6333-1216">1.1.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="f6333-1217">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1217">Az.Accounts</span></span>
+* <span data-ttu-id="f6333-1218">Bereich „Local“ zu „Enable-AzureRmAlias“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1218">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1219">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1219">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1220">Name ist jetzt optional im ID-Parametersatz für „Restart/Start/Stop/Remove/Set-AzVM“ und „Save-AzVMImage“</span><span class="sxs-lookup"><span data-stu-id="f6333-1220">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
+* <span data-ttu-id="f6333-1221">Beschreibung der ID in Hilfedateien aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1221">Updated the description of ID in help files</span></span>
+* <span data-ttu-id="f6333-1222">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1222">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1223">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1223">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-1224">Aktualisierung der SDK-Version der Datenebene auf 1.1.14 für SDK-Fehlerbehebungen.</span><span class="sxs-lookup"><span data-stu-id="f6333-1224">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
+    - <span data-ttu-id="f6333-1225">Behandlung von negativen acesstime- and modificationtime-Werten für „getfilestatus“ und „liststatus“ korrigiert, asynchrones Abbruchtoken korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1225">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="f6333-1226">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="f6333-1226">Az.EventGrid</span></span>
+* <span data-ttu-id="f6333-1227">Zur Verwendung der API-Version 2019-01-01 aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1227">Updated to use the 2019-01-01 API version.</span></span>
+* <span data-ttu-id="f6333-1228">Aktualisierung der folgenden Cmdlets zur Unterstützung des neuen Szenarios in der API-Version 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="f6333-1228">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
+    - <span data-ttu-id="f6333-1229">New-AzureRmEventGridSubscription: Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="f6333-1229">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="f6333-1230">Gültigkeitsdauer des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="f6333-1230">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="f6333-1231">Maximale Anzahl von Übermittlungsversuchen für die Ereignisse</span><span class="sxs-lookup"><span data-stu-id="f6333-1231">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="f6333-1232">Endpunkt für unzustellbare Nachrichten</span><span class="sxs-lookup"><span data-stu-id="f6333-1232">Dead letter endpoint.</span></span>
+    - <span data-ttu-id="f6333-1233">Update-AzureRmEventGridSubscription: Neue optionale Parameter zum Angeben folgender Werte hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="f6333-1233">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="f6333-1234">Gültigkeitsdauer des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="f6333-1234">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="f6333-1235">Maximale Anzahl von Übermittlungsversuchen für die Ereignisse</span><span class="sxs-lookup"><span data-stu-id="f6333-1235">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="f6333-1236">Endpunkt für unzustellbare Nachrichten</span><span class="sxs-lookup"><span data-stu-id="f6333-1236">Dead letter endpoint.</span></span>
+* <span data-ttu-id="f6333-1237">Neue Enumerationswerte („storageQueue“ und „hybridConnection“) für die EndpointType-Option in den Cmdlets „New-AzureRmEventGridSubscription“ und „Update-AzureRmEventGridSubscription“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1237">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
+* <span data-ttu-id="f6333-1238">Anzeige einer Warnmeldung, wenn das Erstellen oder Aktualisieren des Ereignisabonnements voraussichtlich eine manuelle Aktion des Benutzers zur Folge hat</span><span class="sxs-lookup"><span data-stu-id="f6333-1238">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="f6333-1239">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="f6333-1239">Az.IotHub</span></span>
+* <span data-ttu-id="f6333-1240">Auf die aktuelle Version des Iot Hub SDK aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1240">Updated to the latest version of the IotHub SDK</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="f6333-1241">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="f6333-1241">Az.LogicApp</span></span>
+* <span data-ttu-id="f6333-1242">„Get-AzLogicApp“ listet alle Apps ohne angegebenen Namen auf</span><span class="sxs-lookup"><span data-stu-id="f6333-1242">Get-AzLogicApp lists all without specified Name</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="f6333-1243">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1243">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1244">Problem mit dem Parametersatz bei Angabe der Parameter „-ODataQuery“ und „-ResourceId“ für „Get-AzResource“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1244">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
+    - <span data-ttu-id="f6333-1245">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/7875</span><span class="sxs-lookup"><span data-stu-id="f6333-1245">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
+* <span data-ttu-id="f6333-1246">Behandlung des Parameters „-Custom“ in „New/Set-AzPolicyDefinition“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1246">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="f6333-1247">Tippfehler in der Dokumentation für „New-AzDeployment“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1247">Fix typo in New-AzDeployment documentation</span></span>
+* <span data-ttu-id="f6333-1248">Parameter „-MailNickname“ als obligatorisch festgelegt für „New-AzADUser“</span><span class="sxs-lookup"><span data-stu-id="f6333-1248">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
+    - <span data-ttu-id="f6333-1249">Weitere Informationen finden Sie hier: https://github.com/Azure/azure-powershell/issues/8220</span><span class="sxs-lookup"><span data-stu-id="f6333-1249">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="f6333-1250">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="f6333-1250">Az.SignalR</span></span>
+* <span data-ttu-id="f6333-1251">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1251">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="f6333-1252">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1252">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1253">Abhängigkeit des Speicherverwaltungsclients zur allgemeinen SDK-Implementierung konvertiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1253">Converted the Storage management client dependency to the common SDK implementation.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="f6333-1254">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1254">Az.Storage</span></span>
+* <span data-ttu-id="f6333-1255">Festlegung des „StorageAccountName“ des Speicherkontexts als tatsächlichen Namen des Speicherkontos, wenn dieser mit „SAS-Token“, „OAuth“ oder „Anonym“ erstellt wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1255">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
+    - <span data-ttu-id="f6333-1256">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="f6333-1256">New-AzStorageContext</span></span>
+* <span data-ttu-id="f6333-1257">Erstellen von SAS-Token des Blob-Momentaufnahmeobjekts mit dem Parameter „-FullUri“, Festlegung des zurückgegebenen URI als Momentaufnahme-URI</span><span class="sxs-lookup"><span data-stu-id="f6333-1257">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
+    - <span data-ttu-id="f6333-1258">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="f6333-1258">New-AzStorageBlobSASToken</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-1259">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1259">Az.Websites</span></span>
+* <span data-ttu-id="f6333-1260">Fehler bei der Datumsanalyse in „Get-AzDeletedWebApp“ behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1260">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
+* <span data-ttu-id="f6333-1261">Problem mit der Abwärtskompatibilität beim Az.Accounts-Modul behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1261">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+## <a name="100---december-2018"></a><span data-ttu-id="f6333-1262">1.0.0 – Dezember 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1262">1.0.0 - December 2018</span></span>
+### <a name="general"></a><span data-ttu-id="f6333-1263">Allgemein</span><span class="sxs-lookup"><span data-stu-id="f6333-1263">General</span></span>
+
+- <span data-ttu-id="f6333-1264">Allgemeine Verfügbarkeit des Az-Moduls</span><span class="sxs-lookup"><span data-stu-id="f6333-1264">General Availability of Az Module</span></span>
+- <span data-ttu-id="f6333-1265">Onlinehilfe für jedes Modul</span><span class="sxs-lookup"><span data-stu-id="f6333-1265">Online help for each module</span></span>
+- <span data-ttu-id="f6333-1266">Ausführlichere Informationen und eine Roadmap finden Sie auf der [Seite mit der Ankündigung zu Az](https://aka.ms/azps-announce).</span><span class="sxs-lookup"><span data-stu-id="f6333-1266">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
+- <span data-ttu-id="f6333-1267">Informationen zur Migration aus AzureRM finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1267">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
+
+### <a name="azaccounts"></a><span data-ttu-id="f6333-1268">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="f6333-1268">Az.Accounts</span></span>
+- <span data-ttu-id="f6333-1269">Geändert von Az.Profile</span><span class="sxs-lookup"><span data-stu-id="f6333-1269">Changed from Az.Profile</span></span>
+- <span data-ttu-id="f6333-1270">Feste Tabellenformate für Profil- und Kontexttypen</span><span class="sxs-lookup"><span data-stu-id="f6333-1270">Fixed table formats for profile and context types</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="f6333-1271">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-1271">Az.ApiManagement</span></span>
+- <span data-ttu-id="f6333-1272">Korrekturen für #7002</span><span class="sxs-lookup"><span data-stu-id="f6333-1272">Fixes for #7002</span></span>
+- <span data-ttu-id="f6333-1273">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1273">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbatch"></a><span data-ttu-id="f6333-1274">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="f6333-1274">Az.Batch</span></span>
+- <span data-ttu-id="f6333-1275">Möglichkeit zum Anzeigen der ausgeführten Version des Azure Batch-Knoten-Agents auf den VMs eines Pools mit der neuen `NodeAgentInformation`-Eigenschaft für `PSComputeNode` hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1275">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
+- <span data-ttu-id="f6333-1276">Der `Caching`-Standardwert für `PSDataDisk` lautet jetzt nicht mehr `None`, sondern `ReadWrite`.</span><span class="sxs-lookup"><span data-stu-id="f6333-1276">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
+- <span data-ttu-id="f6333-1277">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1277">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbilling"></a><span data-ttu-id="f6333-1278">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="f6333-1278">Az.Billing</span></span>
+- <span data-ttu-id="f6333-1279">Kombination von Billing-, Consumption- und UsageAggregates-Cmdlets. Ausführliche Informationen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1279">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azcognitivservices"></a><span data-ttu-id="f6333-1280">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1280">Az.CognitivServices</span></span>
+- <span data-ttu-id="f6333-1281">Vervollständigungen für SkuName und Typem für den Vorgang New-AzureRmCognitiveServicesAccount hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1281">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
+- <span data-ttu-id="f6333-1282">GetSkusWithAccountParamSetName-Parametersatz aus Get-AzCognitiveServicesAccountSkus entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-1282">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="f6333-1283">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1283">Az.ContainerInstance</span></span>
+- <span data-ttu-id="f6333-1284">ManagedIdentity-Unterstützung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1284">Added ManagedIdentity support</span></span>
+
+### <a name="azdatalakeanalytics"></a><span data-ttu-id="f6333-1285">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="f6333-1285">Az.DataLakeAnalytics</span></span>
+- <span data-ttu-id="f6333-1286">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1286">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1287">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1287">Az.DataLakeStore</span></span>
+- <span data-ttu-id="f6333-1288">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1288">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azmonitor"></a><span data-ttu-id="f6333-1289">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="f6333-1289">Az.Monitor</span></span>
+- <span data-ttu-id="f6333-1290">Az.Insights in Az.Monitor umbenannt und weitere weniger wichtige grundlegende Änderungen durchgeführt. Informationen hierzu finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1290">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azkeyvault"></a><span data-ttu-id="f6333-1291">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="f6333-1291">Az.KeyVault</span></span>
+- <span data-ttu-id="f6333-1292">Veraltete PurgeDisabled-Eigenschaft aus Ausgabetypen entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-1292">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
+
+### <a name="azmachinelearning"></a><span data-ttu-id="f6333-1293">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="f6333-1293">Az.MachineLearning</span></span>
+- <span data-ttu-id="f6333-1294">Cmdlets des Az.MachineLearningCompute-Moduls eingebunden</span><span class="sxs-lookup"><span data-stu-id="f6333-1294">Included cmdlets from Az.MachineLearningCompute module</span></span>
+
+### <a name="azmedia"></a><span data-ttu-id="f6333-1295">Az.Media</span><span class="sxs-lookup"><span data-stu-id="f6333-1295">Az.Media</span></span>
+- <span data-ttu-id="f6333-1296">Veralteten -Tags-Alias aus New-AzMediaService entfernt</span><span class="sxs-lookup"><span data-stu-id="f6333-1296">Remove deprecated -Tags alias from New-AzMediaService</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="f6333-1297">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1297">Az.Network</span></span>
+<span data-ttu-id="f6333-1298">Unterstützung für das Konfigurieren von RewriteRuleSets im Application Gateway hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1298">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
+    - <span data-ttu-id="f6333-1299">Neu hinzugefügte Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-1299">New cmdlets added:</span></span>
+        - <span data-ttu-id="f6333-1300">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1300">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1301">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1301">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1302">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1302">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1303">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1303">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1304">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1304">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1305">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="f6333-1305">New-AzureRmApplicationGatewayRewriteRule</span></span>
+        - <span data-ttu-id="f6333-1306">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="f6333-1306">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
+        - <span data-ttu-id="f6333-1307">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="f6333-1307">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
+    - <span data-ttu-id="f6333-1308">Cmdlets mit optionalem Parameter -RewriteRuleSet aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1308">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
+        - <span data-ttu-id="f6333-1309">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="f6333-1309">New-AzureRmApplicationGateway</span></span>
+        - <span data-ttu-id="f6333-1310">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="f6333-1310">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="f6333-1311">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="f6333-1311">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="f6333-1312">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-1312">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
+        - <span data-ttu-id="f6333-1313">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-1313">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
+        - <span data-ttu-id="f6333-1314">New-AzureRmApplicationGatewayUrlPathMapConfig: KeyVault-Unterstützung mithilfe von Identität zum Application Gateway hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1314">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
+    - <span data-ttu-id="f6333-1315">Cmdlets mit optionalem Parameter aktualisiert: -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="f6333-1315">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
+        - <span data-ttu-id="f6333-1316">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="f6333-1316">Add-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="f6333-1317">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="f6333-1317">New-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="f6333-1318">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="f6333-1318">Set-AzApplicationGatewaySslCertificate</span></span>
+    - <span data-ttu-id="f6333-1319">Cmdlet New-AzApplicationGateway mit optionalem Parameter -UserAssignedIdentity aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1319">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
+- <span data-ttu-id="f6333-1320">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1320">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azoperationalinsights"></a><span data-ttu-id="f6333-1321">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-1321">Az.OperationalInsights</span></span>
+- <span data-ttu-id="f6333-1322">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1322">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azprofile"></a><span data-ttu-id="f6333-1323">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="f6333-1323">Az.Profile</span></span>
+- <span data-ttu-id="f6333-1324">Modulnamen in Az.Accounts geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-1324">Changed module name to Az.Accounts</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1325">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1325">Az.RecoveryServices</span></span>
+- <span data-ttu-id="f6333-1326">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1326">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="f6333-1327">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1327">Az.Resources</span></span>
+- <span data-ttu-id="f6333-1328">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1328">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="f6333-1329">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-1329">Az.ServiceFabric</span></span>
+- <span data-ttu-id="f6333-1330">Unterstützung für das Angeben des Zertifikats anhand des allgemeinen Namens und Fingerabdrucks</span><span class="sxs-lookup"><span data-stu-id="f6333-1330">Support specfying certificate by common name and thumbprint</span></span>
+- <span data-ttu-id="f6333-1331">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1331">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azsignalr"></a><span data-ttu-id="f6333-1332">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="f6333-1332">Az.SIgnalR</span></span>
+- <span data-ttu-id="f6333-1333">Allgemeine Verfügbarkeit für PowerShell-Cmdlets für SIgnalR</span><span class="sxs-lookup"><span data-stu-id="f6333-1333">General Availability for PowerShell cmdlets for SIgnalR</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="f6333-1334">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1334">Az.Sql</span></span>
+- <span data-ttu-id="f6333-1335">Neue Erkennungstypen Data_Exfiltration und Unsafe_Action zu Cmdlets für Bedrohungserkennung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1335">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
+- <span data-ttu-id="f6333-1336">Dokumentationsbeispiele für Cmdlets für SQL-Überwachung aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1336">Updated documentation examples for Sql Auditing cmdlets</span></span>
+- <span data-ttu-id="f6333-1337">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1337">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="f6333-1338">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1338">Az.Storage</span></span>
+- <span data-ttu-id="f6333-1339">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1339">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="f6333-1340">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1340">Az.Websites</span></span>
+- <span data-ttu-id="f6333-1341">Informationen zu weniger wichtigen grundlegenden Änderungen finden Sie im [Migrationsleitfaden](https://aka.ms/azps-migration-guide).</span><span class="sxs-lookup"><span data-stu-id="f6333-1341">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+## <a name="070---december-2018"></a><span data-ttu-id="f6333-1342">0.7.0 – Dezember 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1342">0.7.0 - December 2018</span></span>
+
+### <a name="general"></a><span data-ttu-id="f6333-1343">Allgemein</span><span class="sxs-lookup"><span data-stu-id="f6333-1343">General</span></span>
+
+* <span data-ttu-id="f6333-1344">Geringe Änderungen für anstehenden Übergang von AzureRM zu Az</span><span class="sxs-lookup"><span data-stu-id="f6333-1344">Minor changes for upcoming AzureRM to Az transition</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="f6333-1345">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1345">Az.Compute</span></span>
+
+* <span data-ttu-id="f6333-1346">Unterstützung für UltraSSD und Katalogimages in einfachen Parametersätzen für `New-AzVm(ss)`-Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1346">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1347">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1347">Az.DataLakeStore</span></span>
+
+* <span data-ttu-id="f6333-1348">Nachgestellten Schrägstrich für die Domäne des ADLS-Kontos korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1348">Fix the trailing slash of the domain of adls account</span></span>
+
+### <a name="azfrontdoor"></a><span data-ttu-id="f6333-1349">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="f6333-1349">Az.FrontDoor</span></span>
+
+* <span data-ttu-id="f6333-1350">Einige fehlerhafte Links behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1350">Fixed some broken links</span></span>
+    - <span data-ttu-id="f6333-1351">In den Artikeln zu New-AzureRmFrontDoor und Set-AzureRmFrontDoor den Artikel-Link zum Cmdlet „New-AzureRmFrontDoorHealthProbeSettingObject“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1351">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
+    - <span data-ttu-id="f6333-1352">Im Artikel zu New-AzureRmFrontDoorManagedRuleObject den Artikel-Link zum Cmdlet „New-AzureRmFrontDoorRuleGroupOverrideObject“ korrigiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1352">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="f6333-1353">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1353">Az.RecoveryServices</span></span>
+
+* <span data-ttu-id="f6333-1354">Clientseitige Validierungen für Wiederherstellungsvorgänge von Azure-Dateifreigaben hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1354">Added client side validations for Azure File Share restore operations.</span></span>
+* <span data-ttu-id="f6333-1355">storageAccountName und storageAccountResourceGroupName für AFS-Wiederherstellung optional gemacht.</span><span class="sxs-lookup"><span data-stu-id="f6333-1355">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="f6333-1356">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1356">Az.Resources</span></span>
+
+* <span data-ttu-id="f6333-1357">Fehlerbehebung für https://github.com/Azure/azure-powershell/issues/7679</span><span class="sxs-lookup"><span data-stu-id="f6333-1357">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
+    - <span data-ttu-id="f6333-1358">Get-AzureRmRoleAssignment für die Verwendung des Abonnementbereichs aktualisiert, wenn dieser beim Anfordern von klassischen Administratoren angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="f6333-1358">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="f6333-1359">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1359">Az.Sql</span></span>
+
+* <span data-ttu-id="f6333-1360">Geringe Änderungen für anstehenden Übergang von AzureRM zu Az</span><span class="sxs-lookup"><span data-stu-id="f6333-1360">Minor changes for upcoming AzureRM to Az transition</span></span>
+* <span data-ttu-id="f6333-1361">Problem mit der Verwendung von Get-AzureRmSqlDatabaseVulnerabilityAssessment mit .NET Core behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1361">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
+* <span data-ttu-id="f6333-1362">Dokumentation mit Hilfemeldungen zu Cmdlets für die SQL-Überwachung geändert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1362">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="f6333-1363">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1363">Az.Storage</span></span>
+
+* <span data-ttu-id="f6333-1364">-EnableHierarchicalNamespace zu New-AzureRmStorageAccount hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1364">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
+* <span data-ttu-id="f6333-1365">Problem behoben, bei dem für das Copy File-Cmdlet am Ziel kein Quellkontext wiederverwendet werden kann, wenn -DestContext nicht eingegeben wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1365">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
+    - <span data-ttu-id="f6333-1366">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="f6333-1366">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="f6333-1367">Unterstützung der Konfiguration von statischen Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1367">Support Static Website configuration</span></span>
+    - <span data-ttu-id="f6333-1368">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="f6333-1368">Enable-AzureStorageStaticWebsite</span></span>
+    - <span data-ttu-id="f6333-1369">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="f6333-1369">Disable-AzureStorageStaticWebsite</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="f6333-1370">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1370">Az.Websites</span></span>
+
+* <span data-ttu-id="f6333-1371">Set-AzureRmWebApp und Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="f6333-1371">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span>
+    - <span data-ttu-id="f6333-1372">Neuen Parameter (-AzureStoragePath) zum Angeben von Azure Storage-Pfaden hinzugefügt, die in Windows- und Linux-Container-Apps bereitgestellt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="f6333-1372">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="f6333-1373">Verwenden Sie die Ausgabe des neuen Cmdlets New-AzureRmWebAppAzureStoragePath als Parameter zum Festlegen der Azure Storage-Pfade.</span><span class="sxs-lookup"><span data-stu-id="f6333-1373">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
+
+## <a name="061---november-2018"></a><span data-ttu-id="f6333-1374">0.6.1 – November 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1374">0.6.1 - November 2018</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="f6333-1375">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="f6333-1375">Az.ApiManagement</span></span>
+* <span data-ttu-id="f6333-1376">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1376">Update dependencies for type mapping issue</span></span>
+
+### <a name="azautomation"></a><span data-ttu-id="f6333-1377">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="f6333-1377">Az.Automation</span></span>
+* <span data-ttu-id="f6333-1378">Swagger-basierte Azure Automation-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="f6333-1378">Swagger based Azure Automation cmdlets</span></span>
+* <span data-ttu-id="f6333-1379">Cmdlets zur Updateverwaltung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1379">Added Update Management cmdlets</span></span>
+* <span data-ttu-id="f6333-1380">Cmdlets zur Quellcodeverwaltung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1380">Added Source Control cmdlets</span></span>
+* <span data-ttu-id="f6333-1381">Cmdlet „Remove-AzureRmAutomationHybridWorkerGroup“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1381">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
+* <span data-ttu-id="f6333-1382">DSC-Befehl für die Knotenregistrierung korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1382">Fixed the DSC Register Node command</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="f6333-1383">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1383">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1384">Identitätsproblem für SystemAssigned-Identität korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1384">Fixed identity issue for SystemAssigned identity</span></span>
+* <span data-ttu-id="f6333-1385">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1385">Update dependencies for type mapping issue</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="f6333-1386">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1386">Az.ContainerInstance</span></span>
+* <span data-ttu-id="f6333-1387">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1387">Update dependencies for type mapping issue</span></span>
+
+### <a name="azmarketplaceordering"></a><span data-ttu-id="f6333-1388">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="f6333-1388">Az.MarketplaceOrdering</span></span>
+* <span data-ttu-id="f6333-1389">Beschreibung der Beispiele für Marketplace-Cmdlets aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1389">update the examples description for marketplace cmdlets</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="f6333-1390">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1390">Az.Network</span></span>
+* <span data-ttu-id="f6333-1391">Folgende Cmdlets hinzugefügt: New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span><span class="sxs-lookup"><span data-stu-id="f6333-1391">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
+* <span data-ttu-id="f6333-1392">ICMP wieder unterstützten AzureFirewall-Netzwerkprotokollen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1392">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
+* <span data-ttu-id="f6333-1393">Cmdlet „Test-AzureRmNetworkWatcherConnectivity“ aktualisiert und Überprüfung für Ziel-ID, Adresse und Port hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1393">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span>
+* <span data-ttu-id="f6333-1394">Probleme mit Arbeitsspeicherauslastung in der VirtualNetwork-Zuordnung behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1394">Fix issues with memory usage in VirtualNetwork map</span></span>
+
+### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="f6333-1395">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="f6333-1395">Az.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="f6333-1396">Problem beim Ändern der Richtlinie für eine geschützte Dateifreigabe behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1396">Fix for modifying policy for a protected file share.</span></span>
+* <span data-ttu-id="f6333-1397">Richtlinienzeitzone in Großschreibung geändert</span><span class="sxs-lookup"><span data-stu-id="f6333-1397">Converted policy timezone to uppercase.</span></span>
+
+### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="f6333-1398">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="f6333-1398">Az.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="f6333-1399">Korrigiertes Beispiel in „New-AzureRmRecoveryServicesAsrProtectableItem“</span><span class="sxs-lookup"><span data-stu-id="f6333-1399">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
+* <span data-ttu-id="f6333-1400">Abhängigkeiten für Typzuordnungsproblem aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1400">Update dependencies for type mapping issue</span></span>
+
+### <a name="azrelay"></a><span data-ttu-id="f6333-1401">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="f6333-1401">Az.Relay</span></span>
+* <span data-ttu-id="f6333-1402">Optionaler Parameter „-KeyValue“ zu Cmdlet „New-AzureRmRelayKey“ hinzugefügt, der dem Benutzer das Angeben von „KeyValue“ ermöglicht</span><span class="sxs-lookup"><span data-stu-id="f6333-1402">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="f6333-1403">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1403">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1404">Hilfedokumentation für ressourcenidentitätsbezogene Parameter in `New-AzureRmPolicyAssignment` und `Set-AzureRmPolicyAssignment` aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1404">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
+* <span data-ttu-id="f6333-1405">Beispiel für „New-AzureRmPolicyDefinition“ hinzugefügt, das „-Metadata“ nutzt</span><span class="sxs-lookup"><span data-stu-id="f6333-1405">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
+* <span data-ttu-id="f6333-1406">Korrektur, um Beibehaltung von Groß-/Kleinschreibung in Tagschlüsseln in „NetStandard“ zu ermöglichen: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="f6333-1406">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="f6333-1407">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-1407">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-1408">Benachrichtigung über veraltete Elemente für anstehende wichtige Änderungen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1408">Add deprecation messages for upcoming breaking changes</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="f6333-1409">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1409">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1410">Neue Cmdlets für CRUD-Vorgänge in verwalteten Azure SQL-Datenbank-Instanzen und verwalteten Azure SQL-Datenbanken hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1410">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
+    - <span data-ttu-id="f6333-1411">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1411">Get-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="f6333-1412">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1412">New-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="f6333-1413">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1413">Set-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="f6333-1414">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="f6333-1414">Remove-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="f6333-1415">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="f6333-1415">Get-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="f6333-1416">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="f6333-1416">New-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="f6333-1417">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="f6333-1417">Restore-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="f6333-1418">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="f6333-1418">Remove-AzureRmSqlInstanceDatabase</span></span>
+* <span data-ttu-id="f6333-1419">Erweiterte Verwaltung von Überwachungsrichtlinien auf einem Server oder in einer Datenbank aktiviert</span><span class="sxs-lookup"><span data-stu-id="f6333-1419">Enabled Extended Auditing Policy management on a server or a database.</span></span>
+    - <span data-ttu-id="f6333-1420">Neuer Parameter (PredicateExpression) hinzugefügt, um die Filterung von Überwachungsprotokollen zu ermöglichen</span><span class="sxs-lookup"><span data-stu-id="f6333-1420">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
+    - <span data-ttu-id="f6333-1421">Cmdlets wurden angepasst, sodass sie SQL-Clients anstelle von Legacyclients verwenden.</span><span class="sxs-lookup"><span data-stu-id="f6333-1421">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
+    - <span data-ttu-id="f6333-1422">Set-AzureRmSqlServerAuditing</span><span class="sxs-lookup"><span data-stu-id="f6333-1422">Set-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="f6333-1423">Get-AzureRmSqlServerAuditing</span><span class="sxs-lookup"><span data-stu-id="f6333-1423">Get-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="f6333-1424">Set-AzureRmSqlDatabaseAuditing</span><span class="sxs-lookup"><span data-stu-id="f6333-1424">Set-AzureRmSqlDatabaseAuditing.</span></span>
+    - <span data-ttu-id="f6333-1425">Get-AzureRmSqlDatabaseAuditing</span><span class="sxs-lookup"><span data-stu-id="f6333-1425">Get-AzureRmSqlDatabaseAuditing.</span></span>
+* <span data-ttu-id="f6333-1426">Problem bei Verwendung von „Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings“ mit festgelegtem Parameter für den Speicherkontonamen behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1426">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
+
+## <a name="050---november-2018"></a><span data-ttu-id="f6333-1427">0.5.0 – November 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1427">0.5.0 - November 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="f6333-1428">Allgemein</span><span class="sxs-lookup"><span data-stu-id="f6333-1428">General</span></span>
+* <span data-ttu-id="f6333-1429">Ressourcenvervollständigungen für viele Kern-Cmdlets hinzugefügt (diese ermöglichen das Durchlaufen von vorhandenen Ressourcennamen per TAB-TASTE, wenn Cmdlets interaktiv aufgerufen werden)</span><span class="sxs-lookup"><span data-stu-id="f6333-1429">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
+
+#### <a name="azprofile"></a><span data-ttu-id="f6333-1430">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="f6333-1430">Az.Profile</span></span>
+* <span data-ttu-id="f6333-1431">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1431">Update common code to use latest version of ClientRuntime</span></span>
+* <span data-ttu-id="f6333-1432">Parameter „TenantId“ im Cmdlet „Connect-AzAccount“ in „Tenant“ umbenannt und Alias für „TenantId“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1432">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
+* <span data-ttu-id="f6333-1433">Beschreibung von „TenantId“ für „Connect-AzAccount“ aktualisiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1433">Updated TenantId description for Connect-AzAccount</span></span>
+* <span data-ttu-id="f6333-1434">Fehlermeldung für fehlgeschlagene Anmeldung bei Angabe der Mandantendomäne korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1434">Fix error message for failed login when providing tenant domain</span></span>
     - https://github.com/Azure/azure-powershell/issues/6936
-* <span data-ttu-id="ca33d-1435">Problem in Bezug auf Kontextnamenskonflikt für Konten ohne Abonnements im Mandanten behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1435">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
+* <span data-ttu-id="f6333-1435">Problem in Bezug auf Kontextnamenskonflikt für Konten ohne Abonnements im Mandanten behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1435">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
     - https://github.com/Azure/azure-powershell/issues/7453
-* <span data-ttu-id="ca33d-1436">Problem mit DataLake-Endpunkten bei Verwendung von MSI behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1436">Fix issue with DataLake endpoints when using MSI</span></span>
+* <span data-ttu-id="f6333-1436">Problem mit DataLake-Endpunkten bei Verwendung von MSI behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1436">Fix issue with DataLake endpoints when using MSI</span></span>
     - https://github.com/Azure/azure-powershell/issues/7462
-* <span data-ttu-id="ca33d-1437">Problem behoben, das zur Auslösung von „Disconnect-AzAccount“ führte, wenn keine Verbindung bestand</span><span class="sxs-lookup"><span data-stu-id="ca33d-1437">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
+* <span data-ttu-id="f6333-1437">Problem behoben, das zur Auslösung von „Disconnect-AzAccount“ führte, wenn keine Verbindung bestand</span><span class="sxs-lookup"><span data-stu-id="f6333-1437">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
     - https://github.com/Azure/azure-powershell/issues/7167
 
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-1438">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1438">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-1439">Vorgang „Get-AzCognitiveServicesAccountSkus“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1439">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-1438">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1438">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-1439">Vorgang „Get-AzCognitiveServicesAccountSkus“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1439">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1440">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1440">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1441">Cmdlets Add-AzVmssVMDataDisk und Remove-AzVmssVMDataDisk hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1441">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
-* <span data-ttu-id="ca33d-1442">„Get-AzVMImage“ zeigt „AutomaticOSUpgradeProperties“ an</span><span class="sxs-lookup"><span data-stu-id="ca33d-1442">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
-* <span data-ttu-id="ca33d-1443">Problem behoben, aufgrund dessen die Optionswerte „SetAzVMChefExtension -BootstrapOptions“ und „-JsonAttribute“ nicht im JSON-Format festgelegt wurden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1443">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1440">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1440">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1441">Cmdlets Add-AzVmssVMDataDisk und Remove-AzVmssVMDataDisk hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1441">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
+* <span data-ttu-id="f6333-1442">„Get-AzVMImage“ zeigt „AutomaticOSUpgradeProperties“ an</span><span class="sxs-lookup"><span data-stu-id="f6333-1442">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
+* <span data-ttu-id="f6333-1443">Problem behoben, aufgrund dessen die Optionswerte „SetAzVMChefExtension -BootstrapOptions“ und „-JsonAttribute“ nicht im JSON-Format festgelegt wurden</span><span class="sxs-lookup"><span data-stu-id="f6333-1443">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1444">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1444">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-1445">Aktualisierung des DataLake-Pakets auf 1.1.10</span><span class="sxs-lookup"><span data-stu-id="ca33d-1445">Update the DataLake package to 1.1.10.</span></span>
-* <span data-ttu-id="ca33d-1446">Standardmäßige Parallelität zu Multithreadvorgängen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1446">Add default Concurrency to multithreaded operations.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1444">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1444">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-1445">Aktualisierung des DataLake-Pakets auf 1.1.10</span><span class="sxs-lookup"><span data-stu-id="f6333-1445">Update the DataLake package to 1.1.10.</span></span>
+* <span data-ttu-id="f6333-1446">Standardmäßige Parallelität zu Multithreadvorgängen hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1446">Add default Concurrency to multithreaded operations.</span></span>
 
-#### <a name="azinsights"></a><span data-ttu-id="ca33d-1447">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="ca33d-1447">Az.Insights</span></span>
-* <span data-ttu-id="ca33d-1448">Problem Nr. 7267 behoben (Bereich für automatische Skalierung)</span><span class="sxs-lookup"><span data-stu-id="ca33d-1448">Fixed issue #7267 (Autoscale area)</span></span>
-    - <span data-ttu-id="ca33d-1449">Probleme beim Erstellen einer neuen Regel für die automatische Skalierung, aufgrund derer die aufgelisteten Parameter nicht richtig festgelegt wurden (Es wurde stets der Standardwert festgelegt.)</span><span class="sxs-lookup"><span data-stu-id="ca33d-1449">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
-* <span data-ttu-id="ca33d-1450">Problem Nr. 7513 behoben [Insights] „Set-AzDiagnosticSetting“ erfordert die explizite Angabe von Kategorien während der Erstellung der Einstellung.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1450">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
-    - <span data-ttu-id="ca33d-1451">Nun erfordert das Cmdlet nicht die explizite Angabe der Kategorien, die während der Erstellung aktiviert werden sollen. Das bedeutet, es funktioniert wie dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1451">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
+#### <a name="azinsights"></a><span data-ttu-id="f6333-1447">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="f6333-1447">Az.Insights</span></span>
+* <span data-ttu-id="f6333-1448">Problem Nr. 7267 behoben (Bereich für automatische Skalierung)</span><span class="sxs-lookup"><span data-stu-id="f6333-1448">Fixed issue #7267 (Autoscale area)</span></span>
+    - <span data-ttu-id="f6333-1449">Probleme beim Erstellen einer neuen Regel für die automatische Skalierung, aufgrund derer die aufgelisteten Parameter nicht richtig festgelegt wurden (Es wurde stets der Standardwert festgelegt.)</span><span class="sxs-lookup"><span data-stu-id="f6333-1449">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
+* <span data-ttu-id="f6333-1450">Problem Nr. 7513 behoben [Insights] „Set-AzDiagnosticSetting“ erfordert die explizite Angabe von Kategorien während der Erstellung der Einstellung.</span><span class="sxs-lookup"><span data-stu-id="f6333-1450">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
+    - <span data-ttu-id="f6333-1451">Nun erfordert das Cmdlet nicht die explizite Angabe der Kategorien, die während der Erstellung aktiviert werden sollen. Das bedeutet, es funktioniert wie dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1451">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1452">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1452">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1453">„PeeringType“ wurde geändert und ist nun ein erforderlicher Parameter für die folgenden Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="ca33d-1453">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
-    - <span data-ttu-id="ca33d-1454">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="ca33d-1454">Get-AzExpressRouteCircuitRouteTable</span></span>
-    - <span data-ttu-id="ca33d-1455">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="ca33d-1455">Get-AzExpressRouteCircuitARPTable</span></span>
-    - <span data-ttu-id="ca33d-1456">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="ca33d-1456">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
-    - <span data-ttu-id="ca33d-1457">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="ca33d-1457">Get-AzExpressRouteCrossConnectionArpTable</span></span>
-    - <span data-ttu-id="ca33d-1458">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="ca33d-1458">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
-    - <span data-ttu-id="ca33d-1459">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="ca33d-1459">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1452">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1452">Az.Network</span></span>
+* <span data-ttu-id="f6333-1453">„PeeringType“ wurde geändert und ist nun ein erforderlicher Parameter für die folgenden Cmdlets:</span><span class="sxs-lookup"><span data-stu-id="f6333-1453">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
+    - <span data-ttu-id="f6333-1454">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="f6333-1454">Get-AzExpressRouteCircuitRouteTable</span></span>
+    - <span data-ttu-id="f6333-1455">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="f6333-1455">Get-AzExpressRouteCircuitARPTable</span></span>
+    - <span data-ttu-id="f6333-1456">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="f6333-1456">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
+    - <span data-ttu-id="f6333-1457">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="f6333-1457">Get-AzExpressRouteCrossConnectionArpTable</span></span>
+    - <span data-ttu-id="f6333-1458">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="f6333-1458">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
+    - <span data-ttu-id="f6333-1459">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="f6333-1459">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
 
-#### <a name="azpolicyinsights"></a><span data-ttu-id="ca33d-1460">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="ca33d-1460">Az.PolicyInsights</span></span>
-* <span data-ttu-id="ca33d-1461">Cmdlets für Richtlinienwartung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1461">Added policy remediation cmdlets</span></span>
+#### <a name="azpolicyinsights"></a><span data-ttu-id="f6333-1460">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="f6333-1460">Az.PolicyInsights</span></span>
+* <span data-ttu-id="f6333-1461">Cmdlets für Richtlinienwartung hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1461">Added policy remediation cmdlets</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1462">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1462">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1463">Fehlerbehebung für https://github.com/Azure/azure-powershell/issues/7402</span><span class="sxs-lookup"><span data-stu-id="ca33d-1463">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
-    - <span data-ttu-id="ca33d-1464">Zulassen der Auflistung von Ressourcen mithilfe des Parameters „-ResourceId“ für „Get-AzResource“</span><span class="sxs-lookup"><span data-stu-id="ca33d-1464">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
+#### <a name="azresources"></a><span data-ttu-id="f6333-1462">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1462">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1463">Fehlerbehebung für https://github.com/Azure/azure-powershell/issues/7402</span><span class="sxs-lookup"><span data-stu-id="f6333-1463">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
+    - <span data-ttu-id="f6333-1464">Zulassen der Auflistung von Ressourcen mithilfe des Parameters „-ResourceId“ für „Get-AzResource“</span><span class="sxs-lookup"><span data-stu-id="f6333-1464">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
 
-#### <a name="azservicebus"></a><span data-ttu-id="ca33d-1465">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="ca33d-1465">Az.ServiceBus</span></span>
-* <span data-ttu-id="ca33d-1466">Schreibgeschützte Eigenschaft „MigrationState“ zu „PSServiceBusMigrationConfigurationAttributes“ hinzugefügt, was das Ermitteln des Migrationsstatus ermöglicht</span><span class="sxs-lookup"><span data-stu-id="ca33d-1466">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
+#### <a name="azservicebus"></a><span data-ttu-id="f6333-1465">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="f6333-1465">Az.ServiceBus</span></span>
+* <span data-ttu-id="f6333-1466">Schreibgeschützte Eigenschaft „MigrationState“ zu „PSServiceBusMigrationConfigurationAttributes“ hinzugefügt, was das Ermitteln des Migrationsstatus ermöglicht</span><span class="sxs-lookup"><span data-stu-id="f6333-1466">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
 
-#### <a name="azservicefabric"></a><span data-ttu-id="ca33d-1467">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="ca33d-1467">Az.ServiceFabric</span></span>
-* <span data-ttu-id="ca33d-1468">Hinzufügen des Zertifikats zu Linux VMSS korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1468">Fix add certificate to Linux Vmss.</span></span>
-* <span data-ttu-id="ca33d-1469">„Add-AzServiceFabricClusterCertificate“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="ca33d-1469">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
-    - <span data-ttu-id="ca33d-1470">Verwenden des richtigen Fingerabdrucks aus dem neuen Zertifikat (Azure/service-fabric-issues#932)</span><span class="sxs-lookup"><span data-stu-id="ca33d-1470">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
-    - <span data-ttu-id="ca33d-1471">Richtige Anzeige von Ausnahmen (Azure/service-fabric-issues#1054)</span><span class="sxs-lookup"><span data-stu-id="ca33d-1471">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
-* <span data-ttu-id="ca33d-1472">„Update-AzServiceFabricDurability“ korrigiert, um die Clusterkonfiguration zu aktualisieren, bevor der VMSS-Vorgang „CreateOrUpdate“ gestartet wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1472">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
+#### <a name="azservicefabric"></a><span data-ttu-id="f6333-1467">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6333-1467">Az.ServiceFabric</span></span>
+* <span data-ttu-id="f6333-1468">Hinzufügen des Zertifikats zu Linux VMSS korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1468">Fix add certificate to Linux Vmss.</span></span>
+* <span data-ttu-id="f6333-1469">„Add-AzServiceFabricClusterCertificate“ korrigiert</span><span class="sxs-lookup"><span data-stu-id="f6333-1469">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
+    - <span data-ttu-id="f6333-1470">Verwenden des richtigen Fingerabdrucks aus dem neuen Zertifikat (Azure/service-fabric-issues#932)</span><span class="sxs-lookup"><span data-stu-id="f6333-1470">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
+    - <span data-ttu-id="f6333-1471">Richtige Anzeige von Ausnahmen (Azure/service-fabric-issues#1054)</span><span class="sxs-lookup"><span data-stu-id="f6333-1471">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
+* <span data-ttu-id="f6333-1472">„Update-AzServiceFabricDurability“ korrigiert, um die Clusterkonfiguration zu aktualisieren, bevor der VMSS-Vorgang „CreateOrUpdate“ gestartet wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1472">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
 
-## <a name="040---october-2018"></a><span data-ttu-id="ca33d-1473">0.4.0 – Oktober 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1473">0.4.0 - October 2018</span></span>
-#### <a name="azprofile"></a><span data-ttu-id="ca33d-1474">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1474">Az.Profile</span></span>
-* <span data-ttu-id="ca33d-1475">Problem mit „Get-AzSubscription“ in Cloud Shell behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1475">Fix issue with Get-AzSubscription in CloudShell</span></span>
-* <span data-ttu-id="ca33d-1476">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1476">Update common code to use latest version of ClientRuntime</span></span>
+## <a name="040---october-2018"></a><span data-ttu-id="f6333-1473">0.4.0 – Oktober 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1473">0.4.0 - October 2018</span></span>
+#### <a name="azprofile"></a><span data-ttu-id="f6333-1474">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="f6333-1474">Az.Profile</span></span>
+* <span data-ttu-id="f6333-1475">Problem mit „Get-AzSubscription“ in Cloud Shell behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1475">Fix issue with Get-AzSubscription in CloudShell</span></span>
+* <span data-ttu-id="f6333-1476">Allgemeiner Code aktualisiert, sodass die aktuelle Version von „ClientRuntime“ verwendet wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1476">Update common code to use latest version of ClientRuntime</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1477">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1477">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1478">Neue Größen zur Whitelist von VM-Größen hinzugefügt, für die bei Verwendung des einfachen Parametersatzes für „New-AzVm“ der beschleunigte Netzwerkbetrieb aktiviert wird</span><span class="sxs-lookup"><span data-stu-id="ca33d-1478">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
-* <span data-ttu-id="ca33d-1479">ResourceName-Argumentvervollständigung zu allen Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1479">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1477">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1477">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1478">Neue Größen zur Whitelist von VM-Größen hinzugefügt, für die bei Verwendung des einfachen Parametersatzes für „New-AzVm“ der beschleunigte Netzwerkbetrieb aktiviert wird</span><span class="sxs-lookup"><span data-stu-id="f6333-1478">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
+* <span data-ttu-id="f6333-1479">ResourceName-Argumentvervollständigung zu allen Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1479">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="ca33d-1480">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="ca33d-1480">Az.DataLakeStore</span></span>
-* <span data-ttu-id="ca33d-1481">Unterstützung für VNET-Regeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1481">Adding support for Virtual Network Rules</span></span>
-    - <span data-ttu-id="ca33d-1482">Get-AzDataLakeStoreVirtualNetworkRule: Dient zum Abrufen oder Auflisten der Azure Data Lake Store-Regel für das virtuelle Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1482">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
-    - <span data-ttu-id="ca33d-1483">Add-AzDataLakeStoreVirtualNetworkRule: Fügt dem angegebenen Data Lake Store-Konto eine Regel für das virtuelle Netzwerk hinzu.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1483">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="ca33d-1484">Set-AzDataLakeStoreVirtualNetworkRule: Ändert die angegebene Regel für das virtuelle Netzwerk in das angegebene Data Lake Store-Konto.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1484">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="ca33d-1485">Remove-AzDataLakeStoreVirtualNetworkRule: Dient zum Löschen der Azure Data Lake Store-Regel für das virtuelle Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1485">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="f6333-1480">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="f6333-1480">Az.DataLakeStore</span></span>
+* <span data-ttu-id="f6333-1481">Unterstützung für VNET-Regeln hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1481">Adding support for Virtual Network Rules</span></span>
+    - <span data-ttu-id="f6333-1482">Get-AzDataLakeStoreVirtualNetworkRule: Dient zum Abrufen oder Auflisten der Azure Data Lake Store-Regel für das virtuelle Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="f6333-1482">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
+    - <span data-ttu-id="f6333-1483">Add-AzDataLakeStoreVirtualNetworkRule: Fügt dem angegebenen Data Lake Store-Konto eine Regel für das virtuelle Netzwerk hinzu.</span><span class="sxs-lookup"><span data-stu-id="f6333-1483">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="f6333-1484">Set-AzDataLakeStoreVirtualNetworkRule: Ändert die angegebene Regel für das virtuelle Netzwerk in das angegebene Data Lake Store-Konto.</span><span class="sxs-lookup"><span data-stu-id="f6333-1484">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="f6333-1485">Remove-AzDataLakeStoreVirtualNetworkRule: Dient zum Löschen der Azure Data Lake Store-Regel für das virtuelle Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="f6333-1485">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1486">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1486">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1487">Cmdlet „Test-AzNetworkWatcherConnectivity“ aktualisiert, Protokollwert wird jetzt an Back-End übergeben.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1487">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
-* <span data-ttu-id="ca33d-1488">ResourceName-Argumentvervollständigung zu allen Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1488">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1486">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1486">Az.Network</span></span>
+* <span data-ttu-id="f6333-1487">Cmdlet „Test-AzNetworkWatcherConnectivity“ aktualisiert, Protokollwert wird jetzt an Back-End übergeben.</span><span class="sxs-lookup"><span data-stu-id="f6333-1487">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
+* <span data-ttu-id="f6333-1488">ResourceName-Argumentvervollständigung zu allen Cmdlets hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1488">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1489">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1489">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1490">Problem behoben, aufgrund dessen „Get-AzRoleDefinition“ eine unverständliche Ausnahme auslöst (wenn das Standardprofil kein Abonnement enthält und kein Bereich festgelegt ist), indem im Szenario eine aussagekräftige Ausnahme hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1490">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="ca33d-1491">Außerdem wurde der Standardparametersatz auf „RoleDefinitionNameParameterSet“ festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1491">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
+#### <a name="azresources"></a><span data-ttu-id="f6333-1489">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1489">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1490">Problem behoben, aufgrund dessen „Get-AzRoleDefinition“ eine unverständliche Ausnahme auslöst (wenn das Standardprofil kein Abonnement enthält und kein Bereich festgelegt ist), indem im Szenario eine aussagekräftige Ausnahme hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="f6333-1490">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="f6333-1491">Außerdem wurde der Standardparametersatz auf „RoleDefinitionNameParameterSet“ festgelegt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1491">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
 
-## <a name="030---october-2018"></a><span data-ttu-id="ca33d-1492">0.3.0 – Oktober 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1492">0.3.0 - October 2018</span></span>
-#### <a name="azurestorage"></a><span data-ttu-id="ca33d-1493">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1493">Azure.Storage</span></span>
-* <span data-ttu-id="ca33d-1494">Fehler beim Kopieren von Blobs/Dateien behoben, aufgrund dessen bei einem Metadatenproblem des Ziels keine Metadaten kopiert wurden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1494">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
-    - <span data-ttu-id="ca33d-1495">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1495">Start-AzureStorageBlobCopy</span></span>
-    - <span data-ttu-id="ca33d-1496">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="ca33d-1496">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="ca33d-1497">Der Abruf der Speicherressourcennutzung eines bestimmten Standorts wird jetzt unterstützt, und das Hinzufügen einer Warnmeldung für den Abruf der globalen Speicherressourcennutzung ist überflüssig.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1497">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
-    - <span data-ttu-id="ca33d-1498">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="ca33d-1498">Get-AzStorageUsage</span></span>
+## <a name="030---october-2018"></a><span data-ttu-id="f6333-1492">0.3.0 – Oktober 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1492">0.3.0 - October 2018</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="f6333-1493">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="f6333-1493">Azure.Storage</span></span>
+* <span data-ttu-id="f6333-1494">Fehler beim Kopieren von Blobs/Dateien behoben, aufgrund dessen bei einem Metadatenproblem des Ziels keine Metadaten kopiert wurden</span><span class="sxs-lookup"><span data-stu-id="f6333-1494">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
+    - <span data-ttu-id="f6333-1495">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="f6333-1495">Start-AzureStorageBlobCopy</span></span>
+    - <span data-ttu-id="f6333-1496">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="f6333-1496">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="f6333-1497">Der Abruf der Speicherressourcennutzung eines bestimmten Standorts wird jetzt unterstützt, und das Hinzufügen einer Warnmeldung für den Abruf der globalen Speicherressourcennutzung ist überflüssig.</span><span class="sxs-lookup"><span data-stu-id="f6333-1497">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
+    - <span data-ttu-id="f6333-1498">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="f6333-1498">Get-AzStorageUsage</span></span>
 
-#### <a name="azcognitiveservices"></a><span data-ttu-id="ca33d-1499">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="ca33d-1499">Az.CognitiveServices</span></span>
-* <span data-ttu-id="ca33d-1500">„Get-AzCognitiveServicesAccountSkus“ wird ohne vorhandenes Konto unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1500">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="f6333-1499">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="f6333-1499">Az.CognitiveServices</span></span>
+* <span data-ttu-id="f6333-1500">„Get-AzCognitiveServicesAccountSkus“ wird ohne vorhandenes Konto unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1500">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="ca33d-1501">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="ca33d-1501">Az.Compute</span></span>
-* <span data-ttu-id="ca33d-1502">Korrektur von „Get-AzVM -ResourceGroupName <rg>“, sodass ggf. mehr als 50 Ergebnisse zurückgegeben werden</span><span class="sxs-lookup"><span data-stu-id="ca33d-1502">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
-* <span data-ttu-id="ca33d-1503">Der Cmdlet-Hilfe zu „New-AzVmss“ wurde ein Beispiel für „SimpleParameterSet“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1503">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
-* <span data-ttu-id="ca33d-1504">Tippfehler in der Azure Disk Encryption-Statusmeldung behoben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1504">Fixed a typo in the Azure Disk Encryption progress message</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="f6333-1501">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="f6333-1501">Az.Compute</span></span>
+* <span data-ttu-id="f6333-1502">Korrektur von „Get-AzVM -ResourceGroupName <rg>“, sodass ggf. mehr als 50 Ergebnisse zurückgegeben werden</span><span class="sxs-lookup"><span data-stu-id="f6333-1502">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
+* <span data-ttu-id="f6333-1503">Der Cmdlet-Hilfe zu „New-AzVmss“ wurde ein Beispiel für „SimpleParameterSet“ hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1503">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
+* <span data-ttu-id="f6333-1504">Tippfehler in der Azure Disk Encryption-Statusmeldung behoben</span><span class="sxs-lookup"><span data-stu-id="f6333-1504">Fixed a typo in the Azure Disk Encryption progress message</span></span>
 
-#### <a name="azdatafactoryv2"></a><span data-ttu-id="ca33d-1505">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="ca33d-1505">Az.DataFactoryV2</span></span>
-* <span data-ttu-id="ca33d-1506">Die Version des ADF .Net-SDK wurde auf 2.3.0 aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1506">Updated the ADF .Net SDK version to 2.3.0.</span></span>
+#### <a name="azdatafactoryv2"></a><span data-ttu-id="f6333-1505">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="f6333-1505">Az.DataFactoryV2</span></span>
+* <span data-ttu-id="f6333-1506">Die Version des ADF .Net-SDK wurde auf 2.3.0 aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="f6333-1506">Updated the ADF .Net SDK version to 2.3.0.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="ca33d-1507">Az.Network</span><span class="sxs-lookup"><span data-stu-id="ca33d-1507">Az.Network</span></span>
-* <span data-ttu-id="ca33d-1508">NetworkProfile-Funktionalität wurde hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1508">Added NetworkProfile functionality.</span></span> <span data-ttu-id="ca33d-1509">Neue Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1509">new cmdlets added</span></span>
-    - <span data-ttu-id="ca33d-1510">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1510">Get-AzNetworkProfile</span></span>
-    - <span data-ttu-id="ca33d-1511">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1511">New-AzNetworkProfile</span></span>
-    - <span data-ttu-id="ca33d-1512">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1512">Remove-AzNetworkProfile</span></span>
-    - <span data-ttu-id="ca33d-1513">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="ca33d-1513">Set-AzNetworkProfile</span></span>
-    - <span data-ttu-id="ca33d-1514">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-1514">New-AzContainerNicConfig</span></span>
-    - <span data-ttu-id="ca33d-1515">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="ca33d-1515">New-AzContainerNicConfigIpConfig</span></span>
-* <span data-ttu-id="ca33d-1516">Dienstzuordnungslink in Subnetzmodell hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1516">Added service association link on Subnet Model</span></span>
-* <span data-ttu-id="ca33d-1517">Cmdlets New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1517">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
-* <span data-ttu-id="ca33d-1518">Cmdlets Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1518">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="f6333-1507">Az.Network</span><span class="sxs-lookup"><span data-stu-id="f6333-1507">Az.Network</span></span>
+* <span data-ttu-id="f6333-1508">NetworkProfile-Funktionalität wurde hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6333-1508">Added NetworkProfile functionality.</span></span> <span data-ttu-id="f6333-1509">Neue Cmdlets hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1509">new cmdlets added</span></span>
+    - <span data-ttu-id="f6333-1510">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="f6333-1510">Get-AzNetworkProfile</span></span>
+    - <span data-ttu-id="f6333-1511">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="f6333-1511">New-AzNetworkProfile</span></span>
+    - <span data-ttu-id="f6333-1512">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="f6333-1512">Remove-AzNetworkProfile</span></span>
+    - <span data-ttu-id="f6333-1513">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="f6333-1513">Set-AzNetworkProfile</span></span>
+    - <span data-ttu-id="f6333-1514">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-1514">New-AzContainerNicConfig</span></span>
+    - <span data-ttu-id="f6333-1515">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="f6333-1515">New-AzContainerNicConfigIpConfig</span></span>
+* <span data-ttu-id="f6333-1516">Dienstzuordnungslink in Subnetzmodell hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1516">Added service association link on Subnet Model</span></span>
+* <span data-ttu-id="f6333-1517">Cmdlets New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1517">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
+* <span data-ttu-id="f6333-1518">Cmdlets Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1518">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
 
-#### <a name="azrediscache"></a><span data-ttu-id="ca33d-1519">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="ca33d-1519">Az.RedisCache</span></span>
-* <span data-ttu-id="ca33d-1520">Künftig sind beliebige Zeichenfolgen als Größenparameter zulässig.</span><span class="sxs-lookup"><span data-stu-id="ca33d-1520">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="ca33d-1521">P5 in Popup „PSArgumentCompleter“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1521">Add P5 in PSArgumentCompleter popup</span></span>
+#### <a name="azrediscache"></a><span data-ttu-id="f6333-1519">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="f6333-1519">Az.RedisCache</span></span>
+* <span data-ttu-id="f6333-1520">Künftig sind beliebige Zeichenfolgen als Größenparameter zulässig.</span><span class="sxs-lookup"><span data-stu-id="f6333-1520">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="f6333-1521">P5 in Popup „PSArgumentCompleter“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1521">Add P5 in PSArgumentCompleter popup</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="ca33d-1522">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="ca33d-1522">Az.Resources</span></span>
-* <span data-ttu-id="ca33d-1523">Fehlender Parameter „-Mode“ zu „Set-AzPolicyDefinition“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="ca33d-1523">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="ca33d-1524">Cmdlet-Fehler bei „Get-AzProviderOperation“ für Vorgänge mit Ursprung behoben, der den Benutzer enthält</span><span class="sxs-lookup"><span data-stu-id="ca33d-1524">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
+#### <a name="azresources"></a><span data-ttu-id="f6333-1522">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="f6333-1522">Az.Resources</span></span>
+* <span data-ttu-id="f6333-1523">Fehlender Parameter „-Mode“ zu „Set-AzPolicyDefinition“ hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="f6333-1523">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="f6333-1524">Cmdlet-Fehler bei „Get-AzProviderOperation“ für Vorgänge mit Ursprung behoben, der den Benutzer enthält</span><span class="sxs-lookup"><span data-stu-id="f6333-1524">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="ca33d-1525">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="ca33d-1525">Az.Sql</span></span>
-* <span data-ttu-id="ca33d-1526">Problem behoben, aufgrund dessen einige Sicherungs-Cmdlets das aktuelle Azure-Abonnements nicht erkannt haben</span><span class="sxs-lookup"><span data-stu-id="ca33d-1526">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
+#### <a name="azsql"></a><span data-ttu-id="f6333-1525">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="f6333-1525">Az.Sql</span></span>
+* <span data-ttu-id="f6333-1526">Problem behoben, aufgrund dessen einige Sicherungs-Cmdlets das aktuelle Azure-Abonnements nicht erkannt haben</span><span class="sxs-lookup"><span data-stu-id="f6333-1526">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="ca33d-1527">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="ca33d-1527">Az.Websites</span></span>
-* <span data-ttu-id="ca33d-1528">Neues Cmdlet „Get-AzWebAppContainerContinuousDeploymentUrl“ zum Abrufen der Webhook-URL von Continuous Deployment für Container</span><span class="sxs-lookup"><span data-stu-id="ca33d-1528">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
-* <span data-ttu-id="ca33d-1529">Neue Cmdlets „New-AzWebAppContainerPSSession“ und „Enter-WebAppContainerPSSession“ zum Initiieren einer PowerShell-Remotesitzung in einer Windows-Container-App</span><span class="sxs-lookup"><span data-stu-id="ca33d-1529">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="f6333-1527">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="f6333-1527">Az.Websites</span></span>
+* <span data-ttu-id="f6333-1528">Neues Cmdlet „Get-AzWebAppContainerContinuousDeploymentUrl“ zum Abrufen der Webhook-URL von Continuous Deployment für Container</span><span class="sxs-lookup"><span data-stu-id="f6333-1528">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
+* <span data-ttu-id="f6333-1529">Neue Cmdlets „New-AzWebAppContainerPSSession“ und „Enter-WebAppContainerPSSession“ zum Initiieren einer PowerShell-Remotesitzung in einer Windows-Container-App</span><span class="sxs-lookup"><span data-stu-id="f6333-1529">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
 
-## <a name="020---september-2018"></a><span data-ttu-id="ca33d-1530">0.2.0 – September 2018</span><span class="sxs-lookup"><span data-stu-id="ca33d-1530">0.2.0 - September 2018</span></span>
- <span data-ttu-id="ca33d-1531">Erstrelease</span><span class="sxs-lookup"><span data-stu-id="ca33d-1531">Initial Release</span></span>
+## <a name="020---september-2018"></a><span data-ttu-id="f6333-1530">0.2.0 – September 2018</span><span class="sxs-lookup"><span data-stu-id="f6333-1530">0.2.0 - September 2018</span></span>
+ <span data-ttu-id="f6333-1531">Erstrelease</span><span class="sxs-lookup"><span data-stu-id="f6333-1531">Initial Release</span></span>
