@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 2643c1fbbe9be06112d2a1a377838a8cb1e7737b
-ms.sourcegitcommit: d81c3b0f0f7289104be03869eb675128b61db7d3
+ms.openlocfilehash: 4bf05058f576e7a4844f693384b4fa4aea08a042
+ms.sourcegitcommit: ec731e58b7de3eb14df6d3bf308df92154125bbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94715362"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95005805"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
@@ -41,7 +41,7 @@ Mit diesen wichtigen Änderungen, die zur Entwicklung eines neuen Azure PowerShe
 
 Damit Sie hinsichtlich der neuesten Azure-Features in PowerShell auf dem Laufenden bleiben, sollten Sie so schnell wie möglich zum Az-Modul migrieren. Wenn Sie nicht bereit sind, das Az-Modul als Ersatz für AzureRM zu installieren, stehen Ihnen einige Optionen zur Verfügung, um mit Az zu experimentieren:
 
-- Verwenden Sie eine `PowerShell`-Umgebung mit [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). Azure Cloud Shell ist eine browserbasierte Shellumgebung, die mit installiertem Az-Modul und aktivierten `Enable-AzureRM`-Kompatibilitätsaliasen bereitgestellt wird.
+- Verwenden Sie eine `PowerShell`-Umgebung mit [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud Shell ist eine browserbasierte Shellumgebung, die mit installiertem Az-Modul und aktivierten `Enable-AzureRM`-Kompatibilitätsaliasen bereitgestellt wird.
 - Lassen Sie das AzureRM-Modul mit PowerShell 5.1 für Windows installiert, installieren Sie aber das Az-Modul für PowerShell 6.2.4 oder höher. PowerShell 5.1 für Windows und PowerShell 6.2.4 und höher verwenden separate Modulsammlungen. Befolgen Sie die Anweisungen zum Installieren der [aktuellen PowerShell-Version](/powershell/scripting/install/installing-powershell), und [installieren Sie dann das Az-Modul](install-az-ps.md) über PowerShell 6.2.4 oder höher.
 
 So führen Sie ein Upgrade von einer bestehenden AzureRM-Installation durch
