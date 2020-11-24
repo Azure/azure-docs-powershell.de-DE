@@ -3,15 +3,15 @@ title: Anmelden mit Azure PowerShell
 description: Es wird beschrieben, wie Sie sich mit Azure PowerShell als Benutzer, per Dienstprinzipal oder mit verwalteten Identitäten für Azure-Ressourcen anmelden.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 7/7/2020
+ms.date: 11/23/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 2ec432ae2823bb59f32ca7801a44a9da48db9fac
-ms.sourcegitcommit: d81c3b0f0f7289104be03869eb675128b61db7d3
+ms.openlocfilehash: 46e5e84b6718cc7a700ef2df4e82647e8cb60941
+ms.sourcegitcommit: 25eca7b5f5480758aa2cd830458900cf91cf673c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94715448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515108"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Anmelden mit Azure PowerShell
 
@@ -31,7 +31,7 @@ Verwenden Sie für die interaktive Anmeldung das Cmdlet [Connect-AzAccount](/pow
 Connect-AzAccount
 ```
 
-Bei der Ausführung über PowerShell ab Version 6 zeigt dieses Cmdlet eine Tokenzeichenfolge an. Kopieren Sie diese Zeichenfolge, und fügen Sie sie in [microsoft.com/devicelogin](https://microsoft.com/devicelogin) in einem Webbrowser ein, um sich anzumelden. Ihre PowerShell-Sitzung wird für die Verbindungsherstellung mit Azure authentifiziert. Sie können den `UseDeviceAuthentication`-Parameter angeben, um eine Tokenzeichenfolge in Windows PowerShell zu erhalten.
+Ab Version 5.0.0 des Az-PowerShell-Moduls zeigt dieses Cmdlet standardmäßig eine browserbasierte interaktive Anmeldeaufforderung an. Sie können den Parameter `UseDeviceAuthentication` angeben, um eine Tokenzeichenfolge zu erhalten. Dies war zuvor die Standardeinstellung für PowerShell-Version 6 und höhere Versionen.
 
 > [!IMPORTANT]
 > Die Autorisierung mit Anmeldeinformationen (Benutzername/Kennwort) wurde in Azure PowerShell aufgrund von Änderungen in Active Directory-Autorisierungsimplementierungen und Sicherheitsbedenken entfernt. Wenn Sie die Autorisierung mit Anmeldeinformationen zu Automatisierungszwecken verwenden, [erstellen Sie stattdessen einen Dienstprinzipal](create-azure-service-principal-azureps.md).
