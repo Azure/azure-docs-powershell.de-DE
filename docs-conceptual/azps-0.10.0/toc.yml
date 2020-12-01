@@ -23,7 +23,7 @@
   href: get-started-azureps.md
   displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
 - name: Cloud Shell
-  href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+  href: /azure/cloud-shell/overview
 - name: Azure PowerShell in Docker
   href: azureps-in-docker.md
 - name: Anmelden
@@ -59,7 +59,7 @@
     - name: PowerShell-Aufträge
       href: using-psjobs.md
       displayName: 'background, task, scripting, automation, context, process'
-- name: Lernprogramme
+- name: Tutorials
   items:
     - name: Erstellen von virtuellen Computern
       href: azureps-vm-tutorial.yml
