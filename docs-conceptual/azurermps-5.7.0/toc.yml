@@ -11,7 +11,7 @@
 - name: Erste Schritte
   href: get-started-azureps.md
 - name: Cloud Shell
-  href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+  href: /azure/cloud-shell/overview
 - name: Anmelden
   items:
     - name: Authentifizierungsmethoden
@@ -40,7 +40,7 @@
       href: using-experimental-modules.md
     - name: PowerShell-Aufträge
       href: using-psjobs.md
-- name: Lernprogramme
+- name: Tutorials
   items:
     - name: Erstellen von virtuellen Computern
       href: azureps-vm-tutorial.yml
