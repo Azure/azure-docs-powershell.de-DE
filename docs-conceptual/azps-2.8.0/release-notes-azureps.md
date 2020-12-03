@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 10/15/2019
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: c6880e4c09339ec6a3e192480fde9e1f85cbca5f
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: 656e61e7f208367fc7fae28f73d1b6f289831d77
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93409498"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427733"
 ---
 # <a name="azure-powershell-release-notes"></a>Versionshinweise zu Azure PowerShell
 ## <a name="280---october-2019"></a>2.8.0: Oktober 2019
@@ -22,7 +22,7 @@ ms.locfileid: "93409498"
 * Telemetriedaten und URL-Umschreibung für generierte Module aktualisiert, Windows-Komponententests korrigiert
 
 #### <a name="azapimanagement"></a>Az.ApiManagement
-* **Set-AzApiManagementApi** : Unterstützung für die Aktualisierung der API in „ApiVersionSet“ hinzugefügt
+* **Set-AzApiManagementApi**: Unterstützung für die Aktualisierung der API in „ApiVersionSet“ hinzugefügt
     - Behebung des Problems: https://github.com/Azure/azure-powershell/issues/10068
 
 #### <a name="azautomation"></a>Az.Automation
@@ -136,10 +136,10 @@ ms.locfileid: "93409498"
 #### <a name="azmonitor"></a>Az.Monitor
 * Verweis auf das aktuelle Monitor SDK, d. h. 0.24.1-preview
    - Geringfügige Änderungen an den Metrik-Cmdlets vorgenommen, d. h. die Einheitenenumeration unterstützt verschiedene neue Werte. Dabei handelt es sich um schreibgeschützte Cmdlets, sodass keine Änderungen an der Eingabe der Cmdlets erforderlich sind.
-   - Die API-Version der **ActionGroups** -Anforderungen lautet jetzt **2019-06-01** (zuvor **2018-03-01** ). Die Szenariotests wurden aktualisiert, um diese Änderung zu berücksichtigen.
+   - Die API-Version der **ActionGroups**-Anforderungen lautet jetzt **2019-06-01** (zuvor **2018-03-01**). Die Szenariotests wurden aktualisiert, um diese Änderung zu berücksichtigen.
    - Die Konstruktoren für die Klassen **EmailReceiver** und **WebhookReceiver** haben ein neues obligatorisches Argument hinzugefügt, d. h. einen booleschen Wert namens **useCommonAlertSchema**. Derzeit ist der Wert auf **false** festgelegt, damit sich dieser Breaking Change nicht auf die Cmdlets auswirkt. **HINWEIS:** Dies ist eine vorübergehende Änderung, die vom Team für Warnungen validiert werden muss.
-   - Die Reihenfolge der Argumente für den Konstruktor der Klasse **Source** (in Bezug auf die Klasse **ScheduledQueryRuleSource** ) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
-   - Die Reihenfolge der Argumente für den Konstruktor der Klasse **AlertingAction** (in Bezug auf die Klasse **ScheduledQueryRuleSource** ) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
+   - Die Reihenfolge der Argumente für den Konstruktor der Klasse **Source** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
+   - Die Reihenfolge der Argumente für den Konstruktor der Klasse **AlertingAction** (in Bezug auf die Klasse **ScheduledQueryRuleSource**) hat sich seit dem vorherigen SDK geändert. Im Rahmen dieser Änderung war die Korrektur von zwei Komponententests erforderlich: Sie wurden kompiliert, bei den Tests trat jedoch ein Fehler auf.
 * Unterstützung von Kriterien für dynamische Schwellwerte für Metrikwarnung v2
     - New-AzMetricAlertRuleV2Criteria: Erstellt nun auch Kriterien für dynamische Schwellwerte.
     - Add-AzMetricAlertRuleV2: Akzeptiert nun auch Kriterien für dynamische Schwellwerte.
@@ -697,33 +697,33 @@ ms.locfileid: "93409498"
 ## <a name="210---may-2019"></a>2.1.0 – Mai 2019
 #### <a name="azapimanagement"></a>Az.ApiManagement
 * Es wurden neue Cmdlets zum Verwalten der Diagnose im globalen sowie im API-Bereich erstellt
-    - **Get-AzApiManagementDiagnostic** : Abrufen der Diagnose, die im globalen oder im API-Bereich konfiguriert wurde
-    - **New-AzApiManagementDiagnostic** : Erstellen neuer Diagnosen im globalen oder API-Bereich
-    - **New-AzApiManagementHttpMessageDiagnostic** : Erstellen einer Diagnoseeinstellung für die zu protokollierenden Kopfzeilen und für die Größe der Bytes für den Text
-    - **New-AzApiManagementPipelineDiagnosticSetting** : Erstellen von Diagnoseeinstellungen für ein-/ausgehende HTTP-Nachrichten für das Gateway
-    - **New-AzApiManagementSamplingSetting** : Erstellen der Einstellung „Sampling“ für die Anforderungen/Antworten für eine Diagnose
-    - **Remove-AzApiManagementDiagnostic** : Entfernen einer Diagnoseentität im globalen oder API-Bereich
-    - **Set-AzApiManagementDiagnostic** : Aktualisieren einer Diagnoseentität im globalen oder API-Bereich
+    - **Get-AzApiManagementDiagnostic**: Abrufen der Diagnose, die im globalen oder im API-Bereich konfiguriert wurde
+    - **New-AzApiManagementDiagnostic**: Erstellen neuer Diagnosen im globalen oder API-Bereich
+    - **New-AzApiManagementHttpMessageDiagnostic**: Erstellen einer Diagnoseeinstellung für die zu protokollierenden Kopfzeilen und für die Größe der Bytes für den Text
+    - **New-AzApiManagementPipelineDiagnosticSetting**: Erstellen von Diagnoseeinstellungen für ein-/ausgehende HTTP-Nachrichten für das Gateway
+    - **New-AzApiManagementSamplingSetting**: Erstellen der Einstellung „Sampling“ für die Anforderungen/Antworten für eine Diagnose
+    - **Remove-AzApiManagementDiagnostic**: Entfernen einer Diagnoseentität im globalen oder API-Bereich
+    - **Set-AzApiManagementDiagnostic**: Aktualisieren einer Diagnoseentität im globalen oder API-Bereich
 * Es wurden neue Cmdlets für die Cacheverwaltung im ApiManagement-Dienst erstellt
-    - **Get-AzApiManagementCache** : Abrufen der Details des durch den Bezeichner angegebenen Caches oder aller Caches
-    - **New-AzApiManagementCache** : Erstellen eines neuen „standardmäßigen“ Caches oder eines Caches in einer bestimmten „Region“ von Azure
-    - **Remove-AzApiManagementCache** : Entfernen eines Caches
-    - **Update-AzApiManagementCache** : Aktualisieren eines Caches
+    - **Get-AzApiManagementCache**: Abrufen der Details des durch den Bezeichner angegebenen Caches oder aller Caches
+    - **New-AzApiManagementCache**: Erstellen eines neuen „standardmäßigen“ Caches oder eines Caches in einer bestimmten „Region“ von Azure
+    - **Remove-AzApiManagementCache**: Entfernen eines Caches
+    - **Update-AzApiManagementCache**: Aktualisieren eines Caches
 * Es wurden neue Cmdlets zur Verwaltung von API-Schemas erstellt
-    - **New-AzApiManagementSchema** : Erstellen eines neuen Schemas für eine API
-    - **Get-AzApiManagementSchema** : Abrufen des in der API konfigurierten Schemas
-    - **Remove-AzApiManagementSchema** : Entfernen des in der API konfigurierten Schemas
-    - **Set-AzApiManagementSchema** : Aktualisieren des in der API konfigurierten Schemas
+    - **New-AzApiManagementSchema**: Erstellen eines neuen Schemas für eine API
+    - **Get-AzApiManagementSchema**: Abrufen des in der API konfigurierten Schemas
+    - **Remove-AzApiManagementSchema**: Entfernen des in der API konfigurierten Schemas
+    - **Set-AzApiManagementSchema**: Aktualisieren des in der API konfigurierten Schemas
 * Es wurde ein neues Cmdlet zum Generieren eines Benutzertokens erstellt
-    - **New-AzApiManagementUserToken** : Generieren eines neuen Benutzertokens, das standardmäßig für acht Stunden gültig ist. Mit diesem Cmdlet kann das Token für den „GIT“-Benutzer generiert werden./
+    - **New-AzApiManagementUserToken**: Generieren eines neuen Benutzertokens, das standardmäßig für acht Stunden gültig ist. Mit diesem Cmdlet kann das Token für den „GIT“-Benutzer generiert werden./
 * Es wurde ein neues Cmdlet zum Abrufen des Netzwerkstatus erstellt
-    - **Get-AzApiManagementNetworkStatus** : Abrufen der Netzwerkstatuskonnektivität von Ressourcen, von denen der API Management-Dienst abhängig ist Dies ist hilfreich, wenn Sie den ApiManagement-Dienst in einem virtuellen Netzwerk bereitstellen und überprüfen, ob eine der Abhängigkeiten fehlerhaft ist.
+    - **Get-AzApiManagementNetworkStatus**: Abrufen der Netzwerkstatuskonnektivität von Ressourcen, von denen der API Management-Dienst abhängig ist Dies ist hilfreich, wenn Sie den ApiManagement-Dienst in einem virtuellen Netzwerk bereitstellen und überprüfen, ob eine der Abhängigkeiten fehlerhaft ist.
 * Das Cmdlet **New-AzApiManagement** wurde zum Verwalten des ApiManagement-Diensts aktualisiert
     - Die Unterstützung für die neue SKU „Consumption“ wurde hinzugefügt
     - Die Unterstützung zum Aktivieren des Flags „EnableClientCertificate“ für die neue SKU „Consumption“ wurde hinzugefügt
     - Das neue Cmdlet **New-AzApiManagementSslSetting** ermöglicht die Konfiguration der „TLS/SSL“-Einstellung für „Back-End“ und „Front-End“ Dies kann auch dazu verwendet werden, um „Verschlüsselungen“ wie „3DES“ und „ServerProtokolle“ wie „Http2“ für das „Front-End“ eines ApiManagement-Diensts zu konfigurieren
     - Die Unterstützung für die Konfiguration des Hostnamens „DeveloperPortal“ wurde zum ApiManagement-Dienst hinzugefügt
-* Die **Get-AzApiManagementSsoToken** -Cmdlets wurden aktualisiert, um das Objekt „PsApiManagement“ als Eingabe zu übernehmen
+* Die **Get-AzApiManagementSsoToken**-Cmdlets wurden aktualisiert, um das Objekt „PsApiManagement“ als Eingabe zu übernehmen
 * Das Cmdlet wurde aktualisiert, um Fehlermeldungen inline anzuzeigen
      > PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Fehlercode: ValidationError-Fehlermeldung: Mindestens ein Feld enthält ungültige Werte: Fehlerdetails: [Code=ValidationError, Message=Fehler in Element 'log-to-eventhub' in Zeile 3, Spalte 10: Protokollierungstool nicht gefunden, Target=log-to-eventhub]
 * Cmdlet **Export-AzApiManagementApi** wurde für den Export von APIs im Format „OpenApi 3.0“ aktualisiert
@@ -862,7 +862,7 @@ ms.locfileid: "93409498"
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - [Weitere Informationen](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) zur SQR-API
+    - [Weitere Informationen](/rest/api/monitor/scheduledqueryrules) zur SQR-API
     - „Az.Monitor.md“ aktualisiert, um Cmdlets für metrikbasierte GenV2-Warnungsregel (nicht klassisch) einzuschließen
 
 #### <a name="aznetwork"></a>Az.Network
