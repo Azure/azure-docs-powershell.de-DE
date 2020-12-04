@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: d7f5b75f195f6315fc65666647c407795f5c6956
-ms.sourcegitcommit: cd243c8f6dc02dbd6234e764b065643dfd31dd8b
+ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
+ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/02/2020
-ms.locfileid: "96502605"
+ms.locfileid: "96536543"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Einführung in das Azure Az PowerShell-Modul
 
@@ -34,7 +34,7 @@ Das Az PowerShell-Modul bietet die folgenden Vorteile:
 
 * Sicherheit und Stabilität
   * Verschlüsselung des Tokencaches
-  * Unterstützung für ADKS 2019
+  * Unterstützung für ADFS 2019
   * Sicherheitsmechanismus, der Man-in-the-Middle-Angriffe verhindert
   * Unterstützung für Features wie die fortlaufende Zugriffsevaluierung (wird 2021 eingeführt)
 * Unterstützung für alle Azure-Dienste
