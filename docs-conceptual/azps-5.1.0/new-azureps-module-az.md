@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
-ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
+ms.openlocfilehash: d922affd608ebfce41f9608ec82d565d6afe9f7f
+ms.sourcegitcommit: 3ef9f7f6c20af98282a0499b1527c291ee54011b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536543"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617718"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Einführung in das Azure Az PowerShell-Modul
 
@@ -77,7 +77,7 @@ Wenn Ihre Skripts noch auf dem AzureRM-Modul basieren, stehen Ihnen verschiedene
 
 Az ist das aktuellste PowerShell-Modul für Azure. Wenn Sie Probleme melden oder Featureanfragen senden möchten, können Sie diese direkt im [GitHub-Repository](https://github.com/Azure/azure-powershell) eingeben, oder sich an den Microsoft-Support wenden, falls Sie über einen Supportvertrag verfügen. Featureanfragen werden in der aktuellen Version von Az implementiert. Behebungen kritischer Probleme werden in der aktuellen Version von Az implementiert.
 
-Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird jedoch bis Dezember 2020 weiterhin offiziell gepflegt, und bis Februar 2020 werden kritische Hotfixes dafür zur Verfügung gestellt.
+Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird jedoch bis Februar 2021 weiterhin offiziell gepflegt, und bis Februar 2021 werden kritische Hotfixes dafür zur Verfügung gestellt.
 
 ## <a name="data-collection"></a>Datensammlung
 
