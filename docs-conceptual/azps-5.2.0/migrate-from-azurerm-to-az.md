@@ -4,14 +4,14 @@ description: Hier werden die Schritte und Tools zum Migrieren von Azure PowerShe
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 12/1/2020
-ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: bc37d0b73db0e6df226788795730730c077fcefa
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.date: 12/15/2020
+ms.custom: devx-track-azurepowershell, contperf-fy21q2
+ms.openlocfilehash: 6bccaf9a628f67b8945516bae70f07939cdce8f7
+ms.sourcegitcommit: a24069b411d3a6011067770430b6dcdd4b2c2159
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856502"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97532241"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Migrieren von Azure PowerShell von AzureRM zum Az-Modul
 
@@ -91,5 +91,5 @@ Installieren Sie die [Azure PowerShell-Erweiterung für VSCode](https://marketp
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Deinstallieren von AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
-[Installieren von Azure PowerShell](install-az-ps.md)
+* [Deinstallieren von AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
+* [Installieren von Azure PowerShell](install-az-ps.md)
