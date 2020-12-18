@@ -6,101 +6,170 @@ ms.service: azure-powershell
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
-ms.date: 09/11/2020
-ms.openlocfilehash: 5945b573d467f1ff64e327c52124ffed1e4305aa
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.date: 12/10/2020
+ms.openlocfilehash: 6752fa0376c2f8887511455f56add0859f8961c8
+ms.sourcegitcommit: 076ff98abc48e072eb1727532817487bac7507c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856389"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488528"
 ---
-# <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a><span data-ttu-id="8bebf-103">Schnellstart: Automatisches Migrieren von PowerShell-Skripts von AzureRM zum Az PowerShell-Modul</span><span class="sxs-lookup"><span data-stu-id="8bebf-103">Quickstart: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module</span></span>
+# <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a><span data-ttu-id="1f1de-103">Schnellstart: Automatisches Migrieren von PowerShell-Skripts von AzureRM zum Az PowerShell-Modul</span><span class="sxs-lookup"><span data-stu-id="1f1de-103">Quickstart: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module</span></span>
 
-<span data-ttu-id="8bebf-104">In diesem Artikel erfahren Sie, wie Sie das PowerShell-Modul „Az.Tools.Migration“ verwenden, um Ihre PowerShell-Skripts und Skriptmodule automatisch von AzureRM auf das Az PowerShell-Modul zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="8bebf-104">In this article, you'll learn how to use the Az.Tools.Migration PowerShell module to automatically upgrade your PowerShell scripts and script modules from AzureRM to the Az PowerShell module.</span></span>
+<span data-ttu-id="1f1de-104">In diesem Artikel erfahren Sie, wie Sie das PowerShell-Modul „Az.Tools.Migration“ verwenden, um Ihre PowerShell-Skripts und Skriptmodule automatisch von AzureRM auf das Az PowerShell-Modul zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="1f1de-104">In this article, you'll learn how to use the Az.Tools.Migration PowerShell module to automatically upgrade your PowerShell scripts and script modules from AzureRM to the Az PowerShell module.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="8bebf-105">Das PowerShell Modul „Az.Tools.Migration“ befindet sich derzeit in der Public Preview-Phase.</span><span class="sxs-lookup"><span data-stu-id="8bebf-105">The Az.Tools.Migration PowerShell module is currently in public preview.</span></span> <span data-ttu-id="8bebf-106">Diese Vorschauversion wird ohne Vereinbarung zum Servicelevel bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="8bebf-106">This preview version is provided without a service level agreement.</span></span> <span data-ttu-id="8bebf-107">Für Produktionsworkloads wird sie nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-107">It's not recommended for production workloads.</span></span> <span data-ttu-id="8bebf-108">Manche Features werden möglicherweise nicht unterstützt oder sind nur eingeschränkt verwendbar.</span><span class="sxs-lookup"><span data-stu-id="8bebf-108">Certain features might not be supported or might have constrained capabilities.</span></span> <span data-ttu-id="8bebf-109">Weitere Informationen finden Sie unter [Zusätzliche Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).</span><span class="sxs-lookup"><span data-stu-id="8bebf-109">For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).</span></span>
+> <span data-ttu-id="1f1de-105">Das PowerShell Modul „Az.Tools.Migration“ befindet sich derzeit in der Public Preview-Phase.</span><span class="sxs-lookup"><span data-stu-id="1f1de-105">The Az.Tools.Migration PowerShell module is currently in public preview.</span></span> <span data-ttu-id="1f1de-106">Diese Vorschauversion wird ohne Vereinbarung zum Servicelevel bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="1f1de-106">This preview version is provided without a service level agreement.</span></span> <span data-ttu-id="1f1de-107">Für Produktionsworkloads wird sie nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="1f1de-107">It's not recommended for production workloads.</span></span> <span data-ttu-id="1f1de-108">Manche Features werden möglicherweise nicht unterstützt oder sind nur eingeschränkt verwendbar.</span><span class="sxs-lookup"><span data-stu-id="1f1de-108">Certain features might not be supported or might have constrained capabilities.</span></span> <span data-ttu-id="1f1de-109">Weitere Informationen finden Sie unter [Zusätzliche Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).</span><span class="sxs-lookup"><span data-stu-id="1f1de-109">For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).</span></span>
 
-<span data-ttu-id="8bebf-110">Wenn Sie Feedback geben oder Probleme im Zusammenhang mit dem PowerShell-Modul „Az.Tools.Migration“ melden möchten, können Sie [ein GitHub-Problem](https://github.com/Azure/azure-powershell-migration/issues) im Repository `azure-powershell-migration` erstellen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-110">Report feedback and issues about the Az.Tools.Migration PowerShell module via [a GitHub issue](https://github.com/Azure/azure-powershell-migration/issues) in the `azure-powershell-migration` repository.</span></span>
+## <a name="requirements"></a><span data-ttu-id="1f1de-110">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="1f1de-110">Requirements</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8bebf-111">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="8bebf-111">Requirements</span></span>
-
-* <span data-ttu-id="8bebf-112">Aktualisieren Sie Ihre vorhandenen PowerShell-Skripts auf die [aktuelle Version des AzureRM PowerShell-Moduls (6.13.1)](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018).</span><span class="sxs-lookup"><span data-stu-id="8bebf-112">Update your existing PowerShell scripts to the latest version of the [AzureRM PowerShell module (6.13.1)](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018).</span></span>
-* <span data-ttu-id="8bebf-113">Installieren Sie das PowerShell-Modul „Az.Tools.Migration“.</span><span class="sxs-lookup"><span data-stu-id="8bebf-113">Install the Az.Tools.Migration PowerShell module.</span></span>
+* <span data-ttu-id="1f1de-111">Aktualisieren Sie Ihre vorhandenen PowerShell-Skripts auf die [aktuelle Version des AzureRM PowerShell-Moduls (6.13.1)](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018).</span><span class="sxs-lookup"><span data-stu-id="1f1de-111">Update your existing PowerShell scripts to the latest version of the [AzureRM PowerShell module (6.13.1)](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018).</span></span>
+* <span data-ttu-id="1f1de-112">Installieren Sie das PowerShell-Modul „Az.Tools.Migration“.</span><span class="sxs-lookup"><span data-stu-id="1f1de-112">Install the Az.Tools.Migration PowerShell module.</span></span>
 
   ```powershell
   Install-Module -Name Az.Tools.Migration
   ```
 
-## <a name="step-1-generate-an-upgrade-plan"></a><span data-ttu-id="8bebf-114">Schritt 1: Generieren eines Upgradeplans</span><span class="sxs-lookup"><span data-stu-id="8bebf-114">Step 1: Generate an upgrade plan</span></span>
+## <a name="step-1-generate-an-upgrade-plan"></a><span data-ttu-id="1f1de-113">Schritt 1: Generieren eines Upgradeplans</span><span class="sxs-lookup"><span data-stu-id="1f1de-113">Step 1: Generate an upgrade plan</span></span>
 
-<span data-ttu-id="8bebf-115">Verwenden Sie das Cmdlet `New-AzUpgradeModulePlan`, um einen Upgradeplan für die Migration Ihrer Skripts und Module zum Az PowerShell-Modul zu generieren.</span><span class="sxs-lookup"><span data-stu-id="8bebf-115">You use the `New-AzUpgradeModulePlan` cmdlet to generate an upgrade plan for migrating your scripts and modules to the Az PowerShell module.</span></span> <span data-ttu-id="8bebf-116">Der Upgradeplan enthält die spezifische Datei sowie die Punkte, die Änderungen erfordern, wenn Sie von AzureRM auf die Az PowerShell-Cmdlets umstellen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-116">The upgrade plan details the specific file and offset points that require changes when moving from AzureRM to the Az PowerShell cmdlets.</span></span>
+<span data-ttu-id="1f1de-114">Verwenden Sie das Cmdlet **`New-AzUpgradeModulePlan`** , um einen Upgradeplan für die Migration Ihrer Skripts und Module zum Az PowerShell-Modul zu generieren.</span><span class="sxs-lookup"><span data-stu-id="1f1de-114">You use the **`New-AzUpgradeModulePlan`** cmdlet to generate an upgrade plan for migrating your scripts and modules to the Az PowerShell module.</span></span> <span data-ttu-id="1f1de-115">Dieses Cmdlet nimmt keine Änderungen an Ihren vorhandenen Skripts vor.</span><span class="sxs-lookup"><span data-stu-id="1f1de-115">This cmdlet doesn’t make any changes to your existing scripts.</span></span> <span data-ttu-id="1f1de-116">Verwenden Sie den Parameter **`FilePath`** für ein bestimmtes Skript oder den Parameter **`DirectoryPath`** für alle Skripts in einem bestimmten Ordner.</span><span class="sxs-lookup"><span data-stu-id="1f1de-116">Use the **`FilePath`** parameter for targeting a specific script or the **`DirectoryPath`** parameter for targeting all scripts in a specific folder.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8bebf-117">Durch das Cmdlet `New-AzUpgradeModulePlan` wird der Plan nicht ausgeführt. Es werden lediglich die Upgradeschritte generiert.</span><span class="sxs-lookup"><span data-stu-id="8bebf-117">The `New-AzUpgradeModulePlan` cmdlet doesn't execute the plan, it only generates the upgrade steps.</span></span>
+> <span data-ttu-id="1f1de-117">Durch das Cmdlet **`New-AzUpgradeModulePlan`** wird der Plan nicht ausgeführt. Es werden lediglich die Upgradeschritte generiert.</span><span class="sxs-lookup"><span data-stu-id="1f1de-117">The **`New-AzUpgradeModulePlan`** cmdlet doesn't execute the plan, it only generates the upgrade steps.</span></span>
 
-```powershell
-#  Generate an upgrade plan for the specified PowerShell script and save it to a variable.
-$Plan = New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -FilePath 'C:\Scripts\my-azure-script.ps1'
-```
+<span data-ttu-id="1f1de-118">Im folgenden Beispiel wird ein Plan für alle Skripts im Ordner _`C:\Scripts`_ generiert.</span><span class="sxs-lookup"><span data-stu-id="1f1de-118">The following example generates a plan for all the scripts in the _`C:\Scripts`_ folder.</span></span> <span data-ttu-id="1f1de-119">Der Parameter **`OutVariable`** wird angegeben, sodass die Ergebnisse zurückgegeben und gleichzeitig in einer Variablen mit dem Namen **`Plan`** gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="1f1de-119">The **`OutVariable`** parameter is specified so the results are returned and simultaneously stored in a variable named **`Plan`**.</span></span>
 
 ```powershell
 # Generate an upgrade plan for all the scripts and module files in the specified folder and save it to a variable.
-$Plan = New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -DirectoryPath 'C:\Scripts'
+New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -DirectoryPath 'C:\Scripts' -OutVariable Plan
 ```
 
-<span data-ttu-id="8bebf-118">Überprüfen Sie die Ergebnisse des Upgradeplans.</span><span class="sxs-lookup"><span data-stu-id="8bebf-118">Review the results of the upgrade plan.</span></span>
+<span data-ttu-id="1f1de-120">Wie in der folgenden Ausgabe gezeigt, enthält der Upgradeplan die spezifische Datei sowie die Punkte, die Änderungen erfordern, wenn Sie von AzureRM auf die Az PowerShell-Cmdlets umstellen.</span><span class="sxs-lookup"><span data-stu-id="1f1de-120">As shown in the following output, the upgrade plan details the specific file and offset points that require changes when moving from AzureRM to the Az PowerShell cmdlets.</span></span>
 
-```powershell
-# Show the entire upgrade plan
-$Plan
+```Output
+Order Location                                                   UpgradeType     PlanResult             Original
+----- --------                                                   -----------     ----------             --------
+1     compute-create-dockerhost.ps1:59:24                        CmdletParameter ReadyToUpgrade         ExtensionName
+2     compute-create-dockerhost.ps1:59:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+3     compute-create-dockerhost.ps1:54:1                         Cmdlet          ReadyToUpgrade         New-AzureRmVM
+4     compute-create-dockerhost.ps1:51:1                         Cmdlet          ReadyToUpgrade         Add-AzureRmVM...
+5     compute-create-dockerhost.ps1:47:1                         Cmdlet          ReadyToUpgrade         Add-AzureRmVM...
+6     compute-create-dockerhost.ps1:46:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+7     compute-create-dockerhost.ps1:45:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+8     compute-create-dockerhost.ps1:44:13                        Cmdlet          ReadyToUpgrade         New-AzureRmVM...
+9     compute-create-dockerhost.ps1:40:8                         Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+10    compute-create-dockerhost.ps1:36:8                         Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+11    compute-create-dockerhost.ps1:31:16                        Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+12    compute-create-dockerhost.ps1:26:15                        Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+13    compute-create-dockerhost.ps1:22:8                         Cmdlet          ReadyToUpgrade         New-AzureRmPu...
+14    compute-create-dockerhost.ps1:18:9                         Cmdlet          ReadyToUpgrade         New-AzureRmVi...
+15    compute-create-dockerhost.ps1:15:17                        Cmdlet          ReadyToUpgrade         New-AzureRmVi...
+16    compute-create-dockerhost.ps1:12:1                         Cmdlet          ReadyToUpgrade         New-AzureRmRe...
+17    compute-create-windowsvm-quick.ps1:18:3                    CmdletParameter ReadyToUpgrade         ImageName
+18    compute-create-windowsvm-quick.ps1:14:1                    Cmdlet          ReadyToUpgrade         New-AzureRmVM
+19    compute-create-windowsvm-quick.ps1:11:1                    Cmdlet          ReadyToUpgrade         New-AzureRmRe...
+20    compute-create-wordpress-mysql.ps1:59:24                   CmdletParameter ReadyToUpgrade         ExtensionName
+...
 ```
 
-<span data-ttu-id="8bebf-119">Führen Sie den folgenden Befehl aus, um die Ergebnisse nach Befehlen zu filtern, für die Warnungen oder Fehler vorliegen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-119">Run the following command to filter the results to commands that have warnings or errors.</span></span> <span data-ttu-id="8bebf-120">Dies kann bei umfangreichen Resultsets hilfreich sein, um Fehler vor der Durchführung des Upgrades schnell zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="8bebf-120">This may be helpful on large result sets to quickly identify errors before performing the upgrade.</span></span>
+<span data-ttu-id="1f1de-121">Vor der Durchführung des Upgrades müssen Sie die Ergebnisse des Plans auf Probleme überprüfen.</span><span class="sxs-lookup"><span data-stu-id="1f1de-121">Before performing the upgrade, you need to view the results of the plan for problems.</span></span> <span data-ttu-id="1f1de-122">Im folgenden Beispiel wird eine Liste der Skripts und der Elemente in diesen Skripts zurückgegeben, die das automatische Upgrade verhindern.</span><span class="sxs-lookup"><span data-stu-id="1f1de-122">The following example returns a list of scripts and the items in those scripts that will prevent them from being upgraded automatically.</span></span>
 
 ```powershell
 # Filter plan results to only warnings and errors
 $Plan | Where-Object PlanResult -ne ReadyToUpgrade | Format-List
 ```
 
-## <a name="step-2-perform-the-upgrade"></a><span data-ttu-id="8bebf-121">Schritt 2: Durchführen des Upgrades</span><span class="sxs-lookup"><span data-stu-id="8bebf-121">Step 2: Perform the upgrade</span></span>
+<span data-ttu-id="1f1de-123">Die in der folgenden Ausgabe angezeigten Elemente werden erst dann automatisch aktualisiert, wenn die Probleme manuell behoben wurden.</span><span class="sxs-lookup"><span data-stu-id="1f1de-123">The items shown in the following output will not be upgraded automatically without manually correcting the issues first.</span></span> <span data-ttu-id="1f1de-124">Zu bekannten Problemen, die eine automatische Aktualisierung verhindern, zählen Befehle, die Splatting verwenden.</span><span class="sxs-lookup"><span data-stu-id="1f1de-124">Known issues that can’t be upgraded automatically include any commands that use splatting.</span></span>
 
-<span data-ttu-id="8bebf-122">Der Upgradeplan wird ausgeführt, wenn Sie das Cmdlet `Invoke-AzUpgradeModulePlan` ausführen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-122">The upgrade plan is executed when you run the `Invoke-AzUpgradeModulePlan` cmdlet.</span></span> <span data-ttu-id="8bebf-123">Durch diesen Befehl wird ein Upgrade für die angegebene Datei oder die angegebenen Ordner durchgeführt (ausgenommen bei Fehlern, die ggf. durch das Cmdlet `New-AzUpgradeModulePlan` identifiziert wurden).</span><span class="sxs-lookup"><span data-stu-id="8bebf-123">This command performs an upgrade of the specified file or folders except for any errors that were identified by the `New-AzUpgradeModulePlan` cmdlet.</span></span>
+```Output
+Order                  : 42
+UpgradeType            : CmdletParameter
+PlanResult             : ErrorParameterNotFound
+PlanSeverity           : Error
+PlanResultReason       : Parameter was not found in Get-AzResource or it's aliases.
+SourceCommand          : CommandReference
+SourceCommandParameter : CommandReferenceParameter
+Location               : devtestlab-add-marketplace-image-to-lab.ps1:14:74
+FullPath               : C:\Scripts\devtestlab-add-marketplace-image-to-lab.ps1
+StartOffset            : 556
+Original               : ResourceNameEquals
+Replacement            :
+```
 
-<span data-ttu-id="8bebf-124">Bei diesem Befehl müssen Sie angeben, ob die Dateien direkt geändert werden sollen oder ob parallel zu den ursprünglichen Dateien neue Dateien gespeichert werden sollen, sodass die Originaldateien erhalten bleiben.</span><span class="sxs-lookup"><span data-stu-id="8bebf-124">This command requires you to specify if the files should be modified in place or if new files should be saved alongside your original files (leaving originals unmodified).</span></span>
+## <a name="step-2-perform-the-upgrade"></a><span data-ttu-id="1f1de-125">Schritt 2: Durchführen des Upgrades</span><span class="sxs-lookup"><span data-stu-id="1f1de-125">Step 2: Perform the upgrade</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="8bebf-125">Der Vorgang kann nicht rückgängig gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="8bebf-125">There is no undo operation.</span></span> <span data-ttu-id="8bebf-126">Achten Sie immer darauf, dass Sie über eine Sicherungskopie der PowerShell-Skripts und -Module verfügen, für die Sie ein Upgrade durchführen möchten.</span><span class="sxs-lookup"><span data-stu-id="8bebf-126">Always ensure that you have a backup copy of your PowerShell scripts and modules that you're attempting to upgrade.</span></span>
+> <span data-ttu-id="1f1de-126">Der Vorgang kann nicht rückgängig gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="1f1de-126">There is no undo operation.</span></span> <span data-ttu-id="1f1de-127">Achten Sie immer darauf, dass Sie über eine Sicherungskopie der PowerShell-Skripts und -Module verfügen, für die Sie ein Upgrade durchführen möchten.</span><span class="sxs-lookup"><span data-stu-id="1f1de-127">Always ensure that you have a backup copy of your PowerShell scripts and modules that you're attempting to upgrade.</span></span>
+
+<span data-ttu-id="1f1de-128">Wenn Sie mit dem Plan zufrieden sind, wird das Upgrade mit dem Cmdlet **`Invoke-AzUpgradeModulePlan`** durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="1f1de-128">After you’re satisfied with the plan, the upgrade is performed with the **`Invoke-AzUpgradeModulePlan`** cmdlet.</span></span> <span data-ttu-id="1f1de-129">Geben Sie **`SaveChangesToNewFiles`** für den Parameterwert **`FileEditMode`** an, um zu verhindern, dass Änderungen an den ursprünglichen Skripts vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="1f1de-129">Specify **`SaveChangesToNewFiles`** for the **`FileEditMode`** parameter value to prevent changes from being made to your original scripts.</span></span> <span data-ttu-id="1f1de-130">Bei Verwendung dieses Modus wird das Upgrade durchgeführt, indem eine Kopie jedes Skripts erstellt und an die Dateinamen jeweils _`_az_upgraded`_ angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="1f1de-130">When using this mode, the upgrade is performed by creating a copy of each script targeted with _`_az_upgraded`_ appended to the filenames.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="8bebf-127">Bei Angabe der Option `-FileEditMode ModifyExistingFiles` ist das Cmdlet `Invoke-AzUpgradeModulePlan` destruktiv.</span><span class="sxs-lookup"><span data-stu-id="8bebf-127">The `Invoke-AzUpgradeModulePlan` cmdlet is destructive when the `-FileEditMode ModifyExistingFiles` option is specified!</span></span> <span data-ttu-id="8bebf-128">Ihre Skripts und Funktionen werden in diesem Fall direkt gemäß dem Modulupgradeplan geändert, der durch das Cmdlet `New-AzUpgradeModulePlan` generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="8bebf-128">It modifies your scripts and functions in place according to the module upgrade plan generated by the `New-AzUpgradeModulePlan` cmdlet.</span></span> <span data-ttu-id="8bebf-129">Alternativ können Sie die nicht destruktive Option `-FileEditMode SaveChangesToNewFiles` angeben.</span><span class="sxs-lookup"><span data-stu-id="8bebf-129">For the non-destructive option specify `-FileEditMode SaveChangesToNewFiles` instead.</span></span>
+> <span data-ttu-id="1f1de-131">Bei Angabe der Option **`-FileEditMode ModifyExistingFiles`** ist das Cmdlet **`Invoke-AzUpgradeModulePlan`** destruktiv.</span><span class="sxs-lookup"><span data-stu-id="1f1de-131">The **`Invoke-AzUpgradeModulePlan`** cmdlet is destructive when the **`-FileEditMode ModifyExistingFiles`** option is specified!</span></span> <span data-ttu-id="1f1de-132">Ihre Skripts und Funktionen werden in diesem Fall direkt gemäß dem Modulupgradeplan geändert, der durch das Cmdlet **`New-AzUpgradeModulePlan`** generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="1f1de-132">It modifies your scripts and functions in place according to the module upgrade plan generated by the **`New-AzUpgradeModulePlan`** cmdlet.</span></span> <span data-ttu-id="1f1de-133">Alternativ können Sie die nicht destruktive Option **`-FileEditMode SaveChangesToNewFiles`** angeben.</span><span class="sxs-lookup"><span data-stu-id="1f1de-133">For the non-destructive option specify **`-FileEditMode SaveChangesToNewFiles`** instead.</span></span>
 
 ```powershell
 # Execute the automatic upgrade plan and save the results to a variable.
-$Results = Invoke-AzUpgradeModulePlan -Plan $Plan -FileEditMode SaveChangesToNewFiles
+Invoke-AzUpgradeModulePlan -Plan $Plan -FileEditMode SaveChangesToNewFiles -OutVariable Results
 ```
 
-<span data-ttu-id="8bebf-130">Überprüfen Sie die Ergebnisse des Upgradevorgangs.</span><span class="sxs-lookup"><span data-stu-id="8bebf-130">Review the results of the upgrade operation.</span></span>
-
-```powershell
-# Show the results for the entire upgrade operation
-$Results
+```Output
+Order Location                                                   UpgradeType     UpgradeResult    Original
+----- --------                                                   -----------     -------------    --------
+1     compute-create-dockerhost.ps1:59:24                        CmdletParameter UpgradeCompleted ExtensionName
+2     compute-create-dockerhost.ps1:59:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMExtens...
+3     compute-create-dockerhost.ps1:54:1                         Cmdlet          UpgradeCompleted New-AzureRmVM
+4     compute-create-dockerhost.ps1:51:1                         Cmdlet          UpgradeCompleted Add-AzureRmVMSshPub...
+5     compute-create-dockerhost.ps1:47:1                         Cmdlet          UpgradeCompleted Add-AzureRmVMNetwor...
+6     compute-create-dockerhost.ps1:46:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMSource...
+7     compute-create-dockerhost.ps1:45:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMOperat...
+8     compute-create-dockerhost.ps1:44:13                        Cmdlet          UpgradeCompleted New-AzureRmVMConfig
+9     compute-create-dockerhost.ps1:40:8                         Cmdlet          UpgradeCompleted New-AzureRmNetworkI...
+10    compute-create-dockerhost.ps1:36:8                         Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+11    compute-create-dockerhost.ps1:31:16                        Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+12    compute-create-dockerhost.ps1:26:15                        Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+13    compute-create-dockerhost.ps1:22:8                         Cmdlet          UpgradeCompleted New-AzureRmPublicIp...
+14    compute-create-dockerhost.ps1:18:9                         Cmdlet          UpgradeCompleted New-AzureRmVirtualN...
+15    compute-create-dockerhost.ps1:15:17                        Cmdlet          UpgradeCompleted New-AzureRmVirtualN...
+16    compute-create-dockerhost.ps1:12:1                         Cmdlet          UpgradeCompleted New-AzureRmResource...
+17    compute-create-windowsvm-quick.ps1:18:3                    CmdletParameter UpgradeCompleted ImageName
+18    compute-create-windowsvm-quick.ps1:14:1                    Cmdlet          UpgradeCompleted New-AzureRmVM
+19    compute-create-windowsvm-quick.ps1:11:1                    Cmdlet          UpgradeCompleted New-AzureRmResource...
+20    compute-create-wordpress-mysql.ps1:59:24                   CmdletParameter UpgradeCompleted ExtensionName
+...
 ```
 
-<span data-ttu-id="8bebf-131">Sollten Fehler zurückgegeben werden, können Sie sich die Fehlerergebnisse mithilfe des folgenden Befehls genauer ansehen:</span><span class="sxs-lookup"><span data-stu-id="8bebf-131">If any errors are returned, you can take a closer look at the error results with the following command:</span></span>
+<span data-ttu-id="1f1de-134">Sollten Fehler zurückgegeben werden, können Sie sich die Fehlerergebnisse mithilfe des folgenden Befehls genauer ansehen:</span><span class="sxs-lookup"><span data-stu-id="1f1de-134">If any errors are returned, you can take a closer look at the error results with the following command:</span></span>
 
 ```powershell
 # Filter results to show only errors
 $Results | Where-Object UpgradeResult -ne UpgradeCompleted | Format-List
 ```
 
-## <a name="limitations"></a><span data-ttu-id="8bebf-132">Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="8bebf-132">Limitations</span></span>
+```Output
+Order                  : 42
+UpgradeType            : CmdletParameter
+UpgradeResult          : UnableToUpgrade
+UpgradeSeverity        : Error
+UpgradeResultReason    : Parameter was not found in Get-AzResource or it's aliases.
+SourceCommand          : CommandReference
+SourceCommandParameter : CommandReferenceParameter
+Location               : devtestlab-add-marketplace-image-to-lab.ps1:14:74
+FullPath               : C:\Scripts\devtestlab-add-marketplace-image-to-lab.ps1
+StartOffset            : 556
+Original               : ResourceNameEquals
+Replacement            :
+```
 
-* <span data-ttu-id="8bebf-133">Automatisierte Parameternamenaktualisierungen werden für Parametersätze mit Splatting nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8bebf-133">Automated parameter name updates to splatted parameter sets aren't supported.</span></span> <span data-ttu-id="8bebf-134">Falls während der Generierung des Upgradeplans welche gefunden werden, wird eine Warnung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="8bebf-134">If any are found during upgrade plan generation, a warning is returned.</span></span>
-* <span data-ttu-id="8bebf-135">Bei Datei-E/A-Vorgängen wird die Standardcodierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="8bebf-135">File I/O operations use default encoding.</span></span> <span data-ttu-id="8bebf-136">Ungewöhnliche Dateicodierungen können zu Problemen führen.</span><span class="sxs-lookup"><span data-stu-id="8bebf-136">Unusual file encoding situations may cause problems.</span></span>
-* <span data-ttu-id="8bebf-137">AzureRM-Cmdlets, die als Argumente an simulierte Anweisungen für Pester-Komponententests übergeben werden, werden nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="8bebf-137">AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.</span></span>
-* <span data-ttu-id="8bebf-138">Aktuell wird nur die Version 4.6.1 des Az PowerShell-Moduls als Ziel unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8bebf-138">Currently, only Az PowerShell module version 4.6.1 is supported as a target.</span></span>
+## <a name="limitations"></a><span data-ttu-id="1f1de-135">Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="1f1de-135">Limitations</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="8bebf-139">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="8bebf-139">Next steps</span></span>
+* <span data-ttu-id="1f1de-136">Automatisierte Parameternamenaktualisierungen werden für Parametersätze mit Splatting nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1f1de-136">Automated parameter name updates to splatted parameter sets aren't supported.</span></span> <span data-ttu-id="1f1de-137">Falls während der Generierung des Upgradeplans welche gefunden werden, wird eine Warnung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1f1de-137">If any are found during upgrade plan generation, a warning is returned.</span></span>
+* <span data-ttu-id="1f1de-138">Bei Datei-E/A-Vorgängen wird die Standardcodierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="1f1de-138">File I/O operations use default encoding.</span></span> <span data-ttu-id="1f1de-139">Ungewöhnliche Dateicodierungen können zu Problemen führen.</span><span class="sxs-lookup"><span data-stu-id="1f1de-139">Unusual file encoding situations may cause problems.</span></span>
+* <span data-ttu-id="1f1de-140">AzureRM-Cmdlets, die als Argumente an simulierte Anweisungen für Pester-Komponententests übergeben werden, werden nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="1f1de-140">AzureRM cmdlets passed as arguments to Pester unit test mock statements aren't detected.</span></span>
+* <span data-ttu-id="1f1de-141">Aktuell wird nur die Version 4.6.1 des Az PowerShell-Moduls als Ziel unterstützt.</span><span class="sxs-lookup"><span data-stu-id="1f1de-141">Currently, only Az PowerShell module version 4.6.1 is supported as a target.</span></span>
 
-<span data-ttu-id="8bebf-140">Weitere Informationen zum Az PowerShell-Modul finden Sie in der [Azure PowerShell-Dokumentation](/powershell/azure/).</span><span class="sxs-lookup"><span data-stu-id="8bebf-140">To learn more about the Az PowerShell module, see the [Azure PowerShell documentation](/powershell/azure/)</span></span>
+## <a name="how-to-report-issues"></a><span data-ttu-id="1f1de-142">Melden von Problemen</span><span class="sxs-lookup"><span data-stu-id="1f1de-142">How to report issues</span></span>
+
+<span data-ttu-id="1f1de-143">Wenn Sie Feedback geben oder Probleme im Zusammenhang mit dem PowerShell-Modul „Az.Tools.Migration“ melden möchten, können Sie [ein GitHub-Problem](https://github.com/Azure/azure-powershell-migration/issues) im Repository `azure-powershell-migration` erstellen.</span><span class="sxs-lookup"><span data-stu-id="1f1de-143">Report feedback and issues about the Az.Tools.Migration PowerShell module via [a GitHub issue](https://github.com/Azure/azure-powershell-migration/issues) in the `azure-powershell-migration` repository.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="1f1de-144">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="1f1de-144">Next steps</span></span>
+
+<span data-ttu-id="1f1de-145">Weitere Informationen zum Az PowerShell-Modul finden Sie in der [Azure PowerShell-Dokumentation](/powershell/azure/).</span><span class="sxs-lookup"><span data-stu-id="1f1de-145">To learn more about the Az PowerShell module, see the [Azure PowerShell documentation](/powershell/azure/)</span></span>
