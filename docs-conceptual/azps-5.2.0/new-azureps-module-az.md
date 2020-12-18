@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: d922affd608ebfce41f9608ec82d565d6afe9f7f
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.openlocfilehash: 9021a1d8fdc73aedb87b17631f8e67cb8ef79166
+ms.sourcegitcommit: a6d92493a8d1b81b85f4db2a38f271134be5e6c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856413"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353851"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Einführung in das Azure Az PowerShell-Modul
 
@@ -34,16 +34,17 @@ Das Az PowerShell-Modul bietet die folgenden Vorteile:
 
 * Sicherheit und Stabilität
   * Verschlüsselung des Tokencaches
-  * Unterstützung für ADFS 2019
-  * Sicherheitsmechanismus, der Man-in-the-Middle-Angriffe verhindert
+  * Verhindern von Man-in-the-Middle-Angriffen
+  * Unterstützen der Authentifizierung mit ADFS 2019
+  * Benutzernamen- und Kennwortauthentifizierung in PowerShell 7
   * Unterstützung für Features wie die fortlaufende Zugriffsevaluierung (wird 2021 eingeführt)
 * Unterstützung für alle Azure-Dienste
-  * Verfügbarkeit eines Moduls für jeden Azure-Dienst
+  * Alle allgemein verfügbaren Azure-Dienste verfügen über ein entsprechendes unterstütztes PowerShell-Modul.
   * Mehrere Fehlerbehebungen und API-Versionsupgrades seit AzureRM
-* Mehrere weitere neue Funktionen
+* Neue Funktionen
   * Unterstützung in Cloud Shell und plattformübergreifend
   * Abrufen und Verwenden von Zugriffstoken für den Zugriff auf Azure-Ressourcen
-  * Generisches Az-Cmdlet für Notausstiegsvorgänge
+  * Cmdlet für erweiterte REST-Vorgänge mit Azure-Ressourcen verfügbar
 
 > [!NOTE]
 > PowerShell 7 und höher ist auf allen Plattformen die empfohlene Version für die Verwendung mit dem Az PowerShell-Modul.
