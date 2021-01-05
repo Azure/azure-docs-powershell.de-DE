@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 05/14/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: f7a1658cdcafd1e8d6cba51ead26f9ddaa8c4c56
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.openlocfilehash: ae26b84ecf02ff90ddfbbc2960aed448f37f2a6a
+ms.sourcegitcommit: e4f2cb406f0ea7bcdb48e130966eabba4d0f9a67
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856523"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665438"
 ---
 # <a name="install-azure-powershell"></a>Installieren von Azure Powershell
 
@@ -44,6 +44,8 @@ So verwenden Sie Azure PowerShell in PowerShell 5.1 unter Windows:
 > [!WARNING]
 > Die Module AzureRM und Az können für PowerShell 5.1 unter Windows nicht gleichzeitig installiert sein. Wenn AzureRM weiterhin auf Ihrem System verfügbar sein soll, installieren Sie das Az-Modul für PowerShell 6.2.4 oder höher.
 
+### <a name="install-for-current-user"></a>Installieren für den aktuellen Benutzer
+
 Die Verwendung der PowerShellGet-Cmdlets ist die bevorzugte Installationsmethode. Installieren Sie das Az-Modul nur für den aktuellen Benutzer. Dies ist der empfohlene Installationsbereich. Die Funktionsweise dieser Methode ist auf Windows-, macOS- und Linux-Plattformen gleich. Führen Sie den folgenden Befehl in einer PowerShell-Sitzung aus:
 
 ```powershell-interactive
@@ -68,6 +70,8 @@ Are you sure you want to install the modules from 'PSGallery'?
 ```
 
 Antworten Sie mit `Yes` oder `Yes to All`, um die Installation fortzusetzen.
+
+### <a name="install-for-all-users"></a>Installieren für alle Benutzer
 
 Zum Installieren des Moduls für alle Benutzer in einem System sind erhöhte Rechte erforderlich. Starten Sie unter Windows die PowerShell-Sitzung mithilfe der Option **Als Administrator ausführen**. Verwenden Sie unter macOS oder Linux den Befehl `sudo`:
 
