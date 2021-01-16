@@ -1,0 +1,485 @@
+---
+external help file: ''
+Module Name: Az.DesktopVirtualization
+online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/update-azwvdhostpool
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Update-AzWvdHostPool.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/Update-AzWvdHostPool.md
+ms.openlocfilehash: a6c7572808184f3c83037932f45d36c7af3ff7a5
+ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "98298504"
+---
+# <span data-ttu-id="5e5a2-101">Update-AzWvdHostPool</span><span class="sxs-lookup"><span data-stu-id="5e5a2-101">Update-AzWvdHostPool</span></span>
+
+## <span data-ttu-id="5e5a2-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="5e5a2-102">SYNOPSIS</span></span>
+<span data-ttu-id="5e5a2-103">Aktualisieren Sie einen Hostpool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-103">Update a host pool.</span></span>
+
+## <span data-ttu-id="5e5a2-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5e5a2-104">SYNTAX</span></span>
+
+### <span data-ttu-id="5e5a2-105">UpdateExpanded (Standard)</span><span class="sxs-lookup"><span data-stu-id="5e5a2-105">UpdateExpanded (Default)</span></span>
+```
+Update-AzWvdHostPool -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ [-CustomRdpProperty <String>] [-Description <String>] [-FriendlyName <String>]
+ [-LoadBalancerType <LoadBalancerType>] [-MaxSessionLimit <Int32>]
+ [-PersonalDesktopAssignmentType <PersonalDesktopAssignmentType>]
+ [-PreferredAppGroupType <PreferredAppGroupType>] [-RegistrationInfoExpirationTime <DateTime>]
+ [-RegistrationInfoRegistrationTokenOperation <RegistrationTokenOperation>] [-Ring <Int32>]
+ [-SsoadfsAuthority <String>] [-SsoClientId <String>] [-SsoClientSecretKeyVaultPath <String>]
+ [-SsoContext <String>] [-SsoSecretType <SsoSecretType>] [-Tag <Hashtable>] [-ValidationEnvironment]
+ [-VMTemplate <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### <span data-ttu-id="5e5a2-106">UpdateViaIdentityExpanded</span><span class="sxs-lookup"><span data-stu-id="5e5a2-106">UpdateViaIdentityExpanded</span></span>
+```
+Update-AzWvdHostPool -InputObject <IDesktopVirtualizationIdentity> [-CustomRdpProperty <String>]
+ [-Description <String>] [-FriendlyName <String>] [-LoadBalancerType <LoadBalancerType>]
+ [-MaxSessionLimit <Int32>] [-PersonalDesktopAssignmentType <PersonalDesktopAssignmentType>]
+ [-PreferredAppGroupType <PreferredAppGroupType>] [-RegistrationInfoExpirationTime <DateTime>]
+ [-RegistrationInfoRegistrationTokenOperation <RegistrationTokenOperation>] [-Ring <Int32>]
+ [-SsoadfsAuthority <String>] [-SsoClientId <String>] [-SsoClientSecretKeyVaultPath <String>]
+ [-SsoContext <String>] [-SsoSecretType <SsoSecretType>] [-Tag <Hashtable>] [-ValidationEnvironment]
+ [-VMTemplate <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## <span data-ttu-id="5e5a2-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="5e5a2-107">DESCRIPTION</span></span>
+<span data-ttu-id="5e5a2-108">Aktualisieren Sie einen Hostpool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-108">Update a host pool.</span></span>
+
+## <span data-ttu-id="5e5a2-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="5e5a2-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="5e5a2-110">Beispiel 1: Aktualisieren eines Windows Virtual Desktop HostPools nach Name</span><span class="sxs-lookup"><span data-stu-id="5e5a2-110">Example 1: Update a Windows Virtual Desktop HostPool by name</span></span>
+```powershell
+PS C:\> Update-AzWvdHostPool -ResourceGroupName ResourceGroupName `
+                            -Name HostPoolName `
+                            -LoadBalancerType 'BreadthFirst' `
+                            -Description 'Description' `
+                            -FriendlyName 'Friendly Name' `
+                            -MaxSessionLimit 6 `
+                            -SsoContext $null `
+                            -CustomRdpProperty $null `
+                            -Ring $null `
+                            -ValidationEnvironment:$false
+
+Location   Name                 Type
+--------   ----                 ----
+eastus     HostPoolName Microsoft.DesktopVirtualization/hostpools
+```
+
+<span data-ttu-id="5e5a2-111">Mit diesem Befehl wird ein Windows Virtual Desktop HostPool in einer Ressourcengruppe aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-111">This command updates a Windows Virtual Desktop HostPool in a Resource Group.</span></span>
+
+## <span data-ttu-id="5e5a2-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5e5a2-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="5e5a2-113">-CustomRdpProperty</span><span class="sxs-lookup"><span data-stu-id="5e5a2-113">-CustomRdpProperty</span></span>
+<span data-ttu-id="5e5a2-114">Benutzerdefinierte rdp-Eigenschaft von HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-114">Custom rdp property of HostPool.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5e5a2-115">-DefaultProfile</span></span>
+<span data-ttu-id="5e5a2-116">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-116">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-117">-Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5e5a2-117">-Description</span></span>
+<span data-ttu-id="5e5a2-118">Beschreibung von HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-118">Description of HostPool.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-119">-FriendlyName</span><span class="sxs-lookup"><span data-stu-id="5e5a2-119">-FriendlyName</span></span>
+<span data-ttu-id="5e5a2-120">Anzeigename von HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-120">Friendly name of HostPool.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-121">-InputObject</span><span class="sxs-lookup"><span data-stu-id="5e5a2-121">-InputObject</span></span>
+<span data-ttu-id="5e5a2-122">Identity Parameter To construct, see NOTES section for INPUTOBJECT properties and create a hash table.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-122">Identity Parameter To construct, see NOTES section for INPUTOBJECT properties and create a hash table.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity
+Parameter Sets: UpdateViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-123">-LoadBalancerType</span><span class="sxs-lookup"><span data-stu-id="5e5a2-123">-LoadBalancerType</span></span>
+<span data-ttu-id="5e5a2-124">Der Typ des Lastenausgleichs.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-124">The type of the load balancer.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.LoadBalancerType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-125">-MaxSessionLimit</span><span class="sxs-lookup"><span data-stu-id="5e5a2-125">-MaxSessionLimit</span></span>
+<span data-ttu-id="5e5a2-126">Die maximale Sitzungsgrenze von HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-126">The max session limit of HostPool.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-127">-Name</span><span class="sxs-lookup"><span data-stu-id="5e5a2-127">-Name</span></span>
+<span data-ttu-id="5e5a2-128">Der Name des Hostpools innerhalb der angegebenen Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="5e5a2-128">The name of the host pool within the specified resource group</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded
+Aliases: HostPoolName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-129">-PersonalDesktopAssignmentType</span><span class="sxs-lookup"><span data-stu-id="5e5a2-129">-PersonalDesktopAssignmentType</span></span>
+<span data-ttu-id="5e5a2-130">PersonalDesktopAssignment-Typ für HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-130">PersonalDesktopAssignment type for HostPool.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.PersonalDesktopAssignmentType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-131">-PreferredAppGroupType</span><span class="sxs-lookup"><span data-stu-id="5e5a2-131">-PreferredAppGroupType</span></span>
+<span data-ttu-id="5e5a2-132">Der Typ des bevorzugten Anwendungsgruppentyps, Standardmäßig "Desktopanwendungsgruppe"</span><span class="sxs-lookup"><span data-stu-id="5e5a2-132">The type of preferred application group type, default to Desktop Application Group</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.PreferredAppGroupType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-133">-RegistrationInfoExpirationTime</span><span class="sxs-lookup"><span data-stu-id="5e5a2-133">-RegistrationInfoExpirationTime</span></span>
+<span data-ttu-id="5e5a2-134">Ablaufzeit des Registrierungstokens.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-134">Expiration time of registration token.</span></span>
+
+```yaml
+Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-135">-RegistrationInfoRegistrationTokenOperation</span><span class="sxs-lookup"><span data-stu-id="5e5a2-135">-RegistrationInfoRegistrationTokenOperation</span></span>
+<span data-ttu-id="5e5a2-136">Der Typ des Zurücksetzens des Tokens.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-136">The type of resetting the token.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.RegistrationTokenOperation
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-137">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="5e5a2-137">-ResourceGroupName</span></span>
+<span data-ttu-id="5e5a2-138">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-138">The name of the resource group.</span></span>
+<span data-ttu-id="5e5a2-139">Beim Namen wird die Groß-/Kleinschreibung nicht beachtet.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-139">The name is case insensitive.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-140">-Ring</span><span class="sxs-lookup"><span data-stu-id="5e5a2-140">-Ring</span></span>
+<span data-ttu-id="5e5a2-141">Die Ringnummer von HostPool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-141">The ring number of HostPool.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-142">-SsoadfsAuthority</span><span class="sxs-lookup"><span data-stu-id="5e5a2-142">-SsoadfsAuthority</span></span>
+<span data-ttu-id="5e5a2-143">URL des ADFS-Kundenservers zum Signieren von WVD-SSO-Zertifikaten.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-143">URL to customer ADFS server for signing WVD SSO certificates.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-144">-SsoClientId</span><span class="sxs-lookup"><span data-stu-id="5e5a2-144">-SsoClientId</span></span>
+<span data-ttu-id="5e5a2-145">ClientId für die registrierte Vertrauende Partei, die zum Ausstellen von WVD-SSO-Zertifikaten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-145">ClientId for the registered Relying Party used to issue WVD SSO certificates.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-146">-SsoClientSecretKeyVaultPath</span><span class="sxs-lookup"><span data-stu-id="5e5a2-146">-SsoClientSecretKeyVaultPath</span></span>
+<span data-ttu-id="5e5a2-147">Pfad zu Azure KeyVault, der den geheimen Schlüssel für die Kommunikation mit ADFS speichert.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-147">Path to Azure KeyVault storing the secret used for communication to ADFS.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-148">-SsoContext</span><span class="sxs-lookup"><span data-stu-id="5e5a2-148">-SsoContext</span></span>
+<span data-ttu-id="5e5a2-149">Pfad zu Keyvault, der den geheimen Schlüssel "ssoContext" enthält.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-149">Path to keyvault containing ssoContext secret.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-150">-SsoSecretType</span><span class="sxs-lookup"><span data-stu-id="5e5a2-150">-SsoSecretType</span></span>
+<span data-ttu-id="5e5a2-151">Der Typ des einzelnen Zeichens für den geheimen Typ.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-151">The type of single sign on Secret Type.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.SsoSecretType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-152">-SubscriptionId</span><span class="sxs-lookup"><span data-stu-id="5e5a2-152">-SubscriptionId</span></span>
+<span data-ttu-id="5e5a2-153">Die ID des Zielabonnements.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-153">The ID of the target subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-154">-Tag</span><span class="sxs-lookup"><span data-stu-id="5e5a2-154">-Tag</span></span>
+<span data-ttu-id="5e5a2-155">zu aktualisierende Tags</span><span class="sxs-lookup"><span data-stu-id="5e5a2-155">tags to be updated</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-156">-ValidationEnvironment</span><span class="sxs-lookup"><span data-stu-id="5e5a2-156">-ValidationEnvironment</span></span>
+<span data-ttu-id="5e5a2-157">Ist überprüfungsumgebung.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-157">Is validation environment.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-158">-VMTemplate</span><span class="sxs-lookup"><span data-stu-id="5e5a2-158">-VMTemplate</span></span>
+<span data-ttu-id="5e5a2-159">VM template for sessionhosts configuration within hostpool.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-159">VM template for sessionhosts configuration within hostpool.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-160">-Confirm</span><span class="sxs-lookup"><span data-stu-id="5e5a2-160">-Confirm</span></span>
+<span data-ttu-id="5e5a2-161">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-161">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-162">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="5e5a2-162">-WhatIf</span></span>
+<span data-ttu-id="5e5a2-163">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-163">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="5e5a2-164">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-164">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5e5a2-165">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5e5a2-165">CommonParameters</span></span>
+<span data-ttu-id="5e5a2-166">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-166">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5e5a2-167">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="5e5a2-167">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="5e5a2-168">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="5e5a2-168">INPUTS</span></span>
+
+### <span data-ttu-id="5e5a2-169">Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity</span><span class="sxs-lookup"><span data-stu-id="5e5a2-169">Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity</span></span>
+
+## <span data-ttu-id="5e5a2-170">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="5e5a2-170">OUTPUTS</span></span>
+
+### <span data-ttu-id="5e5a2-171">Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20201019Preview.IHostPool</span><span class="sxs-lookup"><span data-stu-id="5e5a2-171">Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20201019Preview.IHostPool</span></span>
+
+## <span data-ttu-id="5e5a2-172">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="5e5a2-172">NOTES</span></span>
+
+<span data-ttu-id="5e5a2-173">ALIASE</span><span class="sxs-lookup"><span data-stu-id="5e5a2-173">ALIASES</span></span>
+
+<span data-ttu-id="5e5a2-174">KOMPLEXE PARAMETEREIGENSCHAFTEN</span><span class="sxs-lookup"><span data-stu-id="5e5a2-174">COMPLEX PARAMETER PROPERTIES</span></span>
+
+<span data-ttu-id="5e5a2-175">Erstellen Sie zum Erstellen der unten beschriebenen Parameter eine Hashtabelle mit den entsprechenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-175">To create the parameters described below, construct a hash table containing the appropriate properties.</span></span> <span data-ttu-id="5e5a2-176">Um Informationen zu Hashtabellen zu erhalten, führen Sie Get-Help about_Hash_Tables.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-176">For information on hash tables, run Get-Help about_Hash_Tables.</span></span>
+
+
+<span data-ttu-id="5e5a2-177">INPUTOBJECT <IDesktopVirtualizationIdentity> : Identity Parameter</span><span class="sxs-lookup"><span data-stu-id="5e5a2-177">INPUTOBJECT <IDesktopVirtualizationIdentity>: Identity Parameter</span></span>
+  - <span data-ttu-id="5e5a2-178">`[ApplicationGroupName <String>]`: Der Name der Anwendungsgruppe</span><span class="sxs-lookup"><span data-stu-id="5e5a2-178">`[ApplicationGroupName <String>]`: The name of the application group</span></span>
+  - <span data-ttu-id="5e5a2-179">`[ApplicationName <String>]`: Der Name der Anwendung innerhalb der angegebenen Anwendungsgruppe</span><span class="sxs-lookup"><span data-stu-id="5e5a2-179">`[ApplicationName <String>]`: The name of the application within the specified application group</span></span>
+  - <span data-ttu-id="5e5a2-180">`[DesktopName <String>]`: Der Name des Desktops in der angegebenen Desktopgruppe</span><span class="sxs-lookup"><span data-stu-id="5e5a2-180">`[DesktopName <String>]`: The name of the desktop within the specified desktop group</span></span>
+  - <span data-ttu-id="5e5a2-181">`[HostPoolName <String>]`: Der Name des Hostpools innerhalb der angegebenen Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="5e5a2-181">`[HostPoolName <String>]`: The name of the host pool within the specified resource group</span></span>
+  - <span data-ttu-id="5e5a2-182">`[Id <String>]`: Ressourcenidentitätspfad</span><span class="sxs-lookup"><span data-stu-id="5e5a2-182">`[Id <String>]`: Resource identity path</span></span>
+  - <span data-ttu-id="5e5a2-183">`[MsixPackageFullName <String>]`: Der versionspezifische Paketname des vollständigen Pakets des MSIX-Pakets innerhalb des angegebenen Hostpools</span><span class="sxs-lookup"><span data-stu-id="5e5a2-183">`[MsixPackageFullName <String>]`: The version specific package full name of the MSIX package within specified hostpool</span></span>
+  - <span data-ttu-id="5e5a2-184">`[ResourceGroupName <String>]`: Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-184">`[ResourceGroupName <String>]`: The name of the resource group.</span></span> <span data-ttu-id="5e5a2-185">Beim Namen wird die Groß-/Kleinschreibung nicht beachtet.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-185">The name is case insensitive.</span></span>
+  - <span data-ttu-id="5e5a2-186">`[SessionHostName <String>]`: Der Name des Sitzungshosts im angegebenen Hostpool</span><span class="sxs-lookup"><span data-stu-id="5e5a2-186">`[SessionHostName <String>]`: The name of the session host within the specified host pool</span></span>
+  - <span data-ttu-id="5e5a2-187">`[SubscriptionId <String>]`: Die ID des Zielabonnements.</span><span class="sxs-lookup"><span data-stu-id="5e5a2-187">`[SubscriptionId <String>]`: The ID of the target subscription.</span></span>
+  - <span data-ttu-id="5e5a2-188">`[UserSessionId <String>]`: Der Name der Benutzersitzung im angegebenen Sitzungshost</span><span class="sxs-lookup"><span data-stu-id="5e5a2-188">`[UserSessionId <String>]`: The name of the user session within the specified session host</span></span>
+  - <span data-ttu-id="5e5a2-189">`[WorkspaceName <String>]`: Der Name des Arbeitsbereichs</span><span class="sxs-lookup"><span data-stu-id="5e5a2-189">`[WorkspaceName <String>]`: The name of the workspace</span></span>
+
+## <span data-ttu-id="5e5a2-190">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="5e5a2-190">RELATED LINKS</span></span>
+
