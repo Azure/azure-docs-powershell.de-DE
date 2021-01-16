@@ -1,0 +1,244 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+Module Name: Az.Sql
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-azsqlinstanceactivedirectoryadministrator
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
+ms.openlocfilehash: ece5a6beb73f5fb5ac7c91d454f3b0259b44bf18
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98468068"
+---
+# <span data-ttu-id="ea40e-101">Set-AzSqlInstanceActiveDirectoryAdministrator</span><span class="sxs-lookup"><span data-stu-id="ea40e-101">Set-AzSqlInstanceActiveDirectoryAdministrator</span></span>
+
+## <span data-ttu-id="ea40e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="ea40e-102">SYNOPSIS</span></span>
+<span data-ttu-id="ea40e-103">Bereitstellung eines Azure AD-Administrators für SQL verwaltete Instanz.</span><span class="sxs-lookup"><span data-stu-id="ea40e-103">Provisions an Azure AD administrator for SQL Managed Instance.</span></span>
+
+## <span data-ttu-id="ea40e-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="ea40e-104">SYNTAX</span></span>
+
+### <span data-ttu-id="ea40e-105">UseResourceGroupAndInstanceNameParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="ea40e-105">UseResourceGroupAndInstanceNameParameterSet (Default)</span></span>
+```
+Set-AzSqlInstanceActiveDirectoryAdministrator [-DisplayName] <String> [-ObjectId] <Guid>
+ [-ResourceGroupName] <String> [-InstanceName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="ea40e-106">UseInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="ea40e-106">UseInputObjectParameterSet</span></span>
+```
+Set-AzSqlInstanceActiveDirectoryAdministrator [-DisplayName] <String> [-ObjectId] <Guid>
+ -InputObject <AzureSqlManagedInstanceModel> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="ea40e-107">UserResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="ea40e-107">UserResourceIdParameterSet</span></span>
+```
+Set-AzSqlInstanceActiveDirectoryAdministrator [-DisplayName] <String> [-ObjectId] <Guid> [-ResourceId] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="ea40e-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ea40e-108">DESCRIPTION</span></span>
+<span data-ttu-id="ea40e-109">Das **Cmdlet "Set-AzSqlInstanceActiveDirectoryAdministrator"** stellt einen Azure Active Directory (Azure AD)-Administrator für die verwaltete AzureSQL-Instanz im aktuellen Abonnement bereit.</span><span class="sxs-lookup"><span data-stu-id="ea40e-109">The **Set-AzSqlInstanceActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzureSQL Managed Instance in the current subscription.</span></span>
+<span data-ttu-id="ea40e-110">Sie können immer nur einen Administrator gleichzeitig bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="ea40e-110">You can provision only one administrator at a time.</span></span>
+<span data-ttu-id="ea40e-111">Die folgenden Mitglieder von Azure AD können als Administrator für verwaltete SQL bereitgestellt werden:</span><span class="sxs-lookup"><span data-stu-id="ea40e-111">The following members of Azure AD can be provisioned as a SQL Managed Instance administrator:</span></span>
+- <span data-ttu-id="ea40e-112">Native Mitglieder von Azure AD</span><span class="sxs-lookup"><span data-stu-id="ea40e-112">Native members of Azure AD</span></span> 
+- <span data-ttu-id="ea40e-113">Verbundmitglieder von Azure AD</span><span class="sxs-lookup"><span data-stu-id="ea40e-113">Federated members of Azure AD</span></span> 
+- <span data-ttu-id="ea40e-114">Azure AD-Gruppen, die als Sicherheitsgruppen erstellt wurden, die aus anderen Azure ADs importiert wurden, werden als Administratoren nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-114">Azure AD groups created as security groups Imported members from other Azure ADs are not supported as administrators.</span></span>
+<span data-ttu-id="ea40e-115">Microsoft-Konten, z. B. in den Domänen Outlook.com, Hotmail.com oder Live.com, werden als Administratoren nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-115">Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.</span></span>
+<span data-ttu-id="ea40e-116">Andere Gastkonten, z. B. in Gmail.com oder Yahoo.com, werden als Administratoren nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-116">Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.</span></span>
+<span data-ttu-id="ea40e-117">Es wird empfohlen, eine dedizierte Azure AD-Gruppe als Administrator bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="ea40e-117">We recommend that you provision a dedicated Azure AD group as an administrator.</span></span>
+
+## <span data-ttu-id="ea40e-118">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="ea40e-118">EXAMPLES</span></span>
+
+### <span data-ttu-id="ea40e-119">Beispiel 1: Bereitstellen einer Administratorgruppe für eine verwaltete Instanz, die der Ressourcengruppe zugeordnet ist</span><span class="sxs-lookup"><span data-stu-id="ea40e-119">Example 1: Provision an administrator group for a managed instance associated with resource group</span></span>
+```
+PS C:\>Set-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -DisplayName "DBAs" -ObjectId "40b79501-b343-44ed-9ce7-da4c8cc7353b"
+ResourceGroupName InstanceName      DisplayName ObjectId 
+----------------- ----------------- ----------- -------- 
+ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
+```
+
+<span data-ttu-id="ea40e-120">Mit diesem Befehl wird eine Azure AD-Administratorgruppe namens DBAs für die verwaltete Instanz namens "ManagedInstance01" bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-120">This command provisions an Azure AD administrator group named DBAs for the managed instance named ManagedInstance01.</span></span>
+<span data-ttu-id="ea40e-121">Dieser Server ist der Ressourcengruppe "ResourceGroup01" zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ea40e-121">This server is associated with resource group ResourceGroup01.</span></span>
+
+### <span data-ttu-id="ea40e-122">Beispiel 2: Bereitstellen eines Administratorbenutzers mithilfe eines verwalteten Instanzobjekts</span><span class="sxs-lookup"><span data-stu-id="ea40e-122">Example 2: Provision an administrator user using managed instance object</span></span>
+```
+PS C:\>Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "11E95548-B179-4FE1-9AF4-ACA49D13ABB9"
+ResourceGroupName InstanceName      DisplayName ObjectId 
+----------------- ----------------- ----------- -------- 
+Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
+```
+
+<span data-ttu-id="ea40e-123">Mit diesem Befehl wird ein Azure AD-Benutzer als Administrator aus dem verwalteten Instanzobjekt bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-123">This command provisions an Azure AD user as an administrator from the managed instance object.</span></span>
+
+### <span data-ttu-id="ea40e-124">Beispiel 3: Bereitstellen eines Administrators mithilfe des Ressourcenbezeichners für verwaltete Instanzen</span><span class="sxs-lookup"><span data-stu-id="ea40e-124">Example 3: Provision an administrator using managed instance resource identifier</span></span>
+```
+PS C:\>Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "11E95548-B179-4FE1-9AF4-ACA49D13ABB9"
+ResourceGroupName InstanceName      DisplayName ObjectId 
+----------------- ----------------- ----------- -------- 
+Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
+```
+
+<span data-ttu-id="ea40e-125">Mit diesem Befehl wird ein Azure AD-Benutzer als Administrator mit dem Ressourcenbezeichner für verwaltete Instanzen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-125">This command provisions an Azure AD user as an administrator using managed instance resource identifier.</span></span>
+
+## <span data-ttu-id="ea40e-126">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ea40e-126">PARAMETERS</span></span>
+
+### <span data-ttu-id="ea40e-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ea40e-127">-DefaultProfile</span></span>
+<span data-ttu-id="ea40e-128">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea40e-128">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-129">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="ea40e-129">-DisplayName</span></span>
+<span data-ttu-id="ea40e-130">Gibt den Anzeigenamen des Benutzers oder der Gruppe an, dem/der Berechtigungen erteilt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea40e-130">Specifies the display name of the user or group for whom to grant permissions.</span></span>
+<span data-ttu-id="ea40e-131">Dieser Anzeigename muss in dem Active Directory vorhanden sein, das dem aktuellen Abonnement zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="ea40e-131">This display name must exist in the active directory associated with the current subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-132">-InputObject</span><span class="sxs-lookup"><span data-stu-id="ea40e-132">-InputObject</span></span>
+<span data-ttu-id="ea40e-133">Das zu verwendende verwaltete Instanzobjekt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-133">The managed instance object to use.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel
+Parameter Sets: UseInputObjectParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-134">-InstanceName</span><span class="sxs-lookup"><span data-stu-id="ea40e-134">-InstanceName</span></span>
+<span data-ttu-id="ea40e-135">SQL verwalteten Instanznamen.</span><span class="sxs-lookup"><span data-stu-id="ea40e-135">SQL Managed Instance name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UseResourceGroupAndInstanceNameParameterSet
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-136">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="ea40e-136">-ObjectId</span></span>
+<span data-ttu-id="ea40e-137">Gibt die Objekt-ID des Benutzers oder der Gruppe in Azure Active Directory an, für den Berechtigungen erteilt werden.</span><span class="sxs-lookup"><span data-stu-id="ea40e-137">Specifies the object ID of the user or group in Azure Active Directory for which to grant permissions.</span></span>
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-138">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="ea40e-138">-ResourceGroupName</span></span>
+<span data-ttu-id="ea40e-139">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="ea40e-139">The name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UseResourceGroupAndInstanceNameParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-140">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="ea40e-140">-ResourceId</span></span>
+<span data-ttu-id="ea40e-141">Die Ressourcen-ID der zu verwendende Instanz</span><span class="sxs-lookup"><span data-stu-id="ea40e-141">The resource id of instance to use</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: UserResourceIdParameterSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-142">-Confirm</span><span class="sxs-lookup"><span data-stu-id="ea40e-142">-Confirm</span></span>
+<span data-ttu-id="ea40e-143">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="ea40e-143">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-144">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="ea40e-144">-WhatIf</span></span>
+<span data-ttu-id="ea40e-145">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ea40e-145">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="ea40e-146">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ea40e-146">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ea40e-147">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ea40e-147">CommonParameters</span></span>
+<span data-ttu-id="ea40e-148">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ea40e-148">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ea40e-149">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="ea40e-149">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="ea40e-150">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="ea40e-150">INPUTS</span></span>
+
+### <span data-ttu-id="ea40e-151">System.String</span><span class="sxs-lookup"><span data-stu-id="ea40e-151">System.String</span></span>
+
+### <span data-ttu-id="ea40e-152">System.Guid</span><span class="sxs-lookup"><span data-stu-id="ea40e-152">System.Guid</span></span>
+
+## <span data-ttu-id="ea40e-153">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="ea40e-153">OUTPUTS</span></span>
+
+### <span data-ttu-id="ea40e-154">Microsoft.Azure.Commands.Sql.InstanceActiveDirectoryAdministrator.Model.AzureSqlInstanceActiveDirectoryAdministratorModel</span><span class="sxs-lookup"><span data-stu-id="ea40e-154">Microsoft.Azure.Commands.Sql.InstanceActiveDirectoryAdministrator.Model.AzureSqlInstanceActiveDirectoryAdministratorModel</span></span>
+
+## <span data-ttu-id="ea40e-155">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="ea40e-155">NOTES</span></span>
+
+## <span data-ttu-id="ea40e-156">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="ea40e-156">RELATED LINKS</span></span>
+
+[<span data-ttu-id="ea40e-157">Get-AzSqlInstanceActiveDirectoryAdministrator</span><span class="sxs-lookup"><span data-stu-id="ea40e-157">Get-AzSqlInstanceActiveDirectoryAdministrator</span></span>](./Get-AzSqlInstanceActiveDirectoryAdministrator.md)
+
+[<span data-ttu-id="ea40e-158">Remove-AzSqlInstanceActiveDirectoryAdministrator</span><span class="sxs-lookup"><span data-stu-id="ea40e-158">Remove-AzSqlInstanceActiveDirectoryAdministrator</span></span>](./Remove-AzSqlInstanceActiveDirectoryAdministrator.md)
