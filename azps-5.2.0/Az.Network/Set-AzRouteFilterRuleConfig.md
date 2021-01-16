@@ -1,0 +1,214 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azroutefilterruleconfig
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzRouteFilterRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzRouteFilterRuleConfig.md
+ms.openlocfilehash: eb8de50aac1b68928d5cebe8118665b9a24e8fbf
+ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "98294221"
+---
+# <span data-ttu-id="af979-101">Set-AzRouteFilterRuleConfig</span><span class="sxs-lookup"><span data-stu-id="af979-101">Set-AzRouteFilterRuleConfig</span></span>
+
+## <span data-ttu-id="af979-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="af979-102">SYNOPSIS</span></span>
+<span data-ttu-id="af979-103">Ändert die Routenfilterregel eines Routenfilters.</span><span class="sxs-lookup"><span data-stu-id="af979-103">Modifies the route filter rule of a route filter.</span></span>
+
+## <span data-ttu-id="af979-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="af979-104">SYNTAX</span></span>
+
+```
+Set-AzRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String> -Access <String>
+ -RouteFilterRuleType <String> -CommunityList <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="af979-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="af979-105">DESCRIPTION</span></span>
+<span data-ttu-id="af979-106">Das **Cmdlet Set-AzRouteFilterRuleConfig** ändert die Routenfilterregel eines Routenfilters.</span><span class="sxs-lookup"><span data-stu-id="af979-106">The **Set-AzRouteFilterRuleConfig** cmdlet modifies the route filter rule of a route filter.</span></span>
+
+## <span data-ttu-id="af979-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="af979-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="af979-108">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="af979-108">Example 1</span></span>
+```powershell
+PS C:\> $rf = Get-AzRouteFilter -Name "RouteFilter01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $rf = Set-AzRouteFilterRuleConfig -RouteFilter $rf -Name "Rule01" -Access Deny -RouteFilterRuleType Community -CommunityList "12076:5010","12076:5040"
+PS C:\> Set-AzRouteFilter -RouteFilter $rf
+```
+
+<span data-ttu-id="af979-109">Der erste Befehl ruft den Routenfilter namens "RouteFilter01" ab und speichert ihn in der $rf Variable.</span><span class="sxs-lookup"><span data-stu-id="af979-109">The first command gets the route filter named RouteFilter01 and stores it in the $rf variable.</span></span>
+<span data-ttu-id="af979-110">Der zweite Befehl ändert die Routenfilterregel namens "Regel01" und speichert den aktualisierten Routenfilter in der $rf Variable.</span><span class="sxs-lookup"><span data-stu-id="af979-110">The second command modifies the route filter rule named Rule01 and stores updated route filter in the $rf variable.</span></span>
+<span data-ttu-id="af979-111">Der dritte Befehl speichert den aktualisierten Routenfilter.</span><span class="sxs-lookup"><span data-stu-id="af979-111">The third command saves updated route filter.</span></span>
+
+## <span data-ttu-id="af979-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="af979-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="af979-113">-Access</span><span class="sxs-lookup"><span data-stu-id="af979-113">-Access</span></span>
+<span data-ttu-id="af979-114">Der Zugriffstyp der Regel.</span><span class="sxs-lookup"><span data-stu-id="af979-114">The access type of the rule.</span></span>
+<span data-ttu-id="af979-115">Mögliche Werte sind: "Zulassen", "Verweigern"</span><span class="sxs-lookup"><span data-stu-id="af979-115">Possible values are: 'Allow', 'Deny'</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Allow, Deny
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-116">-CommunityList</span><span class="sxs-lookup"><span data-stu-id="af979-116">-CommunityList</span></span>
+<span data-ttu-id="af979-117">Die Liste des Communitywerts, nach dem der Routenfilter gefiltert wird</span><span class="sxs-lookup"><span data-stu-id="af979-117">The list of community value that route filter will filter on</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-118">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="af979-118">-DefaultProfile</span></span>
+<span data-ttu-id="af979-119">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="af979-119">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-120">-Force</span><span class="sxs-lookup"><span data-stu-id="af979-120">-Force</span></span>
+<span data-ttu-id="af979-121">Bestätigen Sie sie nicht, wenn Sie eine Ressource überschreiben möchten.</span><span class="sxs-lookup"><span data-stu-id="af979-121">Do not ask for confirmation if you want to overwrite a resource</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-122">-Name</span><span class="sxs-lookup"><span data-stu-id="af979-122">-Name</span></span>
+<span data-ttu-id="af979-123">Der Name der Routenfilterregel</span><span class="sxs-lookup"><span data-stu-id="af979-123">The name of the route filter rule</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-124">-RouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-124">-RouteFilter</span></span>
+<span data-ttu-id="af979-125">Der RouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-125">The RouteFilter</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSRouteFilter
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-126">-RouteFilterRuleType</span><span class="sxs-lookup"><span data-stu-id="af979-126">-RouteFilterRuleType</span></span>
+<span data-ttu-id="af979-127">Der Typ der Routenfilterregel der Regel.</span><span class="sxs-lookup"><span data-stu-id="af979-127">The route filter rule type of the rule.</span></span>
+<span data-ttu-id="af979-128">Mögliche Werte sind: "Community"</span><span class="sxs-lookup"><span data-stu-id="af979-128">Possible values are: 'Community'</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Community
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-129">-Confirm</span><span class="sxs-lookup"><span data-stu-id="af979-129">-Confirm</span></span>
+<span data-ttu-id="af979-130">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="af979-130">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-131">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="af979-131">-WhatIf</span></span>
+<span data-ttu-id="af979-132">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="af979-132">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="af979-133">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="af979-133">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="af979-134">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="af979-134">CommonParameters</span></span>
+<span data-ttu-id="af979-135">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="af979-135">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="af979-136">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="af979-136">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="af979-137">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="af979-137">INPUTS</span></span>
+
+### <span data-ttu-id="af979-138">Microsoft.Azure.Commands.Network.Models.PSRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-138">Microsoft.Azure.Commands.Network.Models.PSRouteFilter</span></span>
+
+## <span data-ttu-id="af979-139">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="af979-139">OUTPUTS</span></span>
+
+### <span data-ttu-id="af979-140">Microsoft.Azure.Commands.Network.Models.PSRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-140">Microsoft.Azure.Commands.Network.Models.PSRouteFilter</span></span>
+
+## <span data-ttu-id="af979-141">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="af979-141">NOTES</span></span>
+
+## <span data-ttu-id="af979-142">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="af979-142">RELATED LINKS</span></span>
+
+[<span data-ttu-id="af979-143">Add-AzRouteFilterRuleConfig</span><span class="sxs-lookup"><span data-stu-id="af979-143">Add-AzRouteFilterRuleConfig</span></span>](./Add-AzRouteFilterRuleConfig.md)
+
+[<span data-ttu-id="af979-144">Get-AzRouteFilterRuleConfig</span><span class="sxs-lookup"><span data-stu-id="af979-144">Get-AzRouteFilterRuleConfig</span></span>](./Get-AzRouteFilterRuleConfig.md)
+
+[<span data-ttu-id="af979-145">New-AzRouteFilterRuleConfig</span><span class="sxs-lookup"><span data-stu-id="af979-145">New-AzRouteFilterRuleConfig</span></span>](./New-AzRouteFilterRuleConfig.md)
+
+[<span data-ttu-id="af979-146">Remove-AzRouteFilterRuleConfig</span><span class="sxs-lookup"><span data-stu-id="af979-146">Remove-AzRouteFilterRuleConfig</span></span>](./Remove-AzRouteFilterRuleConfig.md)
+
+[<span data-ttu-id="af979-147">Get-AzRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-147">Get-AzRouteFilter</span></span>](./Get-AzRouteFilter.md)
+
+[<span data-ttu-id="af979-148">New-AzRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-148">New-AzRouteFilter</span></span>](./New-AzRouteFilter.md)
+
+[<span data-ttu-id="af979-149">Remove-AzRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-149">Remove-AzRouteFilter</span></span>](./Remove-AzRouteFilter.md)
+
+[<span data-ttu-id="af979-150">Set-AzRouteFilter</span><span class="sxs-lookup"><span data-stu-id="af979-150">Set-AzRouteFilter</span></span>](./Set-AzRouteFilter.md)
