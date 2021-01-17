@@ -1,0 +1,227 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewayredirectconfiguration
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayRedirectConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayRedirectConfiguration.md
+ms.openlocfilehash: 87013db1f8bdff42fd34f28d45d5998d056aab40
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98378662"
+---
+# <span data-ttu-id="becdb-101">Set-AzApplicationGatewayRedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-101">Set-AzApplicationGatewayRedirectConfiguration</span></span>
+
+## <span data-ttu-id="becdb-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="becdb-102">SYNOPSIS</span></span>
+<span data-ttu-id="becdb-103">Legt die Umleitungskonfiguration für ein vorhandenes Anwendungsgateway fest.</span><span class="sxs-lookup"><span data-stu-id="becdb-103">Sets the redirect configuration on an existing Application Gateway.</span></span>
+
+## <span data-ttu-id="becdb-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="becdb-104">SYNTAX</span></span>
+
+### <span data-ttu-id="becdb-105">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="becdb-105">SetByResourceId</span></span>
+```
+Set-AzApplicationGatewayRedirectConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+ -RedirectType <String> [-TargetListenerID <String>] [-IncludePath <Boolean>] [-IncludeQueryString <Boolean>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="becdb-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="becdb-106">SetByResource</span></span>
+```
+Set-AzApplicationGatewayRedirectConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+ -RedirectType <String> [-TargetListener <PSApplicationGatewayHttpListener>] [-IncludePath <Boolean>]
+ [-IncludeQueryString <Boolean>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="becdb-107">SetByURL</span><span class="sxs-lookup"><span data-stu-id="becdb-107">SetByURL</span></span>
+```
+Set-AzApplicationGatewayRedirectConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+ -RedirectType <String> [-TargetUrl <String>] [-IncludePath <Boolean>] [-IncludeQueryString <Boolean>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="becdb-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="becdb-108">DESCRIPTION</span></span>
+<span data-ttu-id="becdb-109">**Das Cmdlet "Set-AzApplicationGatewayRequestRoutingRule"** ändert eine Umleitungskonfiguration.</span><span class="sxs-lookup"><span data-stu-id="becdb-109">**The Set-AzApplicationGatewayRequestRoutingRule** cmdlet modifies a redirect configuration.</span></span>
+
+## <span data-ttu-id="becdb-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="becdb-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="becdb-111">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="becdb-111">Example 1</span></span>
+```powershell
+PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw =  Set-AzApplicationGatewayRedirectConfiguration -ApplicationGateway $appgw -Name "RedirectConfig01" -RedirectType Permanent -TargetUrl "https://www.contoso.com"
+```
+
+<span data-ttu-id="becdb-112">Der erste Befehl ruft das Anwendungsgateway namens ApplicationGateway01 ab und speichert es in der $AppGw Variable.</span><span class="sxs-lookup"><span data-stu-id="becdb-112">The first command gets the application gateway named ApplicationGateway01 and stores it in the $AppGw variable.</span></span>
+<span data-ttu-id="becdb-113">Der zweite Befehl ändert die Umleitungskonfiguration für das Anwendungsgateway so, dass der Typ "Permanent" umgeleitet und eine Ziel-URL verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="becdb-113">The second command modifies the redirect configuration for the application gateway to redirect type Permanent and use a target url.</span></span>
+
+### <span data-ttu-id="becdb-114">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="becdb-114">Example 2</span></span>
+
+<span data-ttu-id="becdb-115">Legt die Umleitungskonfiguration für ein vorhandenes Anwendungsgateway fest.</span><span class="sxs-lookup"><span data-stu-id="becdb-115">Sets the redirect configuration on an existing Application Gateway.</span></span> <span data-ttu-id="becdb-116">(automatisch generiert)</span><span class="sxs-lookup"><span data-stu-id="becdb-116">(autogenerated)</span></span>
+
+<!-- Aladdin Generated Example -->
+```powershell
+Set-AzApplicationGatewayRedirectConfiguration -ApplicationGateway <PSApplicationGateway> -IncludePath $false -IncludeQueryString $false -Name 'RedirectConfig01' -RedirectType Permanent -TargetListener <PSApplicationGatewayHttpListener>
+```
+
+## <span data-ttu-id="becdb-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="becdb-117">PARAMETERS</span></span>
+
+### <span data-ttu-id="becdb-118">-ApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="becdb-118">-ApplicationGateway</span></span>
+<span data-ttu-id="becdb-119">ApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="becdb-119">The applicationGateway</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-120">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="becdb-120">-DefaultProfile</span></span>
+<span data-ttu-id="becdb-121">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="becdb-121">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-122">-IncludePath</span><span class="sxs-lookup"><span data-stu-id="becdb-122">-IncludePath</span></span>
+<span data-ttu-id="becdb-123">Fügen Sie den Pfad in die umgeleitete URL ein.</span><span class="sxs-lookup"><span data-stu-id="becdb-123">Include path in the redirected url.</span></span>
+<span data-ttu-id="becdb-124">Der Standardwert ist "true".</span><span class="sxs-lookup"><span data-stu-id="becdb-124">Default is true.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-125">-IncludeQueryString</span><span class="sxs-lookup"><span data-stu-id="becdb-125">-IncludeQueryString</span></span>
+<span data-ttu-id="becdb-126">Schließen Sie die Abfragezeichenfolge in die umgeleitete URL ein.</span><span class="sxs-lookup"><span data-stu-id="becdb-126">Include query string in the redirected url.</span></span>
+<span data-ttu-id="becdb-127">Der Standardwert ist "true".</span><span class="sxs-lookup"><span data-stu-id="becdb-127">Default is true.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-128">-Name</span><span class="sxs-lookup"><span data-stu-id="becdb-128">-Name</span></span>
+<span data-ttu-id="becdb-129">Der Name der Umleitungskonfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-129">The name of the Redirect Configuration</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-130">-RedirectType</span><span class="sxs-lookup"><span data-stu-id="becdb-130">-RedirectType</span></span>
+<span data-ttu-id="becdb-131">Der Typ der Umleitung</span><span class="sxs-lookup"><span data-stu-id="becdb-131">The type of redirect</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Permanent, Found, SeeOther, Temporary
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-132">-TargetListener</span><span class="sxs-lookup"><span data-stu-id="becdb-132">-TargetListener</span></span>
+<span data-ttu-id="becdb-133">HTTP-Listener, um die Anforderung an</span><span class="sxs-lookup"><span data-stu-id="becdb-133">HTTP listener to redirect the request to</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener
+Parameter Sets: SetByResource
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-134">-TargetListenerID</span><span class="sxs-lookup"><span data-stu-id="becdb-134">-TargetListenerID</span></span>
+<span data-ttu-id="becdb-135">ID des HTTP-Listeners, an den die Anforderung umgeleitet wird</span><span class="sxs-lookup"><span data-stu-id="becdb-135">ID of HTTP listener to redirect the request to</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SetByResourceId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-136">-TargetUrl</span><span class="sxs-lookup"><span data-stu-id="becdb-136">-TargetUrl</span></span>
+<span data-ttu-id="becdb-137">Target URL fo redirection</span><span class="sxs-lookup"><span data-stu-id="becdb-137">Target URL fo redirection</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SetByURL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="becdb-138">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="becdb-138">CommonParameters</span></span>
+<span data-ttu-id="becdb-139">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="becdb-139">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="becdb-140">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="becdb-140">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="becdb-141">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="becdb-141">INPUTS</span></span>
+
+### <span data-ttu-id="becdb-142">Microsoft.Azure.Commands.Network.Models.PSApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="becdb-142">Microsoft.Azure.Commands.Network.Models.PSApplicationGateway</span></span>
+
+## <span data-ttu-id="becdb-143">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="becdb-143">OUTPUTS</span></span>
+
+### <span data-ttu-id="becdb-144">Microsoft.Azure.Commands.Network.Models.PSApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="becdb-144">Microsoft.Azure.Commands.Network.Models.PSApplicationGateway</span></span>
+
+## <span data-ttu-id="becdb-145">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="becdb-145">NOTES</span></span>
+
+## <span data-ttu-id="becdb-146">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="becdb-146">RELATED LINKS</span></span>
+
+[<span data-ttu-id="becdb-147">Add-AzApplicationGatewayRedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-147">Add-AzApplicationGatewayRedirectConfiguration</span></span>](./Add-AzApplicationGatewayRedirectConfiguration.md)
+
+[<span data-ttu-id="becdb-148">Get-AzApplicationGatewayRedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-148">Get-AzApplicationGatewayRedirectConfiguration</span></span>](./Get-AzApplicationGatewayRedirectConfiguration.md)
+
+[<span data-ttu-id="becdb-149">New-AzApplicationGatewayRedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-149">New-AzApplicationGatewayRedirectConfiguration</span></span>](./New-AzApplicationGatewayRedirectConfiguration.md)
+
+[<span data-ttu-id="becdb-150">Remove-AzApplicationGatewayRedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="becdb-150">Remove-AzApplicationGatewayRedirectConfiguration</span></span>](./Remove-AzApplicationGatewayRedirectConfiguration.md)
