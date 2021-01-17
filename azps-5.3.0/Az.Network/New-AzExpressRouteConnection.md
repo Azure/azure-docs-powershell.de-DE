@@ -1,0 +1,317 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azexpressrouteconnection
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzExpressRouteConnection.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzExpressRouteConnection.md
+ms.openlocfilehash: 565e79420821e8d8764b5e461e33d275247ddb3c
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98385508"
+---
+# <span data-ttu-id="2836e-101">New-AzExpressRouteConnection</span><span class="sxs-lookup"><span data-stu-id="2836e-101">New-AzExpressRouteConnection</span></span>
+
+## <span data-ttu-id="2836e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="2836e-102">SYNOPSIS</span></span>
+<span data-ttu-id="2836e-103">Erstellt eine ExpressRoute-Verbindung, die ein ExpressRoute-Gateway mit einem lokalen "ExpressRoute"-Schaltkreis verbindet.</span><span class="sxs-lookup"><span data-stu-id="2836e-103">Creates an ExpressRoute connection that connects an ExpressRoute gateway to an on premise ExpressRoute circuit</span></span>
+
+## <span data-ttu-id="2836e-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2836e-104">SYNTAX</span></span>
+
+### <span data-ttu-id="2836e-105">ByExpressRouteGatewayName (Standard)</span><span class="sxs-lookup"><span data-stu-id="2836e-105">ByExpressRouteGatewayName (Default)</span></span>
+```
+New-AzExpressRouteConnection -ResourceGroupName <String> -ExpressRouteGatewayName <String> -Name <String>
+ -ExpressRouteCircuitPeeringId <String> [-AuthorizationKey <String>] [-RoutingWeight <UInt32>]
+ [-EnableInternetSecurity] [-RoutingConfiguration <PSRoutingConfiguration>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="2836e-106">ByExpressRouteGatewayObject</span><span class="sxs-lookup"><span data-stu-id="2836e-106">ByExpressRouteGatewayObject</span></span>
+```
+New-AzExpressRouteConnection -ExpressRouteGatewayObject <PSExpressRouteGateway> -Name <String>
+ -ExpressRouteCircuitPeeringId <String> [-AuthorizationKey <String>] [-RoutingWeight <UInt32>]
+ [-EnableInternetSecurity] [-RoutingConfiguration <PSRoutingConfiguration>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="2836e-107">ByExpressRouteGatewayResourceId</span><span class="sxs-lookup"><span data-stu-id="2836e-107">ByExpressRouteGatewayResourceId</span></span>
+```
+New-AzExpressRouteConnection -ParentResourceId <String> -Name <String> -ExpressRouteCircuitPeeringId <String>
+ [-AuthorizationKey <String>] [-RoutingWeight <UInt32>] [-EnableInternetSecurity] [-RoutingConfiguration <PSRoutingConfiguration>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="2836e-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="2836e-108">DESCRIPTION</span></span>
+<span data-ttu-id="2836e-109">Erstellt eine ExpressRoute-Verbindung zwischen einem lokalen BGP-Schaltkreis-Peering und dem ExpressRoute-Gateway in einem virtuellen Hub.</span><span class="sxs-lookup"><span data-stu-id="2836e-109">Creates an ExpressRoute connection between an on-premise ExpressRoute circuit BGP peering to the ExpressRoute gateway inside a Virtual hub.</span></span>
+
+## <span data-ttu-id="2836e-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="2836e-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="2836e-111">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="2836e-111">Example 1</span></span>
+
+```powershell
+PS C:\> New-AzResourceGroup -Location "West Central US" -Name "testRG"
+PS C:\> $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West Central US"
+PS C:\> $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.0.1/24"
+PS C:\> New-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw" -VirtualHubId $virtualHub.Id -MinScaleUnits 2
+PS C:\> $ExpressRouteGateway = Get-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testExpressRoutegw"
+PS C:\> $ExpressRouteCircuit = New-AzExpressRouteCircuit -ResourceGroupName "testRG" -Name "testExpressRouteCircuit" -Location "West Central US" -SkuTier Premium -SkuFamily MeteredData -ServiceProviderName "Equinix" -PeeringLocation "Silicon Valley" -BandwidthInMbps 200
+PS C:\> Add-AzExpressRouteCircuitPeeringConfig -Name "AzurePrivatePeering" -ExpressRouteCircuit $ExpressRouteCircuit -PeeringType AzurePrivatePeering -PeerASN 100 -PrimaryPeerAddressPrefix "123.0.0.0/30" -SecondaryPeerAddressPrefix "123.0.0.4/30" -VlanId 300
+PS C:\> $ExpressRouteCircuit = Set-AzExpressRouteCircuit -ExpressRouteCircuit $ExpressRouteCircuit
+PS C:\> $ExpressRouteCircuitPeeringId = $ExpressRouteCircuit.Peerings[0].Id
+PS C:\> New-AzExpressRouteConnection -ResourceGroupName $ExpressRouteGateway.ResourceGroupName -ParentResourceName $ExpressRouteGateway.Name -Name "testConnection" -ExpressRouteCircuitPeeringId $ExpressRouteCircuitPeeringId -RoutingWeight 20
+ExpressRouteCircuitPeeringId       : Microsoft.Azure.Commands.Network.Models.PSResourceId
+AuthorizationKey                   :
+RoutingWeight                      : 20
+ProvisioningState                  : Succeeded
+Name                               : testConnection
+Etag                               : W/"4580a2e2-2fab-4cff-88eb-92013a76b5a8"
+Id                                 : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/ExpressRouteGateways/testExpressRoutegw/expressRouteConnections/testConnection
+RoutingConfiguration               : {
+                                       "AssociatedRouteTable": {
+                                         "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                       },
+                                       "PropagatedRouteTables": {
+                                         "Labels": [],
+                                         "Ids": [
+                                           {
+                                             "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                           }
+                                         ]
+                                       },
+                                       "VnetRoutes": {
+                                         "StaticRoutes": []
+                                       }
+                                     }
+```
+
+<span data-ttu-id="2836e-112">Im vorstehenden Beispiel wird eine Ressourcengruppe, ein virtuelles WAN, ein virtuelles Netzwerk, ein virtueller Hub, ein ExpressRoute-Gateway und ein ExpressRoute-Schaltkreis mit privatem Peering in der Ressourcengruppe "testRG" in Azure in der Mitte der USA erstellt.</span><span class="sxs-lookup"><span data-stu-id="2836e-112">The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub, Express Route gateway and an ExpressRoute circuit with private peering in West Central US in "testRG" resource group in Azure.</span></span> <span data-ttu-id="2836e-113">Sobald das Gateway erstellt wurde, wird es mithilfe des Befehls "New-AzExpressRouteConnection mit dem ExpressRoute-Schaltkreis-Peering verbunden.</span><span class="sxs-lookup"><span data-stu-id="2836e-113">Once the gateway has been created, it is connected to the ExpressRoute Circuit Peering using the New-AzExpressRouteConnection command.</span></span>
+
+## <span data-ttu-id="2836e-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2836e-114">PARAMETERS</span></span>
+
+### <span data-ttu-id="2836e-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="2836e-115">-AsJob</span></span>
+<span data-ttu-id="2836e-116">Ausführen des Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="2836e-116">Run cmdlet in the background</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-117">-AuthorizationKey</span><span class="sxs-lookup"><span data-stu-id="2836e-117">-AuthorizationKey</span></span>
+<span data-ttu-id="2836e-118">Ein Schlüssel vom Besitzer des ExpressRoute-Schaltkreises, um eine Verbindung mit einem Gateway in einem anderen Abonnement herstellen zu können.</span><span class="sxs-lookup"><span data-stu-id="2836e-118">A key obtained from the ExpressRoute circuit owner to be able to create a connection with a gateway in a different subscription.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="2836e-119">-DefaultProfile</span></span>
+<span data-ttu-id="2836e-120">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2836e-120">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-121">-EnableInternetSecurity</span><span class="sxs-lookup"><span data-stu-id="2836e-121">-EnableInternetSecurity</span></span>
+<span data-ttu-id="2836e-122">Aktivieren der Internetsicherheit für diese ExpressRoute-Gateway-Verbindung</span><span class="sxs-lookup"><span data-stu-id="2836e-122">Enable internet security for this ExpressRoute Gateway connection</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-123">-ExpressRouteCircuitPeeringId</span><span class="sxs-lookup"><span data-stu-id="2836e-123">-ExpressRouteCircuitPeeringId</span></span>
+<span data-ttu-id="2836e-124">Die Ressourcen-ID des ExpressRoute-Schaltkreis-Peerings, zu dem diese Expressroute-Gatewayverbindung erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="2836e-124">The resource id of the Express Route Circuit Peering to which this Express Route gateway connection is to be created to.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-125">-ExpressRouteGatewayName</span><span class="sxs-lookup"><span data-stu-id="2836e-125">-ExpressRouteGatewayName</span></span>
+<span data-ttu-id="2836e-126">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="2836e-126">The resource group name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByExpressRouteGatewayName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-127">-ExpressRouteGatewayObject</span><span class="sxs-lookup"><span data-stu-id="2836e-127">-ExpressRouteGatewayObject</span></span>
+<span data-ttu-id="2836e-128">Das übergeordnete ExpressRouteGateway für diese Verbindung.</span><span class="sxs-lookup"><span data-stu-id="2836e-128">The parent ExpressRouteGateway for this connection.</span></span>
+
+```yaml
+Type: PSExpressRouteGateway
+Parameter Sets: ByExpressRouteGatewayObject
+Aliases: ExpressRouteGateway
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-129">-Name</span><span class="sxs-lookup"><span data-stu-id="2836e-129">-Name</span></span>
+<span data-ttu-id="2836e-130">Der Ressourcenname.</span><span class="sxs-lookup"><span data-stu-id="2836e-130">The resource name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName, ExpressRouteConnectionName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-131">-ParentResourceId</span><span class="sxs-lookup"><span data-stu-id="2836e-131">-ParentResourceId</span></span>
+<span data-ttu-id="2836e-132">Die Ressourcen-ID des übergeordneten ExpressRouteGateway für diese Verbindung.</span><span class="sxs-lookup"><span data-stu-id="2836e-132">The resource id of the parent ExpressRouteGateway for this connection.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByExpressRouteGatewayResourceId
+Aliases: ExpressRouteGatewayId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="2836e-133">-ResourceGroupName</span></span>
+<span data-ttu-id="2836e-134">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="2836e-134">The resource group name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: ByExpressRouteGatewayName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-135">-RoutingConfiguration</span><span class="sxs-lookup"><span data-stu-id="2836e-135">-RoutingConfiguration</span></span>
+<span data-ttu-id="2836e-136">Routingkonfiguration für diese Verbindung</span><span class="sxs-lookup"><span data-stu-id="2836e-136">Routing configuration for this connection</span></span>
+
+```yaml
+Type: PSRoutingConfiguration
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-137">-RoutingWeight</span><span class="sxs-lookup"><span data-stu-id="2836e-137">-RoutingWeight</span></span>
+<span data-ttu-id="2836e-138">Die Gewichtung für das Paketrouting, die dieser Verbindung zugewiesen werden muss.</span><span class="sxs-lookup"><span data-stu-id="2836e-138">The weight for packet routing that needs to be assigned to this connection.</span></span>
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-139">-Confirm</span><span class="sxs-lookup"><span data-stu-id="2836e-139">-Confirm</span></span>
+<span data-ttu-id="2836e-140">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="2836e-140">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-141">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="2836e-141">-WhatIf</span></span>
+<span data-ttu-id="2836e-142">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2836e-142">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="2836e-143">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2836e-143">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2836e-144">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2836e-144">CommonParameters</span></span>
+<span data-ttu-id="2836e-145">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2836e-145">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2836e-146">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="2836e-146">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="2836e-147">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="2836e-147">INPUTS</span></span>
+
+### <span data-ttu-id="2836e-148">Microsoft.Azure.Commands.Network.Models.PSExpressRouteGateway</span><span class="sxs-lookup"><span data-stu-id="2836e-148">Microsoft.Azure.Commands.Network.Models.PSExpressRouteGateway</span></span>
+
+### <span data-ttu-id="2836e-149">System.String</span><span class="sxs-lookup"><span data-stu-id="2836e-149">System.String</span></span>
+
+## <span data-ttu-id="2836e-150">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="2836e-150">OUTPUTS</span></span>
+
+### <span data-ttu-id="2836e-151">Microsoft.Azure.Commands.Network.Models.PSExpressRouteConnection</span><span class="sxs-lookup"><span data-stu-id="2836e-151">Microsoft.Azure.Commands.Network.Models.PSExpressRouteConnection</span></span>
+
+## <span data-ttu-id="2836e-152">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="2836e-152">NOTES</span></span>
+
+## <span data-ttu-id="2836e-153">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="2836e-153">RELATED LINKS</span></span>
+
+[<span data-ttu-id="2836e-154">New-AzRoutingConfiguration</span><span class="sxs-lookup"><span data-stu-id="2836e-154">New-AzRoutingConfiguration</span></span>](./New-AzRoutingConfiguration.md)
