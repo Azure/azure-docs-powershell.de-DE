@@ -1,0 +1,148 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+Module Name: Az.RecoveryServices
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/update-azrecoveryservicesvault
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesVault.md
+ms.openlocfilehash: cdde8169c4b068b986910dc3bfc5de446833f5ff
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98378285"
+---
+# Update-AzRecoveryServicesVault
+
+## SYNOPSIS
+Aktualisiert MSI auf den Tresor der Wiederherstellungsdienste.
+
+## SYNTAX
+
+```
+Update-AzRecoveryServicesVault -ResourceGroupName <string> -Name <string> -IdentityType <MSIdentity>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Dieses Cmdlet wird zum Hinzufügen oder Entfernen der MSI aus dem Tresor der Wiederherstellungsdienste verwendet. Verwenden Sie den "-IdentityType"-Parameter, um dem RSVault eine "SystemAssigned"-Identität zuzuweisen. Verwenden Sie IdentityType None, um die MSI aus dem Tresor zu entfernen.
+
+## BEISPIELE
+
+### Beispiel 1
+```powershell
+PS C:\> Update-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName" -IdentityType SystemAssigned
+```
+
+Dieses Cmdlet wird verwendet, um einem Wiederherstellungsdienstetresor eine "SystemAssigned"-Identität hinzuzufügen.
+
+## PARAMETERS
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Gibt den Namen des zu aktualisierenden Tresors der Wiederherstellungsdienste an.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+
+Gibt den Namen der Azure-Ressourcengruppe an, in der der Tresor der Wiederherstellungsdienste vorhanden ist.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IdentityType
+Der dem Wiederherstellungsdiensttresor zugewiesene MSI-Typ.
+
+```yaml
+Type: MSIdentity
+Parameter Sets: (All)
+Aliases:
+Accepted values: SystemAssigned, None
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Waswenn
+Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
+Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
+
+## EINGABEN
+
+### System.String
+
+## AUSGABEN
+
+### Microsoft.Azure.Management.RecoveryServices.Models.Vault
+
+## HINWEISE
+
+## LINKS ZU VERWANDTEN THEMEN
