@@ -1,0 +1,310 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+Module Name: Az.IotHub
+online version: https://docs.microsoft.com/en-us/powershell/module/az.iothub/add-aziothubconfiguration
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotHub/IotHub/help/Add-AzIotHubConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/IotHub/IotHub/help/Add-AzIotHubConfiguration.md
+ms.openlocfilehash: d84d5b172d1a22880b508f8b43f071d5d454cf38
+ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "98303699"
+---
+# <span data-ttu-id="d1cc4-101">Add-AzIotHubConfiguration</span><span class="sxs-lookup"><span data-stu-id="d1cc4-101">Add-AzIotHubConfiguration</span></span>
+
+## <span data-ttu-id="d1cc4-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="d1cc4-102">SYNOPSIS</span></span>
+<span data-ttu-id="d1cc4-103">Fügen Sie einer IoT-Ziel-IoT-Hub-Konfiguration eine automatische Geräteverwaltungskonfiguration hinzu.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-103">Add an IoT automatic device management configuration in a target IoT Hub.</span></span>
+
+## <span data-ttu-id="d1cc4-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d1cc4-104">SYNTAX</span></span>
+
+### <span data-ttu-id="d1cc4-105">ResourceSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="d1cc4-105">ResourceSet (Default)</span></span>
+```
+Add-AzIotHubConfiguration [-ResourceGroupName] <String> [-IotHubName] <String> -Name <String>
+ [-DeviceContent <Hashtable>] [-Priority <Int32>] [-TargetCondition <String>] [-Metric <Hashtable>]
+ [-Label <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="d1cc4-106">InputObjectSet</span><span class="sxs-lookup"><span data-stu-id="d1cc4-106">InputObjectSet</span></span>
+```
+Add-AzIotHubConfiguration [-InputObject] <PSIotHub> -Name <String> [-DeviceContent <Hashtable>]
+ [-Priority <Int32>] [-TargetCondition <String>] [-Metric <Hashtable>] [-Label <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="d1cc4-107">ResourceIdSet</span><span class="sxs-lookup"><span data-stu-id="d1cc4-107">ResourceIdSet</span></span>
+```
+Add-AzIotHubConfiguration [-ResourceId] <String> -Name <String> [-DeviceContent <Hashtable>]
+ [-Priority <Int32>] [-TargetCondition <String>] [-Metric <Hashtable>] [-Label <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="d1cc4-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="d1cc4-108">DESCRIPTION</span></span>
+<span data-ttu-id="d1cc4-109">Der Konfigurationsinhalt ist json und je nach Geräte- oder Modulabsicht leicht unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-109">Configuration content is json and slighty varies based on device or module intent.</span></span> <span data-ttu-id="d1cc4-110">Gerätekonfigurationen liegen in Form von {"deviceContent":{...}} vor.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-110">Device configurations are in the form of {"deviceContent":{...}}</span></span>
+<span data-ttu-id="d1cc4-111">Modulkonfigurationen liegen in Form von {"moduleContent":{...}} vor.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-111">Module configurations are in the form of {"moduleContent":{...}}</span></span>
+<span data-ttu-id="d1cc4-112">Konfigurationen können mit vom Benutzer bereitgestellten Metriken für die On-Demand-Bewertung definiert werden.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-112">Configurations can be defined with user provided metrics for on demand evaluation.</span></span>
+<span data-ttu-id="d1cc4-113">Benutzermetriken sind json und in Form von {"queries":{...}}</span><span class="sxs-lookup"><span data-stu-id="d1cc4-113">User metrics are json and in the form of {"queries":{...}}</span></span> <span data-ttu-id="d1cc4-114">oder {"metrics":{"queries":{...}}}.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-114">or {"metrics":{"queries":{...}}}.</span></span>
+
+<span data-ttu-id="d1cc4-115">Hinweis: Zielbedingung für Module muss mit "from devices.modules where" beginnen.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-115">Note: Target condition for modules must start with "from devices.modules where".</span></span> <span data-ttu-id="d1cc4-116">Weitere https://docs.microsoft.com/azure/iot-hub/iot-hub-automatic-device-management Informationen finden Sie hier.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-116">See https://docs.microsoft.com/azure/iot-hub/iot-hub-automatic-device-management for more information.</span></span>
+
+## <span data-ttu-id="d1cc4-117">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="d1cc4-117">EXAMPLES</span></span>
+
+### <span data-ttu-id="d1cc4-118">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="d1cc4-118">Example 1</span></span>
+```powershell
+PS C:\> Add-AzIotHubConfiguration -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -Name "config1"
+```
+
+<span data-ttu-id="d1cc4-119">Erstellen Sie eine Gerätekonfiguration mit Standardmetadaten.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-119">Create a device configuration with default metadata.</span></span>
+
+### <span data-ttu-id="d1cc4-120">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="d1cc4-120">Example 2</span></span>
+```powershell
+PS C:\> Add-AzIotHubConfiguration -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -Name "config1" -Priority 3 -TargetCondition "tags.building=9 and tags.environment='test'"
+```
+
+<span data-ttu-id="d1cc4-121">Erstellen Sie eine Gerätekonfiguration mit der Priorität 3, die auf die Bedingung angewendet wird, wenn ein Gerät in Gebäude 9 markiert und die Umgebung "Test" ist.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-121">Create a device configuration with a priority of 3 that applies on condition when a device is tagged in building 9 and the environment is 'test'.</span></span>
+
+### <span data-ttu-id="d1cc4-122">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="d1cc4-122">Example 3</span></span>
+```powershell
+PS C:\> $metrics = @{}
+PS C:\> $metrics.add("query1", "select deviceId from devices where tags.location='US'")
+PS C:\> Add-AzIotHubConfiguration -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -Name "config1" -Metric $metrics
+```
+
+<span data-ttu-id="d1cc4-123">Erstellen Sie eine Gerätekonfiguration mit Benutzermetriken.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-123">Create a device configuration with user metrics.</span></span>
+
+### <span data-ttu-id="d1cc4-124">Beispiel 4</span><span class="sxs-lookup"><span data-stu-id="d1cc4-124">Example 4</span></span>
+```powershell
+PS C:\> $labels = @{}
+PS C:\> $labels.add("key0","value0")
+PS C:\> $labels.add("key1","value1")
+PS C:\> Add-AzIotHubConfiguration -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -Name "config1" -Label $labels
+```
+
+<span data-ttu-id="d1cc4-125">Erstellen Sie eine Gerätekonfiguration mit Etiketten.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-125">Create a device configuration with labels.</span></span>
+
+### <span data-ttu-id="d1cc4-126">Beispiel 5</span><span class="sxs-lookup"><span data-stu-id="d1cc4-126">Example 5</span></span>
+```powershell
+PS C:\> $prop = @{}
+PS C:\> $prop.add("Location", "US")
+PS C:\> $content = @{}
+PS C:\> $content.add("properties.desired.Region", $prop)
+PS C:\> Add-AzIotHubConfiguration -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -Name "config1" -DeviceContent $content
+```
+
+<span data-ttu-id="d1cc4-127">Erstellen Sie eine Gerätekonfiguration mit Inhalt.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-127">Create a device configuration with content.</span></span>
+
+## <span data-ttu-id="d1cc4-128">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d1cc4-128">PARAMETERS</span></span>
+
+### <span data-ttu-id="d1cc4-129">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d1cc4-129">-DefaultProfile</span></span>
+<span data-ttu-id="d1cc4-130">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-130">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-131">-DeviceContent</span><span class="sxs-lookup"><span data-stu-id="d1cc4-131">-DeviceContent</span></span>
+<span data-ttu-id="d1cc4-132">Konfiguration für IotHub-Geräte.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-132">Configuration for IotHub devices.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-133">-InputObject</span><span class="sxs-lookup"><span data-stu-id="d1cc4-133">-InputObject</span></span>
+<span data-ttu-id="d1cc4-134">IotHub-Objekt</span><span class="sxs-lookup"><span data-stu-id="d1cc4-134">IotHub object</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub
+Parameter Sets: InputObjectSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-135">-IotHubName</span><span class="sxs-lookup"><span data-stu-id="d1cc4-135">-IotHubName</span></span>
+<span data-ttu-id="d1cc4-136">Name des Iot Hub</span><span class="sxs-lookup"><span data-stu-id="d1cc4-136">Name of the Iot Hub</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceSet
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-137">-Label</span><span class="sxs-lookup"><span data-stu-id="d1cc4-137">-Label</span></span>
+<span data-ttu-id="d1cc4-138">Karte der Bezeichnungen, die auf die Zielkonfiguration angewendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-138">Map of labels to be applied to target configuration.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-139">-metrisch</span><span class="sxs-lookup"><span data-stu-id="d1cc4-139">-Metric</span></span>
+<span data-ttu-id="d1cc4-140">Sammlung von Abfragen für die Definition von Konfigurationsmetriken.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-140">Queries collection for configuration metrics definition.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-141">-Name</span><span class="sxs-lookup"><span data-stu-id="d1cc4-141">-Name</span></span>
+<span data-ttu-id="d1cc4-142">Id für die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-142">Identifier for the configuration.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-143">-Priority</span><span class="sxs-lookup"><span data-stu-id="d1cc4-143">-Priority</span></span>
+<span data-ttu-id="d1cc4-144">Gewichtung der Gerätekonfiguration bei Konkurrenzregeln (höchste Gewinne).</span><span class="sxs-lookup"><span data-stu-id="d1cc4-144">Weight of the device configuration in case of competing rules (highest wins).</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-145">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="d1cc4-145">-ResourceGroupName</span></span>
+<span data-ttu-id="d1cc4-146">Name der Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="d1cc4-146">Name of the Resource Group</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-147">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="d1cc4-147">-ResourceId</span></span>
+<span data-ttu-id="d1cc4-148">IotHub-Ressourcen-ID</span><span class="sxs-lookup"><span data-stu-id="d1cc4-148">IotHub Resource Id</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceIdSet
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-149">-TargetCondition</span><span class="sxs-lookup"><span data-stu-id="d1cc4-149">-TargetCondition</span></span>
+<span data-ttu-id="d1cc4-150">Zielbedingung, für die eine Gerätekonfiguration gilt.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-150">Target condition in which a device configuration applies to.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-151">-Confirm</span><span class="sxs-lookup"><span data-stu-id="d1cc4-151">-Confirm</span></span>
+<span data-ttu-id="d1cc4-152">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-152">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-153">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="d1cc4-153">-WhatIf</span></span>
+<span data-ttu-id="d1cc4-154">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-154">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="d1cc4-155">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-155">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d1cc4-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d1cc4-156">CommonParameters</span></span>
+<span data-ttu-id="d1cc4-157">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d1cc4-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d1cc4-158">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="d1cc4-158">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="d1cc4-159">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="d1cc4-159">INPUTS</span></span>
+
+### <span data-ttu-id="d1cc4-160">Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub</span><span class="sxs-lookup"><span data-stu-id="d1cc4-160">Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub</span></span>
+
+### <span data-ttu-id="d1cc4-161">System.String</span><span class="sxs-lookup"><span data-stu-id="d1cc4-161">System.String</span></span>
+
+## <span data-ttu-id="d1cc4-162">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="d1cc4-162">OUTPUTS</span></span>
+
+### <span data-ttu-id="d1cc4-163">Microsoft.Azure.Commands.Management.IotHub.Models.PSConfiguration</span><span class="sxs-lookup"><span data-stu-id="d1cc4-163">Microsoft.Azure.Commands.Management.IotHub.Models.PSConfiguration</span></span>
+
+## <span data-ttu-id="d1cc4-164">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="d1cc4-164">NOTES</span></span>
+
+## <span data-ttu-id="d1cc4-165">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="d1cc4-165">RELATED LINKS</span></span>
