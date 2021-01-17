@@ -1,0 +1,206 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+Module Name: Az.Batch
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchpoolnodecount
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchPoolNodeCount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchPoolNodeCount.md
+ms.openlocfilehash: b3b1adfe9549a7b04a1e7c6d57542cef8a40cfd7
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98471168"
+---
+# <span data-ttu-id="738ef-101">Get-AzBatchPoolNodeCount</span><span class="sxs-lookup"><span data-stu-id="738ef-101">Get-AzBatchPoolNodeCount</span></span>
+
+## <span data-ttu-id="738ef-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="738ef-102">SYNOPSIS</span></span>
+<span data-ttu-id="738ef-103">Ruft die Batchknotenanzahl pro Knotenstatus nach Pool-ID gruppieren ab.</span><span class="sxs-lookup"><span data-stu-id="738ef-103">Gets Batch node counts per node state grouped by pool id.</span></span>
+
+## <span data-ttu-id="738ef-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="738ef-104">SYNTAX</span></span>
+
+### <span data-ttu-id="738ef-105">AzureBatchPoolNodeCounts (Standard)</span><span class="sxs-lookup"><span data-stu-id="738ef-105">AzureBatchPoolNodeCounts (Default)</span></span>
+```
+Get-AzBatchPoolNodeCount -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="738ef-106">PoolId</span><span class="sxs-lookup"><span data-stu-id="738ef-106">PoolId</span></span>
+```
+Get-AzBatchPoolNodeCount [-PoolId <String>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="738ef-107">ParentObject</span><span class="sxs-lookup"><span data-stu-id="738ef-107">ParentObject</span></span>
+```
+Get-AzBatchPoolNodeCount [-Pool <PSCloudPool>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="738ef-108">ODataFilter</span><span class="sxs-lookup"><span data-stu-id="738ef-108">ODataFilter</span></span>
+```
+Get-AzBatchPoolNodeCount [-MaxCount <Int32>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="738ef-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="738ef-109">DESCRIPTION</span></span>
+<span data-ttu-id="738ef-110">Das Get-AzBatchPoolNodeCount ermöglicht es Kunden, die Anzahl der Knoten pro Knotenstatus nach Pool zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="738ef-110">The Get-AzBatchPoolNodeCount cmdlet allows customers to get back node counts per node state grouped by pool.</span></span> <span data-ttu-id="738ef-111">Mögliche Knotenzustände sind erstellen, idle, leavingPool, offline, vorleeriert, Neustart, Neuimieren, Ausführen, Starten, startTaskFailed, unknown, unusable und waitingForStartTask.</span><span class="sxs-lookup"><span data-stu-id="738ef-111">Possible node states are creating, idle, leavingPool, offline, preempted, rebooting, reimaging, running, starting, startTaskFailed, unknown, unusable and waitingForStartTask.</span></span> <span data-ttu-id="738ef-112">Das Cmdlet verwendet den Parameter "PoolId" oder "Pool", um nur den Pool mit angegebener Pool-ID zu filtern.</span><span class="sxs-lookup"><span data-stu-id="738ef-112">The cmdlet takes PoolId or Pool parameter to filter only pool with pool id specified.</span></span> 
+
+## <span data-ttu-id="738ef-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="738ef-113">EXAMPLES</span></span>
+
+### <span data-ttu-id="738ef-114">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="738ef-114">Example 1</span></span>
+```
+PS C:\> $batchContext = Get-AzBatchAccountKey -AccountName "contosobatch"
+PS C:\> Get-AzBatchPoolNodeCount -BatchContext $batchContext
+
+PoolId                         Dedicated                                                    LowPriority
+------                         ---------                                                    -----------
+contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+contosopool2                   Idle: 1, Rebooting: 1, Total: 2                              Total: 0
+```
+
+<span data-ttu-id="738ef-115">Die Anzahl der Listenknoten pro Knotenstatus fürPools im aktuellen Kontext des Batchkontos.</span><span class="sxs-lookup"><span data-stu-id="738ef-115">List node counts per node state for pools under current batch account context.</span></span>
+
+### <span data-ttu-id="738ef-116">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="738ef-116">Example 2</span></span>
+
+```powershell
+PS C:\> Get-AzBatchPoolNodeCount -BatchContext $batchContext -PoolId "contosopool1"
+
+PoolId                         Dedicated                                                    LowPriority
+------                         ---------                                                    -----------
+contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+
+PS C:\> $poolnodecounts = Get-AzBatchPoolNodeCount -BatchContext $batchContext -PoolId "contosopool1"
+PS C:\> $poolnodecounts.Dedicated
+
+Creating            : 1
+Idle                : 1
+LeavingPool         : 0
+Offline             : 0
+Preempted           : 0
+Rebooting           : 1
+Reimaging           : 0
+Running             : 5
+Starting            : 0
+StartTaskFailed     : 0
+Total               : 8
+Unknown             : 0
+Unusable            : 0
+WaitingForStartTask : 0
+
+PS C:\> Get-AzBatchPool -Id "contosopool1" -BatchContext $batchContext | Get-AzBatchPoolNodeCount -BatchContext $batchContext
+
+PoolId                         Dedicated                                                    LowPriority
+------                         ---------                                                    -----------
+contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+```
+
+<span data-ttu-id="738ef-117">Anzeigen der Knotenanzahl pro Knotenstatus für einen pool angegebenen Pool-ID.</span><span class="sxs-lookup"><span data-stu-id="738ef-117">Show node counts per node state for a pool given pool id.</span></span>
+
+## <span data-ttu-id="738ef-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="738ef-118">PARAMETERS</span></span>
+
+### <span data-ttu-id="738ef-119">-BatchContext</span><span class="sxs-lookup"><span data-stu-id="738ef-119">-BatchContext</span></span>
+<span data-ttu-id="738ef-120">Die BatchAccountContext-Instanz, die bei der Interaktion mit dem Batchdienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="738ef-120">The BatchAccountContext instance to use when interacting with the Batch service.</span></span>
+<span data-ttu-id="738ef-121">Wenn Sie das cmdlet Get-AzBatchAccount BatchAccountContext verwenden, wird die Azure Active Directory-Authentifizierung bei der Interaktion mit dem Batchdienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="738ef-121">If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.</span></span>
+<span data-ttu-id="738ef-122">Wenn Sie stattdessen die Authentifizierung mit freigegebenen Schlüsseln verwenden möchten, verwenden Sie das cmdlet Get-AzBatchAccountKey, um ein BatchAccountContext-Objekt mit aufgefüllten Zugriffstasten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="738ef-122">To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.</span></span>
+<span data-ttu-id="738ef-123">Bei der Authentifizierung mit freigegebenen Schlüsseln wird standardmäßig der primäre Zugriffsschlüssel verwendet.</span><span class="sxs-lookup"><span data-stu-id="738ef-123">When using shared key authentication, the primary access key is used by default.</span></span>
+<span data-ttu-id="738ef-124">Wenn Sie den zu verwendende Schlüssel ändern möchten, legen Sie die Eigenschaft "BatchAccountContext.KeyInUse" festgelegt.</span><span class="sxs-lookup"><span data-stu-id="738ef-124">To change the key to use, set the BatchAccountContext.KeyInUse property.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="738ef-125">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="738ef-125">-DefaultProfile</span></span>
+<span data-ttu-id="738ef-126">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="738ef-126">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="738ef-127">-MaxCount</span><span class="sxs-lookup"><span data-stu-id="738ef-127">-MaxCount</span></span>
+<span data-ttu-id="738ef-128">Gibt die maximale Anzahl der zurückzukehrenden Pools an.</span><span class="sxs-lookup"><span data-stu-id="738ef-128">Specifies the maximum number of pools to return.</span></span>
+<span data-ttu-id="738ef-129">Der Standardwert ist 10.</span><span class="sxs-lookup"><span data-stu-id="738ef-129">The default value is 10.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: ODataFilter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="738ef-130">-Pool</span><span class="sxs-lookup"><span data-stu-id="738ef-130">-Pool</span></span>
+<span data-ttu-id="738ef-131">Gibt den **PSCloudPool an,** für den Knotenanzahlen ermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="738ef-131">Specifies the **PSCloudPool** for which to get node counts.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudPool
+Parameter Sets: ParentObject
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="738ef-132">-PoolId</span><span class="sxs-lookup"><span data-stu-id="738ef-132">-PoolId</span></span>
+<span data-ttu-id="738ef-133">Die ID des Pools, für den Knotenanzahlen ermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="738ef-133">The id of the pool for which to get node counts.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PoolId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="738ef-134">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="738ef-134">CommonParameters</span></span>
+<span data-ttu-id="738ef-135">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="738ef-135">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="738ef-136">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="738ef-136">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="738ef-137">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="738ef-137">INPUTS</span></span>
+
+### <span data-ttu-id="738ef-138">System.String</span><span class="sxs-lookup"><span data-stu-id="738ef-138">System.String</span></span>
+
+### <span data-ttu-id="738ef-139">Microsoft.Azure.Commands.Batch. Models.PSCloudPool</span><span class="sxs-lookup"><span data-stu-id="738ef-139">Microsoft.Azure.Commands.Batch.Models.PSCloudPool</span></span>
+
+### <span data-ttu-id="738ef-140">Microsoft.Azure.Commands.Batch.BatchAccountContext</span><span class="sxs-lookup"><span data-stu-id="738ef-140">Microsoft.Azure.Commands.Batch.BatchAccountContext</span></span>
+
+## <span data-ttu-id="738ef-141">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="738ef-141">OUTPUTS</span></span>
+
+### <span data-ttu-id="738ef-142">Microsoft.Azure.Commands.Batch. Models.PSPoolNodeCounts</span><span class="sxs-lookup"><span data-stu-id="738ef-142">Microsoft.Azure.Commands.Batch.Models.PSPoolNodeCounts</span></span>
+
+## <span data-ttu-id="738ef-143">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="738ef-143">NOTES</span></span>
+
+## <span data-ttu-id="738ef-144">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="738ef-144">RELATED LINKS</span></span>
+
+[<span data-ttu-id="738ef-145">Get-AzBatchAccountKey</span><span class="sxs-lookup"><span data-stu-id="738ef-145">Get-AzBatchAccountKey</span></span>]()
+
+[<span data-ttu-id="738ef-146">Get-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="738ef-146">Get-AzBatchJob</span></span>]()
+
+[<span data-ttu-id="738ef-147">Azure-Batch-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="738ef-147">Azure Batch Cmdlets</span></span>]()
+
