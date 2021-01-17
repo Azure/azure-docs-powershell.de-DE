@@ -1,0 +1,271 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+Module Name: Az.Storage
+ms.assetid: CBD157D2-37C5-491F-A806-6B39F1D0415A
+online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageblobcopystate
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageBlobCopyState.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageBlobCopyState.md
+ms.openlocfilehash: 319463dfb80cddbbffe5b7d1652a04f98e285768
+ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "98290603"
+---
+# Get-AzStorageBlobCopyState
+
+## SYNOPSIS
+Ruft den Kopierstatus eines Azure Storage-BLOB ab.
+
+## SYNTAX
+
+### NamePipeline (Standard)
+```
+Get-AzStorageBlobCopyState [-Blob] <String> [-Container] <String> [-WaitForComplete]
+ [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+ [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+```
+
+### BlobPipeline
+```
+Get-AzStorageBlobCopyState -CloudBlob <CloudBlob> [-WaitForComplete] [-Context <IStorageContext>]
+ [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+ [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+```
+
+### ContainerPipeline
+```
+Get-AzStorageBlobCopyState -CloudBlobContainer <CloudBlobContainer> [-Blob] <String> [-WaitForComplete]
+ [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+ [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzStorageBlobCopyState"** ruft den Kopierstatus eines Azure Storage-BLOB ab.
+Sie sollte für den Kopierziel-BLOB ausgeführt werden.
+
+## BEISPIELE
+
+### Beispiel 1: Anzeigen des Kopierstatus eines BLOB
+```
+C:\PS>Get-AzStorageBlobCopyState -Blob "ContosoPlanning2015" -Container "ContosoUploads"
+```
+
+Dieser Befehl ruft den Kopierstatus des BLOB namens "ContosoPlanning2015" im Container "ContosoUploads" ab.
+
+### Beispiel 2: Erhalten des Kopierstatus für ein BLOB mithilfe der Pipeline
+```
+C:\PS>Get-AzStorageBlob -Blob "ContosoPlanning2015" -Container "ContosoUploads" | Get-AzStorageBlobCopyState
+```
+
+Dieser Befehl ruft das BLOB namens "ContosoPlanning2015" im Container "ContosoUploads" mithilfe des **Cmdlets "Get-AzStorageBlob"** ab und übergibt dann das Ergebnis mithilfe des Pipelineoperators an das aktuelle Cmdlet.
+Das **Cmdlet "Get-AzStorageBlobCopyState"** ruft den Kopierstatus für dieses BLOB ab.
+
+### Beispiel 3: Anzeigen des Kopierstatus für ein BLOB in einem Container mithilfe der Pipeline
+```
+C:\PS>Get-AzStorageContainer -Name "ContosoUploads" | Get-AzStorageBlobCopyState -Blob "ContosoPlanning2015"
+```
+
+Dieser Befehl ruft den Container mit dem **Cmdlet "Get-AzStorageBlob"** benannt und übergibt das Ergebnis dann an das aktuelle Cmdlet.
+Das **Cmdlet "Get-AzStorageContainer"** ruft den Kopierstatus für das BLOB namens "ContosoPlanning2015" in diesem Container ab.
+
+### Beispiel 4: Starten von "Kopieren und Pipeline", um den Kopierstatus zu erhalten
+```
+C:\PS> $destBlob = Start-AzStorageBlobCopy -SrcContainer "contosouploads" -SrcBlob "ContosoPlanning2015" -DestContainer "contosouploads2" -DestBlob "ContosoPlanning2015_copy"
+
+C:\PS> $destBlob | Get-AzStorageBlobCopyState
+```
+
+Der erste Befehl startet das Kopieren des BLOB "ContosoPlanning2015" in "ContosoPlanning2015_copy" und gibt das Desdelikations-BLOB-Objekt aus. Die zweite Befehlspipeline des Deslikations-BLOB-Objekts zu "Get-AzStorageBlobCopyState", um den Blob Copy-Zustand zu erhalten. 
+
+## PARAMETERS
+
+### -BLOB
+Gibt den Namen eines BLOB an.
+Dieses Cmdlet ruft den Zustand des BLOB-Kopiervorgangs für den Azure Storage-BLOB ab, den dieser Parameter angibt.
+
+```yaml
+Type: System.String
+Parameter Sets: NamePipeline, ContainerPipeline
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientTimeoutPerRequest
+Gibt das clientseitige Zeitintervall (in Sekunden) für eine Serviceanfrage an.
+Wenn der vorherige Aufruf im angegebenen Intervall fehlschlägt, wird die Anforderung von diesem Cmdlet erneut ausgeführt.
+Wenn dieses Cmdlet vor Ablauf des Intervalls keine erfolgreiche Antwort erhält, gibt dieses Cmdlet einen Fehler zurück.
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases: ClientTimeoutPerRequestInSeconds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudBlob
+Gibt ein **CloudBlob-Objekt** aus der Azure Storage -Clientbibliothek an.
+Verwenden Sie zum **Abrufen eines CloudBlob-Objekts** das Get-AzStorageBlob-Cmdlet.
+
+```yaml
+Type: Microsoft.Azure.Storage.Blob.CloudBlob
+Parameter Sets: BlobPipeline
+Aliases: ICloudBlob
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CloudBlobContainer
+Gibt ein **CloudBlobContainer-Objekt** aus der Azure Storage Client Library an.
+Dieses Cmdlet ruft den Kopierstatus eines BLOB im Container ab, den dieser Parameter angibt.
+Verwenden Sie zum **Abrufen eines CloudBlobContainer-Objekts** das Get-AzStorageContainer Cmdlet.
+
+```yaml
+Type: Microsoft.Azure.Storage.Blob.CloudBlobContainer
+Parameter Sets: ContainerPipeline
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConcurrentTaskCount
+Gibt die maximalen gleichzeitigen Netzwerkanrufe an.
+Sie können diesen Parameter verwenden, um die Parallelität zum Drosseln der lokalen CPU- und Bandbreitenverwendung zu beschränken, indem Sie die maximale Anzahl gleichzeitiger Netzwerkaufrufe angeben.
+Der angegebene Wert ist eine absolute Anzahl und wird nicht mit der Anzahl der Kernwerte multipliziert.
+Dieser Parameter kann zur Verringerung von Netzwerkverbindungsproblemen in Umgebungen mit geringer Bandbreite beitragen, z. B. 100 Kilobit pro Sekunde.
+Der Standardwert ist 10.
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Container
+Gibt den Namen eines Containers an.
+Dieses Cmdlet ruft den Kopierstatus für ein BLOB im Container ab, den dieser Parameter angibt.
+
+```yaml
+Type: System.String
+Parameter Sets: NamePipeline
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Context
+Gibt einen Azure-Speicherkontext an.
+Verwenden Sie zum Abrufen eines Speicherkontexts das New-AzStorageContext Cmdlet.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServerTimeoutPerRequest
+Gibt das intervallseitige Dienstzeitintervall (in Sekunden) für eine Anforderung an.
+Wenn das angegebene Intervall verstrichen ist, bevor der Dienst die Anforderung verarbeitet, gibt der Speicherdienst einen Fehler zurück.
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases: ServerTimeoutPerRequestInSeconds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WaitForComplete
+Zeigt an, dass dieses Cmdlet auf den Abschluss der Kopie wartet.
+Wenn Sie diesen Parameter nicht angeben, gibt dieses Cmdlet sofort ein Ergebnis zurück.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## EINGABEN
+
+### Microsoft.Azure.Storage.Blob.CloudBlob
+
+### Microsoft.Azure.Storage.Blob.CloudBlobContainer
+
+### Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
+
+## AUSGABEN
+
+### Microsoft.Azure.Storage.Blob.CopyState
+
+## HINWEISE
+
+## LINKS ZU VERWANDTEN THEMEN
+
+[Start-AzStorageBlobCopy](./Start-AzStorageBlobCopy.md)
+
+[Stop-AzStorageBlobCopy](./Stop-AzStorageBlobCopy.md)
+
+
