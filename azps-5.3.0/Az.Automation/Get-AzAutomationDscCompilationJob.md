@@ -1,0 +1,228 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+Module Name: Az.Automation
+ms.assetid: D704BAC0-D89E-4F15-ACF8-FA2C1F0D1B8F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationdsccompilationjob
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscCompilationJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationDscCompilationJob.md
+ms.openlocfilehash: 5b2c8685596771cd7986d8cfa071808daa63435c
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98471380"
+---
+# Get-AzAutomationDscCompilationJob
+
+## SYNOPSIS
+Ruft Aufträge für die DSC-Kompilierung in der Automatisierung ab.
+
+## SYNTAX
+
+### ByAll (Standard)
+```
+Get-AzAutomationDscCompilationJob [-Status <String>] [-StartTime <DateTimeOffset>] [-EndTime <DateTimeOffset>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### ByJobId
+```
+Get-AzAutomationDscCompilationJob -Id <Guid> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### ByConfigurationName
+```
+Get-AzAutomationDscCompilationJob -ConfigurationName <String> [-Status <String>] [-StartTime <DateTimeOffset>]
+ [-EndTime <DateTimeOffset>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzAutomationDscCompilationJob"** ruft APS Desired State Configuration (DSC)-Kompilierungsaufträge in der Azure Automation ab.
+
+## BEISPIELE
+
+### Beispiel 1: Alle Aufträge für die DSC-Kompilierung
+```
+PS C:\>Get-AzAutomationDscCompilationJob -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17"
+```
+
+Dieser Befehl ruft alle Kompilierungsaufträge im Automatisierungskonto namens "Contoso17" ab.
+
+### Beispiel 2: Erhalten von Aufträgen für die DSC-Kompilierung für eine Konfiguration
+```
+PS C:\>Get-AzAutomationDscCompilationJob -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -ConfigurationName "ContosoConfiguration"
+```
+
+Mit diesem Befehl werden alle Kompilierungsaufträge für die DSC-Konfiguration namens "ContosoConfiguration" im Automatisierungskonto namens "Contoso17" abgerufen.
+
+### Beispiel 3: Erhalten eines bestimmten AUFTRAGS für die DSC-Kompilierung
+```
+PS C:\>Get-AzAutomationDscCompilationJob -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -Id c0a1718e-d8be-4fa3-91b6-82e1d3a36298
+```
+
+Dieser Befehl ruft den Kompilierungsauftrag mit der angegebenen ID im Automatisierungskonto namens "Contoso17" ab.
+
+## PARAMETERS
+
+### -AutomationAccountName
+Gibt den Namen des Automatisierungskontos an, das VON diesem Cmdlet abgerufene DSC-Kompilierungsaufträge enthält.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConfigurationName
+Gibt den Namen der DSC-Konfiguration an, für die dieses Cmdlet Kompilierungsaufträge erhält.
+
+```yaml
+Type: System.String
+Parameter Sets: ByConfigurationName
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndTime
+Gibt eine Endzeit an.
+Dieses Cmdlet ruft Kompilierungsaufträge ab, die bis zu dem Zeitpunkt gestartet wurden, zu dem dieser Parameter angegeben ist.
+
+```yaml
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: ByAll, ByConfigurationName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ID
+Gibt die eindeutige ID des DSC-Kompilierungsauftrags an, den dieses Cmdlet erhält.
+
+```yaml
+Type: System.Guid
+Parameter Sets: ByJobId
+Aliases: JobId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Gibt den Namen einer Ressourcengruppe an, in der dieses Cmdlet AUFTRÄGE für die DSC-Kompilierung erhält.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTime
+Gibt eine Startzeit an.
+Dieses Cmdlet ruft Aufträge ab, die zu oder nach dem von diesem Parameter angegebenen Zeitpunkt beginnen.
+
+```yaml
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: ByAll, ByConfigurationName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Status
+Gibt den Status von Aufträgen an, die dieses Cmdlet erhält.
+Gültige Werte sind: 
+- Abgeschlossen 
+- Fehler 
+- In Warteschlange eingereiht 
+- Starten 
+- Fortsetzen 
+- Wird ausgeführt 
+- Beendet 
+- Wird beendet 
+- Angehalten 
+- Anhalten 
+- Aktivieren
+- Neu
+
+```yaml
+Type: System.String
+Parameter Sets: ByAll, ByConfigurationName
+Aliases:
+Accepted values: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating, New
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## EINGABEN
+
+### System.Guid
+
+### System.String
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.Automation.Model.CompilationJob
+
+## HINWEISE
+
+## LINKS ZU VERWANDTEN THEMEN
+
+[Get-AzAutomationDscCompilationJobOutput](./Get-AzAutomationDscCompilationJobOutput.md)
+
+[Start-AzAutomationDscCompilationJob](./Start-AzAutomationDscCompilationJob.md)
+
+
