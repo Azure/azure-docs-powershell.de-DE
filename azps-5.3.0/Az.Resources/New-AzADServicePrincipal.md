@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 6d268c2378c93bcfb98e64c654880e8055bcede8
-ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.openlocfilehash: e7c77dc4daf38634e7661f4579dd5bbcc81d0443
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "98459347"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251827"
 ---
 # New-AzADServicePrincipal
 
@@ -128,10 +128,10 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
 
 ## BESCHREIBUNG
 
-Erstellt einen neuen Azure Active Directory-Dienstprinzipal. Der Standardparametersatz verwendet Standardwerte für Parameter, wenn diese nicht bereitgestellt werden. Weitere Informationen zu Standardwerten finden Sie in der Beschreibung für jeden Parameter. Dieses Cmdlet kann dem Dienstprinzipal mit den Parametern **"Rolle"** und **"Bereich" eine Rolle** zuweisen. Fehlt beides, wird die Mitwirkenderolle dem Dienstprinzipal zugewiesen. Die Standardwerte für die Parameter **"Rolle"** und **"Bereich"** sind **"Mitwirkender"** für das aktuelle Abonnement. Das Cmdlet erstellt eine Anwendung und legt deren Eigenschaften fest, wenn keine ApplicationId angegeben wird. Verwenden Sie das Cmdlet ["Update-AzADApplication",](./update-azadapplication.md) um die anwendungsspezifischen Parameter zu aktualisieren.
+Erstellt einen neuen Azure Active Directory-Dienstprinzipal. Der Standardparametersatz verwendet Standardwerte für Parameter, wenn diese nicht bereitgestellt werden. Weitere Informationen zu Standardwerten finden Sie in der Beschreibung für jeden Parameter. Dieses Cmdlet kann dem Dienstprinzipal mit den  Parametern "Rolle" und **"Bereich" eine Rolle** zuweisen. Fehlt beides, wird die Mitwirkenderolle dem Dienstprinzipal zugewiesen. Die Standardwerte für die Parameter **"Rolle"** und **"Bereich"** sind **"Mitwirkender"** für das aktuelle Abonnement. Das Cmdlet erstellt eine Anwendung und legt deren Eigenschaften fest, wenn keine ApplicationId angegeben wird. Verwenden Sie das Cmdlet ["Update-AzADApplication",](./update-azadapplication.md) um die anwendungsspezifischen Parameter zu aktualisieren.
 
 > [!WARNING]
-> Wenn Sie einen Dienstprinzipal mit dem Befehl **"New-AzADServicePrincipal"** erstellen, enthält die Ausgabe Anmeldeinformationen, die Sie schützen müssen. Achten Sie darauf, dass Sie diese Anmeldeinformationen nicht in Ihren Code eingeben oder die Anmeldeinformationen in der Quellcodeverwaltung überprüfen. Erwägen Sie alternativ die Verwendung [verwalteter Identitäten,](/azure/active-directory/managed-identities-azure-resources/overview) um die Verwendung von Anmeldeinformationen zu vermeiden.
+> Wenn Sie einen Dienstprinzipal mit dem Befehl **"New-AzADServicePrincipal"** erstellen, enthält die Ausgabe Anmeldeinformationen, die Sie schützen müssen. Erwägen Sie alternativ die Verwendung [verwalteter Identitäten,](/azure/active-directory/managed-identities-azure-resources/overview) um die Verwendung von Anmeldeinformationen zu vermeiden.
 >
 > Standardmäßig weist **"New-AzADServicePrincipal"** dem Dienstprinzipal im Abonnementbereich die Rolle "Mitwirkender" zu. [](/azure/role-based-access-control/built-in-roles#contributor) Um das Risiko eines beeinträchtigten Dienstprinzipal zu verringern, weisen Sie eine spezifischere Rolle zu, und grenzen Sie den Bereich auf eine Ressource oder Ressourcengruppe ein. Weitere [Informationen finden Sie unter "Schritte zum Hinzufügen einer](/azure/role-based-access-control/role-assignments-steps) Rollenzuweisung".
 
@@ -139,7 +139,7 @@ Erstellt einen neuen Azure Active Directory-Dienstprinzipal. Der Standardparamet
 
 ### Beispiel 1: Einfache Erstellung des Ad -Dienstprinzipals
 
-Im folgenden Beispiel wird ein Ad-Dienstprinzipal erstellt, in dem Standardwerte für nicht angegebene Parameter verwendet werden. Da keine Anwendungs-ID angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Da für "Rolle" oder **"Bereich"** keine Werte  bereitgestellt **werden,** wird dem erstellten Dienstprinzipal die Mitwirkenderolle für das aktuelle Abonnement zugewiesen.
+Im folgenden Beispiel wird ein Ad-Dienst-Prinzipal mit Standardwerten für nicht angegebene Parameter erstellt. Da keine Anwendungs-ID angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Da für "Rolle" oder **"Bereich"** keine Werte  bereitgestellt **werden,** wird dem erstellten Dienstprinzipal die Mitwirkenderolle für das aktuelle Abonnement zugewiesen.
 
 ```powershell
 New-AzADServicePrincipal
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### -KeyCredential
 
-Die Sammlung der schlüsselanmeldeinformationen, die der Anwendung zugeordnet sind.
+Die Sammlung der Schlüsselanmeldeinformationen, die der Anwendung zugeordnet sind.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]

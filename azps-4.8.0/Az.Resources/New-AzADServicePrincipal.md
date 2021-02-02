@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 3c96ab0cdcc25e0e1c9b4a343cd68420654d934c
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: 9fc7b3de271188c2f8ebd0be3293892a6fae56e3
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94303975"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251776"
 ---
 # New-AzADServicePrincipal
 
-## Synopsis
+## SYNOPSIS
 Erstellt einen neuen Azure Active Directory-Dienstprinzipal.
 
-## Syntax
+## SYNTAX
 
 ### SimpleParameterSet (Standard)
 
@@ -126,20 +126,20 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 
-Erstellt einen neuen Azure Active Directory-Dienstprinzipal. Der Standardparametersatz verwendet Standardwerte für Parameter, wenn diese nicht bereitgestellt werden. Weitere Informationen zu Standardwerten finden Sie in der Beschreibung für jeden Parameter. Dieses Cmdlet hat die Möglichkeit, dem Dienstprinzipal eine Rolle mit den **Rollen** -und **Bereichs** Parametern zuzuweisen. Wenn beides ausgelassen wird, wird die Rolle des Mitwirkenden dem Dienstprinzipal zugewiesen. Die Standardwerte für die **Rollen** -und **Bereichs** Parameter sind **Mitwirkender** für das aktuelle Abonnement. Das Cmdlet erstellt eine Anwendung und legt ihre Eigenschaften fest, wenn keine ApplicationId bereitgestellt wird. Verwenden Sie das Cmdlet [Update-AzADApplication](./update-azadapplication.md) , um die anwendungsspezifischen Parameter zu aktualisieren.
+Erstellt einen neuen Azure Active Directory-Dienstprinzipal. Der Standardparametersatz verwendet Standardwerte für Parameter, wenn diese nicht bereitgestellt werden. Weitere Informationen zu Standardwerten finden Sie in der Beschreibung für jeden Parameter. Dieses Cmdlet kann dem Dienstprinzipal mit den  Parametern "Rolle" und **"Bereich" eine Rolle** zuweisen. Fehlt beides, wird die Mitwirkenderolle dem Dienstprinzipal zugewiesen. Die Standardwerte für die Parameter **"Rolle"** und **"Bereich"** sind **"Mitwirkender"** für das aktuelle Abonnement. Das Cmdlet erstellt eine Anwendung und legt deren Eigenschaften fest, wenn keine ApplicationId angegeben wird. Verwenden Sie das Cmdlet ["Update-AzADApplication",](./update-azadapplication.md) um die anwendungsspezifischen Parameter zu aktualisieren.
 
 > [!WARNING]
-> Wenn Sie einen Dienstprinzipal mithilfe des Befehls **New-AzADServicePrincipal** erstellen, enthält die Ausgabe Anmeldeinformationen, die Sie schützen müssen. Stellen Sie sicher, dass Sie diese Anmeldeinformationen nicht in Ihren Code einbeziehen, oder überprüfen Sie die Anmeldeinformationen in die Quellcodeverwaltung. Als Alternative empfiehlt es sich, [verwaltete Identitäten](/azure/active-directory/managed-identities-azure-resources/overview) zu verwenden, um die Verwendung von Anmeldeinformationen zu vermeiden.
+> Wenn Sie einen Dienstprinzipal mit dem Befehl **"New-AzADServicePrincipal"** erstellen, enthält die Ausgabe Anmeldeinformationen, die Sie schützen müssen. Erwägen Sie alternativ die Verwendung [verwalteter Identitäten,](/azure/active-directory/managed-identities-azure-resources/overview) um die Verwendung von Anmeldeinformationen zu vermeiden.
 >
-> Standardmäßig weist **New-AzADServicePrincipal** dem Dienstprinzipal im Abonnement Bereich die Rolle [Contributor](/azure/role-based-access-control/built-in-roles#contributor) zu. Um das Risiko eines kompromittierten Dienst Prinzipals zu verringern, weisen Sie eine spezifischere Rolle zu, und schränken Sie den Bereich auf eine Ressource oder eine Ressourcengruppe ein. Weitere Informationen finden Sie unter [Schritte zum Hinzufügen einer Rollenzuweisung](/azure/role-based-access-control/role-assignments-steps) .
+> Standardmäßig weist **"New-AzADServicePrincipal"** dem Dienstprinzipal im Abonnementbereich die Rolle "Mitwirkender" zu. [](/azure/role-based-access-control/built-in-roles#contributor) Um das Risiko eines beeinträchtigten Dienstprinzipal zu verringern, weisen Sie eine spezifischere Rolle zu, und grenzen Sie den Bereich auf eine Ressource oder Ressourcengruppe ein. Weitere [Informationen finden Sie unter "Schritte zum Hinzufügen einer](/azure/role-based-access-control/role-assignments-steps) Rollenzuweisung".
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen von einfachen AD-Dienst Prinzipalen
+### Beispiel 1: Einfache Erstellung des Ad -Dienstprinzipals
 
-Im folgenden Beispiel wird ein Anzeigendienst Prinzipal mit Standardwerten für nicht angegebene Parameter erstellt. Da keine Anwendungs-ID bereitgestellt wird, wird eine Anwendung für den Dienstprinzipal erstellt. Da für **Rolle** oder **Bereich** keine Werte bereitgestellt werden, wird dem erstellten Dienstprinzipal die Rolle des **mitwirk** Enden für das aktuelle Abonnement zugewiesen.
+Im folgenden Beispiel wird ein Ad-Dienst-Prinzipal mit Standardwerten für nicht angegebene Parameter erstellt. Da keine Anwendungs-ID angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Da für "Rolle" oder **"Bereich"** keine Werte  bereitgestellt **werden,** wird dem erstellten Dienstprinzipal die Mitwirkenderolle für das aktuelle Abonnement zugewiesen.
 
 ```powershell
 New-AzADServicePrincipal
@@ -154,9 +154,9 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  : ServicePrincipal
 ```
 
-### Beispiel 2: Erstellen eines einfachen AD-Dienst Prinzipals mit einer angegebenen Rolle und einem Standardbereich
+### Beispiel 2: Einfache Erstellung des Ad -Dienstprinzipals mit einer bestimmten Rolle und einem Standardbereich
 
-Im folgenden Beispiel wird ein Ad-Dienstprinzipal mit den Standardwerten für nicht angegebene Parameter erstellt. Da die Anwendungs-ID nicht bereitgestellt wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Leser** Berechtigungen für das aktuelle Abonnement erstellt, da für den **Scope** -Parameter kein Wert angegeben wird.
+Im folgenden Beispiel wird ein Ad -Dienstprinzipal erstellt, in dem die Standardwerte für nicht angegebene Parameter verwendet werden. Da die Anwendungs-ID nicht angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Leseberechtigungen** für das aktuelle Abonnement erstellt, da für den Parameter **"Bereich"** kein Wert angegeben wird.
 
 ```powershell
 New-AzADServicePrincipal -Role Reader
@@ -173,9 +173,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0000-000000000000' to the new service principal.
 ```
 
-### Beispiel 3: Erstellen eines einfachen AD-Dienst Prinzipals mit einem angegebenen Bereich und einer Standardrolle
+### Beispiel 3: Einfache Erstellung des Ad -Dienstprinzipals mit einem angegebenen Bereich und einer Standardrolle
 
-Im folgenden Beispiel wird ein Ad-Dienstprinzipal mit den Standardwerten für nicht angegebene Parameter erstellt. Da die Anwendungs-ID nicht bereitgestellt wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Contributor** -Berechtigungen für den bereitgestellten Ressourcengruppen Bereich erstellt, da für den **Role** -Parameter kein Wert angegeben wird.
+Im folgenden Beispiel wird ein Ad -Dienstprinzipal erstellt, in dem die Standardwerte für nicht angegebene Parameter verwendet werden. Da die Anwendungs-ID nicht angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Mitwirkendenberechtigungen für** den bereitgestellten Ressourcengruppenbereich erstellt, da für den Parameter **"Rolle"** kein Wert bereitgestellt wird.
 
 ```powershell
 New-AzADServicePrincipal -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -192,9 +192,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Contributor' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-### Beispiel 4: Erstellen eines einfachen AD-Dienst Prinzipals mit einem angegebenen Bereich und einer bestimmten Rolle
+### Beispiel 4: Einfache Erstellung des Ad -Dienstprinzipals mit einem angegebenen Bereich und einer bestimmten Rolle
 
-Im folgenden Beispiel wird ein Ad-Dienstprinzipal mit den Standardwerten für nicht angegebene Parameter erstellt. Da die Anwendungs-ID nicht bereitgestellt wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Leser** Berechtigungen für den bereitgestellten Ressourcengruppen Bereich erstellt.
+Im folgenden Beispiel wird ein Ad -Dienstprinzipal erstellt, in dem die Standardwerte für nicht angegebene Parameter verwendet werden. Da die Anwendungs-ID nicht angegeben wird, wird eine Anwendung für den Dienstprinzipal erstellt. Der Dienstprinzipal wird mit **Leseberechtigungen** für den bereitgestellten Ressourcengruppenbereich erstellt.
 
 ```powershell
 New-AzADServicePrincipal -Role Reader -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -211,9 +211,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-### Beispiel 5: Erstellen eines neuen Anzeigendienst Prinzipals mithilfe der Anwendungs-ID mit Rollenzuweisung
+### Beispiel 5: Erstellen eines neuen Ad -Dienstprinzipal mithilfe der Anwendungs-ID mit Rollenzuweisung
 
-Im folgenden Beispiel wird ein neuer AD-Dienstprinzipal für die Anwendung mit der Anwendungs-ID "00000000-0000-0000-0000-000000000000" erstellt. Da für **Rolle** oder **Bereich** keine Werte bereitgestellt werden, wird dem erstellten Dienstprinzipal die Rolle des **mitwirk** Enden für das aktuelle Abonnement zugewiesen.
+Im folgenden Beispiel wird ein neuer Dienstprinzipal für die Anwendung mit der Anwendungs-ID '00000000-0000-0000-0000-000000000000' erstellt. Da für "Rolle" oder **"Bereich"** keine Werte  bereitgestellt **werden,** wird dem erstellten Dienstprinzipal die Mitwirkenderolle für das aktuelle Abonnement zugewiesen.
 
 ```powershell
 New-AzADServicePrincipal -ApplicationId 00000000-0000-0000-0000-000000000000
@@ -227,17 +227,17 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  : ServicePrincipal
 ```
 
-### Beispiel 6: Erstellen eines neuen AD-Dienst Prinzipals mithilfe von Piping
+### Beispiel 6: Erstellen eines neuen Ad -Dienstprinzipal mithilfe der Piping
 
-Im folgenden Beispiel wird die Anwendung mit der Objekt-ID "3ede3c26-b443-4e0b-9efc-b05e68338dc3" mit dem Cmdlet [Get-AzADApplication](./get-azadapplication.md) abgerufen. Die Ergebnisse werden an das `New-AzADServicePrincipal` Cmdlet umgeleitet, um einen neuen Anzeigendienst Prinzipal für diese Anwendung zu erstellen.
+Im folgenden Beispiel wird die Anwendung mit der Objekt-ID '3ede3c26-b443-4e0b-9efc-b05e68338dc3' mit dem [Cmdlet "Get-AzADApplication"](./get-azadapplication.md) abgerufen. Die Ergebnisse werden an das Cmdlet zu einem neuen `New-AzADServicePrincipal` Ad-Dienstprinzipal für diese Anwendung weitergedeh.
 
 ```powershell
 Get-AzADApplication -ObjectId 3ede3c26-b443-4e0b-9efc-b05e68338dc3 | New-AzADServicePrincipal
 ```
 
-### Beispiel 7: Erstellen eines neuen Anzeigendienst Prinzipals mithilfe von DisplayName und Kennwortanmeldeinformationen
+### Beispiel 7: Erstellen eines neuen Ad -Dienstprinzipals mit DisplayName und Kennwortanmeldeinformationen
 
-Im folgenden Beispiel wird eine neue Anwendung mit dem Namen **servicePrincipalName** und dem Kennwort **StrongPassworld! 23** erstellt. Sie erstellt den Dienstprinzipal basierend auf der erstellten Anwendung. Das Startdatum und das Enddatum werden den Anmeldeinformationen für das Kennwort hinzugefügt.
+Im folgenden Beispiel wird eine neue Anwendung mit dem Namen **"ServicePrincipalName"** und dem Kennwort **"StrongPassworld!23" erstellt.** Der Dienstprinzipal wird basierend auf der erstellten Anwendung erstellt. Das Startdatum und das Enddatum werden den Anmeldeinformationen des Kennworts hinzugefügt.
 
 ```powershell
 $credentials = New-Object -TypeName Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{
@@ -254,9 +254,9 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  :
 ```
 
-### Beispiel 8: Erstellen eines neuen Anzeigendienst Prinzipals mit "DisplayName" und "Plain Key"-Anmeldeinformationen
+### Beispiel 8: Erstellen eines neuen Ad-Dienstprinzipals mit DisplayName und nur-Schlüssel-Anmeldeinformationen
 
-Im folgenden Beispiel wird eine neue Anwendung mit dem Namen **servicePrincipalName** und einem Zertifikat **$CERT** erstellt. Sie erstellt den Dienstprinzipal basierend auf der erstellten Anwendung. Das Enddatum wird den Schlüssel Anmeldeinformationen hinzugefügt.
+Im folgenden Beispiel wird eine neue Anwendung mit dem Namen **"ServicePrincipalName"** und einem **Zertifikat**$cert. Der Dienstprinzipal wird basierend auf der erstellten Anwendung erstellt. Das Enddatum wird den Schlüsselanmeldeinformationen hinzugefügt.
 
 ```powershell
 $cert = 'public certificate as Base64 encoded string'
@@ -272,11 +272,11 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  :
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
 
-Die eindeutige Anwendungs-ID für einen Dienstprinzipal in einem Mandanten. Nach der Erstellung kann diese Eigenschaft nicht geändert werden. Wenn keine Anwendungs-ID für eine vorhandene Anwendung angegeben wird, wird eine Anwendung erstellt.
+Die eindeutige Anwendungs-ID für einen Dienstprinzipal in einem Mandanten. Nach der Erstellen kann diese Eigenschaft nicht mehr geändert werden. Wenn keine Anwendungs-ID für eine vorhandene Anwendung angegeben wird, wird eine Anwendung erstellt.
 
 ```yaml
 Type: System.Guid
@@ -318,9 +318,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Certvalue
+### -CertValue
 
-Der Wert des asymmetrischen Anmeldeinformationstyps. Es stellt das Base64-codierte Zertifikat dar.
+Der Wert des asymmetrischen Anmeldeinformationstyps. Sie stellt das base64-codierte Zertifikat dar.
 
 ```yaml
 Type: System.String
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-Der Anzeigename des Dienst Prinzipals. Wenn kein Anzeigename angegeben wird, wird dieser Wert standardmäßig auf **Azure-PowerShell-mm-tt-yyyy-hh-mm-SS** gesetzt, wobei das Suffix der Zeitpunkt der Anwendungserstellung ist.
+Der Anzeigename des Dienstprinzipal. Wenn kein Anzeigename angegeben wird, wird für diesen Wert standardmäßig **"azure-powershell-MM-dd-yyyy-HH-mm-ss"** verwendet, wobei das Suffix der Zeitpunkt der Anwendungserstellung ist.
 
 ```yaml
 Type: System.String
@@ -390,10 +390,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enddate
+### -EndDate
 
-Das effektive Enddatum der Anmelde Informationsverwendung. Der Standardwert für Enddatum beträgt ein Jahr ab heute.
-Bei einer asymmetrischen typanmeldung muss dies auf ein oder vor dem Datum festgesetzt werden, an dem das X509-Zertifikat gültig ist.
+Das Effektive Enddatum der Verwendung der Anmeldeinformationen. Der Standardmäßige Enddatumswert liegt ein Jahr nach heute.
+Bei asymmetrischen Anmeldeinformationen muss dies auf das Datum oder vor dem Datum festgelegt werden, an dem das X509-Zertifikat gültig ist.
 
 ```yaml
 Type: System.DateTime
@@ -419,9 +419,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Keycredential
+### -KeyCredential
 
-Die Sammlung der wichtigen Anmeldeinformationen, die der Anwendung zugeordnet sind.
+Die Sammlung der schlüsselanmeldeinformationen, die der Anwendung zugeordnet sind.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 ### -PasswordCredential
 
-Die Sammlung der Kennwortanmeldeinformationen, die der Anwendung zugeordnet sind.
+Die Sammlung von Kennwortanmeldeinformationen, die der Anwendung zugeordnet sind.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 
 ### -Role
 
-Die Rolle, die der Dienstprinzipal über den Bereich hat. Wenn kein Wert angegeben wird, wird für **Role** standardmäßig die Rolle des **mitwirk** enden verwendet.
+Die Rolle, die der Dienstprinzipal über den Bereich besitzt. Wenn kein Wert angegeben wird, wird **"Rolle"** standardmäßig auf die **Mitwirkenderolle** festgelegt.
 
 ```yaml
 Type: System.String
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-Der Bereich, für den der Dienstprinzipal über Berechtigungen verfügt. Wenn kein Wert angegeben wird, ist der **Bereich** standardmäßig auf das aktuelle Abonnement eingestellt.
+Der Bereich, für den der Dienstprinzipal Berechtigungen besitzt. Wenn kein Wert angegeben wird, **wird für den** Bereich standardmäßig das aktuelle Abonnement verwendet.
 
 ```yaml
 Type: System.String
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -SkipAssignment
 
-Wenn diese Einstellung aktiviert ist, überspringen Sie das Erstellen der Standardrollenzuweisung für den Dienstprinzipal.
+Wenn dies festgelegt ist, überspringen Sie die Erstellung der Standardrollezuweisung für den Dienstprinzipal.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-Der effektive Anfangstermin der Anmelde Informationsverwendung. Der Standardwert für das Anfangsdatum ist heute. Bei einer asymmetrischen typanmeldung muss dies auf ein oder nach dem Datum festgesetzt werden, ab dem das X509-Zertifikat gültig ist.
+Das Effektive Startdatum der Nutzung der Anmeldeinformationen. Der Standardwert für das Startdatum ist "Heute". Bei asymmetrischen Anmeldeinformationen muss dies auf das Datum oder nach dem Datum festgelegt werden, ab dem das X509-Zertifikat gültig ist.
 
 ```yaml
 Type: System.DateTime
@@ -551,9 +551,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
+### -Confirm
 
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -567,7 +567,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
@@ -584,43 +584,43 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
-## Eingaben
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](/powershell/module/microsoft.powershell.core/about/about_commonparameters)
+## EINGABEN
 
-### System. GUID
+### System.Guid
 
-### System. String
+### System.String
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDApplication
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADPasswordCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.ODERDPasswordCredential[]
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADKeyCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDKeyCredential[]
 
-### System. DateTime
+### System.DateTime
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.WAHLDServicePrincipal
 
-### Microsoft. Azure. Commands. resources. Models. Authorization. PSADServicePrincipalWrapper
+### Microsoft.Azure.Commands.Resources.Models.Authorization.ODERDServicePrincipalWrapper
 
-## Notizen
+## HINWEISE
 
-Schlüsselwörter: Azure, azurerm, arm, Ressource, Verwaltung, Manager, Ressource, Gruppe, Vorlage, Bereitstellung
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[Neu – AzADApplication](./New-AzADApplication.md)
+[New-AzADApplication](./New-AzADApplication.md)
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 
 [Get-AzADSpCredential](./Get-AzADSpCredential.md)
 
-[Neu – AzADSpCredential](./New-AzADSpCredential.md)
+[New-AzADSpCredential](./New-AzADSpCredential.md)
 
 [Remove-AzADSpCredential](./Remove-AzADSpCredential.md)
