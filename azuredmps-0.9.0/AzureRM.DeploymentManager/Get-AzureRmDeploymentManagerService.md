@@ -3,20 +3,19 @@ external help file: Microsoft.Azure.Commands.DeploymentManager.dll-Help.xml
 Module Name: AzureRM.DeploymentManager
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager/get-azurermdeploymentmanagerservice
 schema: 2.0.0
-content_git_url: ''
-ms.openlocfilehash: 655cfeeae35d1b48bbfe2149fd4262dffe72ae09
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 4a91c2f8fdda1d2cda7c75f0cf7cfab165701f3d
+ms.sourcegitcommit: e57be0da5162efeb0a01f396e2343dd137920063
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93475745"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572104"
 ---
 # Get-AzureRmDeploymentManagerService
 
-## Synopsis
-Ruft einen Dienst in einer Dienst Topologie ab.
+## SYNOPSIS
+Ruft einen Dienst in einer Diensttopologie ab.
 
-## Syntax
+## SYNTAX
 
 ### Interaktiv (Standard)
 ```
@@ -48,39 +47,39 @@ Get-AzureRmDeploymentManagerService [-Service] <PSServiceResource> [-DefaultProf
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureRmDeploymentManagerService** " Ruft einen Dienst unter einer Dienst Topologie ab und gibt ein Objekt zurück, das diesen Dienst darstellt.
-Geben Sie den Dienst nach dem Namen, der Dienst Topologie und dem Namen der Ressourcengruppe an. Alternativ können Sie das Dienstobjekt oder die ressourcensource-Funktion angeben.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzureRmDeploymentManagerService"** ruft einen Dienst unter einer Diensttopologie ab und gibt ein Objekt zurück, das den Dienst darstellt.
+Geben Sie den Dienst nach seinem Namen, der Diensttopologie, in der er sich befindet, und dem Namen der Ressourcengruppe an. Alternativ können Sie das Objekt "Service" oder die "ResourceId" bereitstellen.
 
-Sie können dieses Objekt lokal ändern und dann mithilfe des Set-AzureRmDeploymentManagerService-Cmdlets Änderungen am Dienst vornehmen.
+Sie können dieses Objekt lokal ändern und dann Änderungen an dem Dienst mithilfe des cmdlets Set-AzureRmDeploymentManagerService anwenden.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -ResourceGroupName ContosoResourceGroup -ServiceTopologyName ContosoServiceTopology -Name ContosoService1
 ```
 
-Dieser Befehl ruft einen Dienst mit dem Namen ContosoService1 in einer Dienst Topologie mit dem Namen ContosoServiceTopology im ContosoResourceGroup ab.
+Dieser Befehl ruft den Dienst "ContosoService1" in einer Diensttopologie namens "ContosoServiceTopology" in der ContosoResourceGroup ab.
 
-### Beispiel 2: Abrufen eines Diensts mithilfe des Ressourcenbezeichners.
+### Beispiel 2: Einen Dienst mit dem Ressourcenbezeichner erhalten.
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -ResourceId "/subscriptions/subscriptionId/resourcegroups/ContosoResourceGroup/providers/Microsoft.DeploymentManager/serviceTopologies/ContosoServiceTopology/services/ContosoService1"
 ```
 
-Dieser Befehl ruft einen Dienst mit dem Namen ContosoService1 in einer Dienst Topologie mit dem Namen ContosoServiceTopology im ContosoResourceGroup ab.
+Dieser Befehl ruft den Dienst "ContosoService1" in einer Diensttopologie namens "ContosoServiceTopology" in der ContosoResourceGroup ab.
 
-### Beispiel 3: Abrufen eines Diensts mithilfe des Dienstobjekts.
+### Beispiel 3: Einen Dienst mithilfe des Dienstobjekts erhalten.
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -Service $serviceObject
 ```
 
-Dieser Befehl ruft einen Dienst ab, dessen Name, Dienst topologiename und ResourceGroup mit den Eigenschaften Name, ServiceTopologyName und ResourceGroupName der $serviceObject übereinstimmen.
+Dieser Befehl ruft einen Dienst ab, dessen Name, Name der Diensttopologie und ResourceGroup mit den Eigenschaften "Name", "ServiceTopologyName" bzw. "ResourceGroupName" der $serviceObject übereinstimmen.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -124,7 +123,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Der Ressourcenbezeichner.
 
 ```yaml
@@ -155,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopology
-Das Dienst Topologie-Objekt, in dem der Dienst erstellt werden soll.
+Das Diensttopologieobjekt, in dem der Dienst erstellt werden soll.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DeploymentManager.Models.PSServiceTopologyResource
@@ -170,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopologyName
-Der Name der Dienst Topologie.
+Der Name der Diensttopologie.
 
 ```yaml
 Type: System.String
@@ -185,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopologyResourceId
-Der Dienst Topologie-Ressourcenbezeichner, in dem der Dienst erstellt werden soll.
+Der Ressourcenbezeichner der Diensttopologie, in dem der Dienst erstellt werden soll.
 
 ```yaml
 Type: System.String
@@ -200,22 +199,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. deploymentmanager. Models. PSServiceResource
+### Microsoft.Azure.Commands.DeploymentManager.Models.PSServiceResource
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzureRmDeploymentManagerService](./New-AzureRmDeploymentManagerService.md)
+[New-AzureRmDeploymentManagerService](./New-AzureRmDeploymentManagerService.md)
 
 [Remove-AzureRmDeploymentManagerService](./Remove-AzureRmDeploymentManagerService.md)
 
-[Satz-AzureRmDeploymentManagerService](./Set-AzureRmDeploymentManagerService.md)
+[Set-AzureRmDeploymentManagerService](./Set-AzureRmDeploymentManagerService.md)
