@@ -6,28 +6,28 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
-ms.openlocfilehash: cbd69ff20e32d93ff5d9f9f7c4959568f627c7e0
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: f06dbac5e7c7a67acc38c5357351905fab0ed141
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94005010"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402557"
 ---
-# <span data-ttu-id="5b737-101">New-AzApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-101">New-AzApplicationGatewayPathRuleConfig</span></span>
+# <span data-ttu-id="79cb1-101">New-AzApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-101">New-AzApplicationGatewayPathRuleConfig</span></span>
 
-## <span data-ttu-id="5b737-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="5b737-102">SYNOPSIS</span></span>
-<span data-ttu-id="5b737-103">Erstellt eine Anwendungsgateway-Pfadregel.</span><span class="sxs-lookup"><span data-stu-id="5b737-103">Creates an application gateway path rule.</span></span>
+## <span data-ttu-id="79cb1-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="79cb1-102">SYNOPSIS</span></span>
+<span data-ttu-id="79cb1-103">Erstellt eine Anwendungsgatewaypfadregel.</span><span class="sxs-lookup"><span data-stu-id="79cb1-103">Creates an application gateway path rule.</span></span>
 
-## <span data-ttu-id="5b737-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5b737-104">SYNTAX</span></span>
+## <span data-ttu-id="79cb1-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="79cb1-104">SYNTAX</span></span>
 
-### <span data-ttu-id="5b737-105">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="5b737-105">SetByResourceId</span></span>
+### <span data-ttu-id="79cb1-105">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="79cb1-105">SetByResourceId</span></span>
 ```
 New-AzApplicationGatewayPathRuleConfig -Name <String> -Paths <String[]> [-BackendAddressPoolId <String>]
  [-BackendHttpSettingsId <String>] [-RewriteRuleSetId <String>] [-RedirectConfigurationId <String>]
  [-FirewallPolicyId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5b737-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="5b737-106">SetByResource</span></span>
+### <span data-ttu-id="79cb1-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="79cb1-106">SetByResource</span></span>
 ```
 New-AzApplicationGatewayPathRuleConfig -Name <String> -Paths <String[]>
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>]
@@ -38,14 +38,14 @@ New-AzApplicationGatewayPathRuleConfig -Name <String> -Paths <String[]>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="5b737-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5b737-107">DESCRIPTION</span></span>
-<span data-ttu-id="5b737-108">Das Cmdlet **New-AzApplicationGatewayPathRuleConfig** erstellt eine Pfadregel für das Anwendungsgateway.</span><span class="sxs-lookup"><span data-stu-id="5b737-108">The **New-AzApplicationGatewayPathRuleConfig** cmdlet creates an application gateway path rule.</span></span>
-<span data-ttu-id="5b737-109">Von diesem Cmdlet erstellte Regeln können einer Sammlung von URL-Pfad Zuordnungs Konfigurationseinstellungen hinzugefügt und dann einem Gateway zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-109">Rules created by this cmdlet can be added to a collection of URL path map configuration settings and then assigned to a gateway.</span></span>
-<span data-ttu-id="5b737-110">Konfigurationseinstellungen für Pfad Zuordnungen werden im Lastenausgleich des Anwendungs Gateways verwendet.</span><span class="sxs-lookup"><span data-stu-id="5b737-110">Path map configuration settings are used in application gateway load balancing.</span></span>
+## <span data-ttu-id="79cb1-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="79cb1-107">DESCRIPTION</span></span>
+<span data-ttu-id="79cb1-108">Das **Cmdlet "New-AzApplicationGatewayPathRuleConfig"** erstellt eine Anwendungsgatewaypfadregel.</span><span class="sxs-lookup"><span data-stu-id="79cb1-108">The **New-AzApplicationGatewayPathRuleConfig** cmdlet creates an application gateway path rule.</span></span>
+<span data-ttu-id="79cb1-109">Von diesem Cmdlet erstellte Regeln können einer Sammlung von Konfigurationseinstellungen für die URL-Pfadzuordnung hinzugefügt und dann einem Gateway zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-109">Rules created by this cmdlet can be added to a collection of URL path map configuration settings and then assigned to a gateway.</span></span>
+<span data-ttu-id="79cb1-110">Die Konfigurationseinstellungen der Pfadzuordnung werden beim Lastenausgleich des Anwendungsgateways verwendet.</span><span class="sxs-lookup"><span data-stu-id="79cb1-110">Path map configuration settings are used in application gateway load balancing.</span></span>
 
-## <span data-ttu-id="5b737-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5b737-111">EXAMPLES</span></span>
+## <span data-ttu-id="79cb1-111">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="79cb1-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="5b737-112">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="5b737-112">Example 1</span></span>
+### <span data-ttu-id="79cb1-112">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="79cb1-112">Example 1</span></span>
 ```
 PS C:\>$Gateway = Get-AzApplicationGateway -Name "ContosoApplicationGateway"
 PS C:\> $AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"
@@ -54,31 +54,31 @@ PS C:\> $PathRuleConfig = New-AzApplicationGatewayPathRuleConfig -Name "base" -P
 PS C:\> Add-AzApplicationGatewayUrlPathMapConfig -ApplicationGateway $Gateway -Name "ContosoUrlPathMap" -PathRules $PathRuleConfig -DefaultBackendAddressPool $AddressPool -DefaultBackendHttpSettings $HttpSettings
 ```
 
-<span data-ttu-id="5b737-113">Mit diesen Befehlen wird eine neue Anwendungsgateway-Pfadregel erstellt, und dann wird das Cmdlet **Add-AzApplicationGatewayUrlPathMapConfig** verwendet, um die Regel einem Anwendungsgateway zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="5b737-113">These commands create a new application gateway path rule and then use the **Add-AzApplicationGatewayUrlPathMapConfig** cmdlet to assign that rule to an application gateway.</span></span>
-<span data-ttu-id="5b737-114">Dazu erstellt der erste Befehl einen Objektverweis auf das Gateway-ContosoApplicationGateway.</span><span class="sxs-lookup"><span data-stu-id="5b737-114">To do this, the first command creates an object reference to the gateway ContosoApplicationGateway.</span></span>
-<span data-ttu-id="5b737-115">Dieser Objektverweis wird in einer Variablen mit dem Namen $Gateway gespeichert.</span><span class="sxs-lookup"><span data-stu-id="5b737-115">This object reference is stored in a variable named $Gateway.</span></span>
-<span data-ttu-id="5b737-116">Mit den nächsten beiden Befehlen wird ein Back-End-Adresspool und ein Back-End-HTTP-Einstellungsobjekt erstellt. Diese Objekte (in den Variablen $AddressPool und $HttpSettings gespeichert) werden benötigt, um ein Pfadregel-Objekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5b737-116">The next two commands create a backend address pool and a backend HTTP settings object; these objects (stored in the variables $AddressPool and $HttpSettings) are needed in order to create a path rule object.</span></span>
-<span data-ttu-id="5b737-117">Der vierte Befehl erstellt das Pfadregel-Objekt und wird in einer Variablen mit dem Namen $PathRuleConfig gespeichert.</span><span class="sxs-lookup"><span data-stu-id="5b737-117">The fourth command creates the path rule object and is stored in a variable named $PathRuleConfig.</span></span>
-<span data-ttu-id="5b737-118">Der fünfte Befehl verwendet **Add-AzApplicationGatewayUrlPathMapConfig** , um die Konfigurationseinstellungen und die neue Pfadregel, die in diesen Einstellungen enthalten ist, ContosoApplicationGateway hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="5b737-118">The fifth command uses **Add-AzApplicationGatewayUrlPathMapConfig** to add the configuration settings and the new path rule contained within those settings to ContosoApplicationGateway.</span></span>
+<span data-ttu-id="79cb1-113">Mit diesen Befehlen wird eine neue Pfadregel für das Anwendungsgateway erstellt und dann das **Cmdlet "Add-AzApplicationGatewayUrlPathMapConfig"** verwendet, um die Regel einem Anwendungsgateway zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-113">These commands create a new application gateway path rule and then use the **Add-AzApplicationGatewayUrlPathMapConfig** cmdlet to assign that rule to an application gateway.</span></span>
+<span data-ttu-id="79cb1-114">Dazu erstellt der erste Befehl einen Objektverweis auf das Gateway "ContosoApplicationGateway".</span><span class="sxs-lookup"><span data-stu-id="79cb1-114">To do this, the first command creates an object reference to the gateway ContosoApplicationGateway.</span></span>
+<span data-ttu-id="79cb1-115">Dieser Objektverweis wird in einer Variablen mit dem Namen $Gateway.</span><span class="sxs-lookup"><span data-stu-id="79cb1-115">This object reference is stored in a variable named $Gateway.</span></span>
+<span data-ttu-id="79cb1-116">Mit den nächsten beiden Befehlen werden ein Back-End-Adresspool und ein #A0 für #A1 erstellt. diese Objekte (in den Variablen $AddressPool und $HttpSettings gespeichert) benötigt, um ein Pfadregelobjekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-116">The next two commands create a backend address pool and a backend HTTP settings object; these objects (stored in the variables $AddressPool and $HttpSettings) are needed in order to create a path rule object.</span></span>
+<span data-ttu-id="79cb1-117">Der vierte Befehl erstellt das Pfadregelobjekt und wird in einer Variablen namens $PathRuleConfig.</span><span class="sxs-lookup"><span data-stu-id="79cb1-117">The fourth command creates the path rule object and is stored in a variable named $PathRuleConfig.</span></span>
+<span data-ttu-id="79cb1-118">Der fünfte Befehl verwendet **"Add-AzApplicationGatewayUrlPathMapConfig",** um die Konfigurationseinstellungen und die neue Pfadregel, die in diesen Einstellungen enthalten sind, zu "ContosoApplicationGateway" hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-118">The fifth command uses **Add-AzApplicationGatewayUrlPathMapConfig** to add the configuration settings and the new path rule contained within those settings to ContosoApplicationGateway.</span></span>
 
-### <span data-ttu-id="5b737-119">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="5b737-119">Example 2</span></span>
+### <span data-ttu-id="79cb1-119">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="79cb1-119">Example 2</span></span>
 ```
 PS C:\> $PathRuleConfig = New-AzApplicationGatewayPathRuleConfig -Name "base" -Paths "/base" -BackendAddressPool $AddressPool -BackendHttpSettings $HttpSettings -FirewallPolicy $firewallPolicy
 ```
 
-<span data-ttu-id="5b737-120">Dieser Befehl erstellt eine Pfadregel mit dem Namen "Base", Pfaden als "/Base", BackendAddressPool als $AddressPool, BackendHttpSettings als $HttpSettings und FirewallPolicy als $firewallPolicy. NGS und die neue Pfadregel, die in diesen Einstellungen enthalten ist, in ContosoApplicationGateway.</span><span class="sxs-lookup"><span data-stu-id="5b737-120">These command creates a path-rule with the Name as "base", Paths as "/base", BackendAddressPool as $AddressPool, BackendHttpSettings as $HttpSettings and FirewallPolicy as $firewallPolicy.ngs and the new path rule contained within those settings to ContosoApplicationGateway.</span></span>
+<span data-ttu-id="79cb1-120">Dieser Befehl erstellt eine Pfadregel mit dem Namen als "basis", Pfaden als "/base", Back-EndAddressPool als $AddressPool, Back-EndHttpSettings als $HttpSettings und FirewallPolicy als $firewallPolicy.ngs und der neuen Pfadregel, die in diesen Einstellungen zu ContosoApplicationGateway enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="79cb1-120">These command creates a path-rule with the Name as "base", Paths as "/base", BackendAddressPool as $AddressPool, BackendHttpSettings as $HttpSettings and FirewallPolicy as $firewallPolicy.ngs and the new path rule contained within those settings to ContosoApplicationGateway.</span></span>
 
-## <span data-ttu-id="5b737-121">Parameter</span><span class="sxs-lookup"><span data-stu-id="5b737-121">PARAMETERS</span></span>
+## <span data-ttu-id="79cb1-121">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="79cb1-121">PARAMETERS</span></span>
 
-### <span data-ttu-id="5b737-122">-BackendAddressPool</span><span class="sxs-lookup"><span data-stu-id="5b737-122">-BackendAddressPool</span></span>
-<span data-ttu-id="5b737-123">Gibt einen Objektverweis auf eine Sammlung von Einstellungen des Back-End-Adresspools an, die den Konfigurationseinstellungen für Gateway-Pfadregeln hinzugefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5b737-123">Specifies an object reference to a collection of backend address pool settings to be added to the gateway path rules configuration settings.</span></span>
-<span data-ttu-id="5b737-124">Sie können diesen Objektverweis mithilfe des New-AzApplicationGatewayBackendAddressPool-Cmdlets und der Syntax wie folgt erstellen: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`</span><span class="sxs-lookup"><span data-stu-id="5b737-124">You can create this object reference by using the New-AzApplicationGatewayBackendAddressPool cmdlet and syntax similar to this: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`</span></span>
-<span data-ttu-id="5b737-125">Der vorhergehende Befehl fügt dem Adresspool zwei IP-Adressen (192.16.1.1 und 192.168.1.2) hinzu.</span><span class="sxs-lookup"><span data-stu-id="5b737-125">The preceding command adds two IP addresses (192.16.1.1 and 192.168.1.2) to the address pool.</span></span>
-<span data-ttu-id="5b737-126">Beachten Sie, dass die IP-Adresse in Anführungszeichen eingeschlossen und durch Kommas getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="5b737-126">Note that the IP address are enclosed in quote marks and separated by using commas.</span></span>
-<span data-ttu-id="5b737-127">Die resultierende Variable $AddressPool kann dann als Parameterwert für den *DefaultBackendAddressPool* -Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-127">The resulting variable, $AddressPool, can then be used as the parameter value for the *DefaultBackendAddressPool* parameter.</span></span>
-<span data-ttu-id="5b737-128">Der Back-End-Adresspool stellt die IP-Adressen auf den Back-End-Servern dar.</span><span class="sxs-lookup"><span data-stu-id="5b737-128">The backend address pool represents the IP addresses on the backend servers.</span></span>
-<span data-ttu-id="5b737-129">Diese IP-Adressen sollten entweder zum Subnetz des virtuellen Netzwerks gehören oder öffentliche IP-Adressen sein.</span><span class="sxs-lookup"><span data-stu-id="5b737-129">These IP addresses should either belong to the virtual network subnet or should be public IP addresses.</span></span>
-<span data-ttu-id="5b737-130">Wenn Sie diesen Parameter verwenden, können Sie den *DefaultBackendAddressPoolId* -Parameter nicht im gleichen Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-130">If you use this parameter you cannot use the *DefaultBackendAddressPoolId* parameter in the same command.</span></span>
+### <span data-ttu-id="79cb1-122">-BackendAddressPool</span><span class="sxs-lookup"><span data-stu-id="79cb1-122">-BackendAddressPool</span></span>
+<span data-ttu-id="79cb1-123">Gibt einen Objektverweis auf eine Sammlung von Einstellungen für den Back-End-Adresspool an, die den Konfigurationseinstellungen der Gatewaypfadregeln hinzugefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-123">Specifies an object reference to a collection of backend address pool settings to be added to the gateway path rules configuration settings.</span></span>
+<span data-ttu-id="79cb1-124">Sie können diesen Objektverweis mithilfe des #New-AzApplicationGatewayBackendAddressPool und einer ähnlichen Syntax erstellen: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`</span><span class="sxs-lookup"><span data-stu-id="79cb1-124">You can create this object reference by using the New-AzApplicationGatewayBackendAddressPool cmdlet and syntax similar to this: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`</span></span>
+<span data-ttu-id="79cb1-125">Der vorherige Befehl fügt dem Adresspool zwei IP-Adressen (192.16.1.1 und 192.168.1.2) hinzu.</span><span class="sxs-lookup"><span data-stu-id="79cb1-125">The preceding command adds two IP addresses (192.16.1.1 and 192.168.1.2) to the address pool.</span></span>
+<span data-ttu-id="79cb1-126">Beachten Sie, dass die IP-Adresse in Anführungszeichen eingeschlossen und durch Kommas getrennt ist.</span><span class="sxs-lookup"><span data-stu-id="79cb1-126">Note that the IP address are enclosed in quote marks and separated by using commas.</span></span>
+<span data-ttu-id="79cb1-127">Die resultierende Variable ($AddressPool) kann dann als Parameterwert für den Parameter *"DefaultBackendAddressPool" verwendet* werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-127">The resulting variable, $AddressPool, can then be used as the parameter value for the *DefaultBackendAddressPool* parameter.</span></span>
+<span data-ttu-id="79cb1-128">Der Back-End-Adresspool stellt die IP-Adressen auf den Back-End-Servern dar.</span><span class="sxs-lookup"><span data-stu-id="79cb1-128">The backend address pool represents the IP addresses on the backend servers.</span></span>
+<span data-ttu-id="79cb1-129">Diese IP-Adressen sollten entweder zum Subnetz des virtuellen Netzwerks gehören oder öffentliche IP-Adressen sein.</span><span class="sxs-lookup"><span data-stu-id="79cb1-129">These IP addresses should either belong to the virtual network subnet or should be public IP addresses.</span></span>
+<span data-ttu-id="79cb1-130">Wenn Sie diesen Parameter verwenden, können Sie den Parameter *"DefaultBackendAddressPoolId"* nicht im gleichen Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-130">If you use this parameter you cannot use the *DefaultBackendAddressPoolId* parameter in the same command.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
@@ -92,12 +92,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-131">-BackendAddressPoolId</span><span class="sxs-lookup"><span data-stu-id="5b737-131">-BackendAddressPoolId</span></span>
-<span data-ttu-id="5b737-132">Gibt die ID eines vorhandenen Back-End-Adresspools an, der den Konfigurationseinstellungen für Gateway-Pfad Regel hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="5b737-132">Specifies the ID of an existing backend address pool that can be added to the gateway path rule configuration settings.</span></span>
-<span data-ttu-id="5b737-133">Adresspool-IDs können mithilfe des Get-AzApplicationGatewayBackendAddressPool-Cmdlets zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-133">Address pool IDs can be returned by using the Get-AzApplicationGatewayBackendAddressPool cmdlet.</span></span>
-<span data-ttu-id="5b737-134">Nachdem Sie die ID haben, können Sie den *DefaultBackendAddressPoolId* -Parameter anstelle des *DefaultBackendAddressPool* -Parameters verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-134">After you have the ID you can then use the *DefaultBackendAddressPoolId* parameter instead of the *DefaultBackendAddressPool* parameter.</span></span>
-<span data-ttu-id="5b737-135">Beispiel:-DefaultBackendAddressPoolId "/Subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-RG/Providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" der Back-End-Adresspool stellt die IP-Adressen auf den Back-End-Servern dar.</span><span class="sxs-lookup"><span data-stu-id="5b737-135">For instance: -DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" The backend address pool represents the IP addresses on the backend servers.</span></span>
-<span data-ttu-id="5b737-136">Diese IP-Adressen sollten entweder zum Subnetz des virtuellen Netzwerks gehören oder öffentliche IP-Adressen sein.</span><span class="sxs-lookup"><span data-stu-id="5b737-136">These IP addresses should either belong to the virtual network subnet or should be public IP addresses.</span></span>
+### <span data-ttu-id="79cb1-131">-Back-EndAddressPoolId</span><span class="sxs-lookup"><span data-stu-id="79cb1-131">-BackendAddressPoolId</span></span>
+<span data-ttu-id="79cb1-132">Gibt die ID eines vorhandenen Back-End-Adresspools an, der den Konfigurationseinstellungen der Gatewaypfadregel hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="79cb1-132">Specifies the ID of an existing backend address pool that can be added to the gateway path rule configuration settings.</span></span>
+<span data-ttu-id="79cb1-133">Adresspool-IDs können mit dem cmdlet Get-AzApplicationGatewayBackendAddressPool zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-133">Address pool IDs can be returned by using the Get-AzApplicationGatewayBackendAddressPool cmdlet.</span></span>
+<span data-ttu-id="79cb1-134">Nachdem Sie über die ID verfügen, können Sie den Parameter *"DefaultBackendAddressPoolId"* anstelle des Parameters *"DefaultBackendAddressPool"* verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-134">After you have the ID you can then use the *DefaultBackendAddressPoolId* parameter instead of the *DefaultBackendAddressPool* parameter.</span></span>
+<span data-ttu-id="79cb1-135">Beispiel: -DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" Der Back-End-Adresspool stellt die IP-Adressen auf den Back-End-Servern dar.</span><span class="sxs-lookup"><span data-stu-id="79cb1-135">For instance: -DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" The backend address pool represents the IP addresses on the backend servers.</span></span>
+<span data-ttu-id="79cb1-136">Diese IP-Adressen sollten entweder zum Subnetz des virtuellen Netzwerks gehören oder öffentliche IP-Adressen sein.</span><span class="sxs-lookup"><span data-stu-id="79cb1-136">These IP addresses should either belong to the virtual network subnet or should be public IP addresses.</span></span>
 
 ```yaml
 Type: System.String
@@ -111,10 +111,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-137">-BackendHttpSettings</span><span class="sxs-lookup"><span data-stu-id="5b737-137">-BackendHttpSettings</span></span>
-<span data-ttu-id="5b737-138">Gibt einen Objektverweis auf eine Sammlung von Back-End-HTTP-Einstellungen an, die den Konfigurationseinstellungen für Gateway-Pfad Regel hinzugefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5b737-138">Specifies an object reference to a collection of backend HTTP settings to be added to the gateway path rule configuration settings.</span></span>
-<span data-ttu-id="5b737-139">Sie können diesen Objektverweis mithilfe des New-AzApplicationGatewayBackendHttpSettings-Cmdlets und der Syntax wie folgt erstellen: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings-Name "ContosoHttpSettings"-Port 80-Protokoll "http"-CookieBasedAffinity "disabled" die resultierende Variable, $HttpSettings, kann dann als Parameterwert für den *DefaultBackendAddressPool* -Parameter verwendet werden:-DefaultBackendHttpSettings $HttpSettings die Back-End-HTTP-Einstellungen konfigurieren Eigenschaften wie Port, Protokoll und Cookie-basierte Affinität für einen Back-End-Pool.</span><span class="sxs-lookup"><span data-stu-id="5b737-139">You can create this object reference by using the New-AzApplicationGatewayBackendHttpSettings cmdlet and syntax similar to this: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings -Name "ContosoHttpSettings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled" The resulting variable, $HttpSettings, can then be used as the parameter value for the *DefaultBackendAddressPool* parameter: -DefaultBackendHttpSettings $HttpSettings The backend HTTP settings configure properties such as port, protocol, and cookie-based affinity for a backend pool.</span></span>
-<span data-ttu-id="5b737-140">Wenn Sie diesen Parameter verwenden, können Sie den *DefaultBackendHttpSettingsId* -Parameter nicht im gleichen Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-140">If you use this parameter you cannot use the *DefaultBackendHttpSettingsId* parameter in the same command.</span></span>
+### <span data-ttu-id="79cb1-137">-Back-EndHttpSettings</span><span class="sxs-lookup"><span data-stu-id="79cb1-137">-BackendHttpSettings</span></span>
+<span data-ttu-id="79cb1-138">Gibt einen Objektverweis auf eine Sammlung von HTTP-Back-End-Einstellungen an, die den Konfigurationseinstellungen der Gatewaypfadregel hinzugefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-138">Specifies an object reference to a collection of backend HTTP settings to be added to the gateway path rule configuration settings.</span></span>
+<span data-ttu-id="79cb1-139">Sie können diesen Objektverweis mithilfe des Cmdlets New-AzApplicationGatewayBackendHttpSettings und einer ähnlichen Syntax erstellen: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings -Name "ContosoHttpSettings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled" Die resultierende Variable, $HttpSettings kann dann als Parameterwert für den *Parameter "DefaultBackendAddressPool"* verwendet werden: -DefaultBackendHttpSettings $HttpSettings Die Back-End-HTTP-Einstellungen konfigurieren Eigenschaften wie Port, Protokoll und cookiebasierte Affinität für einen Back-End-Pool.</span><span class="sxs-lookup"><span data-stu-id="79cb1-139">You can create this object reference by using the New-AzApplicationGatewayBackendHttpSettings cmdlet and syntax similar to this: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings -Name "ContosoHttpSettings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled" The resulting variable, $HttpSettings, can then be used as the parameter value for the *DefaultBackendAddressPool* parameter: -DefaultBackendHttpSettings $HttpSettings The backend HTTP settings configure properties such as port, protocol, and cookie-based affinity for a backend pool.</span></span>
+<span data-ttu-id="79cb1-140">Wenn Sie diesen Parameter verwenden, können Sie den Parameter *"DefaultBackendHttpSettingsId"* nicht im gleichen Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-140">If you use this parameter you cannot use the *DefaultBackendHttpSettingsId* parameter in the same command.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -128,12 +128,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-141">-BackendHttpSettingsId</span><span class="sxs-lookup"><span data-stu-id="5b737-141">-BackendHttpSettingsId</span></span>
-<span data-ttu-id="5b737-142">Gibt die ID einer vorhandenen Back-End-HTTP-Einstellungs Sammlung an, die den Konfigurationseinstellungen für Gateway-Pfad Regel hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="5b737-142">Specifies the ID of an existing backend HTTP settings collection that can be added to the gateway path rule configuration settings.</span></span>
-<span data-ttu-id="5b737-143">HTTP-Einstellungs-IDs können mithilfe des Get-AzApplicationGatewayBackendHttpSettings-Cmdlets zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-143">HTTP setting IDs can be returned by using the Get-AzApplicationGatewayBackendHttpSettings cmdlet.</span></span>
-<span data-ttu-id="5b737-144">Nachdem Sie die ID haben, können Sie den *DefaultBackendHttpSettingsId* -Parameter anstelle des *DefaultBackendHttpSettings* -Parameters verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-144">After you have the ID you can then use the *DefaultBackendHttpSettingsId* parameter instead of the *DefaultBackendHttpSettings* parameter.</span></span>
-<span data-ttu-id="5b737-145">Beispiel:-DefaultBackendSettings-ID "/Subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-RG/Providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" die HTTP-Back-End-Einstellungen konfigurieren Eigenschaften wie Port-, Protokoll-und Cookie-basierter Affinität für einen Back-End-Pool.</span><span class="sxs-lookup"><span data-stu-id="5b737-145">For instance: -DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" The backend HTTP settings configure properties such as port, protocol, and cookie-based affinity for a backend pool.</span></span>
-<span data-ttu-id="5b737-146">Wenn Sie diesen Parameter verwenden, können Sie den *DefaultBackendHttpSettings* -Parameter nicht im gleichen Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-146">If you use this parameter you cannot use the *DefaultBackendHttpSettings* parameter in the same command.</span></span>
+### <span data-ttu-id="79cb1-141">-Back-EndHttpSettingsId</span><span class="sxs-lookup"><span data-stu-id="79cb1-141">-BackendHttpSettingsId</span></span>
+<span data-ttu-id="79cb1-142">Gibt die ID einer vorhandenen HTTP-Back-End-Einstellungssammlung an, die den Konfigurationseinstellungen der Gatewaypfadregel hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="79cb1-142">Specifies the ID of an existing backend HTTP settings collection that can be added to the gateway path rule configuration settings.</span></span>
+<span data-ttu-id="79cb1-143">HTTP-Einstellungs-IDs können mit dem cmdlet Get-AzApplicationGatewayBackendHttpSettings zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-143">HTTP setting IDs can be returned by using the Get-AzApplicationGatewayBackendHttpSettings cmdlet.</span></span>
+<span data-ttu-id="79cb1-144">Nachdem Sie die ID erhalten haben, können Sie anstelle des Parameters *"DefaultBackendHttpSettingsId"* den Parameter *"DefaultBackendHttpSettings"* verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-144">After you have the ID you can then use the *DefaultBackendHttpSettingsId* parameter instead of the *DefaultBackendHttpSettings* parameter.</span></span>
+<span data-ttu-id="79cb1-145">Beispiel: -DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backHttpSettingsCollection/ContosoHttpSettings" Die Back-End-HTTP-Einstellungen konfigurieren Eigenschaften wie Port, und cookiebasierte Affinität für einen Back-End-Pool.</span><span class="sxs-lookup"><span data-stu-id="79cb1-145">For instance: -DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" The backend HTTP settings configure properties such as port, protocol, and cookie-based affinity for a backend pool.</span></span>
+<span data-ttu-id="79cb1-146">Wenn Sie diesen Parameter verwenden, können Sie den Parameter *"DefaultBackendHttpSettings"* nicht in demselben Befehl verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-146">If you use this parameter you cannot use the *DefaultBackendHttpSettings* parameter in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -147,10 +147,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-147">-FirewallPolicy</span><span class="sxs-lookup"><span data-stu-id="5b737-147">-FirewallPolicy</span></span>
-<span data-ttu-id="5b737-148">Gibt den Objektverweis auf eine Firewall-Richtlinie auf oberster Ebene an.</span><span class="sxs-lookup"><span data-stu-id="5b737-148">Specifies the object reference to a top-level firewall policy.</span></span> <span data-ttu-id="5b737-149">Der Objektverweis kann mithilfe New-AzApplicationGatewayWebApplicationFirewallPolicy-Cmdlets erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-149">The object reference can be created by using New-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.</span></span>
-<span data-ttu-id="5b737-150">$firewallPolicy = New-AzApplicationGatewayFirewallPolicy-Name "wafPolicy1"-ResourceGroup "rgName" eine mit obigem Unifiedgroup erstellte Firewall-Richtlinie kann auf Pfad-Regelebene verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-150">$firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName" A firewall policy created using the above commandlet can be referred at a path-rule level.</span></span> <span data-ttu-id="5b737-151">der obige Befehl würde eine Standardrichtlinien Einstellung und verwaltete Regeln erstellen.</span><span class="sxs-lookup"><span data-stu-id="5b737-151">he above command would create a default policy settings and managed rules.</span></span>
-<span data-ttu-id="5b737-152">Anstelle der Standardwerte können Benutzer PolicySettings, ManagedRules, mithilfe von New-AzApplicationGatewayFirewallPolicySettings und New-AzApplicationGatewayFirewallPolicyManagedRules angeben.</span><span class="sxs-lookup"><span data-stu-id="5b737-152">Instead of the default values, users can specify PolicySettings, ManagedRules by using New-AzApplicationGatewayFirewallPolicySettings and New-AzApplicationGatewayFirewallPolicyManagedRules respectively.</span></span>
+### <span data-ttu-id="79cb1-147">-FirewallPolicy</span><span class="sxs-lookup"><span data-stu-id="79cb1-147">-FirewallPolicy</span></span>
+<span data-ttu-id="79cb1-148">Gibt den Objektverweis auf eine Firewallrichtlinie der obersten Ebene an.</span><span class="sxs-lookup"><span data-stu-id="79cb1-148">Specifies the object reference to a top-level firewall policy.</span></span> <span data-ttu-id="79cb1-149">Der Objektverweis kann mithilfe eines cmdlets New-AzApplicationGatewayWebApplicationFirewallPolicy erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-149">The object reference can be created by using New-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.</span></span>
+<span data-ttu-id="79cb1-150">$firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName" Auf eine Firewallrichtlinie, die mit dem obigen Befehlslet erstellt wurde, kann auf Pfadregelebene verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-150">$firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName" A firewall policy created using the above commandlet can be referred at a path-rule level.</span></span> <span data-ttu-id="79cb1-151">Der oben aufgeführte Befehl würde standardmäßige Richtlinieneinstellungen und verwaltete Regeln erstellen.</span><span class="sxs-lookup"><span data-stu-id="79cb1-151">he above command would create a default policy settings and managed rules.</span></span>
+<span data-ttu-id="79cb1-152">Statt der Standardwerte können Benutzer "PolicySettings", "ManagedRules" New-AzApplicationGatewayFirewallPolicySettings und New-AzApplicationGatewayFirewallPolicyManagedRules angeben.</span><span class="sxs-lookup"><span data-stu-id="79cb1-152">Instead of the default values, users can specify PolicySettings, ManagedRules by using New-AzApplicationGatewayFirewallPolicySettings and New-AzApplicationGatewayFirewallPolicyManagedRules respectively.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy
@@ -163,10 +163,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-153">-FirewallPolicyId</span><span class="sxs-lookup"><span data-stu-id="5b737-153">-FirewallPolicyId</span></span>
-<span data-ttu-id="5b737-154">Gibt die ID einer vorhandenen Webanwendungs Firewall-Ressource auf oberster Ebene an.</span><span class="sxs-lookup"><span data-stu-id="5b737-154">Specifies the ID of an existing top-level web application firewall resource.</span></span>
-<span data-ttu-id="5b737-155">Firewall-Richtlinien-IDs können mithilfe des Get-AzApplicationGatewayWebApplicationFirewallPolicy-Cmdlets zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5b737-155">Firewall policy IDs can be returned by using the Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.</span></span> <span data-ttu-id="5b737-156">Nachdem wir die ID haben, können Sie *FirewallPolicyId* -Parameter anstelle des *FirewallPolicy* -Parameters verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b737-156">After we have the ID you can use *FirewallPolicyId* parameter instead of *FirewallPolicy* parameter.</span></span>
-<span data-ttu-id="5b737-157">Beispiel:-FirewallPolicyId "/Subscriptions/<Abonnement-ID>/resourceGroups/<Resource-Group-ID>/Providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/ <firewallPolicyName> "</span><span class="sxs-lookup"><span data-stu-id="5b737-157">For instance: -FirewallPolicyId  "/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/<firewallPolicyName>"</span></span>
+### <span data-ttu-id="79cb1-153">-FirewallPolicyId</span><span class="sxs-lookup"><span data-stu-id="79cb1-153">-FirewallPolicyId</span></span>
+<span data-ttu-id="79cb1-154">Gibt die ID einer vorhandenen Webanwendungsfirewallressource der obersten Ebene an.</span><span class="sxs-lookup"><span data-stu-id="79cb1-154">Specifies the ID of an existing top-level web application firewall resource.</span></span>
+<span data-ttu-id="79cb1-155">Firewallrichtlinien-IDs können mit dem cmdlet Get-AzApplicationGatewayWebApplicationFirewallPolicy zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-155">Firewall policy IDs can be returned by using the Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet.</span></span> <span data-ttu-id="79cb1-156">Nachdem wir die ID haben, können Sie den Parameter *"FirewallPolicyId"* anstelle des Parameters *"FirewallPolicy"* verwenden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-156">After we have the ID you can use *FirewallPolicyId* parameter instead of *FirewallPolicy* parameter.</span></span>
+<span data-ttu-id="79cb1-157">Beispiel: -FirewallPolicyId "/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/ <firewallPolicyName> "</span><span class="sxs-lookup"><span data-stu-id="79cb1-157">For instance: -FirewallPolicyId  "/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/<firewallPolicyName>"</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy
@@ -179,8 +179,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-158">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5b737-158">-DefaultProfile</span></span>
-<span data-ttu-id="5b737-159">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="5b737-159">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="79cb1-158">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="79cb1-158">-DefaultProfile</span></span>
+<span data-ttu-id="79cb1-159">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="79cb1-159">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -194,8 +194,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-160">-Name</span><span class="sxs-lookup"><span data-stu-id="5b737-160">-Name</span></span>
-<span data-ttu-id="5b737-161">Gibt den Namen der vom Cmdlet erstellten Pfad Regelkonfiguration an.</span><span class="sxs-lookup"><span data-stu-id="5b737-161">Specifies the name of the path rule configuration that this cmdlet creates.</span></span>
+### <span data-ttu-id="79cb1-160">-Name</span><span class="sxs-lookup"><span data-stu-id="79cb1-160">-Name</span></span>
+<span data-ttu-id="79cb1-161">Gibt den Namen der Pfadregelkonfiguration an, die von diesem Cmdlet erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="79cb1-161">Specifies the name of the path rule configuration that this cmdlet creates.</span></span>
 
 ```yaml
 Type: System.String
@@ -209,8 +209,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-162">-Pfade</span><span class="sxs-lookup"><span data-stu-id="5b737-162">-Paths</span></span>
-<span data-ttu-id="5b737-163">Gibt mindestens eine Application Gateway Path-Regel an.</span><span class="sxs-lookup"><span data-stu-id="5b737-163">Specifies one or more application gateway path rules.</span></span>
+### <span data-ttu-id="79cb1-162">-Paths</span><span class="sxs-lookup"><span data-stu-id="79cb1-162">-Paths</span></span>
+<span data-ttu-id="79cb1-163">Gibt eine oder mehrere Regeln für den Anwendungsgatewaypfad an.</span><span class="sxs-lookup"><span data-stu-id="79cb1-163">Specifies one or more application gateway path rules.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -224,8 +224,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-164">-RedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="5b737-164">-RedirectConfiguration</span></span>
-<span data-ttu-id="5b737-165">Application Gateway RedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="5b737-165">Application gateway RedirectConfiguration</span></span>
+### <span data-ttu-id="79cb1-164">-RedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="79cb1-164">-RedirectConfiguration</span></span>
+<span data-ttu-id="79cb1-165">RedirectConfiguration des Anwendungsgateways</span><span class="sxs-lookup"><span data-stu-id="79cb1-165">Application gateway RedirectConfiguration</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
@@ -239,8 +239,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-166">-RedirectConfigurationId</span><span class="sxs-lookup"><span data-stu-id="5b737-166">-RedirectConfigurationId</span></span>
-<span data-ttu-id="5b737-167">ID des Application Gateway RedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="5b737-167">ID of the application gateway RedirectConfiguration</span></span>
+### <span data-ttu-id="79cb1-166">-RedirectConfigurationId</span><span class="sxs-lookup"><span data-stu-id="79cb1-166">-RedirectConfigurationId</span></span>
+<span data-ttu-id="79cb1-167">ID des Anwendungsgateways RedirectConfiguration</span><span class="sxs-lookup"><span data-stu-id="79cb1-167">ID of the application gateway RedirectConfiguration</span></span>
 
 ```yaml
 Type: System.String
@@ -254,8 +254,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-168">-RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="5b737-168">-RewriteRuleSet</span></span>
-<span data-ttu-id="5b737-169">Application Gateway RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="5b737-169">Application gateway RewriteRuleSet</span></span>
+### <span data-ttu-id="79cb1-168">-RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="79cb1-168">-RewriteRuleSet</span></span>
+<span data-ttu-id="79cb1-169">Application gateway RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="79cb1-169">Application gateway RewriteRuleSet</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet
@@ -269,8 +269,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-170">-RewriteRuleSetId</span><span class="sxs-lookup"><span data-stu-id="5b737-170">-RewriteRuleSetId</span></span>
-<span data-ttu-id="5b737-171">ID des Application Gateway RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="5b737-171">ID of the application gateway RewriteRuleSet</span></span>
+### <span data-ttu-id="79cb1-170">-RewriteRuleSetId</span><span class="sxs-lookup"><span data-stu-id="79cb1-170">-RewriteRuleSetId</span></span>
+<span data-ttu-id="79cb1-171">ID des Anwendungsgateways "RewriteRuleSet"</span><span class="sxs-lookup"><span data-stu-id="79cb1-171">ID of the application gateway RewriteRuleSet</span></span>
 
 ```yaml
 Type: System.String
@@ -284,37 +284,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5b737-172">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5b737-172">CommonParameters</span></span>
-<span data-ttu-id="5b737-173">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5b737-173">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5b737-174">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="5b737-174">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="79cb1-172">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="79cb1-172">CommonParameters</span></span>
+<span data-ttu-id="79cb1-173">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="79cb1-173">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="79cb1-174">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="79cb1-174">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="5b737-175">Eingaben</span><span class="sxs-lookup"><span data-stu-id="5b737-175">INPUTS</span></span>
+## <span data-ttu-id="79cb1-175">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="79cb1-175">INPUTS</span></span>
 
-### <span data-ttu-id="5b737-176">Keine</span><span class="sxs-lookup"><span data-stu-id="5b737-176">None</span></span>
+### <span data-ttu-id="79cb1-176">Keine</span><span class="sxs-lookup"><span data-stu-id="79cb1-176">None</span></span>
 
-## <span data-ttu-id="5b737-177">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="5b737-177">OUTPUTS</span></span>
+## <span data-ttu-id="79cb1-177">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="79cb1-177">OUTPUTS</span></span>
 
-### <span data-ttu-id="5b737-178">Microsoft. Azure. Commands. Network. Models. PSApplicationGatewayPathRule</span><span class="sxs-lookup"><span data-stu-id="5b737-178">Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule</span></span>
+### <span data-ttu-id="79cb1-178">Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule</span><span class="sxs-lookup"><span data-stu-id="79cb1-178">Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule</span></span>
 
-## <span data-ttu-id="5b737-179">Notizen</span><span class="sxs-lookup"><span data-stu-id="5b737-179">NOTES</span></span>
+## <span data-ttu-id="79cb1-179">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="79cb1-179">NOTES</span></span>
 
-## <span data-ttu-id="5b737-180">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="5b737-180">RELATED LINKS</span></span>
+## <span data-ttu-id="79cb1-180">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="79cb1-180">RELATED LINKS</span></span>
 
-[<span data-ttu-id="5b737-181">Add-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-181">Add-AzApplicationGatewayUrlPathMapConfig</span></span>](./Add-AzApplicationGatewayUrlPathMapConfig.md)
+[<span data-ttu-id="79cb1-181">Add-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-181">Add-AzApplicationGatewayUrlPathMapConfig</span></span>](./Add-AzApplicationGatewayUrlPathMapConfig.md)
 
-[<span data-ttu-id="5b737-182">Get-AzApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="5b737-182">Get-AzApplicationGateway</span></span>](./Get-AzApplicationGateway.md)
+[<span data-ttu-id="79cb1-182">Get-AzApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="79cb1-182">Get-AzApplicationGateway</span></span>](./Get-AzApplicationGateway.md)
 
-[<span data-ttu-id="5b737-183">Get-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-183">Get-AzApplicationGatewayUrlPathMapConfig</span></span>](./Get-AzApplicationGatewayUrlPathMapConfig.md)
+[<span data-ttu-id="79cb1-183">Get-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-183">Get-AzApplicationGatewayUrlPathMapConfig</span></span>](./Get-AzApplicationGatewayUrlPathMapConfig.md)
 
-[<span data-ttu-id="5b737-184">Neu – AzApplicationGatewayBackendAddressPool</span><span class="sxs-lookup"><span data-stu-id="5b737-184">New-AzApplicationGatewayBackendAddressPool</span></span>](./New-AzApplicationGatewayBackendAddressPool.md)
+[<span data-ttu-id="79cb1-184">New-AzApplicationGatewayBackendAddressPool</span><span class="sxs-lookup"><span data-stu-id="79cb1-184">New-AzApplicationGatewayBackendAddressPool</span></span>](./New-AzApplicationGatewayBackendAddressPool.md)
 
-[<span data-ttu-id="5b737-185">Neu – AzApplicationGatewayBackendHttpSettings</span><span class="sxs-lookup"><span data-stu-id="5b737-185">New-AzApplicationGatewayBackendHttpSettings</span></span>](./New-AzApplicationGatewayBackendHttpSettings.md)
 
-[<span data-ttu-id="5b737-186">Neu – AzApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-186">New-AzApplicationGatewayPathRuleConfig</span></span>](./New-AzApplicationGatewayPathRuleConfig.md)
+[<span data-ttu-id="79cb1-185">New-AzApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-185">New-AzApplicationGatewayPathRuleConfig</span></span>](./New-AzApplicationGatewayPathRuleConfig.md)
 
-[<span data-ttu-id="5b737-187">Neu – AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-187">New-AzApplicationGatewayUrlPathMapConfig</span></span>](./New-AzApplicationGatewayUrlPathMapConfig.md)
+[<span data-ttu-id="79cb1-186">New-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-186">New-AzApplicationGatewayUrlPathMapConfig</span></span>](./New-AzApplicationGatewayUrlPathMapConfig.md)
 
-[<span data-ttu-id="5b737-188">Remove-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-188">Remove-AzApplicationGatewayUrlPathMapConfig</span></span>](./Remove-AzApplicationGatewayUrlPathMapConfig.md)
+[<span data-ttu-id="79cb1-187">Remove-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-187">Remove-AzApplicationGatewayUrlPathMapConfig</span></span>](./Remove-AzApplicationGatewayUrlPathMapConfig.md)
 
-[<span data-ttu-id="5b737-189">Satz-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="5b737-189">Set-AzApplicationGatewayUrlPathMapConfig</span></span>](./Set-AzApplicationGatewayUrlPathMapConfig.md)
+[<span data-ttu-id="79cb1-188">Set-AzApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="79cb1-188">Set-AzApplicationGatewayUrlPathMapConfig</span></span>](./Set-AzApplicationGatewayUrlPathMapConfig.md)
 
 
