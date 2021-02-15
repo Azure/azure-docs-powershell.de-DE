@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
-ms.openlocfilehash: a3b5b20eac34076dd6a5490a5d9cf1a5e2c49684
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: bc08305d7aa604dd9c7540573ffb5a199e85b287
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660926"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402132"
 ---
 # Add-AzExpressRouteCircuitConnectionConfig
 
-## Synopsis
-Fügt eine Schaltungs Verbindungskonfiguration zum privaten Peering eines Express-Route-Schaltkreises hinzu. 
+## SYNOPSIS
+Fügt dem privaten Peering eines Expressroutenkreises eine Verbindungskonfiguration hinzu. 
 
-## Syntax
+## SYNTAX
 
 ### SetByResource (Standard)
 ```
@@ -34,12 +34,12 @@ Add-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Add-AzExpressRouteCircuitConnectionConfig** " fügt eine Verbindungskonfiguration für private Peering für einen Express Route-Schaltkreis hinzu. So können Sie zwei Express-Route-Schaltkreise über Regionen oder Abonnements hinweg Peering. Beachten Sie, dass Sie nach dem Ausführen von **Add-AzExpressRouteCircuitPeeringConfig** das Set-AzExpressRouteCircuit-Cmdlet aufrufen müssen, um die Konfiguration zu aktivieren.
+## BESCHREIBUNG
+Das **Cmdlet "Add-AzExpressRouteCircuitConnectionConfig"** fügt dem privaten Peering für einen "ExpressRoute"-Schaltkreis eine Verbindungskonfiguration hinzu. Dies ermöglicht das Peering von zwei Expressrouten über Regionen oder Abonnements hinweg. Beachten Sie, dass Sie nach der Ausführung von **"Add-AzExpressRouteCircuitPeeringConfig"** das cmdlet Set-AzExpressRouteCircuit aufrufen müssen, um die Konfiguration zu aktivieren.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Hinzufügen einer Leitungs Verbindungsressource zu einem vorhandenen Express Route-Schaltkreis
+### Beispiel 1: Hinzufügen einer Schaltkreisverbindungsressource zu einem vorhandenen
 ```
 $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
 $circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
@@ -48,17 +48,17 @@ Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressR
 Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-### Beispiel 2: Hinzufügen einer Leitungs Verbindungskonfiguration mithilfe von Rohrleitungen zu einem vorhandenen Express Route-Schaltkreis
+### Beispiel 2: Hinzufügen einer Verbindungskonfiguration mithilfe von Piping zu einem vorhandenen "ExpressRoute"-Schaltkreis
 ```
 $circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
 $addressSpace = '60.0.0.0/29'
 Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -PeerExpressRouteCircuitPeering $circuit_peer.Peerings[0].Id -AddressPrefix $addressSpace -AuthorizationKey $circuit_peer.Authorizations[0].AuthorizationKey |Set-AzExpressRouteCircuit
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -AddressPrefix
-Ein minimaler/29 Kunden Adressraum zum Erstellen von VxLan-Tunneln zwischen Express-Route-Schaltkreisen
+Mindestens /29 Kundenad address space to create VxLan tunnels between Express Route Circuits
 
 ```yaml
 Type: System.String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-Autorisierungsschlüssel für Peer-Express-Route-Schaltkreis in einem anderen Abonnement. Die Autorisierung auf einem Peer-Schaltkreis kann mithilfe vorhandener Befehle erstellt werden.
+Autorisierungsschlüssel für peer Express Route Circuit in einem anderen Abonnement. Autorisierung für Peerkreise kann mit vorhandenen Befehlen erstellt werden.
 
 ```yaml
 Type: System.String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-Der Express Route-Schaltkreis wird geändert. Hierbei handelt es sich um ein Azure-Objekt, das vom Cmdlet **Get-AzExpressRouteCircuit** zurückgegeben wird.
+Der zu ändernde ExpressRoute-Schaltkreis. Dies ist das Azure-Objekt, das vom **Cmdlet "Get-AzExpressRouteCircuit"** zurückgegeben wird.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name der hinzuzufügenden Schaltkreis Verbindungsressource.
+Der Name der Verbindungsressource, die hinzugefügt werden soll.
 
 ```yaml
 Type: System.String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerExpressRouteCircuitPeering
-Ressourcen-ID für privates Peering des Remote-Schaltkreises, der mit dem aktuellen Schaltkreis Peering wird.
+Ressourcen-ID für privates Peering eines Remotekreises, das mit dem aktuellen Schaltkreis peered wird.
 
 ```yaml
 Type: System.String
@@ -147,8 +147,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,7 +162,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
@@ -178,21 +178,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuit
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuit
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
 
@@ -200,10 +200,10 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-Erro
 
 [Remove-AzExpressRouteCircuitConnectionConfig](Remove-AzExpressRouteCircuitConnectionConfig.md)
 
-[Satz-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
 
-[Neu – AzExpressRouteCircuitConnectionConfig](New-AzExpressRouteCircuitConnectionConfig.md)
 
-[Satz-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
+
+
+[Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
 
 [Get-AzExpressRouteCircuit](Get-AzExpressRouteCircuit.md)
