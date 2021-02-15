@@ -1,56 +1,63 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-ms.assetid: 2B82F5BA-ABC6-4B37-B641-353CFE814290
-online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Update-AzSqlServerAdvancedThreatProtectionSetting
+ms.assetid: 457FD595-D5E1-45C4-9DB8-C3C6C30A0E94
+online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Update-AzSqlDatabaseAdvancedThreatProtectionSetting
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlServerAdvancedThreatProtectionSetting.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlServerAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 2362d8d11d60da4a1a0ea2433f44e07653423c0c
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
+ms.openlocfilehash: baa3e3d4b272bccab5fe33b9af05edc9ed254236
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100398885"
+ms.locfileid: "100398902"
 ---
-# Update-AzSqlServerAdvancedThreatProtectionSetting
+# Update-AzSqlDatabaseAdvancedThreatProtectionSetting
 
 ## SYNOPSIS
-Legt eine erweiterte Threat Protection-Einstellung auf einem Server fest.
+Legt eine erweiterte Threat Protection-Einstellung für eine Datenbank fest.
 
 ## SYNTAX
 
 ```
-Update-AzSqlServerAdvancedThreatProtectionSetting [-PassThru] [-NotificationRecipientsEmails <String>]
+Update-AzSqlDatabaseAdvancedThreatProtectionSetting [-PassThru] [-NotificationRecipientsEmails <String>]
  [-EmailAdmins <Boolean>] [-ExcludedDetectionType <String[]>] [-StorageAccountName <String>]
- [-RetentionInDays <UInt32>] -ServerName <String> [-ResourceGroupName] <String>
+ [-RetentionInDays <UInt32>] [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## BESCHREIBUNG
-Das **Cmdlet "Update-AzSqlServerAdvancedThreatProtectionSetting"** legt eine erweiterte Threat Protection-Einstellung auf einem Azure SQL fest.
-Um advanced Threat Protection auf einem Server zu aktivieren, müssen auf diesem Server Überwachungseinstellungen aktiviert sein.
-Um dieses Cmdlet zu verwenden, geben Sie die *Parameter "ResourceGroupName"* und "ServerName" an, um den Server zu identifizieren.
+Das **Cmdlet "Update-AzSqlDatabaseAdvancedThreatProtectionSetting"** legt eine erweiterte Threat Protection-Einstellung für eine Azure SQL fest.
+Um erweiterten Bedrohungsschutz für eine Datenbank zu aktivieren, müssen für diese Datenbank Überwachungseinstellungen aktiviert sein.
+Um dieses Cmdlet zu verwenden, geben Sie die Parameter *"ResourceGroupName",* *"ServerName"* und *"DatabaseName"* an, um die Datenbank zu identifizieren.
+Dieses Cmdlet wird auch vom Dienst SQL Server Stretch Database in Azure unterstützt.
 
 ## BEISPIELE
 
 ### Beispiel 1: Festlegen der erweiterten Threat Protection-Einstellungen für eine Datenbank
-```powershell
-PS C:\>Update-AzSqlServerAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability","SQL_Injection" -StorageAccountName "mystorageAccount"
+```
+PS C:\>Update-AzSqlDatabaseAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability", "SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-Mit diesem Befehl werden die erweiterten Threat Protection-Einstellungen für einen Server namens Server01 festgelegt.
-
-### Beispiel 2
-
-Legt eine erweiterte Threat Protection-Einstellung auf einem Server fest. (automatisch generiert)
-
-```powershell
-<!-- Aladdin Generated Example -->
-Update-AzSqlServerAdvancedThreatProtectionSetting -EmailAdmins $false -ResourceGroupName 'ResourceGroup11' -RetentionInDays <UInt32> -ServerName 'Server01' -StorageAccountName 'mystorageAccount'
-```
+Mit diesem Befehl werden die erweiterten Threat Protection-Einstellungen für eine Datenbank mit dem Namen "Database01" auf dem Server "Server01" festgelegt.
 
 ## PARAMETERS
+
+### -DatabaseName
+Gibt den Namen der Datenbank an, in der die Einstellungen festgelegt sind.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
@@ -134,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gibt den Namen der Ressourcengruppe an, zu der der Server gehört.
+Gibt den Namen der Ressourcengruppe an, der der Server zugewiesen ist.
 
 ```yaml
 Type: System.String
@@ -172,14 +179,14 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Gibt den Namen des zu verwendenden Speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht bereitgestellt wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der erweiterten Threat Protection-Einstellungen der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass einstellungen für die Erkennung von Datenbankbedrohungen definiert werden und dieser Parameter nicht bereitgestellt wird, kann das Cmdlet nicht verwendet werden.
+Gibt den Namen des zu verwendenden Speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht bereitgestellt wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der erweiterten Threat Protection-Einstellungen der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass erweiterte Threat Protection-Einstellungen für eine Datenbank definiert werden und dieser Parameter nicht bereitgestellt wird, kann das Cmdlet nicht verwendet werden.
 
 ```yaml
 Type: System.String
@@ -239,7 +246,7 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ## AUSGABEN
 
-### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.ServerThreatDetectionsettingsModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseThreatDetectionsettingsModel
 
 ## HINWEISE
 
