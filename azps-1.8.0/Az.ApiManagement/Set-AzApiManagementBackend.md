@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
-ms.openlocfilehash: ce27a151ebb6d778ed647fb81909c44c11edbf8e
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 0ac89ed099029fbbabe90e07da7ba9c204449db9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93821007"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400738"
 ---
 # Set-AzApiManagementBackend
 
-## Synopsis
+## SYNOPSIS
 Aktualisiert ein Back-End.
 
-## Syntax
+## SYNTAX
 
 ```
 Set-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String> [-Protocol <String>]
@@ -28,21 +28,21 @@ Set-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Aktualisiert ein vorhandenes Back-End in der API-Verwaltung.
+## BESCHREIBUNG
+Aktualisiert ein vorhandenes Back-End in der Api-Verwaltung.
 
-## Beispiele
+## BEISPIELE
 
-### Aktualisiert die Beschreibung des Back-End-123
+### Aktualisiert die Beschreibung von Back-End 123
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Set-AzApiManagementBackend -Context $apimContext -BackendId 123 -Description "updated description" -PassThru
 ```
 
-## Parameter
+## PARAMETERS
 
-### -Back-End-Nr
-Bezeichner des neuen Back-Ends.
+### -BackendId
+Bezeichner des neuen Backends.
 Dieser Parameter ist erforderlich.
 
 ```yaml
@@ -73,8 +73,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### – Anmeldeinformationen
-Anmeldeinformationen, die beim Gespräch mit dem Back-End verwendet werden sollten.
+### -Credential
+Anmeldeinformationen, die verwendet werden sollten, wenn Sie mit dem Back-End sprechen.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Gibt an, dass dieses Cmdlet die  **PsApiManagementBackend** zurückgibt, die von diesem Cmdlet geändert werden.
+Gibt an, dass dieses Cmdlet den  **PsApiManagementBackend zurückgibt,** den dieses Cmdlet ändert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -135,9 +135,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Protokoll
-Back-End-Kommunikationsprotokoll (http oder SOAP).
-Dieser Parameter ist optional
+### -Protocol
+Back-End-Kommunikationsprotokoll (http oder soap).
+Dieser Parameter ist optional.
 
 ```yaml
 Type: System.String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-Proxy Server-Details, die beim Senden einer Anforderung an das Back-End verwendet werden.
+Proxyserverdetails, die beim Senden einer Anforderung an das Back-End verwendet werden.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -168,10 +168,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Verwaltungs-URI der Ressource im externen System.
 Dieser Parameter ist optional.
-Diese URL kann die Arm-Ressourcen-ID von Logik-apps, Funktions-Apps oder API-apps sein.
+Diese URL kann die Arm-Ressourcen-ID von Logik-Apps, Funktions- oder Api-Apps sein.
 
 ```yaml
 Type: System.String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceFabricCluster
-Details zum Back-Fabric-Cluster-Back-End Dieser Parameter ist optional.
+Service Fabric Cluster Back-End-Details. Dieser Parameter ist optional.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateChainValidation
-Gibt an, ob die Zertifikatkettenüberprüfung beim Gespräch mit dem Back-End übersprungen werden soll.
+Gibt an, ob die Zertifikatkettenüberprüfung beim Sprechen mit dem Back-End übersprungen werden soll.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateNameValidation
-Gibt an, ob die Zertifikatnamen Überprüfung beim Gespräch mit dem Back-End übersprungen werden soll.
+Gibt an, ob die Zertifikatnamenüberprüfung beim Gespräch mit dem Backend übersprungen werden soll.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -264,8 +264,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -279,7 +279,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
@@ -295,38 +295,38 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[System. Boolean, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementBackendCredential
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementBackendProxy
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementServiceFabric
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-### System. Management. Automation. Switchparameter
+### System.Management.Automation.SwitchParameter
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementBackend
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackend](./New-AzApiManagementBackend.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
 
-[Neu – AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
 
 [Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)

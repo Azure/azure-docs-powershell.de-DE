@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementRegion.md
-ms.openlocfilehash: fce2d356b7da56d2b93fa8634e737f96f54da178
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 3f9c88177d3f791acdd0be5c81eec2fb5bc6911c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93820955"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400704"
 ---
 # Update-AzApiManagementRegion
 
-## Synopsis
-Aktualisiert den vorhandenen Bereitstellungsbereich in PsApiManagement-Instanz.
+## SYNOPSIS
+Aktualisiert die vorhandene Bereitstellungsregion in der PsApiManagement-Instanz.
 
-## Syntax
+## SYNTAX
 
 ```
 Update-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> -Sku <PsApiManagementSku>
@@ -26,14 +26,14 @@ Update-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String>
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **Update-AzApiManagementRegion** aktualisiert eine vorhandene Instanz des Typs **Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagementRegion** in einer Sammlung von **AdditionalRegions** -Objekten einer bereitgestellten Instanz des Typs **Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagement**.
-Dieses Cmdlet stellt nichts bereit, sondern aktualisiert eine Instanz von **PsApiManagement** im Arbeitsspeicher.
-Verwenden Sie zum Aktualisieren einer Bereitstellung einer API-Verwaltung das geänderte **PsApiManagementInstance** -Cmdlet für das Update-AzApiManagementDeployment-Cmdlet.
+## BESCHREIBUNG
+Das **Cmdlet "Update-AzApiManagementRegion"** aktualisiert eine vorhandene Instanz des Typs **"Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion"** in einer Sammlung von **"AdditionalRegions"-Objekten** einer bereitgestellten Instanz des Typs **"Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement".**
+Mit diesem Cmdlet wird nichts bereitgestellt, sondern eine Instanz von **PsApiManagement** im Arbeitsspeicher aktualisiert.
+Um eine Bereitstellung einer API Management zu aktualisieren, verwenden Sie die geänderte **PsApiManagementInstance** für das Set-AzApiManagement Cmdlet.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: erhöht die Kapazität des zusätzlichen Bereichs in einer PsApiManagement-Instanz
+### Beispiel 1: Erhöht die Kapazität der zusätzlichen Region in einer PsApiManagement-Instanz.
 ```powershell
 PS C:\>$apimService = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName
 PS C:\>$apimService = Update-AzApiManagementRegion -ApiManagement $apimService -Location "North Central US" -Capacity 2 -Sku Premium
@@ -42,12 +42,12 @@ PS C:\>$apimService = Update-AzApiManagementRegion -ApiManagement $apimService -
 PS C:\>$updatedService = Set-AzApiManagement -InputObject $apimService -PassThru
 ```
 
-Dieser Befehl ruft den API-Management-Premium-SKU-Dienst ab, wobei Regionen in Süd-Zentralamerika und Nord-Zentralamerika enthalten sind. Sie erhöht dann die Kapazität der Nord zentralen US-Region auf 2 mit dem **Update-AzApiManagementRegion**. Das nächste Cmdlet Set-AzApiManagement wendet die Konfigurationsänderung auf den API-Verwaltungsdienst an.
+Mit diesem Befehl wird der API Management Premium-SKU-Dienst mit Regionen in der Mitte Süden und der Mitte des Nordens der USA bereitgestellt. Anschließend erhöht sie die Kapazität der Region "USA, Nord-Mitte" mithilfe von **"Update-AzApiManagementRegion"** auf 2. Das nächste Cmdlet Set-AzApiManagement die Konfigurationsänderung auf den Api-Verwaltungsdienst.
 
-## Parameter
+## PARAMETERS
 
 ### -ApiManagement
-Gibt die **PsApiManagement** -Instanz an, in der ein vorhandener Bereitstellungsbereich aktualisiert werden soll.
+Gibt die **Instanz "PsApiManagement"** an, in der eine vorhandene Bereitstellungsregion aktualisiert werden soll.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
@@ -61,8 +61,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Kapazität
-Gibt den neuen SKU-Kapazitätswert für den Bereitstellungsbereich an.
+### -Capacity
+Gibt den neuen SKU-Kapazitätswert für die Bereitstellungsregion an.
 
 ```yaml
 Type: System.Int32
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -91,10 +91,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Standort
-Gibt den Speicherort des Bereitstellungsbereichs an, der aktualisiert werden soll.
-Gibt den Speicherort des neuen Bereitstellungsbereichs zwischen dem unterstützten Bereich für den API-Verwaltungsdienst an.
-Verwenden Sie zum Abrufen gültiger Speicherorte das Cmdlet Get-AzResourceProvider-ProviderNamespace "Microsoft. ApiManagement" | wobei {$ _. Hilfswerte [0]. "-EQ"-Dienst "} | Select-Object Standorte
+### -Location
+Gibt den Speicherort der zu aktualisierenden Bereitstellungsregion an.
+Gibt den Speicherort der neuen Bereitstellungsregion unter der unterstützten Region für den Api-Verwaltungsdienst an.
+Verwenden Sie zum Abrufen gültiger Speicherorte das Cmdlet Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | dabei {$_. ResourceTypes[0]. ResourceTypeName -eq "service"} | Select-Object von Speicherorten
 
 ```yaml
 Type: System.String
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Gibt den neuen Stufenwert für den Bereitstellungsbereich an.
+Gibt den neuen Tierwert für die Bereitstellungsregion an.
 Gültige Werte sind:
 - Entwickler
 - Standard
@@ -129,8 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Gibt eine virtuelle Netzwerkkonfiguration für den Bereitstellungsbereich an.
-Durch Übergabe von $NULL wird die Konfiguration des virtuellen Netzwerks für den Bereich entfernt.
+Gibt eine virtuelle Netzwerkkonfiguration für die Bereitstellungsregion an.
+Durch $null werden virtuelle Netzwerkkonfigurationen für die Region entfernt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
@@ -145,30 +145,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagement
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
-### System. String
+### System.String
 
-### Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagementSku
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
 
-### System. Int32
+### System.Int32
 
-### Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagementVirtualNetwork
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagement
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Add-AzApiManagementRegion](./Add-AzApiManagementRegion.md)
 
 [Remove-AzApiManagementRegion](./Remove-AzApiManagementRegion.md)
 
-[Update-AzApiManagementDeployment](./Update-AzApiManagementDeployment.md)
+[Set-AzApiManagement](./Set-AzApiManagement.md)
