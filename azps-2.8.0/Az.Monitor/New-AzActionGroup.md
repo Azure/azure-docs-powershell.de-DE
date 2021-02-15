@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
-ms.openlocfilehash: 1377e1fe5f96754f4b20858cc1930039246bd8be
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 47ab8423de29a1cdfeb7edb268560bb28cfc8ac7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93822084"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411397"
 ---
-# <span data-ttu-id="1c52c-101">New-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="1c52c-101">New-AzActionGroup</span></span>
+# <span data-ttu-id="79398-101">New-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="79398-101">New-AzActionGroup</span></span>
 
-## <span data-ttu-id="1c52c-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="1c52c-102">SYNOPSIS</span></span>
-<span data-ttu-id="1c52c-103">Erstellt ein Aktions Gruppenverweis-Objekt im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="1c52c-103">Creates an ActionGroup reference object in memory.</span></span>
+## <span data-ttu-id="79398-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="79398-102">SYNOPSIS</span></span>
+<span data-ttu-id="79398-103">Erstellt ein ActionGroup-Referenzobjekt im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="79398-103">Creates an ActionGroup reference object in memory.</span></span>
 
-## <span data-ttu-id="1c52c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1c52c-104">SYNTAX</span></span>
+## <span data-ttu-id="79398-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="79398-104">SYNTAX</span></span>
 
 ```
 New-AzActionGroup -ActionGroupId <String>
@@ -26,22 +26,22 @@ New-AzActionGroup -ActionGroupId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="1c52c-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1c52c-105">DESCRIPTION</span></span>
-<span data-ttu-id="1c52c-106">Mit dem Cmdlet **New-AzActionGroup** wird ein Aktionsgruppen-Referenzobjekt im Arbeitsspeicher erstellt.</span><span class="sxs-lookup"><span data-stu-id="1c52c-106">The **New-AzActionGroup** cmdlet creates an action group reference object in memory.</span></span>
+## <span data-ttu-id="79398-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="79398-105">DESCRIPTION</span></span>
+<span data-ttu-id="79398-106">Das **Cmdlet "New-AzActionGroup"** erstellt im Arbeitsspeicher ein Referenzobjekt für eine Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="79398-106">The **New-AzActionGroup** cmdlet creates an action group reference object in memory.</span></span>
 
-## <span data-ttu-id="1c52c-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="1c52c-107">EXAMPLES</span></span>
+## <span data-ttu-id="79398-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="79398-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="1c52c-108">Beispiel 1: Erstellen eines Aktionsgruppen-Referenzobjekts im Arbeitsspeicher</span><span class="sxs-lookup"><span data-stu-id="1c52c-108">Example 1: Create an action group reference object in memory</span></span>
+### <span data-ttu-id="79398-108">Beispiel 1: Erstellen eines Referenzobjekts für eine Aktionsgruppe im Arbeitsspeicher</span><span class="sxs-lookup"><span data-stu-id="79398-108">Example 1: Create an action group reference object in memory</span></span>
 ```
 PS C:\>$dict = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
 PS C:\>$dict.Add('key1', 'value1')
 PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProperty $dict
 ```
 
-## <span data-ttu-id="1c52c-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="1c52c-109">PARAMETERS</span></span>
+## <span data-ttu-id="79398-109">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="79398-109">PARAMETERS</span></span>
 
-### <span data-ttu-id="1c52c-110">-ActionGroupId</span><span class="sxs-lookup"><span data-stu-id="1c52c-110">-ActionGroupId</span></span>
-<span data-ttu-id="1c52c-111">Die ID/Name der Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="1c52c-111">The Id/name of the action group.</span></span>
+### <span data-ttu-id="79398-110">-ActionGroupId</span><span class="sxs-lookup"><span data-stu-id="79398-110">-ActionGroupId</span></span>
+<span data-ttu-id="79398-111">Die ID/der Name der Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="79398-111">The Id/name of the action group.</span></span>
 
 ```yaml
 Type: System.String
@@ -55,8 +55,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1c52c-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="1c52c-112">-DefaultProfile</span></span>
-<span data-ttu-id="1c52c-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="1c52c-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="79398-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="79398-112">-DefaultProfile</span></span>
+<span data-ttu-id="79398-113">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="79398-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -70,8 +70,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1c52c-114">-Webhookproperty</span><span class="sxs-lookup"><span data-stu-id="1c52c-114">-WebhookProperty</span></span>
-<span data-ttu-id="1c52c-115">Die webhook-Eigenschaften der Aktionsgruppe</span><span class="sxs-lookup"><span data-stu-id="1c52c-115">The webhook properties of the action group</span></span>
+### <span data-ttu-id="79398-114">-WebhookProperty</span><span class="sxs-lookup"><span data-stu-id="79398-114">-WebhookProperty</span></span>
+<span data-ttu-id="79398-115">Die Webhookeigenschaften der Aktionsgruppe</span><span class="sxs-lookup"><span data-stu-id="79398-115">The webhook properties of the action group</span></span>
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -85,32 +85,32 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1c52c-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1c52c-116">CommonParameters</span></span>
-<span data-ttu-id="1c52c-117">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1c52c-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1c52c-118">Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="1c52c-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="79398-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="79398-116">CommonParameters</span></span>
+<span data-ttu-id="79398-117">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="79398-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="79398-118">Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="79398-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="1c52c-119">Eingaben</span><span class="sxs-lookup"><span data-stu-id="1c52c-119">INPUTS</span></span>
+## <span data-ttu-id="79398-119">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="79398-119">INPUTS</span></span>
 
-### <span data-ttu-id="1c52c-120">System. String</span><span class="sxs-lookup"><span data-stu-id="1c52c-120">System.String</span></span>
+### <span data-ttu-id="79398-120">System.String</span><span class="sxs-lookup"><span data-stu-id="79398-120">System.String</span></span>
 
-### <span data-ttu-id="1c52c-121">System. Collections. Generic. Dictionary ' 2 [[System. String, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e], [System. String, System. private. CoreLib, Version = 4.0.0.0, Kultur = neutral, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="1c52c-121">System.Collections.Generic.Dictionary\`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="79398-121">System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="79398-121">System.Collections.Generic.Dictionary\`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-## <span data-ttu-id="1c52c-122">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="1c52c-122">OUTPUTS</span></span>
+## <span data-ttu-id="79398-122">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="79398-122">OUTPUTS</span></span>
 
-### <span data-ttu-id="1c52c-123">Microsoft. Azure. Management. Monitor. Management. Models. ActivityLogAlertActionGroup</span><span class="sxs-lookup"><span data-stu-id="1c52c-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span></span>
+### <span data-ttu-id="79398-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span><span class="sxs-lookup"><span data-stu-id="79398-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span></span>
 
-## <span data-ttu-id="1c52c-124">Notizen</span><span class="sxs-lookup"><span data-stu-id="1c52c-124">NOTES</span></span>
+## <span data-ttu-id="79398-124">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="79398-124">NOTES</span></span>
 
-## <span data-ttu-id="1c52c-125">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="1c52c-125">RELATED LINKS</span></span>
+## <span data-ttu-id="79398-125">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="79398-125">RELATED LINKS</span></span>
 
-[<span data-ttu-id="1c52c-126">Satz-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="1c52c-126">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
+[<span data-ttu-id="79398-126">Set-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="79398-126">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
 
-[<span data-ttu-id="1c52c-127">Enable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="1c52c-127">Enable-AzActivityLogAlert</span></span>](./Enable-AzActivityLogAlert.md)
+[<span data-ttu-id="79398-127">Enable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="79398-127">Enable-AzActivityLogAlert</span></span>](./Enable-AzActivityLogAlert.md)
 
-[<span data-ttu-id="1c52c-128">Deaktivieren-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="1c52c-128">Disable-AzActivityLogAlert</span></span>](./Disable-AzActivityLogAlert.md)
+[<span data-ttu-id="79398-128">Disable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="79398-128">Disable-AzActivityLogAlert</span></span>](./Disable-AzActivityLogAlert.md)
 
-[<span data-ttu-id="1c52c-129">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="1c52c-129">Get-AzActivityLogAlert</span></span>](./Get-AzActivityLogAlert.md)
+[<span data-ttu-id="79398-129">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="79398-129">Get-AzActivityLogAlert</span></span>](./Get-AzActivityLogAlert.md)
 
-[<span data-ttu-id="1c52c-130">Remove-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="1c52c-130">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
+[<span data-ttu-id="79398-130">Remove-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="79398-130">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
 
-[<span data-ttu-id="1c52c-131">Neu – AzActivityLogAlertCondition</span><span class="sxs-lookup"><span data-stu-id="1c52c-131">New-AzActivityLogAlertCondition</span></span>](./Get-AzActivityLogAlertCondition.md)
+
 
