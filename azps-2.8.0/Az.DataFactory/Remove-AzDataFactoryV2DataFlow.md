@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: 75c155b765a1bcbc565a85fc0f47130a6d2a5cf0
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 69d666d2338658b108386da74040a4d30bcbbebb
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93651702"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100396012"
 ---
 # Remove-AzDataFactoryV2DataFlow
 
-## Synopsis
+## SYNOPSIS
 Entfernt einen Datenfluss aus Data Factory.
 
-## Syntax
+## SYNTAX
 
 ### ByFactoryName (Standard)
 ```
@@ -38,10 +38,10 @@ Remove-AzDataFactoryV2DataFlow [-Force] [-ResourceId] <String> [-DefaultProfile 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Remove-AzDataFactoryV2DataFlow-Cmdlet entfernt einen Datenfluss aus Azure Data Factory.
+## BESCHREIBUNG
+Das Remove-AzDataFactoryV2DataFlow cmdlet entfernt einen Datenfluss aus Azure Data Factory.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
@@ -53,12 +53,12 @@ Are you sure you want to remove data flow 'dataflow5' in data factory 'WikiADF'?
 PS C:\WINDOWS\system32>
 ```
 
-Dieser Befehl entfernt den Datenfluss mit dem Namen dataflow5 aus der Data Factory mit dem Namen WikiADF.
+Mit diesem Befehl wird der Datenfluss namens "dataflow5" aus der Daten factory namens WikiADF entfernt.
 
-## Parameter
+## PARAMETERS
 
-### -Datafactoryname
-Der Name der Daten Factory.
+### -DataFactoryName
+Der Name der Daten factory.
 
 ```yaml
 Type: System.String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Keine Bestätigung anfordern.
+Fordern Sie keine Bestätigung an.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -102,7 +102,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
+### -InputObject
 Das Datenflussobjekt.
 
 ```yaml
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name des Datenflusses.
+Der Datenflussname.
 
 ```yaml
 Type: System.String
@@ -147,7 +147,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Die Azure-Ressourcen-ID.
 
 ```yaml
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Wenn angegeben, wird true geschrieben, falls der Vorgang erfolgreich ist. Dieser Parameter ist optional.
+Wenn angegeben, wird "true" für den Fall geschrieben, dass der Vorgang erfolgreich ist. Dieser Parameter ist optional.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -177,8 +177,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -192,7 +192,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -209,26 +209,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### System. void
+### System.Void
 
-### System. Boolean
+### System.Boolean
 
-## Notizen
-Schlüsselwörter: Azure, azurerm, arm, Resource, Verwaltung, Manager, Daten, Factorys
+## HINWEISE
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, data, factorys
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzDataFactoryDataFlow](./Get-AzDataFactoryDataFlow.md)
 
-[Satz-AzDataFactoryDataFlow](./Set-AzDataFactoryDataFlow.md)
 
