@@ -1,48 +1,47 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworkwatcher
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azpacketcapturefilterconfig
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-ms.openlocfilehash: dbc1f3e942a95adf0cb56721ec1a2666da9b9188
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+ms.openlocfilehash: 194e3c71cc763aeb74091f912b37dd15e4dfe4aa
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100399038"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100151652"
 ---
-# New-AzNetworkWatcher
+# New-AzPacketCaptureFilterConfig
 
 ## SYNOPSIS
-Erstellt eine neue Network Watcher-Ressource.
+Erstellt ein neues Paketerfassungsfilterobjekt.
 
 ## SYNTAX
 
 ```
-New-AzNetworkWatcher -Name <String> -ResourceGroupName <String> -Location <String> [-Tag <Hashtable>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzPacketCaptureFilterConfig [-Protocol <String>] [-RemoteIPAddress <String>] [-LocalIPAddress <String>]
+ [-LocalPort <String>] [-RemotePort <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## BESCHREIBUNG
-Das New-AzNetworkWatcher erstellt eine neue Network Watcher-Ressource.
+Das New-AzPacketCaptureFilterConfig erstellt ein neues Paketerfassungsfilterobjekt. Dieses Objekt wird verwendet, um den Pakettyp zu beschränken, der während einer Paketaufnahmesitzung mithilfe der angegebenen Kriterien erfasst wird. Das New-AzNetworkWatcherPacketCapture cmdlet kann mehrere Filterobjekte akzeptieren, um komposierbare Aufnahmesitzungen zu ermöglichen.
 
 ## BEISPIELE
 
-### Beispiel 1: Erstellen eines Netzwerk-Watcher-Kontos
+### Beispiel 1: Erstellen einer Paketaufzeichnung mit mehreren Filtern
 ```
-New-AzResourceGroup -Name NetworkWatcherRG -Location westcentralus
-New-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
 
-Name              : NetworkWatcher_westcentralus
-Id                : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_westcentralus
-Etag              : W/"7cf1f2fe-8445-4aa7-9bf5-c15347282c39"
-Location          : westcentralus
-Tags              :
-ProvisioningState : Succeeded
+$storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+$filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+$filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP 
+New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filters $filter1, $filter2
 ```
 
-In diesem Beispiel wird ein neues Netzwerk-Watcher-System in einer neu erstellten Ressourcengruppe erstellt. Beachten Sie, dass pro Region und Abonnement nur ein Network Watcher erstellt werden kann.
+In diesem Beispiel erstellen wir eine Paketaufzeichnung namens "PacketCaptureTest" mit mehreren Filtern und einem Zeitlimit. Sobald die Sitzung abgeschlossen ist, wird sie im angegebenen Speicherkonto gespeichert. Hinweis: Die Azure Network Watcher-Erweiterung muss auf dem virtuellen Zielcomputer installiert sein, um Paketaufzeichnungen zu erstellen.
 
 ## PARAMETERS
 
@@ -61,56 +60,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Location
-"Ort" aus.
+### -LocalIPAddress
+Gibt die lokale IP-Adresse an, nach der gefiltert werden soll.
+Beispieleingaben: "127.0.0.1" für einen einzelnen Adresseintrag.
+"127.0.0.1-127.0.0.255" für Bereich.
+"127.0.0.1;127.0.0.5;" für mehrere Einträge.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Der Name der Netzwerkuhr.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Der Name der Ressourcengruppe.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tag
-Schlüssel-Wert-Paare in Form einer Hashtabelle. Beispiel: @{key0="value0";key1=$null;key2="value2"}
-
-```yaml
-Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
 
@@ -121,34 +78,72 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
+### -LocalPort
+Gibt die lokale IP-Adresse an, nach der gefiltert werden soll.
+Beispieleingaben: "127.0.0.1" für einen einzelnen Adresseintrag.
+"127.0.0.1-127.0.0.255" für Bereich.
+"127.0.0.1;127.0.0.5;" für mehrere Einträge.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Waswenn
-Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+### -Protocol
+Gibt das Protokoll an, nach dem gefiltert werden soll. Zulässige Werte "TCP";"UDP";"Alle"
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -RemoteIPAddress
+Gibt die Remote-IP-Adresse an, nach der gefiltert werden soll.
+Beispieleingaben: "127.0.0.1" für einen einzelnen Adresseintrag.
+"127.0.0.1-127.0.0.255" für Bereich.
+"127.0.0.1;127.0.0.5;" für mehrere Einträge.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RemotePort
+Gibt den Remoteport an, nach dem gefiltert werden soll.
+Beispieleingaben für den Remoteport: "80" für einen einzelnen Porteintrag.
+"80-85" für Bereich.
+"80;443;" für mehrere Einträge.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -159,14 +154,12 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ### System.String
 
-### System.Collections.Hashtable
-
 ## AUSGABEN
 
-### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter
 
 ## HINWEISE
-Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking, network watcher
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter 
 
 ## LINKS ZU VERWANDTEN THEMEN
 
@@ -222,4 +215,4 @@ Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, 
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
