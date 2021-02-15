@@ -1,0 +1,116 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkinterfaceipconfig
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md
+ms.openlocfilehash: 2aa9792c632a7e615091a69182c87bc06b565c18
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100151505"
+---
+# <span data-ttu-id="617ee-101">Remove-AzNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="617ee-101">Remove-AzNetworkInterfaceIpConfig</span></span>
+
+## <span data-ttu-id="617ee-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="617ee-102">SYNOPSIS</span></span>
+<span data-ttu-id="617ee-103">Entfernt eine Netzwerkschnittstellen-IP-Konfiguration von einer Netzwerkschnittstelle.</span><span class="sxs-lookup"><span data-stu-id="617ee-103">Removes a network interface IP configuration from a network interface.</span></span>
+
+## <span data-ttu-id="617ee-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="617ee-104">SYNTAX</span></span>
+
+```
+Remove-AzNetworkInterfaceIpConfig -Name <String> -NetworkInterface <PSNetworkInterface>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="617ee-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="617ee-105">DESCRIPTION</span></span>
+<span data-ttu-id="617ee-106">Das **Cmdlet "Remove-AzNetworkInterfaceIpConfig"** entfernt eine Netzwerkschnittstellen-IP-Konfiguration von einer Azure-Netzwerkschnittstelle.</span><span class="sxs-lookup"><span data-stu-id="617ee-106">The **Remove-AzNetworkInterfaceIpConfig** cmdlet removes a network interface IP configuration from an Azure network interface.</span></span>
+
+## <span data-ttu-id="617ee-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="617ee-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="617ee-108">Beispiel 1: Löschen einer IP-Konfiguration von einer Netzwerkschnittstelle</span><span class="sxs-lookup"><span data-stu-id="617ee-108">Example 1: Delete an IP configuration from a network interface</span></span>
+```powershell
+$nic = Get-AzNetworkInterface -Name mynic -ResourceGroupName myrg
+
+Remove-AzNetworkInterfaceIpConfig -Name IPConfig-1 -NetworkInterface $nic
+
+Set-AzNetworkInterface -NetworkInterface $nic
+```
+
+<span data-ttu-id="617ee-109">Der erste Befehl ruft eine Netzwerkschnittstelle namens "mynic" ab und speichert sie in der variablen $nic.</span><span class="sxs-lookup"><span data-stu-id="617ee-109">The first command gets a network interface called mynic and stores it in the variable $nic.</span></span> <span data-ttu-id="617ee-110">Der zweite Befehl entfernt die dieser Netzwerkschnittstelle zugeordnete IP-Konfiguration namens IPConfig-1.</span><span class="sxs-lookup"><span data-stu-id="617ee-110">The second command removes the IP configuration called IPConfig-1 associated with this network interface.</span></span> <span data-ttu-id="617ee-111">Der dritte Befehl legt Änderungen fest, die an der Netzwerkschnittstelle vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="617ee-111">The third command sets changes made to the network interface.</span></span>
+
+## <span data-ttu-id="617ee-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="617ee-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="617ee-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="617ee-113">-DefaultProfile</span></span>
+<span data-ttu-id="617ee-114">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="617ee-114">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="617ee-115">-Name</span><span class="sxs-lookup"><span data-stu-id="617ee-115">-Name</span></span>
+<span data-ttu-id="617ee-116">Gibt den Namen der zu entfernenden Netzwerkschnittstellen-IP-Konfiguration an.</span><span class="sxs-lookup"><span data-stu-id="617ee-116">Specifies the name of the network interface IP configuration to remove.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="617ee-117">-NetworkInterface</span><span class="sxs-lookup"><span data-stu-id="617ee-117">-NetworkInterface</span></span>
+<span data-ttu-id="617ee-118">Gibt ein **"NetworkInterface"-Objekt** an.</span><span class="sxs-lookup"><span data-stu-id="617ee-118">Specifies a **NetworkInterface** object.</span></span>
+<span data-ttu-id="617ee-119">Dieses Objekt enthält die zu entfernende IP-Konfiguration der Netzwerkschnittstelle.</span><span class="sxs-lookup"><span data-stu-id="617ee-119">This object contains the network interface IP configuration to remove.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="617ee-120">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="617ee-120">CommonParameters</span></span>
+<span data-ttu-id="617ee-121">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="617ee-121">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="617ee-122">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="617ee-122">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="617ee-123">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="617ee-123">INPUTS</span></span>
+
+### <span data-ttu-id="617ee-124">Microsoft.Azure.Commands.Network.Models.PSNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="617ee-124">Microsoft.Azure.Commands.Network.Models.PSNetworkInterface</span></span>
+
+## <span data-ttu-id="617ee-125">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="617ee-125">OUTPUTS</span></span>
+
+### <span data-ttu-id="617ee-126">Microsoft.Azure.Commands.Network.Models.PSNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="617ee-126">Microsoft.Azure.Commands.Network.Models.PSNetworkInterface</span></span>
+
+## <span data-ttu-id="617ee-127">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="617ee-127">NOTES</span></span>
+* <span data-ttu-id="617ee-128">Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking</span><span class="sxs-lookup"><span data-stu-id="617ee-128">Keywords: azure, azurerm, arm, resource, management, manager, network, networking</span></span>
+
+## <span data-ttu-id="617ee-129">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="617ee-129">RELATED LINKS</span></span>
+
+[<span data-ttu-id="617ee-130">Add-AzNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="617ee-130">Add-AzNetworkInterfaceIpConfig</span></span>](./Add-AzNetworkInterfaceIpConfig.md)
+
+[<span data-ttu-id="617ee-131">Get-AzNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="617ee-131">Get-AzNetworkInterfaceIpConfig</span></span>](./Get-AzNetworkInterfaceIpConfig.md)
+
+[<span data-ttu-id="617ee-132">New-AzNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="617ee-132">New-AzNetworkInterfaceIpConfig</span></span>](./New-AzNetworkInterfaceIpConfig.md)
+
+[<span data-ttu-id="617ee-133">Set-AzNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="617ee-133">Set-AzNetworkInterfaceIpConfig</span></span>](./Set-AzNetworkInterfaceIpConfig.md)
+
+
