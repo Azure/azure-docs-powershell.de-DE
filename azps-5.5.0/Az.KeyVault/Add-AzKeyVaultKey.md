@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
-ms.openlocfilehash: bb96183d5b1fb9b865bb4d30448c337ab58fbb09
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.openlocfilehash: da6460bf0a1126a11345336e4d55c300728bbd66
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100411482"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100170465"
 ---
 # Add-AzKeyVaultKey
 
@@ -31,8 +31,22 @@ Add-AzKeyVaultKey [-VaultName] <String> [-Name] <String> -Destination <String> [
 ```
 Add-AzKeyVaultKey [-VaultName] <String> [-Name] <String> -KeyFilePath <String>
  [-KeyFilePassword <SecureString>] [-Destination <String>] [-Disable] [-KeyOps <String[]>]
- [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-KeyType <String>] [-CurveName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmInteractiveCreate
+```
+Add-AzKeyVaultKey -HsmName <String> [-Name] <String> [-Disable] [-KeyOps <String[]>] [-Expires <DateTime>]
+ [-NotBefore <DateTime>] [-Tag <Hashtable>] [-Size <Int32>] -KeyType <String> [-CurveName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmInteractiveImport
+```
+Add-AzKeyVaultKey -HsmName <String> [-Name] <String> -KeyFilePath <String> [-KeyFilePassword <SecureString>]
+ [-Disable] [-KeyOps <String[]>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObjectCreate
@@ -46,8 +60,23 @@ Add-AzKeyVaultKey [-InputObject] <PSKeyVault> [-Name] <String> -Destination <Str
 ```
 Add-AzKeyVaultKey [-InputObject] <PSKeyVault> [-Name] <String> -KeyFilePath <String>
  [-KeyFilePassword <SecureString>] [-Destination <String>] [-Disable] [-KeyOps <String[]>]
- [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-KeyType <String>] [-CurveName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmInputObjectCreate
+```
+Add-AzKeyVaultKey [-HsmObject] <PSManagedHsm> [-Name] <String> [-Disable] [-KeyOps <String[]>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-Size <Int32>] -KeyType <String>
+ [-CurveName <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmInputObjectImport
+```
+Add-AzKeyVaultKey [-HsmObject] <PSManagedHsm> [-Name] <String> -KeyFilePath <String>
+ [-KeyFilePassword <SecureString>] [-Disable] [-KeyOps <String[]>] [-Expires <DateTime>]
+ [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceIdCreate
@@ -61,8 +90,23 @@ Add-AzKeyVaultKey [-ResourceId] <String> [-Name] <String> -Destination <String> 
 ```
 Add-AzKeyVaultKey [-ResourceId] <String> [-Name] <String> -KeyFilePath <String>
  [-KeyFilePassword <SecureString>] [-Destination <String>] [-Disable] [-KeyOps <String[]>]
- [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-KeyType <String>] [-CurveName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmResourceIdCreate
+```
+Add-AzKeyVaultKey -HsmResourceId <String> [-Name] <String> [-Disable] [-KeyOps <String[]>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-Size <Int32>] -KeyType <String>
+ [-CurveName <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HsmResourceIdImport
+```
+Add-AzKeyVaultKey -HsmResourceId <String> [-Name] <String> -KeyFilePath <String>
+ [-KeyFilePassword <SecureString>] [-Disable] [-KeyOps <String[]>] [-Expires <DateTime>]
+ [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## BESCHREIBUNG
@@ -74,9 +118,9 @@ Verwenden Sie dieses Cmdlet zum Hinzufügen von Schlüsseln mit einer der folgen
 - Importieren Sie einen Schlüssel aus einer PFX-Datei auf Ihrem Computer.
 - Importieren Sie einen Schlüssel aus einer PFX-Datei auf Ihrem Computer in Hardwaresicherheitsmodule (Hardware Security Module, HSMs) im Key Vault-Dienst.
 Für jede dieser Vorgänge können Sie Schlüsselattribute bereitstellen oder Standardeinstellungen akzeptieren.
-Wenn Sie einen Schlüssel erstellen oder importieren, der denselben Namen wie ein vorhandener Schlüssel in Ihrem Schlüsseltresor hat, wird der ursprüngliche Schlüssel mit den Werten aktualisiert, die Sie für den neuen Schlüssel angeben. Sie können auf die vorherigen Werte zugreifen, indem Sie den versionsspezifischen URI für diese Version des Schlüssels verwenden. Informationen zu Schlüsselversionen und der URI-Struktur finden Sie [in](https://go.microsoft.com/fwlink/?linkid=518560) der Rest-API-Dokumentation zu Schlüsseln und Geheimen Schlüsseln.
-Hinweis: Um einen Schlüssel aus Ihrem eigenen Hardwaresicherheitsmodul zu importieren, müssen Sie zuerst mithilfe des Azure Key Vault BYOK Toolset ein "BYOK"-Paket (eine Datei mit der Dateinamenerweiterung BYOK) generieren. Weitere Informationen finden Sie unter "Generieren und Übertragen HSM-Protected [Schlüssel für den Azure Key Vault".](https://go.microsoft.com/fwlink/?LinkId=522252)
-Als bewährte Methode sollten Sie Ihren Schlüssel nach dem Erstellen oder Aktualisieren mithilfe des cmdlets Backup-AzKeyVaultKey sichern. Es gibt keine rückgängig gemachten Funktionen. Wenn Sie also versehentlich Ihren Schlüssel löschen oder ihn löschen und dann Ihre Meinung ändern, kann der Schlüssel nur wiederhergestellt werden, wenn Sie über eine Sicherung verfügen, die Sie wiederherstellen können.
+Wenn Sie einen Schlüssel erstellen oder importieren, der denselben Namen wie ein vorhandener Schlüssel in Ihrem Schlüsseltresor hat, wird der ursprüngliche Schlüssel mit den Werten aktualisiert, die Sie für den neuen Schlüssel angeben. Sie können auf die vorherigen Werte zugreifen, indem Sie den versionsspezifischen URI für diese Version des Schlüssels verwenden. Informationen zu Schlüsselversionen und der URI-Struktur finden Sie [in](http://go.microsoft.com/fwlink/?linkid=518560) der Rest-API-Dokumentation zu Schlüsseln und Geheimen Schlüsseln.
+Hinweis: Um einen Schlüssel aus Ihrem eigenen Hardwaresicherheitsmodul zu importieren, müssen Sie zuerst mithilfe des Azure Key Vault BYOK Toolset ein "BYOK"-Paket (eine Datei mit der Dateinamenerweiterung BYOK) generieren. Weitere Informationen finden Sie unter "Generieren und Übertragen HSM-Protected [Schlüssel für den Azure Key Vault".](http://go.microsoft.com/fwlink/?LinkId=522252)
+Als bewährte Methode sollten Sie Ihren Schlüssel nach dem Erstellen oder Aktualisieren sichern, indem Sie das cmdlet Backup-AzKeyVaultKey verwenden. Es gibt keine rückgängig gemachten Funktionen. Wenn Sie also versehentlich Ihren Schlüssel löschen oder ihn löschen und dann Ihre Meinung ändern, kann der Schlüssel nur wiederhergestellt werden, wenn Sie über eine Sicherung verfügen, die Sie wiederherstellen können.
 
 ## BEISPIELE
 
@@ -141,7 +185,7 @@ Tags           : Name        Value
                  Accounting  true
 ```
 
-Der erste Befehl speichert die Werte zum Entschlüsseln und Überprüfen in $KeyOperations Variable.
+Der erste Befehl speichert die Werte zum Entschlüsseln und Überprüfen in der $KeyOperations Variable.
 Der zweite Befehl erstellt ein in UTC definiertes **DateTime-Objekt** mithilfe des **Get-Date-Cmdlets.**
 Dieses Objekt gibt eine Uhrzeit in zwei Jahren in der Zukunft an. Der Befehl speichert dieses Datum in der $Expires Variable. Weitere Informationen erhalten Sie, wenn Sie " `Get-Help Get-Date` eingeben" aus.
 Der dritte Befehl erstellt mithilfe des **Get-Date-Cmdlets** ein **DateTime-Objekt.** Dieses Objekt gibt die aktuelle UTC-Uhrzeit an. Der Befehl speichert dieses Datum in der $NotBefore Variable.
@@ -166,7 +210,7 @@ Tags           :
 
 Mit diesem Befehl wird der Schlüssel "ITByok" von dem vom *Parameter "KeyFilePath"* angegebenen Speicherort importiert. Der importierte Schlüssel ist ein HSM-geschützter Schlüssel.
 Um einen Schlüssel aus Ihrem eigenen Hardwaresicherheitsmodul zu importieren, müssen Sie zuerst mithilfe des Azure Key Vault BYOK Toolset ein "BYOK"-Paket (eine Datei mit der Dateinamenerweiterung BYOK) generieren.
-Weitere Informationen finden Sie unter "Generieren und Übertragen HSM-Protected [Schlüssel für den Azure Key Vault".](https://go.microsoft.com/fwlink/?LinkId=522252)
+Weitere Informationen finden Sie unter "Generieren und Übertragen HSM-Protected [Schlüssel für den Azure Key Vault".](http://go.microsoft.com/fwlink/?LinkId=522252)
 
 ### Beispiel 5: Importieren eines softwaregeschützten Schlüssels
 ```powershell
@@ -203,7 +247,7 @@ Version        : 929bfc14db84439b823ffd1bedadaf5f
 Id             : https://contoso.vault.azure.net:443/keys/ITPfxToHSM/929bfc14db84439b823ffd1bedadaf5f
 Enabled        : True
 Expires        : 5/21/2020 11:12:43 PM
-Not Before     : 
+Not Before     :
 Created        : 5/21/2018 11:13:17 PM
 Updated        : 5/21/2018 11:13:17 PM
 Purge Disabled : False
@@ -214,10 +258,34 @@ Tags           : Name        Value
 
 Der erste Befehl konvertiert eine Zeichenfolge mithilfe des **Cmdlets "ConvertTo-SecureString"** in eine sichere Zeichenfolge und speichert diese Zeichenfolge dann in der $Password Variable.
 Der zweite Befehl erstellt mithilfe des **Get-Date-Cmdlets** ein **DateTime-Objekt** und speichert dieses Objekt dann in der $Expires Variable.
-Mit dem dritten Befehl wird die $tags zum Festlegen von Tags für hohen Schweregrad und IT erstellt.
+Der dritte Befehl erstellt die $tags Variable zum Festlegen von Tags für hohen Schweregrad und IT.
 Der endgültige Befehl importiert einen Schlüssel als HSM-Schlüssel von der angegebenen Position. Der Befehl gibt die in der Datei gespeicherte $Expires und das Kennwort an und wendet die in $Password gespeicherten Tags $tags.
 
+### Beispiel 7: Generieren eines Schlüsselwechselschlüssels (KEY Exchange Key, KEK) für das Feature "Eigenen Schlüssel verwenden" (BYOK)
+
+```powershell
+PS C:\> $key = Add-AzKeyVaultKey -VaultName $vaultName -Name $keyName -Destination HSM -Size 2048 -KeyOps "import"
+```
+
+Generiert einen Schlüssel (auch als KEK (Key Exchange Key) bezeichnet). Die KEK muss ein RSA-HSM-Schlüssel sein, der nur über den Importschlüsselvorgang verfügt. Nur Key Vault Premium-SKU unterstützt RSA-HSM-Schlüssel.
+Weitere Details finden Sie unter https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys
+
 ## PARAMETERS
+
+### -CurveName
+Gibt den Kurvennamen der Kryptografie mit auslassungspunktenden Kurven an. Dieser Wert ist gültig, wenn der KeyType EC ist.
+
+```yaml
+Type: System.String
+Parameter Sets: InteractiveImport, HsmInteractiveCreate, InputObjectImport, HsmInputObjectCreate, ResourceIdImport, HsmResourceIdCreate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
@@ -237,7 +305,7 @@ Accept wildcard characters: False
 ### -Destination
 Gibt an, ob der Schlüssel als softwaregeschützter Oder HSM-geschützter Schlüssel im Schlüsseltresordienst hinzugefügt werden soll.
 Gültige Werte sind: HSM und Software.
-Hinweis: Wenn Sie HSM als Ziel verwenden möchten, müssen Sie über einen Schlüsseltresor verfügen, der HSMs unterstützt. Weitere Informationen zu den Dienststufen und -funktionen für den Azure Key Vault finden Sie auf der Website "Preise für [den Azure Key Vault".](https://go.microsoft.com/fwlink/?linkid=512521)
+Hinweis: Wenn Sie HSM als Ziel verwenden möchten, müssen Sie über einen Schlüsseltresor verfügen, der HSMs unterstützt. Weitere Informationen zu den Dienststufen und -funktionen für den Azure Key Vault finden Sie auf der Website "Preise für [den Azure Key Vault".](http://go.microsoft.com/fwlink/?linkid=512521)
 Dieser Parameter ist erforderlich, wenn Sie einen neuen Schlüssel erstellen. Wenn Sie einen Schlüssel mithilfe des Parameters *"KeyFilePath"* importieren, ist dieser Parameter optional:
 - Wenn Sie diesen Parameter nicht angeben und dieses Cmdlet einen Schlüssel mit der Dateinamenerweiterung BYOK importiert, wird dieser Schlüssel als HSM-geschützter Schlüssel importiert. Das Cmdlet kann diesen Schlüssel nicht als softwaregeschützten Schlüssel importieren.
 - Wenn Sie diesen Parameter nicht angeben und dieses Cmdlet einen Schlüssel mit der Dateinamenerweiterung PFX importiert, importiert es den Schlüssel als softwaregeschützten Schlüssel.
@@ -298,6 +366,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HsmName
+HSM-Name. Das Cmdlet erstellt den FQDN eines verwalteten HSM basierend auf dem Namen und der aktuell ausgewählten Umgebung.
+
+```yaml
+Type: System.String
+Parameter Sets: HsmInteractiveCreate, HsmInteractiveImport
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HsmObject
+HSM-Objekt.
+
+```yaml
+Type: Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm
+Parameter Sets: HsmInputObjectCreate, HsmInputObjectImport
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -HsmResourceId
+Ressourcen-ID des HSM.
+
+```yaml
+Type: System.String
+Parameter Sets: HsmResourceIdCreate, HsmResourceIdImport
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Vault-Objekt.
 
@@ -318,7 +431,7 @@ Gibt ein Kennwort für die importierte Datei als **SecureString-Objekt** an. Ver
 
 ```yaml
 Type: System.Security.SecureString
-Parameter Sets: InteractiveImport, InputObjectImport, ResourceIdImport
+Parameter Sets: InteractiveImport, HsmInteractiveImport, InputObjectImport, HsmInputObjectImport, ResourceIdImport, HsmResourceIdImport
 Aliases:
 
 Required: False
@@ -331,13 +444,13 @@ Accept wildcard characters: False
 ### -KeyFilePath
 Gibt den Pfad einer lokalen Datei an, die Schlüsselmaterial enthält, das von diesem Cmdlet importiert wird.
 Die gültigen Dateinamenerweiterungen sind BYOK und PFX.
-- Wenn es sich bei der Datei um eine byok-Datei handelt, wird der Schlüssel nach dem Import automatisch durch HSMs geschützt, und Sie können diese Standardeinstellung nicht überschreiben.
+- Wenn es sich bei der Datei um eine byok-Datei handelt, wird der Schlüssel nach dem Import automatisch durch HSMs geschützt, und Sie können diesen Standard nicht überschreiben.
 - Handelt es sich bei der Datei um eine PFX-Datei, wird der Schlüssel nach dem Import automatisch durch Software geschützt. Um diesen Standard außer Kraft zu setzen, legen Sie den *Zielparameter* auf HSM fest, damit der Schlüssel HSM-geschützt ist.
 Wenn Sie diesen Parameter angeben, ist der *Parameter "Destination"* optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: InteractiveImport, InputObjectImport, ResourceIdImport
+Parameter Sets: InteractiveImport, HsmInteractiveImport, InputObjectImport, HsmInputObjectImport, ResourceIdImport, HsmResourceIdImport
 Aliases:
 
 Required: True
@@ -350,13 +463,14 @@ Accept wildcard characters: False
 ### -KeyOps
 Gibt ein Array von Vorgängen an, die mit dem von diesem Cmdlet hinzugefügten Schlüssel ausgeführt werden können.
 Wenn Sie diesen Parameter nicht angeben, können alle Vorgänge ausgeführt werden.
-Bei den zulässigen Werten für diesen Parameter handelt es sich um eine durch Kommas getrennte Liste von Schlüsselvorgängen gemäß der [JSON Web Key (JWK)-Spezifikation:](https://go.microsoft.com/fwlink/?LinkID=613300)
+Bei den zulässigen Werten für diesen Parameter handelt es sich um eine durch Kommas getrennte Liste von Schlüsselvorgängen gemäß der [JSON Web Key (JWK)-Spezifikation:](http://go.microsoft.com/fwlink/?LinkID=613300)
 - Verschlüsseln
-- Entschlüsseln
-- Umbruch
-- Entpacken
+- entschlüsseln
+- wrapKey
+- unwrapKey
 - Signieren
 - Überprüfen
+- Importieren (nur für KEK siehe Beispiel 7)
 
 ```yaml
 Type: System.String[]
@@ -364,6 +478,33 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyType
+Gibt den Schlüsseltyp dieses Schlüssels an. Beim Importieren von BYOK-Schlüsseln wird standardmäßig "RSA" verwendet.
+
+```yaml
+Type: System.String
+Parameter Sets: InteractiveImport, InputObjectImport, ResourceIdImport
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: HsmInteractiveCreate, HsmInputObjectCreate, HsmResourceIdCreate
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -416,11 +557,11 @@ Accept wildcard characters: False
 ```
 
 ### -Size
-RSA-Schlüsselgröße, in Bits. Wenn diese Angabe nicht angegeben ist, stellt der Dienst einen sicheren Standardwert zur Verfügung.
+RSA-Schlüsselgröße in Bits. Wenn diese Angabe nicht angegeben ist, stellt der Dienst einen sicheren Standardwert zur Verfügung.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
-Parameter Sets: InteractiveCreate, InputObjectCreate, ResourceIdCreate
+Parameter Sets: InteractiveCreate, HsmInteractiveCreate, InputObjectCreate, HsmInputObjectCreate, ResourceIdCreate, HsmResourceIdCreate
 Aliases:
 
 Required: False
@@ -492,7 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## EINGABEN
 
@@ -514,3 +655,4 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
+[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
