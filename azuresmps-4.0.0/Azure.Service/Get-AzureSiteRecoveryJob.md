@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 2957C0DE-3A2F-4337-A778-2B95654972E7
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: d0b272732cf6c1e1b2025c8e7f48b58e4807cdb3
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 8a7c99e2ce307d700e43094ffa9be47e5449acc0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94005801"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411652"
 ---
 # Get-AzureSiteRecoveryJob
 
-## Synopsis
-Ruft die Vorgangsinformationen für ein Website Wiederherstellungs Depot ab.
+## SYNOPSIS
+Ruft die Vorgangsinformationen für einen Websitewiederherstellungstresor ab.
 
-## Syntax
+## SYNTAX
 
 ### ByParam (Standard)
 ```
@@ -33,13 +33,13 @@ Get-AzureSiteRecoveryJob -Id <String> [-Profile <AzureSMProfile>] [<CommonParame
 Get-AzureSiteRecoveryJob -Job <ASRJob> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureSiteRecoveryJob** " ruft Azure Site Recovery-Aufträge ab.
-Sie können dieses Cmdlet verwenden, um die Vorgangsinformationen für das aktuelle Standort Wiederherstellungs Depot anzuzeigen.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzureSiteRecoveryJob"** ruft Azure Site Recovery-Aufträge ab.
+Mit diesem Cmdlet können Sie die Vorgangsinformationen für den aktuellen Websitewiederherstellungstresor anzeigen.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen eines Auftrags durch Angabe einer ID
+### Beispiel 1: Erhalten eines Auftrags durch Angeben einer ID
 ```
 PS C:\> Get-AzureSiteRecoveryJob -Id "033785cc-9f72-4f07-8e78-e4d1e942a7ae" 
 Name             : SaveRecoveryPlan
@@ -57,9 +57,9 @@ Tasks            : {Save a recovery plan task}
 Errors           : {}
 ```
 
-Mit diesem Befehl wird der Azure Site Recovery-Auftrag mit der angegebenen ID abgerufen.
+Dieser Befehl ruft den Azure-Websitewiederherstellungsauftrag ab, der die angegebene ID hat.
 
-### Beispiel 2: Abrufen eines Auftrags basierend auf der Uhrzeit
+### Beispiel 2: Ruft einen Auftrag basierend auf der Zeit ab.
 ```
 PS C:\> Get-AzureSiteRecoveryJob -StartTime "20-02-2015 01:00:00" -EndTime "21-02-2015 01:00:00"
 Name             : SaveRecoveryPlan
@@ -77,15 +77,15 @@ Tasks            : {Save a recovery plan task}
 Errors           : {}
 ```
 
-Dieser Befehl ruft Website Wiederherstellungsaufträge ab, die zwischen der angegebenen Startzeit und Endzeit liegen.
+Dieser Befehl ruft Websitewiederherstellungsaufträge ab, die zwischen der angegebenen Start- und Endzeit liegen.
 
-## Parameter
+## PARAMETERS
 
 ### -EndTime
 Gibt die Endzeit für die Aufträge an.
-Dieses Cmdlet ruft alle Aufträge ab, die vor der angegebenen Zeit gestartet wurden.
-Verwenden Sie das Cmdlet " **Get-Date** ", um ein **DateTime** -Objekt abzurufen.
-Wenn Sie weitere Informationen wünschen, geben Sie `Get-Help Get-Date` .
+Dieses Cmdlet ruft alle Aufträge ab, die vor dem angegebenen Zeitpunkt begonnen haben.
+Verwenden Sie das Get-Date-Cmdlet, um ein **"DateTime"-Objekt** zu erhalten. 
+Weitere Informationen erhalten Sie, wenn Sie " `Get-Help Get-Date` eingeben" aus.
 
 ```yaml
 Type: DateTime
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ID
-Gibt die ID des abzurufenden Auftrags an.
+Gibt die ID eines zu erhaltenden Auftrags an.
 
 ```yaml
 Type: String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Gibt einen Auftrag an, der abgerufen werden soll.
+Gibt einen Auftrag an, den Sie erhalten müssen.
 
 ```yaml
 Type: ASRJob
@@ -129,8 +129,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -145,7 +145,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Startzeit
+### -StartTime
 Gibt die Startzeit für die Aufträge an.
 Dieses Cmdlet ruft alle Aufträge ab, die nach der angegebenen Zeit gestartet wurden.
 
@@ -161,18 +161,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bundesland
-Gibt den Eingabestatus für einen Standort Wiederherstellungsauftrag an.
+### -State
+Gibt den Eingabezustand für einen Websitewiederherstellungsauftrag an.
 Dieses Cmdlet ruft alle Aufträge ab, die dem angegebenen Zustand entsprechen.
-Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Die zulässigen Werte für diesen Parameter sind:
 
 - NotStarted
 - InProgress
 - Erfolgreich
-- Anderen
-- Fehlgeschlagen
-- Storniert
-- Ausgesetzt
+- Sonstiges
+- Fehler
+- Abgebrochen
+- Angehalten
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetObjectId
-Gibt die ID des Objekts an, das für den Auftrag vorgesehen ist.
+Gibt die ID des Objekts an, auf das der Auftrag ausgerichtet ist.
 
 ```yaml
 Type: String
@@ -202,22 +202,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Services-Cmdlets](./Azure.SiteRecoveryServices.md)
 
-[Neustart-AzureSiteRecoveryJob](./Restart-AzureSiteRecoveryJob.md)
 
-[Lebenslauf-AzureSiteRecoveryJob](./Resume-AzureSiteRecoveryJob.md)
+[Restart-AzureSiteRecoveryJob](./Restart-AzureSiteRecoveryJob.md)
 
-[Stopp-AzureSiteRecoveryJob](./Stop-AzureSiteRecoveryJob.md)
+[Resume-AzureSiteRecoveryJob](./Resume-AzureSiteRecoveryJob.md)
+
+[Stop-AzureSiteRecoveryJob](./Stop-AzureSiteRecoveryJob.md)
 
 
