@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 853D5585-2A92-4B65-BA8C-EC06BEE8C237
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 63274c772c6085fc8c491557851673a38056aa77
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: d7681631d98f80def1076a04ab57f1774bad245c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94006097"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403645"
 ---
 # New-AzureSiteRecoveryProtectionProfileObject
 
-## Synopsis
-Erstellt ein Profilobjekt für einen Website Wiederherstellungs Schutz.
+## SYNOPSIS
+Erstellt ein Profilobjekt für den Websitewiederherstellungsschutz.
 
-## Syntax
+## SYNTAX
 
 ### EnterpriseToAzure (Standard)
 ```
@@ -35,13 +35,13 @@ New-AzureSiteRecoveryProtectionProfileObject [-Name <String>] -ReplicationProvid
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzureSiteRecoveryProtectionProfileObject** erstellt ein Azure Site Recovery Protection-Profilobjekt.
-Mit diesem Cmdlet wird ein **ASRProtectionProfile** -Objekt erstellt, das mit anderen Cmdlets verwendet werden soll.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzureSiteRecoveryProtectionProfileObject"** erstellt ein Profilobjekt für den Azure-Websitewiederherstellungsschutz.
+Dieses Cmdlet erstellt ein **ASRProtectionProfile-Objekt** zur Verwendung mit anderen Cmdlets.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen eines Schutz Profils
+### Beispiel 1: Erstellen eines Schutzprofils
 ```
 PS C:\> New-AzureSiteRecoveryProtectionProfileObject -ReplicationProvider "HyperVReplica" -AllowReplicaDeletion -ApplicationConsistentSnapshotFrequencyInHours 1 -CompressionEnabled -RecoveryPoints 2 -ReplicationFrequencyInSeconds 30 -ReplicationMethod "Online" -ReplicationPort 8085 -ReplicationStartTime 1
 Name                                     : 
@@ -51,9 +51,9 @@ HyperVReplicaProviderSettingsObject      : Microsoft.Azure.Portal.RecoveryServic
 HyperVReplicaAzureProviderSettingsObject :
 ```
 
-Mit diesem Befehl wird ein Schutzprofil Objekt erstellt.
+Mit diesem Befehl wird ein Schutzprofilobjekt erstellt.
 
-### Beispiel 2: Erstellen eines Schutz Profils für HyperVReplicaAzure-Anbieter
+### Beispiel 2: Erstellen eines Schutzprofils für den HyperVReplicaAzure-Anbieter
 ```
 PS C:\> New-AzureSiteRecoveryProtectionProfileObject -Name "ProtectionProfile" -ReplicationProvider "HyperVReplicaAzure" -RecoveryAzureSubscription "cb53d0c3-bd59-4721-89bc-06916a9147ef" -RecoveryAzureStorageAccount "Contoso01" -ReplicationFrequencyInSeconds 30 -RecoveryPoints 1 -Force
 Name                                     : ProtectionProfile
@@ -63,12 +63,12 @@ HyperVReplicaProviderSettingsObject      :
 HyperVReplicaAzureProviderSettingsObject : Microsoft.Azure.Portal.RecoveryServices.Models.Common.HyperVReplicaAzureProviderSettings
 ```
 
-Dieser Befehl erstellt ein Schutzprofil für einen HyperVReplicaAzure-Anbieter.
+Mit diesem Befehl wird ein Schutzprofil für einen HyperVReplicaAzure-Anbieter erstellt.
 
-## Parameter
+## PARAMETERS
 
 ### -AllowReplicaDeletion
-Gibt an, dass das Schutzprofil das Löschen von Replikat Entitäten ermöglicht.
+Gibt an, dass das Schutzprofil das Löschen von Replikatentitäten ermöglicht.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationConsistentSnapshotFrequencyInHours
-Gibt die Häufigkeit in Stunden für anwendungskonsistente Snapshots an.
+Gibt die Häufigkeit (in Stunden) für konsistente Momentaufnahmen der Anwendung an.
 
 ```yaml
 Type: Int32
@@ -97,9 +97,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Authentifizierung
-Gibt den Typ der zu verwendenden Authentifizierung an.
-Die zulässigen Werte für diesen Parameter lauten: Certificate und Kerberos.
+### -Authentication
+Gibt den zu verwendenden Authentifizierungstyp an.
+Die zulässigen Werte für diesen Parameter sind: "Certificate" und "Kerberos".
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionEnabled
-Gibt an, dass das Schutzprofil Komprimierung aktiviert.
+Gibt an, dass das Schutzprofil die Komprimierung ermöglicht.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.
+Erzwingt die Ausführung des Befehls ohne Benutzerbestätigung.
 
 ```yaml
 Type: SwitchParameter
@@ -158,8 +158,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccount
-Gibt den Namen eines Azure-speicherkontos an, auf dem die Azure Replica-Entität gespeichert werden soll.
+Gibt den Namen eines Azure Storage-Kontos an, in dem die Entität der Azure-Replikate gespeichert werden soll.
 
 ```yaml
 Type: String
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 ### -RecoveryAzureSubscription
 Gibt die ID für ein Azure-Abonnement für ein Speicherkonto an.
-Dieser Parameter bezieht sich auf das Konto, für das die Azure Replica-Entität gespeichert werden soll.
+Dieser Parameter bezieht sich auf das Konto, für das die Entität der Azure-Replikate gespeichert werden soll.
 
 ```yaml
 Type: String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPoints
-Gibt die Anzahl von Stunden an, um Wiederherstellungspunkte beizubehalten.
+Gibt die Anzahl der Stunden für die Aufbewahrung von Wiederherstellungspunkten an.
 
 ```yaml
 Type: Int32
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationFrequencyInSeconds
-Gibt das Häufigkeitsintervall für die Replikation in Sekunden an. Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Gibt das Häufigkeitsintervall für die Replikation in Sekunden an. Die zulässigen Werte für diesen Parameter sind:
 
 - 30 
 - 300 
@@ -240,11 +240,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationMethod
-Gibt die Replikationsmethode an. Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Gibt die Replikationsmethode an. Die zulässigen Werte für diesen Parameter sind:
 
 - Online.
 Replikation über das Netzwerk.
-- Offline.
+- "Offline" aus.
 
 ```yaml
 Type: String
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationPort
-Gibt die Nummer des Ports an, auf dem die Replikation stattfindet.
+Gibt die Nummer des Ports an, für den die Replikation erfolgt.
 
 ```yaml
 Type: UInt16
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProvider
-Gibt den Typ des Replikations Anbieters an. Die zulässigen Werte für diesen Parameter sind: HyperVReplica und HyperVReplicaAzure.
+Gibt den Typ des Replikationsanbieters an. Die zulässigen Werte für diesen Parameter sind: HyperVReplica und HyperVReplicaAzure.
 
 ```yaml
 Type: String
@@ -289,8 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationStartTime
-Gibt den Startzeitpunkt der Replikation an.
-Geben Sie eine Uhrzeit innerhalb von 24 Stunden nach dem Start des Auftrags ein.
+Gibt die Startzeit der Replikation an.
+Geben Sie eine Uhrzeit innerhalb von 24 Stunden nach dem Start des Auftrags an.
 
 ```yaml
 Type: TimeSpan
@@ -305,16 +305,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Services-Cmdlets](./Azure.SiteRecoveryServices.md)
+
 
 
