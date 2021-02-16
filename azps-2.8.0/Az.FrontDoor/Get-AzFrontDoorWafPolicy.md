@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorWafPolicy.md
-ms.openlocfilehash: 60d6263d3fb074cf4795379ae28f1824dc81a4c0
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5cc2a2e480044aa00c51a18dd116d33bd4c2f72a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93651133"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398460"
 ---
 # Get-AzFrontDoorWafPolicy
 
-## Synopsis
-Abrufen der WAF-Richtlinie
+## SYNOPSIS
+Holen Sie sich die WAF-Richtlinie.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzFrontDoorWafPolicy -ResourceGroupName <String> [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Die **Get-AzFrontDoorWafPolicy-** cmdletGet ruft WAF-Richtlinie in einer Ressourcengruppe unter dem aktuellen Abonnement ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzFrontDlicWafPolicy"** ruft die "WAF-Richtlinie" in einer Ressourcengruppe unter dem aktuellen Abonnement ab.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
@@ -38,7 +38,7 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Prevention            Enabled                           403 https://www.bing.com/
 ```
 
-Abrufen einer WAF-Richtlinie mit dem Namen $policyName in $resourceGroupName
+Sie erhalten eine WAF-Richtlinie namens "$policyName in $resourceGroupName
 
 ### Beispiel 2
 ```powershell
@@ -51,12 +51,12 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Detection             Enabled                           404
 ```
 
-Abrufen aller WAF-Richtlinien in $resourceGroupName
+Alle WAF-Richtlinien in $resourceGroupName
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-FireWallPolicy-Name.
+Name von FireWallPolicy.
 
 ```yaml
 Type: System.String
@@ -101,20 +101,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Haustür. Models. PSPolicy
+### Microsoft.Azure.Commands.FrontD selbst.Models.PSPolicy
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
- [Satz-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md) 
- [Remove-AzFrontDoorWafPolicy](./Remove-AzFrontDoorWafPolicy.md)
+[New-AzFrontDlicWafPolicy](./New-AzFrontDoorWafPolicy.md) 
+ [Remove-AzFrontDlicWafPolicy](./Remove-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDlicWafPolicy](./Update-AzFrontDoorWafPolicy.md)

@@ -5,17 +5,17 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
-ms.openlocfilehash: de3604a4bf1f9c46bf88b2f3cda25982672e9096
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: f71f7e37e4864de10c5387d63c101cd66ed9fd34
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100160145"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398494"
 ---
 # Import-AzRecoveryServicesAsrVaultSettingsFile
 
 ## SYNOPSIS
-Importiert die angegebene Datei mit den Einstellungen für den ASR-Tresor, um den Tresorkontext (PowerShell-Sitzungskontext) für nachfolgende ASR-Vorgänge in der PowerShell-Sitzung zu festlegen. 
+Importiert die angegebene Datei mit den Einstellungen des ASR-Tresors, um den Tresorkontext (PowerShell-Sitzungskontext) für nachfolgende ASR-Vorgänge in der PowerShell-Sitzung zu festlegen. 
 
 ## SYNTAX
 
@@ -115,4 +115,3 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzRecoveryServicesAsrVaultSettingsFile](./Get-AzRecoveryServicesAsrVaultSettingsFile.md)

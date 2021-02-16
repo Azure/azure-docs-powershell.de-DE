@@ -6,20 +6,20 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
-ms.openlocfilehash: e1748bb3dbb5c2bb86f02ef9ec58d0d1eec55ba9
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 2926aa351e7e9f1f9251c5a6e6a2292b27ef93b0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94166649"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398188"
 ---
 # Get-AzResource
 
-## Synopsis
+## SYNOPSIS
 
 Ruft Ressourcen ab.
 
-## Syntax
+## SYNTAX
 
 ### ByTagNameValueParameterSet (Standard)
 ```
@@ -41,13 +41,13 @@ Get-AzResource [-Name <String>] [-ResourceType <String>] [-ODataQuery <String>] 
  [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 
-Das Cmdlet " **Get-AzResource** " ruft Azure-Ressourcen ab.
+Das **Cmdlet "Get-AzResource"** ruft Azure-Ressourcen ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen aller Ressourcen im aktuellen Abonnement
+### Beispiel 1: Alle Ressourcen im aktuellen Abonnement erhalten
 
 ```
 PS C:\> Get-AzResource | ft
@@ -67,7 +67,7 @@ testVM2 otherResourceGroup Microsoft.Compute/virtualMachines       eastus
 
 Dieser Befehl ruft alle Ressourcen im aktuellen Abonnement ab.
 
-### Beispiel 2: Abrufen aller Ressourcen in einer Ressourcengruppe
+### Beispiel 2: Alle Ressourcen in einer Ressourcengruppe erhalten
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName testRG | ft
@@ -84,7 +84,7 @@ vnet   testRG            Microsoft.Network/virtualNetworks       westus
 
 Dieser Befehl ruft alle Ressourcen in der Ressourcengruppe "testRG" ab.
 
-### Beispiel 3: Abrufen aller Ressourcen, deren Ressourcengruppe mit dem bereitgestellten Platzhalter übereinstimmt
+### Beispiel 3: Alle Ressourcen erhalten, deren Ressourcengruppe dem bereitgestellten Platzhalter entspricht
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName other* | ft
@@ -96,9 +96,9 @@ storage otherResourceGroup Microsoft.Storage/storageAccounts eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Dieser Befehl ruft alle Ressourcen ab, deren Ressourcengruppe Sie zu Wesen gehören, mit "Other".
+Mit diesem Befehl werden alle Ressourcen, deren Ressourcengruppe sie angehören, durch "andere" zusammengehören.
 
-### Beispiel 4: Abrufen aller Ressourcen mit einem angegebenen Namen
+### Beispiel 4: Alle Ressourcen mit einem bestimmten Namen erhalten
 
 ```
 PS C:\> Get-AzResource -Name testVM | fl
@@ -116,9 +116,9 @@ Tags              :
                     Status  Approved
 ```
 
-Dieser Befehl ruft alle Ressourcen ab, deren Ressourcenname "testVM" lautet.
+Dieser Befehl ruft alle Ressourcen ab, deren Ressourcenname "testVM" ist.
 
-### Beispiel 5: Abrufen aller Ressourcen, deren Name mit dem bereitgestellten Platzhalter übereinstimmt
+### Beispiel 5: Alle Ressourcen erhalten, deren Name dem bereitgestellten Platzhalter entspricht
 
 ```
 PS C:\> Get-AzResource -Name test* | ft
@@ -130,9 +130,9 @@ testKV  otherRG            Microsoft.KeyVault/vaults         eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Dieser Befehl ruft alle Ressourcen ab, deren Ressourcenname mit "Test" beginnt.
+Dieser Befehl ruft alle Ressourcen ab, deren Ressourcenname mit "test" beginnt.
 
-### Beispiel 6: Abrufen aller Ressourcen eines angegebenen Ressourcentyps
+### Beispiel 6: Alle Ressourcen eines bestimmten Ressourcentyps erhalten
 
 ```
 PS C:\> Get-AzResource -ResourceType Microsoft.Compute/virtualMachines | ft
@@ -143,9 +143,9 @@ testVM  testRG             Microsoft.Compute/virtualMachines westus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Dieser Befehl ruft alle Ressourcen in den aktuellen Abonnements ab, die virtuelle Maschinen sind.
+Dieser Befehl ruft alle Ressourcen in den aktuellen Abonnements ab, bei der es sich um virtuelle Computer handelt.
 
-### Beispiel 7: Abrufen einer Ressource nach Ressourcen-ID
+### Beispiel 7: Erhalten einer Ressource nach Ressourcen-ID
 
 ```
 PS C:\> Get-AzResource -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM
@@ -163,9 +163,9 @@ Tags              :
                     Status  Approved
 ```
 
-Dieser Befehl ruft die Ressource mit der bereitgestellten Ressourcen-ID ab, bei der es sich um einen virtuellen Computer mit dem Namen "testVM" in der Ressourcengruppe "testRG" handelt.
+Dieser Befehl ruft die Ressource mit der bereitgestellten Ressourcen-ID ab. Dabei handelt es sich um einen virtuellen Computer mit dem Namen "testVM" in der Ressourcengruppe "testRG".
 
-## Parameter
+## PARAMETERS
 
 ### -ApiVersion
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -269,8 +269,8 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### -Resourcen-Nr
-Gibt die vollqualifizierte Ressourcen-ID an, wie im folgenden Beispiel gezeigt. `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
+### -ResourceId
+Gibt die vollqualifizierte Ressourcen-ID an, wie im folgenden Beispiel. `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
 
 ```yaml
 Type: System.String
@@ -284,8 +284,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -
-Der Ressourcentyp der Ressourcen, die abgerufen werden sollen. Beispiel: Microsoft. Compute/virtualMachines
+### -ResourceType
+Der Ressourcentyp der Ressourcen, die abgerufen werden sollen. Beispiel: Microsoft.Compute/virtualMachines
 
 ```yaml
 Type: System.String
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-Ruft Ressourcen ab, die das angegebene Azure-Tag aufweisen. Geben Sie eine Hashtabelle mit einem Namensschlüssel oder einem Namen-und Wert Schlüssel ein. Platzhalterzeichen werden nicht unterstützt. Ein "Tag" ist ein Name-Wert-Paar, das Sie auf Ressourcen und Ressourcengruppen anwenden können. Verwenden Sie Kategorien, um Ihre Ressourcen zu kategorisieren, beispielsweise nach Abteilung oder Kostenstelle, oder um Notizen oder Kommentare zu den Ressourcen zu überwachen. Verwenden Sie zum Hinzufügen einer Kategorie zu einer Ressource den Tag-Parameter der New-AzResource-oder Set-AzResource-Cmdlets. Verwenden Sie das New-AzTag-Cmdlet, um eine vordefinierte Kategorie zu erstellen. Wenn Sie Hilfe zu Hashtabellen in Windows PowerShell benötigen, führen Sie "Get-Help about_Hashtables" aus.
+Ruft Ressourcen ab, die das angegebene Azure-Tag haben. Geben Sie eine Hashtabelle mit einem Name key oder name and value keys ein. Platzhalterzeichen werden nicht unterstützt. Ein "Tag" ist ein Name-Wert-Paar, das Sie auf Ressourcen und Ressourcengruppen anwenden können. Mithilfe von Kategorien können Sie Ressourcen kategorisieren, z. B. nach Abteilung oder Kostenstelle, oder Sie können Notizen oder Kommentare zu den Ressourcen nachverfolgen. Wenn Sie einer Ressource ein Tag hinzufügen möchten, verwenden Sie den Parameter "Tag" der New-AzResource oder Set-AzResource Cmdlets. Verwenden Sie zum Erstellen eines vordefinierten Tags das cmdlet New-AzTag-Cmdlet. Wenn Sie Hilfe zu Hashtabellen in Windows PowerShell, führen Sie "Get-Help about_Hashtables" aus.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -315,8 +315,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tagname
-Der Schlüssel im Tag der Ressourcen, die abgerufen werden sollen.
+### -TagName
+Der Schlüssel im Tag der ressource(n), die abgerufen werden soll.
 
 ```yaml
 Type: System.String
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
-Der Wert im Tag der Ressourcen, die abgerufen werden sollen.
+Der Wert im Tag der ressource(n), die abgerufen werden soll.
 
 ```yaml
 Type: System.String
@@ -346,26 +346,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ResourceManager. Cmdlets. SdkModels. PSResource
+### Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Finden-AzResource](./Find-AzResource.md)
 
-[Verschieben-AzResource](./Move-AzResource.md)
+[Move-AzResource](./Move-AzResource.md)
 
-[Neu – AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
 [Remove-AzResource](./Remove-AzResource.md)
 
-[Satz-AzResource](./Set-AzResource.md)
+[Set-AzResource](./Set-AzResource.md)
