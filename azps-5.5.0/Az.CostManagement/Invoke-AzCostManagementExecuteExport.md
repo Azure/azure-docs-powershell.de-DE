@@ -1,0 +1,194 @@
+---
+external help file: ''
+Module Name: Az.CostManagement
+online version: https://docs.microsoft.com/en-us/powershell/module/az.costmanagement/invoke-azcostmanagementexecuteexport
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CostManagement/help/Invoke-AzCostManagementExecuteExport.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/CostManagement/help/Invoke-AzCostManagementExecuteExport.md
+ms.openlocfilehash: 752af43a72151296c4c90ecc32923a786c7b4081
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100163924"
+---
+# <span data-ttu-id="47223-101">Invoke-AzCostManagementExecuteExport</span><span class="sxs-lookup"><span data-stu-id="47223-101">Invoke-AzCostManagementExecuteExport</span></span>
+
+## <span data-ttu-id="47223-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="47223-102">SYNOPSIS</span></span>
+<span data-ttu-id="47223-103">Der Vorgang zum Ausführen eines Exports.</span><span class="sxs-lookup"><span data-stu-id="47223-103">The operation to execute an export.</span></span>
+
+## <span data-ttu-id="47223-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="47223-104">SYNTAX</span></span>
+
+### <span data-ttu-id="47223-105">Ausführen (Standard)</span><span class="sxs-lookup"><span data-stu-id="47223-105">Execute (Default)</span></span>
+```
+Invoke-AzCostManagementExecuteExport -ExportName <String> -Scope <String> [-DefaultProfile <PSObject>]
+ [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### <span data-ttu-id="47223-106">ExecuteViaIdentity</span><span class="sxs-lookup"><span data-stu-id="47223-106">ExecuteViaIdentity</span></span>
+```
+Invoke-AzCostManagementExecuteExport -InputObject <ICostManagementIdentity> [-DefaultProfile <PSObject>]
+ [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## <span data-ttu-id="47223-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="47223-107">DESCRIPTION</span></span>
+<span data-ttu-id="47223-108">Der Vorgang zum Ausführen eines Exports.</span><span class="sxs-lookup"><span data-stu-id="47223-108">The operation to execute an export.</span></span>
+
+## <span data-ttu-id="47223-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="47223-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="47223-110">Beispiel 1: Aufrufen von "Export by ExportName" und "Scope"</span><span class="sxs-lookup"><span data-stu-id="47223-110">Example 1: Invoke Export by ExportName and Scope</span></span>
+```powershell
+PS C:\> Invoke-AzCostManagementExecuteExport -ExportName 'TestExport' -Scope 'subscriptions/**********'
+
+```
+
+<span data-ttu-id="47223-111">Aufrufen von "Export by ExportName" und "Scope"</span><span class="sxs-lookup"><span data-stu-id="47223-111">Invoke Export by ExportName and Scope</span></span>
+
+### <span data-ttu-id="47223-112">Beispiel 2: Aufrufen des Exports von InputObject</span><span class="sxs-lookup"><span data-stu-id="47223-112">Example 2: Invoke Export by InputObject</span></span>
+```powershell
+PS C:\> $getExport = Get-AzCostManagementExport -Name 'TestExport' -Scope 'subscriptions/**********'
+Invoke-AzCostManagementExecuteExport -InputObject $getExport
+
+```
+
+<span data-ttu-id="47223-113">Aufrufen des Exports von InputObject</span><span class="sxs-lookup"><span data-stu-id="47223-113">Invoke Export by InputObject</span></span>
+
+## <span data-ttu-id="47223-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="47223-114">PARAMETERS</span></span>
+
+### <span data-ttu-id="47223-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="47223-115">-DefaultProfile</span></span>
+<span data-ttu-id="47223-116">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="47223-116">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-117">-ExportName</span><span class="sxs-lookup"><span data-stu-id="47223-117">-ExportName</span></span>
+<span data-ttu-id="47223-118">Exportname.</span><span class="sxs-lookup"><span data-stu-id="47223-118">Export Name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Execute
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-119">-InputObject</span><span class="sxs-lookup"><span data-stu-id="47223-119">-InputObject</span></span>
+<span data-ttu-id="47223-120">Identity Parameter To construct, see NOTES section for INPUTOBJECT properties and create a hash table.</span><span class="sxs-lookup"><span data-stu-id="47223-120">Identity Parameter To construct, see NOTES section for INPUTOBJECT properties and create a hash table.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostManagementIdentity
+Parameter Sets: ExecuteViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-121">-PassThru</span><span class="sxs-lookup"><span data-stu-id="47223-121">-PassThru</span></span>
+<span data-ttu-id="47223-122">Gibt "true" zurück, wenn der Befehl erfolgreich ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="47223-122">Returns true when the command succeeds</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-123">-Scope</span><span class="sxs-lookup"><span data-stu-id="47223-123">-Scope</span></span>
+<span data-ttu-id="47223-124">Dieser Parameter definiert den Umfang der Kostenmanagement aus unterschiedlichen Perspektiven wie "Abonnement", "Ressourcengruppe" und "Dienst bereitstellen".</span><span class="sxs-lookup"><span data-stu-id="47223-124">This parameter defines the scope of costmanagement from different perspectives 'Subscription','ResourceGroup' and 'Provide Service'.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Execute
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-125">-Confirm</span><span class="sxs-lookup"><span data-stu-id="47223-125">-Confirm</span></span>
+<span data-ttu-id="47223-126">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="47223-126">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-127">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="47223-127">-WhatIf</span></span>
+<span data-ttu-id="47223-128">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="47223-128">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="47223-129">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="47223-129">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="47223-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="47223-130">CommonParameters</span></span>
+<span data-ttu-id="47223-131">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="47223-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="47223-132">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="47223-132">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="47223-133">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="47223-133">INPUTS</span></span>
+
+### <span data-ttu-id="47223-134">Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostManagementIdentity</span><span class="sxs-lookup"><span data-stu-id="47223-134">Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostManagementIdentity</span></span>
+
+## <span data-ttu-id="47223-135">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="47223-135">OUTPUTS</span></span>
+
+### <span data-ttu-id="47223-136">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="47223-136">System.Boolean</span></span>
+
+## <span data-ttu-id="47223-137">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="47223-137">NOTES</span></span>
+
+<span data-ttu-id="47223-138">ALIASE</span><span class="sxs-lookup"><span data-stu-id="47223-138">ALIASES</span></span>
+
+<span data-ttu-id="47223-139">KOMPLEXE PARAMETEREIGENSCHAFTEN</span><span class="sxs-lookup"><span data-stu-id="47223-139">COMPLEX PARAMETER PROPERTIES</span></span>
+
+<span data-ttu-id="47223-140">Erstellen Sie zum Erstellen der unten beschriebenen Parameter eine Hashtabelle mit den entsprechenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="47223-140">To create the parameters described below, construct a hash table containing the appropriate properties.</span></span> <span data-ttu-id="47223-141">Um Informationen zu Hashtabellen zu erhalten, führen Sie Get-Help about_Hash_Tables.</span><span class="sxs-lookup"><span data-stu-id="47223-141">For information on hash tables, run Get-Help about_Hash_Tables.</span></span>
+
+
+<span data-ttu-id="47223-142">INPUTOBJECT <ICostManagementIdentity> : Identity Parameter</span><span class="sxs-lookup"><span data-stu-id="47223-142">INPUTOBJECT <ICostManagementIdentity>: Identity Parameter</span></span>
+  - <span data-ttu-id="47223-143">`[AlertId <String>]`: Benachrichtigungs-ID</span><span class="sxs-lookup"><span data-stu-id="47223-143">`[AlertId <String>]`: Alert ID</span></span>
+  - <span data-ttu-id="47223-144">`[ExportName <String>]`: Name exportieren.</span><span class="sxs-lookup"><span data-stu-id="47223-144">`[ExportName <String>]`: Export Name.</span></span>
+  - <span data-ttu-id="47223-145">`[ExternalCloudProviderId <String>]`: Dies kann "{externalSubscriptionId}" für verknüpftes Konto oder "{externalBillingAccountId}" für konsolidiertes Konto sein, das für Dimensions-/Abfragevorgänge verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="47223-145">`[ExternalCloudProviderId <String>]`: This can be '{externalSubscriptionId}' for linked account or '{externalBillingAccountId}' for consolidated account used with dimension/query operations.</span></span>
+  - <span data-ttu-id="47223-146">`[ExternalCloudProviderType <ExternalCloudProviderType?>]`: Der externe Cloudanbietertyp, der Dimensions-/Abfragevorgängen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="47223-146">`[ExternalCloudProviderType <ExternalCloudProviderType?>]`: The external cloud provider type associated with dimension/query operations.</span></span> <span data-ttu-id="47223-147">Dies schließt "externalSubscriptions" für verknüpfte Konten und "externalBillingAccounts" für konsolidierte Konten ein.</span><span class="sxs-lookup"><span data-stu-id="47223-147">This includes 'externalSubscriptions' for linked account and 'externalBillingAccounts' for consolidated account.</span></span>
+  - <span data-ttu-id="47223-148">`[Id <String>]`: Ressourcenidentitätspfad</span><span class="sxs-lookup"><span data-stu-id="47223-148">`[Id <String>]`: Resource identity path</span></span>
+  - <span data-ttu-id="47223-149">`[Scope <String>]`: Der Bereich, der Ansichtsvorgängen zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="47223-149">`[Scope <String>]`: The scope associated with view operations.</span></span> <span data-ttu-id="47223-150">Dies schließt "subscriptions/{subscriptionId}" für den Abonnementbereich ein, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management /managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.</span><span class="sxs-lookup"><span data-stu-id="47223-150">This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.</span></span>
+  - <span data-ttu-id="47223-151">`[ViewName <String>]`: Anzeigename</span><span class="sxs-lookup"><span data-stu-id="47223-151">`[ViewName <String>]`: View name</span></span>
+
+## <span data-ttu-id="47223-152">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="47223-152">RELATED LINKS</span></span>
+
