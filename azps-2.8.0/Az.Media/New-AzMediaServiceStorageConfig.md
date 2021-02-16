@@ -6,31 +6,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.media/new-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
-ms.openlocfilehash: 8fb6e4a683decc8b5615a7cf0c8088681578f8ec
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ec411d7e1afd71849ec2d490ee70eeb0283303ca
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93650601"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413811"
 ---
 # New-AzMediaServiceStorageConfig
 
-## Synopsis
-Erstellen Sie eine Speicherkonto Konfiguration für die Media Service-Cmdlets.
+## SYNOPSIS
+Erstellen Sie eine Speicherkontokonfiguration für die Mediendienst-Cmdlets.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzMediaServiceStorageConfig [-DefaultProfile <IAzureContextContainer>] [-StorageAccountId] <String>
  [-IsPrimary] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzMediaServiceStorageConfig** erstellt eine Speicherkonto Konfiguration für die Mediendienst-Cmdlets.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzMediaServiceStorageConfig"** erstellt eine Speicherkontokonfiguration für die Mediendienst-Cmdlets.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer Speicherkonto Konfiguration für die Media Service-Cmdlets
+### Beispiel 1: Erstellen einer Speicherkontokonfiguration für die Mediendienst-Cmdlets
 ```
 PS C:\>
 $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name "Storage1" -Location "East US" -Type "Standard_GRS"
@@ -38,14 +38,14 @@ $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Na
 PS C:\> New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount.Id -IsPrimary
 ```
 
-Der erste Befehl erstellt ein Speicherkonto Objekt mithilfe des Cmdlets **New-AzStorageAccount** .
-Der Befehl benennt dieses Speicherkonto Storage1 und der Typ hat den Namen Standard_GRS und speichert das Ergebnis in der Variablen mit dem Namen $StorageAccount.
-Mit dem zweiten Befehl wird ein Speicher Konfigurationsobjekt als das primäre Speicherkonto erstellt, das dem Mediendienst unter Verwendung der Speicherkonto-ID-Informationen zugeordnet ist, die in der $StorageAccount Variablen gespeichert sind.
+Der erste Befehl erstellt mithilfe des **Cmdlets "New-AzStorageAccount"** ein Speicherkontoobjekt.
+Der Befehl nennt dieses Speicherkonto "Storage1" und der Typ "Standard_GRS und speichert das Ergebnis in der Variablen namens $StorageAccount.
+Der zweite Befehl erstellt ein Speicherkonfigurationsobjekt als primäres Speicherkonto, das dem Mediendienst zugeordnet ist, und verwendet dazu die in der Variablen $StorageAccount Speicherkonto-ID.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-Gibt die ID des speicherkontos an.
+Gibt die ID des Speicherkontos an.
 
 ```yaml
 Type: System.String
@@ -89,8 +89,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -104,7 +104,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -121,20 +121,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Media. Models. PSStorageAccount
+### Microsoft.Azure.Commands.Media.Models.PSStorageAccount
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Synchronisieren-AzMediaServiceStorageKeys](./Sync-AzMediaServiceStorageKeys.md)
 
 
