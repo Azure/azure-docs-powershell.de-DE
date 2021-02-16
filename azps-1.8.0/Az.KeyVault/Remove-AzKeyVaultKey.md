@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
-ms.openlocfilehash: 2989a3b50eaf4e7c8993a407823b5a1c42c3503b
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: afa9f59520cba9f90f0f5d0a2edb6564b73245bf
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93819579"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399242"
 ---
 # Remove-AzKeyVaultKey
 
-## Synopsis
-Löscht einen Schlüssel in einem schlüsseltresor.
+## SYNOPSIS
+Löscht einen Schlüssel in einem Schlüsseltresor.
 
-## Syntax
+## SYNTAX
 
 ### ByVaultName (Standard)
 ```
@@ -32,14 +32,14 @@ Remove-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [-Force] [-PassT
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Remove-AzKeyVaultKey-Cmdlet löscht einen Schlüssel in einem schlüsseltresor.
-Wenn der Schlüssel versehentlich gelöscht wurde, kann der Schlüssel mithilfe von Undo-AzKeyVaultKeyRemoval von einem Benutzer mit speziellen "Recover"-Berechtigungen wiederhergestellt werden.
-Dieses Cmdlet hat den Wert "höchst" für die **ConfirmImpact** -Eigenschaft.
+## BESCHREIBUNG
+Das Remove-AzKeyVaultKey cmdlet löscht einen Schlüssel in einem Schlüsseltresor.
+Wenn der Schlüssel versehentlich gelöscht wurde, kann der Schlüssel mithilfe von Undo-AzKeyVaultKeyRemoval einem Benutzer mit speziellen "Wiederherstellen"-Berechtigungen wiederhergestellt werden.
+Dieses Cmdlet hat den Wert "High" für die **"ConfirmImpact"-Eigenschaft.**
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Entfernen eines Schlüssels aus einem schlüsseltresor
+### Beispiel 1: Entfernen eines Schlüssels aus einem Schlüsseltresor
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -PassThru
 
@@ -57,37 +57,37 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Dieser Befehl entfernt den Schlüssel mit dem Namen ITSoftware aus dem schlüsseltresor mit dem Namen contoso.
+Mit diesem Befehl wird der Schlüssel "ITSoftware" aus dem Schlüsseltresor "Contoso" entfernt.
 
-### Beispiel 2: Entfernen eines Schlüssels ohne Bestätigung durch den Benutzer
+### Beispiel 2: Entfernen eines Schlüssels ohne Benutzerbestätigung
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Force
 ```
 
-Dieser Befehl entfernt den Schlüssel mit dem Namen ITSoftware aus dem schlüsseltresor mit dem Namen contoso.
-Der Befehl gibt den Parameter *Force* an, und das Cmdlet fordert Sie daher nicht zur Bestätigung auf.
+Mit diesem Befehl wird der Schlüssel "ITSoftware" aus dem Schlüsseltresor "Contoso" entfernt.
+Der Befehl gibt den Parameter *"Force"* an, daher fordert Sie das Cmdlet nicht zur Bestätigung auf.
 
-### Beispiel 3: Dauerhaftes Löschen eines gelöschten Schlüssels aus dem schlüsseltresor
+### Beispiel 3: Endgültiges Löschen eines gelöschten Schlüssels aus dem Schlüsseltresor
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedState
 ```
 
-Mit diesem Befehl wird der Schlüssel mit dem Namen ITSoftware aus dem schlüsseltresor mit dem Namen "Contoso" endgültig entfernt.
-Zum Ausführen dieses Cmdlets ist die "Purge"-Berechtigung erforderlich, die dem Benutzer zuvor und explizit für diesen schlüsseltresor gewährt werden muss.
+Mit diesem Befehl wird der Schlüssel "ITSoftware" dauerhaft aus dem Schlüsseltresor "Contoso" entfernt.
+Zum Ausführen dieses Cmdlets ist die Berechtigung zum Löschen erforderlich, die zuvor und explizit dem Benutzer für diesen Schlüsseltresor erteilt worden sein muss.
 
 ### Beispiel 4: Entfernen von Schlüsseln mithilfe des Pipelineoperators
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Enabled -eq $False} | Remove-AzKeyVaultKey
 ```
 
-Dieser Befehl ruft alle Schlüssel im schlüsseltresor mit dem Namen contoso ab und übergibt Sie mithilfe des Pipelineoperators an das **Where-Object-** Cmdlet.
-Dieses Cmdlet übergibt die Schlüssel mit dem Wert $false für das **Enabled** -Attribut an das aktuelle Cmdlet.
-Dieses Cmdlet entfernt diese Schlüssel.
+Dieser Befehl ruft alle Schlüssel im Schlüsseltresor "Contoso" ab und übergibt sie mithilfe des Pipelineoperators an das **Where-Object-Cmdlet.**
+Dieses Cmdlet übergibt die Schlüssel mit dem Wert $False für das Attribut **"Enabled"** an das aktuelle Cmdlet.
+Mit diesem Cmdlet werden diese Tasten entfernt.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.
+Erzwingt die Ausführung des Befehls ohne Benutzerbestätigung.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -116,8 +116,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Keybundle-Objekt
+### -InputObject
+KeyBundle-Objekt
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 ### -Name
 Gibt den Namen des zu entfernenden Schlüssels an.
-Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüssels basierend auf dem Namen, den dieser Parameter angibt, dem Namen des Schlüsselspeichers und der aktuellen Umgebung.
+Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüssels basierend auf dem Namen, den dieser Parameter angibt, dem Namen des Schlüsseltresor und Ihrer aktuellen Umgebung.
 
 ```yaml
 Type: System.String
@@ -163,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Gibt an, dass dieses Cmdlet ein **Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultKey** -Objekt zurückgibt.
-Standardmäßig wird mit diesem Cmdlet keine Ausgabe generiert.
+Gibt an, dass dieses Cmdlet ein **Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey-Objekt** zurückgibt.
+Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,9 +178,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Vaultname
-Gibt den Namen des Schlüsselspeichers an, aus dem der Schlüssel entfernt werden soll.
-Dieses Cmdlet erstellt den FQDN eines Schlüsseldepots basierend auf dem Namen, den dieser Parameter angibt, und der aktuellen Umgebung.
+### -VaultName
+Gibt den Namen des Schlüsseltresor an, aus dem der Schlüssel entfernt werden soll.
+Dieses Cmdlet erstellt den FQDN eines Schlüsseltresor basierend auf dem Namen, den dieser Parameter angibt, und Ihrer aktuellen Umgebung.
 
 ```yaml
 Type: System.String
@@ -194,8 +194,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -209,7 +209,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt. Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
@@ -227,25 +227,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultKeyIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
 
-## Ausgaben
+## AUSGABEN
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
 
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 
-[Satz-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
 
 [Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
 
