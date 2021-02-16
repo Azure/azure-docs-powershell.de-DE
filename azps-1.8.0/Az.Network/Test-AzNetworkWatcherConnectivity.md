@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/te
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
-ms.openlocfilehash: 4661d35a6eab40a469c2fd3752056081e7d0180d
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6b689a96a4f737b2f92b4146f71faff7a09d8d36
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660136"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402710"
 ---
-# <span data-ttu-id="35f17-101">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="35f17-101">Test-AzNetworkWatcherConnectivity</span></span>
+# <span data-ttu-id="36bb4-101">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="36bb4-101">Test-AzNetworkWatcherConnectivity</span></span>
 
-## <span data-ttu-id="35f17-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="35f17-102">SYNOPSIS</span></span>
-<span data-ttu-id="35f17-103">Gibt Verbindungsinformationen für eine angegebene Quell-VM und ein Ziel zurück.</span><span class="sxs-lookup"><span data-stu-id="35f17-103">Returns connectivity information for a specified source VM and a destination.</span></span>
+## <span data-ttu-id="36bb4-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="36bb4-102">SYNOPSIS</span></span>
+<span data-ttu-id="36bb4-103">Gibt Verbindungsinformationen für eine angegebene Quell-VM und ein Ziel zurück.</span><span class="sxs-lookup"><span data-stu-id="36bb4-103">Returns connectivity information for a specified source VM and a destination.</span></span>
 
-## <span data-ttu-id="35f17-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="35f17-104">SYNTAX</span></span>
+## <span data-ttu-id="36bb4-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="36bb4-104">SYNTAX</span></span>
 
-### <span data-ttu-id="35f17-105">SetByResource (Standard)</span><span class="sxs-lookup"><span data-stu-id="35f17-105">SetByResource (Default)</span></span>
+### <span data-ttu-id="36bb4-105">SetByResource (Standard)</span><span class="sxs-lookup"><span data-stu-id="36bb4-105">SetByResource (Default)</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcher <PSNetworkWatcher> -SourceId <String> [-SourcePort <Int32>]
  [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -27,7 +27,7 @@ Test-AzNetworkWatcherConnectivity -NetworkWatcher <PSNetworkWatcher> -SourceId <
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="35f17-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="35f17-106">SetByName</span></span>
+### <span data-ttu-id="36bb4-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="36bb4-106">SetByName</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcherName <String> -ResourceGroupName <String> -SourceId <String>
  [-SourcePort <Int32>] [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -35,7 +35,7 @@ Test-AzNetworkWatcherConnectivity -NetworkWatcherName <String> -ResourceGroupNam
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="35f17-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="35f17-107">SetByLocation</span></span>
+### <span data-ttu-id="36bb4-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="36bb4-107">SetByLocation</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -Location <String> -SourceId <String> [-SourcePort <Int32>]
  [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -43,12 +43,12 @@ Test-AzNetworkWatcherConnectivity -Location <String> -SourceId <String> [-Source
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="35f17-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35f17-108">DESCRIPTION</span></span>
-<span data-ttu-id="35f17-109">Das Test-AzNetworkWatcherConnectivity-Cmdlet gibt Verbindungsinformationen für eine angegebene Quell-VM und ein Ziel zurück.</span><span class="sxs-lookup"><span data-stu-id="35f17-109">The Test-AzNetworkWatcherConnectivity cmdlet returns connectivity information for a specified source VM and a destination.</span></span> <span data-ttu-id="35f17-110">Wenn die Verbindung zwischen Quelle und Ziel nicht hergestellt werden kann, gibt das Cmdlet Details zu dem Problem zurück.</span><span class="sxs-lookup"><span data-stu-id="35f17-110">If connectivity between the source and destination cannot be established, the cmdlet returns details about the issue.</span></span>
+## <span data-ttu-id="36bb4-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="36bb4-108">DESCRIPTION</span></span>
+<span data-ttu-id="36bb4-109">Das Test-AzNetworkWatcherConnectivity cmdlet gibt Verbindungsinformationen für eine angegebene Quell-VM und ein Ziel zurück.</span><span class="sxs-lookup"><span data-stu-id="36bb4-109">The Test-AzNetworkWatcherConnectivity cmdlet returns connectivity information for a specified source VM and a destination.</span></span> <span data-ttu-id="36bb4-110">Wenn die Verbindung zwischen Quelle und Ziel nicht hergestellt werden kann, gibt das Cmdlet Details zu dem Problem zurück.</span><span class="sxs-lookup"><span data-stu-id="36bb4-110">If connectivity between the source and destination cannot be established, the cmdlet returns details about the issue.</span></span>
 
-## <span data-ttu-id="35f17-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="35f17-111">EXAMPLES</span></span>
+## <span data-ttu-id="36bb4-111">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="36bb4-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="35f17-112">Beispiel 1: Testen der Netzwerk Überwachungs Konnektivität von einem virtuellen Computer zu einer Website</span><span class="sxs-lookup"><span data-stu-id="35f17-112">Example 1: Test Network Watcher Connectivity from a VM to a website</span></span>
+### <span data-ttu-id="36bb4-112">Beispiel 1: Testen der Network Watcher Connectivity von einer VM zu einer Website</span><span class="sxs-lookup"><span data-stu-id="36bb4-112">Example 1: Test Network Watcher Connectivity from a VM to a website</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcherName NetworkWatcher -ResourceGroupName NetworkWatcherRG -SourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoRG/providers/Microsoft.Compute/virtualMachines/MultiTierApp0" -DestinationAddress "bing.com" -DestinationPort 80
 
@@ -81,12 +81,12 @@ Hops             : [
                    ]
 ```
 
-<span data-ttu-id="35f17-113">In diesem Beispiel wird die Konnektivität von einem virtuellen Computer in Azure zu www.Bing.com getestet.</span><span class="sxs-lookup"><span data-stu-id="35f17-113">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
+<span data-ttu-id="36bb4-113">In diesem Beispiel wird die Konnektivität von einer VM in Azure zu www.bing.com.</span><span class="sxs-lookup"><span data-stu-id="36bb4-113">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
 
-## <span data-ttu-id="35f17-114">Parameter</span><span class="sxs-lookup"><span data-stu-id="35f17-114">PARAMETERS</span></span>
+## <span data-ttu-id="36bb4-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="36bb4-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="35f17-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="35f17-115">-AsJob</span></span>
-<span data-ttu-id="35f17-116">Ausführen eines Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="35f17-116">Run cmdlet in the background</span></span>
+### <span data-ttu-id="36bb4-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="36bb4-115">-AsJob</span></span>
+<span data-ttu-id="36bb4-116">Ausführen des Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="36bb4-116">Run cmdlet in the background</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,8 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="35f17-117">-DefaultProfile</span></span>
-<span data-ttu-id="35f17-118">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="35f17-118">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="36bb4-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="36bb4-117">-DefaultProfile</span></span>
+<span data-ttu-id="36bb4-118">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="36bb4-118">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -115,8 +115,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-119">-DestinationAddress</span><span class="sxs-lookup"><span data-stu-id="35f17-119">-DestinationAddress</span></span>
-<span data-ttu-id="35f17-120">Die IP-Adresse oder der URI, in dem die Verbindung hergestellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="35f17-120">The IP address or URI the resource to which a connection attempt will be made.</span></span>
+### <span data-ttu-id="36bb4-119">-DestinationAddress</span><span class="sxs-lookup"><span data-stu-id="36bb4-119">-DestinationAddress</span></span>
+<span data-ttu-id="36bb4-120">Die IP-Adresse oder der URI der Ressource, zu der ein Verbindungsversuch erfolgt.</span><span class="sxs-lookup"><span data-stu-id="36bb4-120">The IP address or URI the resource to which a connection attempt will be made.</span></span>
 
 ```yaml
 Type: System.String
@@ -130,8 +130,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-121">-Ziel-Nr</span><span class="sxs-lookup"><span data-stu-id="35f17-121">-DestinationId</span></span>
-<span data-ttu-id="35f17-122">Die ID der Ressource, in der ein Verbindungsversuch erfolgen soll.</span><span class="sxs-lookup"><span data-stu-id="35f17-122">The ID of the resource to which a connection attempt will be made.</span></span>
+### <span data-ttu-id="36bb4-121">-DestinationId</span><span class="sxs-lookup"><span data-stu-id="36bb4-121">-DestinationId</span></span>
+<span data-ttu-id="36bb4-122">Die ID der Ressource, mit der ein Verbindungsversuch erfolgt.</span><span class="sxs-lookup"><span data-stu-id="36bb4-122">The ID of the resource to which a connection attempt will be made.</span></span>
 
 ```yaml
 Type: System.String
@@ -145,8 +145,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-123">-DestinationPort</span><span class="sxs-lookup"><span data-stu-id="35f17-123">-DestinationPort</span></span>
-<span data-ttu-id="35f17-124">Port, auf dem die Verbindungsprüfung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="35f17-124">Port on which check connectivity will be performed.</span></span>
+### <span data-ttu-id="36bb4-123">-DestinationPort</span><span class="sxs-lookup"><span data-stu-id="36bb4-123">-DestinationPort</span></span>
+<span data-ttu-id="36bb4-124">Port, für den die Verbindungsprüfung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="36bb4-124">Port on which check connectivity will be performed.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -160,8 +160,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-125">-Standort</span><span class="sxs-lookup"><span data-stu-id="35f17-125">-Location</span></span>
-<span data-ttu-id="35f17-126">Der Speicherort des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="35f17-126">Location of the network watcher.</span></span>
+### <span data-ttu-id="36bb4-125">-Location</span><span class="sxs-lookup"><span data-stu-id="36bb4-125">-Location</span></span>
+<span data-ttu-id="36bb4-126">Position der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="36bb4-126">Location of the network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -175,8 +175,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-127">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="35f17-127">-NetworkWatcher</span></span>
-<span data-ttu-id="35f17-128">Die Netzwerk Überwachungsressource.</span><span class="sxs-lookup"><span data-stu-id="35f17-128">The network watcher resource.</span></span>
+### <span data-ttu-id="36bb4-127">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="36bb4-127">-NetworkWatcher</span></span>
+<span data-ttu-id="36bb4-128">Die Netzwerk-Watcher-Ressource.</span><span class="sxs-lookup"><span data-stu-id="36bb4-128">The network watcher resource.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -190,8 +190,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="35f17-129">-NetworkWatcherName</span></span>
-<span data-ttu-id="35f17-130">Der Name des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="35f17-130">The name of network watcher.</span></span>
+### <span data-ttu-id="36bb4-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="36bb4-129">-NetworkWatcherName</span></span>
+<span data-ttu-id="36bb4-130">Der Name der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="36bb4-130">The name of network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -205,8 +205,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-131">-ProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="35f17-131">-ProtocolConfiguration</span></span>
-<span data-ttu-id="35f17-132">Die Konfiguration, auf der die Verbindungsprüfung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="35f17-132">Protocal configuration on which check connectivity will be performed.</span></span>
+### <span data-ttu-id="36bb4-131">-ProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="36bb4-131">-ProtocolConfiguration</span></span>
+<span data-ttu-id="36bb4-132">Konfiguration mit Vorschnur, für die die Verbindungsprüfung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="36bb4-132">Protocal configuration on which check connectivity will be performed.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration
@@ -220,8 +220,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="35f17-133">-ResourceGroupName</span></span>
-<span data-ttu-id="35f17-134">Der Name der Netzwerk Überwachungsressourcen Gruppe.</span><span class="sxs-lookup"><span data-stu-id="35f17-134">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="36bb4-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="36bb4-133">-ResourceGroupName</span></span>
+<span data-ttu-id="36bb4-134">Der Name der Ressourcengruppe "Netzwerk-Watcher".</span><span class="sxs-lookup"><span data-stu-id="36bb4-134">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -235,8 +235,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-135">-Quellpfad</span><span class="sxs-lookup"><span data-stu-id="35f17-135">-SourceId</span></span>
-<span data-ttu-id="35f17-136">Die ID der Ressource, aus der eine Verbindungsüberprüfung initiiert wird.</span><span class="sxs-lookup"><span data-stu-id="35f17-136">The ID of the resource from which a connectivity check will be initiated.</span></span>
+### <span data-ttu-id="36bb4-135">-SourceId</span><span class="sxs-lookup"><span data-stu-id="36bb4-135">-SourceId</span></span>
+<span data-ttu-id="36bb4-136">Die ID der Ressource, aus der eine Verbindungsüberprüfung initiiert wird.</span><span class="sxs-lookup"><span data-stu-id="36bb4-136">The ID of the resource from which a connectivity check will be initiated.</span></span>
 
 ```yaml
 Type: System.String
@@ -250,8 +250,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-137">-SourcePort</span><span class="sxs-lookup"><span data-stu-id="35f17-137">-SourcePort</span></span>
-<span data-ttu-id="35f17-138">Der Quell-Port, von dem eine Verbindungsüberprüfung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="35f17-138">The source port from which a connectivity check will be performed.</span></span>
+### <span data-ttu-id="36bb4-137">-SourcePort</span><span class="sxs-lookup"><span data-stu-id="36bb4-137">-SourcePort</span></span>
+<span data-ttu-id="36bb4-138">Der Quellport, über den eine Verbindungsüberprüfung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="36bb4-138">The source port from which a connectivity check will be performed.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -265,66 +265,66 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="35f17-139">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="35f17-139">CommonParameters</span></span>
-<span data-ttu-id="35f17-140">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="35f17-140">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="35f17-141">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="35f17-141">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="36bb4-139">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="36bb4-139">CommonParameters</span></span>
+<span data-ttu-id="36bb4-140">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="36bb4-140">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="36bb4-141">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="36bb4-141">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="35f17-142">Eingaben</span><span class="sxs-lookup"><span data-stu-id="35f17-142">INPUTS</span></span>
+## <span data-ttu-id="36bb4-142">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="36bb4-142">INPUTS</span></span>
 
-### <span data-ttu-id="35f17-143">Microsoft. Azure. Commands. Network. Models. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="35f17-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="36bb4-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="36bb4-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-### <span data-ttu-id="35f17-144">System. String</span><span class="sxs-lookup"><span data-stu-id="35f17-144">System.String</span></span>
+### <span data-ttu-id="36bb4-144">System.String</span><span class="sxs-lookup"><span data-stu-id="36bb4-144">System.String</span></span>
 
-### <span data-ttu-id="35f17-145">System. Int32</span><span class="sxs-lookup"><span data-stu-id="35f17-145">System.Int32</span></span>
+### <span data-ttu-id="36bb4-145">System.Int32</span><span class="sxs-lookup"><span data-stu-id="36bb4-145">System.Int32</span></span>
 
-## <span data-ttu-id="35f17-146">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="35f17-146">OUTPUTS</span></span>
+## <span data-ttu-id="36bb4-146">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="36bb4-146">OUTPUTS</span></span>
 
-### <span data-ttu-id="35f17-147">Microsoft. Azure. Commands. Network. Models. PSConnectivityInformation</span><span class="sxs-lookup"><span data-stu-id="35f17-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span></span>
+### <span data-ttu-id="36bb4-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span><span class="sxs-lookup"><span data-stu-id="36bb4-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span></span>
 
-## <span data-ttu-id="35f17-148">Notizen</span><span class="sxs-lookup"><span data-stu-id="35f17-148">NOTES</span></span>
-<span data-ttu-id="35f17-149">Schlüsselwörter: Azure, azurerm, arm, Ressource, Konnektivität, Verwaltung, Manager, Netzwerk, Netzwerke, Netzwerkmonitor</span><span class="sxs-lookup"><span data-stu-id="35f17-149">Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher</span></span>
+## <span data-ttu-id="36bb4-148">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="36bb4-148">NOTES</span></span>
+<span data-ttu-id="36bb4-149">Schlüsselwörter: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher</span><span class="sxs-lookup"><span data-stu-id="36bb4-149">Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher</span></span>
 
-## <span data-ttu-id="35f17-150">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="35f17-150">RELATED LINKS</span></span>
+## <span data-ttu-id="36bb4-150">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="36bb4-150">RELATED LINKS</span></span>
 
-<span data-ttu-id="35f17-151">[Neu – AzNetworkWatcher](./New-AzNetworkWatcher.md) 
+<span data-ttu-id="36bb4-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md) 
  [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md) 
- [Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span><span class="sxs-lookup"><span data-stu-id="35f17-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
+ [Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span><span class="sxs-lookup"><span data-stu-id="36bb4-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
 [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md)
 [Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span></span>
 
-<span data-ttu-id="35f17-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md) 
+<span data-ttu-id="36bb4-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md) 
  [Get-AzNetworkWatcherSecurityGroupView](./Get-AzNetworkWatcherSecurityGroupView.md) 
  [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md) 
- [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span><span class="sxs-lookup"><span data-stu-id="35f17-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md)
+ [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span><span class="sxs-lookup"><span data-stu-id="36bb4-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md)
 [Get-AzNetworkWatcherSecurityGroupView](./Get-AzNetworkWatcherSecurityGroupView.md)
 [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md)
 [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span></span>
 
-<span data-ttu-id="35f17-153">[Neu – AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md) 
- [Neu – AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md) 
+<span data-ttu-id="36bb4-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md) 
+ [New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md) 
  [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md) 
  [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md) 
- [Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span><span class="sxs-lookup"><span data-stu-id="35f17-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
+ [Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span><span class="sxs-lookup"><span data-stu-id="36bb4-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
 [New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
 [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md)
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 [Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span></span>
 
 
-<span data-ttu-id="35f17-154">[Anfang-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md) 
- [Neu – AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md) 
+<span data-ttu-id="36bb4-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md) 
+ [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md) 
  [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md) 
  [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md) 
- [Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
- [Anfang-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md) 
- [Satz-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md) 
- [Satz-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md) 
+ [Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
+ [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md) 
+ [Set-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md) 
+ [Set-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md) 
  [Remove-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md) 
- [Neu – AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md) 
+ [New-AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md) 
  [Get-AzNetworkWatcherReachabilityReport](./Get-AzNetworkWatcherReachabilityReport.md) 
  [Get-AzNetworkWatcherReachabilityProvidersList](./Get-AzNetworkWatcherReachabilityProvidersList.md) 
  [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md) 
- [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport) 
- [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)</span><span class="sxs-lookup"><span data-stu-id="35f17-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+ [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md) 
+ [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)</span><span class="sxs-lookup"><span data-stu-id="36bb4-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md)
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
@@ -337,5 +337,5 @@ Accept wildcard characters: False
 [Get-AzNetworkWatcherReachabilityReport](./Get-AzNetworkWatcherReachabilityReport.md)
 [Get-AzNetworkWatcherReachabilityProvidersList](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)</span></span>
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)</span></span>
