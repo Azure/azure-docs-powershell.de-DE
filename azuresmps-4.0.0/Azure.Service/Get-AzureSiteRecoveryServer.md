@@ -3,41 +3,41 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 3EC274C9-9BF6-4B39-BC70-C7F9D780805D
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: a4081d6d072aadd6a4ae7d09ff57748a8f2cb697
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 79b61501a56913fedb2a003d7aea1a041bfab4d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94005786"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412281"
 ---
-# <span data-ttu-id="857a8-101">Get-AzureSiteRecoveryServer</span><span class="sxs-lookup"><span data-stu-id="857a8-101">Get-AzureSiteRecoveryServer</span></span>
+# <span data-ttu-id="c93bb-101">Get-AzureSiteRecoveryServer</span><span class="sxs-lookup"><span data-stu-id="c93bb-101">Get-AzureSiteRecoveryServer</span></span>
 
-## <span data-ttu-id="857a8-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="857a8-102">SYNOPSIS</span></span>
-<span data-ttu-id="857a8-103">Ruft Website Wiederherstellungsserver ab, die einen Standort Wiederherstellungs Tresor registriert haben.</span><span class="sxs-lookup"><span data-stu-id="857a8-103">Gets Site Recovery servers registered a Site Recovery vault.</span></span>
+## <span data-ttu-id="c93bb-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="c93bb-102">SYNOPSIS</span></span>
+<span data-ttu-id="c93bb-103">Ruft einen Websitewiederherstellungsserver ab, der einen Websitewiederherstellungstresor registriert hat.</span><span class="sxs-lookup"><span data-stu-id="c93bb-103">Gets Site Recovery servers registered a Site Recovery vault.</span></span>
 
-## <span data-ttu-id="857a8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="857a8-104">SYNTAX</span></span>
+## <span data-ttu-id="c93bb-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c93bb-104">SYNTAX</span></span>
 
-### <span data-ttu-id="857a8-105">Standard (Standard)</span><span class="sxs-lookup"><span data-stu-id="857a8-105">Default (Default)</span></span>
+### <span data-ttu-id="c93bb-105">Standard (Standard)</span><span class="sxs-lookup"><span data-stu-id="c93bb-105">Default (Default)</span></span>
 ```
 Get-AzureSiteRecoveryServer [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="857a8-106">ById</span><span class="sxs-lookup"><span data-stu-id="857a8-106">ById</span></span>
+### <span data-ttu-id="c93bb-106">ById</span><span class="sxs-lookup"><span data-stu-id="c93bb-106">ById</span></span>
 ```
 Get-AzureSiteRecoveryServer -Id <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="857a8-107">ByName</span><span class="sxs-lookup"><span data-stu-id="857a8-107">ByName</span></span>
+### <span data-ttu-id="c93bb-107">ByName</span><span class="sxs-lookup"><span data-stu-id="c93bb-107">ByName</span></span>
 ```
 Get-AzureSiteRecoveryServer -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="857a8-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="857a8-108">DESCRIPTION</span></span>
-<span data-ttu-id="857a8-109">Das Cmdlet " **Get-AzureSiteRecoveryServer** " Ruft Informationen zu Azure Site Recovery-Servern ab, die für das aktuelle Standort Wiederherstellungs Depot registriert sind.</span><span class="sxs-lookup"><span data-stu-id="857a8-109">The **Get-AzureSiteRecoveryServer** cmdlet gets information about Azure Site Recovery servers registered to the current Site Recovery vault.</span></span>
+## <span data-ttu-id="c93bb-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="c93bb-108">DESCRIPTION</span></span>
+<span data-ttu-id="c93bb-109">Das **Cmdlet "Get-AzureSiteRecoveryServer"** ruft Informationen zu azure-Websitewiederherstellungsservern ab, die im aktuellen Websitewiederherstellungstresor registriert sind.</span><span class="sxs-lookup"><span data-stu-id="c93bb-109">The **Get-AzureSiteRecoveryServer** cmdlet gets information about Azure Site Recovery servers registered to the current Site Recovery vault.</span></span>
 
-## <span data-ttu-id="857a8-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="857a8-110">EXAMPLES</span></span>
+## <span data-ttu-id="c93bb-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="c93bb-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="857a8-111">Beispiel 1: Abrufen von Informationen zu einem Website Wiederherstellungsserver</span><span class="sxs-lookup"><span data-stu-id="857a8-111">Example 1: Get information about a Site Recovery server</span></span>
+### <span data-ttu-id="c93bb-111">Beispiel 1: Informationen zu einem Websitewiederherstellungsserver</span><span class="sxs-lookup"><span data-stu-id="c93bb-111">Example 1: Get information about a Site Recovery server</span></span>
 ```
 PS C:\> Get-AzureSiteRecoveryServer
 ID              : cd7dec80-1144-4531-9ab3-888b8ab39bee
@@ -53,12 +53,12 @@ ProviderVersion : 3.5
 ServerVersion   : 3.2.7510.0
 ```
 
-<span data-ttu-id="857a8-112">Dieser Befehl ruft Informationen zu einem Azure Site Recovery Server ab.</span><span class="sxs-lookup"><span data-stu-id="857a8-112">This command gets information about an Azure Site Recovery server.</span></span>
+<span data-ttu-id="c93bb-112">Dieser Befehl ruft Informationen zu einem Azure Site Recovery Server ab.</span><span class="sxs-lookup"><span data-stu-id="c93bb-112">This command gets information about an Azure Site Recovery server.</span></span>
 
-## <span data-ttu-id="857a8-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="857a8-113">PARAMETERS</span></span>
+## <span data-ttu-id="c93bb-113">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c93bb-113">PARAMETERS</span></span>
 
-### <span data-ttu-id="857a8-114">-ID</span><span class="sxs-lookup"><span data-stu-id="857a8-114">-Id</span></span>
-<span data-ttu-id="857a8-115">Gibt die ID eines Servers an.</span><span class="sxs-lookup"><span data-stu-id="857a8-115">Specifies the ID of a server.</span></span>
+### <span data-ttu-id="c93bb-114">-ID</span><span class="sxs-lookup"><span data-stu-id="c93bb-114">-Id</span></span>
+<span data-ttu-id="c93bb-115">Gibt die ID eines Servers an.</span><span class="sxs-lookup"><span data-stu-id="c93bb-115">Specifies the ID of a server.</span></span>
 
 ```yaml
 Type: String
@@ -72,8 +72,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="857a8-116">-Name</span><span class="sxs-lookup"><span data-stu-id="857a8-116">-Name</span></span>
-<span data-ttu-id="857a8-117">Gibt den Namen eines Servers an.</span><span class="sxs-lookup"><span data-stu-id="857a8-117">Specifies the name of a server.</span></span>
+### <span data-ttu-id="c93bb-116">-Name</span><span class="sxs-lookup"><span data-stu-id="c93bb-116">-Name</span></span>
+<span data-ttu-id="c93bb-117">Gibt den Namen eines Servers an.</span><span class="sxs-lookup"><span data-stu-id="c93bb-117">Specifies the name of a server.</span></span>
 
 ```yaml
 Type: String
@@ -87,9 +87,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="857a8-118">-Profil</span><span class="sxs-lookup"><span data-stu-id="857a8-118">-Profile</span></span>
-<span data-ttu-id="857a8-119">Gibt das Azure-Profil an, von dem dieses Cmdlet liest.</span><span class="sxs-lookup"><span data-stu-id="857a8-119">Specifies the Azure profile from which this cmdlet reads.</span></span>
-<span data-ttu-id="857a8-120">Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.</span><span class="sxs-lookup"><span data-stu-id="857a8-120">If you do not specify a profile, this cmdlet reads from the local default profile.</span></span>
+### <span data-ttu-id="c93bb-118">-Profile</span><span class="sxs-lookup"><span data-stu-id="c93bb-118">-Profile</span></span>
+<span data-ttu-id="c93bb-119">Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.</span><span class="sxs-lookup"><span data-stu-id="c93bb-119">Specifies the Azure profile from which this cmdlet reads.</span></span>
+<span data-ttu-id="c93bb-120">Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.</span><span class="sxs-lookup"><span data-stu-id="c93bb-120">If you do not specify a profile, this cmdlet reads from the local default profile.</span></span>
 
 ```yaml
 Type: AzureSMProfile
@@ -103,17 +103,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="857a8-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="857a8-121">CommonParameters</span></span>
-<span data-ttu-id="857a8-122">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="857a8-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="857a8-123">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="857a8-123">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="c93bb-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c93bb-121">CommonParameters</span></span>
+<span data-ttu-id="c93bb-122">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c93bb-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c93bb-123">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="c93bb-123">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="857a8-124">Eingaben</span><span class="sxs-lookup"><span data-stu-id="857a8-124">INPUTS</span></span>
+## <span data-ttu-id="c93bb-124">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="c93bb-124">INPUTS</span></span>
 
-## <span data-ttu-id="857a8-125">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="857a8-125">OUTPUTS</span></span>
+## <span data-ttu-id="c93bb-125">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="c93bb-125">OUTPUTS</span></span>
 
-## <span data-ttu-id="857a8-126">Notizen</span><span class="sxs-lookup"><span data-stu-id="857a8-126">NOTES</span></span>
+## <span data-ttu-id="c93bb-126">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="c93bb-126">NOTES</span></span>
 
-## <span data-ttu-id="857a8-127">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="857a8-127">RELATED LINKS</span></span>
+## <span data-ttu-id="c93bb-127">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="c93bb-127">RELATED LINKS</span></span>
 
-[<span data-ttu-id="857a8-128">Azure Site Recovery Services-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="857a8-128">Azure Site Recovery Services Cmdlets</span></span>](./Azure.SiteRecoveryServices.md)
+
 
 
