@@ -6,45 +6,45 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitConnectionConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitConnectionConfig.md
-ms.openlocfilehash: f4aabb68fd1f508651406d7ccf7be91ff646d46c
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 0ef2870592411ce64847f8a4a58dabdebcc8235f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94003590"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408235"
 ---
-# <span data-ttu-id="92e73-101">Get-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="92e73-101">Get-AzExpressRouteCircuitConnectionConfig</span></span>
+# <span data-ttu-id="f7c08-101">Get-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="f7c08-101">Get-AzExpressRouteCircuitConnectionConfig</span></span>
 
-## <span data-ttu-id="92e73-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="92e73-102">SYNOPSIS</span></span>
-<span data-ttu-id="92e73-103">Ruft eine Express Route Circuit Connection-Konfiguration ab, die mit Private Peering von ExpressRouteCircuit verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="92e73-103">Gets an ExpressRoute circuit connection configuration associated with Private Peering of ExpressRouteCircuit.</span></span>
+## <span data-ttu-id="f7c08-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="f7c08-102">SYNOPSIS</span></span>
+<span data-ttu-id="f7c08-103">Ruft eine ExpressRoute-Schaltkreisverbindungskonfiguration ab, die mit privatem Peering von ExpressRouteCircuit verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="f7c08-103">Gets an ExpressRoute circuit connection configuration associated with Private Peering of ExpressRouteCircuit.</span></span>
 
-## <span data-ttu-id="92e73-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="92e73-104">SYNTAX</span></span>
+## <span data-ttu-id="f7c08-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="f7c08-104">SYNTAX</span></span>
 
 ```
 Get-AzExpressRouteCircuitConnectionConfig [[-Name] <String>] [-ExpressRouteCircuit] <PSExpressRouteCircuit>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="92e73-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="92e73-105">DESCRIPTION</span></span>
-<span data-ttu-id="92e73-106">Das Cmdlet " **Get-AzExpressRouteCircuitConnectionConfig** " Ruft die Konfiguration einer Circuit-Verbindung ab, die mit Private Peering für einen Express Route-Schaltkreis verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="92e73-106">The **Get-AzExpressRouteCircuitConnectionConfig** cmdlet retrieves the configuration of a circuit connection associated with Private Peering for an ExpressRoute circuit.</span></span>
+## <span data-ttu-id="f7c08-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="f7c08-105">DESCRIPTION</span></span>
+<span data-ttu-id="f7c08-106">Das **Cmdlet "Get-AzExpressRouteCircuitConnectionConfig"** ruft die Konfiguration einer Schaltkreisverbindung ab, die privatem Peering für einen ExpressRoute-Schaltkreis zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="f7c08-106">The **Get-AzExpressRouteCircuitConnectionConfig** cmdlet retrieves the configuration of a circuit connection associated with Private Peering for an ExpressRoute circuit.</span></span>
 
-## <span data-ttu-id="92e73-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="92e73-107">EXAMPLES</span></span>
+## <span data-ttu-id="f7c08-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="f7c08-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="92e73-108">Beispiel 1: Anzeigen der Schaltungs Verbindungskonfiguration für einen Express Route-Schaltkreis</span><span class="sxs-lookup"><span data-stu-id="92e73-108">Example 1: Display the circuit connection configuration for an ExpressRoute circuit</span></span>
+### <span data-ttu-id="f7c08-108">Beispiel 1: Anzeigen der Verbindungskonfiguration eines Schaltkreises für einen ExpressRoute-Schaltkreis</span><span class="sxs-lookup"><span data-stu-id="f7c08-108">Example 1: Display the circuit connection configuration for an ExpressRoute circuit</span></span>
 ```
 $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
 Get-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init
 ```
 
-### <span data-ttu-id="92e73-109">Beispiel 2: Abrufen der Schaltkreis Verbindungsressource, die mit einem Express Route-Schaltkreis verbunden ist, mithilfe von Piping</span><span class="sxs-lookup"><span data-stu-id="92e73-109">Example 2: Get circuit connection resource associated with an ExpressRoute Circuit using piping</span></span>
+### <span data-ttu-id="f7c08-109">Beispiel 2: Erhalten einer mit einem ExpressRoute-Schaltkreis verknüpften Schaltkreisressource mithilfe von Piping</span><span class="sxs-lookup"><span data-stu-id="f7c08-109">Example 2: Get circuit connection resource associated with an ExpressRoute Circuit using piping</span></span>
 ```
 Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Get-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName
 ```
 
-## <span data-ttu-id="92e73-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="92e73-110">PARAMETERS</span></span>
+## <span data-ttu-id="f7c08-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f7c08-110">PARAMETERS</span></span>
 
-### <span data-ttu-id="92e73-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="92e73-111">-DefaultProfile</span></span>
-<span data-ttu-id="92e73-112">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="92e73-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="f7c08-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="f7c08-111">-DefaultProfile</span></span>
+<span data-ttu-id="f7c08-112">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f7c08-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -58,8 +58,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="92e73-113">-ExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="92e73-113">-ExpressRouteCircuit</span></span>
-<span data-ttu-id="92e73-114">Das Express Route-Schaltkreis Objekt, das die Leitungs Verbindungskonfiguration enthält.</span><span class="sxs-lookup"><span data-stu-id="92e73-114">The ExpressRoute circuit object containing the circuit connection configuration.</span></span>
+### <span data-ttu-id="f7c08-113">-ExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="f7c08-113">-ExpressRouteCircuit</span></span>
+<span data-ttu-id="f7c08-114">Das ExpressRoute-Schaltkreisobjekt, das die Verbindungskonfiguration des Schaltkreises enthält.</span><span class="sxs-lookup"><span data-stu-id="f7c08-114">The ExpressRoute circuit object containing the circuit connection configuration.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -73,8 +73,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="92e73-115">-Name</span><span class="sxs-lookup"><span data-stu-id="92e73-115">-Name</span></span>
-<span data-ttu-id="92e73-116">Der Name der Verbindungskonfiguration, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="92e73-116">The name of the circuit connection configuration to be retrieved.</span></span>
+### <span data-ttu-id="f7c08-115">-Name</span><span class="sxs-lookup"><span data-stu-id="f7c08-115">-Name</span></span>
+<span data-ttu-id="f7c08-116">Der Name der Verbindungskonfiguration, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="f7c08-116">The name of the circuit connection configuration to be retrieved.</span></span>
 
 ```yaml
 Type: System.String
@@ -88,27 +88,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="92e73-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="92e73-117">CommonParameters</span></span>
-<span data-ttu-id="92e73-118">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="92e73-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="92e73-119">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="92e73-119">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="f7c08-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f7c08-117">CommonParameters</span></span>
+<span data-ttu-id="f7c08-118">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="f7c08-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f7c08-119">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="f7c08-119">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="92e73-120">Eingaben</span><span class="sxs-lookup"><span data-stu-id="92e73-120">INPUTS</span></span>
+## <span data-ttu-id="f7c08-120">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="f7c08-120">INPUTS</span></span>
 
-### <span data-ttu-id="92e73-121">Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="92e73-121">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit</span></span>
+### <span data-ttu-id="f7c08-121">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="f7c08-121">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit</span></span>
 
-## <span data-ttu-id="92e73-122">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="92e73-122">OUTPUTS</span></span>
+## <span data-ttu-id="f7c08-122">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="f7c08-122">OUTPUTS</span></span>
 
-### <span data-ttu-id="92e73-123">Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuitConnection</span><span class="sxs-lookup"><span data-stu-id="92e73-123">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitConnection</span></span>
+### <span data-ttu-id="f7c08-123">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitConnection</span><span class="sxs-lookup"><span data-stu-id="f7c08-123">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitConnection</span></span>
 
-## <span data-ttu-id="92e73-124">Notizen</span><span class="sxs-lookup"><span data-stu-id="92e73-124">NOTES</span></span>
+## <span data-ttu-id="f7c08-124">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="f7c08-124">NOTES</span></span>
 
-## <span data-ttu-id="92e73-125">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="92e73-125">RELATED LINKS</span></span>
+## <span data-ttu-id="f7c08-125">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="f7c08-125">RELATED LINKS</span></span>
 
-[<span data-ttu-id="92e73-126">Get-AzExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="92e73-126">Get-AzExpressRouteCircuit</span></span>](Get-AzExpressRouteCircuit.md)
+[<span data-ttu-id="f7c08-126">Get-AzExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="f7c08-126">Get-AzExpressRouteCircuit</span></span>](Get-AzExpressRouteCircuit.md)
 
-[<span data-ttu-id="92e73-127">Add-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="92e73-127">Add-AzExpressRouteCircuitConnectionConfig</span></span>](Add-AzExpressRouteCircuitConnectionConfig.md)
+[<span data-ttu-id="f7c08-127">Add-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="f7c08-127">Add-AzExpressRouteCircuitConnectionConfig</span></span>](Add-AzExpressRouteCircuitConnectionConfig.md)
 
-[<span data-ttu-id="92e73-128">Remove-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="92e73-128">Remove-AzExpressRouteCircuitConnectionConfig</span></span>](Remove-AzExpressRouteCircuitConnectionConfig.md)
+[<span data-ttu-id="f7c08-128">Remove-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="f7c08-128">Remove-AzExpressRouteCircuitConnectionConfig</span></span>](Remove-AzExpressRouteCircuitConnectionConfig.md)
 
-[<span data-ttu-id="92e73-129">Satz-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="92e73-129">Set-AzExpressRouteCircuitConnectionConfig</span></span>](Set-AzExpressRouteCircuitConnectionConfig.md)
+[<span data-ttu-id="f7c08-129">Set-AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="f7c08-129">Set-AzExpressRouteCircuitConnectionConfig</span></span>](Set-AzExpressRouteCircuitConnectionConfig.md)
 
-[<span data-ttu-id="92e73-130">Neu – AzExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="92e73-130">New-AzExpressRouteCircuitConnectionConfig</span></span>](New-AzExpressRouteCircuitConnectionConfig.md)
+
