@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzResource.md
-ms.openlocfilehash: ecd70916f1ddb6e365fb9f880db9974f6c9ae771
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 9e8eea48238bd177f3a8556691db48686a57dd99
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94165648"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414865"
 ---
 # Remove-AzResource
 
-## Synopsis
+## SYNOPSIS
 Entfernt eine Ressource.
 
-## Syntax
+## SYNTAX
 
 ### ByResourceId (Standard)
 ```
@@ -41,22 +41,22 @@ Remove-AzResource [-AsJob] -ResourceName <String> -ResourceType <String> [-Exten
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **Remove-AzResource** entfernt eine Azure-Ressource.
+## BESCHREIBUNG
+Das **Cmdlet "Remove-AzResource"** entfernt eine Azure-Ressource.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Entfernen einer Website Ressource
+### Beispiel 1: Entfernen einer Websiteressource
 ```
 PS C:\>Remove-AzResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
 ```
 
-Dieser Befehl entfernt die Website Ressource mit dem Namen ContosoSite.
+Mit diesem Befehl wird die Websiteressource namens "ContosoSite" entfernt.
 Im Beispiel wird ein Platzhalterwert für die Abonnement-ID verwendet.
-Der Befehl gibt den Parameter *Force* an.
+Der Befehl gibt den Parameter *"Force"* an.
 Daher werden Sie nicht zur Bestätigung aufgefordert.
 
-## Parameter
+## PARAMETERS
 
 ### -ApiVersion
 Gibt die Version der zu verwendenden Ressourcenanbieter-API an.
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Ausführen eines Cmdlets im Hintergrund
+Ausführen des Cmdlets im Hintergrund
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-Gibt den Namen einer Erweiterungs Ressource der Ressource an, die vom Cmdlet entfernt wird.
-Wenn Sie beispielsweise eine Datenbank angeben möchten, verwenden Sie das folgende Format: Servername- `/` Datenbankname
+Gibt den Namen einer Erweiterungsressource der Ressource an, die von diesem Cmdlet entfernt wird.
+Um beispielsweise eine Datenbank anzugeben, verwenden Sie das folgende Format: Name der `/` Serverdatenbank
 
 ```yaml
 Type: System.String
@@ -121,8 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-Gibt den Ressourcentyp für eine Erweiterungs Ressource an.
-Gibt den Erweiterungs Ressourcentyp für die Ressource an.
+Gibt den Ressourcentyp für eine Erweiterungsressource an.
+Gibt den Erweiterungsressourcentyp für die Ressource an.
 Zum Beispiel: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.
+Erzwingt die Ausführung des Befehls ohne Benutzerbestätigung.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -153,8 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-Gibt einen Open Data Protocol (OData)-stilfilter an.
-Dieses Cmdlet fügt zusätzlich zu anderen Filtern diesen Wert an die Anforderung an.
+Gibt einen Stilfilter des Open Data Protocol (OData) an.
+Dieses Cmdlet fügt diesen Wert zusätzlich zu allen anderen Filtern an die Anforderung an.
 
 ```yaml
 Type: System.String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-Gibt an, dass dieses Cmdlet Pre-Release-API-Versionen berücksichtigt, wenn es automatisch die zu verwendende Version bestimmt.
+Gibt an, dass dieses Cmdlet Vorabversions-API-Versionen berücksichtigt, wenn automatisch bestimmt wird, welche Version verwendet werden soll.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gibt den Namen der Ressourcengruppe an, aus der das Cmdlet eine Ressource entfernt.
+Gibt den Namen der Ressourcengruppe an, aus der mit diesem Cmdlet eine Ressource entfernt wird.
 
 ```yaml
 Type: System.String
@@ -198,9 +198,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Gibt die vollqualifizierte Ressourcen-ID der Ressource an, die vom Cmdlet entfernt wird.
-Die ID enthält das Abonnement, wie im folgenden Beispiel: `/subscriptions/` Abonnement-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+### -ResourceId
+Gibt die vollqualifizierte Ressourcen-ID der Ressource an, die von diesem Cmdlet entfernt wird.
+Die ID enthält das Abonnement, wie im folgenden Beispiel: `/subscriptions/` Abonnement-ID.`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 Gibt den Namen der Ressource an, die von diesem Cmdlet entfernt wird.
-Wenn Sie beispielsweise eine Datenbank angeben möchten, verwenden Sie das folgende Format: `ContosoServer/ContosoDatabase`
+Um beispielsweise eine Datenbank anzugeben, verwenden Sie das folgende Format: `ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -230,9 +230,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -
-Gibt den Typ der Ressource an, die vom Cmdlet entfernt wird.
-Bei einer Datenbank lautet der Ressourcentyp beispielsweise wie folgt: `Microsoft.Sql/Servers/Databases`
+### -ResourceType
+Gibt den Typ der Ressource an, die von diesem Cmdlet entfernt wird.
+Für eine Datenbank lautet der Ressourcentyp beispielsweise wie folgt: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -261,8 +261,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -276,7 +276,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -293,28 +293,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### System. Boolean
+### System.Boolean
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Finden-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 
-[Verschieben-AzResource](./Move-AzResource.md)
+[Move-AzResource](./Move-AzResource.md)
 
-[Neu – AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
-[Satz-AzResource](./Set-AzResource.md)
+[Set-AzResource](./Set-AzResource.md)
 
 
