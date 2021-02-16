@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
-ms.openlocfilehash: 6e24eaee77e8965ea34cbfcd8c169d675bce56d8
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 5a5450629024dbca8433bee79bfe9d2fa7119025
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93995836"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398035"
 ---
 # Get-AzKustoCluster
 
-## Synopsis
-Listen Sie alle Kusto-Cluster in einer Ressourcengruppe auf, oder rufen Sie einen bestimmten Kusto-Cluster ab.
+## SYNOPSIS
+Listen Sie alle "Kusto"-Cluster in einer Ressourcengruppe auf, oder erhalten Sie einen bestimmten Kusto-Cluster.
 
-## Syntax
+## SYNTAX
 
 ### ByClusterOrResourceGroupOrSubscription (Standard)
 ```
@@ -30,25 +30,25 @@ Get-AzKustoCluster -ResourceGroupName <String> [-Name <String>] [-DefaultProfile
 Get-AzKustoCluster -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Listen Sie alle Kusto-Cluster in einer Ressourcengruppe auf, oder rufen Sie einen bestimmten Kusto-Cluster ab.
+## BESCHREIBUNG
+Listen Sie alle "Kusto"-Cluster in einer Ressourcengruppe auf, oder erhalten Sie einen bestimmten Kusto-Cluster.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1 – Auflisten aller Kusto-Cluster in einer Ressourcengruppe
+### Beispiel 1: Auflisten aller Kusto-Cluster in einer Ressourcengruppe
 
-Geben Sie Folgendes ein: Microsoft. Kusto/Clusters ID:/Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/Providers/Microsoft.Kusto/Clusters/mykustocluster1 ResourceGroup: testrg Name: mykustocluster1 Ort: zentrale US-Kapazität: 3 SKU: D13_v2 ProvisioningState: succeeded-Zustand: Running Tag: {} URI: https://mykustocluster1.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster1.centralus.kusto.windows.net
+Typ: Microsoft.Kusto/Cluster-ID: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Cluster/mykustocluster1 ResourceGroup : testrg Name: mykustocluster1 Location: Central US Capacity : 3 SKU : D13_v2 ProvisioningState : Succeeded State : Running Tag : {} Uri : `https://mykustocluster1.centralus.kusto.windows.net` DataIngestionUri : `https://ingest-mykustocluster1.centralus.kusto.windows.net`
 
-Geben Sie Folgendes ein: Microsoft. Kusto/Clusters ID:/Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/Providers/Microsoft.Kusto/Clusters/mykustocluster2 ResourceGroup: testrg Name: mykustocluster2 Ort: zentrale US-Kapazität: 5 SKU: D13_v2 ProvisioningState: succeeded-Zustand: Running Tag: {} URI: https://mykustocluster2.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster2.centralus.kusto.windows.net
+Typ: Microsoft.Kusto/Cluster-ID: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Cluster/mykustocluster2 ResourceGroup : testrg Name: mykustocluster2 Location: Central US Capacity : 5 SKU : D13_v2 ProvisioningState : Succeeded State : Running Tag : {} Uri : `https://mykustocluster2.centralus.kusto.windows.net` DataIngestionUri : `https://ingest-mykustocluster2.centralus.kusto.windows.net`
 
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg
 ```
 
-Der obige Befehl listet alle Kusto-Cluster in der Ressourcengruppe "testrg" auf.
+Der oben aufgeführte Befehl listet alle Kusto-Cluster in der Ressourcengruppe "testrg" auf.
 
-### Beispiel 2: Abrufen eines bestimmten Kusto-Clusters anhand des Namens
+### Beispiel 2: Erhalten eines bestimmten Kusto-Cluster nach Name
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg -Name mykustocluster
@@ -67,9 +67,9 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-Der obige Befehl gibt den Kusto-Cluster mit dem Namen "mykustocluster" in der Ressourcengruppe "testrg" zurück.
+Der oben aufgeführte Befehl gibt den Cluster "Kusto" mit dem Namen "mykustocluster" in der Ressourcengruppe "testrg" zurück.
 
-### Beispiel 3: Abrufen eines bestimmten Kusto-Clusters nach Ressourcen-ID
+### Beispiel 3: Erhalten eines bestimmten Kusto-Clusters nach Ressourcen-ID
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mykustocluster
@@ -87,12 +87,12 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-Der obige Befehl gibt den Kusto-Cluster mit dem Namen "mykustocluster" in der Ressourcengruppe "testrg" zurück.
+Der oben aufgeführte Befehl gibt den Cluster "Kusto" mit dem Namen "mykustocluster" in der Ressourcengruppe "testrg" zurück.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name eines bestimmten Clusters.
+Name eines bestimmten Cluster.
 
 ```yaml
 Type: System.String
@@ -136,8 +136,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Kusto-Cluster-Quell Code.
+### -ResourceId
+Ressourcen-ID des Kusto-Clusters.
 
 ```yaml
 Type: System.String
@@ -152,16 +152,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Kusto. Models. PSKustoCluster
+### Microsoft.Azure.Commands.Kusto.Models.PSKustoCluster
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
