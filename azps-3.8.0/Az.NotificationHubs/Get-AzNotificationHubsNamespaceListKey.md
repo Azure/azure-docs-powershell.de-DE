@@ -6,45 +6,45 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceListKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceListKey.md
-ms.openlocfilehash: 90e617f35442470cef2d11c2de032679698ea167
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 5244602a6b6266ebabf02bbb927facda93e61d8b
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93846695"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403798"
 ---
 # Get-AzNotificationHubsNamespaceListKey
 
-## Synopsis
-Ruft die primären und sekundären Verbindungszeichenfolgen ab, die einer Benachrichtigungs-Hub-Namespace Autorisierungsregel zugeordnet sind.
+## SYNOPSIS
+Ruft die primären und sekundären Verbindungszeichenfolgen ab, die einer Autorisierungsregel für den Benachrichtigungshubnamespace zugeordnet sind.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzNotificationHubsNamespaceListKey [-ResourceGroup] <String> [-Namespace] <String>
  [-AuthorizationRule] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzNotificationHubsNamespaceListKey** " gibt die primären und sekundären Verbindungszeichenfolgen für eine Berechtigungsregel für eine freigegebene zugriffssignatur (SAS) zurück, die einem Benachrichtigungs-Hub-Namespace zugewiesen ist.
-Autorisierungsregeln verwalten Benutzerrechte für einen Benachrichtigungs-Hub-Namespace.
-Jede Regel umfasst eine primäre und eine sekundäre Verbindungszeichenfolge.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzNotificationHubsNamespaceListKey"** gibt die primären und sekundären Verbindungszeichenfolgen für eine SAS (Shared Access Signature)-Autorisierungsregel zurück, die einem Benachrichtigungshub-Namespace zugewiesen ist.
+Autorisierungsregeln verwalten Benutzerrechte für einen Benachrichtigungshub-Namespace.
+Jede Regel enthält eine primäre und eine sekundäre Verbindungszeichenfolge.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen der primären und sekundären Verbindungszeichenfolgen für eine Autorisierungsregel
+### Beispiel 1: Erhalten der primären und sekundären Verbindungszeichenfolgen für eine Autorisierungsregel
 ```
 PS C:\>Get-AzNotificationHubsNamespaceListKey -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
 ```
 
-Dieser Befehl gibt die primären und sekundären Verbindungszeichenfolgen für die Autorisierungsregel mit dem Namen "ListenRule" zurück, die dem ContosoNamespace-Namespace zugewiesen ist.
-Wenn Sie diesen Befehl ausführen, müssen Sie den Namen der Ressourcengruppe angeben, der der Namespace zugewiesen ist.
+Dieser Befehl gibt die primären und sekundären Verbindungszeichenfolgen für die Autorisierungsregel "ListenRule" zurück, die dem Namespace "ContosoNamespace" zugewiesen ist.
+Wenn Sie diesen Befehl ausführen, müssen Sie den Namen der Ressourcengruppe eingeben, der der Namespace zugewiesen ist.
 
-## Parameter
+## PARAMETERS
 
 ### -AuthorizationRule
 Gibt den Namen einer SAS-Authentifizierungsregel an.
-Diese Regeln bestimmen die Art des Zugriffs, den Benutzer für den Benachrichtigungs-Hub haben.
+Diese Regeln bestimmen den Typ des Zugriffs, den Benutzer auf den Benachrichtigungshub haben.
 
 ```yaml
 Type: System.String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 Gibt die Ressourcengruppe an, der der Namespace zugewiesen ist.
-Ressourcengruppen organisieren Elemente wie Namespaces, benachrichtigungshubs und Autorisierungsregeln auf eine Weise, die eine einfache Bestandsverwaltung und Azure-Verwaltung unterstützt.
+Ressourcengruppen organisieren Elemente wie Namespaces, Benachrichtigungshubs und Autorisierungsregeln so, dass sie einfach die Bestandsverwaltung und die Verwaltung von Azure unterstützen.
 
 ```yaml
 Type: System.String
@@ -105,22 +105,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Management. NotificationHubs. Models. ResourceListKeys
+### Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzNotificationHubsNamespace](./Get-AzNotificationHubsNamespace.md)
 
-[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
 
 

@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
-ms.openlocfilehash: 6e56ff9b174ec13d0844a1ac860d34043f8b73cf
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 7c9ace339da9639404072fd802782aee43d8ab37
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94004042"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403951"
 ---
 # New-AzFrontDoorWafManagedRuleObject
 
-## Synopsis
-Erstellen eines ManagedRule-Objekts für die WAF-Richtlinienerstellung
+## SYNOPSIS
+Create ManagedRule Object for WAF policy creation
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzFrontDoorWafManagedRuleObject -Type <String> -Version <String>
@@ -25,10 +25,10 @@ New-AzFrontDoorWafManagedRuleObject -Type <String> -Version <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Erstellen eines ManagedRule-Objekts für die WAF-Richtlinienerstellung
+## BESCHREIBUNG
+Create ManagedRule Object for WAF policy creation
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
@@ -46,12 +46,12 @@ RuleGroupOverrides RuleSetType    RuleSetVersion
 {SQLI, XSS}        DefaultRuleSet preview-0.1
 ```
 
-Erstellen eines ManagedRule-Objekts
+Erstellen eines Objekts vomTyp "ManagedRule"
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -65,7 +65,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### – Ausschluss
+### -Exclusion
 Ausschluss
 
 ```yaml
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleGroupOverride
-Liste der Überschreibung der Azure Managed Provider-Konfiguration
+Liste der Konfiguration zur Außerkraftsetzung eines azure-verwalteten Anbieters
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSAzureRuleGroupOverride[]
@@ -95,8 +95,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Typ
-Der Typ des RuleSet
+### -Type
+Regelsatztyp
 
 ```yaml
 Type: System.String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Version des RuleSet
+Version des Regelets
 
 ```yaml
 Type: System.String
@@ -126,20 +126,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Haustür. Models. PSAzureManagedRule
+### Microsoft.Azure.Commands.FrontDando.Models.PSAzureManagedRule
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
- [Satz-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md) 
- [Neu – AzFrontDoorWafRuleGroupOverrideObject](./New-AzFrontDoorWafRuleGroupOverrideObject.md)
+[New-AzFrontDlicWafPolicy](./New-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDlicWafPolicy](./Update-AzFrontDoorWafPolicy.md) 
+ [New-AzFrontD dannWafRuleGroupOverrideObject](./New-AzFrontDoorWafRuleGroupOverrideObject.md)
