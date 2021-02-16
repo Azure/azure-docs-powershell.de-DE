@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
-ms.openlocfilehash: c56c9e586b0089311477fc12b6624c74321f9a0b
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 96248492feac9997d1afdba83fdda943c75fa363
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94005263"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100397831"
 ---
 # Get-AzVMBootDiagnosticsData
 
-## Synopsis
-Ruft Start Diagnosedaten für einen virtuellen Computer ab.
+## SYNOPSIS
+Ruft Startdiagnosedaten für einen virtuellen Computer ab.
 
-## Syntax
+## SYNTAX
 
 ### WindowsParamSet (Standard)
 ```
@@ -32,24 +32,24 @@ Get-AzVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Lin
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzVMBootDiagnosticsData** " ruft Start Diagnosedaten für einen virtuellen Computer ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzVMBootDiagnosticsData"** ruft Startdiagnosedaten für einen virtuellen Computer ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen von Start Diagnosedaten
+### Beispiel 1: Erhalten von Startdiagnosedaten
 ```
 PS C:\> Get-AzVMBootDiagnosticsData -ResourceGroupName "ResourceGroup11" -Name "ContosoVM07" -Windows -LocalPath "C:\Contoso\BootDiagnostics"
 ```
 
-Dieser Befehl ruft Start Diagnosedaten für den virtuellen Computer mit dem Namen ContosoVM07 ab.
-Auf diesem virtuellen Computer wird das Betriebssystem Windows ausgeführt.
+Dieser Befehl ruft Startdiagnosedaten für den virtuellen Computer "ContosoVM07" ab.
+Dieser virtuelle Computer führt das Betriebssystem Windows aus.
 Der Befehl speichert die Daten im angegebenen lokalen Pfad.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Linux
-Gibt an, dass auf dem virtuellen Computer das Linux-Betriebssystem ausgeführt wird.
+Gibt an, dass der virtuelle Computer das Betriebssystem Linux ausgeführt hat.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-Gibt den lokalen Pfad für die Start Diagnosedaten an.
+Gibt den lokalen Pfad für die Startdiagnosedaten an.
 
 ```yaml
 Type: System.String
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Gibt an, dass auf dem virtuellen Computer das Windows-Betriebssystem ausgeführt wird.
+Gibt an, dass der virtuelle Computer das Betriebssystem Windows ausgeführt hat.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -151,22 +151,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Compute. Models. PSVirtualMachine
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
-### Microsoft. Azure. Commands. Compute. Models. PSVirtualMachineInstanceView
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzVMBootDiagnostics](./Set-AzVMBootDiagnostics.md)
+[Set-AzVMBootDiagnostic](./Set-AzVMBootDiagnostic.md)
 
 

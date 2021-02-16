@@ -3,30 +3,30 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 615D2C5D-AB31-45DB-9535-9B9C8E957322
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 96b51b49d76093be96eeab26417f4a70f70c4627
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 4a5701fc6308f1884bbf0237887a223a62a58669
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94005798"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411584"
 ---
 # Get-AzureSiteRecoveryNetwork
 
-## Synopsis
+## SYNOPSIS
 Ruft Informationen zu den Netzwerken ab, die von der Websitewiederherstellung für den aktuellen Tresor verwaltet werden.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzureSiteRecoveryNetwork -Server <ASRServer> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureSiteRecoveryNetwork** " Ruft Informationen zu Azure Site Recovery Networks für das aktuelle Standort Wiederherstellungs Depot ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzureSiteRecoveryNetwork"** ruft Informationen zu Azure Site Recovery Networks für den aktuellen Websitewiederherstellungstresor ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen von Website Wiederherstellungs Netzwerken
+### Beispiel 1: Websitewiederherstellungsnetzwerke erhalten
 ```
 PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
@@ -47,15 +47,15 @@ FabricType          : VMM
 VmNetworkSubnetList : {}
 ```
 
-Das Cmdlet "erster Befehl" Ruft Server für das aktuelle Azure Site Recovery Vault mit dem Cmdlet **Get-AzureSiteRecoveryServer** ab.
-Der Befehl speichert die Website Wiederherstellungsserver in der $Servers-Arrayvariablen.
+Das erste Befehls-Cmdlet ruft Mithilfe des **Cmdlets "Get-AzureSiteRecoveryServer"** Server für den aktuellen Azure Site Recovery Vault ab.
+Der Befehl speichert die Websitewiederherstellungsserver in $Servers Arrayvariablen.
 
-Der zweite Befehl ruft das Standort Wiederherstellungs Netzwerk für den ersten Server im $Servers-Array ab.
+Der zweite Befehl ruft das Websitewiederherstellungsnetzwerk für den ersten Server im Array $Servers ab.
 
-## Parameter
+## PARAMETERS
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Gibt einen Standort Wiederherstellungsserver an.
+Gibt einen Websitewiederherstellungsserver an.
 
 ```yaml
 Type: ASRServer
@@ -86,16 +86,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Services-Cmdlets](./Azure.SiteRecoveryServices.md)
+
 
 
