@@ -6,31 +6,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertHistory.md
-ms.openlocfilehash: b2b9aac6f99cae14ea043ae21f8db8be538eee04
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 7202021c2d18c9b388ad6b51db600fc5b368c76e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93842055"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399072"
 ---
 # Get-AzAlertHistory
 
-## Synopsis
+## SYNOPSIS
 Ruft den Verlauf von Benachrichtigungen ab.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzAlertHistory [-ResourceId <String>] [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>]
  [-Caller <String>] [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzAlertHistory** " Ruft das Protokoll der Benachrichtigungen ab, wenn Sie aktiviert, deaktiviert, ausgelöst, aufgelöst usw. sind.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzAlertHistory"** ruft den Verlauf der Benachrichtigungen ab, sobald diese aktiviert, deaktiviert, ausgelöst, aufgelöst und so weiter sind.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen des Warnungs Verlaufs
+### Beispiel 1: Erhalten des Warnungsverlaufs
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -DetailedOutput
 Authorization        : 
@@ -170,9 +170,9 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-Mit diesem Befehl wird der Warnungsverlauf für den angegebenen Zeitrahmen für das aktuelle Abonnement abgerufen.
+Dieser Befehl ruft den Warnungsverlauf für den angegebenen Zeitrahmen für das aktuelle Abonnement ab.
 
-### Beispiel 2: Abrufen des Warnungs Verlaufs für eine angegebene Ressource
+### Beispiel 2: Erhalten des Warnungsverlaufs für eine angegebene Ressource
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.insights/alertrules/checkrule3-4b135401-a30c-4224-ae21-fa53a5bd253d" -DetailedOutput
 
@@ -268,12 +268,12 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-Dieser Befehl ruft die Warnungsregel bezogenen Ereignisse für eine angegebene Ressource ab.
+Dieser Befehl ruft die ereignisse im Zusammenhang mit der Warnungsregel für eine angegebene Ressource ab.
 
-## Parameter
+## PARAMETERS
 
-### -Anrufer
-Gibt den Aufrufer an.
+### -Caller
+Gibt den Anrufer an.
 
 ```yaml
 Type: System.String
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -318,8 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-Gibt die Endzeit der Abfrage in Ortszeit an.
-Der Standardwert ist die aktuelle Uhrzeit.
+Gibt die Endzeit der Abfrage in lokaler Zeit an.
+Die Standardeinstellung ist die aktuelle Uhrzeit.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -333,7 +333,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Gibt die Ressourcen-ID an, der die Regel zugeordnet ist.
 
 ```yaml
@@ -348,9 +348,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Startzeit
-Gibt die Startzeit der Abfrage in Ortszeit an.
-Der Standardwert ist die aktuelle Ortszeit minus 1 Stunde.
+### -StartTime
+Gibt die Startzeit der Abfrage in der lokalen Zeit an.
+Die Standardeinstellung ist die aktuelle Ortszeit minus eine Stunde.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -380,25 +380,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[System. DateTime, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Management. Automation. Switchparameter
+### System.Management.Automation.SwitchParameter
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSEventData
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 

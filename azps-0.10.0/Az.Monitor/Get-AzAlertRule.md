@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertRule.md
-ms.openlocfilehash: 01774d80ce422c1ac0a48df61d44328b6b5b0105
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: c48a3fcf2441c7818d087e42b1271939963936ce
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93842052"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399055"
 ---
 # Get-AzAlertRule
 
-## Synopsis
-Ruft Warnungsregeln ab.
+## SYNOPSIS
+Ruft Benachrichtigungsregeln ab.
 
-## Syntax
+## SYNTAX
 
 ### GetByResourceGroup
 ```
@@ -38,39 +38,39 @@ Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-Detaile
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzAlertRule** " Ruft eine Warnungsregel anhand des Namens oder des URIs oder aller Warnungsregeln einer angegebenen Ressourcengruppe ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzAlertRule"** ruft eine Warnungsregel nach name oder URI oder allen Warnungsregeln aus einer angegebenen Ressourcengruppe ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen von Warnungsregeln für eine Ressourcengruppe
+### Beispiel 1: Erhalten von Warnungsregeln für eine Ressourcengruppe
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
 ```
 
-Mit diesem Befehl werden alle Warnungsregeln für die Ressourcengruppe Default-Web-centralus abgerufen.
-Die Ausgabe enthält keine Details zu den Regeln, da der *DetailedOutput* -Parameter nicht angegeben ist.
+Dieser Befehl ruft alle Warnungsregeln für die Ressourcengruppe "Default-Web-CentralUS" ab.
+Die Ausgabe enthält keine Details zu den Regeln, da der *Parameter "DetailedOutput"* nicht angegeben ist.
 
-### Beispiel 2: Abrufen einer Warnungsregel nach Namen
+### Beispiel 2: Erhalten einer Warnungsregel nach Name
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
 ```
 
-Dieser Befehl ruft die Warnungsregel mit dem Namen myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
-Da der *DetailedOutput* -Parameter nicht angegeben wird, enthält die Ausgabe nur grundlegende Informationen zur Warnungsregel.
+Dieser Befehl ruft die Warnungsregel namens "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" ab.
+Da der *Parameter "DetailedOutput"* nicht angegeben wird, enthält die Ausgabe nur grundlegende Informationen zur Warnungsregel.
 
-### Beispiel 3: Abrufen einer Warnungsregel nach Namen mit detaillierter Ausgabe
+### Beispiel 3: Erhalten einer Warnungsregel nach Namen mit detaillierter Ausgabe
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
 ```
 
-Dieser Befehl ruft die Warnungsregel mit dem Namen myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
-Der *DetailedOutput* -Parameter wird angegeben, sodass die Ausgabe detailliert ist.
+Dieser Befehl ruft die Warnungsregel mit dem Namen "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" ab.
+Der *Parameter "DetailedOutput"* wird angegeben, sodass die Ausgabe detailliert ist.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen der abzurufenden Warnungsregel an.
+Gibt den Namen der zu erhaltenden Warnungsregel an.
 
 ```yaml
 Type: System.String
@@ -145,23 +145,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Management. Automation. Switchparameter
+### System.Management.Automation.SwitchParameter
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSAlertRule
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
