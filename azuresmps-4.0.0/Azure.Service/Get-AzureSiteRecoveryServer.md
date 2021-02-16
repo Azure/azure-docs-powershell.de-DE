@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 3EC274C9-9BF6-4B39-BC70-C7F9D780805D
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: a4081d6d072aadd6a4ae7d09ff57748a8f2cb697
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 79b61501a56913fedb2a003d7aea1a041bfab4d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94005786"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412281"
 ---
 # Get-AzureSiteRecoveryServer
 
-## Synopsis
-Ruft Website Wiederherstellungsserver ab, die einen Standort Wiederherstellungs Tresor registriert haben.
+## SYNOPSIS
+Ruft einen Websitewiederherstellungsserver ab, der einen Websitewiederherstellungstresor registriert hat.
 
-## Syntax
+## SYNTAX
 
 ### Standard (Standard)
 ```
@@ -32,12 +32,12 @@ Get-AzureSiteRecoveryServer -Id <String> [-Profile <AzureSMProfile>] [<CommonPar
 Get-AzureSiteRecoveryServer -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureSiteRecoveryServer** " Ruft Informationen zu Azure Site Recovery-Servern ab, die für das aktuelle Standort Wiederherstellungs Depot registriert sind.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzureSiteRecoveryServer"** ruft Informationen zu azure-Websitewiederherstellungsservern ab, die im aktuellen Websitewiederherstellungstresor registriert sind.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen von Informationen zu einem Website Wiederherstellungsserver
+### Beispiel 1: Informationen zu einem Websitewiederherstellungsserver
 ```
 PS C:\> Get-AzureSiteRecoveryServer
 ID              : cd7dec80-1144-4531-9ab3-888b8ab39bee
@@ -55,7 +55,7 @@ ServerVersion   : 3.2.7510.0
 
 Dieser Befehl ruft Informationen zu einem Azure Site Recovery Server ab.
 
-## Parameter
+## PARAMETERS
 
 ### -ID
 Gibt die ID eines Servers an.
@@ -87,8 +87,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -104,16 +104,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Services-Cmdlets](./Azure.SiteRecoveryServices.md)
+
 
 

@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
-ms.openlocfilehash: ce1e05106350adda37ffa5877585ff37337dad87
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 04c4355caaa76776a96e2619a0080b9c32d8e98a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93822391"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412213"
 ---
 # Get-AzExpressRouteCircuitARPTable
 
-## Synopsis
-Ruft die ARP-Tabelle aus einem Express Route-Schaltkreis ab.
+## SYNOPSIS
+Ruft die "ARP"-Tabelle aus einem "ExpressRoute"-Schaltkreis ab.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzExpressRouteCircuitARPTable -ResourceGroupName <String> -ExpressRouteCircuitName <String>
@@ -26,20 +26,20 @@ Get-AzExpressRouteCircuitARPTable -ResourceGroupName <String> -ExpressRouteCircu
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzExpressRouteCircuitARPTable** " Ruft die ARP-Tabelle von beiden Schnittstellen eines Express Route-Schaltkreises ab. Die ARP-Tabelle enthält eine Zuordnung der IPv4-Adresse zu Mac-Adresse für einen bestimmten Peering. Sie können die ARP-Tabelle verwenden, um die Konfiguration und Konnektivität von Layer 2 zu überprüfen.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzExpressRouteCircuitARPTable"** ruft die ARP-Tabelle aus beiden Schnittstellen eines ExpressRoute-Schaltkreises ab. Die TABELLE ARP enthält eine Zuordnung der IPv4-Adresse zur MAC-Adresse für ein bestimmtes Peering. Sie können die ARP-Tabelle verwenden, um die Layer-2-Konfiguration und -Konnektivität zu überprüfen.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Anzeigen der ARP-Tabelle für einen Express Route-Peer
+### Beispiel 1: Anzeigen der TABELLE ARP für einen ExpressRoute-Peer
 ```
 Get-AzExpressRouteCircuitARPTable -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -PeeringType MicrosoftPeering -DevicePath Primary
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePath
-Die zulässigen Werte für diesen Parameter sind: `Primary` oder `Secondary`
+Die zulässigen Werte für diesen Parameter `Primary` sind: `Secondary`
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.DevicePathEnum
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuitName
-Der Name des Express Route-Schaltkreises, der überprüft wird.
+Der Name des zu untersuchende ExpressRoute-Schaltkreises.
 
 ```yaml
 Type: System.String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeeringType
-Die zulässigen Werte für diesen Parameter sind: `AzurePrivatePeering` , `AzurePublicPeering` und `MicrosoftPeering`
+Die zulässigen Werte für diesen Parameter sind: `AzurePrivatePeering` `AzurePublicPeering` , und `MicrosoftPeering`
 
 ```yaml
 Type: System.String
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Der Name der Ressourcengruppe, die den Express Route-Schaltkreis enthält.
+Der Name der Ressourcengruppe, die den "ExpressRoute"-Schaltkreis enthält.
 
 ```yaml
 Type: System.String
@@ -116,22 +116,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuitArpTable
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitArpTable
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzExpressRouteCircuitRouteTable](Get-AzExpressRouteCircuitRouteTable.md)
 
 [Get-AzExpressRouteCircuitRouteTableSummary](Get-AzExpressRouteCircuitRouteTableSummary.md)
 
-[Get-AzExpressRouteCircuitStats](Get-AzExpressRouteCircuitStats.md)
+[Get-AzExpressRouteCircuitStat](Get-AzExpressRouteCircuitStat.md)
