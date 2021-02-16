@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: 40514bdd6ed8d37679d3002f80146e622a0614e9
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: babd3d8a42ddbd740c8189a41de76c78170ecae5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93842160"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398817"
 ---
 # Get-AzKeyVaultCertificate
 
-## Synopsis
-Ruft ein Zertifikat aus einem schlüsseltresor ab.
+## SYNOPSIS
+Ruft ein Zertifikat aus einem Schlüsseltresor ab.
 
-## Syntax
+## SYNTAX
 
 ### ByVaultName (Standard)
 ```
@@ -44,12 +44,12 @@ Get-AzKeyVaultCertificate [-VaultName] <String> [[-Name] <String>] [-InRemovedSt
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzKeyVaultCertificate** " Ruft das angegebene Zertifikat oder die Versionen eines Zertifikats aus einem schlüsseltresor im Azure Key Vault ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzKeyVaultCertificate"** ruft das angegebene Zertifikat oder die Versionen eines Zertifikats aus einem Schlüsseltresor im Azure Key Vault ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen eines Zertifikats
+### Beispiel 1: Erhalten eines Zertifikats
 ```
 PS C:\>Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : testCert01
@@ -78,27 +78,27 @@ Created     : 2/8/2016 11:21:45 PM
 Updated     : 2/8/2016 11:21:45 PM
 ```
 
-Dieser Befehl ruft das Zertifikat mit dem Namen TestCert01 aus dem schlüsseltresor mit dem Namen ContosoKV01 ab.
+Dieser Befehl ruft das Zertifikat mit dem Namen "TestCert01" aus dem Schlüsseltresor "ContosoKV01" ab.
 
-### Beispiel 2: Abrufen aller Zertifikate, die gelöscht, aber für diesen schlüsseltresor nicht bereinigt wurden.
+### Beispiel 2: Alle Zertifikate erhalten, die für diesen Schlüsseltresor gelöscht, aber nicht gelöscht wurden.
 ```
 PS C:\>Get-AzKeyVaultCertificate -VaultName 'Contoso' -InRemovedState
 ```
 
-Dieser Befehl ruft alle Zertifikate ab, die zuvor gelöscht, aber nicht bereinigt wurden, im schlüsseltresor mit dem Namen contoso.
+Dieser Befehl ruft alle Zertifikate ab, die zuvor gelöscht, aber nicht gelöscht wurden, im Schlüsseltresor namens Contoso.
 
-### Beispiel 3: Ruft das Zertifikat MyCert ab, das gelöscht, aber für diesen schlüsseltresor nicht bereinigt wurde.
+### Beispiel 3: Ruft das Zertifikat "MyCert" ab, das gelöscht, aber nicht für diesen Schlüsseltresor gelöscht wurde.
 ```
 PS C:\>Get-AzKeyVaultCertificate -VaultName 'Contoso' -Name 'MyCert' -InRemovedState
 ```
 
-Dieser Befehl ruft das Zertifikat mit dem Namen "MyCert" ab, das zuvor gelöscht, aber nicht bereinigt wurde, im schlüsseltresor mit dem Namen contoso.
+Dieser Befehl ruft das Zertifikat mit dem Namen "MyCert" ab, das im Schlüsseltresor "Contoso" bereits gelöscht, aber nicht gelöscht wurde.
 Dieser Befehl gibt Metadaten wie das Löschdatum und das geplante Löschdatum dieses gelöschten Zertifikats zurück.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: IAzureContextContainer
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Gibt an, dass dieser Vorgang alle Versionen des Zertifikats abruft.
+Gibt an, dass dieser Vorgang alle Versionen des Zertifikats erhält.
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Gibt an, ob zuvor gelöschte Zertifikate in die Ausgabe eingeschlossen werden sollen.
+Gibt an, ob zuvor gelöschte Zertifikate in die Ausgabe enthalten sein sollen.
 
 ```yaml
 Type: SwitchParameter
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen des abzurufenden Zertifikats an.
+Gibt den Namen des zu erhaltenden Zertifikats an.
 
 ```yaml
 Type: String
@@ -169,8 +169,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Vaultname
-Gibt den Namen eines Schlüsseldepots an.
+### -VaultName
+Gibt den Namen eines Schlüsseltresor an.
 
 ```yaml
 Type: String
@@ -200,27 +200,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 Dieses Cmdlet akzeptiert keine Eingaben.
 
-## Ausgaben
+## AUSGABEN
 
-### System. Collections. Generic. List ' 1 [Microsoft. Azure. Commands. keyvault. Models. CertificateIdentityItem]
+### System.Collections.generic.List'1[Microsoft.Azure.Commands.KeyVault.Models.CertificateIdentityItem]
 
-### Microsoft. Azure. Commands. keyvault. Models. KeyVaultCertificate
+### Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificate
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Add-AzKeyVaultCertificate](./Add-AzKeyVaultCertificate.md)
 
-[Importieren-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
+[Import-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
-[Undo-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)

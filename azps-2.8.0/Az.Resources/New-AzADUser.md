@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
-ms.openlocfilehash: ac2dfb864733d7bcb2b46e17d557fca57c7bb4b4
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: cd8834dd329ab82e98316cb0d94b554eb3bb6c13
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93825016"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408320"
 ---
 # New-AzADUser
 
-## Synopsis
+## SYNOPSIS
 Erstellt einen neuen Active Directory-Benutzer.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <SecureString> [-ImmutableId <String>]
@@ -26,24 +26,24 @@ New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <Secure
  [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Erstellt einen neuen Active Directory-Benutzer (Firmen-oder Schulkonto, auch bekannt als org-ID).
+## BESCHREIBUNG
+Erstellt einen neuen Active Directory-Benutzer (Arbeits-/Schulkonto, auch als Organisations-ID bekannt).
 Weitere Informationen: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen eines neuen anzeigen Benutzers
+### Beispiel 1: Erstellen eines neuen Ad-Ad-Benutzers
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> New-AzADUser -DisplayName "MyDisplayName" -UserPrincipalName "myemail@domain.com" -Password $SecureStringPassword -MailNickname "MyMailNickName"
 ```
 
-Erstellt einen neuen anzeigen Benutzer mit dem Namen "mydisplayname" und dem Benutzerprinzipalnamen " myemail@domain.com " in einem Mandanten.
+Erstellt einen neuen Ad-Benutzer mit dem Namen "MyDisplayName" und dem Benutzerprinzipalnamen " myemail@domain.com " in einem Mandanten.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 Der Name, der im Adressbuch für den Benutzer angezeigt werden soll.
-Beispiel ' Alex Wu '
+Beispiel 'Alex Wu'.
 
 ```yaml
 Type: System.String
@@ -74,8 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceChangePasswordNextLogin
-Sie muss angegeben werden, wenn der Benutzer das Kennwort bei der nächsten erfolgreichen Anmeldung ändern muss (wahr).
-Standardverhalten ist (falsch), um das Kennwort bei der nächsten erfolgreichen Anmeldung nicht zu ändern.
+Es muss angegeben werden, wenn der Benutzer das Kennwort bei der nächsten erfolgreichen Anmeldung ändern muss (true).
+Das Standardverhalten ist "(false)", um das Kennwort bei der nächsten erfolgreichen Anmeldung nicht zu ändern.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -89,8 +89,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Unveränderlich
-Sie muss nur angegeben werden, wenn Sie eine Verbunddomäne für die Benutzerprinzipalnamen-Eigenschaft (User Principal Name, UPN) verwenden.
+### -ImmutableId
+Er muss nur angegeben werden, wenn Sie eine Verbunddomäne für die Eigenschaft "Benutzerprinzipalname(upn)" des Benutzers verwenden.
 
 ```yaml
 Type: System.String
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailNickname
-Der e-Mail-Alias für den Benutzer.
+Der E-Mail-Alias für den Benutzer.
 
 ```yaml
 Type: System.String
@@ -119,10 +119,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Kennwort
+### -Password
 Kennwort für den Benutzer.
-Das Kennwort muss den Komplexitätsanforderungen des Mandanten genügen.
-Es wird empfohlen, ein sicheres Kennwort festzulegen.
+Es muss die Anforderungen an die Kennwortkomplexität des Mandanten erfüllen.
+Es wird empfohlen, ein starkes Kennwort zu verwenden.
 
 ```yaml
 Type: System.Security.SecureString
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 Der Benutzerprinzipalname.
-Beispiel: " someuser@contoso.com ".
+Example-' someuser@contoso.com '.
 
 ```yaml
 Type: System.String
@@ -152,8 +152,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -167,7 +167,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -184,26 +184,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Security. SecureString
+### System.Security.SecureString
 
-### System. Management. Automation. Switchparameter
+### System.Management.Automation.SwitchParameter
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDUser
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzADUser](./Get-AzADUser.md)
 
-[Satz-AzADUser](./Set-AzADUser.md)
 
 [Remove-AzADUser](./Remove-AzADUser.md)
