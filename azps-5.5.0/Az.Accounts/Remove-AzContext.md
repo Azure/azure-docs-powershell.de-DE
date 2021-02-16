@@ -1,0 +1,183 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+Module Name: Az.Accounts
+online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/remove-azcontext
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Remove-AzContext.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Remove-AzContext.md
+ms.openlocfilehash: d5c31519ba55babb79e3e902a01e46746c5b70f1
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100157673"
+---
+# <span data-ttu-id="3a874-101">Remove-AzContext</span><span class="sxs-lookup"><span data-stu-id="3a874-101">Remove-AzContext</span></span>
+
+## <span data-ttu-id="3a874-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="3a874-102">SYNOPSIS</span></span>
+<span data-ttu-id="3a874-103">Entfernen eines Kontexts aus der Gruppe verfügbarer Kontexte</span><span class="sxs-lookup"><span data-stu-id="3a874-103">Remove a context from the set of available contexts</span></span>
+
+## <span data-ttu-id="3a874-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3a874-104">SYNTAX</span></span>
+
+### <span data-ttu-id="3a874-105">RemoveByInputObject (Standard)</span><span class="sxs-lookup"><span data-stu-id="3a874-105">RemoveByInputObject (Default)</span></span>
+```
+Remove-AzContext -InputObject <PSAzureContext> [-Force] [-PassThru] [-Scope <ContextModificationScope>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="3a874-106">RemoveByName</span><span class="sxs-lookup"><span data-stu-id="3a874-106">RemoveByName</span></span>
+```
+Remove-AzContext [-Force] [-PassThru] [-Scope <ContextModificationScope>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-Name] <String> [<CommonParameters>]
+```
+
+## <span data-ttu-id="3a874-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="3a874-107">DESCRIPTION</span></span>
+<span data-ttu-id="3a874-108">Entfernen eines Azure-Kontexts aus dem Kontextsatz</span><span class="sxs-lookup"><span data-stu-id="3a874-108">Remove an azure context from the set of contexts</span></span>
+
+## <span data-ttu-id="3a874-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="3a874-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="3a874-110">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="3a874-110">Example 1</span></span>
+```
+PS C:\> Remove-AzContext -Name Default
+```
+
+<span data-ttu-id="3a874-111">Entfernen des Kontexts mit dem Namen "Standard"</span><span class="sxs-lookup"><span data-stu-id="3a874-111">Remove the context named default</span></span>
+
+## <span data-ttu-id="3a874-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3a874-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="3a874-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3a874-113">-DefaultProfile</span></span>
+<span data-ttu-id="3a874-114">Die Anmeldeinformationen, der Mandant und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3a874-114">The credentials, tenant and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-115">-Force</span><span class="sxs-lookup"><span data-stu-id="3a874-115">-Force</span></span>
+<span data-ttu-id="3a874-116">Entfernen des Kontexts, auch wenn dies die Standardeinstellung ist</span><span class="sxs-lookup"><span data-stu-id="3a874-116">Remove context even if it is the default</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-117">-InputObject</span><span class="sxs-lookup"><span data-stu-id="3a874-117">-InputObject</span></span>
+<span data-ttu-id="3a874-118">Ein Kontextobjekt, das normalerweise über die Pipeline übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="3a874-118">A context object, normally passed through the pipeline.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext
+Parameter Sets: RemoveByInputObject
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-119">-Name</span><span class="sxs-lookup"><span data-stu-id="3a874-119">-Name</span></span>
+<span data-ttu-id="3a874-120">Der Name des Kontexts</span><span class="sxs-lookup"><span data-stu-id="3a874-120">The name of the context</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RemoveByName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-121">-PassThru</span><span class="sxs-lookup"><span data-stu-id="3a874-121">-PassThru</span></span>
+<span data-ttu-id="3a874-122">Zurückgeben des entfernten Kontexts</span><span class="sxs-lookup"><span data-stu-id="3a874-122">Return the removed context</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-123">-Scope</span><span class="sxs-lookup"><span data-stu-id="3a874-123">-Scope</span></span>
+<span data-ttu-id="3a874-124">Bestimmt den Umfang von Kontextänderungen, z. B. ob Änderungen nur für den aktuellen Prozess oder für alle von diesem Benutzer gestarteten Sitzungen gelten.</span><span class="sxs-lookup"><span data-stu-id="3a874-124">Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
+Parameter Sets: (All)
+Aliases:
+Accepted values: Process, CurrentUser
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-125">-Confirm</span><span class="sxs-lookup"><span data-stu-id="3a874-125">-Confirm</span></span>
+<span data-ttu-id="3a874-126">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="3a874-126">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-127">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="3a874-127">-WhatIf</span></span>
+<span data-ttu-id="3a874-128">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3a874-128">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="3a874-129">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3a874-129">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a874-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3a874-130">CommonParameters</span></span>
+<span data-ttu-id="3a874-131">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3a874-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3a874-132">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="3a874-132">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="3a874-133">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="3a874-133">INPUTS</span></span>
+
+### <span data-ttu-id="3a874-134">Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</span><span class="sxs-lookup"><span data-stu-id="3a874-134">Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</span></span>
+
+## <span data-ttu-id="3a874-135">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="3a874-135">OUTPUTS</span></span>
+
+### <span data-ttu-id="3a874-136">Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</span><span class="sxs-lookup"><span data-stu-id="3a874-136">Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</span></span>
+
+## <span data-ttu-id="3a874-137">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="3a874-137">NOTES</span></span>
+
+## <span data-ttu-id="3a874-138">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="3a874-138">RELATED LINKS</span></span>

@@ -6,105 +6,105 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
-ms.openlocfilehash: 966b9baf35f1719f29fda6355a9675739693314f
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: bd58a044db49cdd0cedf2872e97e64662a49372c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93843283"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398222"
 ---
-# <span data-ttu-id="5f6bf-101">Remove-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-101">Remove-AzADServicePrincipal</span></span>
+# <span data-ttu-id="92985-101">Remove-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="92985-101">Remove-AzADServicePrincipal</span></span>
 
-## <span data-ttu-id="5f6bf-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="5f6bf-102">SYNOPSIS</span></span>
-<span data-ttu-id="5f6bf-103">Löscht den Azure Active Directory-Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-103">Deletes the azure active directory service principal.</span></span>
+## <span data-ttu-id="92985-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="92985-102">SYNOPSIS</span></span>
+<span data-ttu-id="92985-103">Löscht den Azure Active Directory-Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="92985-103">Deletes the azure active directory service principal.</span></span>
 
-## <span data-ttu-id="5f6bf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5f6bf-104">SYNTAX</span></span>
+## <span data-ttu-id="92985-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="92985-104">SYNTAX</span></span>
 
-### <span data-ttu-id="5f6bf-105">ObjectIdParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="5f6bf-105">ObjectIdParameterSet (Default)</span></span>
+### <span data-ttu-id="92985-105">ObjectIdParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="92985-105">ObjectIdParameterSet (Default)</span></span>
 ```
 Remove-AzADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5f6bf-106">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="5f6bf-106">ApplicationIdParameterSet</span></span>
+### <span data-ttu-id="92985-106">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="92985-106">ApplicationIdParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ApplicationId <Guid> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5f6bf-107">SPNParameterSet</span><span class="sxs-lookup"><span data-stu-id="5f6bf-107">SPNParameterSet</span></span>
+### <span data-ttu-id="92985-107">SPNParameterSet</span><span class="sxs-lookup"><span data-stu-id="92985-107">SPNParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ServicePrincipalName <String> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5f6bf-108">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="5f6bf-108">DisplayNameParameterSet</span></span>
+### <span data-ttu-id="92985-108">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="92985-108">DisplayNameParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -DisplayName <String> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5f6bf-109">InputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="5f6bf-109">InputObjectParameterSet</span></span>
+### <span data-ttu-id="92985-109">InputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="92985-109">InputObjectParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -InputObject <PSADServicePrincipal> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="5f6bf-110">ApplicationObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="5f6bf-110">ApplicationObjectParameterSet</span></span>
+### <span data-ttu-id="92985-110">ApplicationObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="92985-110">ApplicationObjectParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="5f6bf-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5f6bf-111">DESCRIPTION</span></span>
-<span data-ttu-id="5f6bf-112">Löscht den Azure Active Directory-Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-112">Deletes the azure active directory service principal.</span></span>
+## <span data-ttu-id="92985-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="92985-111">DESCRIPTION</span></span>
+<span data-ttu-id="92985-112">Löscht den Azure Active Directory-Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="92985-112">Deletes the azure active directory service principal.</span></span>
 
-## <span data-ttu-id="5f6bf-113">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5f6bf-113">EXAMPLES</span></span>
+## <span data-ttu-id="92985-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="92985-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="5f6bf-114">Beispiel 1: Entfernen eines Dienst Prinzipals nach Objekt-ID</span><span class="sxs-lookup"><span data-stu-id="5f6bf-114">Example 1 - Remove a service principal by object id</span></span>
+### <span data-ttu-id="92985-114">Beispiel 1: Entfernen eines Dienstprinzipal nach Objekt-ID</span><span class="sxs-lookup"><span data-stu-id="92985-114">Example 1 - Remove a service principal by object id</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-<span data-ttu-id="5f6bf-115">Entfernt den Dienstprinzipal mit der Objekt-ID "61b5d8ea-fdc6-40A2-8d5b-ad447c678d45".</span><span class="sxs-lookup"><span data-stu-id="5f6bf-115">Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.</span></span>
+<span data-ttu-id="92985-115">Entfernt den Dienstprinzipal mit der Objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.</span><span class="sxs-lookup"><span data-stu-id="92985-115">Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.</span></span>
 
-### <span data-ttu-id="5f6bf-116">Beispiel 2 – Entfernen eines Dienst Prinzipals nach Anwendungs-ID</span><span class="sxs-lookup"><span data-stu-id="5f6bf-116">Example 2 - Remove a service principal by application id</span></span>
+### <span data-ttu-id="92985-116">Beispiel 2: Entfernen eines Dienstprinzipals nach Anwendungs-ID</span><span class="sxs-lookup"><span data-stu-id="92985-116">Example 2 - Remove a service principal by application id</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
 ```
 
-<span data-ttu-id="5f6bf-117">Entfernt den Dienstprinzipal mit der Anwendungs-ID "9263469e-d328-4321-8646-3e3e75d20e76".</span><span class="sxs-lookup"><span data-stu-id="5f6bf-117">Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.</span></span>
+<span data-ttu-id="92985-117">Entfernt den Dienstprinzipal mit der Anwendungs-ID '9263469e-d328-4321-8646-3e3e75d20e76'.</span><span class="sxs-lookup"><span data-stu-id="92985-117">Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.</span></span>
 
-### <span data-ttu-id="5f6bf-118">Beispiel 3: Entfernen eines Dienst Prinzipals nach SPN</span><span class="sxs-lookup"><span data-stu-id="5f6bf-118">Example 3 - Remove a service principal by SPN</span></span>
+### <span data-ttu-id="92985-118">Beispiel 3: Entfernen eines Dienstprinzipals durch SPN</span><span class="sxs-lookup"><span data-stu-id="92985-118">Example 3 - Remove a service principal by SPN</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ServicePrincipalName MyServicePrincipal
 ```
 
-<span data-ttu-id="5f6bf-119">Entfernen des Dienst Prinzipals mit dem Dienstprinzipalnamen "MyServicePrincipal"</span><span class="sxs-lookup"><span data-stu-id="5f6bf-119">Remove the service principal with service principal name "MyServicePrincipal"</span></span>
+<span data-ttu-id="92985-119">Entfernen des Dienstprinzipals mit dem Dienstprinzipalnamen "MyServicePrincipal"</span><span class="sxs-lookup"><span data-stu-id="92985-119">Remove the service principal with service principal name "MyServicePrincipal"</span></span>
 
-### <span data-ttu-id="5f6bf-120">Beispiel 4 – Entfernen eines Dienst Prinzipals durch Piping</span><span class="sxs-lookup"><span data-stu-id="5f6bf-120">Example 4 - Remove a service principal by piping</span></span>
+### <span data-ttu-id="92985-120">Beispiel 4: Entfernen eines Dienstprinzipal durch Piping</span><span class="sxs-lookup"><span data-stu-id="92985-120">Example 4 - Remove a service principal by piping</span></span>
 
 ```
 PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
 ```
 
-<span data-ttu-id="5f6bf-121">Ruft den Dienstprinzipal mit der Objekt-ID ' 61b5d8ea-fdc6-40A2-8d5b-ad447c678d45 ' und Pipes ab, die zum Remove-AzADServicePrincipal-Cmdlet, um diesen Dienstprinzipal zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-121">Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.</span></span>
+<span data-ttu-id="92985-121">Ruft den Dienstprinzipal mit der Objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' ab und gibt diese an das Cmdlet Remove-AzADServicePrincipal weiter, um diesen Dienstprinzipal zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="92985-121">Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.</span></span>
 
-### <span data-ttu-id="5f6bf-122">Beispiel 5 – Entfernen eines Dienst Prinzipals durch Piping einer Anwendung</span><span class="sxs-lookup"><span data-stu-id="5f6bf-122">Example 5 - Remove a service principal by piping an application</span></span>
+### <span data-ttu-id="92985-122">Beispiel 5: Entfernen eines Dienstprinzipal durch Hinzufügen einer Anwendung</span><span class="sxs-lookup"><span data-stu-id="92985-122">Example 5 - Remove a service principal by piping an application</span></span>
 
 ```
 PS C:\> Get-AzApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzADServicePrincipal
 ```
 
-<span data-ttu-id="5f6bf-123">Ruft die Anwendung mit der Anwendungs-ID "9263469e-d328-4321-8646-3e3e75d20e76" und Pipes ab, die zum Cmdlet Remove-AzADServicePrincipal, um den Dienstprinzipal zu entfernen, der dieser Anwendung zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-123">Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove the service principal associated with that application.</span></span>
+<span data-ttu-id="92985-123">Ruft die Anwendung mit der Anwendungs-ID '9263469e-d328-4321-8646-3e3e75d20e76' ab und gibt diese an das cmdlet Remove-AzADServicePrincipal weiter, um den dienstprinzipal zu entfernen, der dieser Anwendung zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="92985-123">Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove the service principal associated with that application.</span></span>
 
-## <span data-ttu-id="5f6bf-124">Parameter</span><span class="sxs-lookup"><span data-stu-id="5f6bf-124">PARAMETERS</span></span>
+## <span data-ttu-id="92985-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="92985-124">PARAMETERS</span></span>
 
-### <span data-ttu-id="5f6bf-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="5f6bf-125">-ApplicationId</span></span>
-<span data-ttu-id="5f6bf-126">Die Anwendungs-ID des Dienst Prinzipals.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-126">The service principal application id.</span></span>
+### <span data-ttu-id="92985-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="92985-125">-ApplicationId</span></span>
+<span data-ttu-id="92985-126">Die Dienstprinzipalanwendungs-ID.</span><span class="sxs-lookup"><span data-stu-id="92985-126">The service principal application id.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -118,8 +118,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-127">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="5f6bf-127">-ApplicationObject</span></span>
-<span data-ttu-id="5f6bf-128">Das Application-Objekt, dessen Dienstprinzipal entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-128">The application object whose service principal is being removed.</span></span>
+### <span data-ttu-id="92985-127">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="92985-127">-ApplicationObject</span></span>
+<span data-ttu-id="92985-128">Das Anwendungsobjekt, dessen Dienstprinzipal entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="92985-128">The application object whose service principal is being removed.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
@@ -133,8 +133,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-129">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5f6bf-129">-DefaultProfile</span></span>
-<span data-ttu-id="5f6bf-130">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="5f6bf-130">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="92985-129">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="92985-129">-DefaultProfile</span></span>
+<span data-ttu-id="92985-130">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="92985-130">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -148,8 +148,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-131">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="5f6bf-131">-DisplayName</span></span>
-<span data-ttu-id="5f6bf-132">Der Anzeigename des Dienst Prinzipals.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-132">The display name of the service principal.</span></span>
+### <span data-ttu-id="92985-131">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="92985-131">-DisplayName</span></span>
+<span data-ttu-id="92985-132">Der Anzeigename des Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="92985-132">The display name of the service principal.</span></span>
 
 ```yaml
 Type: System.String
@@ -163,8 +163,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-133">-Force</span><span class="sxs-lookup"><span data-stu-id="5f6bf-133">-Force</span></span>
-<span data-ttu-id="5f6bf-134">Wechseln Sie zum Löschen des Dienst Prinzipals, ohne eine Bestätigung zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-134">Switch to delete service principal without a confirmation.</span></span>
+### <span data-ttu-id="92985-133">-Force</span><span class="sxs-lookup"><span data-stu-id="92985-133">-Force</span></span>
+<span data-ttu-id="92985-134">Wechseln Sie zum Löschen des Dienstprinzipal ohne Bestätigung.</span><span class="sxs-lookup"><span data-stu-id="92985-134">Switch to delete service principal without a confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,8 +178,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-135">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="5f6bf-135">-InputObject</span></span>
-<span data-ttu-id="5f6bf-136">Das Dienstprinzipal Objekt.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-136">The service principal object.</span></span>
+### <span data-ttu-id="92985-135">-InputObject</span><span class="sxs-lookup"><span data-stu-id="92985-135">-InputObject</span></span>
+<span data-ttu-id="92985-136">Das Dienstprinzipalobjekt.</span><span class="sxs-lookup"><span data-stu-id="92985-136">The service principal object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
@@ -193,8 +193,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-137">-ObjectID</span><span class="sxs-lookup"><span data-stu-id="5f6bf-137">-ObjectId</span></span>
-<span data-ttu-id="5f6bf-138">Die Objekt-ID des Dienst Prinzipals, der gelöscht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-138">The object id of the service principal to delete.</span></span>
+### <span data-ttu-id="92985-137">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="92985-137">-ObjectId</span></span>
+<span data-ttu-id="92985-138">Die Objekt-ID des zu löschende Dienstprinzipal.</span><span class="sxs-lookup"><span data-stu-id="92985-138">The object id of the service principal to delete.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -208,8 +208,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-139">-PassThru</span><span class="sxs-lookup"><span data-stu-id="5f6bf-139">-PassThru</span></span>
-<span data-ttu-id="5f6bf-140">Gibt, falls angegeben, den gelöschten Dienstprinzipal zurück.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-140">If specified, returns the deleted service principal.</span></span>
+### <span data-ttu-id="92985-139">-PassThru</span><span class="sxs-lookup"><span data-stu-id="92985-139">-PassThru</span></span>
+<span data-ttu-id="92985-140">Wenn angegeben, wird der gelöschte Dienstprinzipal zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="92985-140">If specified, returns the deleted service principal.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -223,8 +223,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-141">-ServicePrincipalName</span><span class="sxs-lookup"><span data-stu-id="5f6bf-141">-ServicePrincipalName</span></span>
-<span data-ttu-id="5f6bf-142">Der Dienstprinzipalname.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-142">The service principal name.</span></span>
+### <span data-ttu-id="92985-141">-ServicePrincipalName</span><span class="sxs-lookup"><span data-stu-id="92985-141">-ServicePrincipalName</span></span>
+<span data-ttu-id="92985-142">Der Dienstprinzipalname.</span><span class="sxs-lookup"><span data-stu-id="92985-142">The service principal name.</span></span>
 
 ```yaml
 Type: System.String
@@ -238,8 +238,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-143">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="5f6bf-143">-Confirm</span></span>
-<span data-ttu-id="5f6bf-144">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-144">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="92985-143">-Confirm</span><span class="sxs-lookup"><span data-stu-id="92985-143">-Confirm</span></span>
+<span data-ttu-id="92985-144">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="92985-144">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -253,9 +253,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-145">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="5f6bf-145">-WhatIf</span></span>
-<span data-ttu-id="5f6bf-146">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-146">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="5f6bf-147">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-147">The cmdlet is not run.</span></span>
+### <span data-ttu-id="92985-145">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="92985-145">-WhatIf</span></span>
+<span data-ttu-id="92985-146">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="92985-146">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="92985-147">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="92985-147">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -269,36 +269,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5f6bf-148">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5f6bf-148">CommonParameters</span></span>
-<span data-ttu-id="5f6bf-149">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5f6bf-149">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5f6bf-150">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="5f6bf-150">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="92985-148">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="92985-148">CommonParameters</span></span>
+<span data-ttu-id="92985-149">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="92985-149">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="92985-150">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="92985-150">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="5f6bf-151">Eingaben</span><span class="sxs-lookup"><span data-stu-id="5f6bf-151">INPUTS</span></span>
+## <span data-ttu-id="92985-151">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="92985-151">INPUTS</span></span>
 
-### <span data-ttu-id="5f6bf-152">System. GUID</span><span class="sxs-lookup"><span data-stu-id="5f6bf-152">System.Guid</span></span>
+### <span data-ttu-id="92985-152">System.Guid</span><span class="sxs-lookup"><span data-stu-id="92985-152">System.Guid</span></span>
 
-### <span data-ttu-id="5f6bf-153">System. String</span><span class="sxs-lookup"><span data-stu-id="5f6bf-153">System.String</span></span>
+### <span data-ttu-id="92985-153">System.String</span><span class="sxs-lookup"><span data-stu-id="92985-153">System.String</span></span>
 
-### <span data-ttu-id="5f6bf-154">Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
-<span data-ttu-id="5f6bf-155">Parameter: Inputobject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="5f6bf-155">Parameters: InputObject (ByValue)</span></span>
+### <span data-ttu-id="92985-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.WERDENDServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="92985-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
+<span data-ttu-id="92985-155">Parameter: InputObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="92985-155">Parameters: InputObject (ByValue)</span></span>
 
-### <span data-ttu-id="5f6bf-156">Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADApplication</span><span class="sxs-lookup"><span data-stu-id="5f6bf-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
-<span data-ttu-id="5f6bf-157">Parameter: applicationObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="5f6bf-157">Parameters: ApplicationObject (ByValue)</span></span>
+### <span data-ttu-id="92985-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.WERDENDApplication</span><span class="sxs-lookup"><span data-stu-id="92985-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
+<span data-ttu-id="92985-157">Parameter: ApplicationObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="92985-157">Parameters: ApplicationObject (ByValue)</span></span>
 
-## <span data-ttu-id="5f6bf-158">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="5f6bf-158">OUTPUTS</span></span>
+## <span data-ttu-id="92985-158">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="92985-158">OUTPUTS</span></span>
 
-### <span data-ttu-id="5f6bf-159">Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
+### <span data-ttu-id="92985-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.WERDENDServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="92985-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
 
-## <span data-ttu-id="5f6bf-160">Notizen</span><span class="sxs-lookup"><span data-stu-id="5f6bf-160">NOTES</span></span>
-<span data-ttu-id="5f6bf-161">Schlüsselwörter: Azure, AZ, arm, Ressource, Verwaltung, Manager, Ressource, Gruppe, Vorlage, Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="5f6bf-161">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
+## <span data-ttu-id="92985-160">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="92985-160">NOTES</span></span>
+<span data-ttu-id="92985-161">Schlüsselwörter: azure, Az, arm, Ressource, Verwaltung, Manager, Ressource, Gruppe, Vorlage, Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="92985-161">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
 
-## <span data-ttu-id="5f6bf-162">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="5f6bf-162">RELATED LINKS</span></span>
+## <span data-ttu-id="92985-162">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="92985-162">RELATED LINKS</span></span>
 
-[<span data-ttu-id="5f6bf-163">Neu – AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-163">New-AzADServicePrincipal</span></span>](./New-AzADServicePrincipal.md)
+[<span data-ttu-id="92985-163">New-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="92985-163">New-AzADServicePrincipal</span></span>](./New-AzADServicePrincipal.md)
 
-[<span data-ttu-id="5f6bf-164">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-164">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
+[<span data-ttu-id="92985-164">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="92985-164">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
 
-[<span data-ttu-id="5f6bf-165">Satz-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="5f6bf-165">Set-AzADServicePrincipal</span></span>](./Set-AzADServicePrincipal.md)
 
-[<span data-ttu-id="5f6bf-166">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="5f6bf-166">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
+[<span data-ttu-id="92985-165">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="92985-165">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
 
-[<span data-ttu-id="5f6bf-167">Remove-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="5f6bf-167">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
+[<span data-ttu-id="92985-166">Remove-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="92985-166">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
