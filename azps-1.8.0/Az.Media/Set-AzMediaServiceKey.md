@@ -6,48 +6,48 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.media/set-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Set-AzMediaServiceKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Set-AzMediaServiceKey.md
-ms.openlocfilehash: e9d117e9e81ee1189031b9e1f2f0a4094e9b9fcf
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c80c9b411d360de0b46cd051a3f786bb740b26f2
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93819051"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402353"
 ---
 # Set-AzMediaServiceKey
 
-## Synopsis
-Regeneriert einen Schlüssel, der für den Zugriff auf den dem Mediendienst zugeordneten Ruhe Endpunkt verwendet wird.
+## SYNOPSIS
+Generiert einen Schlüssel erneut, der für den Zugriff auf den REST-Endpunkt verwendet wird, der dem Mediendienst zugeordnet ist.
 
-## Syntax
+## SYNTAX
 
 ```
 Set-AzMediaServiceKey [-ResourceGroupName] <String> [-AccountName] <String> [-KeyType] <KeyType>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Satz-AzMediaServiceKey** " generiert einen Schlüssel, der für den Zugriff auf den mit dem Mediendienst verknüpften Repräsentations Status Transfer (Ruhe)-Endpunkt verwendet wird.
+## BESCHREIBUNG
+Das **Cmdlet Set-AzMediaServiceKey** generiert einen Schlüssel erneut, der für den Zugriff auf den Restendpunkt (Representational State Transfer) verwendet wird, der dem Mediendienst zugeordnet ist.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erneutes Generieren des Primärschlüssels für den Zugriff auf den Mediendienst
+### Beispiel 1: Erneutererieren des Primärschlüssels, der für den Zugriff auf den Mediendienst verwendet wird
 ```
 PS C:\>Set-AzMediaServiceKey -ResourceGroupName "ResourceGroup004" -AccountName "MediaService001" -KeyType Primary
 ```
 
-Mit diesem Befehl wird der Primärschlüssel für den Mediendienst mit dem Namen MediaService001, der zur Ressourcengruppe mit dem Namen ResourceGroup004 gehört, erneut generiert.
+Mit diesem Befehl wird der Primärschlüssel für den Mediendienst mit dem Namen "MediaService001" erneut generiert, der zur Ressourcengruppe "ResourceGroup004" gehört.
 
-### Beispiel 2: Erneutes Generieren des sekundären Schlüssels, der für den Zugriff auf den Mediendienst verwendet wird
+### Beispiel 2: Generiert den sekundären Schlüssel erneut, der für den Zugriff auf den Mediendienst verwendet wird.
 ```
 PS C:\>Set-AzMediaServiceKey -ResourceGroupName "Resourcegroup123" -AccountName "MediaService002" -KeyType Secondary
 ```
 
-Mit diesem Befehl wird der sekundäre Schlüssel für den Mediendienst mit dem Namen MediaService002, der zur Ressourcengruppe mit dem Namen Resourcegroup123 gehört, erneut generiert.
+Mit diesem Befehl wird der sekundäre Schlüssel für den Mediendienst "MediaService002" erneut generiert, der zur Ressourcengruppe "Resourcegroup123" gehört.
 
-## Parameter
+## PARAMETERS
 
-### -Kontoname
-Gibt den Namen des Medien Diensts an, der vom Cmdlet erneut generiert wird.
+### -AccountName
+Gibt den Namen des Mediendiensts an, den dieses Cmdlet erneut generiert.
 
 ```yaml
 Type: System.String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeyType
-Gibt den Schlüsseltyp des Medien Diensts an.
-Die zulässigen Werte für diesen Parameter sind: primär oder sekundär.
+Gibt den Schlüsseltyp des Mediendiensts an.
+Die zulässigen Werte für diesen Parameter sind: "Primary" oder "Secondary".
 
 ```yaml
 Type: Microsoft.Azure.Management.Media.Models.KeyType
@@ -108,8 +108,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -123,7 +123,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -140,20 +140,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Media. Models. PSServiceKey
+### Microsoft.Azure.Commands.Media.Models.PSServiceKey
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzMediaServiceKeys](./Get-AzMediaServiceKeys.md)
 
 

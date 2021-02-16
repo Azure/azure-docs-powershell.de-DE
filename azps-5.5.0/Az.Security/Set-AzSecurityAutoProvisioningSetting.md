@@ -1,0 +1,189 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+Module Name: Az.Security
+online version: https://docs.microsoft.com/en-us/powershell/module/az.security/Set-AzSecurityAutoProvisioningSetting
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Set-AzSecurityAutoProvisioningSetting.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Security/Security/help/Set-AzSecurityAutoProvisioningSetting.md
+ms.openlocfilehash: f3d30608230fffc934a3cfcf9a4b15264dbcf008
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100150812"
+---
+# Set-AzSecurityAutoProvisioningSetting
+
+## SYNOPSIS
+Aktualisiert die Einstellung für die automatische Bereitstellung
+
+## SYNTAX
+
+### SubscriptionLevelResource (Standard)
+```
+Set-AzSecurityAutoProvisioningSetting -Name <String> [-EnableAutoProvision]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ResourceId
+```
+Set-AzSecurityAutoProvisioningSetting [-EnableAutoProvision] -ResourceId <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### InputObject
+```
+Set-AzSecurityAutoProvisioningSetting -InputObject <PSSecurityAutoProvisioningSetting>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Aktiviert oder deaktiviert die Einstellungen für die automatische Bereitstellung für ein Abonnement.
+Mit den Einstellungen für die automatische Bereitstellung können Sie entscheiden, ob Azure Security Center automatisch einen Sicherheits-Agent bereitstellen soll, der auf Ihren VMs installiert wird.
+Der Sicherheitsmitarbeiter überwacht Ihre VM, um Sicherheitswarnungen zu erstellen und die Sicherheitskonformität der VM zu überwachen.
+
+## BEISPIELE
+
+### Beispiel 1
+```powershell
+PS C:\> Set-AzSecurityAutoProvisioningSetting -Name "default" -EnableAutoProvision
+Id                                                                                                                Name    AutoProvision
+--                                                                                                                ----    -------------
+/subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/autoProvisioningSettings/default default On
+```
+
+Aktiviert die Einstellung für die automatische Bereitstellung für ein Abonnement.
+
+### Beispiel 2
+```powershell
+PS C:\> Set-AzSecurityAutoProvisioningSetting -Name "default"
+Id                                                                                                                Name 
+--                                                                                                                ---- 
+/subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/autoProvisioningSettings/default de...
+```
+
+Deaktiviert die Einstellung für die automatische Bereitstellung für ein Abonnement.
+
+## PARAMETERS
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoProvision
+Automatische Bereitstellung.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SubscriptionLevelResource, ResourceId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Eingabeobjekt.
+
+```yaml
+Type: Microsoft.Azure.Commands.Security.Models.AutoProvisioningSettings.PSSecurityAutoProvisioningSetting
+Parameter Sets: InputObject
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Ressourcenname.
+
+```yaml
+Type: System.String
+Parameter Sets: SubscriptionLevelResource
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+Ressourcen-ID.
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceId
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Waswenn
+Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
+
+## EINGABEN
+
+### System.String
+
+### Microsoft.Azure.Commands.Security.Models.AutoProvisioningSettings.PSSecurityAutoProvisioningSetting
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.Security.Models.AutoProvisioningSettings.PSSecurityAutoProvisioningSetting
+
+## HINWEISE
+
+## LINKS ZU VERWANDTEN THEMEN
