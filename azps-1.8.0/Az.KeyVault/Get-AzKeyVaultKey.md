@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
-ms.openlocfilehash: 21d2f6efa039dbd9b229562fcefd53c715f400fe
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: a934b1d96b260a6615acfbe02b15c80e6d3bfae5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93819628"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400551"
 ---
 # Get-AzKeyVaultKey
 
-## Synopsis
-Ruft schlüsseltresor Schlüssel ab.
+## SYNOPSIS
+Ruft Die Schlüssel des Tresors ab.
 
-## Syntax
+## SYNTAX
 
 ### ByVaultName (Standard)
 ```
@@ -74,13 +74,13 @@ Get-AzKeyVaultKey [-ResourceId] <String> [-Name] <String> [-IncludeVersions]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzKeyVaultKey** " ruft Azure Key Vault-Schlüssel ab.
-Dieses Cmdlet ruft ein bestimmtes **Microsoft. Azure. Commands. keyvault. Models. keybundle** oder eine Liste aller **keybundle** -Objekte in einem schlüsseltresor oder nach Version ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzKeyVaultKey"** ruft Azure Key Vault Keys ab.
+Dieses Cmdlet ruft ein bestimmtes **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** oder eine Liste aller **KeyBundle-Objekte** in einem Schlüsseltresor oder nach Version ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen aller Schlüssel in einem schlüsseltresor
+### Beispiel 1: Alle Schlüssel in einem Schlüsseltresor erhalten
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso'
 
@@ -109,9 +109,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Dieser Befehl ruft alle Schlüssel im schlüsseltresor mit dem Namen contoso ab.
+Dieser Befehl ruft alle Schlüssel im Schlüsseltresor namens Contoso ab.
 
-### Beispiel 2: Abrufen der aktuellen Version eines Schlüssels
+### Beispiel 2: Erhalten der aktuellen Version eines Schlüssels
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1'
 
@@ -128,9 +128,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Dieser Befehl ruft die aktuelle Version des Schlüssels mit dem Namen test1 im schlüsseltresor mit dem Namen contoso ab.
+Dieser Befehl ruft die aktuelle Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.
 
-### Beispiel 3: Abrufen aller Versionen eines Schlüssels
+### Beispiel 3: Alle Versionen eines Schlüssels erhalten
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -IncludeVersions
 
@@ -159,9 +159,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Dieser Befehl ruft alle Versionen mit dem Schlüssel "ITPfx" im Schlüssel vaultnamed Contoso ab.
+Dieser Befehl ruft alle Versionen ab, die den Schlüssel "ITPfx" im Schlüsseltresor "Contoso" haben.
 
-### Beispiel 4: Abrufen einer bestimmten Version eines Schlüssels
+### Beispiel 4: Erhalten einer bestimmten Version eines Schlüssels
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -Version 'e4e95940e669407fbdb4298bc21a3e1d'
 
@@ -178,10 +178,10 @@ Purge Disabled : False
 Tags           :
 ```
 
-Dieser Befehl ruft eine bestimmte Version des Schlüssels mit dem Namen test1 im schlüsseltresor mit dem Namen contoso ab.
-Nachdem Sie diesen Befehl ausgeführt haben, können Sie verschiedene Eigenschaften des Schlüssels überprüfen, indem Sie im $Key-Objekt navigieren.
+Dieser Befehl ruft eine bestimmte Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.
+Nachdem Sie diesen Befehl ausgeführt haben, können Sie verschiedene Eigenschaften des Schlüssels prüfen, indem Sie im $Key navigieren.
 
-### Beispiel 5: Abrufen aller Schlüssel, die gelöscht, aber für diesen schlüsseltresor nicht bereinigt wurden.
+### Beispiel 5: Hier erhalten Sie alle Schlüssel, die für diesen Schlüsseltresor gelöscht, aber nicht gelöscht wurden.
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -InRemovedState
 
@@ -199,9 +199,9 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Dieser Befehl ruft alle Schlüssel ab, die zuvor gelöscht, aber nicht bereinigt wurden, im schlüsseltresor mit dem Namen contoso.
+Dieser Befehl ruft alle Schlüssel ab, die zuvor gelöscht, aber nicht gelöscht wurden, im Schlüsseltresor namens Contoso.
 
-### Beispiel 6: Ruft den Schlüssel ITPfx ab, der gelöscht, aber für diesen schlüsseltresor nicht bereinigt wurde.
+### Beispiel 6: Ruft den schlüssel-ITPfx-Schlüssel ab, der gelöscht, aber nicht für diesen Schlüsseltresor gelöscht wurde.
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test3' -InRemovedState
 
@@ -219,10 +219,10 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Dieser Befehl ruft den Schlüssel test3 ab, der zuvor gelöscht, aber nicht bereinigt wurde, im schlüsseltresor mit dem Namen contoso.
+Dieser Befehl ruft den Schlüsseltest3 ab, der zuvor im Schlüsseltresor "Contoso" gelöscht, aber nicht gelöscht wurde.
 Dieser Befehl gibt Metadaten wie das Löschdatum und das geplante Löschdatum dieses gelöschten Schlüssels zurück.
 
-### Beispiel 7: Abrufen aller Schlüssel in einem schlüsseltresor mithilfe von Filtern
+### Beispiel 7: Erhalten aller Schlüssel in einem Schlüsseltresor mithilfe der Filterung
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName "test*"
 
@@ -251,12 +251,12 @@ Purge Disabled : False
 Tags           :
 ```
 
-Dieser Befehl ruft alle Schlüssel im schlüsseltresor mit dem Namen "Contoso" ab, die mit "Test" beginnen.
+Dieser Befehl ruft alle Schlüssel im Schlüsseltresor "Contoso" ab, die mit "Test" beginnen.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -271,10 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Gibt an, dass dieses Cmdlet alle Versionen eines Schlüssels abruft.
-Die aktuelle Version eines Schlüssels ist der erste in der Liste.
-Wenn Sie diesen Parameter angeben, müssen Sie auch die Parameter *Name* und *vaultname* angeben.
-Wenn Sie den *IncludeVersions* -Parameter nicht angeben, ruft dieses Cmdlet die aktuelle Version des Schlüssels mit dem angegebenen *Namen* ab.
+Gibt an, dass dieses Cmdlet alle Versionen eines Schlüssels erhält.
+Die aktuelle Version eines Schlüssels ist die erste in der Liste.
+Wenn Sie diesen Parameter angeben, müssen Sie auch die *Parameter "Name"* und *"VaultName"* angeben.
+Wenn Sie den Parameter *"IncludeVersions"* nicht angeben, ruft dieses Cmdlet die aktuelle Version des Schlüssels mit dem angegebenen *Namen ab.*
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -288,8 +288,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Keyvault-Objekt.
+### -InputObject
+KeyVault-Objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen des abzurufenden Schlüsselpakets an.
+Gibt den Namen des zu erhaltenden Schlüsselbündels an.
 
 ```yaml
 Type: System.String
@@ -345,8 +345,8 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### -Resourcen-Nr
-Keyvault-Ressourcen-ID.
+### -ResourceId
+KeyVault-Ressourcen-ID.
 
 ```yaml
 Type: System.String
@@ -360,9 +360,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Vaultname
-Gibt den Namen des Schlüsselspeichers an, aus dem dieses Cmdlet Schlüssel erhält.
-Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüsseldepots basierend auf dem Namen, den dieser Parameter angibt, und der ausgewählten Umgebung.
+### -VaultName
+Gibt den Namen des Schlüsseltresor an, aus dem dieses Cmdlet Schlüssel erhält.
+Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüsseltresor basierend auf dem Namen, den dieser Parameter angibt, und der ausgewählten Umgebung.
 
 ```yaml
 Type: System.String
@@ -377,8 +377,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Gibt die Schlüssel Version an.
-Dieses Cmdlet erstellt den FQDN eines Schlüssels basierend auf dem schlüsseltresor Namen, der aktuell ausgewählten Umgebung, dem Schlüsselnamen und der Schlüssel Version.
+Gibt die Schlüsselversion an.
+Dieses Cmdlet erstellt den FQDN eines Schlüssels basierend auf dem Namen des Schlüsseltresor, der aktuell ausgewählten Umgebung, dem Schlüsselnamen und der Schlüsselversion.
 
 ```yaml
 Type: System.String
@@ -393,27 +393,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultKeyIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultKey
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Add-AzKeyVaultKey](./Add-AzKeyVaultKey.md)
 
@@ -421,5 +421,4 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-Erro
 
 [Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
 
-[Satz-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
 
