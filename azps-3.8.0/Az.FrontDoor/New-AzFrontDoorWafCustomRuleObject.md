@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
-ms.openlocfilehash: d352f70d28b9bfafae46697fb6d69dc50c739b19
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 4612f1ef1dac22d87b6794e35f9541a39f6312ea
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94004044"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403985"
 ---
 # New-AzFrontDoorWafCustomRuleObject
 
-## Synopsis
-Erstellen eines CustomRule-Objekts für die WAF-Richtlinienerstellung
+## SYNOPSIS
+Erstellen eines Benutzerdefinierten Objekts für die Erstellung einer WAF-Richtlinie
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzFrontDoorWafCustomRuleObject -Name <String> -RuleType <String> -MatchCondition <PSMatchCondition[]>
@@ -25,10 +25,10 @@ New-AzFrontDoorWafCustomRuleObject -Name <String> -RuleType <String> -MatchCondi
  [-EnabledState <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Erstellen eines CustomRule-Objekts für die WAF-Richtlinienerstellung
+## BESCHREIBUNG
+Erstellen eines Benutzerdefinierten Objekts für die Erstellung einer WAF-Richtlinie
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
@@ -39,13 +39,13 @@ Name   RuleType Action Priority RateLimitDurationInMinutes
 Rule1 MatchRule  Block        2                          1
 ```
 
-Erstellen eines CustomRule-Objekts
+Erstellen eines Benutzerdefinierten Objekts
 
-## Parameter
+## PARAMETERS
 
-### – Aktion
-Art der Aktionen.
-Mögliche Werte sind: ' allow ', ' Block ', ' log '
+### -Aktion
+Aktionstyp.
+Mögliche Werte sind: "Zulassen", "Blockieren", "Protokoll".
 
 ```yaml
 Type: System.String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Status aktiviert. Mögliche Werte sind: "aktiviert", "deaktiviert".
+Aktivierter Zustand. Mögliche Werte sind: "Enabled", "Disabled".
 
 ```yaml
 Type: System.String
@@ -119,7 +119,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Priorität
+### -Priority
 Beschreibt die Priorität der Regel.
 
 ```yaml
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitDurationInMinutes
-Kurs Beschränkungs Dauer. Standard-1 Minute
+Dauer des Satzlimits. Standard – 1 Minute
 
 ```yaml
 Type: System.Int32
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitThreshold
-Schwellenwert für die Gebührenobergrenze
+Schwellenwert für satzbegrenzung
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -165,8 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-Der Typ der Regel.
-Mögliche Werte sind: "MatchRule", "RateLimitRule"
+Typ der Regel.
+Mögliche Werte sind: 'MatchRule', 'RateLimitRule'
 
 ```yaml
 Type: System.String
@@ -181,19 +181,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Haustür. Models. PSCustomRule
+### Microsoft.Azure.Commands.FrontDando.Models.PSCustomRule
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
- [Satz-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md)
+[New-AzFrontDlicWafPolicy](./New-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDlicWafPolicy](./Update-AzFrontDoorWafPolicy.md)

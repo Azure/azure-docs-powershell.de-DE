@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md
-ms.openlocfilehash: 0dc49732a6e6ad614a0330c3fe24b412be898a54
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 1b8a1c5c0a8161993be4d1e8c5f8d4bf9119d4b0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93823535"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404274"
 ---
 # Get-AzADServicePrincipal
 
-## Synopsis
-Filtert Active Directory-Dienst Prinzipale.
+## SYNOPSIS
+Filtert Active Directory-Dienstprinzipale.
 
-## Syntax
+## SYNTAX
 
 ### EmptyParameterSet (Standard)
 ```
@@ -62,55 +62,55 @@ Get-AzADServicePrincipal -ServicePrincipalName <String> [-DefaultProfile <IAzure
  [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Filtert Active Directory-Dienst Prinzipale.
+## BESCHREIBUNG
+Filtert Active Directory-Dienstprinzipale.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Anzeigendienst Prinzipale einer Liste
+### Beispiel 1: Auflisten der Ad-Dienstprinzipale
 
 ```
 PS C:\> Get-AzADServicePrincipal
 ```
 
-Listet alle Anzeigendienst Prinzipale in einem Mandanten auf.
+Listet alle Prinzipale für ad-Dienste in einem Mandanten auf.
 
-### Beispiel 2 – Auflisten von Anzeigendienst Prinzipalen mithilfe von Paging
+### Beispiel 2: Auflisten der Ad -Dienstprinzipale mithilfe von Seiten
 
 ```
 PS C:\> Get-AzADServicePrincipal -First 100
 ```
 
-Listet die ersten 100-Anzeigendienst Prinzipale in einem Mandanten auf.
+Listet die ersten 100 Ad-Dienstprinzipale in einem Mandanten auf.
 
-### Beispiel für 3-Listen Dienst Prinzipale nach SPN
+### Beispiel 3: Auflisten der Dienstprinzipale nach SPN
 
 ```
 PS C:\> Get-AzADServicePrincipal -ServicePrincipalName 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
 
-Listet Dienst Prinzipale mit dem SPN "36f81fc3-b00f-48cd-8218-3879f51ff39f" auf.
+Listet Dienstprinzipale mit dem SPN '36f81fc3-b00f-48cd-8218-3879f51ff39f' auf.
 
-### Beispiel für 4-Listen Dienst Prinzipale nach Suchzeichenfolge
+### Beispiel 4: Auflisten der Dienstprinzipale nach Suchzeichenfolge
 
 ```
 PS C:\> Get-AzADServicePrincipal -SearchString "Web"
 ```
 
-Listet alle Anzeigendienst Prinzipale auf, deren Anzeigename mit "Web" beginnt.
+Listet alle Prinzipale für ad-Dienste auf, deren Anzeigename mit "Web" beginnt.
 
-### Beispiel 5-Listen Dienst Prinzipale durch Piping
+### Beispiel 5: Auflisten der Dienstprinzipale durch Piping
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
 ```
 
-Ruft die AD-Anwendung mit der Objekt-ID "39e64ec6-569b-4030-8e1c-c3c519a05d69" ab und leitet Sie an das Get-AzADServicePrincipal-Cmdlet weiter, um alle Dienst Prinzipale für diese Anwendung aufzulisten.
+Ruft die Get-AzADServicePrincipal mit der Objekt-ID '39e64ec6-569b-4030-8e1c-c3c519a05d69' ab und gibt sie an das Cmdlet Get-AzADServicePrincipal weiter, um alle Dienstprinzipale für diese Anwendung auflisten.
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
-Die Anwendungs-ID des Dienst Prinzipals.
+Die Dienstprinzipalanwendungs-ID.
 
 ```yaml
 Type: System.Guid
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-Das Application-Objekt, dessen Dienstprinzipal abgerufen wird.
+Das Anwendungsobjekt, dessen Dienstprinzipal abgerufen wird.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Der Anzeigename des Dienst Prinzipals.
+Der Anzeigename des Dienstprinzipals.
 
 ```yaml
 Type: System.String
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameBeginsWith
-Die Suchzeichenfolge des Dienst Prinzipals.
+Die Suchzeichenfolge des Dienstprinzipaldiensts.
 
 ```yaml
 Type: System.String
@@ -184,8 +184,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Objekt-ID des Dienst Prinzipals.
+### -ObjectId
+Objekt-ID des Dienstprinzipal.
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Gibt die Anzahl der Objekte in der Datengruppe an. Derzeit hat dieser Parameter keine Auswirkungen.
+Meldet die Anzahl der Objekte im Datenset. Derzeit führt dieser Parameter keine Anderen aus.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Ignoriert die ersten N Objekte und ruft dann die restlichen Objekte ab.
+Ignoriert die ersten N-Objekte und ruft dann die verbleibenden Objekte ab.
 
 ```yaml
 Type: System.UInt64
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-Die maximale Anzahl von Objekten, die zurückgegeben werden sollen.
+Die maximale Anzahl der zurückzukehrende Objekte.
 
 ```yaml
 Type: System.UInt64
@@ -260,27 +260,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDApplication
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.ODERDServicePrincipal
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzADServicePrincipal](./New-AzADServicePrincipal.md)
+[New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
 
-[Satz-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
 
