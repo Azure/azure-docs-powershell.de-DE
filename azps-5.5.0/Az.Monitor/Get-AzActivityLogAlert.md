@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
-ms.openlocfilehash: 030564f700f399b1880d36e4dac628a9fc3efa35
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 6f171edc1bc9b3d5f4d1f2a5d3ec568fac42929f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100154625"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398562"
 ---
 # Get-AzActivityLogAlert
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 Der Name der Ressourcengruppe, in der die Warnungsressource vorhanden ist.
-Wenn "Name" nicht null oder leer ist, muss dieser Parameter eine zeichenfolge enthalten und nicht leer sein.
+Wenn "Name" nicht null oder leer ist, muss dieser Parameter eine zeichenfolge enthalten und keine leere Zeichenfolge enthalten.
 
 ```yaml
 Type: System.String
@@ -135,7 +135,6 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Set-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
 
-[Update-AzActivityLogAlert](./Update-AzActivityLogAlert.md)
 
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
