@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile.md
-ms.openlocfilehash: b05f62559670bdbdb0c018dff8febd8c5c8dfb20
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: f406ddbf3e975e6caa3d9e9164673ec95a311e76
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660506"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400177"
 ---
 # New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile
 
-## Synopsis
-Erstellt ein neues Diagnose Profilobjekt für die Netzwerkkonfiguration. Dieses Objekt wird verwendet, um die Netzwerk confiuration während einer Diagnosesitzung unter Verwendung der angegebenen Kriterien zu beschränken.
+## SYNOPSIS
+Erstellt ein neues Diagnoseprofilobjekt für die Netzwerkkonfiguration. Dieses Objekt wird verwendet, um die Netzwerkkonfiuration während einer Diagnosesitzung mithilfe der angegebenen Kriterien einzuschränken.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile -Direction <String> -Protocol <String>
@@ -25,12 +25,12 @@ New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile -Direction <String> -P
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Mit dem New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile-Cmdlet wird ein neues Diagnostic profile-Objekt erstellt. Dieses Objekt wird verwendet, um die Netzwerk confiuration während einer Netzwerk Konfigurationsdiagnose Sitzung unter Verwendung der angegebenen Kriterien zu beschränken.
+## BESCHREIBUNG
+Das New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile cmdlet erstellt ein neues Diagnoseprofilobjekt. Dieses Objekt wird verwendet, um die Netzwerkkonfiuration während einer Netzwerkkonfigurationsdiagnosesitzung mit den angegebenen Kriterien einzuschränken.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Aufrufen der Netzwerkkonfigurations-Diagnosesitzung für VM und festgelegtes Netzwerkprofil
+### Beispiel 1: Aufrufen der Netzwerkkonfigurationsdiagnosesitzung für VM und angegebenes Netzwerkprofil
 ```
 PS C:\> $profile = New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile -Direction Inbound -Protocol Tcp -Source 10.1.1.4 -Destination * -DestinationPort 50
 PS C:\> Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic -Location eastus -TargetResourceId /subscriptions/61cc8a98-a8be-4bfe-a04e-0b461f93fe35/resourceGroups/NwRgEastUS/providers/Microsoft.Compute/virtualMachines/vm1 -Profile $profile
@@ -65,10 +65,10 @@ Results : [
                       },
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -82,9 +82,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Ziel
-Traffic-Ziel.
-Akzeptierte Werte sind: "*", IP-Adresse/CIDR, Service-Tag.
+### -Destination
+Datenverkehrsziel.
+Akzeptierte Werte sind: '*', IP Address/CIDR, Service Tag.
 
 ```yaml
 Type: System.String
@@ -99,8 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPort
-Ziel-Port für den Datenverkehr.
-Akzeptierte Werte sind "*", Port (beispielsweise 3389) und Portbereich (beispielsweise 80-100).
+Datenverkehrszielport.
+Akzeptierte Werte sind "*", Port (z. B. 3389) und Portbereich (z. B. 80-100).
 
 ```yaml
 Type: System.String
@@ -114,9 +114,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Richtung
-Die Richtung des Datenverkehrs.
-Akzeptierte Werte sind "eingehend" und "ausgehend"
+### -Direction
+Die Richtung des Verkehrs.
+Akzeptierte Werte sind "Eingehende Werte" und "Ausgehend".
 
 ```yaml
 Type: System.String
@@ -130,8 +130,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Protokoll
-Protokoll, das überprüft werden soll.
+### -Protocol
+Das Protokoll, das überprüft werden soll.
 Akzeptierte Werte sind "*", TCP, UDP.
 
 ```yaml
@@ -147,8 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Datenverkehrs Quelle.
-Akzeptierte Werte sind "*", IP-Adresse/CIDR, Service-Tag.
+Datenverkehrsquelle.
+Akzeptierte Werte sind "*", "IP Address/CIDR", "Service Tag".
 
 ```yaml
 Type: System.String
@@ -163,22 +163,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Network. Models. PSNetworkConfigurationDiagnosticProfile
+### Microsoft.Azure.Commands.Network.Models.PSNetworkConfigurationDiagnosticProfile
 
-## Notizen
-Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, Netzwerk, Netzwerk, Watcher, Diagnose, Profil
+## HINWEISE
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking, watcher, diagnostic, profile
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzNetworkWatcher](./New-AzNetworkWatcher.md)
+[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
 
 [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md)
 
@@ -190,35 +190,35 @@ Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, Netzwerk,
 
 [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md)
 
-[Anfang-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[Neu – AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
+[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
 
-[Neu – AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
+[New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
 
 [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md)
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[Neu – AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
+[New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
 [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md)
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[Anfang-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
+[Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[Satz-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md)
+[Set-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[Satz-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md)
+[Set-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md)
 
 [Remove-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[Neu – AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md)
+[New-AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md)
 
 [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
@@ -228,6 +228,6 @@ Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, Netzwerk,
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
