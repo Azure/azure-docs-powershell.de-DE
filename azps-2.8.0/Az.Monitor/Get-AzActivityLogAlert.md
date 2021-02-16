@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
-ms.openlocfilehash: 4982cb77f4dfd318d58f24ab2e2876e4eac8d2c7
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 50ffa5beb8ab79d3c903ec5b7e6a21c9b08116db
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93650568"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406399"
 ---
 # Get-AzActivityLogAlert
 
-## Synopsis
-Ruft eine oder mehrere Aktivitätsprotokoll-Warnungs Ressourcen ab.
+## SYNOPSIS
+Ruft mindestens eine Aktivitätsprotokollbenachrichtigungsressourcen ab.
 
-## Syntax
+## SYNTAX
 
 ### GetByNameAndResourceGroup
 ```
@@ -32,36 +32,36 @@ Get-AzActivityLogAlert [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureC
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzActivityLogAlert** " Ruft eine oder mehrere Aktivitätsprotokoll-Warnungs Ressourcen ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzActivityLogAlert"** ruft eine oder mehrere Ressourcen für Aktivitätsprotokollbenachrichtigungen ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen einer Aktivitätsprotokoll Benachrichtigung nach Abonnement-ID
+### Beispiel 1: Erhalten von Aktivitätsprotokollbenachrichtigungen nach Abonnement-ID
 ```
 PS C:\>Get-AzActivityLogAlert
 ```
 
-Dieser Befehl listet alle Aktivitätsprotokoll Benachrichtigungen für das aktuelle Abonnement auf.
+Dieser Befehl listet alle Aktivitätsprotokollbenachrichtigungen für das aktuelle Abonnement auf.
 
-### Beispiel 2: Abrufen von Benachrichtigungen zum Aktivitätsprotokoll für die angegebene Ressourcengruppe
+### Beispiel 2: Erhalten von Aktivitätsprotokollbenachrichtigungen für die angegebene Ressourcengruppe
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts"
 ```
 
-Dieser Befehl listet Aktivitätsprotokoll Benachrichtigungen für die angegebene Ressourcengruppe auf.
+Dieser Befehl listet Aktivitätsprotokollwarnungen für die angegebene Ressourcengruppe auf.
 
-### Beispiel 3: Abrufen einer Aktivitätsprotokoll Benachrichtigung
+### Beispiel 3: Erhalten einer Aktivitätsprotokollbenachrichtigung.
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts" -Name "alert1"
 ```
 
-Dieser Befehl listet eine Benachrichtigung über das Aktivitätsprotokoll (eine Liste mit einem einzelnen Element) auf.
+Dieser Befehl listet eine Aktivitätsprotokollwarnung (eine Liste mit einem einzelnen Element) auf.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name der Aktivitätsprotokoll Benachrichtigung.
+Der Name der Aktivitätsprotokollbenachrichtigung.
 
 ```yaml
 Type: System.String
@@ -91,8 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Der Name der Ressourcengruppe, in der die Warnungs Ressource vorhanden ist.
-Wenn Name nicht NULL oder leer ist, muss dieser Parameter eine nicht leere Zeichenfolge enthalten.
+Der Name der Ressourcengruppe, in der die Warnungsressource vorhanden ist.
+Wenn "Name" nicht null oder leer ist, muss dieser Parameter eine zeichenfolge enthalten und keine leere Zeichenfolge enthalten.
 
 ```yaml
 Type: System.String
@@ -119,26 +119,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
-
-[Update-AzActivityLogAlert](./Update-AzActivityLogAlert.md)
+[Set-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
 
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
-[Neu – AzActionGroup](./New-AzActionGroup.md)
-
-[Neu – AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+[New-AzActionGroup](./New-AzActionGroup.md)

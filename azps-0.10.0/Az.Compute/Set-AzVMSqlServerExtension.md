@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMSqlServerExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMSqlServerExtension.md
-ms.openlocfilehash: 4093e236f84d7587586ba30c8bd4653c4ba7358f
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 1795216cbc18da2d503a1e0056d614337cd12785
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93844195"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398239"
 ---
 # Set-AzVMSqlServerExtension
 
-## Synopsis
-Legt die Azure SQL Server-Erweiterung auf einem virtuellen Computer fest.
+## SYNOPSIS
+Legt die Azure SQL Server erweiterung auf einem virtuellen Computer fest.
 
-## Syntax
+## SYNTAX
 
 ```
 Set-AzVMSqlServerExtension [[-Version] <String>] [-ResourceGroupName] <String> [-VMName] <String>
@@ -27,66 +27,66 @@ Set-AzVMSqlServerExtension [[-Version] <String>] [-ResourceGroupName] <String> [
  [[-Location] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Set-AzVMSqlServerExtension** " legt die AzureSQL-Server Erweiterung auf einem virtuellen Computer fest.
+## BESCHREIBUNG
+Das **Cmdlet "Set-AzVMSqlServerExtension"** legt die AzureSQL -Servererweiterung auf einem virtuellen Computer fest.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Festlegen der Einstellungen für automatische Patches auf einem virtuellen Computer
+### Beispiel 1: Festlegen der Einstellungen für automatisches Patchen auf einem virtuellen Computer
 ```
 PS C:\> $AutoPatchingConfig = New-AzureVMSqlServerAutoPatchingConfig -Enable -DayOfWeek "Thursday" -MaintenanceWindowStartingHour 11 -MaintenanceWindowDuration 120 -PatchCategory "Important"
 PS C:\> Get-AzVM -ServiceName "Service02" -Name "VirtualMachine11" | Set-AzVMSqlServerExtension -AutoPatchingSettings $AutoPatchingConfig | Update-AzVM
 ```
 
-Mit dem ersten Befehl wird mithilfe des Cmdlets **New-AzureVMSqlServerAutoPatchingConfig** ein Configuration-Objekt erstellt.
-Der Befehl speichert die Konfiguration in der $AutoPatchingConfig-Variablen.
+Der erste Befehl erstellt ein Konfigurationsobjekt mithilfe des **Cmdlets "New-AzureVMSqlServerAutoPatchingConfig".**
+Der Befehl speichert die Konfiguration in der $AutoPatchingConfig Variable.
 
-Der zweite Befehl ruft den virtuellen Computer mit dem Namen "VirtualMachine11" auf dem Dienst mit dem Namen Service02 mithilfe des Get-AzVM-Cmdlets ab.
+Der zweite Befehl ruft den virtuellen Computer mit dem Namen "VirtualMachine11" für den Dienst "Service02" mit dem cmdlet Get-AzVM ab.
 Der Befehl übergibt dieses Objekt mithilfe des Pipelineoperators an das aktuelle Cmdlet.
 
-Das aktuelle Cmdlet legt die Einstellungen für das automatische Patchen in $AutoPatchingConfig für den virtuellen Computer fest.
-Der Befehl übergibt den virtuellen Computer an das Update-AzVM-Cmdlet.
+Das aktuelle Cmdlet legt die Einstellungen für automatisches Patchen in $AutoPatchingConfig für den virtuellen Computer fest.
+Der Befehl übergibt den virtuellen Computer an das Update-AzVM Cmdlet.
 
-### Beispiel 2: Festlegen automatischer Sicherungseinstellungen auf einem virtuellen Computer
+### Beispiel 2: Festlegen von Einstellungen für die automatische Sicherung auf einem virtuellen Computer
 ```
 PS C:\> $AutoBackupConfig = New-AzureVMSqlServerAutoBackupConfig -Enable -RetentionPeriod 10 -StorageUri $StorageUrl -StorageKey $StorageAccountKeySecure
 PS C:\> Get-AzVM -ServiceName "Service02" -Name "VirtualMachine11" | Set-AzVMSqlServerExtension -AutoBackupSettings $AutoBackupConfig | Update-AzVM
 ```
 
-Mit dem ersten Befehl wird mithilfe des Cmdlets **New-AzureVMSqlServerAutoBackupConfig** ein Configuration-Objekt erstellt.
-Der Befehl speichert die Konfiguration in der $AutoBackupConfig-Variablen.
+Der erste Befehl erstellt ein Konfigurationsobjekt mithilfe des **Cmdlets "New-AzureVMSqlServerAutoBackupConfig".**
+Der Befehl speichert die Konfiguration in der $AutoBackupConfig Variable.
 
-Der zweite Befehl ruft den virtuellen Computer mit dem Namen VirtualMachine11 auf dem Dienst mit dem Namen Service02 ab und übergibt ihn dann an das aktuelle Cmdlet.
+Der zweite Befehl ruft den virtuellen Computer namens "VirtualMachine11" für den Dienst "Service02" ab und übergibt ihn dann an das aktuelle Cmdlet.
 
-Das aktuelle Cmdlet legt die Einstellungen für automatische Sicherungskopien in $AutoBackupConfig für den virtuellen Computer fest.
-Der Befehl übergibt den virtuellen Computer an das Update-AzVM-Cmdlet.
+Das aktuelle Cmdlet legt die Einstellungen für die automatische Sicherung in $AutoBackupConfig für den virtuellen Computer fest.
+Der Befehl übergibt den virtuellen Computer an das Update-AzVM Cmdlet.
 
-### Beispiel 3: Deaktivieren einer SQL Server-Erweiterung auf einem virtuellen Computer
+### Beispiel 3: Deaktivieren SQL Server Erweiterung auf einem virtuellen Computer
 ```
 PS C:\> Get-AzVM -ServiceName "Service03" -Name "VirtualMachine08" | Set-AzVMSqlServerExtension -Disable
 ```
 
-Dieser Befehl ruft einen virtuellen Computer mit dem Namen VirtualMachine08 in Service03 ab und übergibt ihn dann an das aktuelle Cmdlet.
-Der Befehl deaktiviert die Erweiterung SQL Server Virtual Machine auf diesem virtuellen Computer.
+Dieser Befehl ruft einen virtuellen Computer namens "VirtualMachine08" auf Service03 ab und übergibt ihn dann an das aktuelle Cmdlet.
+Der Befehl deaktiviert die SQL Server des virtuellen Computers auf diesem virtuellen Computer.
 
-### Beispiel 4: Deinstallieren einer SQL Server-Erweiterung auf einem bestimmten virtuellen Computer
+### Beispiel 4: Deinstallieren SQL Server Erweiterung auf einem bestimmten virtuellen Computer
 ```
 PS C:\> Get-AzVM -ServiceName "Service03" -Name "VirtualMachine08" | Set-AzVMSqlServerExtension -Uninstall
 ```
 
-Dieser Befehl ruft einen virtuellen Computer mit dem Namen VirtualMachine08 in Service03 ab und übergibt ihn dann an das aktuelle Cmdlet.
-Der Befehl deinstalliert eine SQL Server Virtual Machine-Erweiterung auf diesem virtuellen Computer.
+Dieser Befehl ruft einen virtuellen Computer namens "VirtualMachine08" auf Service03 ab und übergibt ihn dann an das aktuelle Cmdlet.
+Mit dem Befehl wird eine SQL Server virtuellen Computererweiterung auf diesem virtuellen Computer deinstalliert.
 
-## Parameter
+## PARAMETERS
 
 ### -AutoBackupSettings
-Gibt die automatischen SQL Server-Sicherungseinstellungen an.
-Verwenden Sie das New-AzureVMSqlServerAutoBackupConfig-Cmdlet, um ein **AutoBackupSettings** -Objekt zu erstellen.
+Gibt die einstellungen für die automatische SQL Server an.
+Verwenden Sie zum **Erstellen eines AutoBackupSettings-Objekts** das New-AzureVMSqlServerAutoBackupConfig Cmdlet.
 
 ```yaml
 Type: AutoBackupSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -96,13 +96,13 @@ Accept wildcard characters: False
 ```
 
 ### -AutoPatchingSettings
-Gibt die automatischen Updateeinstellungen für SQL Server an.
-Verwenden Sie das New-AzureVMSqlServerAutoPatchingConfig-Cmdlet, um ein **AutoPatchingSettings** -Objekt zu erstellen.
+Gibt die Einstellungen für das automatische SQL Server patchen an.
+Verwenden Sie zum **Erstellen eines AutoPatchingSettings-Objekts** das New-AzureVMSqlServerAutoPatchingConfig Cmdlet.
 
 ```yaml
 Type: AutoPatchingSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: IAzureContextContainer
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```yaml
 Type: KeyVaultCredentialSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -139,13 +139,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Standort
-Gibt den Speicherort der virtuellen Maschine an.
+### -Location
+Gibt den Speicherort des virtuellen Computers an.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -155,12 +155,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen der SQL Server-Erweiterung an.
+Gibt den Namen des Namens der SQL Server Erweiterung an.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -175,7 +175,7 @@ Gibt den Namen der Ressourcengruppe des virtuellen Computers an.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Gibt die Version der SQL Server-Erweiterung an.
+Gibt die Version der Erweiterung SQL Server an.
 
 ```yaml
 Type: String
@@ -200,12 +200,12 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Gibt den Namen des virtuellen Computers an, auf dem dieses Cmdlet die SQL Server-Erweiterung festlegt.
+Gibt den Namen des virtuellen Computers an, auf dem dieses Cmdlet die SQL Server legt.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -215,28 +215,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 Dieses Cmdlet akzeptiert keine Eingaben.
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Compute. Models. PSAzureOperationResponse
+### Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzVM](./Get-AzVM.md)
 
 [Get-AzVMSqlServerExtension](./Get-AzVMSqlServerExtension.md)
 
-[Neu – AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
+[New-AzureVMSqlServerAutoPatchingConfig](./New-AzVMSqlServerAutoPatchingConfig.md)
 
-[Neu – AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
+[New-AzureVMSqlServerAutoBackupConfig](./New-AzVMSqlServerAutoBackupConfig.md)
 
 [Remove-AzVMSqlServerExtension](./Remove-AzVMSqlServerExtension.md)
 

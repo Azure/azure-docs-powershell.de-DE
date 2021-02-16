@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md
-ms.openlocfilehash: 1ff53a29fa26ebe7ac78cac5140a9105b43bb27d
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: ecff02643dd6d0e017d56af01792a06dc7b8d998
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93844464"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398273"
 ---
 # New-AzVMSqlServerAutoBackupConfig
 
-## Synopsis
-Erstellt ein Configuration-Objekt für die automatische Sicherung von SQL Server.
+## SYNOPSIS
+Erstellt ein Konfigurationsobjekt für SQL Server Sicherung.
 
-## Syntax
+## SYNTAX
 
 ### StorageUriSqlServerAutoBackup (Standard)
 ```
@@ -39,12 +39,12 @@ New-AzVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzVMSqlServerAutoBackupConfig** erstellt ein Configuration-Objekt für die automatische Sicherung von SQL Server.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzVMSqlServerAutoBackupConfig"** erstellt ein Konfigurationsobjekt für SQL Server Sicherung.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer automatischen Sicherungskonfiguration mithilfe von Speicher-URI und Kontoschlüssel
+### Beispiel 1: Erstellen einer automatischen Sicherungskonfiguration mit Speicher-URI und Kontoschlüssel
 ```
 PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -Enable -RetentionPeriod 10 -StorageUri "\\contoso\StorageGeneral" -StorageKey "< Storage Key for ContosoGeneral >"
 Enable                : True
@@ -52,12 +52,12 @@ EnableEncryption      : False
 RetentionPeriodInDays : 10
 ```
 
-Mit diesem Befehl wird ein Automatisches Backup-Konfigurationsobjekt erstellt, indem Sie den Speicher-URI und den Kontoschlüssel angeben.
-Die automatische Sicherung ist aktiviert, und automatische Sicherungen werden 10 Tage lang aufbewahrt.
-Der Befehl speichert das Ergebnis in der $AutoBackupConfig-Variablen.
-Sie können dieses Konfigurationselement für andere Cmdlets angeben, beispielsweise das Cmdlet "Set-AzVMSqlServerExtension".
+Mit diesem Befehl wird ein automatisches Sicherungskonfigurationsobjekt erstellt, indem Speicher-URI und Kontoschlüssel angegeben werden.
+Automatische Sicherungen sind aktiviert, und automatische Sicherungen werden 10 Tage lang aufbewahrt.
+Der Befehl speichert das Ergebnis in der $AutoBackupConfig Variable.
+Sie können dieses Konfigurationselement für andere Cmdlets angeben, z. B. Set-AzVMSqlServerExtension Cmdlet.
 
-### Beispiel 2: Erstellen einer automatischen Sicherungskonfiguration mithilfe des Speicher Kontexts
+### Beispiel 2: Erstellen einer automatischen Sicherungskonfiguration mithilfe des Speicherkontexts
 ```
 PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral >"
 PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10
@@ -66,13 +66,13 @@ EnableEncryption      : False
 RetentionPeriodInDays : 10
 ```
 
-Der erste Befehl erstellt einen Speicherkontext und speichert ihn dann in der $StorageContext-Variablen.
-Weitere Informationen finden Sie unter New-AzureStorageContext.
+Der erste Befehl erstellt einen Speicherkontext und speichert ihn dann in der $StorageContext Variable.
+Weitere Informationen finden Sie unter "New-AzureStorageContext".
 
-Mit dem zweiten Befehl wird ein Automatisches Backup-Konfigurationsobjekt erstellt, indem der Speicherkontext in $StorageContext angegeben wird.
-Die automatische Sicherung ist aktiviert, und automatische Sicherungen werden 10 Tage lang aufbewahrt.
+Der zweite Befehl erstellt ein automatisches Sicherungskonfigurationsobjekt, indem er den Speicherkontext in der $StorageContext.
+Automatische Sicherungen sind aktiviert, und automatische Sicherungen werden 10 Tage lang aufbewahrt.
 
-### Beispiel 3: Erstellen einer automatischen Sicherungskonfiguration mithilfe des Speicher Kontexts mit Verschlüsselung und Kennwort
+### Beispiel 3: Erstellen einer automatischen Sicherungskonfiguration mithilfe des Speicherkontexts mit Verschlüsselung und Kennwort
 ```
 PS C:\> $StorageContext = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10 -EnableEncryption -CertificatePassword $CertificatePassword
 Enable                : True
@@ -80,21 +80,21 @@ EnableEncryption      : True
 RetentionPeriodInDays : 10
 ```
 
-Mit diesem Befehl wird ein Automatisches Backup-Konfigurationsobjekt erstellt und gespeichert.
+Mit diesem Befehl wird ein automatisches Sicherungskonfigurationsobjekt erstellt und gespeichert.
 Der Befehl gibt den in einem vorherigen Beispiel erstellten Speicherkontext an.
-Der Befehl ermöglicht die Verschlüsselung mit einem Kennwort.
-Das Kennwort wurde zuvor als sichere Zeichenfolge in der $CertificatePassword Variablen gespeichert.
-Verwenden Sie zum Erstellen einer sicheren Zeichenfolge das ConvertTo-SecureString-Cmdlet.
+Der Befehl ermöglicht die Verschlüsselung mit Kennwort.
+Das Kennwort wurde zuvor als sichere Zeichenfolge in der Variablen $CertificatePassword gespeichert.
+Verwenden Sie zum Erstellen einer sicheren Zeichenfolge das ConvertTo-SecureString Cmdlet.
 
-## Parameter
+## PARAMETERS
 
 ### -BackupScheduleType
-Sicherungszeitplan, manuell oder automatisiert
+Sicherungsplantyp, manuell oder automatisiert
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Manual, Automated
 
 Required: False
@@ -105,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -BackupSystemDbs
-Sicherungssystem Datenbanken
+Sichern von Systemdatenbanken
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-Gibt ein Kennwort zum Verschlüsseln des Zertifikats an, mit dem SQL Server-verschlüsselte Sicherungen ausgeführt werden.
+Gibt ein Kennwort zum Verschlüsseln des Zertifikats an, das zum Ausführen verschlüsselter SQL Server Sicherungen verwendet wird.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: IAzureContextContainer
@@ -150,14 +150,14 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Gibt an, dass die automatische Sicherung für den virtuellen SQL Server-Computer aktiviert ist.
-Wenn Sie diesen Parameter angeben, legt automatisiertes Backup einen Sicherungszeitplan für alle aktuellen und neuen Datenbanken fest.
-Damit werden die Einstellungen für verwaltete Sicherungen so aktualisiert, dass Sie diesem Zeitplan folgen.
+Gibt an, dass die automatische Sicherung für SQL Server virtuellen Computer aktiviert ist.
+Wenn Sie diesen Parameter angeben, legt die automatische Sicherung einen Sicherungszeitplan für alle aktuellen und neuen Datenbanken fest.
+Dadurch werden die Einstellungen für verwaltete Sicherungen aktualisiert, um diesen Zeitplan zu befolgen.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -167,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-Gibt an, dass dieses Cmdlet die Verschlüsselung aktiviert.
+Gibt an, dass dieses Cmdlet Verschlüsselung aktiviert.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -182,12 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupFrequency
-Vollständige SQL Server-Backup-Häufigkeit, täglich oder wöchentlich
+Sql Server: vollständige Sicherungshäufigkeit, täglich oder wöchentlich
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Daily, Weekly
 
 Required: False
@@ -198,12 +198,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupStartHour
-Stunde des Tages (0-23), wenn die vollständige Sicherung von SQL Server gestartet werden soll
+Tageszeit (0-23), zu der die vollständige Sql Server-Sicherung gestartet werden soll
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,12 +213,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupWindowInHours
-Vollständiges SQL Server-Sicherungsfenster in Stunden
+Sql Server Vollsicherung Fenster in Stunden
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,12 +228,12 @@ Accept wildcard characters: False
 ```
 
 ### -LogBackupFrequencyInMinutes
-SQL Server-Protokoll Sicherungshäufigkeit, einmal alle 1-60 Minuten
+Häufigkeit der Sql Server-Protokollsicherung, einmal alle 1-60 Minuten
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +248,7 @@ Gibt den Namen der Ressourcengruppe des virtuellen Computers an.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -258,12 +258,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-Gibt die Anzahl der Tage an, für die eine Sicherung aufbewahrt werden soll.
+Gibt die Anzahl der Tage an, die eine Sicherung erhalten soll.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -272,15 +272,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Storagecontext
+### -StorageContext
 Gibt das Speicherkonto an, das zum Speichern von Sicherungen verwendet wird.
-Verwenden Sie das New-AzureStorageContext-Cmdlet, um ein **AzureStorageContext** -Objekt zu erhalten.
-Der Standardwert ist das Speicherkonto, das dem virtuellen SQL Server-Computer zugeordnet ist.
+Verwenden Sie zum Abrufen **eines AzureStorageContext-Objekts** das New-AzureStorageContext-Cmdlet.
+Die Standardeinstellung ist das Speicherkonto, das dem virtuellen SQL Server zugeordnet ist.
 
 ```yaml
 Type: IStorageContext
 Parameter Sets: StorageContextSqlServerAutoBackup
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -290,12 +290,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageKey
-Gibt den Speicherschlüssel des BLOB-speicherkontos an.
+Gibt den Speicherschlüssel des BLOB-Speicherkontos an.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -305,12 +305,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageUri
-Gibt den Uniform Resource Identifier (URI) des BLOB-speicherkontos an.
+Gibt den URI (Uniform Resource Identifier) des BLOB-Speicherkontos an.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -320,23 +320,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 Dieses Cmdlet akzeptiert keine Eingaben.
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Compute. AutoBackupSettings
+### Microsoft.Azure.Commands.Compute.AutoBackupSettings
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
+[New-AzureVMSqlServerAutoPatchingConfig](./New-AzVMSqlServerAutoPatchingConfig.md)
 
-[Satz-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
+[Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
 
 
