@@ -5,51 +5,51 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 073f93cdb13e39925ef92dc556fb06a0ac96bcae
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 9673df14bdd0f5b7d0e946170a155231e8c4e751
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94003111"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412655"
 ---
-# <span data-ttu-id="b1044-101">Remove-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="b1044-101">Remove-AzApiManagementApiRelease</span></span>
+# <span data-ttu-id="0c749-101">Remove-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="0c749-101">Remove-AzApiManagementApiRelease</span></span>
 
-## <span data-ttu-id="b1044-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="b1044-102">SYNOPSIS</span></span>
-<span data-ttu-id="b1044-103">Entfernt eine bestimmte API-Version</span><span class="sxs-lookup"><span data-stu-id="b1044-103">Removes a particular API Release</span></span>
+## <span data-ttu-id="0c749-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="0c749-102">SYNOPSIS</span></span>
+<span data-ttu-id="0c749-103">Entfernt eine bestimmte API-Version.</span><span class="sxs-lookup"><span data-stu-id="0c749-103">Removes a particular API Release</span></span>
 
-## <span data-ttu-id="b1044-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b1044-104">SYNTAX</span></span>
+## <span data-ttu-id="0c749-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0c749-104">SYNTAX</span></span>
 
-### <span data-ttu-id="b1044-105">ByApiReleaseId (Standard)</span><span class="sxs-lookup"><span data-stu-id="b1044-105">ByApiReleaseId (Default)</span></span>
+### <span data-ttu-id="0c749-105">ByApiReleaseId (Standard)</span><span class="sxs-lookup"><span data-stu-id="0c749-105">ByApiReleaseId (Default)</span></span>
 ```
 Remove-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ReleaseId <String>
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b1044-106">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="b1044-106">ByInputObject</span></span>
+### <span data-ttu-id="0c749-106">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="0c749-106">ByInputObject</span></span>
 ```
 Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="b1044-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b1044-107">DESCRIPTION</span></span>
+## <span data-ttu-id="0c749-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="0c749-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="b1044-108">Das Cmdlet **Remove-AzAzureRmApiManagementApiRelease** entfernt eine vorhandene API-Version.</span><span class="sxs-lookup"><span data-stu-id="b1044-108">The **Remove-AzAzureRmApiManagementApiRelease** cmdlet removes an existing API Release.</span></span>
+<span data-ttu-id="0c749-108">Das **Cmdlet "Remove-AzAzureRmApiManagementApiRelease"** entfernt eine vorhandene API-Version.</span><span class="sxs-lookup"><span data-stu-id="0c749-108">The **Remove-AzAzureRmApiManagementApiRelease** cmdlet removes an existing API Release.</span></span>
 
-## <span data-ttu-id="b1044-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b1044-109">EXAMPLES</span></span>
+## <span data-ttu-id="0c749-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="0c749-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="b1044-110">Beispiel 1: Entfernen einer API-Version</span><span class="sxs-lookup"><span data-stu-id="b1044-110">Example 1: Remove an API Release</span></span>
+### <span data-ttu-id="0c749-110">Beispiel 1: Entfernen einer API-Version</span><span class="sxs-lookup"><span data-stu-id="0c749-110">Example 1: Remove an API Release</span></span>
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
 ```
 
-<span data-ttu-id="b1044-111">Mit diesem Befehl wird die API-Version mit dem angegebenen ApiId und der angegebenen Veröffentlichungs-Nr entfernt.</span><span class="sxs-lookup"><span data-stu-id="b1044-111">This command removes the API Release with the specified ApiId and ReleaseId.</span></span>
+<span data-ttu-id="0c749-111">Mit diesem Befehl wird die API Release mit der angegebenen ApiId und ReleaseId entfernt.</span><span class="sxs-lookup"><span data-stu-id="0c749-111">This command removes the API Release with the specified ApiId and ReleaseId.</span></span>
 
-## <span data-ttu-id="b1044-112">Parameter</span><span class="sxs-lookup"><span data-stu-id="b1044-112">PARAMETERS</span></span>
+## <span data-ttu-id="0c749-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0c749-112">PARAMETERS</span></span>
 
-### <span data-ttu-id="b1044-113">-ApiId</span><span class="sxs-lookup"><span data-stu-id="b1044-113">-ApiId</span></span>
-<span data-ttu-id="b1044-114">Bezeichner der API.</span><span class="sxs-lookup"><span data-stu-id="b1044-114">Identifier of the API.</span></span>
-<span data-ttu-id="b1044-115">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b1044-115">This parameter is required.</span></span>
+### <span data-ttu-id="0c749-113">-ApiId</span><span class="sxs-lookup"><span data-stu-id="0c749-113">-ApiId</span></span>
+<span data-ttu-id="0c749-114">Bezeichner der API.</span><span class="sxs-lookup"><span data-stu-id="0c749-114">Identifier of the API.</span></span>
+<span data-ttu-id="0c749-115">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0c749-115">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -63,9 +63,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-116">-Context</span><span class="sxs-lookup"><span data-stu-id="b1044-116">-Context</span></span>
-<span data-ttu-id="b1044-117">Instanz von PsApiManagementContext.</span><span class="sxs-lookup"><span data-stu-id="b1044-117">Instance of PsApiManagementContext.</span></span>
-<span data-ttu-id="b1044-118">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b1044-118">This parameter is required.</span></span>
+### <span data-ttu-id="0c749-116">-Context</span><span class="sxs-lookup"><span data-stu-id="0c749-116">-Context</span></span>
+<span data-ttu-id="0c749-117">Instanz von PsApiManagementContext.</span><span class="sxs-lookup"><span data-stu-id="0c749-117">Instance of PsApiManagementContext.</span></span>
+<span data-ttu-id="0c749-118">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0c749-118">This parameter is required.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -79,8 +79,8 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b1044-119">-DefaultProfile</span></span>
-<span data-ttu-id="b1044-120">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="b1044-120">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="0c749-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0c749-119">-DefaultProfile</span></span>
+<span data-ttu-id="0c749-120">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0c749-120">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -94,8 +94,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-121">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="b1044-121">-InputObject</span></span>
-<span data-ttu-id="b1044-122">Instanz von PsApiManagementApiRelease.</span><span class="sxs-lookup"><span data-stu-id="b1044-122">Instance of PsApiManagementApiRelease.</span></span> <span data-ttu-id="b1044-123">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b1044-123">This parameter is required.</span></span>
+### <span data-ttu-id="0c749-121">-InputObject</span><span class="sxs-lookup"><span data-stu-id="0c749-121">-InputObject</span></span>
+<span data-ttu-id="0c749-122">Instanz von PsApiManagementApiRelease.</span><span class="sxs-lookup"><span data-stu-id="0c749-122">Instance of PsApiManagementApiRelease.</span></span> <span data-ttu-id="0c749-123">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0c749-123">This parameter is required.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
@@ -109,9 +109,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-124">-PassThru</span><span class="sxs-lookup"><span data-stu-id="b1044-124">-PassThru</span></span>
-<span data-ttu-id="b1044-125">Wenn angegeben, wird true geschrieben, falls der Vorgang erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="b1044-125">If specified will write true in case operation succeeds.</span></span>
-<span data-ttu-id="b1044-126">Dieser Parameter ist optional.</span><span class="sxs-lookup"><span data-stu-id="b1044-126">This parameter is optional.</span></span>
+### <span data-ttu-id="0c749-124">-PassThru</span><span class="sxs-lookup"><span data-stu-id="0c749-124">-PassThru</span></span>
+<span data-ttu-id="0c749-125">Wenn angegeben, wird "true" für den Fall geschrieben, dass der Vorgang erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="0c749-125">If specified will write true in case operation succeeds.</span></span>
+<span data-ttu-id="0c749-126">Dieser Parameter ist optional.</span><span class="sxs-lookup"><span data-stu-id="0c749-126">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -125,9 +125,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-127">-Veröffentlichungs-Nr</span><span class="sxs-lookup"><span data-stu-id="b1044-127">-ReleaseId</span></span>
-<span data-ttu-id="b1044-128">Bezeichner der API-Version.</span><span class="sxs-lookup"><span data-stu-id="b1044-128">Identifier of the API Release.</span></span>
-<span data-ttu-id="b1044-129">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b1044-129">This parameter is required.</span></span>
+### <span data-ttu-id="0c749-127">-ReleaseId</span><span class="sxs-lookup"><span data-stu-id="0c749-127">-ReleaseId</span></span>
+<span data-ttu-id="0c749-128">Bezeichner der API-Version.</span><span class="sxs-lookup"><span data-stu-id="0c749-128">Identifier of the API Release.</span></span>
+<span data-ttu-id="0c749-129">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0c749-129">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -141,8 +141,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-130">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="b1044-130">-Confirm</span></span>
-<span data-ttu-id="b1044-131">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="b1044-131">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="0c749-130">-Confirm</span><span class="sxs-lookup"><span data-stu-id="0c749-130">-Confirm</span></span>
+<span data-ttu-id="0c749-131">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="0c749-131">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -156,9 +156,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-132">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b1044-132">-WhatIf</span></span>
-<span data-ttu-id="b1044-133">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b1044-133">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="b1044-134">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b1044-134">The cmdlet is not run.</span></span>
+### <span data-ttu-id="0c749-132">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="0c749-132">-WhatIf</span></span>
+<span data-ttu-id="0c749-133">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0c749-133">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="0c749-134">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0c749-134">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,27 +172,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b1044-135">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b1044-135">CommonParameters</span></span>
-<span data-ttu-id="b1044-136">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b1044-136">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b1044-137">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="b1044-137">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="0c749-135">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0c749-135">CommonParameters</span></span>
+<span data-ttu-id="0c749-136">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0c749-136">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0c749-137">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="0c749-137">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="b1044-138">Eingaben</span><span class="sxs-lookup"><span data-stu-id="b1044-138">INPUTS</span></span>
+## <span data-ttu-id="0c749-138">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="0c749-138">INPUTS</span></span>
 
-### <span data-ttu-id="b1044-139">Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="b1044-139">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+### <span data-ttu-id="0c749-139">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="0c749-139">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
 
-### <span data-ttu-id="b1044-140">Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="b1044-140">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease</span></span>
+### <span data-ttu-id="0c749-140">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="0c749-140">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease</span></span>
 
-### <span data-ttu-id="b1044-141">System. String</span><span class="sxs-lookup"><span data-stu-id="b1044-141">System.String</span></span>
+### <span data-ttu-id="0c749-141">System.String</span><span class="sxs-lookup"><span data-stu-id="0c749-141">System.String</span></span>
 
-## <span data-ttu-id="b1044-142">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="b1044-142">OUTPUTS</span></span>
+## <span data-ttu-id="0c749-142">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="0c749-142">OUTPUTS</span></span>
 
-### <span data-ttu-id="b1044-143">System. Boolean</span><span class="sxs-lookup"><span data-stu-id="b1044-143">System.Boolean</span></span>
+### <span data-ttu-id="0c749-143">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="0c749-143">System.Boolean</span></span>
 
-## <span data-ttu-id="b1044-144">Notizen</span><span class="sxs-lookup"><span data-stu-id="b1044-144">NOTES</span></span>
+## <span data-ttu-id="0c749-144">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="0c749-144">NOTES</span></span>
 
-## <span data-ttu-id="b1044-145">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="b1044-145">RELATED LINKS</span></span>
+## <span data-ttu-id="0c749-145">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="0c749-145">RELATED LINKS</span></span>
 
-[<span data-ttu-id="b1044-146">Get-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="b1044-146">Get-AzApiManagementApiRelease</span></span>](./Get-AzApiManagementApiRelease.md)
+[<span data-ttu-id="0c749-146">Get-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="0c749-146">Get-AzApiManagementApiRelease</span></span>](./Get-AzApiManagementApiRelease.md)
 
-[<span data-ttu-id="b1044-147">Neu – AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="b1044-147">New-AzApiManagementApiRelease</span></span>](./New-AzApiManagementApiRelease.md)
+[<span data-ttu-id="0c749-147">New-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="0c749-147">New-AzApiManagementApiRelease</span></span>](./New-AzApiManagementApiRelease.md)
 
-[<span data-ttu-id="b1044-148">Satz-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="b1044-148">Set-AzApiManagementApiRelease</span></span>](./Set-AzApiManagementApiRelease.md)
+[<span data-ttu-id="0c749-148">Update-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="0c749-148">Update-AzApiManagementApiRelease</span></span>](./Update-AzApiManagementApiRelease.md)
