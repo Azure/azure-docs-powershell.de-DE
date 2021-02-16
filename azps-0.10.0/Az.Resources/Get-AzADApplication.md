@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADApplication.md
-ms.openlocfilehash: 5f019f413e7ae0efa2013412499fcf34bd94a248
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: a4d1831114db40295e30b30e0fb12621caff2c89
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93843491"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398851"
 ---
 # Get-AzADApplication
 
-## Synopsis
+## SYNOPSIS
 Listet vorhandene Azure Active Directory-Anwendungen auf.
 
-## Syntax
+## SYNTAX
 
 ### EmptyParameterSet (Standard)
 ```
@@ -56,14 +56,14 @@ Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextConta
  [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 Listet vorhandene Azure Active Directory-Anwendungen auf.
-Die Anwendungssuche kann über ObjectID, ApplicationId, IdentifierUri oder DisplayName erfolgen.
-Wenn kein Parameter angegeben wird, werden alle Anwendungen unter dem Mandanten abgerufen.
+Die Anwendungs-Suche kann mit ObjectId, ApplicationId, IdentifierUri oder DisplayName durchgeführt werden.
+Wenn kein Parameter angegeben wird, ruft er alle Anwendungen unter dem Mandanten ab.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1 – Auflisten aller Anwendungen
+### Beispiel 1: Auflisten aller Anwendungen
 
 ```
 PS C:\> Get-AzADApplication
@@ -71,15 +71,15 @@ PS C:\> Get-AzADApplication
 
 Listet alle Anwendungen unter einem Mandanten auf.
 
-### Beispiel für 2-Listen-Anwendungen mit Paging
+### Beispiel 2: Auflisten von Anwendungen mithilfe von Seitenumlagerungen
 
 ```
 PS C:\> Get-AzADApplication -First 100
 ```
 
-Listet die ersten 100-Anwendungen unter einem Mandanten auf.
+Listet die ersten 100 Anwendungen unter einem Mandanten auf.
 
-### Beispiel 3: Abrufen der Anwendung nach Bezeichner-URI
+### Beispiel 3: "Anwendung nach Bezeichner-URI erhalten"
 
 ```
 PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
@@ -87,18 +87,18 @@ PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
 
 Ruft die Anwendung mit dem Bezeichner-URI als " http://mySecretApp1 " ab.
 
-### Beispiel 4: Abrufen der Anwendung nach Objekt-ID
+### Beispiel 4: Anwendung nach Objekt-ID erhalten
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
 ```
 
-Ruft die Anwendung mit der Objekt-ID "39e64ec6-569b-4030-8e1c-c3c519a05d69" ab.
+Ruft die Anwendung mit der Objekt-ID '39e64ec6-569b-4030-8e1c-c3c519a05d69' ab.
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
-Die Anwendungs-ID der Anwendung, die abgerufen werden soll.
+Die Anwendungs-ID der anwendung, die abgerufen werden soll.
 
 ```yaml
 Type: System.Guid
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Ruft alle Anwendungen ab, beginnend mit dem Anzeigenamen.
+Rufen Sie alle Anwendungen ab dem Anzeigenamen ab.
 
 ```yaml
 Type: System.String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-Die maximale Anzahl von Objekten, die zurückgegeben werden sollen.
+Die maximale Anzahl von Zurücksendungsobjekten.
 
 ```yaml
 Type: System.UInt64
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-Eindeutiger Bezeichner-URI der Anwendung, die abgerufen werden soll.
+Eindeutiger Bezeichner-URI der anwendung, die abgerufen werden soll.
 
 ```yaml
 Type: System.String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Gibt die Anzahl der Objekte in der Datengruppe an. Derzeit hat dieser Parameter keine Auswirkungen.
+Meldet die Anzahl der Objekte im Datenset. Derzeit führt dieser Parameter keine Anderen aus.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -202,8 +202,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Die Objekt-ID der abzurufenden Anwendung.
+### -ObjectId
+Die Objekt-ID der anwendung, die abgerufen werden soll.
 
 ```yaml
 Type: System.Guid
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Ignoriert die ersten N Objekte und ruft dann die restlichen Objekte ab.
+Ignoriert die ersten N-Objekte und ruft dann die verbleibenden Objekte ab.
 
 ```yaml
 Type: System.UInt64
@@ -233,31 +233,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. GUID
+### System.Guid
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft.Azure.Graph.RBAC.Version1_6. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.WERDENDApplication
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 
-[Neu – AzADAppCredential](./New-AzADAppCredential.md)
+[New-AzADAppCredential](./New-AzADAppCredential.md)
 
 [Get-AzADAppCredential](./Get-AzADAppCredential.md)
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 
-[Satz-AzADApplication](./Set-AzADApplication.md)
 
-[Neu – AzADApplication](./New-AzADApplication.md)
+[New-AzADApplication](./New-AzADApplication.md)
 
