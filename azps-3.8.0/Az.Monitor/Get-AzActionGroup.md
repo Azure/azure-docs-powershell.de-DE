@@ -6,61 +6,61 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
-ms.openlocfilehash: c297198a1e49b93d498c136d1cb099d2068d24db
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 90bd9c7943e6e788d81f8ddec85513676afade23
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94005212"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414032"
 ---
-# <span data-ttu-id="2bbf1-101">Get-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="2bbf1-101">Get-AzActionGroup</span></span>
+# <span data-ttu-id="78f6d-101">Get-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="78f6d-101">Get-AzActionGroup</span></span>
 
-## <span data-ttu-id="2bbf1-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="2bbf1-102">SYNOPSIS</span></span>
-<span data-ttu-id="2bbf1-103">Ruft die Aktionsgruppe (n) ab.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-103">Gets action group(s).</span></span>
+## <span data-ttu-id="78f6d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="78f6d-102">SYNOPSIS</span></span>
+<span data-ttu-id="78f6d-103">Ruft Aktionsgruppe(n) ab.</span><span class="sxs-lookup"><span data-stu-id="78f6d-103">Gets action group(s).</span></span>
 
-## <span data-ttu-id="2bbf1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2bbf1-104">SYNTAX</span></span>
+## <span data-ttu-id="78f6d-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="78f6d-104">SYNTAX</span></span>
 
-### <span data-ttu-id="2bbf1-105">BySubscriptionOrResourceGroup (Standard)</span><span class="sxs-lookup"><span data-stu-id="2bbf1-105">BySubscriptionOrResourceGroup (Default)</span></span>
+### <span data-ttu-id="78f6d-105">BySubscriptionOrResourceGroup (Standard)</span><span class="sxs-lookup"><span data-stu-id="78f6d-105">BySubscriptionOrResourceGroup (Default)</span></span>
 ```
 Get-AzActionGroup [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2bbf1-106">ByName</span><span class="sxs-lookup"><span data-stu-id="2bbf1-106">ByName</span></span>
+### <span data-ttu-id="78f6d-106">ByName</span><span class="sxs-lookup"><span data-stu-id="78f6d-106">ByName</span></span>
 ```
 Get-AzActionGroup -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2bbf1-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2bbf1-107">DESCRIPTION</span></span>
-<span data-ttu-id="2bbf1-108">Das Cmdlet " **Get-AzActionGroup** " ruft mindestens eine Aktionsgruppe ab.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-108">The **Get-AzActionGroup** cmdlet gets one or more action groups.</span></span>
+## <span data-ttu-id="78f6d-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="78f6d-107">DESCRIPTION</span></span>
+<span data-ttu-id="78f6d-108">Das **Get-AzActionGroup-Cmdlet** ruft mindestens eine Aktionsgruppe ab.</span><span class="sxs-lookup"><span data-stu-id="78f6d-108">The **Get-AzActionGroup** cmdlet gets one or more action groups.</span></span>
 
-## <span data-ttu-id="2bbf1-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2bbf1-109">EXAMPLES</span></span>
+## <span data-ttu-id="78f6d-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="78f6d-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="2bbf1-110">Beispiel 1: Abrufen einer Aktionsgruppe nach Abonnement-ID</span><span class="sxs-lookup"><span data-stu-id="2bbf1-110">Example 1: Get an action group by subscription ID</span></span>
+### <span data-ttu-id="78f6d-110">Beispiel 1: Erhalten einer Aktionsgruppe nach Abonnement-ID</span><span class="sxs-lookup"><span data-stu-id="78f6d-110">Example 1: Get an action group by subscription ID</span></span>
 ```
 PS C:\>Get-AzActionGroup
 ```
 
-<span data-ttu-id="2bbf1-111">Dieser Befehl listet alle Aktionsgruppen für das aktuelle Abonnement auf.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-111">This command lists all the action group for the current subscription.</span></span>
+<span data-ttu-id="78f6d-111">Mit diesem Befehl werden alle Aktionsgruppe für das aktuelle Abonnement aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="78f6d-111">This command lists all the action group for the current subscription.</span></span>
 
-### <span data-ttu-id="2bbf1-112">Beispiel 2: Abrufen von Aktionsgruppen für die angegebene Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="2bbf1-112">Example 2: Get action groups for the given resource group</span></span>
+### <span data-ttu-id="78f6d-112">Beispiel 2: Erhalten von Aktionsgruppen für die angegebene Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="78f6d-112">Example 2: Get action groups for the given resource group</span></span>
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts"
 ```
 
-<span data-ttu-id="2bbf1-113">Dieser Befehl listet Aktionsgruppen für die angegebene Ressourcengruppe auf.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-113">This command lists action groups for the given resource group.</span></span>
+<span data-ttu-id="78f6d-113">Dieser Befehl listet Aktionsgruppen für die angegebene Ressourcengruppe auf.</span><span class="sxs-lookup"><span data-stu-id="78f6d-113">This command lists action groups for the given resource group.</span></span>
 
-### <span data-ttu-id="2bbf1-114">Beispiel 3: Abrufen einer Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-114">Example 3: Get an action group.</span></span>
+### <span data-ttu-id="78f6d-114">Beispiel 3: Erhalten einer Aktionsgruppe</span><span class="sxs-lookup"><span data-stu-id="78f6d-114">Example 3: Get an action group.</span></span>
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts" -Name "actionGroup1"
 ```
 
-<span data-ttu-id="2bbf1-115">Dieser Befehl listet eine Aktionsgruppe (eine Liste mit einem einzelnen Element) auf.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-115">This command lists one (a list with a single element) action group.</span></span>
+<span data-ttu-id="78f6d-115">Dieser Befehl listet eine Aktionsgruppe (eine Liste mit einem einzelnen Element) auf.</span><span class="sxs-lookup"><span data-stu-id="78f6d-115">This command lists one (a list with a single element) action group.</span></span>
 
-## <span data-ttu-id="2bbf1-116">Parameter</span><span class="sxs-lookup"><span data-stu-id="2bbf1-116">PARAMETERS</span></span>
+## <span data-ttu-id="78f6d-116">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="78f6d-116">PARAMETERS</span></span>
 
-### <span data-ttu-id="2bbf1-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="2bbf1-117">-DefaultProfile</span></span>
-<span data-ttu-id="2bbf1-118">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="2bbf1-118">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="78f6d-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="78f6d-117">-DefaultProfile</span></span>
+<span data-ttu-id="78f6d-118">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="78f6d-118">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2bbf1-119">-Name</span><span class="sxs-lookup"><span data-stu-id="2bbf1-119">-Name</span></span>
-<span data-ttu-id="2bbf1-120">Der Name der Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-120">The name of the action group.</span></span>
+### <span data-ttu-id="78f6d-119">-Name</span><span class="sxs-lookup"><span data-stu-id="78f6d-119">-Name</span></span>
+<span data-ttu-id="78f6d-120">Der Name der Aktionsgruppe.</span><span class="sxs-lookup"><span data-stu-id="78f6d-120">The name of the action group.</span></span>
 
 ```yaml
 Type: System.String
@@ -89,8 +89,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2bbf1-121">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="2bbf1-121">-ResourceGroupName</span></span>
-<span data-ttu-id="2bbf1-122">Der Name der Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="2bbf1-122">The resource group name</span></span>
+### <span data-ttu-id="78f6d-121">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="78f6d-121">-ResourceGroupName</span></span>
+<span data-ttu-id="78f6d-122">Der Name der Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="78f6d-122">The resource group name</span></span>
 
 ```yaml
 Type: System.String
@@ -116,23 +116,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2bbf1-123">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2bbf1-123">CommonParameters</span></span>
-<span data-ttu-id="2bbf1-124">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2bbf1-124">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2bbf1-125">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="2bbf1-125">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="78f6d-123">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="78f6d-123">CommonParameters</span></span>
+<span data-ttu-id="78f6d-124">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="78f6d-124">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="78f6d-125">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="78f6d-125">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="2bbf1-126">Eingaben</span><span class="sxs-lookup"><span data-stu-id="2bbf1-126">INPUTS</span></span>
+## <span data-ttu-id="78f6d-126">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="78f6d-126">INPUTS</span></span>
 
-### <span data-ttu-id="2bbf1-127">System. String</span><span class="sxs-lookup"><span data-stu-id="2bbf1-127">System.String</span></span>
+### <span data-ttu-id="78f6d-127">System.String</span><span class="sxs-lookup"><span data-stu-id="78f6d-127">System.String</span></span>
 
-## <span data-ttu-id="2bbf1-128">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="2bbf1-128">OUTPUTS</span></span>
+## <span data-ttu-id="78f6d-128">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="78f6d-128">OUTPUTS</span></span>
 
-### <span data-ttu-id="2bbf1-129">Microsoft. Azure. Commands. Insights. OutputClasses. PSActionGroupResource</span><span class="sxs-lookup"><span data-stu-id="2bbf1-129">Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource</span></span>
+### <span data-ttu-id="78f6d-129">Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource</span><span class="sxs-lookup"><span data-stu-id="78f6d-129">Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource</span></span>
 
-## <span data-ttu-id="2bbf1-130">Notizen</span><span class="sxs-lookup"><span data-stu-id="2bbf1-130">NOTES</span></span>
+## <span data-ttu-id="78f6d-130">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="78f6d-130">NOTES</span></span>
 
-## <span data-ttu-id="2bbf1-131">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="2bbf1-131">RELATED LINKS</span></span>
+## <span data-ttu-id="78f6d-131">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="78f6d-131">RELATED LINKS</span></span>
 
-<span data-ttu-id="2bbf1-132">[Satz-AzActionGroup](./Set-AzActionGroup.md) 
+<span data-ttu-id="78f6d-132">[Set-AzActionGroup](./Set-AzActionGroup.md) 
  [Remove-AzActionGroup](./Remove-AzActionGroup.md) 
- [Neu – AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)</span><span class="sxs-lookup"><span data-stu-id="2bbf1-132">[Set-AzActionGroup](./Set-AzActionGroup.md)
+ [New-AzActionGroupReceiver](./New-AzActionGroupReceiver.md)</span><span class="sxs-lookup"><span data-stu-id="78f6d-132">[Set-AzActionGroup](./Set-AzActionGroup.md)
 [Remove-AzActionGroup](./Remove-AzActionGroup.md)
-[New-AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)</span></span>
+[New-AzActionGroupReceiver](./New-AzActionGroupReceiver.md)</span></span>
