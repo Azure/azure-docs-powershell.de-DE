@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherPacketCapture.md
-ms.openlocfilehash: b67d393f0ab24fff15da14b9ce6f6fb1b567d0b6
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 0494a182feba20b2af8aab9bcf38772441e2822e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660502"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400160"
 ---
-# <span data-ttu-id="ef35f-101">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="ef35f-101">New-AzNetworkWatcherPacketCapture</span></span>
+# <span data-ttu-id="2f8aa-101">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="2f8aa-101">New-AzNetworkWatcherPacketCapture</span></span>
 
-## <span data-ttu-id="ef35f-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="ef35f-102">SYNOPSIS</span></span>
-<span data-ttu-id="ef35f-103">Erstellt eine neue Paket Erfassungs Ressource und startet eine Paket Aufnahmesitzung auf einem virtuellen Computer.</span><span class="sxs-lookup"><span data-stu-id="ef35f-103">Creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
+## <span data-ttu-id="2f8aa-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="2f8aa-102">SYNOPSIS</span></span>
+<span data-ttu-id="2f8aa-103">Erstellt eine neue Paketaufnahmeressource und startet eine Paketaufnahmesitzung auf einer VM.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-103">Creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
 
-## <span data-ttu-id="ef35f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ef35f-104">SYNTAX</span></span>
+## <span data-ttu-id="2f8aa-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2f8aa-104">SYNTAX</span></span>
 
-### <span data-ttu-id="ef35f-105">SetByResource (Standard)</span><span class="sxs-lookup"><span data-stu-id="ef35f-105">SetByResource (Default)</span></span>
+### <span data-ttu-id="2f8aa-105">SetByResource (Standard)</span><span class="sxs-lookup"><span data-stu-id="2f8aa-105">SetByResource (Default)</span></span>
 ```
 New-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> -PacketCaptureName <String>
  -TargetVirtualMachineId <String> [-StorageAccountId <String>] [-StoragePath <String>]
@@ -28,7 +28,7 @@ New-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> -PacketCapt
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ef35f-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="ef35f-106">SetByName</span></span>
+### <span data-ttu-id="2f8aa-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="2f8aa-106">SetByName</span></span>
 ```
 New-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupName <String>
  -PacketCaptureName <String> -TargetVirtualMachineId <String> [-StorageAccountId <String>]
@@ -37,7 +37,7 @@ New-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupNam
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="ef35f-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="ef35f-107">SetByLocation</span></span>
+### <span data-ttu-id="2f8aa-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="2f8aa-107">SetByLocation</span></span>
 ```
 New-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <String>
  -TargetVirtualMachineId <String> [-StorageAccountId <String>] [-StoragePath <String>]
@@ -46,14 +46,14 @@ New-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="ef35f-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef35f-108">DESCRIPTION</span></span>
-<span data-ttu-id="ef35f-109">Das New-AzNetworkWatcherPacketCapture-Cmdlet erstellt eine neue Paket Erfassungs Ressource und startet eine Paket Aufnahmesitzung auf einem virtuellen Computer.</span><span class="sxs-lookup"><span data-stu-id="ef35f-109">The New-AzNetworkWatcherPacketCapture cmdlet creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
-<span data-ttu-id="ef35f-110">Die Länge der Paket Aufnahmesitzungen kann über eine Zeitbeschränkung oder eine Größenbeschränkung konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="ef35f-110">The length of the Packet Capture sessions can be configured via a time constraint or a size constraint.</span></span> <span data-ttu-id="ef35f-111">Die für die einzelnen Pakete erfassten Datenmengen können ebenfalls konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="ef35f-111">The amount of data captured for each packet can also be configured.</span></span>
-<span data-ttu-id="ef35f-112">Filter können auf eine bestimmte Paket Aufnahmesitzung angewendet werden, sodass Sie den Typ der erfassten Pakete anpassen können.</span><span class="sxs-lookup"><span data-stu-id="ef35f-112">Filters can be applied to a given packet capture session, allowing you to customize the type of packets captured.</span></span> <span data-ttu-id="ef35f-113">Filter können Pakete für lokale und Remote-IP-Adressen einschränken & Adressbereiche, lokale und Remote-Ports & Portbereiche und das Sitzungsprotokoll, das aufgezeichnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ef35f-113">Filters can restrict packets on local and remote IP addresses & address ranges, local and remote ports & port ranges, and the session level protocol to be captured.</span></span> <span data-ttu-id="ef35f-114">Filter sind kompostierbar, und es können mehrere Filter angewendet werden, um eine Granularität der Aufnahme zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="ef35f-114">Filters are composable, and multiple filters can be applied to provide you with granularity of capture.</span></span>
+## <span data-ttu-id="2f8aa-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="2f8aa-108">DESCRIPTION</span></span>
+<span data-ttu-id="2f8aa-109">Das New-AzNetworkWatcherPacketCapture cmdlet erstellt eine neue Paketaufnahmeressource und startet eine Paketaufnahmesitzung auf einer VM.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-109">The New-AzNetworkWatcherPacketCapture cmdlet creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
+<span data-ttu-id="2f8aa-110">Die Länge der Paketerfassungssitzungen kann über eine Zeiteinschränkung oder größenbeschränkung konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-110">The length of the Packet Capture sessions can be configured via a time constraint or a size constraint.</span></span> <span data-ttu-id="2f8aa-111">Die Für jedes Paket erfasste Datenmenge kann ebenfalls konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-111">The amount of data captured for each packet can also be configured.</span></span>
+<span data-ttu-id="2f8aa-112">Filter können auf eine bestimmte Paketaufnahmesitzung angewendet werden, sodass Sie den Pakettyp anpassen können, der erfasst wird.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-112">Filters can be applied to a given packet capture session, allowing you to customize the type of packets captured.</span></span> <span data-ttu-id="2f8aa-113">Filter können Pakete für lokale und Remote-IP-Adressen & Adressbereichen, lokale Ports und Remoteports & Portbereichen und das zu erfassende Protokoll auf Sitzungsebene einschränken.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-113">Filters can restrict packets on local and remote IP addresses & address ranges, local and remote ports & port ranges, and the session level protocol to be captured.</span></span> <span data-ttu-id="2f8aa-114">Filter können zusammensetzbar sein, und es können mehrere Filter angewendet werden, um die Granularität der Aufnahme zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-114">Filters are composable, and multiple filters can be applied to provide you with granularity of capture.</span></span>
 
-## <span data-ttu-id="ef35f-115">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ef35f-115">EXAMPLES</span></span>
+## <span data-ttu-id="2f8aa-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="2f8aa-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="ef35f-116">Beispiel 1: Erstellen einer Paketerfassung mit mehreren Filtern</span><span class="sxs-lookup"><span data-stu-id="ef35f-116">Example 1: Create a Packet Capture with multiple filters</span></span>
+### <span data-ttu-id="2f8aa-116">Beispiel 1: Erstellen einer Paketaufzeichnung mit mehreren Filtern</span><span class="sxs-lookup"><span data-stu-id="2f8aa-116">Example 1: Create a Packet Capture with multiple filters</span></span>
 ```
 $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
 $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
@@ -65,12 +65,12 @@ $filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP
 New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filter $filter1, $filter2
 ```
 
-<span data-ttu-id="ef35f-117">In diesem Beispiel erstellen wir eine Paketerfassung mit dem Namen "PacketCaptureTest" mit mehreren Filtern und einem Zeitlimit.</span><span class="sxs-lookup"><span data-stu-id="ef35f-117">In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit.</span></span> <span data-ttu-id="ef35f-118">Nachdem die Sitzung abgeschlossen ist, wird Sie im angegebenen Speicherkonto gespeichert.</span><span class="sxs-lookup"><span data-stu-id="ef35f-118">Once the session is complete, it will be saved to the specified storage account.</span></span> <span data-ttu-id="ef35f-119">Hinweis: die Azure Network Watcher-Erweiterung muss auf dem virtuellen Zielcomputer installiert sein, um Paketerfassungen erstellen zu können.</span><span class="sxs-lookup"><span data-stu-id="ef35f-119">Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.</span></span>
+<span data-ttu-id="2f8aa-117">In diesem Beispiel erstellen wir eine Paketaufzeichnung namens "PacketCaptureTest" mit mehreren Filtern und einem Zeitlimit.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-117">In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit.</span></span> <span data-ttu-id="2f8aa-118">Nach Abschluss der Sitzung wird sie im angegebenen Speicherkonto gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-118">Once the session is complete, it will be saved to the specified storage account.</span></span> <span data-ttu-id="2f8aa-119">Hinweis: Die Azure Network Watcher-Erweiterung muss auf dem virtuellen Zielcomputer installiert sein, um Paketaufzeichnungen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-119">Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.</span></span>
 
-## <span data-ttu-id="ef35f-120">Parameter</span><span class="sxs-lookup"><span data-stu-id="ef35f-120">PARAMETERS</span></span>
+## <span data-ttu-id="2f8aa-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2f8aa-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="ef35f-121">-AsJob</span><span class="sxs-lookup"><span data-stu-id="ef35f-121">-AsJob</span></span>
-<span data-ttu-id="ef35f-122">Ausführen eines Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="ef35f-122">Run cmdlet in the background</span></span>
+### <span data-ttu-id="2f8aa-121">-AsJob</span><span class="sxs-lookup"><span data-stu-id="2f8aa-121">-AsJob</span></span>
+<span data-ttu-id="2f8aa-122">Ausführen des Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="2f8aa-122">Run cmdlet in the background</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,8 +84,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-123">-BytesToCapturePerPacket</span><span class="sxs-lookup"><span data-stu-id="ef35f-123">-BytesToCapturePerPacket</span></span>
-<span data-ttu-id="ef35f-124">Bytes, die pro Paket erfasst werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ef35f-124">Bytes to capture per packet.</span></span>
+### <span data-ttu-id="2f8aa-123">-BytesToCapturePerPacket</span><span class="sxs-lookup"><span data-stu-id="2f8aa-123">-BytesToCapturePerPacket</span></span>
+<span data-ttu-id="2f8aa-124">Bytes, die pro Paket erfasst werden müssen.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-124">Bytes to capture per packet.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-125">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ef35f-125">-DefaultProfile</span></span>
-<span data-ttu-id="ef35f-126">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="ef35f-126">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="2f8aa-125">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="2f8aa-125">-DefaultProfile</span></span>
+<span data-ttu-id="2f8aa-126">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-126">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -114,8 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-127">-Filter</span><span class="sxs-lookup"><span data-stu-id="ef35f-127">-Filter</span></span>
-<span data-ttu-id="ef35f-128">Filter für die Paket Aufnahmesitzung.</span><span class="sxs-lookup"><span data-stu-id="ef35f-128">Filters for packet capture session.</span></span>
+### <span data-ttu-id="2f8aa-127">-Filter</span><span class="sxs-lookup"><span data-stu-id="2f8aa-127">-Filter</span></span>
+<span data-ttu-id="2f8aa-128">Filter für die Paketaufnahmesitzung.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-128">Filters for packet capture session.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter[]
@@ -129,8 +129,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-129">-LocalFilePath</span><span class="sxs-lookup"><span data-stu-id="ef35f-129">-LocalFilePath</span></span>
-<span data-ttu-id="ef35f-130">Lokaler Dateipfad.</span><span class="sxs-lookup"><span data-stu-id="ef35f-130">Local file path.</span></span>
+### <span data-ttu-id="2f8aa-129">-LocalFilePath</span><span class="sxs-lookup"><span data-stu-id="2f8aa-129">-LocalFilePath</span></span>
+<span data-ttu-id="2f8aa-130">Lokaler Dateipfad.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-130">Local file path.</span></span>
 
 ```yaml
 Type: System.String
@@ -144,8 +144,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-131">-Standort</span><span class="sxs-lookup"><span data-stu-id="ef35f-131">-Location</span></span>
-<span data-ttu-id="ef35f-132">Der Speicherort des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="ef35f-132">Location of the network watcher.</span></span>
+### <span data-ttu-id="2f8aa-131">-Location</span><span class="sxs-lookup"><span data-stu-id="2f8aa-131">-Location</span></span>
+<span data-ttu-id="2f8aa-132">Speicherort der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-132">Location of the network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -159,8 +159,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-133">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ef35f-133">-NetworkWatcher</span></span>
-<span data-ttu-id="ef35f-134">Die Netzwerk Überwachungsressource.</span><span class="sxs-lookup"><span data-stu-id="ef35f-134">The network watcher resource.</span></span>
+### <span data-ttu-id="2f8aa-133">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="2f8aa-133">-NetworkWatcher</span></span>
+<span data-ttu-id="2f8aa-134">Die Netzwerk-Watcher-Ressource.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-134">The network watcher resource.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -174,8 +174,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-135">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="ef35f-135">-NetworkWatcherName</span></span>
-<span data-ttu-id="ef35f-136">Der Name des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="ef35f-136">The name of network watcher.</span></span>
+### <span data-ttu-id="2f8aa-135">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="2f8aa-135">-NetworkWatcherName</span></span>
+<span data-ttu-id="2f8aa-136">Der Name der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-136">The name of network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -189,8 +189,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-137">-PacketCaptureName</span><span class="sxs-lookup"><span data-stu-id="ef35f-137">-PacketCaptureName</span></span>
-<span data-ttu-id="ef35f-138">Der Name der Paketaufzeichnung.</span><span class="sxs-lookup"><span data-stu-id="ef35f-138">The packet capture name.</span></span>
+### <span data-ttu-id="2f8aa-137">-PacketCaptureName</span><span class="sxs-lookup"><span data-stu-id="2f8aa-137">-PacketCaptureName</span></span>
+<span data-ttu-id="2f8aa-138">Der Name der Paketaufzeichnung.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-138">The packet capture name.</span></span>
 
 ```yaml
 Type: System.String
@@ -204,8 +204,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-139">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="ef35f-139">-ResourceGroupName</span></span>
-<span data-ttu-id="ef35f-140">Der Name der Netzwerk Überwachungsressourcen Gruppe.</span><span class="sxs-lookup"><span data-stu-id="ef35f-140">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="2f8aa-139">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="2f8aa-139">-ResourceGroupName</span></span>
+<span data-ttu-id="2f8aa-140">Der Name der Ressourcengruppe "Netzwerk-Watcher".</span><span class="sxs-lookup"><span data-stu-id="2f8aa-140">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -219,8 +219,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-141">-StorageAccountId</span><span class="sxs-lookup"><span data-stu-id="ef35f-141">-StorageAccountId</span></span>
-<span data-ttu-id="ef35f-142">Speicherkonto-ID.</span><span class="sxs-lookup"><span data-stu-id="ef35f-142">Storage account Id.</span></span>
+### <span data-ttu-id="2f8aa-141">-StorageAccountId</span><span class="sxs-lookup"><span data-stu-id="2f8aa-141">-StorageAccountId</span></span>
+<span data-ttu-id="2f8aa-142">Speicherkonto-ID.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-142">Storage account Id.</span></span>
 
 ```yaml
 Type: System.String
@@ -234,8 +234,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-143">-StoragePath</span><span class="sxs-lookup"><span data-stu-id="ef35f-143">-StoragePath</span></span>
-<span data-ttu-id="ef35f-144">Speicherpfad.</span><span class="sxs-lookup"><span data-stu-id="ef35f-144">Storage path.</span></span>
+### <span data-ttu-id="2f8aa-143">-StoragePath</span><span class="sxs-lookup"><span data-stu-id="2f8aa-143">-StoragePath</span></span>
+<span data-ttu-id="2f8aa-144">Speicherpfad.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-144">Storage path.</span></span>
 
 ```yaml
 Type: System.String
@@ -249,8 +249,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-145">-TargetVirtualMachineId</span><span class="sxs-lookup"><span data-stu-id="ef35f-145">-TargetVirtualMachineId</span></span>
-<span data-ttu-id="ef35f-146">Die ID des virtuellen Zielcomputers</span><span class="sxs-lookup"><span data-stu-id="ef35f-146">The target virtual machine ID.</span></span>
+### <span data-ttu-id="2f8aa-145">-TargetVirtualMachineId</span><span class="sxs-lookup"><span data-stu-id="2f8aa-145">-TargetVirtualMachineId</span></span>
+<span data-ttu-id="2f8aa-146">Die Ziel-ID des virtuellen Computers.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-146">The target virtual machine ID.</span></span>
 
 ```yaml
 Type: System.String
@@ -264,8 +264,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-147">-TimeLimitInSeconds</span><span class="sxs-lookup"><span data-stu-id="ef35f-147">-TimeLimitInSeconds</span></span>
-<span data-ttu-id="ef35f-148">Zeitlimit in Sekunden.</span><span class="sxs-lookup"><span data-stu-id="ef35f-148">Time limit in seconds.</span></span>
+### <span data-ttu-id="2f8aa-147">-TimeLimitInSeconds</span><span class="sxs-lookup"><span data-stu-id="2f8aa-147">-TimeLimitInSeconds</span></span>
+<span data-ttu-id="2f8aa-148">Zeitlimit in Sekunden.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-148">Time limit in seconds.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -279,8 +279,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-149">-TotalBytesPerSession</span><span class="sxs-lookup"><span data-stu-id="ef35f-149">-TotalBytesPerSession</span></span>
-<span data-ttu-id="ef35f-150">Gesamtanzahl der Bytes pro Sitzung.</span><span class="sxs-lookup"><span data-stu-id="ef35f-150">Total bytes per session.</span></span>
+### <span data-ttu-id="2f8aa-149">-TotalBytesPerSession</span><span class="sxs-lookup"><span data-stu-id="2f8aa-149">-TotalBytesPerSession</span></span>
+<span data-ttu-id="2f8aa-150">Gesamtzahl der Bytes pro Sitzung.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-150">Total bytes per session.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -294,8 +294,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-151">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="ef35f-151">-Confirm</span></span>
-<span data-ttu-id="ef35f-152">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="ef35f-152">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="2f8aa-151">-Confirm</span><span class="sxs-lookup"><span data-stu-id="2f8aa-151">-Confirm</span></span>
+<span data-ttu-id="2f8aa-152">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-152">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -309,9 +309,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-153">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="ef35f-153">-WhatIf</span></span>
-<span data-ttu-id="ef35f-154">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ef35f-154">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="ef35f-155">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ef35f-155">The cmdlet is not run.</span></span>
+### <span data-ttu-id="2f8aa-153">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="2f8aa-153">-WhatIf</span></span>
+<span data-ttu-id="2f8aa-154">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-154">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="2f8aa-155">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-155">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -325,78 +325,78 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ef35f-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ef35f-156">CommonParameters</span></span>
-<span data-ttu-id="ef35f-157">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ef35f-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ef35f-158">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="ef35f-158">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="2f8aa-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2f8aa-156">CommonParameters</span></span>
+<span data-ttu-id="2f8aa-157">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2f8aa-158">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="2f8aa-158">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="ef35f-159">Eingaben</span><span class="sxs-lookup"><span data-stu-id="ef35f-159">INPUTS</span></span>
+## <span data-ttu-id="2f8aa-159">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="2f8aa-159">INPUTS</span></span>
 
-### <span data-ttu-id="ef35f-160">Microsoft. Azure. Commands. Network. Models. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ef35f-160">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="2f8aa-160">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="2f8aa-160">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-### <span data-ttu-id="ef35f-161">System. String</span><span class="sxs-lookup"><span data-stu-id="ef35f-161">System.String</span></span>
+### <span data-ttu-id="2f8aa-161">System.String</span><span class="sxs-lookup"><span data-stu-id="2f8aa-161">System.String</span></span>
 
-### <span data-ttu-id="ef35f-162">System. Nullable ' 1 [[System. Int32, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="ef35f-162">System.Nullable\`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="2f8aa-162">System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="2f8aa-162">System.Nullable\`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-## <span data-ttu-id="ef35f-163">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="ef35f-163">OUTPUTS</span></span>
+## <span data-ttu-id="2f8aa-163">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="2f8aa-163">OUTPUTS</span></span>
 
-### <span data-ttu-id="ef35f-164">Microsoft. Azure. Commands. Network. Models. PSPacketCaptureResult</span><span class="sxs-lookup"><span data-stu-id="ef35f-164">Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult</span></span>
+### <span data-ttu-id="2f8aa-164">Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult</span><span class="sxs-lookup"><span data-stu-id="2f8aa-164">Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult</span></span>
 
-## <span data-ttu-id="ef35f-165">Notizen</span><span class="sxs-lookup"><span data-stu-id="ef35f-165">NOTES</span></span>
-<span data-ttu-id="ef35f-166">Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, Netzwerk, Netzwerk, Netzwerk Watcher, Paket, Capture, Traffic</span><span class="sxs-lookup"><span data-stu-id="ef35f-166">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, packet, capture, traffic</span></span> 
+## <span data-ttu-id="2f8aa-165">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="2f8aa-165">NOTES</span></span>
+<span data-ttu-id="2f8aa-166">Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, packet, capture, traffic</span><span class="sxs-lookup"><span data-stu-id="2f8aa-166">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, packet, capture, traffic</span></span> 
 
-## <span data-ttu-id="ef35f-167">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="ef35f-167">RELATED LINKS</span></span>
+## <span data-ttu-id="2f8aa-167">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="2f8aa-167">RELATED LINKS</span></span>
 
-[<span data-ttu-id="ef35f-168">Neu – AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ef35f-168">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+[<span data-ttu-id="2f8aa-168">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="2f8aa-168">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
 
-[<span data-ttu-id="ef35f-169">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ef35f-169">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+[<span data-ttu-id="2f8aa-169">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="2f8aa-169">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
 
-[<span data-ttu-id="ef35f-170">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ef35f-170">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+[<span data-ttu-id="2f8aa-170">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="2f8aa-170">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
 
-[<span data-ttu-id="ef35f-171">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="ef35f-171">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+[<span data-ttu-id="2f8aa-171">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="2f8aa-171">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
 
-[<span data-ttu-id="ef35f-172">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="ef35f-172">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+[<span data-ttu-id="2f8aa-172">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="2f8aa-172">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
 
-[<span data-ttu-id="ef35f-173">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="ef35f-173">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+[<span data-ttu-id="2f8aa-173">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="2f8aa-173">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
 
-[<span data-ttu-id="ef35f-174">Anfang-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="ef35f-174">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[<span data-ttu-id="2f8aa-174">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="2f8aa-174">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[<span data-ttu-id="ef35f-175">Neu – AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="ef35f-175">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="2f8aa-175">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="2f8aa-175">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="ef35f-176">Neu – AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="ef35f-176">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+[<span data-ttu-id="2f8aa-176">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="2f8aa-176">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
 
-[<span data-ttu-id="ef35f-177">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="ef35f-177">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="2f8aa-177">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="2f8aa-177">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="ef35f-178">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="ef35f-178">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="2f8aa-178">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="2f8aa-178">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="ef35f-179">Stopp-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="ef35f-179">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="2f8aa-179">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="2f8aa-179">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="ef35f-180">Neu – AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="ef35f-180">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+[<span data-ttu-id="2f8aa-180">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="2f8aa-180">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[<span data-ttu-id="ef35f-181">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="ef35f-181">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+[<span data-ttu-id="2f8aa-181">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="2f8aa-181">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
 
-[<span data-ttu-id="ef35f-182">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="ef35f-182">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+[<span data-ttu-id="2f8aa-182">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="2f8aa-182">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
 
-[<span data-ttu-id="ef35f-183">Stopp-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-183">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="2f8aa-183">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-183">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="ef35f-184">Anfang-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-184">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="2f8aa-184">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-184">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="ef35f-185">Satz-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-185">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="2f8aa-185">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-185">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="ef35f-186">Satz-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="ef35f-186">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+[<span data-ttu-id="2f8aa-186">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="2f8aa-186">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[<span data-ttu-id="ef35f-187">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-187">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="2f8aa-187">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-187">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="ef35f-188">Neu – AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-188">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="2f8aa-188">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-188">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="ef35f-189">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="ef35f-189">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+[<span data-ttu-id="2f8aa-189">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="2f8aa-189">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
-[<span data-ttu-id="ef35f-190">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="ef35f-190">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+[<span data-ttu-id="2f8aa-190">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="2f8aa-190">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
 
-[<span data-ttu-id="ef35f-191">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="ef35f-191">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+[<span data-ttu-id="2f8aa-191">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="2f8aa-191">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 
-[<span data-ttu-id="ef35f-192">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="ef35f-192">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+[<span data-ttu-id="2f8aa-192">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="2f8aa-192">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[<span data-ttu-id="ef35f-193">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="ef35f-193">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport)
+[<span data-ttu-id="2f8aa-193">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="2f8aa-193">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[<span data-ttu-id="ef35f-194">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="ef35f-194">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+[<span data-ttu-id="2f8aa-194">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="2f8aa-194">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor.md)
 
 

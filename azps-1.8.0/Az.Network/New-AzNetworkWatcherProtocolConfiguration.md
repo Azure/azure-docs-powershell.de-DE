@@ -5,31 +5,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
-ms.openlocfilehash: b7c16c529bb8e3a45d45c31dd985f43f138aee6c
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 435345992759c85edc4a66c1493ed64e6d440605
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660501"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400143"
 ---
-# <span data-ttu-id="0a5f1-101">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="0a5f1-101">New-AzNetworkWatcherProtocolConfiguration</span></span>
+# <span data-ttu-id="5ab88-101">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="5ab88-101">New-AzNetworkWatcherProtocolConfiguration</span></span>
 
-## <span data-ttu-id="0a5f1-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="0a5f1-102">SYNOPSIS</span></span>
-<span data-ttu-id="0a5f1-103">Erstellt ein neues Protokoll Konfigurationsobjekt.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-103">Creates a new protocol configuration object.</span></span>
+## <span data-ttu-id="5ab88-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="5ab88-102">SYNOPSIS</span></span>
+<span data-ttu-id="5ab88-103">Erstellt ein neues Protokollkonfigurationsobjekt.</span><span class="sxs-lookup"><span data-stu-id="5ab88-103">Creates a new protocol configuration object.</span></span>
 
-## <span data-ttu-id="0a5f1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0a5f1-104">SYNTAX</span></span>
+## <span data-ttu-id="5ab88-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5ab88-104">SYNTAX</span></span>
 
 ```
 New-AzNetworkWatcherProtocolConfiguration -Protocol <String> [-Method <String>] [-Header <IDictionary>]
  [-ValidStatusCode <Int32[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="0a5f1-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0a5f1-105">DESCRIPTION</span></span>
-<span data-ttu-id="0a5f1-106">Das New-AzNetworkWatcherProtocolConfiguration-Cmdlet erstellt ein neues Protokoll Konfigurationsobjekt.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-106">The New-AzNetworkWatcherProtocolConfiguration cmdlet creates a new protocol configuration object.</span></span> <span data-ttu-id="0a5f1-107">Dieses Objekt wird verwendet, um die Protokoll confiuration während einer Connecitivity-Prüf Sitzung unter Verwendung der angegebenen Kriterien zu beschränken.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-107">This object is used to restrict the protocol confiuration during a connecitivity check session using the specified criteria.</span></span> 
+## <span data-ttu-id="5ab88-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="5ab88-105">DESCRIPTION</span></span>
+<span data-ttu-id="5ab88-106">Das New-AzNetworkWatcherProtocolConfiguration erstellt ein neues Protokollkonfigurationsobjekt.</span><span class="sxs-lookup"><span data-stu-id="5ab88-106">The New-AzNetworkWatcherProtocolConfiguration cmdlet creates a new protocol configuration object.</span></span> <span data-ttu-id="5ab88-107">Dieses Objekt wird verwendet, um die Protokollkonfiurierung während einer Sitzung zur Überprüfung der Verbindung unter Verwendung der angegebenen Kriterien einzuschränken.</span><span class="sxs-lookup"><span data-stu-id="5ab88-107">This object is used to restrict the protocol confiuration during a connecitivity check session using the specified criteria.</span></span> 
 
-## <span data-ttu-id="0a5f1-108">Beispiele</span><span class="sxs-lookup"><span data-stu-id="0a5f1-108">EXAMPLES</span></span>
+## <span data-ttu-id="5ab88-108">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="5ab88-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="0a5f1-109">Beispiel 1: Testen der Netzwerk Überwachungs Konnektivität von einem virtuellen Computer zu einer Website mit Protokollkonfiguration</span><span class="sxs-lookup"><span data-stu-id="0a5f1-109">Example 1: Test Network Watcher Connectivity from a VM to a website with protocol configuration</span></span>
+### <span data-ttu-id="5ab88-109">Beispiel 1: Testen der Network Watcher Connectivity von einer VM zu einer Website mit Protokollkonfiguration</span><span class="sxs-lookup"><span data-stu-id="5ab88-109">Example 1: Test Network Watcher Connectivity from a VM to a website with protocol configuration</span></span>
 ```
 $config = New-AzNetworkWatcherProtocolConfiguration -Protocol Http -Method Get -Headers @{"accept"="application/json"} -ValidStatusCodes @(200,202,204)
 
@@ -64,12 +64,12 @@ Hops             : [
                    ]
 ```
 
-<span data-ttu-id="0a5f1-110">In diesem Beispiel wird die Konnektivität von einem virtuellen Computer in Azure zu www.Bing.com getestet.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-110">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
+<span data-ttu-id="5ab88-110">In diesem Beispiel wird die Konnektivität von einer VM in Azure zu www.bing.com.</span><span class="sxs-lookup"><span data-stu-id="5ab88-110">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
 
-## <span data-ttu-id="0a5f1-111">Parameter</span><span class="sxs-lookup"><span data-stu-id="0a5f1-111">PARAMETERS</span></span>
+## <span data-ttu-id="5ab88-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5ab88-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="0a5f1-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0a5f1-112">-DefaultProfile</span></span>
-<span data-ttu-id="0a5f1-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-113">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="5ab88-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5ab88-112">-DefaultProfile</span></span>
+<span data-ttu-id="5ab88-113">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5ab88-113">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -83,8 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0a5f1-114">-Kopfzeile</span><span class="sxs-lookup"><span data-stu-id="0a5f1-114">-Header</span></span>
-<span data-ttu-id="0a5f1-115">Liste der HTTP-Header</span><span class="sxs-lookup"><span data-stu-id="0a5f1-115">list of HTTP headers</span></span>
+### <span data-ttu-id="5ab88-114">-Header</span><span class="sxs-lookup"><span data-stu-id="5ab88-114">-Header</span></span>
+<span data-ttu-id="5ab88-115">Liste der HTTP-Header</span><span class="sxs-lookup"><span data-stu-id="5ab88-115">list of HTTP headers</span></span>
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -98,8 +98,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0a5f1-116">-Methode</span><span class="sxs-lookup"><span data-stu-id="0a5f1-116">-Method</span></span>
-<span data-ttu-id="0a5f1-117">HTTP-Methode</span><span class="sxs-lookup"><span data-stu-id="0a5f1-117">HTTP method</span></span>
+### <span data-ttu-id="5ab88-116">-Methode</span><span class="sxs-lookup"><span data-stu-id="5ab88-116">-Method</span></span>
+<span data-ttu-id="5ab88-117">HTTP-Methode</span><span class="sxs-lookup"><span data-stu-id="5ab88-117">HTTP method</span></span>
 
 ```yaml
 Type: System.String
@@ -113,8 +113,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0a5f1-118">-Protokoll</span><span class="sxs-lookup"><span data-stu-id="0a5f1-118">-Protocol</span></span>
-<span data-ttu-id="0a5f1-119">Procotol-Typ</span><span class="sxs-lookup"><span data-stu-id="0a5f1-119">Procotol type</span></span>
+### <span data-ttu-id="5ab88-118">-Protocol</span><span class="sxs-lookup"><span data-stu-id="5ab88-118">-Protocol</span></span>
+<span data-ttu-id="5ab88-119">Procotoltyp</span><span class="sxs-lookup"><span data-stu-id="5ab88-119">Procotol type</span></span>
 
 ```yaml
 Type: System.String
@@ -128,8 +128,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0a5f1-120">-ValidStatusCode</span><span class="sxs-lookup"><span data-stu-id="0a5f1-120">-ValidStatusCode</span></span>
-<span data-ttu-id="0a5f1-121">gültige Statuscodes</span><span class="sxs-lookup"><span data-stu-id="0a5f1-121">valid status codes</span></span>
+### <span data-ttu-id="5ab88-120">-ValidStatusCode</span><span class="sxs-lookup"><span data-stu-id="5ab88-120">-ValidStatusCode</span></span>
+<span data-ttu-id="5ab88-121">gültige Statuscodes</span><span class="sxs-lookup"><span data-stu-id="5ab88-121">valid status codes</span></span>
 
 ```yaml
 Type: System.Int32[]
@@ -143,72 +143,72 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0a5f1-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0a5f1-122">CommonParameters</span></span>
-<span data-ttu-id="0a5f1-123">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0a5f1-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0a5f1-124">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="0a5f1-124">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="5ab88-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5ab88-122">CommonParameters</span></span>
+<span data-ttu-id="5ab88-123">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5ab88-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5ab88-124">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="5ab88-124">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="0a5f1-125">Eingaben</span><span class="sxs-lookup"><span data-stu-id="0a5f1-125">INPUTS</span></span>
+## <span data-ttu-id="5ab88-125">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="5ab88-125">INPUTS</span></span>
 
-### <span data-ttu-id="0a5f1-126">Keine</span><span class="sxs-lookup"><span data-stu-id="0a5f1-126">None</span></span>
+### <span data-ttu-id="5ab88-126">Keine</span><span class="sxs-lookup"><span data-stu-id="5ab88-126">None</span></span>
 
-## <span data-ttu-id="0a5f1-127">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="0a5f1-127">OUTPUTS</span></span>
+## <span data-ttu-id="5ab88-127">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="5ab88-127">OUTPUTS</span></span>
 
-### <span data-ttu-id="0a5f1-128">Microsoft. Azure. Commands. Network. Models. PSNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="0a5f1-128">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration</span></span>
+### <span data-ttu-id="5ab88-128">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="5ab88-128">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration</span></span>
 
-## <span data-ttu-id="0a5f1-129">Notizen</span><span class="sxs-lookup"><span data-stu-id="0a5f1-129">NOTES</span></span>
-<span data-ttu-id="0a5f1-130">Schlüsselwörter: Azure, azurerm, arm, Resource, Management, Manager, Netzwerk, Netzwerk, Watcher, Paket, Capture, Traffic, Filter</span><span class="sxs-lookup"><span data-stu-id="0a5f1-130">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter</span></span>
+## <span data-ttu-id="5ab88-129">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="5ab88-129">NOTES</span></span>
+<span data-ttu-id="5ab88-130">Schlüsselwörter: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter</span><span class="sxs-lookup"><span data-stu-id="5ab88-130">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter</span></span>
 
-## <span data-ttu-id="0a5f1-131">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="0a5f1-131">RELATED LINKS</span></span>
+## <span data-ttu-id="5ab88-131">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="5ab88-131">RELATED LINKS</span></span>
 
-[<span data-ttu-id="0a5f1-132">Neu – AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0a5f1-132">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+[<span data-ttu-id="5ab88-132">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="5ab88-132">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
 
-[<span data-ttu-id="0a5f1-133">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0a5f1-133">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+[<span data-ttu-id="5ab88-133">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="5ab88-133">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
 
-[<span data-ttu-id="0a5f1-134">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0a5f1-134">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+[<span data-ttu-id="5ab88-134">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="5ab88-134">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
 
-[<span data-ttu-id="0a5f1-135">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="0a5f1-135">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+[<span data-ttu-id="5ab88-135">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="5ab88-135">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
 
-[<span data-ttu-id="0a5f1-136">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="0a5f1-136">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+[<span data-ttu-id="5ab88-136">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="5ab88-136">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
 
-[<span data-ttu-id="0a5f1-137">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="0a5f1-137">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+[<span data-ttu-id="5ab88-137">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="5ab88-137">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
 
-[<span data-ttu-id="0a5f1-138">Anfang-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="0a5f1-138">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[<span data-ttu-id="5ab88-138">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="5ab88-138">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[<span data-ttu-id="0a5f1-139">Neu – AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0a5f1-139">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="5ab88-139">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="5ab88-139">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="0a5f1-140">Neu – AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="0a5f1-140">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+[<span data-ttu-id="5ab88-140">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="5ab88-140">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
 
-[<span data-ttu-id="0a5f1-141">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0a5f1-141">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="5ab88-141">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="5ab88-141">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="0a5f1-142">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0a5f1-142">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="5ab88-142">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="5ab88-142">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="0a5f1-143">Stopp-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0a5f1-143">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="5ab88-143">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="5ab88-143">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="0a5f1-144">Neu – AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="0a5f1-144">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+[<span data-ttu-id="5ab88-144">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="5ab88-144">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[<span data-ttu-id="0a5f1-145">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="0a5f1-145">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+[<span data-ttu-id="5ab88-145">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="5ab88-145">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
 
-[<span data-ttu-id="0a5f1-146">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="0a5f1-146">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+[<span data-ttu-id="5ab88-146">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="5ab88-146">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
 
-[<span data-ttu-id="0a5f1-147">Stopp-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-147">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="5ab88-147">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-147">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="0a5f1-148">Anfang-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-148">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="5ab88-148">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-148">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="0a5f1-149">Satz-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-149">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="5ab88-149">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-149">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="0a5f1-150">Satz-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="0a5f1-150">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+[<span data-ttu-id="5ab88-150">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="5ab88-150">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[<span data-ttu-id="0a5f1-151">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-151">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="5ab88-151">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-151">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="0a5f1-152">Neu – AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-152">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="5ab88-152">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-152">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="0a5f1-153">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="0a5f1-153">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+[<span data-ttu-id="5ab88-153">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="5ab88-153">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
-[<span data-ttu-id="0a5f1-154">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="0a5f1-154">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+[<span data-ttu-id="5ab88-154">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="5ab88-154">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
 
-[<span data-ttu-id="0a5f1-155">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="0a5f1-155">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+[<span data-ttu-id="5ab88-155">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="5ab88-155">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 
-[<span data-ttu-id="0a5f1-156">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="0a5f1-156">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+[<span data-ttu-id="5ab88-156">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="5ab88-156">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[<span data-ttu-id="0a5f1-157">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="0a5f1-157">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport)
+[<span data-ttu-id="5ab88-157">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="5ab88-157">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[<span data-ttu-id="0a5f1-158">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0a5f1-158">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+[<span data-ttu-id="5ab88-158">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="5ab88-158">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor.md)
