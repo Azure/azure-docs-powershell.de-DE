@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFireWallPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFireWallPolicy.md
-ms.openlocfilehash: e8fe8fb59ee56e457c49d959c07db08cad62bb5a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5933d860ca2badce2d9576409dd1553153bb1e84
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93820072"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401503"
 ---
 # Get-AzFrontDoorFireWallPolicy
 
-## Synopsis
-Abrufen der WAF-Richtlinie
+## SYNOPSIS
+Get WAF policy
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzFrontDoorFireWallPolicy -ResourceGroupName <String> [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Die **Get-AzFrontDoorFireWallPolicy-** cmdletGet ruft WAF-Richtlinie in einer Ressourcengruppe unter dem aktuellen Abonnement ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzFrontD selbstFireWallPolicy"** ruft die "WAF-Richtlinie" in einer Ressourcengruppe unter dem aktuellen Abonnement ab.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```powershell
@@ -38,7 +38,7 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Prevention            Enabled                           403 https://www.bing.com/
 ```
 
-Abrufen einer WAF-Richtlinie mit dem Namen $policyName in $resourceGroupName
+Sie erhalten eine WAF-Richtlinie namens "$policyName in $resourceGroupName
 
 ### Beispiel 2
 ```powershell
@@ -51,12 +51,12 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Detection             Enabled                           404
 ```
 
-Abrufen aller WAF-Richtlinien in $resourceGroupName
+Alle WAF-Richtlinien in $resourceGroupName
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-FireWallPolicy-Name.
+Name von FireWallPolicy.
 
 ```yaml
 Type: System.String
@@ -101,20 +101,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Haustür. Models. PSPolicy
+### Microsoft.Azure.Commands.FrontD selbst.Models.PSPolicy
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
- [Satz-AzFrontDoorFireWallPolicy](./Set-AzFrontDoorFireWallPolicy.md) 
- [Remove-AzFrontDoorFireWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md)
+[New-AzFrontD firewallWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
+ [Remove-AzFrontD firewallWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md) 
+ [Update-AzFrontD firewallWallPolicy](./Update-AzFrontDoorFireWallPolicy.md)

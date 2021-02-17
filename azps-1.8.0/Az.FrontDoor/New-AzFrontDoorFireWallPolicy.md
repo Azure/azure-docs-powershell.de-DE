@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFireWallPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorFireWallPolicy.md
-ms.openlocfilehash: 67caf6c97c493ad1d19b95ef00c896cb96a47582
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 9b1339d138087207b84a7f515c66bd9964420dcd
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93820048"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401486"
 ---
 # New-AzFrontDoorFireWallPolicy
 
-## Synopsis
+## SYNOPSIS
 Erstellen einer WAF-Richtlinie
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzFrontDoorFireWallPolicy -ResourceGroupName <String> -Name <String> [-EnabledState <PSEnabledState>]
@@ -26,10 +26,10 @@ New-AzFrontDoorFireWallPolicy -ResourceGroupName <String> -Name <String> [-Enabl
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzFrontDoorFireWallPolicy** erstellt eine neue Azure WAF-Richtlinie in der angegebenen Ressourcengruppe unter Aktuelles Abonnement.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzFrontD selbstFireWallPolicy"** erstellt eine neue Azure -WAF-Richtlinie in der angegebenen Ressourcengruppe unter dem aktuellen Abonnement
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Erstellen einer WAF-Richtlinie
 ```powershell
@@ -42,7 +42,7 @@ Name         PolicyMode PolicyEnabledState RedirectUrl
 
 Erstellen einer WAF-Richtlinie
 
-## Parameter
+## PARAMETERS
 
 ### -CustomBlockResponseBody
 Benutzerdefinierter Antworttext
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomBlockResponseStatusCode
-Benutzerdefinierter Antwort Status Code
+Benutzerdefinierter Antwortstatuscode
 
 ```yaml
 Type: System.Int32
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CustomRule
-Benutzerdefinierte Regeln in der Richtlinie
+### -Customrule
+Benutzerdefinierte Regeln innerhalb der Richtlinie
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule[]
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Gibt an, ob sich die Richtlinie im Status "aktiviert" oder "deaktiviert" befindet.
-Mögliche Werte sind: "deaktiviert", "aktiviert"
+Gibt an, ob sich die Richtlinie im Status "Aktiviert" oder "Deaktiviert" befindet.
+Mögliche Werte sind: "Disabled", "Enabled".
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState
@@ -136,9 +136,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Modus
-Beschreibt, ob sich der Erkennungsmodus oder der verhindermodus auf Richtlinienebene befindet.
-Mögliche Werte sind: "Vorbeugung", "Erkennung"
+### -Mode
+Beschreibt, ob er sich auf Richtlinienebene im Erkennungs- oder Verhinderungsmodus befindet.
+Mögliche Werte sind:'Vermeidung', 'Erkennung'
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSMode
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApplicationFireWallPolicy-Name.
+Name von WebApplicationFireWallPolicy.
 
 ```yaml
 Type: System.String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectUrl
-URL umleiten
+Umleitungs-URL
 
 ```yaml
 Type: System.String
@@ -198,8 +198,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -213,7 +213,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -230,22 +230,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Haustür. Models. PSPolicy
+### Microsoft.Azure.Commands.FrontD selbst.Models.PSPolicy
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzFrontDoorFireWallPolicy](./Set-AzFrontDoorFireWallPolicy.md) 
- [Get-AzFrontDoorFireWallPolicy](./Get-AzFrontDoorFireWallPolicy.md) 
- [Remove-AzFrontDoorFireWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md) 
- [Neu – AzFrontDoorManagedRuleObject](./New-AzFrontDoorManagedRuleObject.md) 
- [Neu – AzFrontDoorCustomRuleObject](./New-AzFrontDoorManagedRuleObject.md)
+[Get-AzFrontD firewallWallPolicy](./Get-AzFrontDoorFireWallPolicy.md) 
+ [Remove-AzFrontD firewallWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md) 
+ [Update-AzFrontD firewallWallPolicy](./Update-AzFrontDoorFireWallPolicy.md) 
+ [New-AzFrontD dannManagedRuleObject](./New-AzFrontDoorManagedRuleObject.md) 
+ [New-AzFrontDcustomRuleObject](./New-AzFrontDoorManagedRuleObject.md)
