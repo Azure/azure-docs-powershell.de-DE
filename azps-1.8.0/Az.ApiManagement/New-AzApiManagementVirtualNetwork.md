@@ -6,32 +6,32 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
-ms.openlocfilehash: 67020f99129dfa920aa1bbc5e22ac59c16affb32
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 496e65438a2c0ef5f09bbf961535eaa842062f25
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93821123"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400891"
 ---
-# <span data-ttu-id="3730e-101">New-AzApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="3730e-101">New-AzApiManagementVirtualNetwork</span></span>
+# <span data-ttu-id="b80ef-101">New-AzApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="b80ef-101">New-AzApiManagementVirtualNetwork</span></span>
 
-## <span data-ttu-id="3730e-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="3730e-102">SYNOPSIS</span></span>
-<span data-ttu-id="3730e-103">Erstellt eine Instanz von PsApiManagementVirtualNetwork.</span><span class="sxs-lookup"><span data-stu-id="3730e-103">Creates an instance of PsApiManagementVirtualNetwork.</span></span>
+## <span data-ttu-id="b80ef-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="b80ef-102">SYNOPSIS</span></span>
+<span data-ttu-id="b80ef-103">Erstellt eine Instanz von PsApiManagementVirtualNetwork.</span><span class="sxs-lookup"><span data-stu-id="b80ef-103">Creates an instance of PsApiManagementVirtualNetwork.</span></span>
 
-## <span data-ttu-id="3730e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3730e-104">SYNTAX</span></span>
+## <span data-ttu-id="b80ef-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b80ef-104">SYNTAX</span></span>
 
 ```
 New-AzApiManagementVirtualNetwork -SubnetResourceId <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="3730e-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3730e-105">DESCRIPTION</span></span>
-<span data-ttu-id="3730e-106">Das Cmdlet **New-AzApiManagementVirtualNetwork** ist ein Hilfsbefehl zum Erstellen einer Instanz von **PsApiManagementVirtualNetwork**.</span><span class="sxs-lookup"><span data-stu-id="3730e-106">The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.</span></span>
-<span data-ttu-id="3730e-107">Dieser Befehl wird mit dem Cmdlet **Update-AzApiManagementDeployment** verwendet.</span><span class="sxs-lookup"><span data-stu-id="3730e-107">This command is used with **Update-AzApiManagementDeployment** cmdlet.</span></span>
+## <span data-ttu-id="b80ef-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="b80ef-105">DESCRIPTION</span></span>
+<span data-ttu-id="b80ef-106">Das **Cmdlet "New-AzApiManagementVirtualNetwork"** ist ein Hilfsbefehl zum Erstellen einer Instanz von **PsApiManagementVirtualNetwork.**</span><span class="sxs-lookup"><span data-stu-id="b80ef-106">The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.</span></span>
+<span data-ttu-id="b80ef-107">Dieser Befehl wird mit dem **Cmdlet "Set-AzApiManagement"** verwendet.</span><span class="sxs-lookup"><span data-stu-id="b80ef-107">This command is used with **Set-AzApiManagement** cmdlet.</span></span>
 
-## <span data-ttu-id="3730e-108">Beispiele</span><span class="sxs-lookup"><span data-stu-id="3730e-108">EXAMPLES</span></span>
+## <span data-ttu-id="b80ef-108">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="b80ef-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="3730e-109">Beispiel 1: Erstellen eines virtuellen Netzwerks</span><span class="sxs-lookup"><span data-stu-id="3730e-109">Example 1: Create a virtual network</span></span>
+### <span data-ttu-id="b80ef-109">Beispiel 1: Erstellen eines virtuellen Netzwerks</span><span class="sxs-lookup"><span data-stu-id="b80ef-109">Example 1: Create a virtual network</span></span>
 ```
 PS C:\>$vnetName = "myvnet"
 PS C:\>$subnetName = "default"
@@ -42,20 +42,20 @@ PS C:\>$vnet = New-AzvirtualNetwork -Name $vnetName -ResourceGroupName $resource
 PS C:\>$virtualNetwork = New-AzApiManagementVirtualNetwork -Location $location -SubnetResourceId $vnet.Subnets[0].Id
 
 # Get the service
-PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName    
+PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName
 PS C:\>$service.VirtualNetwork = $virtualNetwork
 PS C:\>$service.VpnType = "External"
 
 # Update the Deployment with Virtual Network
-PS C:\>Update-AzApiManagementDeployment -ApiManagement $service
+PS C:\>Set-AzApiManagement -ApiManagement $service
 ```
 
-<span data-ttu-id="3730e-110">In diesem Beispiel wird ein virtuelles Netzwerk erstellt und anschließend das Cmdlet **Update-AzApiManagementDeployment** aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="3730e-110">This example creates a virtual network and then calls the **Update-AzApiManagementDeployment** cmdlet.</span></span>
+<span data-ttu-id="b80ef-110">Dieses Beispiel erstellt ein virtuelles Netzwerk und ruft dann das **Cmdlet "Set-AzApiManagement"** auf.</span><span class="sxs-lookup"><span data-stu-id="b80ef-110">This example creates a virtual network and then calls the **Set-AzApiManagement** cmdlet.</span></span>
 
-## <span data-ttu-id="3730e-111">Parameter</span><span class="sxs-lookup"><span data-stu-id="3730e-111">PARAMETERS</span></span>
+## <span data-ttu-id="b80ef-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b80ef-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="3730e-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3730e-112">-DefaultProfile</span></span>
-<span data-ttu-id="3730e-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="3730e-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="b80ef-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b80ef-112">-DefaultProfile</span></span>
+<span data-ttu-id="b80ef-113">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b80ef-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -69,8 +69,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3730e-114">-SubnetResourceId</span><span class="sxs-lookup"><span data-stu-id="3730e-114">-SubnetResourceId</span></span>
-<span data-ttu-id="3730e-115">Gibt die Subnetz-Ressourcen-ID des virtuellen Netzwerks an.</span><span class="sxs-lookup"><span data-stu-id="3730e-115">Specifies the subnet resource ID of the virtual network.</span></span>
+### <span data-ttu-id="b80ef-114">-SubnetResourceId</span><span class="sxs-lookup"><span data-stu-id="b80ef-114">-SubnetResourceId</span></span>
+<span data-ttu-id="b80ef-115">Gibt die Subnetzressourcen-ID des virtuellen Netzwerks an.</span><span class="sxs-lookup"><span data-stu-id="b80ef-115">Specifies the subnet resource ID of the virtual network.</span></span>
 
 ```yaml
 Type: System.String
@@ -84,20 +84,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3730e-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3730e-116">CommonParameters</span></span>
-<span data-ttu-id="3730e-117">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3730e-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3730e-118">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="3730e-118">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="b80ef-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b80ef-116">CommonParameters</span></span>
+<span data-ttu-id="b80ef-117">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b80ef-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b80ef-118">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="b80ef-118">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="3730e-119">Eingaben</span><span class="sxs-lookup"><span data-stu-id="3730e-119">INPUTS</span></span>
+## <span data-ttu-id="b80ef-119">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="b80ef-119">INPUTS</span></span>
 
-### <span data-ttu-id="3730e-120">Keine</span><span class="sxs-lookup"><span data-stu-id="3730e-120">None</span></span>
+### <span data-ttu-id="b80ef-120">Keine</span><span class="sxs-lookup"><span data-stu-id="b80ef-120">None</span></span>
 
-## <span data-ttu-id="3730e-121">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="3730e-121">OUTPUTS</span></span>
+## <span data-ttu-id="b80ef-121">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="b80ef-121">OUTPUTS</span></span>
 
-### <span data-ttu-id="3730e-122">Microsoft. Azure. Commands. ApiManagement. Models. PsApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="3730e-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span></span>
+### <span data-ttu-id="b80ef-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="b80ef-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span></span>
 
-## <span data-ttu-id="3730e-123">Notizen</span><span class="sxs-lookup"><span data-stu-id="3730e-123">NOTES</span></span>
+## <span data-ttu-id="b80ef-123">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="b80ef-123">NOTES</span></span>
 
-## <span data-ttu-id="3730e-124">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="3730e-124">RELATED LINKS</span></span>
+## <span data-ttu-id="b80ef-124">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="b80ef-124">RELATED LINKS</span></span>
 
-[<span data-ttu-id="3730e-125">Update-AzApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="3730e-125">Update-AzApiManagementDeployment</span></span>](./Update-AzApiManagementDeployment.md)
+[<span data-ttu-id="b80ef-125">Set-AzApiManagement</span><span class="sxs-lookup"><span data-stu-id="b80ef-125">Set-AzApiManagement</span></span>](./Set-AzApiManagement.md)
 
