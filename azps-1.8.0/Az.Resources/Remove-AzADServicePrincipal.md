@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
-ms.openlocfilehash: 0fa6dde8584eb003bd479e9a73ec96176282d83c
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 2658e5ff70603cb9bbe3aa3a7ccd47713249c726
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93659561"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399599"
 ---
 # Remove-AzADServicePrincipal
 
-## Synopsis
+## SYNOPSIS
 Löscht den Azure Active Directory-Dienstprinzipal.
 
-## Syntax
+## SYNTAX
 
 ### ObjectIdParameterSet (Standard)
 ```
@@ -56,55 +56,55 @@ Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-F
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 Löscht den Azure Active Directory-Dienstprinzipal.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Entfernen eines Dienst Prinzipals nach Objekt-ID
+### Beispiel 1: Entfernen eines Dienstprinzipals nach Objekt-ID
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-Entfernt den Dienstprinzipal mit der Objekt-ID "61b5d8ea-fdc6-40A2-8d5b-ad447c678d45".
+Entfernt den Dienstprinzipal mit der Objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.
 
-### Beispiel 2 – Entfernen eines Dienst Prinzipals nach Anwendungs-ID
+### Beispiel 2: Entfernen eines Dienstprinzipals nach Anwendungs-ID
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
 ```
 
-Entfernt den Dienstprinzipal mit der Anwendungs-ID "9263469e-d328-4321-8646-3e3e75d20e76".
+Entfernt den Dienstprinzipal mit der Anwendungs-ID '9263469e-d328-4321-8646-3e3e75d20e76'.
 
-### Beispiel 3: Entfernen eines Dienst Prinzipals nach SPN
+### Beispiel 3: Entfernen eines Dienstprinzipals durch SPN
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ServicePrincipalName MyServicePrincipal
 ```
 
-Entfernen des Dienst Prinzipals mit dem Dienstprinzipalnamen "MyServicePrincipal"
+Entfernen des Dienstprinzipals mit dem Dienstprinzipalnamen "MyServicePrincipal"
 
-### Beispiel 4 – Entfernen eines Dienst Prinzipals durch Piping
+### Beispiel 4: Entfernen eines Dienstprinzipal durch Piping
 
 ```
 PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
 ```
 
-Ruft den Dienstprinzipal mit der Objekt-ID ' 61b5d8ea-fdc6-40A2-8d5b-ad447c678d45 ' und Pipes ab, die zum Remove-AzADServicePrincipal-Cmdlet, um diesen Dienstprinzipal zu entfernen.
+Ruft den Dienstprinzipal mit der Objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' ab und gibt diese an das Cmdlet Remove-AzADServicePrincipal weiter, um diesen Dienstprinzipal zu entfernen.
 
-### Beispiel 5 – Entfernen eines Dienst Prinzipals durch Piping einer Anwendung
+### Beispiel 5: Entfernen eines Dienstprinzipal durch Hinzufügen einer Anwendung
 
 ```
 PS C:\> Get-AzApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzADServicePrincipal
 ```
 
-Ruft die Anwendung mit der Anwendungs-ID "9263469e-d328-4321-8646-3e3e75d20e76" und Pipes ab, die zum Cmdlet Remove-AzADServicePrincipal, um den Dienstprinzipal zu entfernen, der dieser Anwendung zugeordnet ist.
+Ruft die Anwendung mit der Anwendungs-ID '9263469e-d328-4321-8646-3e3e75d20e76' ab und gibt diese an das cmdlet Remove-AzADServicePrincipal weiter, um den dienstprinzipal zu entfernen, der dieser Anwendung zugeordnet ist.
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
-Die Anwendungs-ID des Dienst Prinzipals.
+Die Dienstprinzipalanwendungs-ID.
 
 ```yaml
 Type: System.Guid
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-Das Application-Objekt, dessen Dienstprinzipal entfernt wird.
+Das Anwendungsobjekt, dessen Dienstprinzipal entfernt wird.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Der Anzeigename des Dienst Prinzipals.
+Der Anzeigename des Dienstprinzipal.
 
 ```yaml
 Type: System.String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Wechseln Sie zum Löschen des Dienst Prinzipals, ohne eine Bestätigung zu erhalten.
+Wechseln Sie zum Löschen des Dienstprinzipal ohne Bestätigung.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,8 +178,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Das Dienstprinzipal Objekt.
+### -InputObject
+Das Dienstprinzipalobjekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
@@ -193,8 +193,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Die Objekt-ID des Dienst Prinzipals, der gelöscht werden soll.
+### -ObjectId
+Die Objekt-ID des zu löschende Dienstprinzipal.
 
 ```yaml
 Type: System.String
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Gibt, falls angegeben, den gelöschten Dienstprinzipal zurück.
+Wenn angegeben, wird der gelöschte Dienstprinzipal zurückgegeben.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -238,8 +238,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -253,7 +253,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -270,32 +270,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.ODERDServicePrincipal
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDApplication
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.ODERDServicePrincipal
 
-## Notizen
-Schlüsselwörter: Azure, azurerm, arm, Ressource, Verwaltung, Manager, Ressource, Gruppe, Vorlage, Bereitstellung
+## HINWEISE
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzADServicePrincipal](./New-AzADServicePrincipal.md)
+[New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[Satz-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 

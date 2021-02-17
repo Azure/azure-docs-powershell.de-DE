@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncGroup.md
-ms.openlocfilehash: 512ed43ac1770a7a1a026c5a64d20a25016d547e
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7789bdc098ab7bb02414ffc39f38ba25f1c7e5ae
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93659077"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399565"
 ---
 # New-AzSqlSyncGroup
 
-## Synopsis
-Erstellt eine Azure SQL-Daten Bank Synchronisierungsgruppe.
+## SYNOPSIS
+Erstellt eine Azure SQL-Datenbanksynchronisierungsgruppe.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzSqlSyncGroup [-Name] <String> -SyncDatabaseName <String> -SyncDatabaseServerName <String>
@@ -27,12 +27,12 @@ New-AzSqlSyncGroup [-Name] <String> -SyncDatabaseName <String> -SyncDatabaseServ
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzSqlSyncGroup** erstellt eine Azure SQL-Daten Bank Synchronisierungsgruppe.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzSqlSyncGroup"** erstellt eine Azure SQL Database Sync Group.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer Synchronisierungsgruppe für eine Azure SQL-Datenbank
+### Beispiel 1: Erstellen einer Synchronisierungsgruppe für eine Azure SQL-Datenbank.
 ```
 PS C:\> $credential = Get-Credential
 PS C:\> New-AzSqlSyncGroup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -Name "SyncGroup01" -ConflictResolutionPolicy "HubWin"
@@ -53,12 +53,12 @@ LastSyncTime                : 1/1/0001 12:00:00 AM
 Schema                      :
 ```
 
-Mit diesem Befehl wird eine Synchronisierungsgruppe für eine Azure SQL-Datenbank erstellt. "schema.jsein" ist eine Datei auf dem lokalen Datenträger. Sie enthält die Shma-Nutzlast im JSON-Format. Ein Beispiel für das JSON-Schema ist: {"Tabellen": [{"Columns": [{"QUOTENAME": "b3ee3a7f-7614-4644-AD07-afa832620b4bManualTestsm4column1"}, {"QUOTENAME": "b3ee3a7f-7614-4644-AD07-afa832620b4bManualTestsm4column2"}]; "QUOTENAME": "MayQuotedTable1"}, {"Columns": [{"QUOTENAME": "b3ee3a7f-7614-4644-AD07-afa832620b4bManualTestsm4column1"}, {"QUOTENAME": "b3ee3a7f-7614-4644-AD07-afa832620b4bManualTestsm4column2"}], "QUOTENAME": "MayQuotedTable2"}], "MasterSyncMemberName": NULL}
+Mit diesem Befehl wird eine Synchronisierungsgruppe für eine Azure SQL erstellt. "schema.jsein" ist eine Datei auf dem lokalen Datenträger. Sie enthält die Nutzlast der Shema im JSON-Format. Beispiel für das Schema json: {"Tables": [{"Columns": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable1"}, {"Columns": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable2"}], "MasterSyncMemberName": null }
 
-## Parameter
+## PARAMETERS
 
 ### -ConflictResolutionPolicy
-Die Richtlinie zum Auflösen von Konflikten zwischen Hub-und Mitgliedsdatenbank in der Synchronisierungsgruppe.
+Die Richtlinie zum Lösen von Konflikten zwischen Hub- und Mitgliederdatenbank in der Synchronisierungsgruppe.
 
 ```yaml
 Type: System.String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredential
-Die SQL-Authentifizierungsanmeldeinformationen der Hub-Datenbank.
+Die SQL A0 der Hubdatenbank.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -IntervalInSeconds
 Die Häufigkeit (in Sekunden) der Datensynchronisierung.
-Der Standardwert ist-1, was bedeutet, dass die automatische Synchronisierung nicht aktiviert ist.
+Der Standardwert ist -1, d. h., die automatische Synchronisierung ist nicht aktiviert.
 
 ```yaml
 Type: System.Int32
@@ -164,7 +164,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Schemadatei
+### -SchemaFile
 Der Pfad der Schemadatei.
 
 ```yaml
@@ -179,7 +179,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Servername
+### -ServerName
 Der Name des Azure SQL Server.
 
 ```yaml
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseName
-Die Datenbank, die zum Speichern von Synchronisierungs bezogenen Metadaten verwendet wird.
+Die Datenbank, die zum Speichern von Synchronisierungsmetadaten verwendet wird.
 
 ```yaml
 Type: System.String
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseResourceGroupName
-Die Ressourcengruppe, zu der die Synchronisierungsmetadaten-Datenbank gehört.
+Die Ressourcengruppe, zu der die Synchronisierungsmetadatendatenbank gehört.
 
 ```yaml
 Type: System.String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseServerName
-Der Server, auf dem die Synchronisierungsmetadaten-Datenbank gehostet wird.
+Der Server, auf dem die Synchronisierungsmetadatendatenbank gehostet wird.
 
 ```yaml
 Type: System.String
@@ -239,8 +239,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -254,7 +254,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -271,21 +271,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. SQL. datasync. Model. AzureSqlSyncGroupModel
+### Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncGroupModel
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzSqlSyncGroup](./Set-AzSqlSyncGroup.md)
 
 [Remove-AzSqlSyncGroup](./Remove-AzSqlSyncGroup.md)
 
