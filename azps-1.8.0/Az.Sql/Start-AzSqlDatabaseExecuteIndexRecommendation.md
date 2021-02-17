@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/start-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Start-AzSqlDatabaseExecuteIndexRecommendation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Start-AzSqlDatabaseExecuteIndexRecommendation.md
-ms.openlocfilehash: c432b3a23c4495abebda013b5dd3943132827a30
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 1ab1e223ec173cf5727011956f52979026159594
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658946"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399514"
 ---
-# <span data-ttu-id="5d991-101">Start-AzSqlDatabaseExecuteIndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="5d991-101">Start-AzSqlDatabaseExecuteIndexRecommendation</span></span>
+# <span data-ttu-id="8fd41-101">Start-AzSqlDatabaseExecuteIndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="8fd41-101">Start-AzSqlDatabaseExecuteIndexRecommendation</span></span>
 
-## <span data-ttu-id="5d991-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="5d991-102">SYNOPSIS</span></span>
-<span data-ttu-id="5d991-103">Startet den Workflow, der einen empfohlenen Indexvorgang ausführt.</span><span class="sxs-lookup"><span data-stu-id="5d991-103">Starts the workflow that runs a recommended index operation.</span></span>
+## <span data-ttu-id="8fd41-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8fd41-102">SYNOPSIS</span></span>
+<span data-ttu-id="8fd41-103">Startet den Workflow, der einen empfohlenen Indexvorgang ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="8fd41-103">Starts the workflow that runs a recommended index operation.</span></span>
 
-## <span data-ttu-id="5d991-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5d991-104">SYNTAX</span></span>
+## <span data-ttu-id="8fd41-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8fd41-104">SYNTAX</span></span>
 
 ```
 Start-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName <String>
@@ -26,22 +26,22 @@ Start-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="5d991-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d991-105">DESCRIPTION</span></span>
-<span data-ttu-id="5d991-106">Das Cmdlet **Start-AzSqlDatabaseExecuteIndexRecommendation** startet den Workflow, der einen empfohlenen Indexvorgang für eine Azure SQL-Datenbank ausführt.</span><span class="sxs-lookup"><span data-stu-id="5d991-106">The **Start-AzSqlDatabaseExecuteIndexRecommendation** cmdlet starts the workflow that runs a recommended index operation for an Azure SQL Database.</span></span>
+## <span data-ttu-id="8fd41-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="8fd41-105">DESCRIPTION</span></span>
+<span data-ttu-id="8fd41-106">Das **Cmdlet "Start-AzSqlDatabaseExecuteIndexRecommendation"** startet den Workflow, der einen empfohlenen Indexvorgang für eine Azure SQL ausführt.</span><span class="sxs-lookup"><span data-stu-id="8fd41-106">The **Start-AzSqlDatabaseExecuteIndexRecommendation** cmdlet starts the workflow that runs a recommended index operation for an Azure SQL Database.</span></span>
 
-## <span data-ttu-id="5d991-107">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5d991-107">EXAMPLES</span></span>
+## <span data-ttu-id="8fd41-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="8fd41-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="5d991-108">Beispiel 1: Ausführen einer Indexempfehlung</span><span class="sxs-lookup"><span data-stu-id="5d991-108">Example 1: Run an index recommendation</span></span>
+### <span data-ttu-id="8fd41-108">Beispiel 1: Ausführen einer Indexempfehlung</span><span class="sxs-lookup"><span data-stu-id="8fd41-108">Example 1: Run an index recommendation</span></span>
 ```
 PS C:\>Start-AzSqlDatabaseExecuteIndexRecommendation -ResourceGroup "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
 ```
 
-<span data-ttu-id="5d991-109">Dieser Befehl führt eine Indexempfehlung aus.</span><span class="sxs-lookup"><span data-stu-id="5d991-109">This command runs an index recommendation.</span></span>
+<span data-ttu-id="8fd41-109">Mit diesem Befehl wird eine Indexempfehlung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="8fd41-109">This command runs an index recommendation.</span></span>
 
-## <span data-ttu-id="5d991-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="5d991-110">PARAMETERS</span></span>
+## <span data-ttu-id="8fd41-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8fd41-110">PARAMETERS</span></span>
 
-### <span data-ttu-id="5d991-111">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="5d991-111">-DatabaseName</span></span>
-<span data-ttu-id="5d991-112">Gibt den Namen der Datenbank an, für die dieses Cmdlet den Workflow startet.</span><span class="sxs-lookup"><span data-stu-id="5d991-112">Specifies the name of the database for which this cmdlet starts the workflow.</span></span>
+### <span data-ttu-id="8fd41-111">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="8fd41-111">-DatabaseName</span></span>
+<span data-ttu-id="8fd41-112">Gibt den Namen der Datenbank an, für die dieses Cmdlet den Workflow startet.</span><span class="sxs-lookup"><span data-stu-id="8fd41-112">Specifies the name of the database for which this cmdlet starts the workflow.</span></span>
 
 ```yaml
 Type: System.String
@@ -55,8 +55,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5d991-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5d991-113">-DefaultProfile</span></span>
-<span data-ttu-id="5d991-114">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="5d991-114">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="8fd41-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8fd41-113">-DefaultProfile</span></span>
+<span data-ttu-id="8fd41-114">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="8fd41-114">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -70,8 +70,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5d991-115">-IndexRecommendationName</span><span class="sxs-lookup"><span data-stu-id="5d991-115">-IndexRecommendationName</span></span>
-<span data-ttu-id="5d991-116">Gibt den Namen der Indexempfehlung an, die dieses Cmdlet ausführt.</span><span class="sxs-lookup"><span data-stu-id="5d991-116">Specifies the name of the index recommendation that this cmdlet runs.</span></span>
+### <span data-ttu-id="8fd41-115">-IndexRecommendationName</span><span class="sxs-lookup"><span data-stu-id="8fd41-115">-IndexRecommendationName</span></span>
+<span data-ttu-id="8fd41-116">Gibt den Namen der Indexempfehlung an, die von diesem Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8fd41-116">Specifies the name of the index recommendation that this cmdlet runs.</span></span>
 
 ```yaml
 Type: System.String
@@ -85,8 +85,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5d991-117">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="5d991-117">-ResourceGroupName</span></span>
-<span data-ttu-id="5d991-118">Gibt den Namen der Ressourcengruppe an, der der Server zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="5d991-118">Specifies the name of the resource group to which the server is assigned.</span></span>
+### <span data-ttu-id="8fd41-117">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="8fd41-117">-ResourceGroupName</span></span>
+<span data-ttu-id="8fd41-118">Gibt den Namen der Ressourcengruppe an, der der Server zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="8fd41-118">Specifies the name of the resource group to which the server is assigned.</span></span>
 
 ```yaml
 Type: System.String
@@ -100,8 +100,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5d991-119">-Servername</span><span class="sxs-lookup"><span data-stu-id="5d991-119">-ServerName</span></span>
-<span data-ttu-id="5d991-120">Gibt den Server an, der die Datenbank hostet, für die dieses Cmdlet einen Workflow startet.</span><span class="sxs-lookup"><span data-stu-id="5d991-120">Specifies the server that hosts the database for which this cmdlet starts a workflow.</span></span>
+### <span data-ttu-id="8fd41-119">-ServerName</span><span class="sxs-lookup"><span data-stu-id="8fd41-119">-ServerName</span></span>
+<span data-ttu-id="8fd41-120">Gibt den Server an, der die Datenbank hostet, für die dieses Cmdlet einen Workflow startet.</span><span class="sxs-lookup"><span data-stu-id="8fd41-120">Specifies the server that hosts the database for which this cmdlet starts a workflow.</span></span>
 
 ```yaml
 Type: System.String
@@ -115,25 +115,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="5d991-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5d991-121">CommonParameters</span></span>
-<span data-ttu-id="5d991-122">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5d991-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5d991-123">Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="5d991-123">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="8fd41-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8fd41-121">CommonParameters</span></span>
+<span data-ttu-id="8fd41-122">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8fd41-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8fd41-123">Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="8fd41-123">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="5d991-124">Eingaben</span><span class="sxs-lookup"><span data-stu-id="5d991-124">INPUTS</span></span>
+## <span data-ttu-id="8fd41-124">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="8fd41-124">INPUTS</span></span>
 
-### <span data-ttu-id="5d991-125">System. String</span><span class="sxs-lookup"><span data-stu-id="5d991-125">System.String</span></span>
+### <span data-ttu-id="8fd41-125">System.String</span><span class="sxs-lookup"><span data-stu-id="8fd41-125">System.String</span></span>
 
-## <span data-ttu-id="5d991-126">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="5d991-126">OUTPUTS</span></span>
+## <span data-ttu-id="8fd41-126">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="8fd41-126">OUTPUTS</span></span>
 
-### <span data-ttu-id="5d991-127">Microsoft. Azure. Commands. SQL. Model. IndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="5d991-127">Microsoft.Azure.Commands.Sql.Model.IndexRecommendation</span></span>
+### <span data-ttu-id="8fd41-127">Microsoft.Azure.Commands.Sql.Model.IndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="8fd41-127">Microsoft.Azure.Commands.Sql.Model.IndexRecommendation</span></span>
 
-## <span data-ttu-id="5d991-128">Notizen</span><span class="sxs-lookup"><span data-stu-id="5d991-128">NOTES</span></span>
+## <span data-ttu-id="8fd41-128">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="8fd41-128">NOTES</span></span>
 
-## <span data-ttu-id="5d991-129">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="5d991-129">RELATED LINKS</span></span>
+## <span data-ttu-id="8fd41-129">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="8fd41-129">RELATED LINKS</span></span>
 
-[<span data-ttu-id="5d991-130">Get-AzSqlDatabaseIndexRecommendations</span><span class="sxs-lookup"><span data-stu-id="5d991-130">Get-AzSqlDatabaseIndexRecommendations</span></span>](./Get-AzSqlDatabaseIndexRecommendations.md)
 
-[<span data-ttu-id="5d991-131">Stopp-AzSqlDatabaseExecuteIndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="5d991-131">Stop-AzSqlDatabaseExecuteIndexRecommendation</span></span>](./Stop-AzSqlDatabaseExecuteIndexRecommendation.md)
+[<span data-ttu-id="8fd41-130">Stop-AzSqlDatabaseExecuteIndexRecommendation</span><span class="sxs-lookup"><span data-stu-id="8fd41-130">Stop-AzSqlDatabaseExecuteIndexRecommendation</span></span>](./Stop-AzSqlDatabaseExecuteIndexRecommendation.md)
 
-[<span data-ttu-id="5d991-132">SQL-Datenbank-Dokumentation</span><span class="sxs-lookup"><span data-stu-id="5d991-132">SQL Database Documentation</span></span>](https://docs.microsoft.com/azure/sql-database/)
+[<span data-ttu-id="8fd41-131">SQL Datenbankdokumentation</span><span class="sxs-lookup"><span data-stu-id="8fd41-131">SQL Database Documentation</span></span>](https://docs.microsoft.com/azure/sql-database/)
 
 
