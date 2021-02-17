@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
-ms.openlocfilehash: 8fd29b7ecbfda5115973b038a6560ad38d22f376
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7f1913b5debcbe3ebd5ae436c3c30529b1fdc9d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658327"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404733"
 ---
 # Get-AzApiManagementCache
 
-## Synopsis
-Rufen Sie die Details des Caches ab.
+## SYNOPSIS
+Erhalten Sie die Details des Caches.
 
-## Syntax
+## SYNTAX
 
 ### ContextParameterSet (Standard)
 ```
@@ -30,12 +30,12 @@ Get-AzApiManagementCache -Context <PsApiManagementContext> [-CacheId <String>]
 Get-AzApiManagementCache -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Rufen Sie die Details des im API-Verwaltungsdienst konfigurierten Caches ab.
+## BESCHREIBUNG
+Erfahren Sie mehr über den im Api-Verwaltungsdienst konfigurierten Cache.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen aller Caches
+### Beispiel 1: Alle Caches erhalten
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext
@@ -51,9 +51,9 @@ ResourceGroupName : Api-Default-West-US
 ServiceName       : contoso
 ```
 
-Ruft eine Liste aller Caches ab, die im API-Verwaltungsdienst konfiguriert sind.
+Ruft eine Liste aller im Api-Verwaltungsdienst konfigurierten Caches ab.
 
-### Beispiel 2: Abrufen des vom Bezeichner westus angegebenen Caches
+### Beispiel 2: Den Cache mit dem Bezeichner "westus" angeben
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext -cacheId westus
@@ -69,13 +69,13 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-Abrufen der Details des angegebenen Caches, der für westus konfiguriert ist
+Details zum angegebenen Cache, der für WestUs konfiguriert ist
 
-## Parameter
+## PARAMETERS
 
-### -Cache-Nr
+### -CacheId
 Bezeichner eines Caches.
-Wenn angegeben, wird versucht, den Cache nach dem Bezeichner zu finden.
+Wenn diese Angabe angegeben ist, wird versucht, den Cache nach dem Bezeichner zu finden.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -121,8 +121,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Arm-Ressourcenbezeichner eines Caches Wenn angegeben, wird versucht, den Cache nach dem Bezeichner zu finden. Dieser Parameter ist erforderlich.
+### -ResourceId
+Arm Resource Identifier eines Caches. Wenn diese Angabe angegeben ist, wird versucht, den Cache nach dem Bezeichner zu finden. Dieser Parameter ist erforderlich.
 
 ```yaml
 Type: System.String
@@ -137,24 +137,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementCache
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzApiManagementCache](./Get-AzApiManagementCache)
-
-[Satz-AzApiManagementCache](./Set-AzApiManagementCache.md)
+[New-AzApiManagementCache](./New-AzApiManagementCache.md)
 
 [Remove-AzApiManagementCache](./Remove-AzApiManagementCache.md)
+
+[Update-AzApiManagementCache](./Update-AzApiManagementCache.md)

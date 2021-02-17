@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/start-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Start-AzSqlDatabaseExecuteIndexRecommendation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Start-AzSqlDatabaseExecuteIndexRecommendation.md
-ms.openlocfilehash: c432b3a23c4495abebda013b5dd3943132827a30
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 1ab1e223ec173cf5727011956f52979026159594
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658946"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399514"
 ---
 # Start-AzSqlDatabaseExecuteIndexRecommendation
 
-## Synopsis
-Startet den Workflow, der einen empfohlenen Indexvorgang ausführt.
+## SYNOPSIS
+Startet den Workflow, der einen empfohlenen Indexvorgang ausgeführt.
 
-## Syntax
+## SYNTAX
 
 ```
 Start-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName <String>
@@ -26,19 +26,19 @@ Start-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **Start-AzSqlDatabaseExecuteIndexRecommendation** startet den Workflow, der einen empfohlenen Indexvorgang für eine Azure SQL-Datenbank ausführt.
+## BESCHREIBUNG
+Das **Cmdlet "Start-AzSqlDatabaseExecuteIndexRecommendation"** startet den Workflow, der einen empfohlenen Indexvorgang für eine Azure SQL ausführt.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Ausführen einer Indexempfehlung
 ```
 PS C:\>Start-AzSqlDatabaseExecuteIndexRecommendation -ResourceGroup "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
 ```
 
-Dieser Befehl führt eine Indexempfehlung aus.
+Mit diesem Befehl wird eine Indexempfehlung ausgeführt.
 
-## Parameter
+## PARAMETERS
 
 ### -DatabaseName
 Gibt den Namen der Datenbank an, für die dieses Cmdlet den Workflow startet.
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexRecommendationName
-Gibt den Namen der Indexempfehlung an, die dieses Cmdlet ausführt.
+Gibt den Namen der Indexempfehlung an, die von diesem Cmdlet ausgeführt wird.
 
 ```yaml
 Type: System.String
@@ -100,7 +100,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Servername
+### -ServerName
 Gibt den Server an, der die Datenbank hostet, für die dieses Cmdlet einen Workflow startet.
 
 ```yaml
@@ -116,24 +116,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. SQL. Model. IndexRecommendation
+### Microsoft.Azure.Commands.Sql.Model.IndexRecommendation
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzSqlDatabaseIndexRecommendations](./Get-AzSqlDatabaseIndexRecommendations.md)
 
-[Stopp-AzSqlDatabaseExecuteIndexRecommendation](./Stop-AzSqlDatabaseExecuteIndexRecommendation.md)
+[Stop-AzSqlDatabaseExecuteIndexRecommendation](./Stop-AzSqlDatabaseExecuteIndexRecommendation.md)
 
-[SQL-Datenbank-Dokumentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Datenbankdokumentation](https://docs.microsoft.com/azure/sql-database/)
 
 

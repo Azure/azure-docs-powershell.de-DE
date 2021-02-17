@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerThreatDetectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerThreatDetectionPolicy.md
-ms.openlocfilehash: 8d58085aa55958e6e0fc9658d814d4bc05006fd6
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 49b484c17b595a8f676a089f8627b70a1f34c471
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658953"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399497"
 ---
 # Set-AzSqlServerThreatDetectionPolicy
 
-## Synopsis
-Legt eine Bedrohungs Erkennungsrichtlinie auf einem Server fest.
+## SYNOPSIS
+Legt eine Bedrohungserkennungsrichtlinie auf einem Server fest.
 
-## Syntax
+## SYNTAX
 
 ```
 Set-AzSqlServerThreatDetectionPolicy [-PassThru] [-NotificationRecipientsEmails <String>]
@@ -27,24 +27,24 @@ Set-AzSqlServerThreatDetectionPolicy [-PassThru] [-NotificationRecipientsEmails 
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Set-AzSqlServerThreatDetectionPolicy** " legt eine Bedrohungs Erkennungsrichtlinie auf einem Azure SQL Server fest.
-Um die Bedrohungserkennung auf einem Server zu aktivieren, muss auf diesem Server eine Überwachungsrichtlinie aktiviert sein.
-Um dieses Cmdlet zu verwenden, geben Sie die Parameter *ResourceGroupName* und Servername an, um den Server zu identifizieren.
+## BESCHREIBUNG
+Das **Cmdlet Set-AzSqlServerThreatDetectionPolicy** legt eine Bedrohungserkennungsrichtlinie für einen Azure SQL fest.
+Um die Bedrohungserkennung auf einem Server zu aktivieren, muss eine Überwachungsrichtlinie auf diesem Server aktiviert sein.
+Um dieses Cmdlet zu verwenden, geben Sie die *Parameter "ResourceGroupName"* und "ServerName" an, um den Server zu identifizieren.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Festlegen der Bedrohungs Erkennungsrichtlinie für eine Datenbank
+### Beispiel 1: Festlegen der Bedrohungserkennungsrichtlinie für eine Datenbank
 ```
 PS C:\>Set-AzSqlServerThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability","SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-Mit diesem Befehl wird die Richtlinie für die Bedrohungserkennung für einen Server namens "Server01" festgelegt.
+Dieser Befehl legt die Bedrohungserkennungsrichtlinie für einen Server mit dem Namen Server01 fest.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -58,8 +58,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Emailadmins
-Gibt an, ob die Richtlinie für die Bedrohungserkennung Kontakte mit Administratoren per e-Mail kontaktiert.
+### -EmailAdmins
+Gibt an, ob die Bedrohungserkennungsrichtlinie mithilfe von E-Mail Kontakt zu Administratoren hat.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -74,8 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDetectionType
-Gibt ein Array von Erkennungstypen an, die aus der Richtlinie ausgeschlossen werden sollen.
-Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Gibt ein Array von Erkennungstypen an, die aus der Richtlinie ausgeschlossen werden.
+Die zulässigen Werte für diesen Parameter sind:
 - Sql_Injection
 - Sql_Injection_Vulnerability
 - Access_Anomaly
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationRecipientsEmails
-Gibt eine durch Semikolons getrennte Liste der e-Mail-Adressen an, an die die Richtlinie Benachrichtigungen sendet.
+Gibt eine durch Semikolons getrennte Liste der E-Mail-Adressen an, an die die Richtlinie Benachrichtigungen sendet.
 
 ```yaml
 Type: System.String
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird mit diesem Cmdlet keine Ausgabe generiert.
+Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,7 +154,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Servername
+### -ServerName
 Gibt den Namen des Servers an.
 
 ```yaml
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Gibt den Namen des zu verwendenden speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht angegeben wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der Bedrohungs Erkennungsrichtlinie der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass eine Datenbank Theat-Erkennungsrichtlinie definiert ist und dieser Parameter nicht angegeben wird, schlägt das Cmdlet fehl.
+Gibt den Namen des zu verwendenden Speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht bereitgestellt wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der Bedrohungserkennungsrichtlinie der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass eine Datenbank theat-Erkennungsrichtlinie definiert wird und dieser Parameter nicht bereitgestellt wird, kann das Cmdlet nicht verwendet werden.
 
 ```yaml
 Type: System.String
@@ -184,8 +184,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,7 +199,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -216,28 +216,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[System. Boolean, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. Commands. SQL. ThreatDetection. Model. detectiontype []
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]
 
-### System. Nullable ' 1 [[System. UInt32, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. SQL. ThreatDetection. Model. ServerThreatDetectionPolicyModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.ServerThreatDetectionPolicyModel
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzSqlServerThreatDetectionPolicy](./Get-AzSqlServerThreatDetectionPolicy.md)
 
-[Remove-AzSqlServerThreatDetectionPolicy](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
-
-[SQL-Datenbank-Dokumentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Datenbankdokumentation](https://docs.microsoft.com/azure/sql-database/)

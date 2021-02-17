@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendCredential.md
-ms.openlocfilehash: 2cde898622c870dc0598639addb1e8b30e438076
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ded8b44940c227477f6ad3dfdd7d4b673161fca1
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658267"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399446"
 ---
 # New-AzApiManagementBackendCredential
 
-## Synopsis
-Erstellt einen neuen Back-End-Anmelde Informations Vertrag.
+## SYNOPSIS
+Erstellt einen neuen Vertrag für Back-End-Anmeldeinformationen.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzApiManagementBackendCredential [-CertificateThumbprint <String[]>] [-Query <Hashtable>]
@@ -25,12 +25,12 @@ New-AzApiManagementBackendCredential [-CertificateThumbprint <String[]>] [-Query
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Erstellt einen neuen Back-End-Anmelde Informations Vertrag.
+## BESCHREIBUNG
+Erstellt einen neuen Vertrag für Back-End-Anmeldeinformationen.
 
-## Beispiele
+## BEISPIELE
 
-### Erstellen einer Back-End-Anmeldeinformationen In-Memory Objekt
+### Erstellen eines Back-End-In-Memory Objekts
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderScheme basic -AuthorizationHeaderParameter opensesame -Query @{"sv" = @('xx', 'bb'); "sr" = @('cc')} -Header @{"x-my-1" = @('val1', 'val2')}
@@ -38,12 +38,12 @@ PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderSc
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Credential $credential -Description "my backend"
 ```
 
-Erstellt einen Back-End-Anmelde Informations Vertrag
+Erstellt einen Vertrag für Back-End-Anmeldeinformationen
 
-## Parameter
+## PARAMETERS
 
 ### -AuthorizationHeaderParameter
-Für das Back-End verwendeter Autorisierungs Header.
+Autorisierungsheader, der für das Back-End verwendet wird.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationHeaderScheme
-Das für das Back-End verwendete Autorisierungsschema.
+Autorisierungsschema, das für das Backend verwendet wird.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbprint
-Fingerabdrücke des Client Zertifikats.
+Clientzertifikatdrückdrucke.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kopfzeile
-Vom Back-End akzeptierte Header Parameter Werte.
+### -Header
+Headerparameterwerte, die vom Back-End akzeptiert werden.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
-Vom Back-End akzeptierte Abfrage Parameter Werte.
+Vom Back-End akzeptierte Abfrageparameterwerte.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -138,26 +138,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
 ### Keine
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementBackendCredential
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackend](./New-AzApiManagementBackend.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
 
-[Satz-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
 
 [Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
