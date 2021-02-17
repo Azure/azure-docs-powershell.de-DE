@@ -6,48 +6,48 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
-ms.openlocfilehash: 4d6e6fef4ff51038c0939f11571b582628ab0740
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 237742c633ffe7a2a113467c7a12725b4f3b8b89
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93818928"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403067"
 ---
 # New-AzAlertRuleWebhook
 
-## Synopsis
-Erstellt eine Benachrichtigungsregel webhook.
+## SYNOPSIS
+Erstellt einen Warnungsregel-Webhook.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzAlertRuleWebhook [-ServiceUri] <String> [[-Property] <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzAlertRuleWebhook** erstellt eine Warnungsregel webhook.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzAlertRuleWebhook"** erstellt einen Warnungsregel-Webhook.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer Warnungsregel webhook
+### Beispiel 1: Erstellen eines Warnungsregel-Webhook
 ```
 PS C:\>New-AzAlertRuleWebhook -ServiceUri "http://contoso.com"
 ```
 
-Mit diesem Befehl wird ein webhook für Warnungsregeln erstellt, indem nur der Dienst-URI angegeben wird.
+Mit diesem Befehl wird ein Webhook für die Warnungsregel erstellt, indem nur der Dienst-URI angegeben wird.
 
-### Beispiel 2: Erstellen eines webhooks mit einer Eigenschaft
+### Beispiel 2: Erstellen eines Webhook mit einer Eigenschaft
 ```
 PS C:\>$Actual = New-AzAlertRuleWebhook -ServiceUri "http://contoso.com" -Properties @{prop1 = 'value1'}
 ```
 
-Dieser Befehl erstellt einen Warnungsregel-webhook für contoso.com mit einer Eigenschaft und speichert ihn dann in der $Actual-Variablen.
+Dieser Befehl erstellt einen Warnungsregelwebhook für Contoso.com eine Eigenschaft und speichert sie dann in der $Actual Variable.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-Gibt die Liste der Eigenschaften im Format @ an (Property1 = ' value1 ',....).
+Gibt die Liste der Eigenschaften im Format @(Eigenschaft1 = 'Wert1',....) an.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -92,30 +92,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Collections. Hashtable
+### System.Collections.Hashtable
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Management. Monitor. Management. Models. RuleWebhookAction
+### Microsoft.Azure.Management.Monitor.Management.Models.RuleWebhookAction
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
 [Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
-[Neu – AzAlertRuleEmail](./New-AzAlertRuleEmail.md)
+[New-AzAlertRuleEmail](./New-AzAlertRuleEmail.md)
 
-[Neu – AzAutoscaleWebhook](./New-AzAutoscaleWebhook.md)
+[New-AzAutoscaleWebhook](./New-AzAutoscaleWebhook.md)
 
 

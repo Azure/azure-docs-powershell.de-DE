@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
-ms.openlocfilehash: 8cf82f8ec01bc2a02470daf6dd0bd336bb564813
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6fd3ceb5a0c49b5c8b4f530deddb31fdf5b09f4a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93818943"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403084"
 ---
 # New-AzActionGroup
 
-## Synopsis
-Erstellt ein Aktions Gruppenverweis-Objekt im Arbeitsspeicher.
+## SYNOPSIS
+Erstellt ein ActionGroup-Referenzobjekt im Arbeitsspeicher.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzActionGroup -ActionGroupId <String>
@@ -26,22 +26,22 @@ New-AzActionGroup -ActionGroupId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Mit dem Cmdlet **New-AzActionGroup** wird ein Aktionsgruppen-Referenzobjekt im Arbeitsspeicher erstellt.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzActionGroup"** erstellt im Arbeitsspeicher ein Referenzobjekt für eine Aktionsgruppe.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen eines Aktionsgruppen-Referenzobjekts im Arbeitsspeicher
+### Beispiel 1: Erstellen eines Referenzobjekts für eine Aktionsgruppe im Arbeitsspeicher
 ```
 PS C:\>$dict = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
 PS C:\>$dict.Add('key1', 'value1')
 PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProperty $dict
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -ActionGroupId
-Die ID/Name der Aktionsgruppe.
+Die ID/der Name der Aktionsgruppe.
 
 ```yaml
 Type: System.String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -70,8 +70,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Webhookproperty
-Die webhook-Eigenschaften der Aktionsgruppe
+### -WebhookProperty
+Die Webhookeigenschaften der Aktionsgruppe
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -86,31 +86,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Collections. Generic. Dictionary ' 2 [[System. String, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e], [System. String, System. private. CoreLib, Version = 4.0.0.0, Kultur = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Management. Monitor. Management. Models. ActivityLogAlertActionGroup
+### Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
+[Set-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
 
 [Enable-AzActivityLogAlert](./Enable-AzActivityLogAlert.md)
 
-[Deaktivieren-AzActivityLogAlert](./Disable-AzActivityLogAlert.md)
+[Disable-AzActivityLogAlert](./Disable-AzActivityLogAlert.md)
 
 [Get-AzActivityLogAlert](./Get-AzActivityLogAlert.md)
 
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
-[Neu – AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+
 

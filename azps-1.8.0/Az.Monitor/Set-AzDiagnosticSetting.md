@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzDiagnosticSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzDiagnosticSetting.md
-ms.openlocfilehash: 7c33c351b7daea7b39fd614a8d842a4ed8be7f2b
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6f78e11fc6a5ef5cca2148258db9effd044b8c25
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660992"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402812"
 ---
 # Set-AzDiagnosticSetting
 
-## Synopsis
-Legt die Einstellungen für Protokolle und Metriken für die Ressource fest.
+## SYNOPSIS
+Legt die Protokoll- und Metrikeinstellungen für die Ressource fest.
 
-## Syntax
+## SYNTAX
 
 ### OldSetDiagnosticSetting (Standard)
 ```
@@ -37,28 +37,28 @@ Set-AzDiagnosticSetting -InputObject <PSServiceDiagnosticSettings> [-DefaultProf
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Satz-AzDiagnosticSetting** " aktiviert oder deaktiviert jede Zeit Körnung und Protokoll Kategorie für die jeweilige Ressource.
+## BESCHREIBUNG
+Das **Cmdlet "Set-AzDiagnosticSetting"** aktiviert oder deaktiviert jedes "Grain" und "log category" für die bestimmte Ressource.
 Die Protokolle und Metriken werden im angegebenen Speicherkonto gespeichert.
-Dieses Cmdlet implementiert das ShouldProcess-Muster, d. h., es kann eine Bestätigung des Benutzers anfordern, bevor die Ressource tatsächlich erstellt, geändert oder entfernt wird.
+Dieses Cmdlet implementiert das ShouldProcess-Muster, d. h., es kann eine Bestätigung vom Benutzer anfordern, bevor die Ressource tatsächlich erstellt, geändert oder entfernt wird.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Aktivieren aller Metriken und Protokolle für eine Ressource
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $True
 ```
 
-Dieser Befehl aktiviert alle verfügbaren Metriken und Protokolle für Resource01.
+Dieser Befehl aktiviert alle verfügbaren Metriken und Protokolle für "Resource01".
 
 ### Beispiel 2: Deaktivieren aller Metriken und Protokolle
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $False
 ```
 
-Mit diesem Befehl werden alle verfügbaren Metriken und Protokolle für die Ressource Resource01 deaktiviert.
+Mit diesem Befehl werden alle verfügbaren Metriken und Protokolle für die Ressource "Resource01" deaktiviert.
 
-### Beispiel 3: Aktivieren/Deaktivieren mehrerer Metriken Kategorien
+### Beispiel 3: Aktivieren/Deaktivieren mehrerer Metrikkategorien
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $False -MetricCategory MetricCategory1,MetricCategory2
 StorageAccountId   : <storageAccountId>
@@ -84,8 +84,8 @@ Logs
    Category : Category4
 ```
 
-Dieser Befehl deaktiviert die Metriken cateories, die Kategorie1 und Kategorie2 genannt werden.
-Alle anderen Kategorien bleiben identisch.
+Mit diesem Befehl werden die Metrikskategorien "Kategorie1" und "Kategorie2" deaktiviert.
+Alle anderen Kategorien bleiben gleich.
 
 ### Beispiel 4: Aktivieren/Deaktivieren mehrerer Protokollkategorien
 ```
@@ -113,29 +113,29 @@ Logs
    Category : Category4
 ```
 
-Dieser Befehl aktiviert Kategorie1 und Kategorie2.
-Alle anderen Metriken und Protokollkategorien bleiben identisch.
+Mit diesem Befehl werden "Kategorie1" und "Kategorie2" aktiviert.
+Alle anderen Metriken und Protokollkategorien bleiben gleich.
 
-### Beispiel 4: Aktivieren einer Zeit Körnung und mehrerer Kategorien
+### Beispiel 4: Aktivieren einer Zeitmask und mehrerer Kategorien
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $True -Category Category1,Category2 -Timegrain PT1M
 ```
 
-Dieser Befehl aktiviert nur Kategorie1-, Kategorie2-und Time Grain-PT1M.
-Alle anderen Zeit Körnungen und-Kategorien sind unverändert.
+Dieser Befehl aktiviert nur "Kategorie1", "Kategorie2" und "Zeitmask PT1M".
+Alle anderen Zeitkörner und Kategorien bleiben unverändert.
 
-### Beispiel 5: Verwenden von Pipeline
+### Beispiel 5: Verwenden der Pipeline
 ```
 PS C:\>Get-AzDiagnosticSetting -ResourceId "Resource01" | Set-AzDiagnosticSetting
 ```
 
-Dieser Befehl verwendet die PowerShell-Pipeline, um eine Diagnose Einstellung festzulegen (nicht geändert).
+Dieser Befehl verwendet die PowerShell-Pipeline, um eine Diagnoseeinstellung (ohne Änderung) zu festlegen.
 
-## Parameter
+## PARAMETERS
 
-### -Kategorie
-Gibt die Liste der Protokollkategorien an, die entsprechend dem Wert von *Enabled aktiviert* oder deaktiviert werden sollen.
-Wenn keine Kategorie angegeben wird, funktioniert dieser Befehl für alle unterstützten Kategorien. 
+### -Category
+Gibt die Liste der zu aktivierenden oder zu deaktivierenden Protokollkategorien entsprechend dem Wert von *"Enabled" an.*
+Wenn keine Kategorie angegeben ist, gilt dieser Befehl für alle unterstützten Kategorien.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -164,9 +164,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktiviert
+### -Enabled
 Gibt an, ob die Diagnose aktiviert werden soll.
-Geben Sie $true an, um die Diagnose zu aktivieren, oder $false, um die Diagnose zu deaktivieren.
+Geben $True, um die Diagnose zu aktivieren, oder $False, um die Diagnose zu deaktivieren.
 
 ```yaml
 Type: System.Boolean
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubAuthorizationRuleId
-Die Ereignis-Hub-Autorisierungsregel-ID
+Die Id der Ereignishubautorisierungsregel-ID
 
 ```yaml
 Type: System.String
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Der Name des Ereignis Hubs
+Der Name des Ereignishubs
 
 ```yaml
 Type: System.String
@@ -210,8 +210,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Das Eingabeobjekt (möglich aus der Pipeline.) Der Name und die Quell-Nr werden aus diesem Objekt extrahiert.
+### -InputObject
+Das Eingabeobjekt (möglich über die Pipeline) Der Name und die resourceId werden aus diesem Objekt extrahiert.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
@@ -226,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -MetricCategory
-Die Liste der metrischen Kategorien. Wenn keine Kategorie angegeben wird, funktioniert dieser Befehl für alle unterstützten Kategorien. 
+Die Liste der metrischen Kategorien.
+Wenn keine Kategorie angegeben ist, gilt dieser Befehl für alle unterstützten Kategorien.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -241,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name der Diagnose Einstellung. Der Standardwert ist **Service**.
+Der Name der Diagnoseeinstellung. Der Standardwert ist **"service".**
 
 ```yaml
 Type: System.String
@@ -255,7 +256,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Gibt die ID der Ressource an.
 
 ```yaml
@@ -271,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionEnabled
-Gibt an, ob die Beibehaltung von Diagnoseinformationen aktiviert ist.
+Gibt an, ob die Aufbewahrung von Diagnoseinformationen aktiviert ist.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -301,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceBusRuleId
-Die ServiceBus-Regel-ID.
+Die Regel-ID des Dienstbuss.
 
 ```yaml
 Type: System.String
@@ -316,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-Gibt die ID des speicherkontos an, in dem die Daten gespeichert werden sollen.
+Gibt die ID des Speicherkontos an, in dem die Daten gespeichert werden.
 
 ```yaml
 Type: System.String
@@ -330,9 +331,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Zeitkorn
-Gibt die Zeit Körnungen an, die für Metriken entsprechend dem Wert von *Enabled aktiviert* oder deaktiviert werden sollen.
-Wenn Sie kein Zeit Korn angeben, wird dieser Befehl für alle verfügbaren Zeit Körnungen ausgeführt.
+### -Timegrain
+Gibt die Zeitkörner, die für Metriken aktiviert oder deaktiviert werden sollen, entsprechend dem Wert von *"Enabled" an.*
+Wenn Sie keine Zeitkörner angeben, wird dieser Befehl für alle verfügbaren Zeitkörner ausgeführt.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -346,8 +347,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Arbeitsbereichs-Nr
-Die ID des Arbeitsbereichs
+### -WorkspaceId
+Die Ressourcen-ID des Log Analytics-Arbeitsbereichs, an den Protokolle/Metriken gesendet werden
 
 ```yaml
 Type: System.String
@@ -361,8 +362,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -376,7 +377,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
@@ -392,29 +393,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSServiceDiagnosticSettings
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
 
-### System. String
+### System.String
 
-### System. Boolean
+### System.Boolean
 
-### System. Collections. Generic. List ' 1 [[System. String, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.List'1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Nullable ' 1 [[System. Boolean, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Nullable ' 1 [[System. Int32, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSServiceDiagnosticSettings
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzDiagnosticSetting](./Get-AzDiagnosticSetting.md) 
  [Remove-AzDiagnosticSetting](./Remove-AzDiagnosticSetting.md)

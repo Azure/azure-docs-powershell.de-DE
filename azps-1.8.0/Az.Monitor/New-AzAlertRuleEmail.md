@@ -6,55 +6,55 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
-ms.openlocfilehash: cfdd18a02a5e0507e86a37dee1e1662bb5094f37
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 063eccb7d42fdee26c642a866c2bce398c87662e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93818939"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403050"
 ---
 # New-AzAlertRuleEmail
 
-## Synopsis
-Erstellt eine e-Mail-Aktion für eine Warnungsregel.
+## SYNOPSIS
+Erstellt eine E-Mail-Aktion für eine Warnungsregel.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzAlertRuleEmail [[-CustomEmail] <String[]>] [-SendToServiceOwner]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzAlertRuleEmail** erstellt eine e-Mail-Aktion für eine Warnungsregel.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzAlertRuleEmail"** erstellt eine E-Mail-Aktion für eine Warnungsregel.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer Warnungsregel-e-Mail-Aktion für Dienstbesitzer
+### Beispiel 1: Erstellen einer E-Mail-Aktion einer Warnungsregel für Dienstbesitzer
 ```
 PS C:\>New-AzAlertRuleEmail -SendToServiceOwners
 ```
 
-Mit diesem Befehl wird eine e-Mail-Benachrichtigungsaktion erstellt, die den Dienstbesitzern beim Auslösen einer Warnungsregel gesendet werden soll.
+Mit diesem Befehl wird eine E-Mail-Aktion für eine Warnungsregel erstellt, die an die Dienstbesitzer gesendet wird, wenn eine Warnungsregel ausgelöst wird.
 
-### Beispiel 2: Erstellen einer Warnungsregel-e-Mail-Aktion für nicht-Dienstbesitzer
+### Beispiel 2: Erstellen einer E-Mail-Aktion für eine Warnungsregel für Nicht-Dienst-Besitzer
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.com,davidchew@contoso.net
 ```
 
-Mit diesem Befehl wird eine e-Mail-Benachrichtigungsaktion für die angegebenen e-Mail-Adressen erstellt, nicht jedoch für die Dienstbesitzer.
+Mit diesem Befehl wird eine E-Mail-Aktion der Warnungsregel für die angegebenen E-Mail-Adressen erstellt, jedoch nicht für die Dienstbesitzer.
 
-### Beispiel 3: Erstellen einer e-Mail-Aktion für Warnungsregeln für Dienstbesitzer und nicht Dienstbesitzer
+### Beispiel 3: Erstellen einer E-Mail-Aktion mit einer Warnungsregel für Dienstbesitzer und Nicht-Dienst-Besitzer
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.net -SendToServiceOwners
 ```
 
-Mit diesem Befehl wird eine e-Mail-Benachrichtigungsaktion für die angegebene Adresse und ihre Dienstbesitzer erstellt.
+Mit diesem Befehl wird eine E-Mail-Aktion für eine Warnungsregel für die angegebene Adresse und für die Dienstbesitzer erstellt.
 
-## Parameter
+## PARAMETERS
 
 ### -CustomEmail
-Gibt eine Liste mit durch Kommas getrennten e-Mail-Adressen an.
+Gibt eine Liste von durch Kommas getrennten E-Mail-Adressen an.
 
 ```yaml
 Type: System.String[]
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendToServiceOwner
-Gibt an, dass dieser Vorgang eine e-Mail-Nachricht an die Dienstbesitzer sendet, wenn die Regel ausgelöst wird.
+Gibt an, dass durch diesen Vorgang eine E-Mail an die Dienstbesitzer gesendet wird, wenn die Regel ausgibt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,28 +99,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String []
+### System.String[]
 
-### System. Management. Automation. Switchparameter
+### System.Management.Automation.SwitchParameter
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Management. Monitor. Management. Models. RuleEmailAction
+### Microsoft.Azure.Management.Monitor.Management.Models.RuleEmailAction
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
 [Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
-[Neu – AzAlertRuleWebhook](./New-AzAlertRuleWebhook.md)
+[New-AzAlertRuleWebhook](./New-AzAlertRuleWebhook.md)
 
 

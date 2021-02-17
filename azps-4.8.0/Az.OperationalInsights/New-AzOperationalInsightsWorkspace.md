@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.operationa
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
-ms.openlocfilehash: feac2aa9c5dd92c0d76090c6fc28353d56f9647c
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 8515bf4085fcd03d87aa15c3da649fe318b94966
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94174239"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405005"
 ---
 # New-AzOperationalInsightsWorkspace
 
-## Synopsis
+## SYNOPSIS
 Erstellt einen Arbeitsbereich.
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzOperationalInsightsWorkspace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
@@ -27,17 +27,17 @@ New-AzOperationalInsightsWorkspace [-ResourceGroupName] <String> [-Name] <String
  [[-PublicNetworkAccessForQuery] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **New-AzOperationalInsightsWorkspace** erstellt einen Arbeitsbereich in der angegebenen Ressourcengruppe und dem angegebenen Speicherort.
+## BESCHREIBUNG
+Das **Cmdlet "New-AzOperationalInsightsWorkspace"** erstellt einen Arbeitsbereich in der angegebenen Ressourcengruppe und dem angegebenen Speicherort.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Erstellen eines Arbeitsbereichs nach Name
 ```
 PS C:\>New-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Location "East US" -Sku "Standard"
 ```
 
-Mit diesem Befehl wird ein Standard-SKU-Arbeitsbereich mit dem Namen "myworkspace" in der Ressourcengruppe "ContosoResourceGroup" erstellt.
+Mit diesem Befehl wird ein Standard-SKU-Arbeitsbereich mit dem Namen "MyWorkspace" in der Ressourcengruppe "ContosoResourceGroup" erstellt.
 
 ### Beispiel 2: Erstellen eines Arbeitsbereichs und Verknüpfen mit einem vorhandenen Konto
 ```
@@ -46,14 +46,14 @@ PS C:\>$OILinkTargets = Get-AzOperationalInsightsLinkTargets
 PS C:\>$OILinkTargets[0] | New-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Sku "Standard"
 ```
 
-Der erste Befehl verwendet das Get-AzOperationalInsightsLinkTargets-Cmdlet, um die Zielvorgaben für das Konto "operative Einblicke" abzurufen, und speichert Sie dann in der $OILinkTargets-Variablen.
-Der zweite Befehl übergibt das erste Konto Verknüpfungsziel in $OILinkTargets an das Cmdlet **New-AzOperationalInsightsWorkspace** mithilfe des Pipelineoperators.
-Mit dem Befehl wird ein Standard-SKU-Arbeitsbereich mit dem Namen myworkspace erstellt, der mit dem ersten Operational Insights-Konto in $OILinkTargets verknüpft ist.
+Der erste Befehl verwendet das Get-AzOperationalInsightsLinkTargets Cmdlet, um Die Linkziele für das Konto "Operational Insights" zu erhalten, und speichert sie dann in der $OILinkTargets Variable.
+Der zweite Befehl übergibt das erste Kontoverknüpfungsziel in $OILinkTargets mithilfe des Pipelineoperators an das **Cmdlet "New-AzOperationalInsightsWorkspace".**
+Der Befehl erstellt einen Standard-SKU-Arbeitsbereich namens "MyWorkspace", der mit dem ersten Konto für betriebliche Einblicke in $OILinkTargets.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.
+Erzwingt die Ausführung des Befehls ohne Benutzerbestätigung.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -82,8 +82,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Standort
-Gibt den Speicherort an, an dem der Arbeitsbereich erstellt werden soll, beispielsweise Ost-oder West Europa.
+### -Location
+Gibt den Speicherort an, an dem der Arbeitsbereich erstellt werden soll, z. B. "Ost-USA" oder "Westeuropa".
 
 ```yaml
 Type: System.String
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicNetworkAccessForIngestion
-Der Netzwerkzugriffstyp für den Zugriff auf die Arbeitsbereichs Aufnahme. Der Wert sollte "aktiviert" oder "deaktiviert" sein.
+Der Netzwerkzugriffstyp für den Zugriff auf die Erfassung des Arbeitsbereichs. Der Wert sollte "Enabled" oder "Disabled" sein.
 
 ```yaml
 Type: System.String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicNetworkAccessForQuery
-Der Netzwerkzugriffstyp für den Zugriff auf die Arbeitsbereichs Abfrage. Der Wert sollte "aktiviert" oder "deaktiviert" sein.
+Der Netzwerkzugriffstyp für den Zugriff auf Arbeitsbereichsabfragen. Der Wert sollte "Enabled" oder "Disabled" sein.
 
 ```yaml
 Type: System.String
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Die Aufbewahrung von Arbeitsbereichsdaten in Tagen. 730 Tage ist der maximal zulässige Wert für alle anderen SKUs
+Die Aufbewahrung von Arbeitsbereichsdaten in Tagen. 730 Tage sind für alle anderen SKU maximal zulässig.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -174,13 +174,13 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Gibt die Dienstebene des Arbeitsbereichs an. Weitere Informationen zu dem zu verwendenden Wert finden Sie unter https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-cost-storage#legacy-pricing-tiers .
+Gibt die Dienstebene des Arbeitsbereichs an. Weitere Informationen dazu, welchen Wert Sie verwenden sollten, finden Sie unter https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-cost-storage#legacy-pricing-tiers .
 Gültige Werte sind:
 - kostenlos
 - pergb2018
 - pernode
 - Premium
-- Standalone
+- Eigenständig
 - Standard
 
 ```yaml
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Die Ressourcenkategorien für den Arbeitsbereich
+Die Ressourcentags für den Arbeitsbereich.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -210,8 +210,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -225,7 +225,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -242,30 +242,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[System. Guid, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Guid, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Collections. Hashtable
+### System.Collections.Hashtable
 
-### System. Nullable ' 1 [[System. Int32, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. OperationalInsights. Models. PSWorkspace
+### Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 
-## Notizen
+## HINWEISE
 
-Es wurde ein neues Preismodell veröffentlicht. Wenn Sie ein CSP sind, bedeutet dies, dass Sie "Standalone" für die SKU verwenden müssen. Hinter den Kulissen wird die SKU in pergb2018 geändert. Weitere Informationen finden Sie in den folgenden Themen: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
+Ein neues Preismodell wurde veröffentlicht. Wenn Sie ein CSP sind, bedeutet dies, dass Sie für die SKU "eigenständig" verwenden müssen. Hinter den Kulissen wird die SKU in "pergb2018" geändert. Weitere Informationen finden Sie in den folgenden Themen: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure-Cmdlets für operationelle Einblicke](./Az.OperationalInsights.md)
+[Azure Operational Insights-Cmdlets](./Az.OperationalInsights.md)
 
-[Get-AzOperationalInsightsLinkTargets](./Get-AzOperationalInsightsLinkTargets.md)
 
 

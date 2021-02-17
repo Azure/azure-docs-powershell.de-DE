@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
-ms.openlocfilehash: 0813f91a3d82a40bc5b8d02c0a1e3f9579e0067a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6c7b867add359edec8379f20e630c9aca5fed00e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93660993"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402880"
 ---
 # Set-AzActivityLogAlert
 
-## Synopsis
-Erstellt ein neues oder legt eine vorhandene Aktivitätsprotokoll Benachrichtigung fest.
+## SYNOPSIS
+Erstellt eine neue Benachrichtigung oder legt eine vorhandene Aktivitätsprotokollbenachrichtigung fest.
 
-## Syntax
+## SYNTAX
 
 ### SetByNameAndResourceGroup
 ```
@@ -51,15 +51,15 @@ Set-AzActivityLogAlert [-Scope <System.Collections.Generic.List`1[System.String]
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Set-AzActivityLogAlert** " erstellt ein neues oder legt eine vorhandene Aktivitätsprotokoll Warnung fest.
+## BESCHREIBUNG
+Das **Cmdlet "Set-AzActivityLogAlert"** erstellt ein neues oder legt eine vorhandene Aktivitätsprotokollbenachrichtigung fest.
 Für Tags, Bedingungen und Aktionen müssen die Objekte im Voraus erstellt und als Parameter in diesem Aufruf als Komma getrennt übergeben werden (siehe Beispiel unten).
-Dieses Cmdlet implementiert das ShouldProcess-Muster, d. h., es kann eine Bestätigung des Benutzers anfordern, bevor die Ressource tatsächlich erstellt/geändert wird.
-**Hinweis** : Dieses Cmdlet und seine Verwandten ersetzen das deprecated **-Add-AzLogAlertRule** (November 2017).
+Dieses Cmdlet implementiert das ShouldProcess-Muster, d. h., es kann eine Bestätigung vom Benutzer anfordern, bevor die Ressource tatsächlich erstellt/geändert wird.
+**HINWEIS:** Dieses Cmdlet und die zugehörigen Cmdlets ersetzen die veraltete (November 2017) **Add-AzLogAlertRule.**
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen einer Aktivitätsprotokoll Benachrichtigung
+### Beispiel 1: Erstellen einer Aktivitätsprotokollbenachrichtigung
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -72,10 +72,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2
 ```
 
-Die ersten vier Befehle erstellen Blatt Bedingung und Aktionsgruppe.
-Der endgültige Befehl erstellt eine Aktivitätsprotokoll Benachrichtigung unter Verwendung der Bedingung und der Gruppe Aktion.
+Die ersten vier Befehle erstellen Blattbedingung und Aktionsgruppe.
+Der letzte Befehl erstellt eine Aktivitätsprotokollbenachrichtigung unter Verwendung der Bedingung und der Aktionsgruppe.
 
-### Beispiel 2: Erstellen einer Aktivitätsprotokoll Warnung deaktiviert
+### Beispiel 2: Erstellen einer deaktivierten Aktivitätsprotokollbenachrichtigung
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -88,10 +88,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2 -DisableAlert
 ```
 
-Die ersten vier Befehle erstellen Blatt Bedingung und Aktionsgruppe.
-Mit dem letzten Befehl wird eine Aktivitätsprotokoll Benachrichtigung mithilfe der Bedingung und der Gruppe "Aktion" erstellt, die Benachrichtigung wird jedoch deaktiviert.
+Die ersten vier Befehle erstellen Blattbedingung und Aktionsgruppe.
+Der letzte Befehl erstellt eine Aktivitätsprotokollbenachrichtigung unter Verwendung der Bedingung und der Aktionsgruppe, erstellt aber die Benachrichtigung deaktiviert.
 
-### Beispiel 3: Einrichten einer Aktivitätsprotokoll Benachrichtigung auf Grundlage eines Werts aus der Pipe oder des Inputobject-Parameters
+### Beispiel 3: Festlegen einer Aktivitätsprotokollwarnung basierend auf einem Wert aus dem Pipe oder dem Parameter "InputObject"
 ```
 PS C:\>Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName | Set-AzActivityLogAlert
 PS C:\>$alert = Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName
@@ -100,19 +100,19 @@ PS C:\>$alert.Enabled = $false
 PS C:\>Set-AzActivityLogAlert -InputObject $alert
 ```
 
-Der erste Befehl ist mit einem NOP vergleichbar, er legt die Benachrichtigung mit den gleichen Werten fest, die bereits die restlichen Befehle enthalten, die Warnungsregel abzurufen, die Beschreibung zu ändern und zu deaktivieren und dann den Inputobject-Parameter zum Beibehalten dieser Änderungen zu verwenden.
+Der erste Befehl ähnelt einem "nop". Er legt die Warnung mit den gleichen Werten fest, die er bereits enthielt. Die restlichen Befehle rufen die Warnungsregel ab, ändern die Beschreibung und deaktivieren sie. Verwenden Sie dann den Parameter InputObject, um diese Änderungen dauerhaft zu speichern.
 
-### Beispiel 4: Einrichten einer Aktivitätsprotokoll Benachrichtigung basierend auf dem Wert des Typs "Resourcen" aus der Pipe
+### Beispiel 4: Festlegen einer Aktivitätsprotokollwarnung basierend auf dem Wert "ResourceId" aus dem Pipe
 ```
 PS C:\>Find-AzResource -ResourceGroupEquals "myResourceGroup" -ResourceNameEquals "myLogAlert" | Set-AzActivityLogAlert -DisableAlert
 ```
 
-Wenn die angegebene Protokoll Benachrichtigungsregel vorhanden ist, wird Sie von diesem Befehl deaktiviert.
+Wenn die angegebene Protokollwarnungsregel vorhanden ist, deaktiviert dieser Befehl sie.
 
-## Parameter
+## PARAMETERS
 
-### – Aktion
-Die Liste der Aktionsgruppen für die Benachrichtigung zum Aktivitätsprotokoll.
+### -Action
+Die Liste der Aktionsgruppen für die Aktivitätsprotokollbenachrichtigung.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup]
@@ -151,8 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -Bedingung
-Die Liste der Bedingungen für die Benachrichtigung über das Aktivitätsprotokoll.
-**Hinweis** : in der Liste der Bedingungen muss mindestens eine mit dem Feld gleich "Category" vorhanden sein. Das Back-End reagiert mit 400 (BadRequest), wenn diese Bedingung nicht vorhanden ist.
+Die Liste der Bedingungen für die Aktivitätsprotokollbenachrichtigung.
+**HINWEIS:** In der Liste der Bedingungen muss mindestens eine vorhanden sein, bei der das Feld gleich "Kategorie" ist. Das Back-End antwortet mit 400 (BadRequest), wenn diese Bedingung nicht vorhanden ist.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition]
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -Beschreibung
-Die Beschreibung der Benachrichtigungs Ressource.
+Die Beschreibung der Warnungsressource.
 
 ```yaml
 Type: System.String
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAlert
-Ermöglicht es dem Benutzer, eine deaktivierte Aktivitätsprotokoll Benachrichtigung zu erstellen. Wenn diese Option nicht angegeben wurde, werden die Benachrichtigungen aktiviert.
+Ermöglicht dem Benutzer das Erstellen einer deaktivierten Aktivitätsprotokollbenachrichtigung. Wenn keine Benachrichtigungen angezeigt werden, werden die Benachrichtigungen aktiviert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -247,8 +247,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Legt die Inputobject-Tags-Eigenschaft des Aufrufs fest, um die Eigenschaften erforderlicher Name und Ressourcengruppenname zu extrahieren.
+### -InputObject
+Legt die Eigenschaft der InputObject-Tags des Aufrufs fest, um den erforderlichen Namen und die Eigenschaften des Ressourcengruppennamens zu extrahieren.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
@@ -262,8 +262,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Standort
-Der Speicherort, an dem die Aktivitätsprotokoll Benachrichtigung vorhanden ist.
+### -Location
+Der Ort, an dem die Aktivitätsprotokollbenachrichtigung vorhanden ist.
 
 ```yaml
 Type: System.String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name der Aktivitätsprotokoll Benachrichtigung.
+Der Name der Aktivitätsprotokollbenachrichtigung.
 
 ```yaml
 Type: System.String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Der Name der Ressourcengruppe, in der die Benachrichtigungs Ressource vorhanden sein wird.
+Der Name der Ressourcengruppe, in der die Warnungsressource vorhanden sein soll.
 
 ```yaml
 Type: System.String
@@ -319,8 +319,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Legt die Eigenschaft "resourcetag-Tags" des Aufrufs fest, um den erforderlichen Namen, Eigenschaften von Ressourcengruppenname zu extrahieren.
+### -ResourceId
+Legt die Eigenschaft der Tags "ResourceId" des Aufrufs fest, um die Eigenschaften des erforderlichen Namens und der Ressourcengruppe zu extrahieren.
 
 ```yaml
 Type: System.String
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Die Liste der Bereiche für die Aktivitätsprotokoll Benachrichtigung.
+Die Liste der Bereiche für die Aktivitätsprotokollbenachrichtigung.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Legt die Tags-Eigenschaft der Aktivitätsprotokoll-Warnungs Ressource fest.
+Legt die Tageigenschaft der Warnungsressource für das Aktivitätsprotokoll fest.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -400,8 +400,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -415,7 +415,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
@@ -431,38 +431,36 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Collections. Generic. List ' 1 [[System. String, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.List'1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Collections. Generic. List ' 1 [[Microsoft. Azure. Management. Monitor. Management. Models. ActivityLogAlertLeafCondition, Microsoft. Azure. PowerShell. Cmdlets. Monitor, Version = 1.0.0.0, Kultur = neutral, PublicKeyToken = null]]
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System. Collections. Generic. List ' 1 [[Microsoft. Azure. Management. Monitor. Management. Models. ActivityLogAlertActionGroup, Microsoft. Azure. PowerShell. Cmdlets. Monitor, Version = 1.0.0.0, Kultur = neutral, PublicKeyToken = null]]
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System. Collections. Generic. Dictionary ' 2 [[System. String, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e], [System. String, System. private. CoreLib, Version = 4.0.0.0, Kultur = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Enable-AzActivityLogAlert](./Enable-AzActivityLogAlert.md)
 
-[Deaktivieren-AzActivityLogAlert](./Disable-AzActivityLogAlert.md)
+[Disable-AzActivityLogAlert](./Disable-AzActivityLogAlert.md)
 
 [Get-AzActivityLogAlert](./Get-AzActivityLogAlert.md)
 
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
-[Neu – AzActionGroup](./New-AzActionGroup.md)
-
-[Neu – AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+[New-AzActionGroup](./New-AzActionGroup.md)
