@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Update
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlServerAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlServerAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: e46ddc53ff7abd7faeee908cf3689683f3575069
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 2362d8d11d60da4a1a0ea2433f44e07653423c0c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94166806"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408066"
 ---
 # Update-AzSqlServerAdvancedThreatProtectionSetting
 
-## Synopsis
-Legt eine erweiterte Bedrohungsschutz Einstellung auf einem Server fest.
+## SYNOPSIS
+Legt eine erweiterte Threat Protection-Einstellung auf einem Server fest.
 
-## Syntax
+## SYNTAX
 
 ```
 Update-AzSqlServerAdvancedThreatProtectionSetting [-PassThru] [-NotificationRecipientsEmails <String>]
@@ -27,33 +27,33 @@ Update-AzSqlServerAdvancedThreatProtectionSetting [-PassThru] [-NotificationReci
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **Update-AzSqlServerAdvancedThreatProtectionSetting** legt eine erweiterte Bedrohungsschutz Einstellung auf einem Azure SQL Server fest.
-Um erweiterten Bedrohungsschutz auf einem Server zu aktivieren, müssen auf diesem Server Überwachungseinstellungen aktiviert sein.
-Um dieses Cmdlet zu verwenden, geben Sie die Parameter *ResourceGroupName* und Servername an, um den Server zu identifizieren.
+## BESCHREIBUNG
+Das **Cmdlet "Update-AzSqlServerAdvancedThreatProtectionSetting"** legt eine erweiterte Threat Protection-Einstellung auf einem Azure SQL fest.
+Um advanced Threat Protection auf einem Server zu aktivieren, müssen auf diesem Server Überwachungseinstellungen aktiviert sein.
+Um dieses Cmdlet zu verwenden, geben Sie die *Parameter "ResourceGroupName"* und "ServerName" an, um den Server zu identifizieren.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Festlegen der erweiterten Bedrohungsschutz Einstellungen für eine Datenbank
+### Beispiel 1: Festlegen der erweiterten Threat Protection-Einstellungen für eine Datenbank
 ```powershell
 PS C:\>Update-AzSqlServerAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability","SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-Mit diesem Befehl werden die erweiterten Bedrohungsschutz Einstellungen für einen Server mit dem Namen "Server01" festgelegt.
+Mit diesem Befehl werden die erweiterten Threat Protection-Einstellungen für einen Server namens Server01 festgelegt.
 
 ### Beispiel 2
 
-Legt eine erweiterte Bedrohungsschutz Einstellung auf einem Server fest. automatisch
+Legt eine erweiterte Threat Protection-Einstellung auf einem Server fest. (automatisch generiert)
 
 ```powershell
-<!-- Aladdin Generated Example --> 
+<!-- Aladdin Generated Example -->
 Update-AzSqlServerAdvancedThreatProtectionSetting -EmailAdmins $false -ResourceGroupName 'ResourceGroup11' -RetentionInDays <UInt32> -ServerName 'Server01' -StorageAccountName 'mystorageAccount'
 ```
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -67,8 +67,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Emailadmins
-Gibt an, ob die erweiterten Bedrohungsschutz Einstellungen mithilfe von e-Mail mit Administratoren Kontakt aufnehmen.
+### -EmailAdmins
+Gibt an, ob die erweiterten Threat Protection-Einstellungen mithilfe von E-Mail Kontakt zu Administratoren haben.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -83,8 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDetectionType
-Gibt ein Array von Erkennungstypen an, die aus den Einstellungen ausgeschlossen werden sollen.
-Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Gibt ein Array von Erkennungstypen an, die aus den Einstellungen ausgeschlossen werden.
+Die zulässigen Werte für diesen Parameter sind:
 - Sql_Injection
 - Sql_Injection_Vulnerability
 - Access_Anomaly
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationRecipientsEmails
-Gibt eine durch Semikolons getrennte Liste der e-Mail-Adressen an, an die die Einstellungen Benachrichtigungen senden.
+Gibt eine durch Semikolons getrennte Liste von E-Mail-Adressen an, an die die Einstellungen Benachrichtigungen senden.
 
 ```yaml
 Type: System.String
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird mit diesem Cmdlet keine Ausgabe generiert.
+Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -163,7 +163,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Servername
+### -ServerName
 Gibt den Namen des Servers an.
 
 ```yaml
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Gibt den Namen des zu verwendenden speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht angegeben wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der erweiterten Bedrohungsschutz Einstellungen der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass eine Datenbank-Bedrohungs Erkennungseinstellungen definiert ist und dieser Parameter nicht angegeben wird, schlägt das Cmdlet fehl.
+Gibt den Namen des zu verwendenden Speicherkontos an. Platzhalter sind nicht zulässig. Dieser Parameter ist nicht erforderlich. Wenn dieser Parameter nicht bereitgestellt wird, verwendet das Cmdlet das Speicherkonto, das zuvor als Teil der erweiterten Threat Protection-Einstellungen der Datenbank definiert wurde. Wenn dies das erste Mal ist, dass einstellungen für die Erkennung einer Datenbankbedrohung definiert werden und dieser Parameter nicht bereitgestellt wird, kann das Cmdlet nicht verwendet werden.
 
 ```yaml
 Type: System.String
@@ -193,8 +193,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -208,7 +208,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -225,28 +225,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[System. Boolean, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. Commands. SQL. ThreatDetection. Model. detectiontype []
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]
 
-### System. Nullable ' 1 [[System. UInt32, System. private. CoreLib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. SQL. ThreatDetection. Model. ServerThreatDetectionsettingsModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.ServerThreatDetectionsettingsModel
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzSqlServerThreatDetectionsettings](./Get-AzSqlServerThreatDetectionsettings.md)
-
-[Remove-AzSqlServerThreatDetectionsettings](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
-
-[SQL-Datenbank-Dokumentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Datenbankdokumentation](https://docs.microsoft.com/azure/sql-database/)
