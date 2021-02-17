@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkWatcherFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkWatcherFlowLog.md
-ms.openlocfilehash: 284d88d4eb8dbe3a480911397790d5da35acb4a3
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: c59034dcd587c9fee3ce6a4a7699670c77ea372f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94003303"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401577"
 ---
-# <span data-ttu-id="cf422-101">Set-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="cf422-101">Set-AzNetworkWatcherFlowLog</span></span>
+# <span data-ttu-id="0d654-101">Set-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="0d654-101">Set-AzNetworkWatcherFlowLog</span></span>
 
-## <span data-ttu-id="cf422-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="cf422-102">SYNOPSIS</span></span>
-<span data-ttu-id="cf422-103">Update-Flow-Log-Ressource.</span><span class="sxs-lookup"><span data-stu-id="cf422-103">Updates flow log resource.</span></span>
+## <span data-ttu-id="0d654-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="0d654-102">SYNOPSIS</span></span>
+<span data-ttu-id="0d654-103">Aktualisiert die Flussprotokollressource.</span><span class="sxs-lookup"><span data-stu-id="0d654-103">Updates flow log resource.</span></span>
 
-## <span data-ttu-id="cf422-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cf422-104">SYNTAX</span></span>
+## <span data-ttu-id="0d654-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0d654-104">SYNTAX</span></span>
 
-### <span data-ttu-id="cf422-105">SetByName (Standard)</span><span class="sxs-lookup"><span data-stu-id="cf422-105">SetByName (Default)</span></span>
+### <span data-ttu-id="0d654-105">SetByName (Standard)</span><span class="sxs-lookup"><span data-stu-id="0d654-105">SetByName (Default)</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <String> -Name <String>
  -TargetResourceId <String> -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>]
@@ -27,7 +27,7 @@ Set-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="cf422-106">SetByResource</span></span>
+### <span data-ttu-id="0d654-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="0d654-106">SetByResource</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -TargetResourceId <String>
  -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>]
@@ -35,7 +35,7 @@ Set-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -T
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-107">SetByResourceWithTA</span><span class="sxs-lookup"><span data-stu-id="cf422-107">SetByResourceWithTA</span></span>
+### <span data-ttu-id="0d654-107">SetByResourceWithTA</span><span class="sxs-lookup"><span data-stu-id="0d654-107">SetByResourceWithTA</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -TargetResourceId <String>
  -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>]
@@ -44,7 +44,7 @@ Set-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -T
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-108">SetByNameWithTA</span><span class="sxs-lookup"><span data-stu-id="cf422-108">SetByNameWithTA</span></span>
+### <span data-ttu-id="0d654-108">SetByNameWithTA</span><span class="sxs-lookup"><span data-stu-id="0d654-108">SetByNameWithTA</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <String> -Name <String>
  -TargetResourceId <String> -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>]
@@ -53,7 +53,7 @@ Set-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-109">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="cf422-109">SetByLocation</span></span>
+### <span data-ttu-id="0d654-109">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="0d654-109">SetByLocation</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -61,7 +61,7 @@ Set-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId 
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-110">SetByLocationWithTA</span><span class="sxs-lookup"><span data-stu-id="cf422-110">SetByLocationWithTA</span></span>
+### <span data-ttu-id="0d654-110">SetByLocationWithTA</span><span class="sxs-lookup"><span data-stu-id="0d654-110">SetByLocationWithTA</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -70,7 +70,7 @@ Set-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-111">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="cf422-111">SetByResourceId</span></span>
+### <span data-ttu-id="0d654-111">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="0d654-111">SetByResourceId</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -ResourceId <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -78,7 +78,7 @@ Set-AzNetworkWatcherFlowLog -ResourceId <String> -TargetResourceId <String> -Sto
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-112">SetByResourceIdWithTA</span><span class="sxs-lookup"><span data-stu-id="cf422-112">SetByResourceIdWithTA</span></span>
+### <span data-ttu-id="0d654-112">SetByResourceIdWithTA</span><span class="sxs-lookup"><span data-stu-id="0d654-112">SetByResourceIdWithTA</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -ResourceId <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -87,18 +87,18 @@ Set-AzNetworkWatcherFlowLog -ResourceId <String> -TargetResourceId <String> -Sto
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cf422-113">SetByInputObject</span><span class="sxs-lookup"><span data-stu-id="cf422-113">SetByInputObject</span></span>
+### <span data-ttu-id="0d654-113">SetByInputObject</span><span class="sxs-lookup"><span data-stu-id="0d654-113">SetByInputObject</span></span>
 ```
 Set-AzNetworkWatcherFlowLog -InputObject <PSFlowLogResource> [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="cf422-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cf422-114">DESCRIPTION</span></span>
-<span data-ttu-id="cf422-115">Update-Flow-Log-Ressource.</span><span class="sxs-lookup"><span data-stu-id="cf422-115">Updates flow log resource.</span></span>
+## <span data-ttu-id="0d654-114">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="0d654-114">DESCRIPTION</span></span>
+<span data-ttu-id="0d654-115">Aktualisiert die Flussprotokollressource.</span><span class="sxs-lookup"><span data-stu-id="0d654-115">Updates flow log resource.</span></span>
 
-## <span data-ttu-id="cf422-116">Beispiele</span><span class="sxs-lookup"><span data-stu-id="cf422-116">EXAMPLES</span></span>
+## <span data-ttu-id="0d654-116">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="0d654-116">EXAMPLES</span></span>
 
-### <span data-ttu-id="cf422-117">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="cf422-117">Example 1</span></span>
+### <span data-ttu-id="0d654-117">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="0d654-117">Example 1</span></span>
 ```powershell
 PS C:\> $flowLog = Get-AzNetworkWatcherFlowLog -Location eastus -Name pstest
 PS C:\> $flowLog.Enabled = $true
@@ -106,12 +106,12 @@ PS C:\> $flowLog.Format.Version = 2
 PS C:\> $flowLog | Set-AzNetworkWatcherFlowLog -Force
 ```
 
-<span data-ttu-id="cf422-118">Name: pstest-ID:/Subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ERS/Microsoft. Network/networkWatchers/NetworkWatcher_eastus/flowlogs/pstest ETag: W/"e939e1e6-1509-4d7a-9e89-1ea532f6f222" ProvisioningState: succeeded Location: eastus TargetResourceId:/Subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/provide RS/Microsoft. Network/networkSecurityGroups/MyNSG Speicher-Nr:/Subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/Provider s/Microsoft. Storage/storageAccounts/mystorage aktiviert: true RetentionPolicy: {"Days": 0; "Enabled": false} Format: {"Typ": "JSON"; "Version": 2} FlowAnalyticsConfiguration: {}</span><span class="sxs-lookup"><span data-stu-id="cf422-118">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"e939e1e6-1509-4d7a-9e89-1ea532f6f222" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MyStorage Enabled                    : True RetentionPolicy            : { "Days": 0, "Enabled": false } Format                     : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : {}</span></span>
+<span data-ttu-id="0d654-118">Name: pstest-ID: /subscriptions/bbbbbb-bbbb-bbbb-bbbb-bbbb-bbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag : W/"e939e1e6-1509-4d7a-9e89-1ea532f6f222" ProvisioningState : Succeeded Location : eastus TargetResourceId : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbb/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId: /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbb-bbbbbbbbbb/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MyStorage Enabled: True RetentionPolicy : { "Days": 0, "Enabled": false } Format : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration: {}</span><span class="sxs-lookup"><span data-stu-id="0d654-118">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"e939e1e6-1509-4d7a-9e89-1ea532f6f222" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MyStorage Enabled                    : True RetentionPolicy            : { "Days": 0, "Enabled": false } Format                     : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : {}</span></span>
 
-## <span data-ttu-id="cf422-119">Parameter</span><span class="sxs-lookup"><span data-stu-id="cf422-119">PARAMETERS</span></span>
+## <span data-ttu-id="0d654-119">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0d654-119">PARAMETERS</span></span>
 
-### <span data-ttu-id="cf422-120">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="cf422-120">-DefaultProfile</span></span>
-<span data-ttu-id="cf422-121">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="cf422-121">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="0d654-120">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0d654-120">-DefaultProfile</span></span>
+<span data-ttu-id="0d654-121">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0d654-121">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: IAzureContextContainer
@@ -125,8 +125,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-122">-Aktiviert</span><span class="sxs-lookup"><span data-stu-id="cf422-122">-Enabled</span></span>
-<span data-ttu-id="cf422-123">Kennzeichnen, um die Fluss Protokollierung zu aktivieren/deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cf422-123">Flag to enable/disable flow logging.</span></span>
+### <span data-ttu-id="0d654-122">-Enabled</span><span class="sxs-lookup"><span data-stu-id="0d654-122">-Enabled</span></span>
+<span data-ttu-id="0d654-123">Zum Aktivieren/Deaktivieren der Flussprotokollierung kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="0d654-123">Flag to enable/disable flow logging.</span></span>
 
 ```yaml
 Type: Boolean
@@ -140,8 +140,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-124">-EnableRetention</span><span class="sxs-lookup"><span data-stu-id="cf422-124">-EnableRetention</span></span>
-<span data-ttu-id="cf422-125">Flag zum Aktivieren/Deaktivieren der Aufbewahrung.</span><span class="sxs-lookup"><span data-stu-id="cf422-125">Flag to enable/disable retention.</span></span>
+### <span data-ttu-id="0d654-124">-EnableRetention</span><span class="sxs-lookup"><span data-stu-id="0d654-124">-EnableRetention</span></span>
+<span data-ttu-id="0d654-125">Kennzeichnen, um die Aufbewahrung zu aktivieren/zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="0d654-125">Flag to enable/disable retention.</span></span>
 
 ```yaml
 Type: Boolean
@@ -155,8 +155,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-126">-EnableTrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="cf422-126">-EnableTrafficAnalytics</span></span>
-<span data-ttu-id="cf422-127">Flag zum Aktivieren/Deaktivieren von TrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="cf422-127">Flag to enable/disable TrafficAnalytics</span></span>
+### <span data-ttu-id="0d654-126">-EnableTrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="0d654-126">-EnableTrafficAnalytics</span></span>
+<span data-ttu-id="0d654-127">Kennzeichnen zum Aktivieren/Deaktivieren von TrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="0d654-127">Flag to enable/disable TrafficAnalytics</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -170,8 +170,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-128">-Force</span><span class="sxs-lookup"><span data-stu-id="cf422-128">-Force</span></span>
-<span data-ttu-id="cf422-129">Keine Bestätigung anfordern, wenn Sie eine Ressource überschreiben möchten</span><span class="sxs-lookup"><span data-stu-id="cf422-129">Do not ask for confirmation if you want to overwrite a resource</span></span>
+### <span data-ttu-id="0d654-128">-Force</span><span class="sxs-lookup"><span data-stu-id="0d654-128">-Force</span></span>
+<span data-ttu-id="0d654-129">Bestätigen Sie sie nicht, wenn Sie eine Ressource überschreiben möchten.</span><span class="sxs-lookup"><span data-stu-id="0d654-129">Do not ask for confirmation if you want to overwrite a resource</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -185,9 +185,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-130">-Formattyp</span><span class="sxs-lookup"><span data-stu-id="cf422-130">-FormatType</span></span>
-<span data-ttu-id="cf422-131">Der Dateityp des Fluss Protokolls.</span><span class="sxs-lookup"><span data-stu-id="cf422-131">The file type of flow log.</span></span>
-<span data-ttu-id="cf422-132">Der einzige unterstützte Wert ist jetzt "JSON".</span><span class="sxs-lookup"><span data-stu-id="cf422-132">The only supported value now is 'JSON'.</span></span>
+### <span data-ttu-id="0d654-130">-FormatType</span><span class="sxs-lookup"><span data-stu-id="0d654-130">-FormatType</span></span>
+<span data-ttu-id="0d654-131">Der Dateityp des Flussprotokolls.</span><span class="sxs-lookup"><span data-stu-id="0d654-131">The file type of flow log.</span></span>
+<span data-ttu-id="0d654-132">Der einzige unterstützte Wert ist jetzt "JSON".</span><span class="sxs-lookup"><span data-stu-id="0d654-132">The only supported value now is 'JSON'.</span></span>
 
 ```yaml
 Type: String
@@ -201,8 +201,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-133">-FormatVersion</span><span class="sxs-lookup"><span data-stu-id="cf422-133">-FormatVersion</span></span>
-<span data-ttu-id="cf422-134">Die Version (Revision) des Fluss Protokolls.</span><span class="sxs-lookup"><span data-stu-id="cf422-134">The version (revision) of the flow log.</span></span>
+### <span data-ttu-id="0d654-133">-FormatVersion</span><span class="sxs-lookup"><span data-stu-id="0d654-133">-FormatVersion</span></span>
+<span data-ttu-id="0d654-134">Die Version (Revision) des Flussprotokolls.</span><span class="sxs-lookup"><span data-stu-id="0d654-134">The version (revision) of the flow log.</span></span>
 
 ```yaml
 Type: Int32
@@ -216,8 +216,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-135">-Inputobject</span><span class="sxs-lookup"><span data-stu-id="cf422-135">-InputObject</span></span>
-<span data-ttu-id="cf422-136">Flow-Objekt.</span><span class="sxs-lookup"><span data-stu-id="cf422-136">Flow lof object.</span></span>
+### <span data-ttu-id="0d654-135">-InputObject</span><span class="sxs-lookup"><span data-stu-id="0d654-135">-InputObject</span></span>
+<span data-ttu-id="0d654-136">Flow lof-Objekt.</span><span class="sxs-lookup"><span data-stu-id="0d654-136">Flow lof object.</span></span>
 
 ```yaml
 Type: PSFlowLogResource
@@ -231,8 +231,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-137">-Standort</span><span class="sxs-lookup"><span data-stu-id="cf422-137">-Location</span></span>
-<span data-ttu-id="cf422-138">Der Speicherort des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="cf422-138">Location of the network watcher.</span></span>
+### <span data-ttu-id="0d654-137">-Location</span><span class="sxs-lookup"><span data-stu-id="0d654-137">-Location</span></span>
+<span data-ttu-id="0d654-138">Speicherort der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="0d654-138">Location of the network watcher.</span></span>
 
 ```yaml
 Type: String
@@ -246,8 +246,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-139">-Name</span><span class="sxs-lookup"><span data-stu-id="cf422-139">-Name</span></span>
-<span data-ttu-id="cf422-140">Der Name des Fluss Protokolls.</span><span class="sxs-lookup"><span data-stu-id="cf422-140">The flow log name.</span></span>
+### <span data-ttu-id="0d654-139">-Name</span><span class="sxs-lookup"><span data-stu-id="0d654-139">-Name</span></span>
+<span data-ttu-id="0d654-140">Der Name des Flussprotokolls.</span><span class="sxs-lookup"><span data-stu-id="0d654-140">The flow log name.</span></span>
 
 ```yaml
 Type: String
@@ -261,8 +261,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-141">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="cf422-141">-NetworkWatcher</span></span>
-<span data-ttu-id="cf422-142">Die Netzwerk Überwachungsressource.</span><span class="sxs-lookup"><span data-stu-id="cf422-142">The network watcher resource.</span></span>
+### <span data-ttu-id="0d654-141">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0d654-141">-NetworkWatcher</span></span>
+<span data-ttu-id="0d654-142">Die Netzwerk-Watcher-Ressource.</span><span class="sxs-lookup"><span data-stu-id="0d654-142">The network watcher resource.</span></span>
 
 ```yaml
 Type: PSNetworkWatcher
@@ -276,8 +276,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-143">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="cf422-143">-NetworkWatcherName</span></span>
-<span data-ttu-id="cf422-144">Der Name des Netzwerkmonitors.</span><span class="sxs-lookup"><span data-stu-id="cf422-144">The name of network watcher.</span></span>
+### <span data-ttu-id="0d654-143">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="0d654-143">-NetworkWatcherName</span></span>
+<span data-ttu-id="0d654-144">Der Name der Netzwerk-Watcher.</span><span class="sxs-lookup"><span data-stu-id="0d654-144">The name of network watcher.</span></span>
 
 ```yaml
 Type: String
@@ -291,8 +291,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-145">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="cf422-145">-ResourceGroupName</span></span>
-<span data-ttu-id="cf422-146">Der Name der Netzwerk Überwachungsressourcen Gruppe.</span><span class="sxs-lookup"><span data-stu-id="cf422-146">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="0d654-145">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="0d654-145">-ResourceGroupName</span></span>
+<span data-ttu-id="0d654-146">Der Name der Ressourcengruppe "Netzwerk-Watcher".</span><span class="sxs-lookup"><span data-stu-id="0d654-146">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: String
@@ -306,8 +306,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-147">-Resourcen-Nr</span><span class="sxs-lookup"><span data-stu-id="cf422-147">-ResourceId</span></span>
-<span data-ttu-id="cf422-148">FlowLog-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="cf422-148">FlowLog resource ID.</span></span>
+### <span data-ttu-id="0d654-147">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="0d654-147">-ResourceId</span></span>
+<span data-ttu-id="0d654-148">FlowLog-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="0d654-148">FlowLog resource ID.</span></span>
 
 ```yaml
 Type: String
@@ -321,8 +321,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-149">-RetentionPolicyDays</span><span class="sxs-lookup"><span data-stu-id="cf422-149">-RetentionPolicyDays</span></span>
-<span data-ttu-id="cf422-150">Die Anzahl der Tage, an denen Fluss Protokolldatensätze beibehalten werden sollen.</span><span class="sxs-lookup"><span data-stu-id="cf422-150">Number of days to retain flow log records.</span></span>
+### <span data-ttu-id="0d654-149">-RetentionPolicyDays</span><span class="sxs-lookup"><span data-stu-id="0d654-149">-RetentionPolicyDays</span></span>
+<span data-ttu-id="0d654-150">Die Anzahl der Tage, die die Flussprotokolldatensätze beibehalten werden müssen.</span><span class="sxs-lookup"><span data-stu-id="0d654-150">Number of days to retain flow log records.</span></span>
 
 ```yaml
 Type: Int32
@@ -336,8 +336,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-151">-Speicher-Nr</span><span class="sxs-lookup"><span data-stu-id="cf422-151">-StorageId</span></span>
-<span data-ttu-id="cf422-152">Die ID des speicherkontos, das zum Speichern des Fluss Protokolls verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="cf422-152">ID of the storage account which is used to store the flow log.</span></span>
+### <span data-ttu-id="0d654-151">-StorageId</span><span class="sxs-lookup"><span data-stu-id="0d654-151">-StorageId</span></span>
+<span data-ttu-id="0d654-152">DIE ID des Speicherkontos, das zum Speichern des Flussprotokolls verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0d654-152">ID of the storage account which is used to store the flow log.</span></span>
 
 ```yaml
 Type: String
@@ -351,8 +351,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-153">-Tag</span><span class="sxs-lookup"><span data-stu-id="cf422-153">-Tag</span></span>
-<span data-ttu-id="cf422-154">Eine Hashtable, die Ressourcen Tags darstellt.</span><span class="sxs-lookup"><span data-stu-id="cf422-154">A hashtable which represents resource tags.</span></span>
+### <span data-ttu-id="0d654-153">-Tag</span><span class="sxs-lookup"><span data-stu-id="0d654-153">-Tag</span></span>
+<span data-ttu-id="0d654-154">Eine Hashtable, die Ressourcentags darstellt.</span><span class="sxs-lookup"><span data-stu-id="0d654-154">A hashtable which represents resource tags.</span></span>
 
 ```yaml
 Type: Hashtable
@@ -366,8 +366,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-155">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="cf422-155">-TargetResourceId</span></span>
-<span data-ttu-id="cf422-156">Die ID der Netzwerksicherheitsgruppe, auf die das Fluss Protokoll angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="cf422-156">ID of network security group to which flow log will be applied.</span></span>
+### <span data-ttu-id="0d654-155">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="0d654-155">-TargetResourceId</span></span>
+<span data-ttu-id="0d654-156">DIE ID der Netzwerksicherheitsgruppe, auf die das Flussprotokoll angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="0d654-156">ID of network security group to which flow log will be applied.</span></span>
 
 ```yaml
 Type: String
@@ -381,8 +381,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-157">-TrafficAnalyticsInterval</span><span class="sxs-lookup"><span data-stu-id="cf422-157">-TrafficAnalyticsInterval</span></span>
-<span data-ttu-id="cf422-158">Das Intervall in Minuten, das entscheiden würde, wie häufig der TA-Dienst Flussanalyse ausführen soll.</span><span class="sxs-lookup"><span data-stu-id="cf422-158">The interval in minutes which would decide how frequently TA service should do flow analytics.</span></span>
+### <span data-ttu-id="0d654-157">-TrafficAnalyticsInterval</span><span class="sxs-lookup"><span data-stu-id="0d654-157">-TrafficAnalyticsInterval</span></span>
+<span data-ttu-id="0d654-158">Das Intervall in Minuten, das entscheiden würde, wie häufig der Ta-Dienst Flussanalysen erstellen soll.</span><span class="sxs-lookup"><span data-stu-id="0d654-158">The interval in minutes which would decide how frequently TA service should do flow analytics.</span></span>
 
 ```yaml
 Type: Int32
@@ -396,8 +396,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-159">-TrafficAnalyticsWorkspaceId</span><span class="sxs-lookup"><span data-stu-id="cf422-159">-TrafficAnalyticsWorkspaceId</span></span>
-<span data-ttu-id="cf422-160">Ressourcen-ID des angefügten Arbeitsbereichs</span><span class="sxs-lookup"><span data-stu-id="cf422-160">Resource Id of the attached workspace.</span></span>
+### <span data-ttu-id="0d654-159">-TrafficAnalyticsWorkspaceId</span><span class="sxs-lookup"><span data-stu-id="0d654-159">-TrafficAnalyticsWorkspaceId</span></span>
+<span data-ttu-id="0d654-160">Ressourcen-ID des angefügten Arbeitsbereichs.</span><span class="sxs-lookup"><span data-stu-id="0d654-160">Resource Id of the attached workspace.</span></span>
 
 ```yaml
 Type: String
@@ -411,8 +411,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-161">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="cf422-161">-Confirm</span></span>
-<span data-ttu-id="cf422-162">Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="cf422-162">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="0d654-161">-Confirm</span><span class="sxs-lookup"><span data-stu-id="0d654-161">-Confirm</span></span>
+<span data-ttu-id="0d654-162">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="0d654-162">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -426,9 +426,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-163">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="cf422-163">-WhatIf</span></span>
-<span data-ttu-id="cf422-164">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="cf422-164">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="cf422-165">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cf422-165">The cmdlet is not run.</span></span>
+### <span data-ttu-id="0d654-163">-Waswenn</span><span class="sxs-lookup"><span data-stu-id="0d654-163">-WhatIf</span></span>
+<span data-ttu-id="0d654-164">Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0d654-164">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="0d654-165">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0d654-165">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -442,81 +442,81 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cf422-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cf422-166">CommonParameters</span></span>
-<span data-ttu-id="cf422-167">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cf422-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cf422-168">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="cf422-168">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="0d654-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0d654-166">CommonParameters</span></span>
+<span data-ttu-id="0d654-167">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0d654-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0d654-168">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="0d654-168">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="cf422-169">Eingaben</span><span class="sxs-lookup"><span data-stu-id="cf422-169">INPUTS</span></span>
+## <span data-ttu-id="0d654-169">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="0d654-169">INPUTS</span></span>
 
-### <span data-ttu-id="cf422-170">Microsoft. Azure. Commands. Network. Models. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="cf422-170">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="0d654-170">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0d654-170">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-### <span data-ttu-id="cf422-171">System. String</span><span class="sxs-lookup"><span data-stu-id="cf422-171">System.String</span></span>
+### <span data-ttu-id="0d654-171">System.String</span><span class="sxs-lookup"><span data-stu-id="0d654-171">System.String</span></span>
 
-### <span data-ttu-id="cf422-172">Microsoft. Azure. Commands. Network. Models. PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="cf422-172">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
+### <span data-ttu-id="0d654-172">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="0d654-172">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
 
-## <span data-ttu-id="cf422-173">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="cf422-173">OUTPUTS</span></span>
+## <span data-ttu-id="0d654-173">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="0d654-173">OUTPUTS</span></span>
 
-### <span data-ttu-id="cf422-174">Microsoft. Azure. Commands. Network. Models. PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="cf422-174">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
+### <span data-ttu-id="0d654-174">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="0d654-174">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
 
-## <span data-ttu-id="cf422-175">Notizen</span><span class="sxs-lookup"><span data-stu-id="cf422-175">NOTES</span></span>
+## <span data-ttu-id="0d654-175">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="0d654-175">NOTES</span></span>
 
-## <span data-ttu-id="cf422-176">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="cf422-176">RELATED LINKS</span></span>
+## <span data-ttu-id="0d654-176">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="0d654-176">RELATED LINKS</span></span>
 
-[<span data-ttu-id="cf422-177">Neu – AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="cf422-177">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+[<span data-ttu-id="0d654-177">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0d654-177">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
 
-[<span data-ttu-id="cf422-178">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="cf422-178">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+[<span data-ttu-id="0d654-178">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0d654-178">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
 
-[<span data-ttu-id="cf422-179">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="cf422-179">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+[<span data-ttu-id="0d654-179">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="0d654-179">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
 
-[<span data-ttu-id="cf422-180">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="cf422-180">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+[<span data-ttu-id="0d654-180">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="0d654-180">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
 
-[<span data-ttu-id="cf422-181">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="cf422-181">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+[<span data-ttu-id="0d654-181">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="0d654-181">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
 
-[<span data-ttu-id="cf422-182">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="cf422-182">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+[<span data-ttu-id="0d654-182">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="0d654-182">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
 
-[<span data-ttu-id="cf422-183">Anfang-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="cf422-183">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[<span data-ttu-id="0d654-183">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="0d654-183">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[<span data-ttu-id="cf422-184">Neu – AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="cf422-184">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="0d654-184">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0d654-184">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="cf422-185">Neu – AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="cf422-185">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+[<span data-ttu-id="0d654-185">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="0d654-185">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
 
-[<span data-ttu-id="cf422-186">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="cf422-186">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="0d654-186">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0d654-186">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="cf422-187">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="cf422-187">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="0d654-187">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0d654-187">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="cf422-188">Stopp-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="cf422-188">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="0d654-188">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="0d654-188">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="cf422-189">Neu – AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="cf422-189">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+[<span data-ttu-id="0d654-189">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="0d654-189">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[<span data-ttu-id="cf422-190">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="cf422-190">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+[<span data-ttu-id="0d654-190">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="0d654-190">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
 
-[<span data-ttu-id="cf422-191">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="cf422-191">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+[<span data-ttu-id="0d654-191">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="0d654-191">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
 
-[<span data-ttu-id="cf422-192">Stopp-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-192">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="0d654-192">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-192">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-193">Anfang-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-193">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="0d654-193">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-193">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-194">Satz-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-194">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="0d654-194">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-194">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-195">Satz-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="cf422-195">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+[<span data-ttu-id="0d654-195">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="0d654-195">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[<span data-ttu-id="cf422-196">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-196">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="0d654-196">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-196">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-197">Neu – AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-197">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="0d654-197">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-197">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-198">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="cf422-198">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+[<span data-ttu-id="0d654-198">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="0d654-198">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
-[<span data-ttu-id="cf422-199">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="cf422-199">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+[<span data-ttu-id="0d654-199">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="0d654-199">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
 
-[<span data-ttu-id="cf422-200">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="cf422-200">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+[<span data-ttu-id="0d654-200">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="0d654-200">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 
-[<span data-ttu-id="cf422-201">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="cf422-201">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+[<span data-ttu-id="0d654-201">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="0d654-201">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[<span data-ttu-id="cf422-202">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="cf422-202">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport)
+[<span data-ttu-id="0d654-202">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="0d654-202">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[<span data-ttu-id="cf422-203">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="cf422-203">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+[<span data-ttu-id="0d654-203">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="0d654-203">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="cf422-204">Neu – AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="cf422-204">New-AzNetworkWatcherFlowLog</span></span>](./New-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="0d654-204">New-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="0d654-204">New-AzNetworkWatcherFlowLog</span></span>](./New-AzNetworkWatcherFlowLog.md)
 
-[<span data-ttu-id="cf422-205">Get-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="cf422-205">Get-AzNetworkWatcherFlowLog</span></span>](./Get-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="0d654-205">Get-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="0d654-205">Get-AzNetworkWatcherFlowLog</span></span>](./Get-AzNetworkWatcherFlowLog.md)
 
-[<span data-ttu-id="cf422-206">Remove-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="cf422-206">Remove-AzNetworkWatcherFlowLog</span></span>](./Remove-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="0d654-206">Remove-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="0d654-206">Remove-AzNetworkWatcherFlowLog</span></span>](./Remove-AzNetworkWatcherFlowLog.md)
