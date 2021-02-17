@@ -1,0 +1,335 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+Module Name: Az.Batch
+ms.assetid: C9E2D9EC-3B6A-492D-B183-9856185548CD
+online version: https://docs.microsoft.com/en-us/powershell/module/az.batch/get-azbatchnodefilecontent
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchNodeFileContent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Get-AzBatchNodeFileContent.md
+ms.openlocfilehash: 534919a404ad415963408816b78e9bbf1f349965
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100171516"
+---
+# <span data-ttu-id="bd3db-101">Get-AzBatchNodeFileContent</span><span class="sxs-lookup"><span data-stu-id="bd3db-101">Get-AzBatchNodeFileContent</span></span>
+
+## <span data-ttu-id="bd3db-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="bd3db-102">SYNOPSIS</span></span>
+<span data-ttu-id="bd3db-103">Ruft eine Batchknotendatei ab.</span><span class="sxs-lookup"><span data-stu-id="bd3db-103">Gets a Batch node file.</span></span>
+
+## <span data-ttu-id="bd3db-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="bd3db-104">SYNTAX</span></span>
+
+### <span data-ttu-id="bd3db-105">Task_Id_Path</span><span class="sxs-lookup"><span data-stu-id="bd3db-105">Task_Id_Path</span></span>
+```
+Get-AzBatchNodeFileContent -JobId <String> -TaskId <String> [-Path] <String> -DestinationPath <String>
+ [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="bd3db-106">Task_Id_Stream</span><span class="sxs-lookup"><span data-stu-id="bd3db-106">Task_Id_Stream</span></span>
+```
+Get-AzBatchNodeFileContent -JobId <String> -TaskId <String> [-Path] <String> -DestinationStream <Stream>
+ [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="bd3db-107">ComputeNode_Id_Path</span><span class="sxs-lookup"><span data-stu-id="bd3db-107">ComputeNode_Id_Path</span></span>
+```
+Get-AzBatchNodeFileContent [-PoolId] <String> [-ComputeNodeId] <String> [-Path] <String>
+ -DestinationPath <String> [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="bd3db-108">ComputeNode_Id_Stream</span><span class="sxs-lookup"><span data-stu-id="bd3db-108">ComputeNode_Id_Stream</span></span>
+```
+Get-AzBatchNodeFileContent [-PoolId] <String> [-ComputeNodeId] <String> [-Path] <String>
+ -DestinationStream <Stream> [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="bd3db-109">InputObject_Path</span><span class="sxs-lookup"><span data-stu-id="bd3db-109">InputObject_Path</span></span>
+```
+Get-AzBatchNodeFileContent [[-InputObject] <PSNodeFile>] -DestinationPath <String> [-ByteRangeStart <Int64>]
+ [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="bd3db-110">InputObject_Stream</span><span class="sxs-lookup"><span data-stu-id="bd3db-110">InputObject_Stream</span></span>
+```
+Get-AzBatchNodeFileContent [[-InputObject] <PSNodeFile>] -DestinationStream <Stream> [-ByteRangeStart <Int64>]
+ [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="bd3db-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="bd3db-111">DESCRIPTION</span></span>
+<span data-ttu-id="bd3db-112">Das **Cmdlet "Get-AzBatchNodeFileContent"** ruft eine Azure Batch-Knotendatei ab und speichert sie als Datei oder in einem Datenstrom.</span><span class="sxs-lookup"><span data-stu-id="bd3db-112">The **Get-AzBatchNodeFileContent** cmdlet gets an Azure Batch node file and saves it as a file or to a stream.</span></span>
+
+## <span data-ttu-id="bd3db-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="bd3db-113">EXAMPLES</span></span>
+
+### <span data-ttu-id="bd3db-114">Beispiel 1: Erhalten einer einer Aufgabe zugeordneten Batchknotendatei und Speichern der Datei</span><span class="sxs-lookup"><span data-stu-id="bd3db-114">Example 1: Get a Batch node file associated with a task and save the file</span></span>
+```
+PS C:\>Get-AzBatchNodeFileContent -JobId "Job01" -TaskId "Task01" -Path "StdOut.txt" -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-115">Dieser Befehl ruft die Knotendatei mit dem Namen "StdOut.txt" ab und speichert sie im E:\PowerShell\StdOut.txt dateipfad auf dem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="bd3db-115">This command gets the node file that is named StdOut.txt, and saves it to the E:\PowerShell\StdOut.txt file path on the local computer.</span></span>
+<span data-ttu-id="bd3db-116">Die StdOut.txt Knotendatei ist einer Aufgabe zugeordnet, die die ID Task01 für den Auftrag mit der ID Job01 enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-116">The StdOut.txt node file is associated with task that has the ID Task01 for the job that has the ID Job01.</span></span>
+<span data-ttu-id="bd3db-117">Verwenden Sie das Get-AzBatchAccountKey-Cmdlet, um der Variablen einen Kontext $Context zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="bd3db-117">Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.</span></span>
+
+### <span data-ttu-id="bd3db-118">Beispiel 2: Herunterladen einer Batchknotendatei und Speichern der Datei unter einem angegebenen Dateipfad mithilfe der Pipeline</span><span class="sxs-lookup"><span data-stu-id="bd3db-118">Example 2: Get a Batch node file and save it to a specified file path using the pipeline</span></span>
+```
+PS C:\>Get-AzBatchNodeFile -JobId "Job02" -TaskId "Task02" -Path "StdErr.txt" -BatchContext $Context | Get-AzBatchNodeFileContent -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-119">Dieser Befehl ruft die Knotendatei mit dem Namen StdErr.txt mit dem cmdlet Get-AzBatchNodeFile ab.</span><span class="sxs-lookup"><span data-stu-id="bd3db-119">This command gets the node file that is named StdErr.txt by using the Get-AzBatchNodeFile cmdlet.</span></span>
+<span data-ttu-id="bd3db-120">Der Befehl übergibt diese Datei mithilfe des Pipelineoperators an das aktuelle Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="bd3db-120">The command passes that file to the current cmdlet by using the pipeline operator.</span></span>
+<span data-ttu-id="bd3db-121">Das aktuelle Cmdlet speichert diese Datei im E:\PowerShell\StdOut.txt dateipfad auf dem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="bd3db-121">The current cmdlet saves that file to the E:\PowerShell\StdOut.txt file path on the local computer.</span></span>
+<span data-ttu-id="bd3db-122">Die StdOut.txt Knotendatei ist der Aufgabe zugeordnet, die die ID Task02 für den Auftrag mit der ID Job02 enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-122">The StdOut.txt node file is associated with the task that has the ID Task02 for the job that has the ID Job02.</span></span>
+
+### <span data-ttu-id="bd3db-123">Beispiel 3: Erhalten einer einer Aufgabe zugeordneten Batchknotendatei und Direktes an einen Datenstrom</span><span class="sxs-lookup"><span data-stu-id="bd3db-123">Example 3: Get a Batch node file associated with a task and direct it to a stream</span></span>
+```
+PS C:\>$Stream = New-Object -TypeName "System.IO.MemoryStream"
+PS C:\> Get-AzBatchNodeFileContent -JobId "Job03" -TaskId "Task11" -Path "StdOut.txt" -DestinationStream $Stream -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-124">Der erste Befehl erstellt einen Datenstrom mithilfe des New-Object-Cmdlets und speichert ihn dann in $Stream Variable.</span><span class="sxs-lookup"><span data-stu-id="bd3db-124">The first command creates a stream by using the New-Object cmdlet, and then stores it in the $Stream variable.</span></span>
+<span data-ttu-id="bd3db-125">Der zweite Befehl ruft die Knotendatei mit dem Namen "StdOut.txt" aus der Aufgabe ab, die die ID "Task11" für den Auftrag mit der ID "Job03" enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-125">The second command gets the node file that is named StdOut.txt from the task that has the ID Task11 for the job that has the ID Job03.</span></span>
+<span data-ttu-id="bd3db-126">Der Befehl leitet Dateiinhalte an den Datenstrom in $Stream.</span><span class="sxs-lookup"><span data-stu-id="bd3db-126">The command directs file contents to the stream in $Stream.</span></span>
+
+### <span data-ttu-id="bd3db-127">Beispiel 4: Herunterladen einer Knotendatei von einem Computeknoten und Speichern der Knotendatei</span><span class="sxs-lookup"><span data-stu-id="bd3db-127">Example 4: Get a node file from a compute node and save it</span></span>
+```
+PS C:\>Get-AzBatchNodeFileContent -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "Startup\StdOut.txt" -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-128">Dieser Befehl ruft die Knotendatei Startup\StdOut.txt von dem Computeknoten ab, der die ID ComputeNode01 im Pool mit dem ID Pool01 enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-128">This command gets the node file Startup\StdOut.txt from the compute node that has the ID ComputeNode01 in the pool that has the ID Pool01.</span></span>
+<span data-ttu-id="bd3db-129">Der Befehl speichert die Datei im E:\PowerShell\StdOut.txt dateipfad auf dem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="bd3db-129">The command saves the file to the E:\PowerShell\StdOut.txt file path on the local computer.</span></span>
+
+### <span data-ttu-id="bd3db-130">Beispiel 5: Herunterladen einer Knotendatei von einem Computeknoten und Speichern der Knotendatei mithilfe der Pipeline</span><span class="sxs-lookup"><span data-stu-id="bd3db-130">Example 5: Get a node file from a compute node and save it by using the pipeline</span></span>
+```
+PS C:\>Get-AzBatchNodeFile -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "Startup\StdOut.txt" -BatchContext $Context | Get-AzBatchNodeFileContent -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-131">Mit diesem Befehl wird die Knotendatei Startup\StdOut.txt mit Get-AzBatchNodeFile des Rechenknotens mit der ID ComputeNode01 ruft.</span><span class="sxs-lookup"><span data-stu-id="bd3db-131">This command gets the node file Startup\StdOut.txt by using Get-AzBatchNodeFile from the compute node that has the ID ComputeNode01.</span></span>
+<span data-ttu-id="bd3db-132">Der Rechenknoten befindet sich in dem Pool mit dem ID Pool01.</span><span class="sxs-lookup"><span data-stu-id="bd3db-132">The compute node is in the pool that has the ID Pool01.</span></span>
+<span data-ttu-id="bd3db-133">Der Befehl übergibt diese Knotendatei an das aktuelle Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="bd3db-133">The command passes that node file to the current cmdlet.</span></span>
+<span data-ttu-id="bd3db-134">Dieses Cmdlet speichert die Datei im E:\PowerShell\StdOut.txt dateipfad auf dem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="bd3db-134">That cmdlet saves the file to the E:\PowerShell\StdOut.txt file path on the local computer.</span></span>
+
+### <span data-ttu-id="bd3db-135">Beispiel 6: Herunterladen einer Knotendatei von einem Computeknoten und Direktes an einen Datenstrom</span><span class="sxs-lookup"><span data-stu-id="bd3db-135">Example 6: Get a node file from a compute node and direct it to a stream</span></span>
+```
+PS C:\>$Stream = New-Object -TypeName "System.IO.MemoryStream"
+PS C:\> Get-AzBatchNodeFileContent -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "startup\stdout.txt" -DestinationStream $Stream -BatchContext $Context
+```
+
+<span data-ttu-id="bd3db-136">Der erste Befehl erstellt einen Datenstrom mithilfe des New-Object-Cmdlets und speichert ihn dann in $Stream Variable.</span><span class="sxs-lookup"><span data-stu-id="bd3db-136">The first command creates a stream by using the New-Object cmdlet, and then stores it in the $Stream variable.</span></span>
+<span data-ttu-id="bd3db-137">Der zweite Befehl ruft die Knotendatei mit dem Namen StdOut.txt aus dem Computeknoten ab, der die ID ComputeNode01 im Pool mit dem ID Pool01 enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-137">The second command gets the node file that is named StdOut.txt from the compute node that has the ID ComputeNode01 in the pool that has the ID Pool01.</span></span>
+<span data-ttu-id="bd3db-138">Der Befehl leitet Dateiinhalte an den Datenstrom in $Stream.</span><span class="sxs-lookup"><span data-stu-id="bd3db-138">The command directs file contents to the stream in $Stream.</span></span>
+
+## <span data-ttu-id="bd3db-139">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="bd3db-139">PARAMETERS</span></span>
+
+### <span data-ttu-id="bd3db-140">-BatchContext</span><span class="sxs-lookup"><span data-stu-id="bd3db-140">-BatchContext</span></span>
+<span data-ttu-id="bd3db-141">Gibt die **BatchAccountContext-Instanz** an, die von diesem Cmdlet für die Interaktion mit dem Batchdienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="bd3db-141">Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.</span></span>
+<span data-ttu-id="bd3db-142">Wenn Sie das cmdlet Get-AzBatchAccount BatchAccountContext verwenden, wird die Azure Active Directory-Authentifizierung bei der Interaktion mit dem Batchdienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="bd3db-142">If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service.</span></span> <span data-ttu-id="bd3db-143">Wenn Sie stattdessen die Authentifizierung mit freigegebenen Schlüsseln verwenden möchten, verwenden Sie das cmdlet Get-AzBatchAccountKey, um ein BatchAccountContext-Objekt mit aufgefüllten Zugriffstasten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="bd3db-143">To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.</span></span> <span data-ttu-id="bd3db-144">Bei der Authentifizierung mit freigegebenen Schlüsseln wird standardmäßig der primäre Zugriffsschlüssel verwendet.</span><span class="sxs-lookup"><span data-stu-id="bd3db-144">When using shared key authentication, the primary access key is used by default.</span></span> <span data-ttu-id="bd3db-145">Wenn Sie den zu verwendende Schlüssel ändern möchten, legen Sie die Eigenschaft "BatchAccountContext.KeyInUse" festgelegt.</span><span class="sxs-lookup"><span data-stu-id="bd3db-145">To change the key to use, set the BatchAccountContext.KeyInUse property.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-146">-ByteRangeEnd</span><span class="sxs-lookup"><span data-stu-id="bd3db-146">-ByteRangeEnd</span></span>
+<span data-ttu-id="bd3db-147">Das Ende des byte-Bereichs, der heruntergeladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="bd3db-147">The end of the byte range to be downloaded.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int64]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-148">-ByteRangeStart</span><span class="sxs-lookup"><span data-stu-id="bd3db-148">-ByteRangeStart</span></span>
+<span data-ttu-id="bd3db-149">Der Anfang des byte-Bereichs, der heruntergeladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="bd3db-149">The start of the byte range to be downloaded.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int64]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-150">-ComputeNodeId</span><span class="sxs-lookup"><span data-stu-id="bd3db-150">-ComputeNodeId</span></span>
+<span data-ttu-id="bd3db-151">Gibt die ID des Computeknotens an, der die Knotendatei enthält, die von diesem Cmdlet zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="bd3db-151">Specifies the ID of the compute node that contains the node file that this cmdlet returns.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ComputeNode_Id_Path, ComputeNode_Id_Stream
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-152">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="bd3db-152">-DefaultProfile</span></span>
+<span data-ttu-id="bd3db-153">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bd3db-153">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-154">-DestinationPath</span><span class="sxs-lookup"><span data-stu-id="bd3db-154">-DestinationPath</span></span>
+<span data-ttu-id="bd3db-155">Gibt den Dateipfad an, unter dem dieses Cmdlet die Knotendatei speichert.</span><span class="sxs-lookup"><span data-stu-id="bd3db-155">Specifies the file path where this cmdlet saves the node file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Task_Id_Path, ComputeNode_Id_Path, InputObject_Path
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-156">-DestinationStream</span><span class="sxs-lookup"><span data-stu-id="bd3db-156">-DestinationStream</span></span>
+<span data-ttu-id="bd3db-157">Gibt den Datenstrom an, in den dieses Cmdlet den Inhalt der Knotendatei schreibt.</span><span class="sxs-lookup"><span data-stu-id="bd3db-157">Specifies the stream into which this cmdlet writes the node file contents.</span></span>
+<span data-ttu-id="bd3db-158">Dieser Datenstrom wird mit diesem Cmdlet nicht geschlossen oder zurückspulen.</span><span class="sxs-lookup"><span data-stu-id="bd3db-158">This cmdlet does not close or rewind this stream.</span></span>
+
+```yaml
+Type: System.IO.Stream
+Parameter Sets: Task_Id_Stream, ComputeNode_Id_Stream, InputObject_Stream
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-159">-InputObject</span><span class="sxs-lookup"><span data-stu-id="bd3db-159">-InputObject</span></span>
+<span data-ttu-id="bd3db-160">Gibt die Datei an, die dieses Cmdlet erhält, als **PSNodeFile-Objekt.**</span><span class="sxs-lookup"><span data-stu-id="bd3db-160">Specifies the file that this cmdlet gets, as a **PSNodeFile** object.</span></span>
+<span data-ttu-id="bd3db-161">Verwenden Sie zum Abrufen eines Knotendateiobjekts das Get-AzBatchNodeFile-Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="bd3db-161">To obtain a node file object, use the Get-AzBatchNodeFile cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Batch.Models.PSNodeFile
+Parameter Sets: InputObject_Path, InputObject_Stream
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-162">-JobId</span><span class="sxs-lookup"><span data-stu-id="bd3db-162">-JobId</span></span>
+<span data-ttu-id="bd3db-163">Gibt die ID des Auftrags an, der die Zielaufgabe enthält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-163">Specifies the ID of the job that contains the target task.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Task_Id_Path, Task_Id_Stream
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-164">-Path</span><span class="sxs-lookup"><span data-stu-id="bd3db-164">-Path</span></span>
+<span data-ttu-id="bd3db-165">Der Pfad der Knotendatei, die heruntergeladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="bd3db-165">The path of the node file to download.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Task_Id_Path, Task_Id_Stream, ComputeNode_Id_Path, ComputeNode_Id_Stream
+Aliases: Name
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-166">-PoolId</span><span class="sxs-lookup"><span data-stu-id="bd3db-166">-PoolId</span></span>
+<span data-ttu-id="bd3db-167">Gibt die ID des Pools an, der den Rechenknoten mit der Knotendatei enthält, die dieses Cmdlet erhält.</span><span class="sxs-lookup"><span data-stu-id="bd3db-167">Specifies the ID of the pool that contains the compute node that contains the node file that this cmdlet gets.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ComputeNode_Id_Path, ComputeNode_Id_Stream
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-168">-TaskId</span><span class="sxs-lookup"><span data-stu-id="bd3db-168">-TaskId</span></span>
+<span data-ttu-id="bd3db-169">Gibt die ID des Vorgangs an.</span><span class="sxs-lookup"><span data-stu-id="bd3db-169">Specifies the ID of the task.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: Task_Id_Path, Task_Id_Stream
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bd3db-170">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="bd3db-170">CommonParameters</span></span>
+<span data-ttu-id="bd3db-171">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="bd3db-171">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bd3db-172">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="bd3db-172">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="bd3db-173">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="bd3db-173">INPUTS</span></span>
+
+### <span data-ttu-id="bd3db-174">System.String</span><span class="sxs-lookup"><span data-stu-id="bd3db-174">System.String</span></span>
+
+### <span data-ttu-id="bd3db-175">Microsoft.Azure.Commands.Batch. Models.PSNodeFile</span><span class="sxs-lookup"><span data-stu-id="bd3db-175">Microsoft.Azure.Commands.Batch.Models.PSNodeFile</span></span>
+
+### <span data-ttu-id="bd3db-176">Microsoft.Azure.Commands.Batch.BatchAccountContext</span><span class="sxs-lookup"><span data-stu-id="bd3db-176">Microsoft.Azure.Commands.Batch.BatchAccountContext</span></span>
+
+## <span data-ttu-id="bd3db-177">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="bd3db-177">OUTPUTS</span></span>
+
+### <span data-ttu-id="bd3db-178">System.Void</span><span class="sxs-lookup"><span data-stu-id="bd3db-178">System.Void</span></span>
+
+## <span data-ttu-id="bd3db-179">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="bd3db-179">NOTES</span></span>
+
+## <span data-ttu-id="bd3db-180">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="bd3db-180">RELATED LINKS</span></span>
+
+[<span data-ttu-id="bd3db-181">Get-AzBatchAccountKey</span><span class="sxs-lookup"><span data-stu-id="bd3db-181">Get-AzBatchAccountKey</span></span>](./Get-AzBatchAccountKey.md)
+
+[<span data-ttu-id="bd3db-182">Get-AzBatchNodeFile</span><span class="sxs-lookup"><span data-stu-id="bd3db-182">Get-AzBatchNodeFile</span></span>](./Get-AzBatchNodeFile.md)
+
+[<span data-ttu-id="bd3db-183">Azure-Batch-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="bd3db-183">Azure Batch Cmdlets</span></span>](/powershell/module/Az.Batch/)
