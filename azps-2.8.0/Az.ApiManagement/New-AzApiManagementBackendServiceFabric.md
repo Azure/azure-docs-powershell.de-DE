@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
-ms.openlocfilehash: 9178efa364b7655e0a96f68a81399807435be4d5
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 744889e022301951bbc9ba2895eb5750f85925d0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658265"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401656"
 ---
 # New-AzApiManagementBackendServiceFabric
 
-## Synopsis
+## SYNOPSIS
 Erstellt ein Objekt von `PsApiManagementServiceFabric`
 
-## Syntax
+## SYNTAX
 
 ```
 New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCertificateThumbprint <String>
@@ -25,13 +25,13 @@ New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCe
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 
-Das Cmdlet **New-AzApiManagementBackendServiceFabric** erstellt ein Objekt `PsApiManagementServiceFabric` , das in Cmdlet **New-AzApiManagementBackend** und **setAzApiManagementBackend** verwendet werden soll.
+Das **Cmdlet "New-AzApiManagementBackendServiceFabric"** erstellt ein Objekt, das in dem `PsApiManagementServiceFabric` Cmdlet **"New-AzApiManagementBackend"** und **"Set-AzApiManagementBackend"** verwendet werden soll.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erstellen eines Back-End-Dienst Fabric-In-Memory-Objekts
+### Example 1: Create a Backend Service Fabric In-Memory Object
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>$ManagementEndpoints = 'https://sfbackend-01.net:443', 'https://sfbackend-02.net:443'
@@ -41,12 +41,12 @@ PS C:\>$serviceFabric = New-AzApiManagementBackendServiceFabric -ManagementEndpo
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -ServiceFabricCluster $serviceFabric -Description "service fabric backend" -PassThru
 ```
 
-Erstellen eines Back-End-Dienst Fabric-Vertrags
+Creates a Backend Service Fabric Contract
 
-## Parameter
+## PARAMETERS
 
 ### -ClientCertificateThumbprint
-Fingerabdruck des Client Zertifikats für den Verwaltungsendpunkt
+Fingerabdruck des Clientzertifikats für den Verwaltungsendpunkt.
 Dieser Parameter ist erforderlich.
 
 ```yaml
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementEndpoint
-Endpunkte der Service Fabric-Cluster Verwaltung
+Service Fabric Cluster management Endpoints.
 Dieser Parameter ist erforderlich.
 
 ```yaml
@@ -93,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionResolutionRetry
-Die maximale Anzahl von Wiederholungen beim Auflösen einer Service Fabric-Partition.
-Dieser Parameter ist optional und der Standardwert 5.
+Maximum number of retries when resolving a Service Fabric partition.
+Dieser Parameter ist optional, und der Standardwert ist 5.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerCertificateThumbprint
-Fingerabdruck des Zertifikat-Cluster Verwaltungsdiensts wird für die TLS-Kommunikation verwendet. Dieser Parameter ist optional.
+Fingerabdruck des Zertifikatclusterverwaltungsdiensts, der für die tls-Kommunikation verwendet wird. Dieser Parameter ist optional.
 
 ```yaml
 Type: System.String[]
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerX509Name
-Server-X509-Zertifikatsnamen-Sammlung.
+Server X509 Certificate Names Collection.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -140,26 +140,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementServiceFabric
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackend](./New-AzApiManagementBackend.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[Neu – AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
 
-[Satz-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
 
 [Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
