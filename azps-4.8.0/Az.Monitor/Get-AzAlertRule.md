@@ -6,71 +6,71 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
-ms.openlocfilehash: f515d7db58e75cc916478e07edb4e34233201a4d
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 61c50e59dfb02a454c9f513f4f5dac277a4ee28d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94009208"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409136"
 ---
-# <span data-ttu-id="6a04d-101">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-101">Get-AzAlertRule</span></span>
+# <span data-ttu-id="c978c-101">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="c978c-101">Get-AzAlertRule</span></span>
 
-## <span data-ttu-id="6a04d-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="6a04d-102">SYNOPSIS</span></span>
-<span data-ttu-id="6a04d-103">Ruft Warnungsregeln ab.</span><span class="sxs-lookup"><span data-stu-id="6a04d-103">Gets alert rules.</span></span>
+## <span data-ttu-id="c978c-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="c978c-102">SYNOPSIS</span></span>
+<span data-ttu-id="c978c-103">Ruft Benachrichtigungsregeln ab.</span><span class="sxs-lookup"><span data-stu-id="c978c-103">Gets alert rules.</span></span>
 
-## <span data-ttu-id="6a04d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6a04d-104">SYNTAX</span></span>
+## <span data-ttu-id="c978c-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c978c-104">SYNTAX</span></span>
 
-### <span data-ttu-id="6a04d-105">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="6a04d-105">GetByResourceGroup</span></span>
+### <span data-ttu-id="c978c-105">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="c978c-105">GetByResourceGroup</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="6a04d-106">GetByName</span><span class="sxs-lookup"><span data-stu-id="6a04d-106">GetByName</span></span>
+### <span data-ttu-id="c978c-106">GetByName</span><span class="sxs-lookup"><span data-stu-id="c978c-106">GetByName</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> -Name <String> [-DetailedOutput]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="6a04d-107">GetByResourceUri</span><span class="sxs-lookup"><span data-stu-id="6a04d-107">GetByResourceUri</span></span>
+### <span data-ttu-id="c978c-107">GetByResourceUri</span><span class="sxs-lookup"><span data-stu-id="c978c-107">GetByResourceUri</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-DetailedOutput]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="6a04d-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6a04d-108">DESCRIPTION</span></span>
-<span data-ttu-id="6a04d-109">Das Cmdlet " **Get-AzAlertRule** " Ruft eine Warnungsregel anhand des Namens oder des URIs oder aller Warnungsregeln einer angegebenen Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="6a04d-109">The **Get-AzAlertRule** cmdlet gets an alert rule by its name or URI, or all alert rules from a specified resource group.</span></span>
+## <span data-ttu-id="c978c-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="c978c-108">DESCRIPTION</span></span>
+<span data-ttu-id="c978c-109">Das **Cmdlet "Get-AzAlertRule"** ruft eine Warnungsregel nach name oder URI oder allen Warnungsregeln aus einer angegebenen Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="c978c-109">The **Get-AzAlertRule** cmdlet gets an alert rule by its name or URI, or all alert rules from a specified resource group.</span></span>
 
-## <span data-ttu-id="6a04d-110">Beispiele</span><span class="sxs-lookup"><span data-stu-id="6a04d-110">EXAMPLES</span></span>
+## <span data-ttu-id="c978c-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="c978c-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="6a04d-111">Beispiel 1: Abrufen von Warnungsregeln für eine Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="6a04d-111">Example 1: Get alert rules for a resource group</span></span>
+### <span data-ttu-id="c978c-111">Beispiel 1: Erhalten von Warnungsregeln für eine Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="c978c-111">Example 1: Get alert rules for a resource group</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
 ```
 
-<span data-ttu-id="6a04d-112">Mit diesem Befehl werden alle Warnungsregeln für die Ressourcengruppe Default-Web-centralus abgerufen.</span><span class="sxs-lookup"><span data-stu-id="6a04d-112">This command gets all of the alert rules for the resource group named Default-Web-CentralUS.</span></span>
-<span data-ttu-id="6a04d-113">Die Ausgabe enthält keine Details zu den Regeln, da der *DetailedOutput* -Parameter nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="6a04d-113">The output does not contain details about the rules because the *DetailedOutput* parameter is not specified.</span></span>
+<span data-ttu-id="c978c-112">Dieser Befehl ruft alle Warnungsregeln für die Ressourcengruppe "Default-Web-CentralUS" ab.</span><span class="sxs-lookup"><span data-stu-id="c978c-112">This command gets all of the alert rules for the resource group named Default-Web-CentralUS.</span></span>
+<span data-ttu-id="c978c-113">Die Ausgabe enthält keine Details zu den Regeln, da der *Parameter "DetailedOutput"* nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="c978c-113">The output does not contain details about the rules because the *DetailedOutput* parameter is not specified.</span></span>
 
-### <span data-ttu-id="6a04d-114">Beispiel 2: Abrufen einer Warnungsregel nach Namen</span><span class="sxs-lookup"><span data-stu-id="6a04d-114">Example 2: Get an alert rule by name</span></span>
+### <span data-ttu-id="c978c-114">Beispiel 2: Erhalten einer Warnungsregel nach Name</span><span class="sxs-lookup"><span data-stu-id="c978c-114">Example 2: Get an alert rule by name</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
 ```
 
-<span data-ttu-id="6a04d-115">Dieser Befehl ruft die Warnungsregel mit dem Namen myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span><span class="sxs-lookup"><span data-stu-id="6a04d-115">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
-<span data-ttu-id="6a04d-116">Da der *DetailedOutput* -Parameter nicht angegeben wird, enthält die Ausgabe nur grundlegende Informationen zur Warnungsregel.</span><span class="sxs-lookup"><span data-stu-id="6a04d-116">Because the *DetailedOutput* parameter is not specified, the output contains only basic information about the alert rule.</span></span>
+<span data-ttu-id="c978c-115">Dieser Befehl ruft die Warnungsregel namens "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" ab.</span><span class="sxs-lookup"><span data-stu-id="c978c-115">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
+<span data-ttu-id="c978c-116">Da der *Parameter "DetailedOutput"* nicht angegeben wird, enthält die Ausgabe nur grundlegende Informationen zur Warnungsregel.</span><span class="sxs-lookup"><span data-stu-id="c978c-116">Because the *DetailedOutput* parameter is not specified, the output contains only basic information about the alert rule.</span></span>
 
-### <span data-ttu-id="6a04d-117">Beispiel 3: Abrufen einer Warnungsregel nach Namen mit detaillierter Ausgabe</span><span class="sxs-lookup"><span data-stu-id="6a04d-117">Example 3: Get an alert rule by name with detailed output</span></span>
+### <span data-ttu-id="c978c-117">Beispiel 3: Erhalten einer Warnungsregel nach Namen mit detaillierter Ausgabe</span><span class="sxs-lookup"><span data-stu-id="c978c-117">Example 3: Get an alert rule by name with detailed output</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
 ```
 
-<span data-ttu-id="6a04d-118">Dieser Befehl ruft die Warnungsregel mit dem Namen myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span><span class="sxs-lookup"><span data-stu-id="6a04d-118">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
-<span data-ttu-id="6a04d-119">Der *DetailedOutput* -Parameter wird angegeben, sodass die Ausgabe detailliert ist.</span><span class="sxs-lookup"><span data-stu-id="6a04d-119">The *DetailedOutput* parameter is specified, so the output is detailed.</span></span>
+<span data-ttu-id="c978c-118">Dieser Befehl ruft die Warnungsregel namens "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" ab.</span><span class="sxs-lookup"><span data-stu-id="c978c-118">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
+<span data-ttu-id="c978c-119">Der *Parameter "DetailedOutput"* wird angegeben, sodass die Ausgabe detailliert ist.</span><span class="sxs-lookup"><span data-stu-id="c978c-119">The *DetailedOutput* parameter is specified, so the output is detailed.</span></span>
 
-## <span data-ttu-id="6a04d-120">Parameter</span><span class="sxs-lookup"><span data-stu-id="6a04d-120">PARAMETERS</span></span>
+## <span data-ttu-id="c978c-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c978c-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="6a04d-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="6a04d-121">-DefaultProfile</span></span>
-<span data-ttu-id="6a04d-122">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="6a04d-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="c978c-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c978c-121">-DefaultProfile</span></span>
+<span data-ttu-id="c978c-122">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="c978c-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -84,8 +84,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a04d-123">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="6a04d-123">-DetailedOutput</span></span>
-<span data-ttu-id="6a04d-124">Zeigt alle Details in der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="6a04d-124">Displays full details in the output.</span></span>
+### <span data-ttu-id="c978c-123">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="c978c-123">-DetailedOutput</span></span>
+<span data-ttu-id="c978c-124">Zeigt alle Details in der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="c978c-124">Displays full details in the output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a04d-125">-Name</span><span class="sxs-lookup"><span data-stu-id="6a04d-125">-Name</span></span>
-<span data-ttu-id="6a04d-126">Gibt den Namen der abzurufenden Warnungsregel an.</span><span class="sxs-lookup"><span data-stu-id="6a04d-126">Specifies the name of the alert rule to get.</span></span>
+### <span data-ttu-id="c978c-125">-Name</span><span class="sxs-lookup"><span data-stu-id="c978c-125">-Name</span></span>
+<span data-ttu-id="c978c-126">Gibt den Namen der zu erhaltenden Warnungsregel an.</span><span class="sxs-lookup"><span data-stu-id="c978c-126">Specifies the name of the alert rule to get.</span></span>
 
 ```yaml
 Type: System.String
@@ -114,8 +114,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a04d-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="6a04d-127">-ResourceGroupName</span></span>
-<span data-ttu-id="6a04d-128">Gibt den Namen der Ressourcengruppe an.</span><span class="sxs-lookup"><span data-stu-id="6a04d-128">Specifies the name of the resource group.</span></span>
+### <span data-ttu-id="c978c-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="c978c-127">-ResourceGroupName</span></span>
+<span data-ttu-id="c978c-128">Gibt den Namen der Ressourcengruppe an.</span><span class="sxs-lookup"><span data-stu-id="c978c-128">Specifies the name of the resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -129,8 +129,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a04d-129">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="6a04d-129">-TargetResourceId</span></span>
-<span data-ttu-id="6a04d-130">Gibt die ID der Zielressource an.</span><span class="sxs-lookup"><span data-stu-id="6a04d-130">Specifies the ID of the target resource.</span></span>
+### <span data-ttu-id="c978c-129">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="c978c-129">-TargetResourceId</span></span>
+<span data-ttu-id="c978c-130">Gibt die ID der Zielressource an.</span><span class="sxs-lookup"><span data-stu-id="c978c-130">Specifies the ID of the target resource.</span></span>
 
 ```yaml
 Type: System.String
@@ -144,31 +144,30 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a04d-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="6a04d-131">CommonParameters</span></span>
-<span data-ttu-id="6a04d-132">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="6a04d-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="6a04d-133">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="6a04d-133">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="c978c-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c978c-131">CommonParameters</span></span>
+<span data-ttu-id="c978c-132">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c978c-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c978c-133">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="c978c-133">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="6a04d-134">Eingaben</span><span class="sxs-lookup"><span data-stu-id="6a04d-134">INPUTS</span></span>
+## <span data-ttu-id="c978c-134">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="c978c-134">INPUTS</span></span>
 
-### <span data-ttu-id="6a04d-135">System. String</span><span class="sxs-lookup"><span data-stu-id="6a04d-135">System.String</span></span>
+### <span data-ttu-id="c978c-135">System.String</span><span class="sxs-lookup"><span data-stu-id="c978c-135">System.String</span></span>
 
-### <span data-ttu-id="6a04d-136">System. Management. Automation. Switchparameter</span><span class="sxs-lookup"><span data-stu-id="6a04d-136">System.Management.Automation.SwitchParameter</span></span>
+### <span data-ttu-id="c978c-136">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="c978c-136">System.Management.Automation.SwitchParameter</span></span>
 
-## <span data-ttu-id="6a04d-137">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="6a04d-137">OUTPUTS</span></span>
+## <span data-ttu-id="c978c-137">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="c978c-137">OUTPUTS</span></span>
 
-### <span data-ttu-id="6a04d-138">Microsoft. Azure. Commands. Insights. OutputClasses. PSAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span></span>
+### <span data-ttu-id="c978c-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span><span class="sxs-lookup"><span data-stu-id="c978c-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span></span>
 
-## <span data-ttu-id="6a04d-139">Notizen</span><span class="sxs-lookup"><span data-stu-id="6a04d-139">NOTES</span></span>
+## <span data-ttu-id="c978c-139">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="c978c-139">NOTES</span></span>
 
-## <span data-ttu-id="6a04d-140">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="6a04d-140">RELATED LINKS</span></span>
+## <span data-ttu-id="c978c-140">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="c978c-140">RELATED LINKS</span></span>
 
-[<span data-ttu-id="6a04d-141">Add-AzLogAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-141">Add-AzLogAlertRule</span></span>](./Add-AzLogAlertRule.md)
 
-[<span data-ttu-id="6a04d-142">Add-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-142">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
+[<span data-ttu-id="c978c-141">Add-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="c978c-141">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
 
-[<span data-ttu-id="6a04d-143">Add-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-143">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
+[<span data-ttu-id="c978c-142">Add-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="c978c-142">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
 
-[<span data-ttu-id="6a04d-144">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="6a04d-144">Get-AzAlertHistory</span></span>](./Get-AzAlertHistory.md)
+[<span data-ttu-id="c978c-143">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="c978c-143">Get-AzAlertHistory</span></span>](./Get-AzAlertHistory.md)
 
-[<span data-ttu-id="6a04d-145">Remove-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="6a04d-145">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
+[<span data-ttu-id="c978c-144">Remove-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="c978c-144">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
 
 
