@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: 002cfba4a5660fa8996c30ff83a1011da669539b
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 92409b30e7a81f5d41a0af8ebb6466eb1e3053c9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100159620"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405158"
 ---
 # Get-AzKeyVaultCertificate
 
@@ -197,7 +197,7 @@ Version            : 7fe415d5518240c1a6fce89986b8d334
 Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe415d5518240c1a6fce89986b8d334
 ```
 
-Dieser Befehl ruft das Zertifikat mit dem Namen "MyCert" ab, das im Schlüsseltresor "Contoso" bereits gelöscht, aber nicht gelöscht wurde.
+Dieser Befehl ruft das Zertifikat mit dem Namen "MyCert" ab, das im Schlüsseltresor "Contoso" gelöscht, aber nicht gelöscht wurde.
 Dieser Befehl gibt Metadaten wie das Löschdatum und das geplante Löschdatum dieses gelöschten Zertifikats zurück.
 
 ### Beispiel 5: Auflisten von Zertifikaten mithilfe der Filterung
@@ -407,4 +407,3 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
-[Undo-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)
