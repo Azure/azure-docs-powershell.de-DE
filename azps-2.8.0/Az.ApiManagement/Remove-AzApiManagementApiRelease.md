@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 31e2151e5c41a4e4c9d053174f9d598cd16680f0
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 51a24bcb0951aef7a3feb8b32d3d860d21839ad5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93658209"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407929"
 ---
 # Remove-AzApiManagementApiRelease
 
-## Synopsis
-Entfernt eine bestimmte API-Version
+## SYNOPSIS
+Entfernt eine bestimmte API-Version.
 
-## Syntax
+## SYNTAX
 
 ### ByApiReleaseId (Standard)
 ```
@@ -31,11 +31,11 @@ Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-Pass
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 
-Das Cmdlet **Remove-AzAzureRmApiManagementApiRelease** entfernt eine vorhandene API-Version.
+Das **Cmdlet "Remove-AzAzureRmApiManagementApiRelease"** entfernt eine vorhandene API-Version.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Entfernen einer API-Version
 ```powershell
@@ -43,9 +43,9 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
 ```
 
-Mit diesem Befehl wird die API-Version mit dem angegebenen ApiId und der angegebenen Veröffentlichungs-Nr entfernt.
+Mit diesem Befehl wird die API Release mit der angegebenen ApiId und ReleaseId entfernt.
 
-## Parameter
+## PARAMETERS
 
 ### -ApiId
 Bezeichner der API.
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -94,7 +94,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
+### -InputObject
 Instanz von PsApiManagementApiRelease. Dieser Parameter ist erforderlich.
 
 ```yaml
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Wenn angegeben, wird true geschrieben, falls der Vorgang erfolgreich ist.
+Wenn angegeben, wird "true" für den Fall geschrieben, dass der Vorgang erfolgreich ist.
 Dieser Parameter ist optional.
 
 ```yaml
@@ -125,7 +125,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Veröffentlichungs-Nr
+### -ReleaseId
 Bezeichner der API-Version.
 Dieser Parameter ist erforderlich.
 
@@ -141,8 +141,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -156,7 +156,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -173,26 +173,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementApiRelease
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### System. Boolean
+### System.Boolean
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
 
-[Neu – AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
+[New-AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
 
-[Satz-AzApiManagementApiRelease](./Set-AzApiManagementApiRelease.md)
+[Update-AzApiManagementApiRelease](./Update-AzApiManagementApiRelease.md)

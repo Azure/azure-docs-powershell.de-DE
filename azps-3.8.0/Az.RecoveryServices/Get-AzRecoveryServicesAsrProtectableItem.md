@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
-ms.openlocfilehash: c9c50e26e99493fb693b8bded693bceb24f5a40f
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: da9dd3d7b1ed0a54a34fdf5c8a0c9d65b507a07b
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93995317"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400602"
 ---
 # Get-AzRecoveryServicesAsrProtectableItem
 
-## Synopsis
-Rufen Sie die geschützten Elemente in einem ASR-Schutzcontainer ab.
+## SYNOPSIS
+Holen Sie sich die schützende Elemente in einem ASR-Schutzcontainer.
 
-## Syntax
+## SYNTAX
 
 ### ByObject (Standard)
 ```
@@ -37,17 +37,17 @@ Get-AzRecoveryServicesAsrProtectableItem -FriendlyName <String> -ProtectionConta
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzRecoveryServicesAsrProtectableItem** " Ruft die geschützten Elemente in einem Azure Site Recovery Protection-Container ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzRecoveryServicesAsrProtectableItem"** ruft die schützende Elemente in einem Azure Site Recovery Protection Container ab.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```
 PS C:\> $ProtectableItems = Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $Container
 ```
 
-Ruft alle geschützten Elemente im angegebenen ASR-Schutzcontainer ab.
+Ruft alle schützende Elemente im angegebenen ASR-Schutzcontainer ab.
 
 ### Beispiel 2
 ```
@@ -70,7 +70,7 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-Besorgen Sie sich die geschützten Elemente im angegebenen ASR-Schutzcontainer und mit dem angegebenen Anzeigenamen.
+Holen Sie sich die benutzerfreundlichen Elemente im angegebenen ASR-Schutzcontainer und mit einem angegebenen Anzeigenamen.
 
 ### Beispiel 3
 ```
@@ -93,12 +93,12 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-Ruft alle geschützten Elemente im angegebenen ASR-Schutzcontainer ab.
+Ruft alle schutzbaren Elemente im angegebenen ASR-Schutzcontainer ab.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 
 ```yaml
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Gibt den Anzeigenamen des ASR-geschützten Elements an.
+Gibt den Anzeigenamen des schützenden ASR-Elements an.
 
 ```yaml
 Type: System.String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen des ASR-geschützten Elements an.
+Gibt den Namen des schützenden ASR-Elements an.
 
 ```yaml
 Type: System.String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainer
-Gibt das Azure Site Recovery Protection-Container Objekt an.
+Gibt das Azure Site Recovery Protection-Containerobjekt an.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -159,20 +159,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. RecoveryServices. SiteRecovery. ASRProtectionContainer
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. RecoveryServices. SiteRecovery. ASRProtectableItem
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectableItem
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzRecoveryServicesAsrProtectionEntity](./Get-AzRecoveryServicesAsrProtectionEntity.md)
 
-[Satz-AzRecoveryServicesAsrProtectionEntity](./Set-AzRecoveryServicesAsrProtectionEntity.md)
