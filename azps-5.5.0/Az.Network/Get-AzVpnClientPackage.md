@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientPackage.md
-ms.openlocfilehash: 8eba8d26bcac5de16be3e2cda5e8ca80356aea11
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: ec91fecd41138238bc4d89fa81d77bae4730c770
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100159145"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407606"
 ---
 # Get-AzVpnClientPackage
 
@@ -26,7 +26,7 @@ Get-AzVpnClientPackage -ResourceGroupName <String> -VirtualNetworkGatewayName <S
 ```
 
 ## BESCHREIBUNG
-Das **Cmdlet "Get-AzVpnClientPackage"** ruft Informationen zu den VPN-Clientpaketen ab, die über ein virtuelles Netzwerkgateway zur Verfügung stehen.
+Das **Cmdlet "Get-AzVpnClientPackage"** ruft Informationen zu den VPN-Clientpaketen ab, die über ein virtuelles Netzwerkgateway verfügbar sind.
 Clientpakete enthalten Konfigurationsdaten, die einem Clientcomputer das Herstellen einer #A0 mit einem virtuellen #A1 ermöglichen. client computers must have the correct configuration package installed to make a VPN connection.
 Basierend auf der Version des Clientcomputers von Windows (z. B. Windows 7 oder Windows 10) und der Prozessorarchitektur des Clientcomputers (AMD64 oder x86) stehen verschiedene Konfigurationspakete zur Verfügung.
 Sie müssen den Architekturtyp angeben, wenn **Sie "Get-AzVpnClientPackage" ausführen.**
@@ -38,7 +38,7 @@ Sie müssen den Architekturtyp angeben, wenn **Sie "Get-AzVpnClientPackage" ausf
 PS C:\>Get-AzVpnClientPackage -ProcessorArchitecture -VirtualNetworkGatewayName "ContosoVirtualNetworkGateway" -ResourceGroupName "ContosoResourceGroup" -ProcessorArchitecture "Amd64"
 ```
 
-Dieser Befehl ruft Informationen zu den AMD64-VPN-Clientpaketen ab, die auf dem virtuellen Netzwerkgateway namens "ContosoVirtualNetworkGateway" gespeichert sind.
+Dieser Befehl ruft Informationen zu den AMD64 VPN-Clientpaketen ab, die auf dem virtuellen Netzwerkgateway namens "ContosoVirtualNetworkGateway" gespeichert sind.
 Um Informationen zu den x86-Clientpaketen zu erhalten, legen Sie den Wert des Parameters *"ProcessorArchitecture"* auf "x86" festgelegt.
 
 ## PARAMETERS
@@ -123,6 +123,5 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Resize-AzVirtualNetworkGateway](./Resize-AzVirtualNetworkGateway.md)
 
-[Set-AzVirtualNetworkGatewayVpnClientConfig](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)
 
 
