@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
-ms.openlocfilehash: e78b6729061efe5a83f31bd25b9e542c09627ca3
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 3c5435d1a472341d0447ead2f384fa892d6e1202
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100152769"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404478"
 ---
 # Remove-AzKeyVaultKey
 
@@ -79,7 +79,7 @@ PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedS
 ```
 
 Mit diesem Befehl wird der Schlüssel "ITSoftware" aus dem Schlüsseltresor "Contoso" dauerhaft entfernt.
-Zum Ausführen dieses Cmdlets ist die Berechtigung zum Löschen erforderlich, die zuvor und explizit dem Benutzer für diesen Schlüsseltresor erteilt worden sein muss.
+Zum Ausführen dieses Cmdlets ist die Berechtigung "Löschen" erforderlich, die zuvor und explizit dem Benutzer für diesen Schlüsseltresor gewährt worden sein muss.
 
 ### Beispiel 4: Entfernen von Schlüsseln mithilfe des Pipelineoperators
 ```powershell
@@ -88,7 +88,7 @@ PS C:\> Get-AzKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Ena
 
 Dieser Befehl ruft alle Schlüssel im Schlüsseltresor "Contoso" ab und übergibt sie mithilfe des Pipelineoperators an das **Where-Object-Cmdlet.**
 Dieses Cmdlet übergibt die Schlüssel mit dem Wert $False für das Attribut **"Enabled"** an das aktuelle Cmdlet.
-Mit diesem Cmdlet werden diese Schlüssel entfernt.
+Mit diesem Cmdlet werden diese Tasten entfernt.
 
 ## PARAMETERS
 
@@ -266,7 +266,6 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
 
 [Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
 
