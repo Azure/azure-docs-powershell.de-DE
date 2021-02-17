@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: ad27587e52533af1ef7989d4b52de3319137640d
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 369540a80ec6ffdc02f96783de5e86cc50f0c8f3
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93651773"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407062"
 ---
 # Get-AzDataFactoryV2DataFlow
 
-## Synopsis
-Ruft Informationen zu Datenströmen in Data Factory ab.
+## SYNOPSIS
+Ruft Informationen zu Datenflüssen in Data Factory ab.
 
-## Syntax
+## SYNTAX
 
 ### ByFactoryName (Standard)
 ```
@@ -37,13 +37,13 @@ Get-AzDataFactoryV2DataFlow [-ResourceId] <String> [-DefaultProfile <IAzureConte
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Get-AzDataFactoryV2DataFlow-Cmdlet ruft Informationen zu Datenströmen in Azure Data Factory ab.
+## BESCHREIBUNG
+Das Get-AzDataFactoryV2DataFlow Cmdlet ruft Informationen zu Datenflüssen in Azure Data Factory ab.
 Wenn Sie den Namen eines Datenflusses angeben, ruft dieses Cmdlet Informationen zu diesem Datenfluss ab.
-Wenn Sie keinen Namen angeben, ruft dieses Cmdlet Informationen zu allen Datenströmen in der Data Factory ab.
+Wenn Sie keinen Namen angeben, ruft dieses Cmdlet Informationen zu allen Datenflüssen in der Daten factory ab.
 
-## Beispiele
-### Beispiel 1: Abrufen von Informationen zu allen Datenströmen
+## BEISPIELE
+### Beispiel 1: Informationen zu allen Datenflüssen
 ```powershell
 PS C:\> Get-AzDataFactoryV2DataFlow -ResourceGroupName "ADF" -DataFactoryName "WikiADF"
 
@@ -54,9 +54,9 @@ dataflow1                      WikiADF               adf Microsoft.Azure.Managem
 dataflow3                      WikiADF               adf Microsoft.Azure.Management.DataFactory.Models.MappingDataFlow
 ```
 
-Dieser Befehl ruft Informationen zu allen Datenströmen in der Data Factory mit dem Namen WikiADF ab.
+Dieser Befehl ruft Informationen zu allen Datenflüssen in der Daten factory namens WikiADF ab.
 
-### Beispiel 2: Abrufen von Informationen zu einem bestimmten Datenfluss
+### Beispiel 2: Erhalten von Informationen zu einem bestimmten Datenfluss
 ```powershell
 PS C:\> Get-AzDataFactoryV2DataFlow -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "dataflow1"
 
@@ -65,9 +65,9 @@ DataFlowName           DataFactoryName ResourceGroupName                        
 TaxiDemo1                      WikiADF               adf Microsoft.Azure.Management.DataFactory.Models.MappingDataFlow
 ```
 
-Dieser Befehl ruft Informationen über den Datenfluss mit dem Namen dataflow1 in der Data Factory mit dem Namen WikiADF ab.
+Dieser Befehl ruft Informationen über den Datenfluss namens "dataflow1" in der Daten factory namens WikiADF ab.
 
-## Parameter
+## PARAMETERS
 
 ### -DataFactory
 Das Data Factory-Objekt.
@@ -84,8 +84,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Datafactoryname
-Der Name der Daten Factory.
+### -DataFactoryName
+Der Name der Daten factory.
 
 ```yaml
 Type: System.String
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Der Name des Datenflusses.
+Der Datenflussname.
 
 ```yaml
 Type: System.String
@@ -144,7 +144,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
+### -ResourceId
 Die Azure-Ressourcen-ID.
 
 ```yaml
@@ -160,23 +160,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 
-## Ausgaben
+## AUSGABEN
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFlow
 
-## Notizen
-Schlüsselwörter: Azure, azurerm, arm, Resource, Verwaltung, Manager, Daten, Factorys
+## HINWEISE
+Schlüsselwörter: azure, azurerm, arm, resource, management, manager, data, factorys
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzDataFactoryDataFlow](./Set-AzDataFactoryDataFlow.md)
 
-[Remove-AzDataFactoryDataFlow](./Remove-AzDataFactoryDataFlow.md)

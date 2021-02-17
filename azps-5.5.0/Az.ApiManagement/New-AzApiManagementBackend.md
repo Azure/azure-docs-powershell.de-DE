@@ -1,66 +1,61 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementbackend
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/new-azapimanagementbackend
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
-ms.openlocfilehash: 8631120178a256aa1ec5b817727f9362f6d8f076
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackend.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackend.md
+ms.openlocfilehash: 4ed63d0e3b801572698b123038a2022e89672a88
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100407283"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100171839"
 ---
-# Set-AzApiManagementBackend
+# New-AzApiManagementBackend
 
 ## SYNOPSIS
-Aktualisiert ein Back-End.
+Erstellt eine neue Back-End-Entität.
 
 ## SYNTAX
 
-### ContextParameterSet (Standard)
 ```
-Set-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String> [-Protocol <String>]
- [-Url <String>] [-ResourceId <String>] [-Title <String>] [-Description <String>]
+New-AzApiManagementBackend -Context <PsApiManagementContext> [-BackendId <String>] -Protocol <String>
+ -Url <String> [-ResourceId <String>] [-Title <String>] [-Description <String>]
  [-SkipCertificateChainValidation <Boolean>] [-SkipCertificateNameValidation <Boolean>]
  [-Credential <PsApiManagementBackendCredential>] [-Proxy <PsApiManagementBackendProxy>]
- [-ServiceFabricCluster <PsApiManagementServiceFabric>] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Set-AzApiManagementBackend -InputObject <PsApiManagementBackend> [-Protocol <String>] [-Url <String>]
- [-ResourceId <String>] [-Title <String>] [-Description <String>] [-SkipCertificateChainValidation <Boolean>]
- [-SkipCertificateNameValidation <Boolean>] [-Credential <PsApiManagementBackendCredential>]
- [-Proxy <PsApiManagementBackendProxy>] [-ServiceFabricCluster <PsApiManagementServiceFabric>] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServiceFabricCluster <PsApiManagementServiceFabric>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## BESCHREIBUNG
-Aktualisiert ein vorhandenes Back-End in der Api-Verwaltung.
+Erstellt eine neue Back-End-Entität in Api Management.
 
 ## BEISPIELE
 
-### Aktualisiert die Beschreibung von Back-End 123
+### Beispiel 1: Erstellen von Back-End 123 mit einem grundlegenden Autorisierungsschema
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Set-AzApiManagementBackend -Context $apimContext -BackendId 123 -Description "updated description" -PassThru
+PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderScheme basic -AuthorizationHeaderParameter opensesame -Query @{"sv" = @('xx', 'bb'); "sr" = @('cc')} -Header @{"x-my-1" = @('val1', 'val2')}
+
+PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Credential $credential -Description "my backend"
 ```
+
+Erstellt ein neues Back-End
 
 ## PARAMETERS
 
 ### -BackendId
 Bezeichner des neuen Backends.
-Dieser Parameter ist erforderlich.
+Dieser Parameter ist optional.
+Wenn keine Angabe angegeben wird, wird ein Code generiert.
 
 ```yaml
 Type: System.String
-Parameter Sets: ContextParameterSet
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -73,7 +68,7 @@ Dieser Parameter ist erforderlich.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-Parameter Sets: ContextParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -130,39 +125,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Instanz von PsApiManagementBackend. Dieser Parameter ist erforderlich.
-
-```yaml
-Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend
-Parameter Sets: ByInputObject
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -PassThru
-Gibt an, dass dieses Cmdlet das  **PsApiManagementBackend zurückgibt,** das von diesem Cmdlet geändert wird.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Protocol
-Back-End-Kommunikationsprotokoll (http oder soap).
-Dieser Parameter ist optional.
+Back-End-Kommunikationsprotokoll.
+Dieser Parameter ist erforderlich.
+Gültige Werte sind "http" und "soap".
 
 ```yaml
 Type: System.String
@@ -170,7 +136,7 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: http, soap
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -275,14 +241,14 @@ Accept wildcard characters: False
 
 ### -URL
 Laufzeit-URL für das Back-End.
-Dieser Parameter ist optional.
+Dieser Parameter ist erforderlich.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -336,8 +302,6 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-### System.Management.Automation.SwitchParameter
-
 ## AUSGABEN
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend
@@ -348,10 +312,11 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
-
 [New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
 
 [New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
 
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
+
 [Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
+
