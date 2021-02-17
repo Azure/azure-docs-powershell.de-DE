@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiRelease.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiRelease.md
-ms.openlocfilehash: 353fd6365f85ba71105f80324ba740b4d829a85a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 4f9e917f17037e5f47b52501007da5556bde1187
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93650401"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401078"
 ---
 # Get-AzApiManagementApiRelease
 
-## Synopsis
-Rufen Sie die API-Version ab.
+## SYNOPSIS
+Abrufen der API-Version.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> [-ReleaseId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzApiManagementApiRelease** " ruft mindestens eine Version der Azure API-Verwaltungs-API ab.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzApiManagementApiRelease"** ruft mindestens eine Version der Azure API Management API ab.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Abrufen aller Versionen der API
 ```powershell
@@ -43,9 +43,9 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contos
 ```
 
-Dieser Befehl ruft alle Versionen der `echo-api` API für den angegebenen Kontext ab.
+Dieser Befehl ruft alle Versionen der API für `echo-api` den angegebenen Kontext ab.
 
-### Beispiel 2: Abrufen der Veröffentlichungsinformationen der jeweiligen API-Version
+### Beispiel 2: Abrufen der Versionsinformationen zu einer bestimmten API-Version
 ```powershell
 PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementApiRelease -Context $ApiMgmtContext -ApiId 5adf6fbf0faadf3ad8558065 -ReleaseId 5afccaf6b89fd067426d402e
@@ -61,13 +61,13 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contos
 ```
 
-Dieser Befehl ruft die Freigabe Informationen einer bestimmten API mit der angegebenen Veröffentlichungs-Nr ab.
+Dieser Befehl ruft die Versionsinformationen einer bestimmten API mit der angegebenen releaseId ab.
 
-## Parameter
+## PARAMETERS
 
 ### -ApiId
-Der API-Bezeichner, nach dem gesucht werden soll.
-Wenn angegeben, wird versucht, die API mithilfe der ID abzurufen.
+API-ID, nach der sie suchen soll.
+Wenn diese Angabe angegeben wird, wird versucht, die API nach der ID zu erhalten.
 
 ```yaml
 Type: System.String
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -112,8 +112,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Veröffentlichungs-Nr
-Der Bezeichner der Freigabe.
+### -ReleaseId
+Der Bezeichner von Release.
 
 ```yaml
 Type: System.String
@@ -128,24 +128,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ApiManagement. Servicemanagement. Models. PsApiManagementApiRelease
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+[New-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
 
 [Remove-AzApiManagementApiRelease](./Remove-AzApiManagementApiRelease.md)
 
-[Satz-AzApiManagementApiRelease](./Set-AzApiManagementApiRelease.md)
+[Update-AzApiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
