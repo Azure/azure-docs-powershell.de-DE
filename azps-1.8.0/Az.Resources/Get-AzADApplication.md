@@ -6,99 +6,99 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md
-ms.openlocfilehash: 18b5f64426b0a3c458ea489d27781f1a01336b52
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 545722e48095f8b77104bb6ff24b856bd76e3312
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93659667"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399718"
 ---
-# <span data-ttu-id="97cb1-101">Get-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="97cb1-101">Get-AzADApplication</span></span>
+# <span data-ttu-id="7f2af-101">Get-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="7f2af-101">Get-AzADApplication</span></span>
 
-## <span data-ttu-id="97cb1-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="97cb1-102">SYNOPSIS</span></span>
-<span data-ttu-id="97cb1-103">Listet vorhandene Azure Active Directory-Anwendungen auf.</span><span class="sxs-lookup"><span data-stu-id="97cb1-103">Lists existing azure active directory applications.</span></span>
+## <span data-ttu-id="7f2af-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="7f2af-102">SYNOPSIS</span></span>
+<span data-ttu-id="7f2af-103">Listet vorhandene Azure Active Directory-Anwendungen auf.</span><span class="sxs-lookup"><span data-stu-id="7f2af-103">Lists existing azure active directory applications.</span></span>
 
-## <span data-ttu-id="97cb1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="97cb1-104">SYNTAX</span></span>
+## <span data-ttu-id="7f2af-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7f2af-104">SYNTAX</span></span>
 
-### <span data-ttu-id="97cb1-105">EmptyParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="97cb1-105">EmptyParameterSet (Default)</span></span>
+### <span data-ttu-id="7f2af-105">EmptyParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="7f2af-105">EmptyParameterSet (Default)</span></span>
 ```
 Get-AzADApplication [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount] [-Skip <UInt64>]
  [-First <UInt64>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97cb1-106">ApplicationObjectIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="97cb1-106">ApplicationObjectIdParameterSet</span></span>
+### <span data-ttu-id="7f2af-106">ApplicationObjectIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="7f2af-106">ApplicationObjectIdParameterSet</span></span>
 ```
 Get-AzADApplication -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97cb1-107">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="97cb1-107">ApplicationIdParameterSet</span></span>
+### <span data-ttu-id="7f2af-107">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="7f2af-107">ApplicationIdParameterSet</span></span>
 ```
 Get-AzADApplication -ApplicationId <Guid> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97cb1-108">SearchStringParameterSet</span><span class="sxs-lookup"><span data-stu-id="97cb1-108">SearchStringParameterSet</span></span>
+### <span data-ttu-id="7f2af-108">SearchStringParameterSet</span><span class="sxs-lookup"><span data-stu-id="7f2af-108">SearchStringParameterSet</span></span>
 ```
 Get-AzADApplication -DisplayNameStartWith <String> [-DefaultProfile <IAzureContextContainer>]
  [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97cb1-109">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="97cb1-109">DisplayNameParameterSet</span></span>
+### <span data-ttu-id="7f2af-109">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="7f2af-109">DisplayNameParameterSet</span></span>
 ```
 Get-AzADApplication -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="97cb1-110">ApplicationIdentifierUriParameterSet</span><span class="sxs-lookup"><span data-stu-id="97cb1-110">ApplicationIdentifierUriParameterSet</span></span>
+### <span data-ttu-id="7f2af-110">ApplicationIdentifierUriParameterSet</span><span class="sxs-lookup"><span data-stu-id="7f2af-110">ApplicationIdentifierUriParameterSet</span></span>
 ```
 Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextContainer>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="97cb1-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="97cb1-111">DESCRIPTION</span></span>
-<span data-ttu-id="97cb1-112">Listet vorhandene Azure Active Directory-Anwendungen auf.</span><span class="sxs-lookup"><span data-stu-id="97cb1-112">Lists existing azure active directory applications.</span></span>
-<span data-ttu-id="97cb1-113">Die Anwendungssuche kann über ObjectID, ApplicationId, IdentifierUri oder DisplayName erfolgen.</span><span class="sxs-lookup"><span data-stu-id="97cb1-113">Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.</span></span>
-<span data-ttu-id="97cb1-114">Wenn kein Parameter angegeben wird, werden alle Anwendungen unter dem Mandanten abgerufen.</span><span class="sxs-lookup"><span data-stu-id="97cb1-114">If no parameter is provided, it fetches all applications under the tenant.</span></span>
+## <span data-ttu-id="7f2af-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7f2af-111">DESCRIPTION</span></span>
+<span data-ttu-id="7f2af-112">Listet vorhandene Azure Active Directory-Anwendungen auf.</span><span class="sxs-lookup"><span data-stu-id="7f2af-112">Lists existing azure active directory applications.</span></span>
+<span data-ttu-id="7f2af-113">Die Anwendungs-Suche kann mit ObjectId, ApplicationId, IdentifierUri oder DisplayName durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="7f2af-113">Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.</span></span>
+<span data-ttu-id="7f2af-114">Wenn kein Parameter angegeben wird, ruft er alle Anwendungen unter dem Mandanten ab.</span><span class="sxs-lookup"><span data-stu-id="7f2af-114">If no parameter is provided, it fetches all applications under the tenant.</span></span>
 
-## <span data-ttu-id="97cb1-115">Beispiele</span><span class="sxs-lookup"><span data-stu-id="97cb1-115">EXAMPLES</span></span>
+## <span data-ttu-id="7f2af-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="7f2af-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="97cb1-116">Beispiel 1 – Auflisten aller Anwendungen</span><span class="sxs-lookup"><span data-stu-id="97cb1-116">Example 1 - List all applications</span></span>
+### <span data-ttu-id="7f2af-116">Beispiel 1: Auflisten aller Anwendungen</span><span class="sxs-lookup"><span data-stu-id="7f2af-116">Example 1 - List all applications</span></span>
 
 ```
 PS C:\> Get-AzADApplication
 ```
 
-<span data-ttu-id="97cb1-117">Listet alle Anwendungen unter einem Mandanten auf.</span><span class="sxs-lookup"><span data-stu-id="97cb1-117">Lists all the applications under a tenant.</span></span>
+<span data-ttu-id="7f2af-117">Listet alle Anwendungen unter einem Mandanten auf.</span><span class="sxs-lookup"><span data-stu-id="7f2af-117">Lists all the applications under a tenant.</span></span>
 
-### <span data-ttu-id="97cb1-118">Beispiel für 2-Listen-Anwendungen mit Paging</span><span class="sxs-lookup"><span data-stu-id="97cb1-118">Example 2 - List applications using paging</span></span>
+### <span data-ttu-id="7f2af-118">Beispiel 2: Auflisten von Anwendungen mithilfe von Seitenumlagerungen</span><span class="sxs-lookup"><span data-stu-id="7f2af-118">Example 2 - List applications using paging</span></span>
 
 ```
 PS C:\> Get-AzADApplication -First 100
 ```
 
-<span data-ttu-id="97cb1-119">Listet die ersten 100-Anwendungen unter einem Mandanten auf.</span><span class="sxs-lookup"><span data-stu-id="97cb1-119">Lists the first 100 applications under a tenant.</span></span>
+<span data-ttu-id="7f2af-119">Listet die ersten 100 Anwendungen unter einem Mandanten auf.</span><span class="sxs-lookup"><span data-stu-id="7f2af-119">Lists the first 100 applications under a tenant.</span></span>
 
-### <span data-ttu-id="97cb1-120">Beispiel 3: Abrufen der Anwendung nach Bezeichner-URI</span><span class="sxs-lookup"><span data-stu-id="97cb1-120">Example 3 - Get application by identifier URI</span></span>
+### <span data-ttu-id="7f2af-120">Beispiel 3: "Anwendung nach Bezeichner-URI erhalten"</span><span class="sxs-lookup"><span data-stu-id="7f2af-120">Example 3 - Get application by identifier URI</span></span>
 
 ```
 PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
 ```
 
-<span data-ttu-id="97cb1-121">Ruft die Anwendung mit dem Bezeichner-URI als " http://mySecretApp1 " ab.</span><span class="sxs-lookup"><span data-stu-id="97cb1-121">Gets the application with identifier uri as "http://mySecretApp1".</span></span>
+<span data-ttu-id="7f2af-121">Ruft die Anwendung mit dem Bezeichner-URI als " http://mySecretApp1 " ab.</span><span class="sxs-lookup"><span data-stu-id="7f2af-121">Gets the application with identifier uri as "http://mySecretApp1".</span></span>
 
-### <span data-ttu-id="97cb1-122">Beispiel 4: Abrufen der Anwendung nach Objekt-ID</span><span class="sxs-lookup"><span data-stu-id="97cb1-122">Example 4 - Get application by object id</span></span>
+### <span data-ttu-id="7f2af-122">Beispiel 4: Anwendung nach Objekt-ID erhalten</span><span class="sxs-lookup"><span data-stu-id="7f2af-122">Example 4 - Get application by object id</span></span>
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
 ```
 
-<span data-ttu-id="97cb1-123">Ruft die Anwendung mit der Objekt-ID "39e64ec6-569b-4030-8e1c-c3c519a05d69" ab.</span><span class="sxs-lookup"><span data-stu-id="97cb1-123">Gets the application with the object id '39e64ec6-569b-4030-8e1c-c3c519a05d69'.</span></span>
+<span data-ttu-id="7f2af-123">Ruft die Anwendung mit der Objekt-ID '39e64ec6-569b-4030-8e1c-c3c519a05d69' ab.</span><span class="sxs-lookup"><span data-stu-id="7f2af-123">Gets the application with the object id '39e64ec6-569b-4030-8e1c-c3c519a05d69'.</span></span>
 
-## <span data-ttu-id="97cb1-124">Parameter</span><span class="sxs-lookup"><span data-stu-id="97cb1-124">PARAMETERS</span></span>
+## <span data-ttu-id="7f2af-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="7f2af-124">PARAMETERS</span></span>
 
-### <span data-ttu-id="97cb1-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="97cb1-125">-ApplicationId</span></span>
-<span data-ttu-id="97cb1-126">Die Anwendungs-ID der Anwendung, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="97cb1-126">The application id of the application to fetch.</span></span>
+### <span data-ttu-id="7f2af-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="7f2af-125">-ApplicationId</span></span>
+<span data-ttu-id="7f2af-126">Die Anwendungs-ID der anwendung, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f2af-126">The application id of the application to fetch.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -112,8 +112,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="97cb1-127">-DefaultProfile</span></span>
-<span data-ttu-id="97cb1-128">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="97cb1-128">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="7f2af-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7f2af-127">-DefaultProfile</span></span>
+<span data-ttu-id="7f2af-128">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="7f2af-128">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -127,8 +127,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-129">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="97cb1-129">-DisplayName</span></span>
-<span data-ttu-id="97cb1-130">Der Anzeigename der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="97cb1-130">The display name of the application.</span></span>
+### <span data-ttu-id="7f2af-129">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="7f2af-129">-DisplayName</span></span>
+<span data-ttu-id="7f2af-130">Der Anzeigename der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="7f2af-130">The display name of the application.</span></span>
 
 ```yaml
 Type: System.String
@@ -142,8 +142,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-131">-DisplayNameStartWith</span><span class="sxs-lookup"><span data-stu-id="97cb1-131">-DisplayNameStartWith</span></span>
-<span data-ttu-id="97cb1-132">Ruft alle Anwendungen ab, beginnend mit dem Anzeigenamen.</span><span class="sxs-lookup"><span data-stu-id="97cb1-132">Fetch all applications starting with the display name.</span></span>
+### <span data-ttu-id="7f2af-131">-DisplayNameStartWith</span><span class="sxs-lookup"><span data-stu-id="7f2af-131">-DisplayNameStartWith</span></span>
+<span data-ttu-id="7f2af-132">Rufen Sie alle Anwendungen ab dem Anzeigenamen ab.</span><span class="sxs-lookup"><span data-stu-id="7f2af-132">Fetch all applications starting with the display name.</span></span>
 
 ```yaml
 Type: System.String
@@ -157,8 +157,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-133">-IdentifierUri</span><span class="sxs-lookup"><span data-stu-id="97cb1-133">-IdentifierUri</span></span>
-<span data-ttu-id="97cb1-134">Eindeutiger Bezeichner-URI der Anwendung, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="97cb1-134">Unique identifier Uri of the application to fetch.</span></span>
+### <span data-ttu-id="7f2af-133">-IdentifierUri</span><span class="sxs-lookup"><span data-stu-id="7f2af-133">-IdentifierUri</span></span>
+<span data-ttu-id="7f2af-134">Eindeutiger Bezeichner-URI der anwendung, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f2af-134">Unique identifier Uri of the application to fetch.</span></span>
 
 ```yaml
 Type: System.String
@@ -172,8 +172,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-135">-ObjectID</span><span class="sxs-lookup"><span data-stu-id="97cb1-135">-ObjectId</span></span>
-<span data-ttu-id="97cb1-136">Die Objekt-ID der abzurufenden Anwendung.</span><span class="sxs-lookup"><span data-stu-id="97cb1-136">The object id of the application to fetch.</span></span>
+### <span data-ttu-id="7f2af-135">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="7f2af-135">-ObjectId</span></span>
+<span data-ttu-id="7f2af-136">Die Objekt-ID der anwendung, die abgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="7f2af-136">The object id of the application to fetch.</span></span>
 
 ```yaml
 Type: System.String
@@ -187,8 +187,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-137">-IncludeTotalCount</span><span class="sxs-lookup"><span data-stu-id="97cb1-137">-IncludeTotalCount</span></span>
-<span data-ttu-id="97cb1-138">Gibt die Anzahl der Objekte in der Datengruppe an.</span><span class="sxs-lookup"><span data-stu-id="97cb1-138">Reports the number of objects in the data set.</span></span> <span data-ttu-id="97cb1-139">Derzeit hat dieser Parameter keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="97cb1-139">Currently, this parameter does nothing.</span></span>
+### <span data-ttu-id="7f2af-137">-IncludeTotalCount</span><span class="sxs-lookup"><span data-stu-id="7f2af-137">-IncludeTotalCount</span></span>
+<span data-ttu-id="7f2af-138">Meldet die Anzahl der Objekte im Datenset.</span><span class="sxs-lookup"><span data-stu-id="7f2af-138">Reports the number of objects in the data set.</span></span> <span data-ttu-id="7f2af-139">Derzeit führt dieser Parameter keine Anderen aus.</span><span class="sxs-lookup"><span data-stu-id="7f2af-139">Currently, this parameter does nothing.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -202,8 +202,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-140">-Skip</span><span class="sxs-lookup"><span data-stu-id="97cb1-140">-Skip</span></span>
-<span data-ttu-id="97cb1-141">Ignoriert die ersten N Objekte und ruft dann die restlichen Objekte ab.</span><span class="sxs-lookup"><span data-stu-id="97cb1-141">Ignores the first N objects and then gets the remaining objects.</span></span>
+### <span data-ttu-id="7f2af-140">-Skip</span><span class="sxs-lookup"><span data-stu-id="7f2af-140">-Skip</span></span>
+<span data-ttu-id="7f2af-141">Ignoriert die ersten N-Objekte und ruft dann die verbleibenden Objekte ab.</span><span class="sxs-lookup"><span data-stu-id="7f2af-141">Ignores the first N objects and then gets the remaining objects.</span></span>
 
 ```yaml
 Type: System.UInt64
@@ -217,8 +217,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-142">-First</span><span class="sxs-lookup"><span data-stu-id="97cb1-142">-First</span></span>
-<span data-ttu-id="97cb1-143">Die maximale Anzahl von Objekten, die zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="97cb1-143">The maximum number of objects to return.</span></span>
+### <span data-ttu-id="7f2af-142">-First</span><span class="sxs-lookup"><span data-stu-id="7f2af-142">-First</span></span>
+<span data-ttu-id="7f2af-143">Die maximale Anzahl von Zurücksendungsobjekten.</span><span class="sxs-lookup"><span data-stu-id="7f2af-143">The maximum number of objects to return.</span></span>
 
 ```yaml
 Type: System.UInt64
@@ -232,32 +232,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="97cb1-144">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="97cb1-144">CommonParameters</span></span>
-<span data-ttu-id="97cb1-145">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="97cb1-145">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="97cb1-146">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="97cb1-146">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="7f2af-144">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7f2af-144">CommonParameters</span></span>
+<span data-ttu-id="7f2af-145">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7f2af-145">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7f2af-146">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="7f2af-146">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="97cb1-147">Eingaben</span><span class="sxs-lookup"><span data-stu-id="97cb1-147">INPUTS</span></span>
+## <span data-ttu-id="7f2af-147">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="7f2af-147">INPUTS</span></span>
 
-### <span data-ttu-id="97cb1-148">System. String</span><span class="sxs-lookup"><span data-stu-id="97cb1-148">System.String</span></span>
+### <span data-ttu-id="7f2af-148">System.String</span><span class="sxs-lookup"><span data-stu-id="7f2af-148">System.String</span></span>
 
-### <span data-ttu-id="97cb1-149">System. GUID</span><span class="sxs-lookup"><span data-stu-id="97cb1-149">System.Guid</span></span>
+### <span data-ttu-id="7f2af-149">System.Guid</span><span class="sxs-lookup"><span data-stu-id="7f2af-149">System.Guid</span></span>
 
-## <span data-ttu-id="97cb1-150">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="97cb1-150">OUTPUTS</span></span>
+## <span data-ttu-id="7f2af-150">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="7f2af-150">OUTPUTS</span></span>
 
-### <span data-ttu-id="97cb1-151">Microsoft. Azure. Commands. ActiveDirectory. PSADApplication</span><span class="sxs-lookup"><span data-stu-id="97cb1-151">Microsoft.Azure.Commands.ActiveDirectory.PSADApplication</span></span>
+### <span data-ttu-id="7f2af-151">Microsoft.Azure.Commands.ActiveDirectory.WERDENDApplication</span><span class="sxs-lookup"><span data-stu-id="7f2af-151">Microsoft.Azure.Commands.ActiveDirectory.PSADApplication</span></span>
 
-## <span data-ttu-id="97cb1-152">Notizen</span><span class="sxs-lookup"><span data-stu-id="97cb1-152">NOTES</span></span>
+## <span data-ttu-id="7f2af-152">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="7f2af-152">NOTES</span></span>
 
-## <span data-ttu-id="97cb1-153">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="97cb1-153">RELATED LINKS</span></span>
+## <span data-ttu-id="7f2af-153">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="7f2af-153">RELATED LINKS</span></span>
 
-[<span data-ttu-id="97cb1-154">Remove-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="97cb1-154">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
+[<span data-ttu-id="7f2af-154">Remove-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="7f2af-154">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
 
-[<span data-ttu-id="97cb1-155">Neu – AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="97cb1-155">New-AzADAppCredential</span></span>](./New-AzADAppCredential.md)
+[<span data-ttu-id="7f2af-155">New-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="7f2af-155">New-AzADAppCredential</span></span>](./New-AzADAppCredential.md)
 
-[<span data-ttu-id="97cb1-156">Get-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="97cb1-156">Get-AzADAppCredential</span></span>](./Get-AzADAppCredential.md)
+[<span data-ttu-id="7f2af-156">Get-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="7f2af-156">Get-AzADAppCredential</span></span>](./Get-AzADAppCredential.md)
 
-[<span data-ttu-id="97cb1-157">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="97cb1-157">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
+[<span data-ttu-id="7f2af-157">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="7f2af-157">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
 
-[<span data-ttu-id="97cb1-158">Satz-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="97cb1-158">Set-AzADApplication</span></span>](./Set-AzADApplication.md)
 
-[<span data-ttu-id="97cb1-159">Neu – AzADApplication</span><span class="sxs-lookup"><span data-stu-id="97cb1-159">New-AzADApplication</span></span>](./New-AzADApplication.md)
+[<span data-ttu-id="7f2af-158">New-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="7f2af-158">New-AzADApplication</span></span>](./New-AzADApplication.md)
 
