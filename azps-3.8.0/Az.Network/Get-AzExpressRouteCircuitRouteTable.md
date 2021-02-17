@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTable.md
-ms.openlocfilehash: fe92609b47cadedd1772b1a75baae33b9fb89e65
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: b8087721351a834f50a2f3f3b8a9b792f4bfc393
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94003583"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408218"
 ---
-# <span data-ttu-id="540a5-101">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="540a5-101">Get-AzExpressRouteCircuitRouteTable</span></span>
+# <span data-ttu-id="3a807-101">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="3a807-101">Get-AzExpressRouteCircuitRouteTable</span></span>
 
-## <span data-ttu-id="540a5-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="540a5-102">SYNOPSIS</span></span>
-<span data-ttu-id="540a5-103">Ruft eine Routentabelle aus einem Express Route-Schaltkreis ab.</span><span class="sxs-lookup"><span data-stu-id="540a5-103">Gets a route table from an ExpressRoute circuit.</span></span>
+## <span data-ttu-id="3a807-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="3a807-102">SYNOPSIS</span></span>
+<span data-ttu-id="3a807-103">Ruft eine Routentabelle aus einem "ExpressRoute"-Schaltkreis ab.</span><span class="sxs-lookup"><span data-stu-id="3a807-103">Gets a route table from an ExpressRoute circuit.</span></span>
 
-## <span data-ttu-id="540a5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="540a5-104">SYNTAX</span></span>
+## <span data-ttu-id="3a807-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3a807-104">SYNTAX</span></span>
 
 ```
 Get-AzExpressRouteCircuitRouteTable -ResourceGroupName <String> -ExpressRouteCircuitName <String>
@@ -26,20 +26,20 @@ Get-AzExpressRouteCircuitRouteTable -ResourceGroupName <String> -ExpressRouteCir
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="540a5-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="540a5-105">DESCRIPTION</span></span>
-<span data-ttu-id="540a5-106">Das Cmdlet " **Get-AzExpressRouteCircuitRouteTable** " Ruft eine detaillierte Route-Tabelle eines Express Route-Schaltkreises ab.</span><span class="sxs-lookup"><span data-stu-id="540a5-106">The **Get-AzExpressRouteCircuitRouteTable** cmdlet retrieves a detailed route table of an ExpressRoute circuit.</span></span> <span data-ttu-id="540a5-107">Die Route-Tabelle zeigt alle Routen an oder kann gefiltert werden, um Routen für einen bestimmten Peering-Typ anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="540a5-107">The route table will show all routes or can be filtered to show routes for a specific peering type.</span></span> <span data-ttu-id="540a5-108">Sie können die Tabelle Route verwenden, um Ihre Peering-Konfiguration und-Konnektivität zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="540a5-108">You can use the route table to validate your peering configuration and connectivity.</span></span>
+## <span data-ttu-id="3a807-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="3a807-105">DESCRIPTION</span></span>
+<span data-ttu-id="3a807-106">Das **Cmdlet "Get-AzExpressRouteCircuitRouteTable"** ruft eine detaillierte Routentabelle eines ExpressRoute-Schaltkreises ab.</span><span class="sxs-lookup"><span data-stu-id="3a807-106">The **Get-AzExpressRouteCircuitRouteTable** cmdlet retrieves a detailed route table of an ExpressRoute circuit.</span></span> <span data-ttu-id="3a807-107">In der Routentabelle werden alle Routen angezeigt oder können gefiltert werden, um Routen für einen bestimmten Peeringtyp zu zeigen.</span><span class="sxs-lookup"><span data-stu-id="3a807-107">The route table will show all routes or can be filtered to show routes for a specific peering type.</span></span> <span data-ttu-id="3a807-108">Sie können die Routentabelle verwenden, um Ihre Peeringkonfiguration und -konnektivität zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="3a807-108">You can use the route table to validate your peering configuration and connectivity.</span></span>
 
-## <span data-ttu-id="540a5-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="540a5-109">EXAMPLES</span></span>
+## <span data-ttu-id="3a807-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="3a807-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="540a5-110">Beispiel 1: Anzeigen der Route-Tabelle für den primären Pfad</span><span class="sxs-lookup"><span data-stu-id="540a5-110">Example 1: Display the route table for the primary path</span></span>
+### <span data-ttu-id="3a807-110">Beispiel 1: Anzeigen der Routentabelle für den primären Pfad</span><span class="sxs-lookup"><span data-stu-id="3a807-110">Example 1: Display the route table for the primary path</span></span>
 ```
 Get-AzExpressRouteCircuitRouteTable -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -DevicePath 'Primary'
 ```
 
-## <span data-ttu-id="540a5-111">Parameter</span><span class="sxs-lookup"><span data-stu-id="540a5-111">PARAMETERS</span></span>
+## <span data-ttu-id="3a807-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3a807-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="540a5-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="540a5-112">-DefaultProfile</span></span>
-<span data-ttu-id="540a5-113">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.</span><span class="sxs-lookup"><span data-stu-id="540a5-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="3a807-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3a807-112">-DefaultProfile</span></span>
+<span data-ttu-id="3a807-113">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3a807-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -53,8 +53,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="540a5-114">-DevicePath</span><span class="sxs-lookup"><span data-stu-id="540a5-114">-DevicePath</span></span>
-<span data-ttu-id="540a5-115">Die zulässigen Werte für diesen Parameter sind: `Primary` oder `Secondary`</span><span class="sxs-lookup"><span data-stu-id="540a5-115">The acceptable values for this parameter are: `Primary` or `Secondary`</span></span>
+### <span data-ttu-id="3a807-114">-DevicePath</span><span class="sxs-lookup"><span data-stu-id="3a807-114">-DevicePath</span></span>
+<span data-ttu-id="3a807-115">Die zulässigen Werte für diesen Parameter `Primary` sind: `Secondary`</span><span class="sxs-lookup"><span data-stu-id="3a807-115">The acceptable values for this parameter are: `Primary` or `Secondary`</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.DevicePathEnum
@@ -69,8 +69,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="540a5-116">-ExpressRouteCircuitName</span><span class="sxs-lookup"><span data-stu-id="540a5-116">-ExpressRouteCircuitName</span></span>
-<span data-ttu-id="540a5-117">Der Name des Express Route-Schaltkreises, der überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="540a5-117">The name of the ExpressRoute circuit being examined.</span></span>
+### <span data-ttu-id="3a807-116">-ExpressRouteCircuitName</span><span class="sxs-lookup"><span data-stu-id="3a807-116">-ExpressRouteCircuitName</span></span>
+<span data-ttu-id="3a807-117">Der Name des zu untersuchende ExpressRoute-Schaltkreises.</span><span class="sxs-lookup"><span data-stu-id="3a807-117">The name of the ExpressRoute circuit being examined.</span></span>
 
 ```yaml
 Type: System.String
@@ -84,8 +84,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="540a5-118">-PeeringType</span><span class="sxs-lookup"><span data-stu-id="540a5-118">-PeeringType</span></span>
-<span data-ttu-id="540a5-119">Die zulässigen Werte für diesen Parameter sind: `AzurePrivatePeering` , `AzurePublicPeering` und `MicrosoftPeering`</span><span class="sxs-lookup"><span data-stu-id="540a5-119">The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and `MicrosoftPeering`</span></span>
+### <span data-ttu-id="3a807-118">-PeeringType</span><span class="sxs-lookup"><span data-stu-id="3a807-118">-PeeringType</span></span>
+<span data-ttu-id="3a807-119">Die zulässigen Werte für diesen Parameter sind: `AzurePrivatePeering` `AzurePublicPeering` , und `MicrosoftPeering`</span><span class="sxs-lookup"><span data-stu-id="3a807-119">The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and `MicrosoftPeering`</span></span>
 
 ```yaml
 Type: System.String
@@ -100,8 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="540a5-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="540a5-120">-ResourceGroupName</span></span>
-<span data-ttu-id="540a5-121">Der Name der Ressourcengruppe, die den Express Route-Schaltkreis enthält.</span><span class="sxs-lookup"><span data-stu-id="540a5-121">The name of the resource group containing the ExpressRoute circuit.</span></span>
+### <span data-ttu-id="3a807-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="3a807-120">-ResourceGroupName</span></span>
+<span data-ttu-id="3a807-121">Der Name der Ressourcengruppe, die den "ExpressRoute"-Schaltkreis enthält.</span><span class="sxs-lookup"><span data-stu-id="3a807-121">The name of the resource group containing the ExpressRoute circuit.</span></span>
 
 ```yaml
 Type: System.String
@@ -115,23 +115,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="540a5-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="540a5-122">CommonParameters</span></span>
-<span data-ttu-id="540a5-123">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="540a5-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="540a5-124">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="540a5-124">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="3a807-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3a807-122">CommonParameters</span></span>
+<span data-ttu-id="3a807-123">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3a807-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3a807-124">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="3a807-124">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="540a5-125">Eingaben</span><span class="sxs-lookup"><span data-stu-id="540a5-125">INPUTS</span></span>
+## <span data-ttu-id="3a807-125">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="3a807-125">INPUTS</span></span>
 
-### <span data-ttu-id="540a5-126">System. String</span><span class="sxs-lookup"><span data-stu-id="540a5-126">System.String</span></span>
+### <span data-ttu-id="3a807-126">System.String</span><span class="sxs-lookup"><span data-stu-id="3a807-126">System.String</span></span>
 
-## <span data-ttu-id="540a5-127">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="540a5-127">OUTPUTS</span></span>
+## <span data-ttu-id="3a807-127">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="3a807-127">OUTPUTS</span></span>
 
-### <span data-ttu-id="540a5-128">Microsoft. Azure. Commands. Network. Models. PSExpressRouteCircuitRoutesTable</span><span class="sxs-lookup"><span data-stu-id="540a5-128">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTable</span></span>
+### <span data-ttu-id="3a807-128">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTable</span><span class="sxs-lookup"><span data-stu-id="3a807-128">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTable</span></span>
 
-## <span data-ttu-id="540a5-129">Notizen</span><span class="sxs-lookup"><span data-stu-id="540a5-129">NOTES</span></span>
+## <span data-ttu-id="3a807-129">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="3a807-129">NOTES</span></span>
 
-## <span data-ttu-id="540a5-130">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="540a5-130">RELATED LINKS</span></span>
+## <span data-ttu-id="3a807-130">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="3a807-130">RELATED LINKS</span></span>
 
-[<span data-ttu-id="540a5-131">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="540a5-131">Get-AzExpressRouteCircuitARPTable</span></span>](Get-AzExpressRouteCircuitARPTable.md)
+[<span data-ttu-id="3a807-131">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="3a807-131">Get-AzExpressRouteCircuitARPTable</span></span>](Get-AzExpressRouteCircuitARPTable.md)
 
-[<span data-ttu-id="540a5-132">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="540a5-132">Get-AzExpressRouteCircuitRouteTableSummary</span></span>](Get-AzExpressRouteCircuitRouteTableSummary.md)
+[<span data-ttu-id="3a807-132">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="3a807-132">Get-AzExpressRouteCircuitRouteTableSummary</span></span>](Get-AzExpressRouteCircuitRouteTableSummary.md)
 
-[<span data-ttu-id="540a5-133">Get-AzExpressRouteCircuitStats</span><span class="sxs-lookup"><span data-stu-id="540a5-133">Get-AzExpressRouteCircuitStats</span></span>](Get-AzExpressRouteCircuitStats.md)
+[<span data-ttu-id="3a807-133">Get-AzExpressRouteCircuitStat</span><span class="sxs-lookup"><span data-stu-id="3a807-133">Get-AzExpressRouteCircuitStat</span></span>](Get-AzExpressRouteCircuitStat.md)
