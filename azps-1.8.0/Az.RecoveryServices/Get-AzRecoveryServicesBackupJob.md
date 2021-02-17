@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupJob.md
-ms.openlocfilehash: 21498e13490b22b58621e2100dcc885442db7607
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5dab5eaca48152dc573caf75f5d80737802bfcdf
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93659912"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399820"
 ---
 # Get-AzRecoveryServicesBackupJob
 
-## Synopsis
-Ruft Backup-Aufträge ab.
+## SYNOPSIS
+Ruft Sicherungsaufträge ab.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzRecoveryServicesBackupJob [[-Status] <JobStatus>] [[-Operation] <JobOperation>] [[-From] <DateTime>]
@@ -26,13 +26,13 @@ Get-AzRecoveryServicesBackupJob [[-Status] <JobStatus>] [[-Operation] <JobOperat
  [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzRecoveryServicesBackupJob** " ruft Azure Backup-Aufträge für einen bestimmten Tresor ab.
-Setzen Sie den Vault-Kontext mithilfe des Set-AzRecoveryServicesVaultContext-Cmdlets, bevor Sie das aktuelle Cmdlet verwenden.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzRecoveryServicesBackupJob"** ruft Azure -Sicherungsaufträge für einen bestimmten Tresor ab.
+Legen Sie den Tresorkontext mithilfe des cmdlets Set-AzRecoveryServicesVaultContext, bevor Sie das aktuelle Cmdlet verwenden.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen aller in Bearbeitung befindlichen Aufträge
+### Beispiel 1: Alle in Bearbeitung ausgeführten Aufträge erhalten
 ```
 PS C:\>$Joblist = Get-AzRecoveryservicesBackupJob -Status Inprogress
 PS C:\> $Joblist[0]
@@ -41,20 +41,20 @@ WorkloadName     Operation            Status               StartTime            
 V2VM             Backup               InProgress           4/23/2016 5:00:30 PM      1/1/2001 12:00:00
 ```
 
-Der erste Befehl ruft den Status eines in Bearbeitung befindlichen Auftrags als Array ab und speichert ihn dann in der $jobList Variablen.
-Der zweite Befehl zeigt das erste Element im $jobList-Array an.
+Der erste Befehl ruft den Status eines in Bearbeitung ausgeführten Auftrags als Array ab und speichert ihn dann in der $Joblist Variable.
+Der zweite Befehl zeigt das erste Element in der $Joblist an.
 
-### Beispiel 2: Abrufen aller fehlgeschlagenen Aufträge in den letzten 7 Tagen
+### Beispiel 2: Alle fehlgeschlagenen Aufträge in den letzten 7 Tagen erhalten
 ```
 PS C:\>Get-AzRecoveryServicesBackupJob -From (Get-Date).AddDays(-7).ToUniversalTime() -Status Failed
 ```
 
-Dieser Befehl ruft fehlerhafte Aufträge aus der letzten Woche im Tresor ab.
-Der Parameter " *from* " gibt an, welche Uhrzeit sieben Tage in der Vergangenheit in UTC angegeben sind.
-Der Befehl gibt keinen Wert für den Parameter " *to" an* .
-Daher wird der Standardwert für die aktuelle Uhrzeit verwendet.
+Dieser Befehl ruft fehlgeschlagene Aufträge aus der letzten Woche im Tresor ab.
+Der *Parameter "Von"* gibt eine in UTC angegebene Zeit von sieben Tagen in der Vergangenheit an.
+Der Befehl gibt keinen Wert für den Parameter *"An"* an.
+Daher wird der Standardwert der aktuellen Uhrzeit verwendet.
 
-### Beispiel 3: Abrufen eines in Bearbeitung befindlichen Auftrags und warten auf den Abschluss
+### Beispiel 3: Erhalten eines in Bearbeitung ausgeführten Auftrags und Warten auf den Abschluss
 ```
 PS C:\> 
 $Jobs = Get-AzRecoveryServicesBackupJob -Status InProgress
@@ -72,12 +72,12 @@ $Job = $Jobs[0]
     Done!
 ```
 
-Dieses Skript ruft den ersten Job ab, der gerade ausgeführt wird, bis der Auftrag abgeschlossen ist.
+Dieses Skript abruft den ersten Auftrag, der derzeit ausgeführt wird, bis der Auftrag abgeschlossen ist.
 
-## Parameter
+## PARAMETERS
 
 ### -BackupManagementType
-Gibt den Sicherungs Verwaltungstyp an.
+Gibt den Sicherungsverwaltungstyp an.
 Derzeit wird nur AzureVM, AzureStorage unterstützt.
 
 ```yaml
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -108,11 +108,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Ab
-Gibt den Anfang als **DateTime** -Objekt eines Zeitbereichs für die Aufträge an, die dieses Cmdlet erhält.
-Verwenden Sie das Get-Date-Cmdlet, um ein **DateTime** -Objekt zu erhalten.
-Wenn Sie weitere Informationen zu **DateTime** -Objekten wünschen, geben Sie `Get-Help Get-Date` .
-Verwenden des UTC-Formats für Datumsangaben
+### -Von
+Gibt den Anfang (als **"DateTime"-Objekt)** eines Zeitbereichs für die Aufträge an, die dieses Cmdlet erhält.
+Verwenden Sie das **cmdlet "Get-Date",** um ein "DateTime"-Objekt zu erhalten.
+Weitere Informationen zu **"DateTime"-Objekten** erhalten Sie, wenn Sie `Get-Help Get-Date` ".
+Verwenden Sie das UTC-Format für Datumsangaben.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Job
-Gibt den Namen des abzurufenden Sicherungsauftrags an.
+Gibt den Namen des Sicherungsauftrags an, den Sie erhalten möchten.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
@@ -143,8 +143,8 @@ Accept wildcard characters: False
 
 ### -JobId
 Gibt die ID eines Auftrags an, den dieses Cmdlet erhält.
-Die ID ist die InstanceId-Eigenschaft eines **AzureRmRecoveryServicesBackupJob** -Objekts.
-Verwenden Sie Get-AzRecoveryServicesBackupJob, um ein **AzureRmRecoveryServicesBackupJob** -Objekt zu erhalten.
+Die ID ist die "InstanceId"-Eigenschaft eines **AzureRmRecoveryServicesBackupJob-Objekts.**
+Verwenden Sie **Get-AzRecoveryServicesBackupJob, um ein AzureRmRecoveryServicesBackupJob-Objekt** zu erhalten.
 
 ```yaml
 Type: System.String
@@ -158,16 +158,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Vorgang
+### -Operation
 Gibt einen Vorgang der Aufträge an, die dieses Cmdlet erhält.
-Die zulässigen Werte für diesen Parameter lauten wie folgt:
-- Backup
+Die zulässigen Werte für diesen Parameter sind:
+- Sicherung
 - ConfigureBackup
 - DeleteBackupData
 - Registrieren
-- Wiederherstellungs
+- Wiederherstellen
 - Schutz aufheben
-- Registrierung
+- Registrierung aufheben
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobOperation]
@@ -184,10 +184,10 @@ Accept wildcard characters: False
 
 ### -Status
 Gibt den Status der Aufträge an, die dieses Cmdlet erhält.
-Die zulässigen Werte für diesen Parameter lauten wie folgt:
+Die zulässigen Werte für diesen Parameter sind:
 - InProgress
-- Fehlgeschlagen
-- Storniert
+- Fehler
+- Abgebrochen
 - Abbrechen
 - Abgeschlossen
 - CompletedWithWarnings
@@ -206,10 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -To
-Gibt das Ende als **DateTime** -Objekt eines Zeitbereichs für die Aufträge an, die dieses Cmdlet erhält.
+Gibt das Ende eines  Zeitraumes für die Aufträge an, die dieses Cmdlet erhält.
 Der Standardwert ist die aktuelle Systemzeit.
-Wenn Sie diesen Parameter angeben, müssen Sie auch den *from* -Parameter angeben.
-Verwenden des UTC-Formats für Datumsangaben
+Wenn Sie diesen Parameter angeben, müssen Sie auch den Parameter *"Von"* angeben.
+Verwenden Sie das UTC-Format für Datumsangaben.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -223,8 +223,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tresor
-Arm-ID des Speichers für Wiederherstellungsdienste
+### -VaultId
+ARM-ID des Wiederherstellungsdienste-Tresors.
 
 ```yaml
 Type: System.String
@@ -239,23 +239,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. RecoveryServices. Backup. Cmdlets. Models. JobBase
+### Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Get-AzRecoveryServicesBackupJobDetails](./Get-AzRecoveryServicesBackupJobDetails.md)
 
-[Stopp-AzRecoveryServicesBackupJob](./Stop-AzRecoveryServicesBackupJob.md)
+[Stop-AzRecoveryServicesBackupJob](./Stop-AzRecoveryServicesBackupJob.md)
 
 [Wait-AzRecoveryServicesBackupJob](./Wait-AzRecoveryServicesBackupJob.md)
 

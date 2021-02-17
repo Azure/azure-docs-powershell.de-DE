@@ -5,12 +5,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrApplyRecoveryPoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrApplyRecoveryPoint.md
-ms.openlocfilehash: 893298c3349d2d7ceaa998a1f147ce8dd590f101
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: b06501fafbc573e10ac7d5dba3435dbf96342ba0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100158513"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407555"
 ---
 # Start-AzRecoveryServicesAsrApplyRecoveryPoint
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-Gibt das asr-replikationsgeschützte Elementobjekt an.
+Gibt das asR-replikationsgeschützte Elementobjekt an.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
@@ -161,4 +161,4 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Cmdlets](./Az.SiteRecovery.md)
+
