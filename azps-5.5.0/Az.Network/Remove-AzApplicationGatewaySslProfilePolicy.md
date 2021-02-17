@@ -5,17 +5,17 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewaySslProfilePolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewaySslProfilePolicy.md
-ms.openlocfilehash: 541293160a1cf9e3d32de5d378c24d1ee4b2705b
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 6843712d1b3a9fe33f54754535730771b917ec6e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100146732"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400041"
 ---
 # Remove-AzApplicationGatewaySslProfilePolicy
 
 ## SYNOPSIS
-Entfernt eine "SSL-Richtlinie" aus einem Azure-Anwendungsgateway-SSL-Profil.
+Entfernt eine "SSL-Richtlinie" aus einem SSL-Profil des Azure-Anwendungsgateways.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ PS C:\> $profile  = Get-AzApplicationGatewaySslProfile -Name "Profile01" -Applic
 PS C:\> $profile = Remove-AzApplicationGatewaySslProfilePolicy -SslProfile $profile
 ```
 
-Der erste Befehl ruft das Anwendungsgateway mit dem Namen ApplicationGateway01 in der Ressourcengruppe "ResourceGroup01" ab und speichert es in der $AppGw Variable. Der zweite Befehl ruft das "Profile01" für $AppGw und speichert es in der $profile Variable. Mit dem letzten Befehl wird die ssl-Richtlinie des in der Datei gespeicherten $profile.
+Der erste Befehl ruft das Anwendungsgateway mit dem Namen ApplicationGateway01 in der Ressourcengruppe "ResourceGroup01" ab und speichert es in der $AppGw Variable. Der zweite Befehl ruft das "Profile01" für $AppGw und speichert es in der $profile Variable. Mit dem letzten Befehl wird die "ssl"-Richtlinie des in der Datei gespeicherten $profile.
 
 ## PARAMETERS
 
@@ -116,9 +116,7 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 ## LINKS ZU VERWANDTEN THEMEN
 
-[New-AzApplicationGatewaySslProfilePolicy](./New-AzApplicationGatewaySslProfilePolicy.md)
 
-[Add-AzApplicationGatewaySslProfilePolicy](./Add-AzApplicationGatewaySslProfilePolicy.md)
 
 [Get-AzApplicationGatewaySslProfilePolicy](./Get-AzApplicationGatewaySslProfilePolicy.md)
 
