@@ -3,33 +3,33 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: A1599617-FAB8-42AE-B066-2B4682F0BA21
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 6b5c05a33ea14df95945d9539e53602db8abd79c
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: e453d8051e2be4ef72cc4d005c403ea051a6cdce
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94006784"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410938"
 ---
 # Get-AzureRemoteAppPlan
 
-## Synopsis
+## SYNOPSIS
 Listet Azure RemoteApp-Pläne auf.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzureRemoteAppPlan [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureRemoteAppPlan** " listet Azure RemoteApp-Pläne auf.
+## BESCHREIBUNG
+Im **Cmdlet "Get-AzureRemoteAppPlan"** werden Azure -RemoteApp-Pläne aufgeführt.
 
-## Beispiele
+## BEISPIELE
 
-## Parameter
+## PARAMETERS
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -45,16 +45,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure RemoteApp-Cmdlets](./Azure.RemoteApp.md)
+
 
 
