@@ -6,62 +6,62 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
-ms.openlocfilehash: 26a1fbcc2016de2e6eca4cff2ee2442ef0111919
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 93112c8e7518ac23b23e5b1bb6c18109481495dc
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93818984"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403152"
 ---
-# <span data-ttu-id="9f2cb-101">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="9f2cb-101">Get-AzActivityLogAlert</span></span>
+# <span data-ttu-id="bc373-101">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="bc373-101">Get-AzActivityLogAlert</span></span>
 
-## <span data-ttu-id="9f2cb-102">Synopsis</span><span class="sxs-lookup"><span data-stu-id="9f2cb-102">SYNOPSIS</span></span>
-<span data-ttu-id="9f2cb-103">Ruft eine oder mehrere Aktivitätsprotokoll-Warnungs Ressourcen ab.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-103">Gets one or more activity log alert resources.</span></span>
+## <span data-ttu-id="bc373-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="bc373-102">SYNOPSIS</span></span>
+<span data-ttu-id="bc373-103">Ruft mindestens eine Aktivitätsprotokollbenachrichtigungsressourcen ab.</span><span class="sxs-lookup"><span data-stu-id="bc373-103">Gets one or more activity log alert resources.</span></span>
 
-## <span data-ttu-id="9f2cb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9f2cb-104">SYNTAX</span></span>
+## <span data-ttu-id="bc373-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="bc373-104">SYNTAX</span></span>
 
-### <span data-ttu-id="9f2cb-105">GetByNameAndResourceGroup</span><span class="sxs-lookup"><span data-stu-id="9f2cb-105">GetByNameAndResourceGroup</span></span>
+### <span data-ttu-id="bc373-105">GetByNameAndResourceGroup</span><span class="sxs-lookup"><span data-stu-id="bc373-105">GetByNameAndResourceGroup</span></span>
 ```
 Get-AzActivityLogAlert [-ResourceGroupName] <String> [-Name] <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="9f2cb-106">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="9f2cb-106">GetByResourceGroup</span></span>
+### <span data-ttu-id="bc373-106">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="bc373-106">GetByResourceGroup</span></span>
 ```
 Get-AzActivityLogAlert [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="9f2cb-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9f2cb-107">DESCRIPTION</span></span>
-<span data-ttu-id="9f2cb-108">Das Cmdlet " **Get-AzActivityLogAlert** " Ruft eine oder mehrere Aktivitätsprotokoll-Warnungs Ressourcen ab.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-108">The **Get-AzActivityLogAlert** cmdlet gets one or more activity log alert resources.</span></span>
+## <span data-ttu-id="bc373-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="bc373-107">DESCRIPTION</span></span>
+<span data-ttu-id="bc373-108">Das **Cmdlet "Get-AzActivityLogAlert"** ruft eine oder mehrere Ressourcen zur Warnung im Aktivitätsprotokoll ab.</span><span class="sxs-lookup"><span data-stu-id="bc373-108">The **Get-AzActivityLogAlert** cmdlet gets one or more activity log alert resources.</span></span>
 
-## <span data-ttu-id="9f2cb-109">Beispiele</span><span class="sxs-lookup"><span data-stu-id="9f2cb-109">EXAMPLES</span></span>
+## <span data-ttu-id="bc373-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="bc373-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="9f2cb-110">Beispiel 1: Abrufen einer Aktivitätsprotokoll Benachrichtigung nach Abonnement-ID</span><span class="sxs-lookup"><span data-stu-id="9f2cb-110">Example 1: Get a activity log alerts by subscription ID</span></span>
+### <span data-ttu-id="bc373-110">Beispiel 1: Erhalten von Aktivitätsprotokollbenachrichtigungen nach Abonnement-ID</span><span class="sxs-lookup"><span data-stu-id="bc373-110">Example 1: Get a activity log alerts by subscription ID</span></span>
 ```
 PS C:\>Get-AzActivityLogAlert
 ```
 
-<span data-ttu-id="9f2cb-111">Dieser Befehl listet alle Aktivitätsprotokoll Benachrichtigungen für das aktuelle Abonnement auf.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-111">This command lists all the activity log alerts for the current subscription.</span></span>
+<span data-ttu-id="bc373-111">Dieser Befehl listet alle Aktivitätsprotokollbenachrichtigungen für das aktuelle Abonnement auf.</span><span class="sxs-lookup"><span data-stu-id="bc373-111">This command lists all the activity log alerts for the current subscription.</span></span>
 
-### <span data-ttu-id="9f2cb-112">Beispiel 2: Abrufen von Benachrichtigungen zum Aktivitätsprotokoll für die angegebene Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="9f2cb-112">Example 2: Get activity log alerts for the given resource group</span></span>
+### <span data-ttu-id="bc373-112">Beispiel 2: Erhalten von Aktivitätsprotokollbenachrichtigungen für die angegebene Ressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="bc373-112">Example 2: Get activity log alerts for the given resource group</span></span>
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts"
 ```
 
-<span data-ttu-id="9f2cb-113">Dieser Befehl listet Aktivitätsprotokoll Benachrichtigungen für die angegebene Ressourcengruppe auf.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-113">This command lists activity log alerts for the given resource group.</span></span>
+<span data-ttu-id="bc373-113">Dieser Befehl listet Aktivitätsprotokollwarnungen für die angegebene Ressourcengruppe auf.</span><span class="sxs-lookup"><span data-stu-id="bc373-113">This command lists activity log alerts for the given resource group.</span></span>
 
-### <span data-ttu-id="9f2cb-114">Beispiel 3: Abrufen einer Aktivitätsprotokoll Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="9f2cb-114">Example 3: Get an activity log alert.</span></span>
+### <span data-ttu-id="bc373-114">Beispiel 3: Erhalten einer Aktivitätsprotokollbenachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="bc373-114">Example 3: Get an activity log alert.</span></span>
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts" -Name "alert1"
 ```
 
-<span data-ttu-id="9f2cb-115">Dieser Befehl listet eine Benachrichtigung über das Aktivitätsprotokoll (eine Liste mit einem einzelnen Element) auf.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-115">This command lists one (a list with a single element) activity log alert.</span></span>
+<span data-ttu-id="bc373-115">Dieser Befehl listet eine Aktivitätsprotokollwarnung (eine Liste mit einem einzelnen Element) auf.</span><span class="sxs-lookup"><span data-stu-id="bc373-115">This command lists one (a list with a single element) activity log alert.</span></span>
 
-## <span data-ttu-id="9f2cb-116">Parameter</span><span class="sxs-lookup"><span data-stu-id="9f2cb-116">PARAMETERS</span></span>
+## <span data-ttu-id="bc373-116">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="bc373-116">PARAMETERS</span></span>
 
-### <span data-ttu-id="9f2cb-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="9f2cb-117">-DefaultProfile</span></span>
-<span data-ttu-id="9f2cb-118">Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement</span><span class="sxs-lookup"><span data-stu-id="9f2cb-118">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="bc373-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="bc373-117">-DefaultProfile</span></span>
+<span data-ttu-id="bc373-118">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="bc373-118">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,8 +75,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9f2cb-119">-Name</span><span class="sxs-lookup"><span data-stu-id="9f2cb-119">-Name</span></span>
-<span data-ttu-id="9f2cb-120">Der Name der Aktivitätsprotokoll Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-120">The name of the activity log alert.</span></span>
+### <span data-ttu-id="bc373-119">-Name</span><span class="sxs-lookup"><span data-stu-id="bc373-119">-Name</span></span>
+<span data-ttu-id="bc373-120">Der Name der Aktivitätsprotokollbenachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="bc373-120">The name of the activity log alert.</span></span>
 
 ```yaml
 Type: System.String
@@ -90,9 +90,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9f2cb-121">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="9f2cb-121">-ResourceGroupName</span></span>
-<span data-ttu-id="9f2cb-122">Der Name der Ressourcengruppe, in der die Warnungs Ressource vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-122">The name of the resource group where the alert resource exists.</span></span>
-<span data-ttu-id="9f2cb-123">Wenn Name nicht NULL oder leer ist, muss dieser Parameter eine nicht leere Zeichenfolge enthalten.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-123">If Name is not null or empty, this parameter must contain and non empty string.</span></span>
+### <span data-ttu-id="bc373-121">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="bc373-121">-ResourceGroupName</span></span>
+<span data-ttu-id="bc373-122">Der Name der Ressourcengruppe, in der die Warnungsressource vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="bc373-122">The name of the resource group where the alert resource exists.</span></span>
+<span data-ttu-id="bc373-123">Wenn "Name" nicht null oder leer ist, muss dieser Parameter eine zeichenfolge enthalten und nicht leer sein.</span><span class="sxs-lookup"><span data-stu-id="bc373-123">If Name is not null or empty, this parameter must contain and non empty string.</span></span>
 
 ```yaml
 Type: System.String
@@ -118,27 +118,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9f2cb-124">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9f2cb-124">CommonParameters</span></span>
-<span data-ttu-id="9f2cb-125">Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9f2cb-125">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9f2cb-126">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="9f2cb-126">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="bc373-124">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="bc373-124">CommonParameters</span></span>
+<span data-ttu-id="bc373-125">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="bc373-125">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bc373-126">Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="bc373-126">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="9f2cb-127">Eingaben</span><span class="sxs-lookup"><span data-stu-id="9f2cb-127">INPUTS</span></span>
+## <span data-ttu-id="bc373-127">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="bc373-127">INPUTS</span></span>
 
-### <span data-ttu-id="9f2cb-128">System. String</span><span class="sxs-lookup"><span data-stu-id="9f2cb-128">System.String</span></span>
+### <span data-ttu-id="bc373-128">System.String</span><span class="sxs-lookup"><span data-stu-id="bc373-128">System.String</span></span>
 
-## <span data-ttu-id="9f2cb-129">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="9f2cb-129">OUTPUTS</span></span>
+## <span data-ttu-id="bc373-129">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="bc373-129">OUTPUTS</span></span>
 
-### <span data-ttu-id="9f2cb-130">Microsoft. Azure. Commands. Insights. OutputClasses. PSActivityLogAlertResource</span><span class="sxs-lookup"><span data-stu-id="9f2cb-130">Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource</span></span>
+### <span data-ttu-id="bc373-130">Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource</span><span class="sxs-lookup"><span data-stu-id="bc373-130">Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource</span></span>
 
-## <span data-ttu-id="9f2cb-131">Notizen</span><span class="sxs-lookup"><span data-stu-id="9f2cb-131">NOTES</span></span>
+## <span data-ttu-id="bc373-131">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="bc373-131">NOTES</span></span>
 
-## <span data-ttu-id="9f2cb-132">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="9f2cb-132">RELATED LINKS</span></span>
+## <span data-ttu-id="bc373-132">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="bc373-132">RELATED LINKS</span></span>
 
-[<span data-ttu-id="9f2cb-133">Satz-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="9f2cb-133">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
+[<span data-ttu-id="bc373-133">Set-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="bc373-133">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
 
-[<span data-ttu-id="9f2cb-134">Update-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="9f2cb-134">Update-AzActivityLogAlert</span></span>](./Update-AzActivityLogAlert.md)
+[<span data-ttu-id="bc373-134">Remove-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="bc373-134">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
 
-[<span data-ttu-id="9f2cb-135">Remove-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="9f2cb-135">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
-
-[<span data-ttu-id="9f2cb-136">Neu – AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="9f2cb-136">New-AzActionGroup</span></span>](./New-AzActionGroup.md)
-
-[<span data-ttu-id="9f2cb-137">Neu – AzActivityLogAlertCondition</span><span class="sxs-lookup"><span data-stu-id="9f2cb-137">New-AzActivityLogAlertCondition</span></span>](./Get-AzActivityLogAlertCondition.md)
+[<span data-ttu-id="bc373-135">New-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="bc373-135">New-AzActionGroup</span></span>](./New-AzActionGroup.md)
