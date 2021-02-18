@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: 4ef8c131e0094928808e6479b2c5ffe40090c5d0
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 5f47237088808fe8966d239f9a0de7c892301db0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94166411"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410717"
 ---
 # Set-AzKeyVaultAccessPolicy
 
-## Synopsis
-Gewährt oder ändert vorhandene Berechtigungen für einen Benutzer, eine Anwendung oder eine Sicherheitsgruppe, um Vorgänge mit einem schlüsseltresor durchzuführen.
+## SYNOPSIS
+Gewährt oder ändert vorhandene Berechtigungen für einen Benutzer, eine Anwendung oder eine Sicherheitsgruppe, um Vorgänge mit einem Schlüsseltresor durchzuführen.
 
-## Syntax
+## SYNTAX
 
 ### ByUserPrincipalName (Standard)
 ```
@@ -135,26 +135,26 @@ Set-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-Enab
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Satz-AzKeyVaultAccessPolicy** " gewährt oder ändert vorhandene Berechtigungen für einen Benutzer, eine Anwendung oder eine Sicherheitsgruppe, um die angegebenen Vorgänge mit einem schlüsseltresor durchzuführen. Die Berechtigungen, die andere Benutzer, Anwendungen oder Sicherheitsgruppen im schlüsseltresor haben, werden nicht geändert.
-Wenn Sie Berechtigungen für eine Sicherheitsgruppe festlegen, betrifft dieser Vorgang nur Benutzer in dieser Sicherheitsgruppe.
-Die folgenden Verzeichnisse müssen alle das gleiche Azure-Verzeichnis aufweisen: 
-- Das Standardverzeichnis des Azure-Abonnements, in dem sich der Schlüsselspeicher befindet.
-- Das Azure-Verzeichnis, in dem sich der Benutzer oder die Anwendungsgruppe befindet, dem Sie Berechtigungen erteilen.
-Beispiele für Szenarien, in denen diese Bedingungen nicht erfüllt sind und dieses Cmdlet nicht funktioniert, sind: 
-- Autorisieren eines Benutzers aus einer anderen Organisation zum Verwalten Ihres Schlüsseldepots
-Jede Organisation verfügt über ein eigenes Verzeichnis. 
+## BESCHREIBUNG
+Das **Cmdlet "Set-AzKeyVaultAccessPolicy"** erteilt oder ändert vorhandene Berechtigungen für einen Benutzer, eine Anwendung oder eine Sicherheitsgruppe, um die angegebenen Vorgänge mit einem Schlüsseltresor durchzuführen. Die Berechtigungen, die andere Benutzer, Anwendungen oder Sicherheitsgruppen für den Schlüsseltresor besitzen, werden nicht geändert.
+Wenn Sie Berechtigungen für eine Sicherheitsgruppe festlegen, wirkt sich dieser Vorgang nur auf Benutzer in dieser Sicherheitsgruppe aus.
+Die folgenden Verzeichnisse müssen alle dasselbe Azure-Verzeichnis sein:
+- Das Standardverzeichnis des Azure-Abonnements, in dem sich der Schlüsseltresor befindet.
+- Das Azure-Verzeichnis, das den Benutzer oder die Anwendungsgruppe enthält, dem Sie Berechtigungen erteilen.
+Beispiele für Szenarien, in denen diese Bedingungen nicht erfüllt sind und dieses Cmdlet nicht funktioniert:
+- Autorisieren eines Benutzers aus einer anderen Organisation zum Verwalten Ihres Schlüsseltresor
+Jede Organisation verfügt über ein eigenes Verzeichnis.
 - Ihr Azure-Konto verfügt über mehrere Verzeichnisse.
-Wenn Sie eine Anwendung in einem anderen Verzeichnis als dem Standardverzeichnis registrieren, können Sie diese Anwendung nicht autorisieren, um Ihren schlüsseltresor zu verwenden.
+Wenn Sie eine Anwendung in einem anderen Verzeichnis als dem Standardverzeichnis registrieren, können Sie diese Anwendung nicht zur Verwendung Ihres Schlüsseltresor autorisieren.
 Die Anwendung muss sich im Standardverzeichnis befinden.
-Beachten Sie, dass die Angabe der Ressourcengruppe für dieses Cmdlet optional ist, um eine bessere Leistung zu erzielen.
+Beachten Sie: Obwohl die Angabe der Ressourcengruppe für dieses Cmdlet optional ist, sollten Sie dies zur Leistungssteigerung tun.
 
 > [!NOTE]
-> Wenn Sie einen Dienstprinzipal verwenden, um Zugriffsrichtlinien Berechtigungen zu erteilen, müssen Sie den `-BypassObjectIdValidation` Parameter verwenden.
+> Wenn Sie zum Erteilen von Zugriffsrichtlinienberechtigungen einen Dienstprinzipal verwenden, müssen Sie den Parameter `-BypassObjectIdValidation` verwenden.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Erteilen von Berechtigungen für einen Benutzer für einen schlüsseltresor und Ändern der Berechtigungen
+### Beispiel 1: Erteilen von Berechtigungen für einen Schlüsseltresor und Ändern der Berechtigungen für einen Benutzer
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets set,delete -PassThru
 
@@ -235,39 +235,40 @@ Access Policies                  :
 Tags                             :
 ```
 
-Der erste Befehl gewährt einem Benutzer in Azure Active Directory Berechtigungen, PattiFuller@contoso.com um Vorgänge für Schlüssel und Geheimnisse mit einem schlüsseltresor mit dem Namen Contoso03Vault durchzuführen. Der *passthru* -Parameter führt dazu, dass das aktualisierte Objekt vom Cmdlet zurückgegeben wird.
-Mit dem zweiten Befehl werden die Berechtigungen geändert, die PattiFuller@contoso.com im ersten Befehl gewährt wurden, sodass Sie nun zusätzlich zu den Einstellungen und Löschungen auch Geheimnisse erhalten. Die Berechtigungen für Schlüsselvorgänge bleiben nach diesem Befehl unverändert.
-Der endgültige Befehl ändert weiterhin die vorhandenen Berechtigungen für PattiFuller@contoso.com , um alle Berechtigungen für wichtige Vorgänge zu entfernen. Die Berechtigungen für geheime Vorgänge bleiben nach diesem Befehl unverändert. 
+Der erste Befehl erteilt einem Benutzer in Azure Active Directory Berechtigungen zum Ausführen von Vorgängen mit Schlüsseln und geheimen Daten mit einem Schlüsseltresor namens PattiFuller@contoso.com "Contoso03Vault". Der *Parameter "PassThru"* führt dazu, dass das aktualisierte Objekt vom Cmdlet zurückgegeben wird.
+Der zweite Befehl ändert die Berechtigungen, die im ersten Befehl erteilt wurden, um jetzt zusätzlich zum Festlegen und Löschen des Befehls das Abrufen von geheimen Daten PattiFuller@contoso.com zu ermöglichen. Die Berechtigungen für Wichtige Vorgänge bleiben nach diesem Befehl unverändert.
+Der letzte Befehl ändert außerdem die vorhandenen Berechtigungen zum PattiFuller@contoso.com Entfernen aller Berechtigungen für Schlüsselvorgänge. Die Berechtigungen für geheime Vorgänge bleiben nach diesem Befehl unverändert.
 
-### Beispiel 2: Erteilen von Berechtigungen für einen Anwendungsdienst Prinzipal zum Lesen und Schreiben von Geheimnissen
+### Beispiel 2: Erteilen von Berechtigungen für einen Anwendungsdienstprinzipal zum Lesen und Schreiben von geheimen Daten
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com' -PermissionsToSecrets Get,Set
 ```
 
-Dieser Befehl gewährt Berechtigungen für eine Anwendung für einen schlüsseltresor mit dem Namen Contoso03Vault. Der *servicePrincipalName* -Parameter gibt die Anwendung an. Die Anwendung muss in Ihrem Azure Active Directory registriert sein. Der Wert des *servicePrincipalName* -Parameters muss entweder der Dienstprinzipalname der Anwendung oder die GUID der Anwendungs-ID sein.
-In diesem Beispiel wird der Dienstprinzipalname angegeben http://payroll.contoso.com , und der Befehl gewährt den Anwendungsberechtigungen das Lesen und Schreiben von Geheimnissen.
+Dieser Befehl erteilt einer Anwendung Berechtigungen für einen Schlüsseltresor namens Contoso03Vault.
+Der *Parameter "ServicePrincipalName"* gibt die Anwendung an. Die Anwendung muss in Azure Active Directory registriert sein. Der Wert des Parameters *"ServicePrincipalName"* muss entweder der Dienstprinzipalname der Anwendung oder die Anwendungs-ID-GUID sein.
+In diesem Beispiel wird der Dienstprinzipalname angegeben, und der Befehl erteilt der Anwendung Berechtigungen `http://payroll.contoso.com` zum Lesen und Schreiben von geheimen Daten.
 
-### Beispiel 3: Erteilen von Berechtigungen für eine Anwendung unter Verwendung der Objekt-ID
+### Beispiel 3: Erteilen von Berechtigungen für eine Anwendung mithilfe der Objekt-ID
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
 ```
 
-Dieser Befehl gewährt den Anwendungsberechtigungen das Lesen und Schreiben von Geheimnissen.
-In diesem Beispiel wird die Anwendung mit der Objekt-ID des Dienst Prinzipals der Anwendung angegeben.
+Dieser Befehl erteilt der Anwendung Berechtigungen zum Lesen und Schreiben von geheimen Daten.
+In diesem Beispiel wird die Anwendung mit der Objekt-ID des Dienstprinzipal der Anwendung angegeben.
 
 ### Beispiel 4: Erteilen von Berechtigungen für einen Benutzerprinzipalnamen
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets Get,List,Set
 ```
 
-Dieser Befehl gewährt Get-, List-und festgelegte Berechtigungen für den angegebenen Benutzerprinzipalnamen für den Zugriff auf Geheimnisse.
+Mit diesem Befehl werden "get", "list" und "set permissions" für den angegebenen Benutzerprinzipalnamen für den Zugriff auf geheime Daten erteilt.
 
-### Beispiel 5: Aktivieren von Geheimnissen aus einem schlüsseltresor durch den Microsoft. Compute-Ressourcenanbieter
+### Beispiel 5: Ermöglichen, dass geheime Daten vom Microsoft.Compute-Ressourcenanbieter aus einem Schlüsseltresor abgerufen werden
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-Dieser Befehl gewährt die Berechtigungen für Geheimnisse, die vom Contoso03Vault-schlüsseltresor vom Microsoft. Compute-Ressourcenanbieter abgerufen werden.
+Dieser Befehl erteilt die Berechtigungen für geheime Daten, die vom Microsoft.Compute-Ressourcenanbieter aus dem Schlüsseltresor Contoso03Vault abgerufen werden sollen.
 
 ### Beispiel 6: Erteilen von Berechtigungen für eine Sicherheitsgruppe
 ```powershell
@@ -275,23 +276,23 @@ PS C:\> Get-AzADGroup
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'myownvault' -ObjectId (Get-AzADGroup -SearchString 'group2')[0].Id -PermissionsToKeys get, set -PermissionsToSecrets get, set
 ```
 
-Der erste Befehl verwendet das Get-AzADGroup-Cmdlet, um alle Active Directory-Gruppen abzurufen. In der Ausgabe werden drei zurückgegebene Gruppen mit dem Namen " **group1** ", " **group2** " und " **Gruppe3** " angezeigt. Mehrere Gruppen können denselben Namen haben, aber immer eine eindeutige ObjectID aufweisen. Wenn mehr als eine Gruppe mit demselben Namen zurückgegeben wird, verwenden Sie die ObjectID in der Ausgabe, um die gewünschte Gruppe zu identifizieren.
-Anschließend verwenden Sie die Ausgabe dieses Befehls mit Set-AzKeyVaultAccessPolicy, um group2-Berechtigungen für Ihren schlüsseltresor mit dem Namen **myownvault** zu erteilen. In diesem Beispiel werden die Gruppen mit dem Namen "group2" Inline in der gleichen Befehlszeile aufgelistet.
-In der zurückgegebenen Liste können mehrere Gruppen mit dem Namen "group2" vorhanden sein.
-In diesem Beispiel wird das erste Element mit dem Index \[ 0 \] in der zurückgegebenen Liste markiert.
+Der erste Befehl verwendet das Get-AzADGroup Cmdlet, um alle Active Directory-Gruppen zu erhalten. Aus der Ausgabe werden 3 Gruppen zurückgegeben, mit den Namen **"Gruppe1",** **"Gruppe2"** und **"Gruppe3".** Mehrere Gruppen können denselben Namen, aber immer eine eindeutige ObjectId haben. Wenn mehr als eine Gruppe mit demselben Namen zurückgegeben wird, verwenden Sie die ObjectId in der Ausgabe, um die Gruppe zu identifizieren, die Sie verwenden möchten.
+Anschließend verwenden Sie die Ausgabe dieses Befehls mit Set-AzKeyVaultAccessPolicy, um Berechtigungen für Den Schlüsseltresor **"myownvault"** der Gruppe 2 zu erteilen. In diesem Beispiel werden die Gruppen mit dem Namen "group2" inline in derselben Befehlszeile aufgezählt.
+Die zurückgegebene Liste enthält möglicherweise mehrere Gruppen mit dem Namen "Gruppe2".
+In diesem Beispiel wird das erste Beispiel, das durch Index \[ 0 \] in der zurückgegebenen Liste angegeben ist, verwendet.
 
-### Beispiel 7: Gewähren des Azure Information Protection-Zugriffs auf den vom Kunden verwalteten Mandanten Schlüssel (BYOK)
+### Beispiel 7: Gewähren von Azure Information Protection Zugriff auf den vom Kunden verwalteten Mandantenschlüssel (BYOK)
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
-Mit diesem Befehl wird der Azure-Informationsschutz autorisiert, einen vom Kunden verwalteten Schlüssel (das Szenario "eigene Schlüssel" oder "BYOK") als Azure Information Protection-Mandanten Schlüssel zu verwenden.
-Wenn Sie diesen Befehl ausführen, geben Sie Ihren eigenen schlüsseltresor Namen an, aber Sie müssen den *servicePrincipalName* -Parameter mit der GUID **00000012-0000-0000-C000-000000000000** angeben und die Berechtigungen im Beispiel angeben.
+Mit diesem Befehl wird Azure Information Protection autorisiert, einen vom Kunden verwalteten Schlüssel (das "Bring your own key" oder "BYOK"-Szenario) als Azure Information Protection-Mandantenschlüssel zu verwenden.
+Wenn Sie diesen Befehl ausführen, geben Sie Ihren eigenen Namen für den Schlüsseltresor an, müssen jedoch den Parameter *"ServicePrincipalName"* mit der GUID **00000012-0000-0000-c000-0000000000** angeben und die Berechtigungen im Beispiel angeben.
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
-Für die spätere Verwendung.
+Für die zukünftige Verwendung.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -307,7 +308,7 @@ Accept wildcard characters: False
 
 ### -BypassObjectIdValidation
 Ermöglicht es Ihnen, eine Objekt-ID anzugeben, ohne zu überprüfen, ob das Objekt in Azure Active Directory vorhanden ist.
-Verwenden Sie diesen Parameter nur, wenn Sie einer Objekt-ID, die sich auf eine delegierte Sicherheitsgruppe aus einem anderen Azure-Mandanten bezieht, Zugriff auf Ihren schlüsseltresor gewähren möchten.
+Verwenden Sie diesen Parameter nur, wenn Sie Zugriff auf Ihren Schlüsseltresor auf eine Objekt-ID gewähren möchten, die sich auf eine delegierte Sicherheitsgruppe von einem anderen Azure-Mandanten bezieht.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -336,9 +337,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Email-Email
-Gibt die e-Mail-Adresse des Benutzers an, dem Sie Berechtigungen erteilen möchten.
-Diese e-Mail-Adresse muss in dem Verzeichnis vorhanden sein, das dem aktuellen Abonnement zugeordnet ist, und eindeutig sein.
+### -EmailAddress
+Gibt die E-Mail-Adresse des Benutzers an, dem Berechtigungen erteilt werden.
+Diese E-Mail-Adresse muss in dem Verzeichnis vorhanden sein, das mit dem aktuellen Abonnement verknüpft ist, und eindeutig sein.
 
 ```yaml
 Type: System.String
@@ -353,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Ermöglicht es dem Microsoft. Compute-Ressourcenanbieter, Geheimnisse aus diesem Schlüsselspeicher abzurufen, wenn bei der Ressourcenerstellung auf diesen schlüsseltresor verwiesen wird, beispielsweise beim Erstellen einer virtuellen Maschine.
+Ermöglicht es dem Microsoft.Compute-Ressourcenanbieter, geheime Daten aus diesem Schlüsseltresor abzurufen, wenn bei der Ressourcenerstellung auf diesen Schlüsseltresor verwiesen wird, z. B. beim Erstellen eines virtuellen Computers.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -368,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Aktiviert den Azure Disk Encryption-Dienst, um Geheimnisse zu erhalten und die Schlüssel aus diesem schlüsseltresor zu entpacken.
+Ermöglicht dem Azure-Datenträgerverschlüsselungsdienst das Erhalten von geheimen Schlüsseln und Entpackungsschlüsseln aus diesem Schlüsseltresor.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -383,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-Aktiviert den Azure Resource Manager, um Geheimnisse aus diesem Schlüsselspeicher abzurufen, wenn in einer Vorlagenbereitstellung auf diesen schlüsseltresor verwiesen wird.
+Ermöglicht Azure Resource Manager, geheime Daten aus diesem Schlüsseltresor zu erhalten, wenn in einer Vorlagenbereitstellung auf diesen Schlüsseltresor verwiesen wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -397,8 +398,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Vault-Schlüsselobjekt
+### -InputObject
+Key Vault Object
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
@@ -412,8 +413,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Gibt die Objekt-ID des Benutzers oder Dienst Prinzipals in Azure Active Directory an, für den Berechtigungen erteilt werden sollen.
+### -ObjectId
+Gibt die Objekt-ID des Benutzers oder Dienstprinzipal in Azure Active Directory an, für den Berechtigungen erteilt werden.
 
 ```yaml
 Type: System.String
@@ -429,7 +430,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird mit diesem Cmdlet keine Ausgabe generiert.
+Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -444,24 +445,24 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToCertificates
-Gibt ein Array von Zertifikat Berechtigungen an, die einem Benutzer oder Dienstprinzipal gewährt werden sollen.
+Gibt ein Array von Zertifikatberechtigungen an, die einem Benutzer oder Dienstprinzipal erteilt werden.
 Die zulässigen Werte für diesen Parameter:
 - Erhalten
 - Liste
 - Löschen
 - Erstellen
 - Importieren
-- Aktualisieren
+- Update
 - Managecontacts
-- Getissuer
+- Getissuers
 - Listissuers
-- Setissuer
+- Setissuers
 - Deleteissuers
 - Manageissuers
 - Wiederherstellen
-- Backup
-- Wiederherstellungs
-- Purge
+- Sicherung
+- Wiederherstellen
+- Löschen
 
 ```yaml
 Type: System.String[]
@@ -477,24 +478,24 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToKeys
-Gibt ein Array von Schlüssel Vorgangsberechtigungen an, die einem Benutzer oder Dienstprinzipal gewährt werden sollen.
+Gibt ein Array mit Wichtigen Vorgangsberechtigungen an, die einem Benutzer oder Dienstprinzipal erteilt werden müssen.
 Die zulässigen Werte für diesen Parameter:
 - Entschlüsseln
 - Verschlüsseln
 - UnwrapKey
 - WrapKey
-- Prüfen
-- Melden sich
+- Überprüfen
+- Signieren
 - Erhalten
 - Liste
-- Aktualisieren
+- Update
 - Erstellen
 - Importieren
 - Löschen
-- Backup
-- Wiederherstellungs
+- Sicherung
 - Wiederherstellen
-- Purge
+- Wiederherstellen
+- Löschen
 
 ```yaml
 Type: System.String[]
@@ -510,16 +511,16 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToSecrets
-Gibt ein Array von geheimen Vorgangsberechtigungen an, die einem Benutzer oder Dienstprinzipal gewährt werden sollen.
+Gibt ein Array mit geheimen Vorgangsberechtigungen an, die einem Benutzer oder Dienstprinzipal erteilt werden.
 Die zulässigen Werte für diesen Parameter:
 - Erhalten
 - Liste
-- Einrichten
+- Festlegen
 - Löschen
-- Backup
-- Wiederherstellungs
+- Sicherung
 - Wiederherstellen
-- Purge
+- Wiederherstellen
+- Löschen
 
 ```yaml
 Type: System.String[]
@@ -535,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToStorage
-Gibt die Berechtigungen des verwalteten speicherkontos und des SAS-Definitionsvorgangs an, die einem Benutzer oder Dienstprinzipal gewährt werden.
+Gibt die Berechtigungen für verwaltetes Speicherkonto und SaS-Definitionsvorgang an, die einem Benutzer oder Dienstprinzipal gewährt werden.
 
 ```yaml
 Type: System.String[]
@@ -565,8 +566,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Schlüsseltresor-Ressourcen-ID
+### -ResourceId
+Ressourcen-ID des Schlüsseltresor
 
 ```yaml
 Type: System.String
@@ -581,8 +582,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-Gibt den Dienstprinzipalnamen der Anwendung an, der Berechtigungen erteilt werden sollen.
-Geben Sie die Anwendungs-ID (auch Client-ID genannt) an, die für die Anwendung im AzureActive-Verzeichnis registriert wurde. Die Anwendung mit dem Dienstprinzipalnamen, den dieser Parameter angibt, muss im Azure-Verzeichnis registriert sein, in dem sich das aktuelle Abonnement befindet.
+Gibt den Dienstprinzipalnamen der Anwendung an, der Berechtigungen erteilt werden soll.
+Geben Sie die Anwendungs-ID( auch bekannt als Client-ID) an, die für die Anwendung in AzureActive Directory registriert ist. Die Anwendung mit dem von diesem Parameter angegebenen Dienstprinzipalnamen muss im Azure-Verzeichnis registriert sein, das Ihr aktuelles Abonnement enthält.
 
 ```yaml
 Type: System.String
@@ -597,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Gibt den Benutzerprinzipalnamen des Benutzers an, dem Sie Berechtigungen erteilen möchten.
+Gibt den Benutzerprinzipalnamen des Benutzers an, dem Berechtigungen erteilt werden.
 Dieser Benutzerprinzipalname muss in dem Verzeichnis vorhanden sein, das dem aktuellen Abonnement zugeordnet ist.
 
 ```yaml
@@ -612,9 +613,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Vaultname
-Gibt den Namen eines Schlüsseldepots an.
-Mit diesem Cmdlet wird die Zugriffsrichtlinie für den schlüsseltresor geändert, den dieser Parameter angibt.
+### -VaultName
+Gibt den Namen eines Schlüsseltresor an.
+Dieses Cmdlet ändert die Zugriffsrichtlinie für den Schlüsseltresor, den dieser Parameter angibt.
 
 ```yaml
 Type: System.String
@@ -628,8 +629,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -643,7 +644,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
@@ -659,21 +660,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVaultIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
 [Get-AzKeyVault](./Get-AzKeyVault.md)
 
