@@ -1,17 +1,17 @@
 ---
 title: Einführung in das Azure Az PowerShell-Modul
 description: Hier erhalten Sie eine Einführung in das Az PowerShell-Modul, das für die Interaktion mit Azure empfohlen wird und das AzureRM PowerShell-Modul ersetzt.
-ms.date: 12/1/2020
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 9021a1d8fdc73aedb87b17631f8e67cb8ef79166
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: b52b6995fb50a6ce502d42e7df588ca72340a1e7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100012034"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409476"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Einführung in das Azure Az PowerShell-Modul
 
@@ -78,7 +78,9 @@ Wenn Ihre Skripts noch auf dem AzureRM-Modul basieren, stehen Ihnen verschiedene
 
 Az ist das aktuellste PowerShell-Modul für Azure. Wenn Sie Probleme melden oder Featureanfragen senden möchten, können Sie diese direkt im [GitHub-Repository](https://github.com/Azure/azure-powershell) eingeben, oder sich an den Microsoft-Support wenden, falls Sie über einen Supportvertrag verfügen. Featureanfragen werden in der aktuellen Version von Az implementiert. Behebungen kritischer Probleme werden in der aktuellen Version von Az implementiert.
 
-Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird jedoch bis Februar 2021 weiterhin offiziell gepflegt, und bis Februar 2021 werden kritische Hotfixes dafür zur Verfügung gestellt.
+Die Az PowerShell-Module bieten nun die gleichen Funktionen wie AzureRM PowerShell-Module und weitere Funktionen, daher werden die AzureRM PowerShell-Module am 29 Februar 2024 ausgemustert.
+
+Um Dienstunterbrechungen zu vermeiden, müssen Sie bis zum 29. Februar 2024 die [Skripts aktualisieren](https://aka.ms/azpsmigrate), die AzureRM PowerShell-Module verwenden. Befolgen Sie zum automatischen Aktualisieren Ihrer Skripts die [Schnellstartanleitung](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 ## <a name="data-collection"></a>Datensammlung
 

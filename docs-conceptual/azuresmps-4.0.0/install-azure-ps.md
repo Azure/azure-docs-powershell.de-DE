@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2860d5c7642b137c1cb14a38fa13d59ec2a4123c
-ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
+ms.openlocfilehash: 23ea4bcbd182cf1b063f2ae90921217de74a7044
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523205"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401520"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installieren des Azure PowerShell-Dienstverwaltungsmoduls
 
@@ -34,7 +34,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 Falls PowerShellGet nicht installiert ist, lesen Sie [Installieren von PowerShellGet](#how-to-get-powershellget).
 
-## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure PowerShell
+## <a name="step-2-install-azure-powershell"></a>Schritt 2: Installieren von Azure Powershell
 
 Führen Sie über die Windows PowerShell-Konsole den folgenden Befehl als Administrator aus:
 
@@ -70,7 +70,7 @@ Nach der Anmeldung bei Azure erstellt Azure PowerShell einen Kontext für die Si
 
 Azure PowerShell-Module werden regelmäßig aktualisiert. Sollten Sie feststellen, dass die Cmdlet-Onlinehilfe Cmdlets oder Parameter enthält, die in Ihrem Modul nicht vorhanden sind, laden Sie die neueste Version des Moduls herunter, und installieren Sie sie. Geben Sie Folgendes ein, um die Version Ihres Moduls zu ermitteln: `(Get-InstalledModule Azure).Version`.
 
-Beispielskripts zur Automatisierung einiger allgemeiner Aufgaben in Azure finden Sie im [Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
+Beispielskripts zur Automatisierung einiger allgemeiner Aufgaben in Azure finden Sie im [Azure Script Center](https://www.windowsazure.com/documentation/scripts/).
 
 Allgemeine Informationen zum Installieren, Kennenlernen, Verwenden und Anpassen von Windows PowerShell finden Sie unter [Skripterstellung mit Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).
 
