@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: e084894c26cee1a619f418437986593fe86876bb
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: e19565aa8ae249acf61fce67f0a2b54e20143758
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94009799"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410156"
 ---
 # Remove-AzKeyVaultAccessPolicy
 
-## Synopsis
-Entfernt alle Berechtigungen für einen Benutzer oder eine Anwendung aus einem schlüsseltresor.
+## SYNOPSIS
+Entfernt alle Berechtigungen für einen Benutzer oder eine Anwendung aus einem Schlüsseltresor.
 
-## Syntax
+## SYNTAX
 
 ### ByUserPrincipalName (Standard)
 ```
@@ -115,12 +115,12 @@ Remove-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-E
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet **Remove-AzKeyVaultAccessPolicy** entfernt alle Berechtigungen für einen Benutzer oder eine Anwendung oder für alle Benutzer und Anwendungen aus einem Schlüsselspeicher.
-Auch wenn Sie alle Berechtigungen entfernen, kann der Besitzer des Azure-Abonnements, das den schlüsseltresor enthält, dem schlüsseltresor Berechtigungen hinzufügen.
-Beachten Sie, dass die Angabe der Ressourcengruppe für dieses Cmdlet optional ist, um eine bessere Leistung zu erzielen.
+## BESCHREIBUNG
+Das **Cmdlet "Remove-AzKeyVaultAccessPolicy"** entfernt alle Berechtigungen für einen Benutzer oder eine Anwendung oder für alle Benutzer und Anwendungen aus einem Schlüsseltresor.
+Selbst wenn Sie alle Berechtigungen entfernen, kann der Besitzer des Azure-Abonnements, das den Schlüsseltresor enthält, Dem Schlüsseltresor Berechtigungen hinzufügen.
+Beachten Sie, dass die Angabe der Ressourcengruppe für dieses Cmdlet zwar optional ist, dies aber zur Leistungssteigerung ist.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Entfernen von Berechtigungen für einen Benutzer
 ```powershell
@@ -158,32 +158,32 @@ Network Rule Set                 :
 Tags                             :
 ```
 
-Mit diesem Befehl werden alle Berechtigungen entfernt, die ein Benutzer PattiFuller@contoso.com im schlüsseltresor mit dem Namen Contoso03Vault hat.  Wenn-passthru angegeben ist, wird das keyvault-Objekt zurückgegeben.
+Mit diesem Befehl werden alle Berechtigungen entfernt, die ein Benutzer für den Schlüsseltresor PattiFuller@contoso.com "Contoso03Vault" besitzt.  Wenn "-PassThru" angegeben wird, wird das "KeyVault"-Objekt zurückgegeben.
 
 ### Beispiel 2: Entfernen von Berechtigungen für eine Anwendung
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com'
 ```
 
-Mit diesem Befehl werden alle Berechtigungen entfernt, die eine Anwendung im schlüsseltresor mit dem Namen Contoso03Vault hat.
-In diesem Beispiel wird die Anwendung mit dem in Azure Active Directory registrierten Dienstprinzipalnamen identifiziert http://payroll.contoso.com .
+Mit diesem Befehl werden alle Berechtigungen entfernt, die eine Anwendung für den Schlüsseltresor "Contoso03Vault" besitzt.
+In diesem Beispiel wird die Anwendung anhand des Dienstprinzipalnamens identifiziert, der in Azure Active Directory registriert `http://payroll.contoso.com` ist.
 
 ### Beispiel 3: Entfernen von Berechtigungen für eine Anwendung mithilfe der Objekt-ID
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 34595082-9346-41b6-8d6b-295a2808b8db
 ```
 
-Mit diesem Befehl werden alle Berechtigungen entfernt, die eine Anwendung im schlüsseltresor mit dem Namen Contoso03Vault hat.
-In diesem Beispiel wird die Anwendung anhand der Objekt-ID des Dienst Prinzipals identifiziert.
+Mit diesem Befehl werden alle Berechtigungen entfernt, die eine Anwendung für den Schlüsseltresor "Contoso03Vault" besitzt.
+In diesem Beispiel wird die Anwendung durch die Objekt-ID des Dienstprinzipal identifiziert.
 
-### Beispiel 4: Entfernen von Berechtigungen für den Microsoft. Compute-Ressourcenanbieter
+### Beispiel 4: Entfernen von Berechtigungen für den Ressourcenanbieter "Microsoft.Compute"
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-Dieser Befehl entfernt die Berechtigung für den Microsoft. Compute-Ressourcenanbieter, um Geheimnisse aus der Contoso03Vault zu erhalten.
+Mit diesem Befehl wird die Berechtigung für den Ressourcenanbieter "Microsoft.Compute" entfernt, um geheime Daten aus Contoso03Vault zu erhalten.
 
-## Parameter
+## PARAMETERS
 
 ### -ApplicationId
 Gibt die ID der Anwendung an, deren Berechtigungen entfernt werden sollen.
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -215,8 +215,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Email-Email
-Gibt die e-Mail-Adresse des Benutzers an, dessen Zugriff Sie entfernen möchten.
+### -EmailAddress
+Gibt die E-Mail-Adresse des Benutzers an, dessen Zugriff Sie entfernen möchten.
 
 ```yaml
 Type: System.String
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Wenn angegeben, wird der Abruf von Geheimnissen aus diesem schlüsseltresor vom Microsoft. Compute-Ressourcenanbieter deaktiviert, wenn in der Ressourcenerstellung darauf verwiesen wird.
+Wenn angegeben, wird das Abrufen von geheimen Daten aus diesem Schlüsseltresor durch den Microsoft.Compute-Ressourcenanbieter deaktiviert, wenn bei der Ressourcenerstellung darauf verwiesen wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Wenn angegeben, wird der Abruf von Geheimnissen aus diesem schlüsseltresor durch Azure Disk Encryption deaktiviert.
+Wenn angegeben, deaktiviert die Azure-Datenträgerverschlüsselung das Abrufen von geheimen Daten aus diesem Schlüsseltresor.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-Wenn angegeben, wird der Abruf von Geheimnissen aus diesem schlüsseltresor durch Azure Resource Manager deaktiviert, wenn in Vorlagen darauf verwiesen wird.
+Wenn angegeben, wird das Abrufen von geheimen Daten aus diesem Schlüsseltresor durch Azure Resource Manager deaktiviert, wenn in Vorlagen darauf verwiesen wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -275,8 +275,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Vault-Schlüsselobjekt
+### -InputObject
+Key Vault-Objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -290,8 +290,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Gibt die Objekt-ID des Benutzers oder Dienst Prinzipals in Azure Active Directory an, für den Berechtigungen entfernt werden sollen.
+### -ObjectId
+Gibt die Objekt-ID des Benutzers oder Dienstprinzipal in Azure Active Directory an, für den Berechtigungen entfernt werden.
 
 ```yaml
 Type: System.String
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird mit diesem Cmdlet keine Ausgabe generiert.
+Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,8 +322,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gibt den Namen der Ressourcengruppe an, die dem schlüsseltresor zugeordnet ist, dessen Zugriffsrichtlinie geändert wird.
-Wenn dies nicht angegeben ist, sucht dieses Cmdlet nach dem schlüsseltresor im aktuellen Abonnement.
+Gibt den Namen der Ressourcengruppe an, die dem Schlüsseltresor zugeordnet ist, dessen Zugriffsrichtlinie geändert wird.
+Wenn diese Angabe nicht angegeben ist, sucht dieses Cmdlet nach dem Schlüsseltresor im aktuellen Abonnement.
 
 ```yaml
 Type: System.String
@@ -337,8 +337,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Keyvault-Ressourcen-ID.
+### -ResourceId
+KeyVault-Ressourcen-ID.
 
 ```yaml
 Type: System.String
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 Gibt den Dienstprinzipalnamen der Anwendung an, deren Berechtigungen Sie entfernen möchten.
-Geben Sie die Anwendungs-ID (auch Client-ID genannt) an, die für die Anwendung in Azure Active Directory registriert ist.
+Geben Sie die Anwendungs-ID( auch bekannt als Client-ID) an, die für die Anwendung in Azure Active Directory registriert ist.
 
 ```yaml
 Type: System.String
@@ -383,9 +383,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Vaultname
-Gibt den Namen des Schlüsseldepots an.
-Dieses Cmdlet entfernt Berechtigungen für den schlüsseltresor, den dieser Parameter angibt.
+### -VaultName
+Gibt den Namen des Schlüsseltresor an.
+Mit diesem Cmdlet werden Berechtigungen für den Schlüsseltresor entfernt, den dieser Parameter angibt.
 
 ```yaml
 Type: System.String
@@ -399,8 +399,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -414,7 +414,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -431,21 +431,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. keyvault. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Satz-AzKeyVaultAccessPolicy](./Set-AzKeyVaultAccessPolicy.md)
+[Set-AzKeyVaultAccessPolicy](./Set-AzKeyVaultAccessPolicy.md)
 
