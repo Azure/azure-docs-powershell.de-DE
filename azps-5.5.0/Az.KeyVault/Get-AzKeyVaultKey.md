@@ -6,135 +6,135 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
-ms.openlocfilehash: 842e571794fbf257473843ab824c1e6497f5c4a6
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: c01c000ff1171fdf63bd4bdd4c1548d7e61116f6
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100159604"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415732"
 ---
-# <span data-ttu-id="c2c1d-101">Get-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="c2c1d-101">Get-AzKeyVaultKey</span></span>
+# <span data-ttu-id="3c159-101">Get-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="3c159-101">Get-AzKeyVaultKey</span></span>
 
-## <span data-ttu-id="c2c1d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="c2c1d-102">SYNOPSIS</span></span>
-<span data-ttu-id="c2c1d-103">Ruft Die Schlüssel des Tresors ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-103">Gets Key Vault keys.</span></span>
+## <span data-ttu-id="3c159-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="3c159-102">SYNOPSIS</span></span>
+<span data-ttu-id="3c159-103">Ruft Die Schlüssel des Tresors ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-103">Gets Key Vault keys.</span></span>
 
-## <span data-ttu-id="c2c1d-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c2c1d-104">SYNTAX</span></span>
+## <span data-ttu-id="3c159-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3c159-104">SYNTAX</span></span>
 
-### <span data-ttu-id="c2c1d-105">ByVaultName (Standard)</span><span class="sxs-lookup"><span data-stu-id="c2c1d-105">ByVaultName (Default)</span></span>
+### <span data-ttu-id="3c159-105">ByVaultName (Standard)</span><span class="sxs-lookup"><span data-stu-id="3c159-105">ByVaultName (Default)</span></span>
 ```
 Get-AzKeyVaultKey [-VaultName] <String> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-106">ByKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-106">ByKeyName</span></span>
+### <span data-ttu-id="3c159-106">ByKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-106">ByKeyName</span></span>
 ```
 Get-AzKeyVaultKey [-VaultName] <String> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-107">ByKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-107">ByKeyVersions</span></span>
+### <span data-ttu-id="3c159-107">ByKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-107">ByKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey [-VaultName] <String> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-108">HsmByKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-108">HsmByKeyName</span></span>
+### <span data-ttu-id="3c159-108">HsmByKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-108">HsmByKeyName</span></span>
 ```
 Get-AzKeyVaultKey -HsmName <String> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-109">HsmByVaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-109">HsmByVaultName</span></span>
+### <span data-ttu-id="3c159-109">HsmByVaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-109">HsmByVaultName</span></span>
 ```
 Get-AzKeyVaultKey -HsmName <String> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-110">HsmByKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-110">HsmByKeyVersions</span></span>
+### <span data-ttu-id="3c159-110">HsmByKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-110">HsmByKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey -HsmName <String> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-111">ByInputObjectVaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-111">ByInputObjectVaultName</span></span>
+### <span data-ttu-id="3c159-111">ByInputObjectVaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-111">ByInputObjectVaultName</span></span>
 ```
 Get-AzKeyVaultKey [-InputObject] <PSKeyVault> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-112">ByInputObjectKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-112">ByInputObjectKeyName</span></span>
+### <span data-ttu-id="3c159-112">ByInputObjectKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-112">ByInputObjectKeyName</span></span>
 ```
 Get-AzKeyVaultKey [-InputObject] <PSKeyVault> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-113">ByInputObjectKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-113">ByInputObjectKeyVersions</span></span>
+### <span data-ttu-id="3c159-113">ByInputObjectKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-113">ByInputObjectKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey [-InputObject] <PSKeyVault> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-114">HsmByInputObjectVaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-114">HsmByInputObjectVaultName</span></span>
+### <span data-ttu-id="3c159-114">HsmByInputObjectVaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-114">HsmByInputObjectVaultName</span></span>
 ```
 Get-AzKeyVaultKey [-HsmObject] <PSManagedHsm> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-115">HsmByInputObjectKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-115">HsmByInputObjectKeyName</span></span>
+### <span data-ttu-id="3c159-115">HsmByInputObjectKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-115">HsmByInputObjectKeyName</span></span>
 ```
 Get-AzKeyVaultKey [-HsmObject] <PSManagedHsm> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-116">HsmByInputObjectKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-116">HsmByInputObjectKeyVersions</span></span>
+### <span data-ttu-id="3c159-116">HsmByInputObjectKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-116">HsmByInputObjectKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey [-HsmObject] <PSManagedHsm> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-117">ByResourceIdVaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-117">ByResourceIdVaultName</span></span>
+### <span data-ttu-id="3c159-117">ByResourceIdVaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-117">ByResourceIdVaultName</span></span>
 ```
 Get-AzKeyVaultKey -ResourceId <String> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-118">ByResourceIdKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-118">ByResourceIdKeyName</span></span>
+### <span data-ttu-id="3c159-118">ByResourceIdKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-118">ByResourceIdKeyName</span></span>
 ```
 Get-AzKeyVaultKey -ResourceId <String> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-119">ByResourceIdKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-119">ByResourceIdKeyVersions</span></span>
+### <span data-ttu-id="3c159-119">ByResourceIdKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-119">ByResourceIdKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey -ResourceId <String> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-120">HsmByResourceIdVaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-120">HsmByResourceIdVaultName</span></span>
+### <span data-ttu-id="3c159-120">HsmByResourceIdVaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-120">HsmByResourceIdVaultName</span></span>
 ```
 Get-AzKeyVaultKey -HsmResourceId <String> [[-Name] <String>] [-InRemovedState] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-121">HsmByResourceIdKeyName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-121">HsmByResourceIdKeyName</span></span>
+### <span data-ttu-id="3c159-121">HsmByResourceIdKeyName</span><span class="sxs-lookup"><span data-stu-id="3c159-121">HsmByResourceIdKeyName</span></span>
 ```
 Get-AzKeyVaultKey -HsmResourceId <String> [-Name] <String> [-Version] <String> [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c2c1d-122">HsmByResourceIdKeyVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-122">HsmByResourceIdKeyVersions</span></span>
+### <span data-ttu-id="3c159-122">HsmByResourceIdKeyVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-122">HsmByResourceIdKeyVersions</span></span>
 ```
 Get-AzKeyVaultKey -HsmResourceId <String> [-Name] <String> [-IncludeVersions] [-OutFile <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="c2c1d-123">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="c2c1d-123">DESCRIPTION</span></span>
-<span data-ttu-id="c2c1d-124">Das **Cmdlet "Get-AzKeyVaultKey"** ruft Azure Key Vault Keys ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-124">The **Get-AzKeyVaultKey** cmdlet gets Azure Key Vault keys.</span></span>
-<span data-ttu-id="c2c1d-125">Dieses Cmdlet ruft ein bestimmtes **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** oder eine Liste aller **KeyBundle-Objekte** in einem Schlüsseltresor oder nach Version ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-125">This cmdlet gets a specific **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** or a list of all **KeyBundle** objects in a key vault or by version.</span></span>
+## <span data-ttu-id="3c159-123">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="3c159-123">DESCRIPTION</span></span>
+<span data-ttu-id="3c159-124">Das **Cmdlet "Get-AzKeyVaultKey"** ruft Azure Key Vault Keys ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-124">The **Get-AzKeyVaultKey** cmdlet gets Azure Key Vault keys.</span></span>
+<span data-ttu-id="3c159-125">Dieses Cmdlet ruft ein bestimmtes **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** oder eine Liste aller **KeyBundle-Objekte** in einem Schlüsseltresor oder nach Version ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-125">This cmdlet gets a specific **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** or a list of all **KeyBundle** objects in a key vault or by version.</span></span>
 
-## <span data-ttu-id="c2c1d-126">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="c2c1d-126">EXAMPLES</span></span>
+## <span data-ttu-id="3c159-126">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="3c159-126">EXAMPLES</span></span>
 
-### <span data-ttu-id="c2c1d-127">Beispiel 1: Alle Schlüssel in einem Schlüsseltresor erhalten</span><span class="sxs-lookup"><span data-stu-id="c2c1d-127">Example 1: Get all the keys in a key vault</span></span>
+### <span data-ttu-id="3c159-127">Beispiel 1: Alle Schlüssel in einem Schlüsseltresor erhalten</span><span class="sxs-lookup"><span data-stu-id="3c159-127">Example 1: Get all the keys in a key vault</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso'
 
@@ -163,9 +163,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-<span data-ttu-id="c2c1d-128">Dieser Befehl ruft alle Schlüssel im Schlüsseltresor namens Contoso ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-128">This command gets all the keys in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-128">Dieser Befehl ruft alle Schlüssel im Schlüsseltresor namens Contoso ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-128">This command gets all the keys in the key vault named Contoso.</span></span>
 
-### <span data-ttu-id="c2c1d-129">Beispiel 2: Erhalten der aktuellen Version eines Schlüssels</span><span class="sxs-lookup"><span data-stu-id="c2c1d-129">Example 2: Get the current version of a key</span></span>
+### <span data-ttu-id="3c159-129">Beispiel 2: Erhalten der aktuellen Version eines Schlüssels</span><span class="sxs-lookup"><span data-stu-id="3c159-129">Example 2: Get the current version of a key</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1'
 
@@ -182,9 +182,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-<span data-ttu-id="c2c1d-130">Dieser Befehl ruft die aktuelle Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-130">This command gets the current version of the key named test1 in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-130">Dieser Befehl ruft die aktuelle Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-130">This command gets the current version of the key named test1 in the key vault named Contoso.</span></span>
 
-### <span data-ttu-id="c2c1d-131">Beispiel 3: Alle Versionen eines Schlüssels erhalten</span><span class="sxs-lookup"><span data-stu-id="c2c1d-131">Example 3: Get all versions of a key</span></span>
+### <span data-ttu-id="3c159-131">Beispiel 3: Alle Versionen eines Schlüssels erhalten</span><span class="sxs-lookup"><span data-stu-id="3c159-131">Example 3: Get all versions of a key</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -IncludeVersions
 
@@ -213,9 +213,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-<span data-ttu-id="c2c1d-132">Dieser Befehl ruft alle Versionen ab, die den Schlüssel "ITPfx" im Schlüsseltresor "Contoso" haben.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-132">This command gets all versions the key named ITPfx in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-132">Dieser Befehl ruft alle Versionen ab, die den Schlüssel "ITPfx" im Schlüsseltresor "Contoso" haben.</span><span class="sxs-lookup"><span data-stu-id="3c159-132">This command gets all versions the key named ITPfx in the key vault named Contoso.</span></span>
 
-### <span data-ttu-id="c2c1d-133">Beispiel 4: Erhalten einer bestimmten Version eines Schlüssels</span><span class="sxs-lookup"><span data-stu-id="c2c1d-133">Example 4: Get a specific version of a key</span></span>
+### <span data-ttu-id="3c159-133">Beispiel 4: Erhalten einer bestimmten Version eines Schlüssels</span><span class="sxs-lookup"><span data-stu-id="3c159-133">Example 4: Get a specific version of a key</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -Version 'e4e95940e669407fbdb4298bc21a3e1d'
 
@@ -232,10 +232,10 @@ Purge Disabled : False
 Tags           :
 ```
 
-<span data-ttu-id="c2c1d-134">Dieser Befehl ruft eine bestimmte Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-134">This command gets a specific version of the key named test1 in the key vault named Contoso.</span></span>
-<span data-ttu-id="c2c1d-135">Nachdem Sie diesen Befehl ausgeführt haben, können Sie verschiedene Eigenschaften des Schlüssels prüfen, indem Sie im $Key navigieren.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-135">After running this command, you can inspect various properties of the key by navigating the $Key object.</span></span>
+<span data-ttu-id="3c159-134">Dieser Befehl ruft eine bestimmte Version des Schlüssels namens "Test1" im Schlüsseltresor "Contoso" ab.</span><span class="sxs-lookup"><span data-stu-id="3c159-134">This command gets a specific version of the key named test1 in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-135">Nachdem Sie diesen Befehl ausgeführt haben, können Sie verschiedene Eigenschaften des Schlüssels prüfen, indem Sie im $Key navigieren.</span><span class="sxs-lookup"><span data-stu-id="3c159-135">After running this command, you can inspect various properties of the key by navigating the $Key object.</span></span>
 
-### <span data-ttu-id="c2c1d-136">Beispiel 5: Alle Schlüssel für diesen Schlüsseltresor erhalten, die gelöscht, aber nicht gelöscht wurden</span><span class="sxs-lookup"><span data-stu-id="c2c1d-136">Example 5: Get all the keys that have been deleted but not purged for this key vault</span></span>
+### <span data-ttu-id="3c159-136">Beispiel 5: Alle Schlüssel für diesen Schlüsseltresor erhalten, die gelöscht, aber nicht gelöscht wurden</span><span class="sxs-lookup"><span data-stu-id="3c159-136">Example 5: Get all the keys that have been deleted but not purged for this key vault</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -InRemovedState
 
@@ -253,9 +253,9 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-<span data-ttu-id="c2c1d-137">Dieser Befehl ruft alle Schlüssel ab, die zuvor gelöscht, aber nicht gelöscht wurden, im Schlüsseltresor "Contoso".</span><span class="sxs-lookup"><span data-stu-id="c2c1d-137">This command gets all the keys that have been previously deleted, but not purged, in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-137">Dieser Befehl ruft alle Schlüssel ab, die zuvor gelöscht, aber nicht gelöscht wurden, im Schlüsseltresor namens Contoso.</span><span class="sxs-lookup"><span data-stu-id="3c159-137">This command gets all the keys that have been previously deleted, but not purged, in the key vault named Contoso.</span></span>
 
-### <span data-ttu-id="c2c1d-138">Beispiel 6: Ruft den wichtigsten ITPfx-Server ab, der gelöscht, aber nicht für diesen Schlüsseltresor gelöscht wurde.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-138">Example 6: Gets the key ITPfx that has been deleted but not purged for this key vault.</span></span>
+### <span data-ttu-id="3c159-138">Beispiel 6: Ruft den schlüssel-ITPfx-Schlüssel ab, der gelöscht, aber nicht für diesen Schlüsseltresor gelöscht wurde.</span><span class="sxs-lookup"><span data-stu-id="3c159-138">Example 6: Gets the key ITPfx that has been deleted but not purged for this key vault.</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test3' -InRemovedState
 
@@ -273,10 +273,10 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-<span data-ttu-id="c2c1d-139">Dieser Befehl ruft den Schlüsseltest3 ab, der zuvor im Schlüsseltresor "Contoso" gelöscht, aber nicht gelöscht wurde.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-139">This command gets the key test3 that has been previously deleted, but not purged, in the key vault named Contoso.</span></span>
-<span data-ttu-id="c2c1d-140">Dieser Befehl gibt Metadaten wie das Löschdatum und das geplante Löschdatum dieses gelöschten Schlüssels zurück.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-140">This command will return metadata such as the deletion date, and the scheduled purging date of this deleted key.</span></span>
+<span data-ttu-id="3c159-139">Dieser Befehl ruft den Schlüsseltest3 ab, der zuvor im Schlüsseltresor "Contoso" gelöscht, aber nicht gelöscht wurde.</span><span class="sxs-lookup"><span data-stu-id="3c159-139">This command gets the key test3 that has been previously deleted, but not purged, in the key vault named Contoso.</span></span>
+<span data-ttu-id="3c159-140">Dieser Befehl gibt Metadaten wie das Löschdatum und das geplante Löschdatum dieses gelöschten Schlüssels zurück.</span><span class="sxs-lookup"><span data-stu-id="3c159-140">This command will return metadata such as the deletion date, and the scheduled purging date of this deleted key.</span></span>
 
-### <span data-ttu-id="c2c1d-141">Beispiel 7: Erhalten aller Schlüssel in einem Schlüsseltresor mithilfe der Filterung</span><span class="sxs-lookup"><span data-stu-id="c2c1d-141">Example 7: Get all the keys in a key vault using filtering</span></span>
+### <span data-ttu-id="3c159-141">Beispiel 7: Erhalten aller Schlüssel in einem Schlüsseltresor mithilfe der Filterung</span><span class="sxs-lookup"><span data-stu-id="3c159-141">Example 7: Get all the keys in a key vault using filtering</span></span>
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName "test*"
 
@@ -305,22 +305,22 @@ Purge Disabled : False
 Tags           :
 ```
 
-<span data-ttu-id="c2c1d-142">Dieser Befehl ruft alle Schlüssel im Schlüsseltresor "Contoso" ab, die mit "Test" beginnen.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-142">This command gets all the keys in the key vault named Contoso that start with "test".</span></span>
+<span data-ttu-id="3c159-142">Dieser Befehl ruft alle Schlüssel im Schlüsseltresor "Contoso" ab, die mit "Test" beginnen.</span><span class="sxs-lookup"><span data-stu-id="3c159-142">This command gets all the keys in the key vault named Contoso that start with "test".</span></span>
 
-### <span data-ttu-id="c2c1d-143">Beispiel 8: Herunterladen eines öffentlichen Schlüssels als PEM-Datei</span><span class="sxs-lookup"><span data-stu-id="c2c1d-143">Example 8: Download a public key as a .pem file</span></span>
+### <span data-ttu-id="3c159-143">Beispiel 8: Herunterladen eines öffentlichen Schlüssels als PEM-Datei</span><span class="sxs-lookup"><span data-stu-id="3c159-143">Example 8: Download a public key as a .pem file</span></span>
 
 ```powershell
 PS C:\> $path = "D:\public.pem"
 PS C:\> Get-AzKeyVaultKey -VaultName $vaultName -KeyName $keyName -OutFile $path
 ```
 
-<span data-ttu-id="c2c1d-144">Sie können den öffentlichen Schlüssel eines RSA-Schlüssels herunterladen, indem Sie den Parameter `-OutFile` angeben.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-144">You can download the public key of a RSA key by specifying the `-OutFile` parameter.</span></span>
-<span data-ttu-id="c2c1d-145">Dies ist ein Schritt beim Importieren von HSM-geschützten Schlüsseln in den Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-145">This is one step of importing HSM-protected keys to Azure Key Vault.</span></span> <span data-ttu-id="c2c1d-146">Sieh https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys</span><span class="sxs-lookup"><span data-stu-id="c2c1d-146">See https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys</span></span>
+<span data-ttu-id="3c159-144">Sie können den öffentlichen Schlüssel eines RSA-Schlüssels herunterladen, indem Sie den Parameter `-OutFile` angeben.</span><span class="sxs-lookup"><span data-stu-id="3c159-144">You can download the public key of a RSA key by specifying the `-OutFile` parameter.</span></span>
+<span data-ttu-id="3c159-145">Dies ist ein Schritt beim Importieren von HSM-geschützten Schlüsseln in den Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="3c159-145">This is one step of importing HSM-protected keys to Azure Key Vault.</span></span> <span data-ttu-id="3c159-146">Sieh https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys</span><span class="sxs-lookup"><span data-stu-id="3c159-146">See https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys</span></span>
 
-## <span data-ttu-id="c2c1d-147">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c2c1d-147">PARAMETERS</span></span>
+## <span data-ttu-id="3c159-147">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3c159-147">PARAMETERS</span></span>
 
-### <span data-ttu-id="c2c1d-148">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c2c1d-148">-DefaultProfile</span></span>
-<span data-ttu-id="c2c1d-149">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="c2c1d-149">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="3c159-148">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3c159-148">-DefaultProfile</span></span>
+<span data-ttu-id="3c159-149">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden</span><span class="sxs-lookup"><span data-stu-id="3c159-149">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -334,8 +334,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-150">-HsmName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-150">-HsmName</span></span>
-<span data-ttu-id="c2c1d-151">HSM-Name.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-151">HSM name.</span></span> <span data-ttu-id="c2c1d-152">Das Cmdlet erstellt den FQDN eines verwalteten HSM basierend auf dem Namen und der aktuell ausgewählten Umgebung.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-152">Cmdlet constructs the FQDN of a managed HSM based on the name and currently selected environment.</span></span>
+### <span data-ttu-id="3c159-150">-HsmName</span><span class="sxs-lookup"><span data-stu-id="3c159-150">-HsmName</span></span>
+<span data-ttu-id="3c159-151">HSM-Name.</span><span class="sxs-lookup"><span data-stu-id="3c159-151">HSM name.</span></span> <span data-ttu-id="3c159-152">Das Cmdlet erstellt den FQDN eines verwalteten HSM basierend auf dem Namen und der aktuell ausgewählten Umgebung.</span><span class="sxs-lookup"><span data-stu-id="3c159-152">Cmdlet constructs the FQDN of a managed HSM based on the name and currently selected environment.</span></span>
 
 ```yaml
 Type: System.String
@@ -349,8 +349,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-153">-HsmObject</span><span class="sxs-lookup"><span data-stu-id="c2c1d-153">-HsmObject</span></span>
-<span data-ttu-id="c2c1d-154">HSM-Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-154">HSM object.</span></span>
+### <span data-ttu-id="3c159-153">-HsmObject</span><span class="sxs-lookup"><span data-stu-id="3c159-153">-HsmObject</span></span>
+<span data-ttu-id="3c159-154">HSM-Objekt.</span><span class="sxs-lookup"><span data-stu-id="3c159-154">HSM object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm
@@ -364,8 +364,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-155">-HsmResourceId</span><span class="sxs-lookup"><span data-stu-id="c2c1d-155">-HsmResourceId</span></span>
-<span data-ttu-id="c2c1d-156">HSM-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-156">HSM Resource Id.</span></span>
+### <span data-ttu-id="3c159-155">-HsmResourceId</span><span class="sxs-lookup"><span data-stu-id="3c159-155">-HsmResourceId</span></span>
+<span data-ttu-id="3c159-156">HSM-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="3c159-156">HSM Resource Id.</span></span>
 
 ```yaml
 Type: System.String
@@ -379,11 +379,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-157">-IncludeVersions</span><span class="sxs-lookup"><span data-stu-id="c2c1d-157">-IncludeVersions</span></span>
-<span data-ttu-id="c2c1d-158">Gibt an, dass dieses Cmdlet alle Versionen eines Schlüssels erhält.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-158">Indicates that this cmdlet gets all versions of a key.</span></span>
-<span data-ttu-id="c2c1d-159">Die aktuelle Version eines Schlüssels ist die erste in der Liste.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-159">The current version of a key is the first one on the list.</span></span>
-<span data-ttu-id="c2c1d-160">Wenn Sie diesen Parameter angeben, müssen Sie auch die *Parameter "Name"* und *"VaultName"* angeben.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-160">If you specify this parameter you must also specify the *Name* and *VaultName* parameters.</span></span>
-<span data-ttu-id="c2c1d-161">Wenn Sie den Parameter *"IncludeVersions"* nicht angeben, ruft dieses Cmdlet die aktuelle Version des Schlüssels mit dem angegebenen *Namen ab.*</span><span class="sxs-lookup"><span data-stu-id="c2c1d-161">If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the key with the specified *Name*.</span></span>
+### <span data-ttu-id="3c159-157">-IncludeVersions</span><span class="sxs-lookup"><span data-stu-id="3c159-157">-IncludeVersions</span></span>
+<span data-ttu-id="3c159-158">Gibt an, dass dieses Cmdlet alle Versionen eines Schlüssels erhält.</span><span class="sxs-lookup"><span data-stu-id="3c159-158">Indicates that this cmdlet gets all versions of a key.</span></span>
+<span data-ttu-id="3c159-159">Die aktuelle Version eines Schlüssels ist die erste in der Liste.</span><span class="sxs-lookup"><span data-stu-id="3c159-159">The current version of a key is the first one on the list.</span></span>
+<span data-ttu-id="3c159-160">Wenn Sie diesen Parameter angeben, müssen Sie auch die *Parameter "Name"* und *"VaultName"* angeben.</span><span class="sxs-lookup"><span data-stu-id="3c159-160">If you specify this parameter you must also specify the *Name* and *VaultName* parameters.</span></span>
+<span data-ttu-id="3c159-161">Wenn Sie den Parameter *"IncludeVersions"* nicht angeben, ruft dieses Cmdlet die aktuelle Version des Schlüssels mit dem angegebenen *Namen ab.*</span><span class="sxs-lookup"><span data-stu-id="3c159-161">If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the key with the specified *Name*.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -397,8 +397,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-162">-InputObject</span><span class="sxs-lookup"><span data-stu-id="c2c1d-162">-InputObject</span></span>
-<span data-ttu-id="c2c1d-163">KeyVault-Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-163">KeyVault object.</span></span>
+### <span data-ttu-id="3c159-162">-InputObject</span><span class="sxs-lookup"><span data-stu-id="3c159-162">-InputObject</span></span>
+<span data-ttu-id="3c159-163">KeyVault-Objekt.</span><span class="sxs-lookup"><span data-stu-id="3c159-163">KeyVault object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -412,8 +412,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-164">-InRemovedState</span><span class="sxs-lookup"><span data-stu-id="c2c1d-164">-InRemovedState</span></span>
-<span data-ttu-id="c2c1d-165">Gibt an, ob die zuvor gelöschten Schlüssel in der Ausgabe angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-165">Specifies whether to show the previously deleted keys in the output</span></span>
+### <span data-ttu-id="3c159-164">-InRemovedState</span><span class="sxs-lookup"><span data-stu-id="3c159-164">-InRemovedState</span></span>
+<span data-ttu-id="3c159-165">Gibt an, ob die zuvor gelöschten Schlüssel in der Ausgabe angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3c159-165">Specifies whether to show the previously deleted keys in the output</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -427,8 +427,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-166">-Name</span><span class="sxs-lookup"><span data-stu-id="c2c1d-166">-Name</span></span>
-<span data-ttu-id="c2c1d-167">Gibt den Namen des zu erhaltenden Schlüsselbündels an.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-167">Specifies the name of the key bundle to get.</span></span>
+### <span data-ttu-id="3c159-166">-Name</span><span class="sxs-lookup"><span data-stu-id="3c159-166">-Name</span></span>
+<span data-ttu-id="3c159-167">Gibt den Namen des zu erhaltenden Schlüsselbündels an.</span><span class="sxs-lookup"><span data-stu-id="3c159-167">Specifies the name of the key bundle to get.</span></span>
 
 ```yaml
 Type: System.String
@@ -454,8 +454,8 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="c2c1d-168">-OutFile</span><span class="sxs-lookup"><span data-stu-id="c2c1d-168">-OutFile</span></span>
-<span data-ttu-id="c2c1d-169">Gibt die Ausgabedatei an, für die dieser Schlüssel von diesem Cmdlet gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-169">Specifies the output file for which this cmdlet saves the key.</span></span> <span data-ttu-id="c2c1d-170">Der öffentliche Schlüssel wird standardmäßig im PEM-Format gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-170">The public key is saved in PEM format by default.</span></span>
+### <span data-ttu-id="3c159-168">-OutFile</span><span class="sxs-lookup"><span data-stu-id="3c159-168">-OutFile</span></span>
+<span data-ttu-id="3c159-169">Gibt die Ausgabedatei an, für die dieser Schlüssel von diesem Cmdlet gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="3c159-169">Specifies the output file for which this cmdlet saves the key.</span></span> <span data-ttu-id="3c159-170">Der öffentliche Schlüssel wird standardmäßig im PEM-Format gespeichert.</span><span class="sxs-lookup"><span data-stu-id="3c159-170">The public key is saved in PEM format by default.</span></span>
 
 ```yaml
 Type: System.String
@@ -469,8 +469,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-171">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="c2c1d-171">-ResourceId</span></span>
-<span data-ttu-id="c2c1d-172">KeyVault-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-172">KeyVault Resource Id.</span></span>
+### <span data-ttu-id="3c159-171">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="3c159-171">-ResourceId</span></span>
+<span data-ttu-id="3c159-172">KeyVault-Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="3c159-172">KeyVault Resource Id.</span></span>
 
 ```yaml
 Type: System.String
@@ -484,9 +484,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-173">-VaultName</span><span class="sxs-lookup"><span data-stu-id="c2c1d-173">-VaultName</span></span>
-<span data-ttu-id="c2c1d-174">Gibt den Namen des Schlüsseltresor an, aus dem dieses Cmdlet Schlüssel erhält.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-174">Specifies the name of the key vault from which this cmdlet gets keys.</span></span>
-<span data-ttu-id="c2c1d-175">Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüsseltresor basierend auf dem Namen, den dieser Parameter angibt, und der ausgewählten Umgebung.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-175">This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your selected environment.</span></span>
+### <span data-ttu-id="3c159-173">-VaultName</span><span class="sxs-lookup"><span data-stu-id="3c159-173">-VaultName</span></span>
+<span data-ttu-id="3c159-174">Gibt den Namen des Schlüsseltresor an, aus dem dieses Cmdlet Schlüssel erhält.</span><span class="sxs-lookup"><span data-stu-id="3c159-174">Specifies the name of the key vault from which this cmdlet gets keys.</span></span>
+<span data-ttu-id="3c159-175">Dieses Cmdlet erstellt den vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) eines Schlüsseltresor basierend auf dem Namen, den dieser Parameter angibt, und der ausgewählten Umgebung.</span><span class="sxs-lookup"><span data-stu-id="3c159-175">This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your selected environment.</span></span>
 
 ```yaml
 Type: System.String
@@ -500,9 +500,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-176">-Version</span><span class="sxs-lookup"><span data-stu-id="c2c1d-176">-Version</span></span>
-<span data-ttu-id="c2c1d-177">Gibt die Schlüsselversion an.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-177">Specifies the key version.</span></span>
-<span data-ttu-id="c2c1d-178">Dieses Cmdlet erstellt den FQDN eines Schlüssels basierend auf dem Namen des Schlüsseltresor, der aktuell ausgewählten Umgebung, dem Schlüsselnamen und der Schlüsselversion.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-178">This cmdlet constructs the FQDN of a key based on the key vault name, your currently selected environment, the key name, and the key version.</span></span>
+### <span data-ttu-id="3c159-176">-Version</span><span class="sxs-lookup"><span data-stu-id="3c159-176">-Version</span></span>
+<span data-ttu-id="3c159-177">Gibt die Schlüsselversion an.</span><span class="sxs-lookup"><span data-stu-id="3c159-177">Specifies the key version.</span></span>
+<span data-ttu-id="3c159-178">Dieses Cmdlet erstellt den FQDN eines Schlüssels basierend auf dem Namen des Schlüsseltresor, der aktuell ausgewählten Umgebung, dem Schlüsselnamen und der Schlüsselversion.</span><span class="sxs-lookup"><span data-stu-id="3c159-178">This cmdlet constructs the FQDN of a key based on the key vault name, your currently selected environment, the key name, and the key version.</span></span>
 
 ```yaml
 Type: System.String
@@ -516,34 +516,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c2c1d-179">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c2c1d-179">CommonParameters</span></span>
-<span data-ttu-id="c2c1d-180">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c2c1d-180">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c2c1d-181">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="c2c1d-181">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="3c159-179">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3c159-179">CommonParameters</span></span>
+<span data-ttu-id="3c159-180">Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3c159-180">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3c159-181">Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="3c159-181">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="c2c1d-182">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="c2c1d-182">INPUTS</span></span>
+## <span data-ttu-id="3c159-182">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="3c159-182">INPUTS</span></span>
 
-### <span data-ttu-id="c2c1d-183">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault</span><span class="sxs-lookup"><span data-stu-id="c2c1d-183">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault</span></span>
+### <span data-ttu-id="3c159-183">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault</span><span class="sxs-lookup"><span data-stu-id="3c159-183">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault</span></span>
 
-### <span data-ttu-id="c2c1d-184">System.String</span><span class="sxs-lookup"><span data-stu-id="c2c1d-184">System.String</span></span>
+### <span data-ttu-id="3c159-184">System.String</span><span class="sxs-lookup"><span data-stu-id="3c159-184">System.String</span></span>
 
-## <span data-ttu-id="c2c1d-185">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="c2c1d-185">OUTPUTS</span></span>
+## <span data-ttu-id="3c159-185">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="3c159-185">OUTPUTS</span></span>
 
-### <span data-ttu-id="c2c1d-186">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem</span><span class="sxs-lookup"><span data-stu-id="c2c1d-186">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem</span></span>
+### <span data-ttu-id="3c159-186">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem</span><span class="sxs-lookup"><span data-stu-id="3c159-186">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem</span></span>
 
-### <span data-ttu-id="c2c1d-187">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="c2c1d-187">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey</span></span>
+### <span data-ttu-id="3c159-187">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="3c159-187">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey</span></span>
 
-### <span data-ttu-id="c2c1d-188">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem</span><span class="sxs-lookup"><span data-stu-id="c2c1d-188">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem</span></span>
+### <span data-ttu-id="3c159-188">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem</span><span class="sxs-lookup"><span data-stu-id="3c159-188">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem</span></span>
 
-### <span data-ttu-id="c2c1d-189">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="c2c1d-189">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey</span></span>
+### <span data-ttu-id="3c159-189">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="3c159-189">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey</span></span>
 
-## <span data-ttu-id="c2c1d-190">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="c2c1d-190">NOTES</span></span>
+## <span data-ttu-id="3c159-190">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="3c159-190">NOTES</span></span>
 
-## <span data-ttu-id="c2c1d-191">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="c2c1d-191">RELATED LINKS</span></span>
+## <span data-ttu-id="3c159-191">LINKS ZU VERWANDTEN THEMEN</span><span class="sxs-lookup"><span data-stu-id="3c159-191">RELATED LINKS</span></span>
 
-[<span data-ttu-id="c2c1d-192">Add-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="c2c1d-192">Add-AzKeyVaultKey</span></span>](./Add-AzKeyVaultKey.md)
+[<span data-ttu-id="3c159-192">Add-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="3c159-192">Add-AzKeyVaultKey</span></span>](./Add-AzKeyVaultKey.md)
 
-[<span data-ttu-id="c2c1d-193">Remove-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="c2c1d-193">Remove-AzKeyVaultKey</span></span>](./Remove-AzKeyVaultKey.md)
+[<span data-ttu-id="3c159-193">Remove-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="3c159-193">Remove-AzKeyVaultKey</span></span>](./Remove-AzKeyVaultKey.md)
 
-[<span data-ttu-id="c2c1d-194">Undo-AzKeyVaultKeyRemoval</span><span class="sxs-lookup"><span data-stu-id="c2c1d-194">Undo-AzKeyVaultKeyRemoval</span></span>](./Undo-AzKeyVaultKeyRemoval.md)
+[<span data-ttu-id="3c159-194">Undo-AzKeyVaultKeyRemoval</span><span class="sxs-lookup"><span data-stu-id="3c159-194">Undo-AzKeyVaultKeyRemoval</span></span>](./Undo-AzKeyVaultKeyRemoval.md)
 
-[<span data-ttu-id="c2c1d-195">Set-AzKeyVaultKeyAttribute</span><span class="sxs-lookup"><span data-stu-id="c2c1d-195">Set-AzKeyVaultKeyAttribute</span></span>](./Set-AzKeyVaultKeyAttribute.md)
 
