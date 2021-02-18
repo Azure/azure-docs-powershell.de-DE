@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Set-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Set-AzResource.md
-ms.openlocfilehash: 7a4929ffff531bb11b19b44ca9c0914c71662c8d
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 82e06a4736a613111efac452eb1fced2713dc470
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94007852"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415749"
 ---
 # Set-AzResource
 
-## Synopsis
+## SYNOPSIS
 Ändert eine Ressource.
 
-## Syntax
+## SYNTAX
 
 ### ByResourceId (Standard)
 ```
@@ -54,11 +54,11 @@ Set-AzResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-S
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Satz-AzResource** " ändert eine vorhandene Azure-Ressource.
-Geben Sie eine Ressource an, die nach Name und Typ oder nach ID geändert werden soll.
+## BESCHREIBUNG
+Das **Cmdlet "Set-AzResource"** ändert eine vorhandene Azure-Ressource.
+Geben Sie eine Ressource an, die nach Name und Typ oder ID geändert werden soll.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Ändern einer Ressource
 ```
@@ -67,9 +67,9 @@ PS C:\> $Resource.Properties.Enabled = "False"
 PS C:\> $Resource | Set-AzResource -Force
 ```
 
-Der erste Befehl ruft die Ressource mit dem Namen ContosoSite mithilfe des Get-AzResource-Cmdlets ab und speichert Sie dann in der $Resource-Variablen.
-Der zweite Befehl ändert eine Eigenschaft von $Resource.
-Mit dem letzten Befehl wird die Ressource so aktualisiert, dass Sie $Resource entspricht.
+Der erste Befehl ruft die Ressource "ContosoSite" mithilfe des Cmdlets "Get-AzResource" ab und speichert sie dann in $Resource Variable.
+Der zweite Befehl ändert die Eigenschaft $Resource.
+Der letzte Befehl aktualisiert die Ressource so, dass sie $Resource.
 
 ### Beispiel 2: Ändern aller Ressourcen in einer bestimmten Ressourcengruppe
 ```
@@ -99,13 +99,13 @@ Properties        : @{key=value}
 Sku               : @{name=A0}
 ```
 
-Der erste Befehl ruft die Ressourcen in der testrg-Ressourcengruppe ab und speichert Sie dann in der $Resource-Variablen.
+Der erste Befehl ruft die Ressourcen in der Ressourcengruppe "testrg" ab und speichert sie dann in der $Resource Variable.
 
-Der zweite Befehl iteriert über jede dieser Ressourcen in der Ressourcengruppe und fügt ihnen ein neues Tag hinzu.
+Mit dem zweiten Befehl wird jede dieser Ressourcen in der Ressourcengruppe durch iteriert und ihnen ein neues Tag hinzufügt.
 
-Der endgültige Befehl aktualisiert jede dieser Ressourcen.
+Der letzte Befehl aktualisiert jede dieser Ressourcen.
 
-## Parameter
+## PARAMETERS
 
 ### -ApiVersion
 Gibt die Version der zu verwendenden Ressourcenanbieter-API an.
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Ausführen eines Cmdlets im Hintergrund
+Ausführen des Cmdlets im Hintergrund
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -154,8 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-Gibt den Namen einer Erweiterungs Ressource für die Ressource an.
-Wenn Sie beispielsweise eine Datenbank angeben möchten, verwenden Sie das folgende Format: Servername- `/` Datenbankname
+Gibt den Namen einer Erweiterungsressource für die Ressource an.
+Um beispielsweise eine Datenbank anzugeben, verwenden Sie das folgende Format: Name der `/` Serverdatenbank
 
 ```yaml
 Type: System.String
@@ -170,8 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-Gibt den Ressourcentyp für eine Erweiterungs Ressource an.
-Wenn beispielsweise die Erweiterungs Ressource eine Datenbank ist, geben Sie Folgendes an: `Microsoft.Sql/Servers/Databases`
+Gibt den Ressourcentyp für eine Erweiterungsressource an.
+Wenn es sich bei der Erweiterungsressource beispielsweise um eine Datenbank handelt, geben Sie Folgendes an: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Erzwingt, dass der Befehl ausgeführt wird, ohne die Bestätigung des Benutzers zu fordern.
+Erzwingt die Ausführung des Befehls ohne Benutzerbestätigung.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -200,8 +200,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Die Objektdarstellung der Ressource, die aktualisiert werden soll.
+### -InputObject
+Die Objektdarstellung der zu aktualisierende Ressource.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
@@ -215,8 +215,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Art
-Gibt die Art der Ressource für die Ressource an.
+### -Kind
+Gibt die Ressourcentyp für die Ressource an.
 
 ```yaml
 Type: System.String
@@ -231,8 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-Gibt einen Open Data Protocol (OData)-stilfilter an.
-Dieses Cmdlet fügt zusätzlich zu anderen Filtern diesen Wert an die Anforderung an.
+Gibt einen Stilfilter des Open Data Protocol (OData) an.
+Dieses Cmdlet fügt diesen Wert zusätzlich zu allen anderen Filtern an die Anforderung an.
 
 ```yaml
 Type: System.String
@@ -246,8 +246,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Plan
-Gibt Ressourcenplan Eigenschaften als Hashtabelle für die Ressource an.
+### -Planen
+Gibt Ressourcenplaneigenschaften als Hashtabelle für die Ressource an.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-Gibt an, dass dieses Cmdlet Pre-Release-API-Versionen berücksichtigt, wenn es automatisch die zu verwendende Version bestimmt.
+Gibt an, dass dieses Cmdlet Vorabversions-API-Versionen berücksichtigt, wenn automatisch bestimmt wird, welche Version verwendet werden soll.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -276,8 +276,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Eigenschaften
-Gibt Ressourceneigenschaften für die Ressource an.
+### -Properties
+Gibt die Ressourceneigenschaften für die Ressource an.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -306,8 +306,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Resourcen-Nr
-Gibt die vollqualifizierte Ressourcen-ID an, einschließlich des Abonnements, wie im folgenden Beispiel: `/subscriptions/` Abonnement-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+### -ResourceId
+Gibt die vollqualifizierte Ressourcen-ID einschließlich des Abonnements an, wie im folgenden Beispiel: `/subscriptions/` Abonnement-ID.`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 Gibt den Namen der Ressource an.
-Wenn Sie beispielsweise eine Datenbank angeben möchten, verwenden Sie das folgende Format: `ContosoServer/ContosoDatabase`
+Um beispielsweise eine Datenbank anzugeben, verwenden Sie das folgende Format: `ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -337,9 +337,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -
+### -ResourceType
 Gibt den Typ der Ressource an.
-Bei einer Datenbank lautet der Ressourcentyp beispielsweise wie folgt: `Microsoft.Sql/Servers/Databases`
+Für eine Datenbank lautet der Ressourcentyp beispielsweise wie folgt: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Gibt das SKU-Objekt der Ressource als Hashtabelle an.
+Gibt das #A0 der Ressource als Hashtabelle an.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Schlüssel-Wert-Paare in Form einer Hashtabelle Beispiel: @ {Key0 = "value0"; key1 = $NULL; key2 = "Value2"}
+Schlüssel-Wert-Paare in Form einer Hashtabelle. Beispiel: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsePatchSemantics
-Gibt an, dass dieses Cmdlet anstelle eines HTTP-PUT einen HTTP-Patch zum Aktualisieren des Objekts verwendet.
+Gibt an, dass für dieses Cmdlet ein HTTP PATCH zum Aktualisieren des Objekts anstelle einer HTTP PUT verwendet wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -413,8 +413,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -428,7 +428,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -445,32 +445,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## Eingaben
+## EINGABEN
 
-### Microsoft. Azure. Commands. ResourceManager. Cmdlets. SdkModels. PSResource
+### Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
 
-### System. String
+### System.String
 
-### System. Management. Automation. PSObject
+### System.Management.Automation.PSObject
 
-### System. Collections. Hashtable
+### System.Collections.Hashtable
 
-## Ausgaben
+## AUSGABEN
 
-### System. Management. Automation. PSObject
+### System.Management.Automation.PSObject
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Finden-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 
-[Verschieben-AzResource](./Move-AzResource.md)
+[Move-AzResource](./Move-AzResource.md)
 
-[Neu – AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
 [Remove-AzResource](./Remove-AzResource.md)
