@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 02396628-5E3E-49A6-8377-3F6DC488FEF8
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 75a083c2f892b7b4f07c37ef978d1babb1dd0cb0
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: ee948161f101b83a4892441286b760a044e64358
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94005799"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405821"
 ---
 # Get-AzureSiteRecoveryProtectionContainer
 
-## Synopsis
-Ruft Schutzcontainer für ein Website Wiederherstellungs Depot ab.
+## SYNOPSIS
+Ruft Schutzcontainer für einen Websitewiederherstellungstresor ab.
 
-## Syntax
+## SYNTAX
 
 ### Standard (Standard)
 ```
@@ -32,14 +32,14 @@ Get-AzureSiteRecoveryProtectionContainer -Id <String> [-Profile <AzureSMProfile>
 Get-AzureSiteRecoveryProtectionContainer -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzureSiteRecoveryProtectionContainer** " erhält Schutzcontainer für das aktuelle Azure Site Recovery Vault.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzureSiteRecoveryProtectionContainer"** ruft Schutzcontainer für den aktuellen Azure Site Recovery Vault ab.
 Ein Schutzcontainer ist ein logischer Container für geschützte Objekte wie virtuelle Computer.
 Schutzrichtlinien definieren Replikationseinstellungen für geschützte Elemente und können einem Schutzcontainer zugeordnet und auf eine geschützte Entität angewendet werden.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen von geschützten Containern
+### Beispiel 1: Geschützte Container erhalten
 ```
 PS C:\> Get-AzureSiteRecoveryProtectionContainer
 Name                        : PrimaryCloud
@@ -54,10 +54,10 @@ AvailableProtectionProfiles : {ab01dcbe-9da0-4c31-9564-d6904cfadfde, ad388147-83
 
 Dieser Befehl ruft die geschützten Container für den aktuellen Tresor ab.
 
-## Parameter
+## PARAMETERS
 
 ### -ID
-Gibt die ID eines geschützten Containers an, der abgerufen werden soll.
+Gibt die ID eines geschützten Containers an, den Sie erhalten müssen.
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gibt den Namen des abzurufenden Schutz Containers an.
+Gibt den Namen eines zu erhaltenden Schutzcontainers an.
 
 ```yaml
 Type: String
@@ -86,8 +86,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Gibt das Azure-Profil an, von dem dieses Cmdlet liest.
+### -Profile
+Gibt das Azure-Profil an, aus dem dieses Cmdlet liest.
 Wenn Sie kein Profil angeben, liest dieses Cmdlet aus dem lokalen Standardprofil.
 
 ```yaml
@@ -103,16 +103,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-## Ausgaben
+## AUSGABEN
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Azure Site Recovery Services-Cmdlets](./Azure.SiteRecoveryServices.md)
+
 
 

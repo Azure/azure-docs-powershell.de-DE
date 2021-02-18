@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
-ms.openlocfilehash: da6460bf0a1126a11345336e4d55c300728bbd66
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 61125ae7d9fa78ec9f121cc9b60610258ad2c67c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100170465"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405396"
 ---
 # Add-AzKeyVaultKey
 
@@ -118,9 +118,9 @@ Verwenden Sie dieses Cmdlet zum Hinzufügen von Schlüsseln mit einer der folgen
 - Importieren Sie einen Schlüssel aus einer PFX-Datei auf Ihrem Computer.
 - Importieren Sie einen Schlüssel aus einer PFX-Datei auf Ihrem Computer in Hardwaresicherheitsmodule (Hardware Security Module, HSMs) im Key Vault-Dienst.
 Für jede dieser Vorgänge können Sie Schlüsselattribute bereitstellen oder Standardeinstellungen akzeptieren.
-Wenn Sie einen Schlüssel erstellen oder importieren, der denselben Namen wie ein vorhandener Schlüssel in Ihrem Schlüsseltresor hat, wird der ursprüngliche Schlüssel mit den Werten aktualisiert, die Sie für den neuen Schlüssel angeben. Sie können auf die vorherigen Werte zugreifen, indem Sie den versionsspezifischen URI für diese Version des Schlüssels verwenden. Informationen zu Schlüsselversionen und der URI-Struktur finden Sie [in](http://go.microsoft.com/fwlink/?linkid=518560) der Rest-API-Dokumentation zu Schlüsseln und Geheimen Schlüsseln.
+Wenn Sie einen Schlüssel erstellen oder importieren, der denselben Namen wie ein vorhandener Schlüssel in Ihrem Schlüsseltresor hat, wird der ursprüngliche Schlüssel mit den Werten aktualisiert, die Sie für den neuen Schlüssel angeben. Sie können auf die vorherigen Werte zugreifen, indem Sie den versionsspezifischen URI für diese Version des Schlüssels verwenden. Informationen zu Schlüsselversionen und der URI-Struktur finden Sie [in](http://go.microsoft.com/fwlink/?linkid=518560) der Rest-API-Dokumentation zum Schlüsseltresor unter "Schlüssel und Geheime Daten".
 Hinweis: Um einen Schlüssel aus Ihrem eigenen Hardwaresicherheitsmodul zu importieren, müssen Sie zuerst mithilfe des Azure Key Vault BYOK Toolset ein "BYOK"-Paket (eine Datei mit der Dateinamenerweiterung BYOK) generieren. Weitere Informationen finden Sie unter "Generieren und Übertragen HSM-Protected [Schlüssel für den Azure Key Vault".](http://go.microsoft.com/fwlink/?LinkId=522252)
-Als bewährte Methode sollten Sie Ihren Schlüssel nach dem Erstellen oder Aktualisieren sichern, indem Sie das cmdlet Backup-AzKeyVaultKey verwenden. Es gibt keine rückgängig gemachten Funktionen. Wenn Sie also versehentlich Ihren Schlüssel löschen oder ihn löschen und dann Ihre Meinung ändern, kann der Schlüssel nur wiederhergestellt werden, wenn Sie über eine Sicherung verfügen, die Sie wiederherstellen können.
+Als bewährte Methode sollten Sie Ihren Schlüssel nach dem Erstellen oder Aktualisieren mithilfe des cmdlets Backup-AzKeyVaultKey sichern. Es gibt keine rückgängig gemachten Funktionen. Wenn Sie also versehentlich Ihren Schlüssel löschen oder ihn löschen und dann Ihre Meinung ändern, kann der Schlüssel nur wiederhergestellt werden, wenn Sie über eine Sicherung verfügen, die Sie wiederherstellen können.
 
 ## BEISPIELE
 
@@ -258,7 +258,7 @@ Tags           : Name        Value
 
 Der erste Befehl konvertiert eine Zeichenfolge mithilfe des **Cmdlets "ConvertTo-SecureString"** in eine sichere Zeichenfolge und speichert diese Zeichenfolge dann in der $Password Variable.
 Der zweite Befehl erstellt mithilfe des **Get-Date-Cmdlets** ein **DateTime-Objekt** und speichert dieses Objekt dann in der $Expires Variable.
-Der dritte Befehl erstellt die $tags Variable zum Festlegen von Tags für hohen Schweregrad und IT.
+Mit dem dritten Befehl wird die $tags zum Festlegen von Tags für hohen Schweregrad und IT erstellt.
 Der endgültige Befehl importiert einen Schlüssel als HSM-Schlüssel von der angegebenen Position. Der Befehl gibt die in der Datei gespeicherte $Expires und das Kennwort an und wendet die in $Password gespeicherten Tags $tags.
 
 ### Beispiel 7: Generieren eines Schlüsselwechselschlüssels (KEY Exchange Key, KEK) für das Feature "Eigenen Schlüssel verwenden" (BYOK)
@@ -267,7 +267,7 @@ Der endgültige Befehl importiert einen Schlüssel als HSM-Schlüssel von der an
 PS C:\> $key = Add-AzKeyVaultKey -VaultName $vaultName -Name $keyName -Destination HSM -Size 2048 -KeyOps "import"
 ```
 
-Generiert einen Schlüssel (auch als KEK (Key Exchange Key) bezeichnet). Die KEK muss ein RSA-HSM-Schlüssel sein, der nur über den Importschlüsselvorgang verfügt. Nur Key Vault Premium-SKU unterstützt RSA-HSM-Schlüssel.
+Generiert einen Schlüssel (so genannter Key Exchange Key, KEK). Die KEK muss ein RSA-HSM-Schlüssel sein, der nur über den Importschlüsselvorgang verfügt. Nur Key Vault Premium-SKU unterstützt RSA-HSM-Schlüssel.
 Weitere Details finden Sie unter https://docs.microsoft.com/en-us/azure/key-vault/keys/hsm-protected-keys
 
 ## PARAMETERS
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expires
-Gibt die Ablaufzeit als **"DateTime"-Objekt** für den Schlüssel an, den dieses Cmdlet hinzufügt. Dieser Parameter verwendet koordinierte Weltzeit (Coordinated Universal Time, UTC). Verwenden Sie das Get-Date-Cmdlet, um **ein "DateTime"-Objekt** zu erhalten.  Weitere Informationen erhalten Sie, wenn Sie " `Get-Help Get-Date` eingeben" aus. Wenn Sie diesen Parameter nicht angeben, läuft der Schlüssel nicht ab.
+Gibt die Ablaufzeit als **"DateTime"-Objekt** für den Schlüssel an, den dieses Cmdlet hinzufügt. Dieser Parameter verwendet koordinierte Weltzeit (Coordinated Universal Time, UTC). Verwenden Sie das Get-Date-Cmdlet, um ein **"DateTime"-Objekt** zu erhalten.  Weitere Informationen erhalten Sie, wenn Sie " `Get-Help Get-Date` eingeben" aus. Wenn Sie diesen Parameter nicht angeben, läuft der Schlüssel nicht ab.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotBefore
-Gibt die Uhrzeit als **"DateTime"-Objekt** an, vor dem der Schlüssel nicht verwendet werden kann. Dieser Parameter verwendet UTC. Verwenden Sie das Get-Date-Cmdlet, um **ein "DateTime"-Objekt** zu erhalten.  Wenn Sie diesen Parameter nicht angeben, kann der Schlüssel sofort verwendet werden.
+Gibt die Uhrzeit als **"DateTime"-Objekt** an, vor dem der Schlüssel nicht verwendet werden kann. Dieser Parameter verwendet UTC. Verwenden Sie das Get-Date-Cmdlet, um ein **"DateTime"-Objekt** zu erhalten.  Wenn Sie diesen Parameter nicht angeben, kann der Schlüssel sofort verwendet werden.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -655,4 +655,3 @@ Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -Err
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)

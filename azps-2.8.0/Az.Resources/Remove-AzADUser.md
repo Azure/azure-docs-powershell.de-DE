@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADUser.md
-ms.openlocfilehash: 2dc9a0d3d41ca1bccb131e92cf514fd2f814943b
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8799450cc73784b45804ea1fa26785716a895bed
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93824968"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405634"
 ---
 # Remove-AzADUser
 
-## Synopsis
+## SYNOPSIS
 Löscht einen Active Directory-Benutzer.
 
-## Syntax
+## SYNTAX
 
 ### UPNOrObjectIdParameterSet (Standard)
 ```
@@ -50,10 +50,10 @@ Remove-AzADUser -InputObject <PSADUser> [-PassThru] [-Force] [-DefaultProfile <I
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Löscht einen Active Directory-Benutzer (Firmen-oder Schulkonto, auch bekannt als org-ID).
+## BESCHREIBUNG
+Löscht einen Active Directory-Benutzer (Arbeits-/Schulkonto, auch als Organisations-ID bekannt).
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1: Entfernen eines Benutzers nach dem Benutzerprinzipalnamen
 
@@ -63,26 +63,26 @@ PS C:\> Remove-AzADUser -UserPrincipalName foo@domain.com
 
 Entfernt den Benutzer mit dem Benutzerprinzipalnamen " foo@domain.com " aus dem Mandanten.
 
-### Beispiel 2 – Entfernen eines Benutzers nach Objekt-ID
+### Beispiel 2: Entfernen eines Benutzers nach Objekt-ID
 
 ```
 PS C:\> Remove-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69
 ```
 
-Entfernt den Benutzer mit der Objekt-ID "7a9582cf-88c4-4319-842b-7a5d60967a69" aus dem Mandanten.
+Entfernt den Benutzer mit der Objekt-ID '7a9582cf-88c4-4319-842b-7a5d60967a69' aus dem Mandanten.
 
-### Beispiel 3: Entfernen eines Benutzers durch Verrohrung
+### Beispiel 3: Entfernen eines Benutzers durch Piping
 
 ```
 PS C:\> Get-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69 | Remove-AzADUser
 ```
 
-Ruft den Benutzer mit der Objekt-ID "7a9582cf-88c4-4319-842b-7a5d60967a69" und Pipes an das Remove-AzADUser-Cmdlet ab, um den Benutzer aus dem Mandanten zu entfernen.
+Ruft den Benutzer mit der Objekt-ID '7a9582cf-88c4-4319-842b-7a5d60967a69' ab und gibt diese an das cmdlet Remove-AzADUser weiter, um den Benutzer aus dem Mandanten zu entfernen.
 
-## Parameter
+## PARAMETERS
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Der Anzeigename des Benutzers, der gelöscht werden soll.
+Der Anzeigename des zu löschende Benutzers.
 
 ```yaml
 Type: System.String
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Wenn angegeben, wird keine Bestätigung zum Löschen des Benutzers verlangt.
+Falls angegeben, wird nicht zur Bestätigung des Löschens des Benutzers gefragt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -126,8 +126,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inputobject
-Das Benutzerobjekt, das gelöscht werden soll.
+### -InputObject
+Das zu löschende Benutzerobjekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADUser
@@ -141,8 +141,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ObjectID
-Die Objekt-ID des Benutzers, der gelöscht werden soll.
+### -ObjectId
+Die Objekt-ID des zu löschende Benutzers.
 
 ```yaml
 Type: System.String
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Wenn Sie dies angeben, wird true zurückgegeben, wenn der Befehl erfolgreich war.
+Wenn Sie diese Angabe angeben, wird "true" zurückgeben, wenn der Befehl erfolgreich war.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -UPNOrObjectId
-Der Benutzerprinzipalname oder die ObjectID des Benutzers, der gelöscht werden soll.
+Der Benutzerprinzipalname oder die objectId des zu löschenden Benutzers.
 
 ```yaml
 Type: System.String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Der Benutzerprinzipalname des Benutzers, der gelöscht werden soll.
+Der Benutzerprinzipalname des zu löschende Benutzers.
 
 ```yaml
 Type: System.String
@@ -201,8 +201,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,7 +216,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -233,25 +233,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### Microsoft. Azure. Commands. ActiveDirectory. PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.WERDENDUser
 
-## Ausgaben
+## AUSGABEN
 
-### System. Boolean
+### System.Boolean
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Neu – AzADUser](./New-AzADUser.md)
+[New-AzADUser](./New-AzADUser.md)
 
 [Get-AzADUser](./Get-AzADUser.md)
 
-[Satz-AzADUser](./Set-AzADUser.md)
 
