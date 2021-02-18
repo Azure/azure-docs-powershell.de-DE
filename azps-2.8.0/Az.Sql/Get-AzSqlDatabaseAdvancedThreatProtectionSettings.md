@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSettings.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSettings.md
-ms.openlocfilehash: 186ff32138bba0556b05e9674f1711e9425a20c9
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 85a45c1a5f7c4d88adaf4e9b9da35b415b7a2093
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93825700"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405804"
 ---
 # Get-AzSqlDatabaseAdvancedThreatProtectionSettings
 
-## Synopsis
-Ruft die erweiterten Bedrohungsschutz Einstellungen für eine Datenbank ab.
+## SYNOPSIS
+Ruft die erweiterten Threat Protection-Einstellungen für eine Datenbank ab.
 
-## Syntax
+## SYNTAX
 
 ```
 Get-AzSqlDatabaseAdvancedThreatProtectionSettings [-ServerName] <String> [-DatabaseName] <String>
@@ -26,13 +26,13 @@ Get-AzSqlDatabaseAdvancedThreatProtectionSettings [-ServerName] <String> [-Datab
  [<CommonParameters>]
 ```
 
-## Beschreibung
-Das Cmdlet " **Get-AzSqlDatabaseAdvancedThreatProtectionSettings** " Ruft die erweiterten Bedrohungsschutz Einstellungen einer Azure SQL-Datenbank ab.
-Um dieses Cmdlet zu verwenden, geben Sie die Parameter *ResourceGroupName* , *Servername* und *DatabaseName* an, um die Datenbank zu identifizieren, für die dieses Cmdlet die Einstellungen erhält.
+## BESCHREIBUNG
+Das **Cmdlet "Get-AzSqlDatabaseAdvancedThreatProtectionSettings"** ruft die erweiterten Threat Protection-Einstellungen einer Azure SQL ab.
+Um dieses Cmdlet zu verwenden, geben Sie die Parameter *"ResourceGroupName",* *"ServerName"* und *"DatabaseName"* an, um die Datenbank zu identifizieren, für die dieses Cmdlet die Einstellungen erhält.
 
-## Beispiele
+## BEISPIELE
 
-### Beispiel 1: Abrufen der erweiterten Bedrohungsschutz Einstellungen für eine Datenbank
+### Beispiel 1: Erhalten der erweiterten Threat Protection-Einstellungen für eine Datenbank
 ```
 PS C:\>Get-AzSqlDatabaseAdvancedThreatProtectionSettings -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
 DatabaseName                 : Database01
@@ -46,10 +46,10 @@ ExcludedDetectionTypes       : {}
 RetentionInDays              : 0
 ```
 
-Dieser Befehl ruft die erweiterten Bedrohungsschutz Einstellungen für eine Datenbank mit dem Namen database01 ab.
-Die Datenbank befindet sich auf dem Server mit dem Namen Server01, der der Ressourcengruppe ResourceGroup11 zugeordnet ist.
+Dieser Befehl ruft die erweiterten Threat Protection-Einstellungen für eine Datenbank mit dem Namen "Database01" ab.
+Die Datenbank befindet sich auf dem Server mit dem Namen Server01, der der Ressourcengruppe "ResourceGroup11" zugewiesen ist.
 
-## Parameter
+## PARAMETERS
 
 ### -DatabaseName
 Gibt den Namen einer Datenbank an.
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -96,7 +96,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Servername
+### -ServerName
 Gibt den Namen eines Servers an.
 
 ```yaml
@@ -111,8 +111,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+### -Confirm
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -126,7 +126,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -Waswenn
 Zeigt, was passiert, wenn das Cmdlet ausgeführt wird.
 Das Cmdlet wird nicht ausgeführt.
 
@@ -143,21 +143,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Dieses Cmdlet unterstützt die allgemeinen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. SQL. ThreatDetection. Model. DatabaseAdvancedThreatProtectionSettingsModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseAdvancedThreatProtectionSettingsModel
 
-## Notizen
+## HINWEISE
 
-## Verwandte Links
+## LINKS ZU VERWANDTEN THEMEN
 
-[Remove-AzSqlDatabaseAdvancedThreatProtectionSettings](./Remove-AzSqlDatabaseAdvancedThreatProtectionSettings.md)
 
 
 
