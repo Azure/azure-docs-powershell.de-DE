@@ -6,36 +6,35 @@ Help Version: ''
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
-ms.openlocfilehash: 7579023c82863b943080553d2c741244b9ae9c0f
-ms.sourcegitcommit: 43f4bdf2a59dd82fd881512aa9761bf72eb5703c
+ms.openlocfilehash: 864398d8af8ac05d7bfad93c195bf0ecb2c5ba1a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "93474394"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410377"
 ---
-# Azure. Storage-Modul
+# Azure.Storage Module
 ## Beschreibung
-In diesem Thema werden Hilfethemen zu den Azure Storage-Cmdlets angezeigt.
+In diesem Thema werden Hilfethemen für die Azure Storage-Cmdlets angezeigt.
 
-## Azure. Storage-Cmdlets
+## Azure.Storage-Cmdlets
 ### [Get-AzureStorageBlob](Get-AzureStorageBlob.md)
-Listet BLOBs in einem Container auf.
+Listet BLOBS in einem Container auf.
 
 ### [Get-AzureStorageBlobContent](Get-AzureStorageBlobContent.md)
 Lädt ein Speicher-BLOB herunter.
 
 ### [Get-AzureStorageBlobCopyState](Get-AzureStorageBlobCopyState.md)
-Ruft den Kopierstatus eines Azure Storage-BLOBs ab.
+Ruft den Kopierstatus eines Azure Storage-BLOB ab.
 
 ### [Get-AzureStorageContainer](Get-AzureStorageContainer.md)
 Listet die Speichercontainer auf.
 
 ### [Get-AzureStorageContainerStoredAccessPolicy](Get-AzureStorageContainerStoredAccessPolicy.md)
-Ruft die gespeicherte Zugriffsrichtlinie oder Richtlinien für einen Azure-Speichercontainer ab.
+Ruft die Richtlinie oder Richtlinien für den gespeicherten Zugriff für einen Azure -Speichercontainer ab.
 
 ### [Get-AzureStorageCORSRule](Get-AzureStorageCORSRule.md)
-Ruft CORS-Regeln für einen Speicher Diensttyp ab.
+Ruft DIES -Regeln für einen Speicherdiensttyp ab.
 
 ### [Get-AzureStorageFile](Get-AzureStorageFile.md)
 Listet Verzeichnisse und Dateien für einen Pfad auf.
@@ -47,16 +46,16 @@ Lädt den Inhalt einer Datei herunter.
 Ruft den Zustand eines Kopiervorgangs ab.
 
 ### [Get-AzureStorageQueue](Get-AzureStorageQueue.md)
-Listet Speicher Warteschlangen auf.
+Listet Speicherwarteschlangen auf.
 
 ### [Get-AzureStorageQueueStoredAccessPolicy](Get-AzureStorageQueueStoredAccessPolicy.md)
-Ruft die gespeicherte Zugriffsrichtlinie oder Richtlinien für eine Azure Storage-Warteschlange ab.
+Ruft die Richtlinie oder Richtlinien für den gespeicherten Zugriff für eine Azure-Speicherwarteschlange ab.
 
 ### [Get-AzureStorageServiceLoggingProperty](Get-AzureStorageServiceLoggingProperty.md)
-Ruft Protokollierungseigenschaften für Azure Storage Services ab.
+Ruft Protokolleigenschaften für Azure Storage Services ab.
 
 ### [Get-AzureStorageServiceMetricsProperty](Get-AzureStorageServiceMetricsProperty.md)
-Ruft Metrik-Eigenschaften für den Azure-Speicherdienst ab.
+Ruft Metrikeigenschaften für den Azure Storage-Dienst ab.
 
 ### [Get-AzureStorageShare](Get-AzureStorageShare.md)
 Ruft eine Liste der Dateifreigaben ab.
@@ -68,57 +67,57 @@ Ruft gespeicherte Zugriffsrichtlinien für eine Speicherfreigabe ab.
 Listet die Speichertabellen auf.
 
 ### [Get-AzureStorageTableStoredAccessPolicy](Get-AzureStorageTableStoredAccessPolicy.md)
-Ruft die gespeicherte Zugriffsrichtlinie oder Richtlinien für eine Azure-Speichertabelle ab.
+Ruft die Richtlinie oder Richtlinien für den gespeicherten Zugriff für eine Azure -Speichertabelle ab.
 
-### [Neu – AzureStorageAccountSASToken](New-AzureStorageAccountSASToken.md)
+### [New-AzureStorageAccountSASToken](New-AzureStorageAccountSASToken.md)
 Erstellt ein SAS-Token auf Kontoebene.
 
-### [Neu – AzureStorageBlobSASToken](New-AzureStorageBlobSASToken.md)
-Generiert ein SAS-Token für ein Azure Storage-BLOB.
+### [New-AzureStorageBlobSASToken](New-AzureStorageBlobSASToken.md)
+Generiert ein SAS-Token für ein Azure-Speicher-BLOB.
 
-### [Neu – AzureStorageContainer](New-AzureStorageContainer.md)
+### [New-AzureStorageContainer](New-AzureStorageContainer.md)
 Erstellt einen Azure-Speichercontainer.
 
-### [Neu – AzureStorageContainerSASToken](New-AzureStorageContainerSASToken.md)
+### [New-AzureStorageContainerSASToken](New-AzureStorageContainerSASToken.md)
 Generiert ein SAS-Token für einen Azure-Speichercontainer.
 
-### [Neu – AzureStorageContainerStoredAccessPolicy](New-AzureStorageContainerStoredAccessPolicy.md)
+### [New-AzureStorageContainerStoredAccessPolicy](New-AzureStorageContainerStoredAccessPolicy.md)
 Erstellt eine gespeicherte Zugriffsrichtlinie für einen Azure-Speichercontainer.
 
-### [Neu – AzureStorageContext](New-AzureStorageContext.md)
-Erstellt einen Azure-Speicherkontext.
+### [New-AzureStorageContext](New-AzureStorageContext.md)
+Erstellt einen Azure Storage-Kontext.
 
-### [Neu – AzureStorageDirectory](New-AzureStorageDirectory.md)
+### [New-AzureStorageDirectory](New-AzureStorageDirectory.md)
 Erstellt ein Verzeichnis.
 
-### [Neu – AzureStorageFileSASToken](New-AzureStorageFileSASToken.md)
-Generiert ein freigegebenes zugriffssignatur Token für eine Speicherdatei.
+### [New-AzureStorageFileSASToken](New-AzureStorageFileSASToken.md)
+Generiert ein Token für die Signatur für den freigegebenen Zugriff für eine Speicherdatei.
 
-### [Neu – AzureStorageQueue](New-AzureStorageQueue.md)
+### [New-AzureStorageQueue](New-AzureStorageQueue.md)
 Erstellt eine Speicherwarteschlange.
 
-### [Neu – AzureStorageQueueSASToken](New-AzureStorageQueueSASToken.md)
-Generiert ein freigegebenes zugriffssignatur Token für eine Azure Storage-Warteschlange.
+### [New-AzureStorageQueueSASToken](New-AzureStorageQueueSASToken.md)
+Generiert ein Token für die Signatur für den freigegebenen Zugriff für eine Azure-Speicherwarteschlange.
 
-### [Neu – AzureStorageQueueStoredAccessPolicy](New-AzureStorageQueueStoredAccessPolicy.md)
-Erstellt eine gespeicherte Zugriffsrichtlinie für eine Azure Storage-Warteschlange.
+### [New-AzureStorageQueueStoredAccessPolicy](New-AzureStorageQueueStoredAccessPolicy.md)
+Erstellt eine Richtlinie für den gespeicherten Zugriff für eine Azure-Speicherwarteschlange.
 
-### [Neu – AzureStorageShare](New-AzureStorageShare.md)
+### [New-AzureStorageShare](New-AzureStorageShare.md)
 Erstellt eine Dateifreigabe.
 
-### [Neu – AzureStorageShareSASToken](New-AzureStorageShareSASToken.md)
-Generieren des Shared Access-Signaturtokens für die Azure-Speicherfreigabe.
+### [New-AzureStorageShareSASToken](New-AzureStorageShareSASToken.md)
+Generieren Sie das Token "Signatur für freigegebenen Zugriff" für die Azure Storage-Freigabe.
 
-### [Neu – AzureStorageShareStoredAccessPolicy](New-AzureStorageShareStoredAccessPolicy.md)
-Erstellt eine gespeicherte Zugriffsrichtlinie für eine Speicherfreigabe.
+### [New-AzureStorageShareStoredAccessPolicy](New-AzureStorageShareStoredAccessPolicy.md)
+Erstellt eine Richtlinie für den gespeicherten Zugriff auf einer Speicherfreigabe.
 
-### [Neu – AzureStorageTable](New-AzureStorageTable.md)
+### [New-AzureStorageTable](New-AzureStorageTable.md)
 Erstellt eine Speichertabelle.
 
-### [Neu – AzureStorageTableSASToken](New-AzureStorageTableSASToken.md)
-Generiert ein SAS-Token für eine Azure-Speichertabelle.
+### [New-AzureStorageTableSASToken](New-AzureStorageTableSASToken.md)
+Generiert ein SAS-Token für eine Azure Storage-Tabelle.
 
-### [Neu – AzureStorageTableStoredAccessPolicy](New-AzureStorageTableStoredAccessPolicy.md)
+### [New-AzureStorageTableStoredAccessPolicy](New-AzureStorageTableStoredAccessPolicy.md)
 Erstellt eine gespeicherte Zugriffsrichtlinie für eine Azure-Speichertabelle.
 
 ### [Remove-AzureStorageBlob](Remove-AzureStorageBlob.md)
@@ -131,7 +130,7 @@ Entfernt den angegebenen Speichercontainer.
 Entfernt eine gespeicherte Zugriffsrichtlinie aus einem Azure-Speichercontainer.
 
 ### [Remove-AzureStorageCORSRule](Remove-AzureStorageCORSRule.md)
-Entfernt CORS für einen Speicherdienst.
+Entfernt KORS für einen Speicherdienst.
 
 ### [Remove-AzureStorageDirectory](Remove-AzureStorageDirectory.md)
 Löscht ein Verzeichnis.
@@ -143,13 +142,13 @@ Löscht eine Datei.
 Entfernt eine Speicherwarteschlange.
 
 ### [Remove-AzureStorageQueueStoredAccessPolicy](Remove-AzureStorageQueueStoredAccessPolicy.md)
-Entfernt eine gespeicherte Zugriffsrichtlinie aus einer Azure Storage-Warteschlange.
+Entfernt eine Richtlinie für den gespeicherten Zugriff aus einer Azure-Speicherwarteschlange.
 
 ### [Remove-AzureStorageShare](Remove-AzureStorageShare.md)
 Löscht eine Dateifreigabe.
 
 ### [Remove-AzureStorageShareStoredAccessPolicy](Remove-AzureStorageShareStoredAccessPolicy.md)
-Entfernt eine gespeicherte Zugriffsrichtlinie aus einer Speicherfreigabe.
+Entfernt eine Richtlinie für den gespeicherten Zugriff aus einer Speicherfreigabe.
 
 ### [Remove-AzureStorageTable](Remove-AzureStorageTable.md)
 Entfernt eine Speichertabelle.
@@ -157,51 +156,51 @@ Entfernt eine Speichertabelle.
 ### [Remove-AzureStorageTableStoredAccessPolicy](Remove-AzureStorageTableStoredAccessPolicy.md)
 Entfernt eine gespeicherte Zugriffsrichtlinie aus einer Azure-Speichertabelle.
 
-### [Satz-AzureStorageBlobContent](Set-AzureStorageBlobContent.md)
+### [Set-AzureStorageBlobContent](Set-AzureStorageBlobContent.md)
 Lädt eine lokale Datei in ein Azure Storage-BLOB hoch.
 
-### [Satz-AzureStorageContainerAcl](Set-AzureStorageContainerAcl.md)
+### [Set-AzureStorageContainerAcl](Set-AzureStorageContainerAcl.md)
 Legt die Berechtigung für den öffentlichen Zugriff auf einen Speichercontainer fest.
 
-### [Satz-AzureStorageContainerStoredAccessPolicy](Set-AzureStorageContainerStoredAccessPolicy.md)
-Legt eine gespeicherte Zugriffsrichtlinie für einen Azure-Speichercontainer fest.
+### [Set-AzureStorageContainerStoredAccessPolicy](Set-AzureStorageContainerStoredAccessPolicy.md)
+Legt eine Richtlinie für den gespeicherten Zugriff für einen Azure -Speichercontainer fest.
 
-### [Satz-AzureStorageCORSRule](Set-AzureStorageCORSRule.md)
-Legt die CORS-Regeln für einen Typ von Speicherdienst fest.
+### [Set-AzureStorageCORSRule](Set-AzureStorageCORSRule.md)
+Legt die REGELN des Typs "CORS" für einen Speicherdiensttyp fest.
 
-### [Satz-AzureStorageFileContent](Set-AzureStorageFileContent.md)
+### [Set-AzureStorageFileContent](Set-AzureStorageFileContent.md)
 Lädt den Inhalt einer Datei hoch.
 
-### [Satz-AzureStorageQueueStoredAccessPolicy](Set-AzureStorageQueueStoredAccessPolicy.md)
-Legt eine gespeicherte Zugriffsrichtlinie für eine Azure-Speicherwarteschlange fest.
+### [Set-AzureStorageQueueStoredAccessPolicy](Set-AzureStorageQueueStoredAccessPolicy.md)
+Legt eine Richtlinie für den gespeicherten Zugriff für eine Azure-Speicherwarteschlange fest.
 
-### [Satz-AzureStorageServiceLoggingProperty](Set-AzureStorageServiceLoggingProperty.md)
-Ändert die Protokollierung für Azure Storage Services.
+### [Set-AzureStorageServiceLoggingProperty](Set-AzureStorageServiceLoggingProperty.md)
+Ändert die Protokollierung für Azure Storage-Dienste.
 
-### [Satz-AzureStorageServiceMetricsProperty](Set-AzureStorageServiceMetricsProperty.md)
-Ändert die Metrik-Eigenschaften für den Azure-Speicherdienst.
+### [Set-AzureStorageServiceMetricsProperty](Set-AzureStorageServiceMetricsProperty.md)
+Ändert die Metrikeigenschaften für den Azure Storage-Dienst.
 
-### [Satz-AzureStorageShareQuota](Set-AzureStorageShareQuota.md)
+### [Set-AzureStorageShareQuota](Set-AzureStorageShareQuota.md)
 Legt die Speicherkapazität für eine Freigabe fest.
 
-### [Satz-AzureStorageShareStoredAccessPolicy](Set-AzureStorageShareStoredAccessPolicy.md)
-Aktualisiert eine gespeicherte Zugriffsrichtlinie für eine Speicherfreigabe.
+### [Set-AzureStorageShareStoredAccessPolicy](Set-AzureStorageShareStoredAccessPolicy.md)
+Aktualisiert eine Richtlinie für den gespeicherten Zugriff auf einer Speicherfreigabe.
 
-### [Satz-AzureStorageTableStoredAccessPolicy](Set-AzureStorageTableStoredAccessPolicy.md)
-Legt die Richtlinie für den gespeicherten Zugriff für eine Azure-Speichertabelle fest.
+### [Set-AzureStorageTableStoredAccessPolicy](Set-AzureStorageTableStoredAccessPolicy.md)
+Legt die Richtlinie für den gespeicherten Zugriff für eine Azure -Speichertabelle fest.
 
-### [Anfang-AzureStorageBlobCopy](Start-AzureStorageBlobCopy.md)
-Beginnt, ein BLOB zu kopieren.
+### [Start-AzureStorageBlobCopy](Start-AzureStorageBlobCopy.md)
+Beginnt mit dem Kopieren eines BLOB.
 
-### [Anfang-AzureStorageBlobIncrementalCopy](Start-AzureStorageBlobIncrementalCopy.md)
-Starten eines inkrementellen Kopiervorgangs von einem Page BLOB-Snapshot zum angegebenen Zielseiten-BLOB
+### [Start-AzureStorageBlobInkopie](Start-AzureStorageBlobIncrementalCopy.md)
+Starten Sie einen inkrementellen Kopiervorgang von einer Seiten-BLOB-Momentaufnahme zum angegebenen Zielseiten-BLOB.
 
-### [Anfang-AzureStorageFileCopy](Start-AzureStorageFileCopy.md)
+### [Start-AzureStorageFileCopy](Start-AzureStorageFileCopy.md)
 Beginnt mit dem Kopieren einer Quelldatei.
 
-### [Stopp-AzureStorageBlobCopy](Stop-AzureStorageBlobCopy.md)
+### [Stop-AzureStorageBlobCopy](Stop-AzureStorageBlobCopy.md)
 Beendet einen Kopiervorgang.
 
-### [Stopp-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
-Beendet einen Kopiervorgang in der angegebenen Zieldatei.
+### [Stop-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
+Beendet einen Kopiervorgang in die angegebene Zieldatei.
 
