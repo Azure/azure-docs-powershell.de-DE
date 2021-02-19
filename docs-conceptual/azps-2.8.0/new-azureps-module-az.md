@@ -1,17 +1,17 @@
 ---
 title: Einführung in das Az-Modul von Azure PowerShell
 description: Hier finden Sie eine Einführung in das neue Az-Modul von Azure PowerShell, das das AzureRM-Modul ersetzt.
-ms.date: 05/10/2019
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: f1489b37bbee9c5ab3bee28c09ad9c4fb14b5196
-ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
+ms.openlocfilehash: e2a68814550f42e912ea5149e3bdf7c6cc22de13
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96427393"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404036"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
@@ -63,6 +63,8 @@ Das Az-Modul verfügt über einen Kompatibilitätsmodus, der Ihnen die Verwendun
 > [!IMPORTANT]
 > Auch wenn die Cmdlet-Namen mit Aliasen versehen sind, kann es dennoch neue (oder umbenannte) Parameter oder geänderte Rückgabewerte für die Az-Cmdlets geben. Erwarten Sie nicht, dass die Aktivierung von Aliasen die Migration für Sie übernimmt! Weitere Informationen zu möglicherweise erforderlichen Änderungen an Ihren Skripts finden Sie in der [Vollständigen Liste der Breaking Changes](migrate-az-1.0.0.md).
 
-## <a name="continued-support-for-azurerm"></a>Fortgesetzte Unterstützung für AzureRM
+## <a name="support-for-azurerm"></a>Unterstützung für AzureRM
 
-Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird bis Dezember 2020 aber weiterhin offiziell gepflegt und mit Fehlerbehebungen versehen.
+Die Az PowerShell-Module bieten nun die gleichen Funktionen wie AzureRM PowerShell-Module und weitere Funktionen, daher werden die AzureRM PowerShell-Module am 29 Februar 2024 ausgemustert.
+
+Um Dienstunterbrechungen zu vermeiden, müssen Sie bis zum 29. Februar 2024 die [Skripts aktualisieren](https://aka.ms/azpsmigrate), die AzureRM PowerShell-Module verwenden. Befolgen Sie zum automatischen Aktualisieren Ihrer Skripts die [Schnellstartanleitung](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).

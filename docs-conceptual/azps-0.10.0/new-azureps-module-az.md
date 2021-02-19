@@ -1,17 +1,17 @@
 ---
 title: Einführung in das Az-Modul von Azure PowerShell
 description: Hier finden Sie eine Einführung in das neue Az-Modul von Azure PowerShell, das das AzureRM-Modul ersetzt.
-ms.date: 05/10/2019
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 0856748290e2bdea79b9ef845f2c000e9fefcd62
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: f6ffd66d20943541c3591d41db7c72861f44204c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93408087"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100397814"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Einführung in das neue Azure PowerShell Az-Modul
 
@@ -45,7 +45,7 @@ So führen Sie ein Upgrade von einer bestehenden AzureRM-Installation durch
 
 1. [Deinstallieren Sie das AzureRM-Modul von Azure PowerShell.](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Installieren Sie das Az-Modul von Azure PowerShell.](install-az-ps.md)
-3. **OPTIONAL** : Aktivieren Sie den Kompatibilitätsmodus, um Aliase für AzureRM-Cmdlets mit [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) hinzuzufügen, während Sie sich mit den neuen Befehlen vertraut machen. Weitere Informationen finden Sie im nächsten Abschnitt oder unter [Starten der Migration von AzureRM zu Az](migrate-from-azurerm-to-az.md).
+3. **OPTIONAL**: Aktivieren Sie den Kompatibilitätsmodus, um Aliase für AzureRM-Cmdlets mit [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) hinzuzufügen, während Sie sich mit den neuen Befehlen vertraut machen. Weitere Informationen finden Sie im nächsten Abschnitt oder unter [Starten der Migration von AzureRM zu Az](migrate-from-azurerm-to-az.md).
 
 ## <a name="migrate-existing-scripts-to-az"></a>Migrieren bereits vorhandener Skripts zu Az
 
@@ -63,6 +63,8 @@ Das Az-Modul verfügt über einen Kompatibilitätsmodus, der Ihnen die Verwendun
 > [!IMPORTANT]
 > Auch wenn die Cmdlet-Namen mit Aliasen versehen sind, kann es dennoch neue (oder umbenannte) Parameter oder geänderte Rückgabewerte für die Az-Cmdlets geben. Erwarten Sie nicht, dass die Aktivierung von Aliasen die Migration für Sie übernimmt! Weitere Informationen zu möglicherweise erforderlichen Änderungen an Ihren Skripts finden Sie in der [Vollständigen Liste der Breaking Changes](migrate-az-1.0.0.md).
 
-## <a name="continued-support-for-azurerm"></a>Fortgesetzte Unterstützung für AzureRM
+## <a name="support-for-azurerm"></a>Unterstützung für AzureRM
 
-Für AzureRM werden keine neuen Cmdlets oder Features mehr bereitgestellt. Das AzureRM-Modul wird bis Dezember 2020 aber weiterhin offiziell gepflegt und mit Fehlerbehebungen versehen.
+Die Az PowerShell-Module bieten nun die gleichen Funktionen wie AzureRM PowerShell-Module und weitere Funktionen, daher werden die AzureRM PowerShell-Module am 29 Februar 2024 ausgemustert.
+
+Um Dienstunterbrechungen zu vermeiden, müssen Sie bis zum 29. Februar 2024 die [Skripts aktualisieren](https://aka.ms/azpsmigrate), die AzureRM PowerShell-Module verwenden. Befolgen Sie zum automatischen Aktualisieren Ihrer Skripts die [Schnellstartanleitung](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
