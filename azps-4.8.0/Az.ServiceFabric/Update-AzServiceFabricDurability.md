@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefab
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
-ms.openlocfilehash: 1a406ad937a545c9b2599966909809c7552ad7db
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 1a0da9869ccfdc6b8344240a8367a4c8dfcd2350
+ms.sourcegitcommit: 608289d079b819df2b8d1a2f7935cc500367a312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94173506"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684825"
 ---
 # Update-AzServiceFabricDurability
 
-## Synopsis
-Aktualisieren Sie die Haltbarkeits-oder VmSku eines Knotentyps im Cluster.
+## SYNOPSIS
+Aktualisieren Sie die Lebensdauerebene oder vmSku eines Knotentyps im Cluster. Außerdem wird die Dauerhaftigkeitsebene in der Service Fabric-VM-Erweiterung im zugeordneten Skalierungssatz für virtuelle Computer aktualisiert.
 
-## Syntax
+## SYNTAX
 
 ```
 Update-AzServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> -NodeType <String>
@@ -25,22 +25,22 @@ Update-AzServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> 
  [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
-Verwenden Sie **Update-AzServiceFabricDurability** , um die Lebensdauer oder SKU des Clusters zu aktualisieren.
+## BESCHREIBUNG
+Verwenden **Sie Update-AzServiceFabricDurability,** um die Dauerhaftigkeit oder SKU des Clusters zu aktualisieren.
 
-## Beispiele
+## BEISPIELE
 
 ### Beispiel 1
 ```
 PS c:> Update-AzServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -DurabilityLevel Silver -NodeType nt1
 ```
 
-Mit diesem Befehl wird die Haltbarkeits Stufe des NodeType "NT1" in Silver geändert.
+Mit diesem Befehl wird die Dauerhaftigkeitsebene des NodeType 'nt1' in Silver geändert.
 
-## Parameter
+## PARAMETER
 
 ### -DefaultProfile
-Die für die Kommunikation mit Azure verwendeten Anmeldeinformationen, das Konto, den Mandanten und das Abonnement.
+Die Anmeldeinformationen, das Konto, der Mandant und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DurabilityLevel
-Geben Sie den Haltbarkeits Grad an.
+Geben Sie den Dauerhaftigkeitsgrad an.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
-Geben Sie den Namen des Service Fabric-Knotentyps an.
+Geben Sie den Namen des Knotentyps "Service Fabric" an.
 
 ```yaml
 Type: System.String
@@ -115,7 +115,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SKU
+### -Sku
 Geben Sie die SKU des Knotentyps an.
 
 ```yaml
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bestätigen
-Sie werden zur Bestätigung aufgefordert, bevor Sie das Cmdlet ausführen.
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Zeigt, was passiert, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
+Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -161,18 +161,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Dieses Cmdlet unterstützt die allgemeinen Parameter:-Debug,-Fehler Aktion,-ErrorVariable,-InformationVariable,-Variable,-Puffer,-PipelineVariable,-Verbose,-Warning-Aktion und-WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Eingaben
+## EINGABEN
 
-### System. String
+### System.String
 
-### Microsoft. Azure. Commands. ServiceFabric. Models. DurabilityLevel
+### Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel
 
-## Ausgaben
+## AUSGABEN
 
-### Microsoft. Azure. Commands. ServiceFabric. Models. PSCluster
+### Microsoft.Azure.Commands.ServiceFabric.Models.PSCluster
 
-## Notizen
+## NOTIZEN
 
-## Verwandte Links
+## VERWANDTE LINKS
