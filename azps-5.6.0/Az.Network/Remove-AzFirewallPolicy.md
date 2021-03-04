@@ -1,0 +1,235 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/powershell/module/az.network/remove-azfirewallpolicy
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzFirewallPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzFirewallPolicy.md
+ms.openlocfilehash: 69d9e49c83b2f1231be4fe2b1ffc3cba25c2cf2c
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101940171"
+---
+# <span data-ttu-id="1d2aa-101">Remove-AzFirewallPolicy</span><span class="sxs-lookup"><span data-stu-id="1d2aa-101">Remove-AzFirewallPolicy</span></span>
+
+## <span data-ttu-id="1d2aa-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="1d2aa-102">SYNOPSIS</span></span>
+<span data-ttu-id="1d2aa-103">Entfernt eine Azure-Firewallrichtlinie</span><span class="sxs-lookup"><span data-stu-id="1d2aa-103">Removes an Azure Firewall Policy</span></span>
+
+## <span data-ttu-id="1d2aa-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="1d2aa-104">SYNTAX</span></span>
+
+### <span data-ttu-id="1d2aa-105">RemoveByNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="1d2aa-105">RemoveByNameParameterSet</span></span>
+```
+Remove-AzFirewallPolicy -Name <String> -ResourceGroupName <String> [-Force] [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="1d2aa-106">RemoveByResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="1d2aa-106">RemoveByResourceIdParameterSet</span></span>
+```
+Remove-AzFirewallPolicy [-Force] [-PassThru] [-AsJob] -ResourceId <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="1d2aa-107">RemoveByInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="1d2aa-107">RemoveByInputObjectParameterSet</span></span>
+```
+Remove-AzFirewallPolicy [-Force] [-PassThru] [-AsJob] -InputObject <PSAzureFirewallPolicy>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="1d2aa-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="1d2aa-108">DESCRIPTION</span></span>
+<span data-ttu-id="1d2aa-109">Das **Cmdlet Remove-AzFirewallPolicy** entfernt eine Azure-Firewallrichtlinie.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-109">The **Remove-AzFirewallPolicy** cmdlet removes an Azure Firewall Policy.</span></span>
+
+## <span data-ttu-id="1d2aa-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="1d2aa-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="1d2aa-111">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="1d2aa-111">Example 1</span></span>
+```powershell
+PS C:\> Remove-AzFirewallPolicy -Name firewallpolicy -ResourceGroupName TestRg
+```
+
+<span data-ttu-id="1d2aa-112">In diesem Beispiel wird die Firewallrichtlinie mit dem Namen "firewallpolicy" in der Ressourcengruppe "TestRg" entfernt.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-112">This example removes the firewall policy named "firewallpolicy" in the resourcegroup "TestRg"</span></span>
+
+### <span data-ttu-id="1d2aa-113">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="1d2aa-113">Example 2</span></span>
+```powershell
+PS C:\> Remove-AzFirewallPolicy -Name firewallpolicy -ResourceId "/subscriptions/12345/resourceGroups/TestRg/providers/Microsoft.Network/firewallpolicies/firewallPolicy1"
+```
+
+<span data-ttu-id="1d2aa-114">In diesem Beispiel wird die Firewallrichtlinie durch die ID entfernt.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-114">This example removes the firewall policy by the Id.</span></span>
+
+### <span data-ttu-id="1d2aa-115">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="1d2aa-115">Example 3</span></span>
+```powershell
+PS C:\> Remove-AzFirewallPolicy -InputObject $fp
+```
+
+<span data-ttu-id="1d2aa-116">In diesem Beispiel wird die Firewallrichtlinienrichtlinie $fp</span><span class="sxs-lookup"><span data-stu-id="1d2aa-116">This example removes the firewall policy $fp</span></span>
+
+## <span data-ttu-id="1d2aa-117">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="1d2aa-117">PARAMETERS</span></span>
+
+### <span data-ttu-id="1d2aa-118">-AsJob</span><span class="sxs-lookup"><span data-stu-id="1d2aa-118">-AsJob</span></span>
+<span data-ttu-id="1d2aa-119">Ausführen des Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="1d2aa-119">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-120">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="1d2aa-120">-DefaultProfile</span></span>
+<span data-ttu-id="1d2aa-121">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-121">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-122">-Erzwingen</span><span class="sxs-lookup"><span data-stu-id="1d2aa-122">-Force</span></span>
+<span data-ttu-id="1d2aa-123">Bitten Sie nicht um Bestätigung.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-123">Do not ask for confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-124">-InputObject</span><span class="sxs-lookup"><span data-stu-id="1d2aa-124">-InputObject</span></span>
+<span data-ttu-id="1d2aa-125">Die AzureFirewall-Richtlinie</span><span class="sxs-lookup"><span data-stu-id="1d2aa-125">The AzureFirewall Policy</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy
+Parameter Sets: RemoveByInputObjectParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-126">-Name</span><span class="sxs-lookup"><span data-stu-id="1d2aa-126">-Name</span></span>
+<span data-ttu-id="1d2aa-127">Der Ressourcenname.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-127">The resource name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RemoveByNameParameterSet
+Aliases: ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="1d2aa-128">-PassThru</span></span>
+<span data-ttu-id="1d2aa-129">Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-129">Returns an object representing the item with which you are working.</span></span>
+<span data-ttu-id="1d2aa-130">Standardmäßig generiert dieses Cmdlet keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-130">By default, this cmdlet does not generate any output.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-131">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="1d2aa-131">-ResourceGroupName</span></span>
+<span data-ttu-id="1d2aa-132">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-132">The resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RemoveByNameParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-133">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="1d2aa-133">-ResourceId</span></span>
+<span data-ttu-id="1d2aa-134">Die Ressourcen-ID.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-134">The resource Id.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RemoveByResourceIdParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-135">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="1d2aa-135">-Confirm</span></span>
+<span data-ttu-id="1d2aa-136">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-136">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-137">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="1d2aa-137">-WhatIf</span></span>
+<span data-ttu-id="1d2aa-138">Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-138">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="1d2aa-139">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-139">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1d2aa-140">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1d2aa-140">CommonParameters</span></span>
+<span data-ttu-id="1d2aa-141">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1d2aa-141">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1d2aa-142">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="1d2aa-142">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="1d2aa-143">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="1d2aa-143">INPUTS</span></span>
+
+### <span data-ttu-id="1d2aa-144">System.String</span><span class="sxs-lookup"><span data-stu-id="1d2aa-144">System.String</span></span>
+
+### <span data-ttu-id="1d2aa-145">Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy</span><span class="sxs-lookup"><span data-stu-id="1d2aa-145">Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy</span></span>
+
+## <span data-ttu-id="1d2aa-146">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="1d2aa-146">OUTPUTS</span></span>
+
+### <span data-ttu-id="1d2aa-147">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="1d2aa-147">System.Boolean</span></span>
+
+## <span data-ttu-id="1d2aa-148">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="1d2aa-148">NOTES</span></span>
+
+## <span data-ttu-id="1d2aa-149">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="1d2aa-149">RELATED LINKS</span></span>

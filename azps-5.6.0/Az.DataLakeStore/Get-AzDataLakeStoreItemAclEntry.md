@@ -1,0 +1,108 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+Module Name: Az.DataLakeStore
+ms.assetid: DFE8C373-2BBA-4A4E-B4B1-926373E68FC4
+online version: https://docs.microsoft.com/powershell/module/az.datalakestore/get-azdatalakestoreitemaclentry
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItemAclEntry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItemAclEntry.md
+ms.openlocfilehash: 76d745c16dae7fdfae7feca46c3b32715fa82f5f
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101940515"
+---
+# <span data-ttu-id="8b92f-101">Get-AzDataLakeStoreItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="8b92f-101">Get-AzDataLakeStoreItemAclEntry</span></span>
+
+## <span data-ttu-id="8b92f-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8b92f-102">SYNOPSIS</span></span>
+<span data-ttu-id="8b92f-103">Ruft einen Eintrag in der ACL einer Datei oder eines Ordners im Data Lake Store ab.</span><span class="sxs-lookup"><span data-stu-id="8b92f-103">Gets an entry in the ACL of a file or folder in Data Lake Store.</span></span>
+
+## <span data-ttu-id="8b92f-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8b92f-104">SYNTAX</span></span>
+
+```
+Get-AzDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="8b92f-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="8b92f-105">DESCRIPTION</span></span>
+<span data-ttu-id="8b92f-106">Das **Get-AzDataLakeStoreItemAclEntry-Cmdlet** ruft einen Eintrag (ACE) in der Zugriffssteuerungsliste (Access Control List, ACL) einer Datei oder eines Ordners im Data Lake Store ab.</span><span class="sxs-lookup"><span data-stu-id="8b92f-106">The **Get-AzDataLakeStoreItemAclEntry** cmdlet gets an entry (ACE) in the access control list (ACL) of a file or folder in Data Lake Store.</span></span>
+
+## <span data-ttu-id="8b92f-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="8b92f-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="8b92f-108">Beispiel 1: ACL für einen Ordner erhalten</span><span class="sxs-lookup"><span data-stu-id="8b92f-108">Example 1: Get the ACL for a folder</span></span>
+```
+PS C:\> Get-AzDataLakeStoreItemAclEntry -AccountName 'ContosoADL' -Path '/'
+```
+
+<span data-ttu-id="8b92f-109">Dieser Befehl ruft die ACL für das Stammverzeichnis des angegebenen Data Lake Store-Kontos ab.</span><span class="sxs-lookup"><span data-stu-id="8b92f-109">This command gets the ACL for the root directory of the specified Data Lake Store account</span></span>
+
+## <span data-ttu-id="8b92f-110">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="8b92f-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="8b92f-111">-Konto</span><span class="sxs-lookup"><span data-stu-id="8b92f-111">-Account</span></span>
+<span data-ttu-id="8b92f-112">Gibt den Namen des Data Lake Store-Kontos an.</span><span class="sxs-lookup"><span data-stu-id="8b92f-112">Specifies the name of the Data Lake Store account.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: AccountName
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8b92f-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8b92f-113">-DefaultProfile</span></span>
+<span data-ttu-id="8b92f-114">Die Anmeldeinformationen, das Konto, der Mandant und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8b92f-114">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8b92f-115">-Path</span><span class="sxs-lookup"><span data-stu-id="8b92f-115">-Path</span></span>
+<span data-ttu-id="8b92f-116">Gibt den Data Lake Store-Pfad des Elements an, für das dieses Cmdlet ein ACE erhält, beginnend mit dem Stammverzeichnis (/).</span><span class="sxs-lookup"><span data-stu-id="8b92f-116">Specifies the Data Lake Store path of the item for which this cmdlet gets an ACE, starting with the root directory (/).</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8b92f-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8b92f-117">CommonParameters</span></span>
+<span data-ttu-id="8b92f-118">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8b92f-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8b92f-119">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="8b92f-119">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="8b92f-120">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="8b92f-120">INPUTS</span></span>
+
+### <span data-ttu-id="8b92f-121">System.String</span><span class="sxs-lookup"><span data-stu-id="8b92f-121">System.String</span></span>
+
+### <span data-ttu-id="8b92f-122">Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance</span><span class="sxs-lookup"><span data-stu-id="8b92f-122">Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance</span></span>
+
+## <span data-ttu-id="8b92f-123">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="8b92f-123">OUTPUTS</span></span>
+
+### <span data-ttu-id="8b92f-124">Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce</span><span class="sxs-lookup"><span data-stu-id="8b92f-124">Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce</span></span>
+
+## <span data-ttu-id="8b92f-125">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="8b92f-125">NOTES</span></span>
+
+## <span data-ttu-id="8b92f-126">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="8b92f-126">RELATED LINKS</span></span>
+
+[<span data-ttu-id="8b92f-127">Remove-AzDataLakeStoreItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="8b92f-127">Remove-AzDataLakeStoreItemAclEntry</span></span>](./Remove-AzDataLakeStoreItemAclEntry.md)
+
+[<span data-ttu-id="8b92f-128">Set-AzDataLakeStoreItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="8b92f-128">Set-AzDataLakeStoreItemAclEntry</span></span>](./Set-AzDataLakeStoreItemAclEntry.md)
+
+
