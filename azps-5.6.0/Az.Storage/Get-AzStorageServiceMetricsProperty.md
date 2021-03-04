@@ -1,0 +1,132 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+Module Name: Az.Storage
+ms.assetid: 3B5B828A-6B3E-49BD-8BA9-916F8B69B8E9
+online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageservicemetricsproperty
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
+ms.openlocfilehash: 36b2251fa0fb2324a58368df75e43c9aa1480546
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101933315"
+---
+# <span data-ttu-id="d4465-101">Get-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="d4465-101">Get-AzStorageServiceMetricsProperty</span></span>
+
+## <span data-ttu-id="d4465-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="d4465-102">SYNOPSIS</span></span>
+<span data-ttu-id="d4465-103">Ruft Metrikeigenschaften für den Azure Storage-Dienst ab.</span><span class="sxs-lookup"><span data-stu-id="d4465-103">Gets metrics properties for the Azure Storage service.</span></span>
+
+## <span data-ttu-id="d4465-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d4465-104">SYNTAX</span></span>
+
+```
+Get-AzStorageServiceMetricsProperty [-ServiceType] <StorageServiceType> [-MetricsType] <ServiceMetricsType>
+ [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="d4465-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="d4465-105">DESCRIPTION</span></span>
+<span data-ttu-id="d4465-106">Das **Get-AzStorageServiceMetricsProperty-Cmdlet** ruft Metrikeigenschaften für den Azure Storage-Dienst ab.</span><span class="sxs-lookup"><span data-stu-id="d4465-106">The **Get-AzStorageServiceMetricsProperty** cmdlet gets metrics properties for the Azure Storage service.</span></span>
+
+## <span data-ttu-id="d4465-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="d4465-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="d4465-108">Beispiel 1: Erhalten von Metrikeigenschaften für den Blob-Dienst</span><span class="sxs-lookup"><span data-stu-id="d4465-108">Example 1: Get metrics properties for the Blob service</span></span>
+```
+C:\PS>Get-AzStorageServiceMetricsProperty -ServiceType Blob -MetricsType Hour
+```
+
+<span data-ttu-id="d4465-109">Dieser Befehl ruft Metrikeigenschaften für den Blobspeicher für den Metriktyp Stunde ab.</span><span class="sxs-lookup"><span data-stu-id="d4465-109">This command gets metrics properties for blob storage for the Hour metrics type.</span></span>
+
+## <span data-ttu-id="d4465-110">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="d4465-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="d4465-111">-Context</span><span class="sxs-lookup"><span data-stu-id="d4465-111">-Context</span></span>
+<span data-ttu-id="d4465-112">Gibt einen Azure-Speicherkontext an.</span><span class="sxs-lookup"><span data-stu-id="d4465-112">Specifies an Azure storage context.</span></span>
+<span data-ttu-id="d4465-113">Verwenden Sie zum Abrufen eines Speicherkontexts das New-AzStorageContext Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="d4465-113">To obtain a storage context, use the New-AzStorageContext cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d4465-114">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d4465-114">-DefaultProfile</span></span>
+<span data-ttu-id="d4465-115">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d4465-115">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d4465-116">-MetricsType</span><span class="sxs-lookup"><span data-stu-id="d4465-116">-MetricsType</span></span>
+<span data-ttu-id="d4465-117">Gibt einen Metriktyp an.</span><span class="sxs-lookup"><span data-stu-id="d4465-117">Specifies a metrics type.</span></span>
+<span data-ttu-id="d4465-118">Dieses Cmdlet ruft die Eigenschaften der Azure Storage-Dienstmetriken für den Metriktyp ab, den dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="d4465-118">This cmdlet gets the Azure Storage service metrics properties for the metrics type that this parameter specifies.</span></span>
+<span data-ttu-id="d4465-119">Die zulässigen Werte für diesen Parameter sind: Stunde und Minute.</span><span class="sxs-lookup"><span data-stu-id="d4465-119">The acceptable values for this parameter are: Hour and Minute.</span></span>
+
+```yaml
+Type: Microsoft.WindowsAzure.Commands.Storage.Common.ServiceMetricsType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Hour, Minute
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d4465-120">-ServiceType</span><span class="sxs-lookup"><span data-stu-id="d4465-120">-ServiceType</span></span>
+<span data-ttu-id="d4465-121">Gibt den Speicherdiensttyp an.</span><span class="sxs-lookup"><span data-stu-id="d4465-121">Specifies the storage service type.</span></span>
+<span data-ttu-id="d4465-122">Dieses Cmdlet ruft die Metrikeigenschaften für den Typ ab, den dieser Parameter angibt.</span><span class="sxs-lookup"><span data-stu-id="d4465-122">This cmdlet gets the metrics properties for the type that this parameter specifies.</span></span>
+<span data-ttu-id="d4465-123">Die zulässigen Werte für diesen Parameter sind:</span><span class="sxs-lookup"><span data-stu-id="d4465-123">The acceptable values for this parameter are:</span></span>
+- <span data-ttu-id="d4465-124">Blob</span><span class="sxs-lookup"><span data-stu-id="d4465-124">Blob</span></span> 
+- <span data-ttu-id="d4465-125">Tabelle</span><span class="sxs-lookup"><span data-stu-id="d4465-125">Table</span></span>
+- <span data-ttu-id="d4465-126">Warteschlange</span><span class="sxs-lookup"><span data-stu-id="d4465-126">Queue</span></span>
+- <span data-ttu-id="d4465-127">Datei Der Wert von Datei wird derzeit nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d4465-127">File The value of File is not currently supported.</span></span>
+
+```yaml
+Type: Microsoft.WindowsAzure.Commands.Storage.Common.StorageServiceType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Blob, Table, Queue, File
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="d4465-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d4465-128">CommonParameters</span></span>
+<span data-ttu-id="d4465-129">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d4465-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d4465-130">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="d4465-130">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="d4465-131">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="d4465-131">INPUTS</span></span>
+
+### <span data-ttu-id="d4465-132">Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext</span><span class="sxs-lookup"><span data-stu-id="d4465-132">Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext</span></span>
+
+## <span data-ttu-id="d4465-133">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="d4465-133">OUTPUTS</span></span>
+
+### <span data-ttu-id="d4465-134">Microsoft.Azure.Storage.Shared.Protocol.MetricsProperties</span><span class="sxs-lookup"><span data-stu-id="d4465-134">Microsoft.Azure.Storage.Shared.Protocol.MetricsProperties</span></span>
+
+## <span data-ttu-id="d4465-135">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="d4465-135">NOTES</span></span>
+
+## <span data-ttu-id="d4465-136">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="d4465-136">RELATED LINKS</span></span>
+
+[<span data-ttu-id="d4465-137">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="d4465-137">New-AzStorageContext</span></span>](./New-AzStorageContext.md)
+
+[<span data-ttu-id="d4465-138">Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="d4465-138">Set-AzStorageServiceMetricsProperty</span></span>](./Set-AzStorageServiceMetricsProperty.md)
+
+
