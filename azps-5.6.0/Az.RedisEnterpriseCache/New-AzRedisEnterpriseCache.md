@@ -1,0 +1,379 @@
+---
+external help file: ''
+Module Name: Az.RedisEnterpriseCache
+online version: https://docs.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecache
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
+ms.openlocfilehash: 43ad21450666fb2db9a25e1e2803651eacf511d4
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101943871"
+---
+# <span data-ttu-id="7ab91-101">New-AzRedisEnterpriseCache</span><span class="sxs-lookup"><span data-stu-id="7ab91-101">New-AzRedisEnterpriseCache</span></span>
+
+## <span data-ttu-id="7ab91-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="7ab91-102">SYNOPSIS</span></span>
+<span data-ttu-id="7ab91-103">Erstellt einen Redis Enterpise-Cachecluster und eine zugeordnete Datenbank</span><span class="sxs-lookup"><span data-stu-id="7ab91-103">Creates a Redis Enterpise cache cluster and an associated database</span></span>
+
+## <span data-ttu-id="7ab91-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="7ab91-104">SYNTAX</span></span>
+
+```
+New-AzRedisEnterpriseCache -ClusterName <String> -ResourceGroupName <String> -Location <String> -Sku <SkuName>
+ [-SubscriptionId <String>] [-Capacity <Int32>] [-ClientProtocol <Protocol>]
+ [-ClusteringPolicy <ClusteringPolicy>] [-EvictionPolicy <EvictionPolicy>] [-MinimumTlsVersion <String>]
+ [-Module <IModule[]>] [-Port <Int32>] [-Tag <Hashtable>] [-Zone <String[]>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## <span data-ttu-id="7ab91-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="7ab91-105">DESCRIPTION</span></span>
+<span data-ttu-id="7ab91-106">Erstellt oder aktualisiert einen vorhandenen Cachecluster (überschreiben/neu erstellen mit potenziellen Ausfallzeiten) und eine zugeordnete Datenbank mit dem Namen "Standard".</span><span class="sxs-lookup"><span data-stu-id="7ab91-106">Creates or updates an existing (overwrite/recreate, with potential downtime) cache cluster and an associated database named 'default'</span></span>
+
+## <span data-ttu-id="7ab91-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="7ab91-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="7ab91-108">Beispiel 1: Erstellen eines Redis Enterprise Cache</span><span class="sxs-lookup"><span data-stu-id="7ab91-108">Example 1: Create a Redis Enterprise Cache</span></span>
+```powershell
+PS C:\> New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "West US" -Sku "Enterprise_E10"
+
+Location Name    Type                            Zone Database
+-------- ----    ----                            ---- --------
+West US  MyCache Microsoft.Cache/redisEnterprise      {default}
+
+```
+
+<span data-ttu-id="7ab91-109">Mit diesem Befehl wird ein Redis Enterprise Cache mit dem Namen MyCache erstellt.</span><span class="sxs-lookup"><span data-stu-id="7ab91-109">This command creates a Redis Enterprise Cache named MyCache.</span></span>
+
+### <span data-ttu-id="7ab91-110">Beispiel 2: Erstellen eines Redis Enterprise-Caches mit einigen optionalen Parametern</span><span class="sxs-lookup"><span data-stu-id="7ab91-110">Example 2: Create a Redis Enterprise Cache using some optional parameters</span></span>
+```powershell
+PS C:\> New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "East US" -Sku "Enterprise_E20" -Capacity 4 -Zone "1","2","3" -Module "{name:RedisBloom, args:`"ERROR_RATE 0.00 INITIAL_SIZE 400`"}","{name:RedisTimeSeries, args:`"RETENTION_POLICY 20`"}","{name:RediSearch}" -ClientProtocol "Plaintext" -EvictionPolicy "NoEviction" -ClusteringPolicy "EnterpriseCluster" -Tag @{"tag" = "value"}
+
+Location Name    Type                            Zone      Database
+-------- ----    ----                            ----      --------
+East US  MyCache Microsoft.Cache/redisEnterprise {1, 2, 3} {default}
+
+```
+
+<span data-ttu-id="7ab91-111">Mit diesem Befehl wird mit einigen optionalen Parametern ein Redis Enterprise Cache namens MyCache erstellt.</span><span class="sxs-lookup"><span data-stu-id="7ab91-111">This command creates a Redis Enterprise Cache named MyCache using some optional parameters.</span></span>
+
+## <span data-ttu-id="7ab91-112">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="7ab91-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="7ab91-113">-AsJob</span><span class="sxs-lookup"><span data-stu-id="7ab91-113">-AsJob</span></span>
+<span data-ttu-id="7ab91-114">Ausführen des Befehls als Auftrag</span><span class="sxs-lookup"><span data-stu-id="7ab91-114">Run the command as a job</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-115">-Kapazität</span><span class="sxs-lookup"><span data-stu-id="7ab91-115">-Capacity</span></span>
+<span data-ttu-id="7ab91-116">Die Größe des RedisEnterprise-Clusters.</span><span class="sxs-lookup"><span data-stu-id="7ab91-116">The size of the RedisEnterprise cluster.</span></span>
+<span data-ttu-id="7ab91-117">Je nach SKU ist standardmäßig 2 oder 3 festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7ab91-117">Defaults to 2 or 3 depending on SKU.</span></span>
+<span data-ttu-id="7ab91-118">Gültige Werte sind (2, 4, 6, ...) für Enterprise SKUs und (3, 9, 15, ...) für Flash-SKUs.</span><span class="sxs-lookup"><span data-stu-id="7ab91-118">Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases: SkuCapacity
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-119">-ClientProtocol</span><span class="sxs-lookup"><span data-stu-id="7ab91-119">-ClientProtocol</span></span>
+<span data-ttu-id="7ab91-120">Gibt an, ob redis-Clients eine Verbindung mit TLS-verschlüsselten oder Nur-Text-Redis-Protokollen herstellen können.</span><span class="sxs-lookup"><span data-stu-id="7ab91-120">Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols.</span></span>
+<span data-ttu-id="7ab91-121">Standard ist TLS-verschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="7ab91-121">Default is TLS-encrypted.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Support.Protocol
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-122">-ClusteringPolicy</span><span class="sxs-lookup"><span data-stu-id="7ab91-122">-ClusteringPolicy</span></span>
+<span data-ttu-id="7ab91-123">Clusterrichtlinie – Standard ist OSSCluster.</span><span class="sxs-lookup"><span data-stu-id="7ab91-123">Clustering policy - default is OSSCluster.</span></span>
+<span data-ttu-id="7ab91-124">Wird zur Erstellungszeit angegeben.</span><span class="sxs-lookup"><span data-stu-id="7ab91-124">Specified at create time.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Support.ClusteringPolicy
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-125">-ClusterName</span><span class="sxs-lookup"><span data-stu-id="7ab91-125">-ClusterName</span></span>
+<span data-ttu-id="7ab91-126">Der Name des RedisEnterprise-Clusters.</span><span class="sxs-lookup"><span data-stu-id="7ab91-126">The name of the RedisEnterprise cluster.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7ab91-127">-DefaultProfile</span></span>
+<span data-ttu-id="7ab91-128">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7ab91-128">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-129">-EvictionPolicy</span><span class="sxs-lookup"><span data-stu-id="7ab91-129">-EvictionPolicy</span></span>
+<span data-ttu-id="7ab91-130">Redis Eviction policy – Standard ist VolatileLRU.</span><span class="sxs-lookup"><span data-stu-id="7ab91-130">Redis eviction policy - default is VolatileLRU.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Support.EvictionPolicy
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-131">-Location</span><span class="sxs-lookup"><span data-stu-id="7ab91-131">-Location</span></span>
+<span data-ttu-id="7ab91-132">Der Geospeicherort, an dem sich die Ressource befindet</span><span class="sxs-lookup"><span data-stu-id="7ab91-132">The geo-location where the resource lives</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-133">-MinimumTlsVersion</span><span class="sxs-lookup"><span data-stu-id="7ab91-133">-MinimumTlsVersion</span></span>
+<span data-ttu-id="7ab91-134">Die mindestens zu unterstützende TLS-Version für den Cluster, z. B. 1.2</span><span class="sxs-lookup"><span data-stu-id="7ab91-134">The minimum TLS version for the cluster to support, e.g. 1.2</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-135">-Module</span><span class="sxs-lookup"><span data-stu-id="7ab91-135">-Module</span></span>
+<span data-ttu-id="7ab91-136">Optionale Gruppe von Redis-Modulen, die in dieser Datenbank aktiviert werden sollen – Module können nur zur Erstellungszeit hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="7ab91-136">Optional set of redis modules to enable in this database - modules can only be added at creation time.</span></span>
+<span data-ttu-id="7ab91-137">Informationen zum Erstellen finden Sie im Abschnitt NOTIZEN zu #A0 und Erstellen einer Hashtabelle.</span><span class="sxs-lookup"><span data-stu-id="7ab91-137">To construct, see NOTES section for MODULE properties and create a hash table.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.Api20201001Preview.IModule[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-138">-NoWait</span><span class="sxs-lookup"><span data-stu-id="7ab91-138">-NoWait</span></span>
+<span data-ttu-id="7ab91-139">Asynchrones Ausführen des Befehls</span><span class="sxs-lookup"><span data-stu-id="7ab91-139">Run the command asynchronously</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-140">-Port</span><span class="sxs-lookup"><span data-stu-id="7ab91-140">-Port</span></span>
+<span data-ttu-id="7ab91-141">TCP-Port des Datenbankendpunkts.</span><span class="sxs-lookup"><span data-stu-id="7ab91-141">TCP port of the database endpoint.</span></span>
+<span data-ttu-id="7ab91-142">Wird zur Erstellungszeit angegeben.</span><span class="sxs-lookup"><span data-stu-id="7ab91-142">Specified at create time.</span></span>
+<span data-ttu-id="7ab91-143">Standardeinstellungen für einen verfügbaren Port.</span><span class="sxs-lookup"><span data-stu-id="7ab91-143">Defaults to an available port.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-144">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="7ab91-144">-ResourceGroupName</span></span>
+<span data-ttu-id="7ab91-145">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="7ab91-145">The name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-146">-Sku</span><span class="sxs-lookup"><span data-stu-id="7ab91-146">-Sku</span></span>
+<span data-ttu-id="7ab91-147">Der Typ des zu bereitstellenden RedisEnterprise-Clusters.</span><span class="sxs-lookup"><span data-stu-id="7ab91-147">The type of RedisEnterprise cluster to deploy.</span></span>
+<span data-ttu-id="7ab91-148">Mögliche Werte: (Enterprise_E10, EnterpriseFlash_F300 usw.)</span><span class="sxs-lookup"><span data-stu-id="7ab91-148">Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Support.SkuName
+Parameter Sets: (All)
+Aliases: SkuName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-149">-SubscriptionId</span><span class="sxs-lookup"><span data-stu-id="7ab91-149">-SubscriptionId</span></span>
+<span data-ttu-id="7ab91-150">Ruft Abonnementanmeldeinformationen ab, die das Microsoft Azure-Abonnement eindeutig identifizieren.</span><span class="sxs-lookup"><span data-stu-id="7ab91-150">Gets subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span>
+<span data-ttu-id="7ab91-151">Die Abonnement-ID ist Teil des URI für jeden Dienstanruf.</span><span class="sxs-lookup"><span data-stu-id="7ab91-151">The subscription ID forms part of the URI for every service call.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-152">-Tag</span><span class="sxs-lookup"><span data-stu-id="7ab91-152">-Tag</span></span>
+<span data-ttu-id="7ab91-153">Ressourcentags.</span><span class="sxs-lookup"><span data-stu-id="7ab91-153">Resource tags.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-154">-Zone</span><span class="sxs-lookup"><span data-stu-id="7ab91-154">-Zone</span></span>
+<span data-ttu-id="7ab91-155">Die Zonen, in denen dieser Cluster bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="7ab91-155">The zones where this cluster will be deployed.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-156">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="7ab91-156">-Confirm</span></span>
+<span data-ttu-id="7ab91-157">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="7ab91-157">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-158">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7ab91-158">-WhatIf</span></span>
+<span data-ttu-id="7ab91-159">Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="7ab91-159">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="7ab91-160">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="7ab91-160">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="7ab91-161">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7ab91-161">CommonParameters</span></span>
+<span data-ttu-id="7ab91-162">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="7ab91-162">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7ab91-163">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="7ab91-163">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="7ab91-164">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="7ab91-164">INPUTS</span></span>
+
+## <span data-ttu-id="7ab91-165">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="7ab91-165">OUTPUTS</span></span>
+
+### <span data-ttu-id="7ab91-166">Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.Api20201001Preview.ICluster</span><span class="sxs-lookup"><span data-stu-id="7ab91-166">Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.Api20201001Preview.ICluster</span></span>
+
+## <span data-ttu-id="7ab91-167">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="7ab91-167">NOTES</span></span>
+
+<span data-ttu-id="7ab91-168">ALIASE</span><span class="sxs-lookup"><span data-stu-id="7ab91-168">ALIASES</span></span>
+
+<span data-ttu-id="7ab91-169">KOMPLEXE PARAMETEREIGENSCHAFTEN</span><span class="sxs-lookup"><span data-stu-id="7ab91-169">COMPLEX PARAMETER PROPERTIES</span></span>
+
+<span data-ttu-id="7ab91-170">Um die unten beschriebenen Parameter zu erstellen, erstellen Sie eine Hashtabelle, die die entsprechenden Eigenschaften enthält.</span><span class="sxs-lookup"><span data-stu-id="7ab91-170">To create the parameters described below, construct a hash table containing the appropriate properties.</span></span> <span data-ttu-id="7ab91-171">Informationen zu Hashtabellen finden Sie unter Get-Help about_Hash_Tables.</span><span class="sxs-lookup"><span data-stu-id="7ab91-171">For information on hash tables, run Get-Help about_Hash_Tables.</span></span>
+
+
+<span data-ttu-id="7ab91-172">MODULE <IModule[]>: Optionale Gruppe von redis-Modulen, die in dieser Datenbank aktiviert werden sollen – Module können nur zur Erstellungszeit hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="7ab91-172">MODULE <IModule[]>: Optional set of redis modules to enable in this database - modules can only be added at creation time.</span></span>
+  - <span data-ttu-id="7ab91-173">`Name <String>`: Der Name des Moduls, z. B. "RedisBloom", "RediSearch", "RedisTimeSeries"</span><span class="sxs-lookup"><span data-stu-id="7ab91-173">`Name <String>`: The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'</span></span>
+  - <span data-ttu-id="7ab91-174">`[Arg <String>]`: Konfigurationsoptionen für das Modul, z. B. "ERROR_RATE 0,00 INITIAL_SIZE 400".</span><span class="sxs-lookup"><span data-stu-id="7ab91-174">`[Arg <String>]`: Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.</span></span>
+
+## <span data-ttu-id="7ab91-175">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="7ab91-175">RELATED LINKS</span></span>
+
