@@ -1,0 +1,168 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+Module Name: Az.KeyVault
+online version: https://docs.microsoft.com/powershell/module/az.keyvault/undo-azkeyvaultmanagedstorageaccountremoval
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultManagedStorageAccountRemoval.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultManagedStorageAccountRemoval.md
+ms.openlocfilehash: 289adecd07837134fed9279758cf1142d30183a9
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101947848"
+---
+# Undo-AzKeyVaultManagedStorageAccountRemoval
+
+## SYNOPSIS
+Stellt ein zuvor gelöschtes KeyVault-verwaltetes Speicherkonto wiederher.
+
+## SYNTAX
+
+### Standard (Standard)
+```
+Undo-AzKeyVaultManagedStorageAccountRemoval [-VaultName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### InputObject
+```
+Undo-AzKeyVaultManagedStorageAccountRemoval [-InputObject] <PSDeletedKeyVaultManagedStorageAccountIdentityItem>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Mit **dem Befehl Undo-AzKeyVaultManagedStorageAccountRemoval** wird ein zuvor gelöschtes verwaltetes Speicherkonto wiederhergestellt, vorausgesetzt, für diesen Tresor ist die soft delete aktiviert und der Wiederherstellungsversuch erfolgt während des Wiederherstellungsintervalls.
+
+## BEISPIELE
+
+### Beispiel 1
+```powershell
+PS C:\> Get-AzKeyVaultManagedStorageAccount -VaultName myVault -Name myAccount -InRemovedState
+PS C:\> Undo-AzKeyVaultManagedStorageAccountRemoval -VaultName myVault -Name myAccount
+
+Id                  : https://myvault.vault.azure.net:443/storage/myaccount
+Vault Name          : myVault
+AccountName         : myAccount
+Account Resource Id : /subscriptions/8bc48661-1801-4b7a-8ca1-6a3cadfb4870/resourceGroups/myrg/providers/Microsoft.St
+                      orage/storageAccounts/myaccount
+Active Key Name     : key2
+Auto Regenerate Key : False
+Regeneration Period : 90.00:00:00
+Enabled             : True
+Created             : 4/25/2018 1:50:32 AM
+Updated             : 4/25/2018 1:50:32 AM
+Tags                :
+```
+
+Diese Reihenfolge von Befehlen bestimmt, ob das angegebene Speicherkonto im Tresor in einem gelöschten Zustand vorhanden ist. Mit dem folgenden Befehl wird das gelöschte Speicherkonto wiederhergestellt, und es wird wieder aktiv.
+
+## PARAMETER
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Gelöschtes Objekt für verwaltetes Speicherkonto
+
+```yaml
+Type: Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageAccountIdentityItem
+Parameter Sets: InputObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Name des verwalteten KeyVault-Speicherkontos.
+Das Cmdlet erstellt den FQDN des Ziels aus dem Tresornamen, der aktuell ausgewählten Umgebung und dem Namen des verwalteten Speicherkontos.
+
+```yaml
+Type: System.String
+Parameter Sets: Default
+Aliases: StorageAccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VaultName
+Name des Tresors.
+Das Cmdlet erstellt den FQDN eines Tresors basierend auf dem Namen und der aktuell ausgewählten Umgebung.
+
+```yaml
+Type: System.String
+Parameter Sets: Default
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Bestätigen
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird.
+Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EINGABEN
+
+### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultManagedStorageAccountIdentityItem
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultManagedStorageAccount
+
+## NOTIZEN
+
+## VERWANDTE LINKS
