@@ -1,0 +1,247 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBox.dll-Help.xml
+Module Name: Az.DataBox
+online version: https://docs.microsoft.com/powershell/module/az.databox/get-azdataboxjob
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/Get-AzDataBoxJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataBox/DataBox/help/Get-AzDataBoxJob.md
+ms.openlocfilehash: af406af487e03c429a21a99799083f67d0fabf53
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101942656"
+---
+# <span data-ttu-id="3a1d0-101">Get-AzDataBoxJob</span><span class="sxs-lookup"><span data-stu-id="3a1d0-101">Get-AzDataBoxJob</span></span>
+
+## <span data-ttu-id="3a1d0-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="3a1d0-102">SYNOPSIS</span></span>
+<span data-ttu-id="3a1d0-103">Ruft Informationen zu Databox-Aufträgen ab</span><span class="sxs-lookup"><span data-stu-id="3a1d0-103">Gets information about Databox Jobs</span></span>
+
+## <span data-ttu-id="3a1d0-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3a1d0-104">SYNTAX</span></span>
+
+### <span data-ttu-id="3a1d0-105">ListParameterSet (Standard)</span><span class="sxs-lookup"><span data-stu-id="3a1d0-105">ListParameterSet (Default)</span></span>
+```
+Get-AzDataBoxJob [-ResourceGroupName <String>] [-Completed] [-CompletedWithError] [-Cancelled] [-Aborted]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="3a1d0-106">GetByNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="3a1d0-106">GetByNameParameterSet</span></span>
+```
+Get-AzDataBoxJob -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="3a1d0-107">GetByResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="3a1d0-107">GetByResourceIdParameterSet</span></span>
+```
+Get-AzDataBoxJob -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="3a1d0-108">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="3a1d0-108">DESCRIPTION</span></span>
+<span data-ttu-id="3a1d0-109">Das **Get-AzDataBoxJobs-Cmdlet** ruft Informationen zu Databoxaufträgen in einem Azure-Abonnement ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-109">The **Get-AzDataBoxJobs** cmdlet gets information about databox jobs in an Azure subscription.</span></span>
+<span data-ttu-id="3a1d0-110">Wenn Sie die Ressourcengruppe angeben, ruft dieses Cmdlet alle Datenboxaufträge unter dieser Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-110">If you specify the Resource Group, this cmdlet gets all the databox jobs under that resource group.</span></span> <span data-ttu-id="3a1d0-111">Wenn Sie den Namen des Auftrags zusammen mit dem Namen der Ressourcengruppe angeben, ruft dieses Cmdlet Informationen zu diesem bestimmten Databoxauftrag ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-111">If you specify the Name of the job along with the resource group name, this cmdlet gets information about that specific databox job.</span></span>
+<span data-ttu-id="3a1d0-112">Wenn Sie nichts anderes als die Abonnement-ID angeben, erhält dieses Cmdlet Informationen zu allen Databoxaufträgen unter diesem Abonnement.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-112">If you do not specify anything other than subscription id, this cmdlet gets information about all of the databox jobs under that subscription.</span></span>
+
+## <span data-ttu-id="3a1d0-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="3a1d0-113">EXAMPLES</span></span>
+
+### <span data-ttu-id="3a1d0-114">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="3a1d0-114">Example 1</span></span>
+```powershell
+PS C:\> Get-AzDataBoxJob
+
+jobResource.Name        jobResource.Sku.Name jobResource.Status  jobResource.StartTime jobResource.Location ResourceGroup
+----------------        -------------------- ------------------  --------------------- -------------------- -------------
+testtip2                DataBox              Cancelled           10-09-2018 06:34:53   westus               TestRg1
+cleanbox                DataBox              Aborted             04-12-2018 16:07:41   westus               TestRg2
+cleanbox-Clone          DataBox              Cancelled           25-04-2019 11:31:36   westus               TestRg2
+.
+.
+.
+```
+
+<span data-ttu-id="3a1d0-115">Get-AzDataBoxJob ohne Parameter ruft alle Databoxaufträge unter dem Abonnement ab</span><span class="sxs-lookup"><span data-stu-id="3a1d0-115">Get-AzDataBoxJob without any parameter fetches all the databox jobs under the subscription</span></span>
+
+### <span data-ttu-id="3a1d0-116">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="3a1d0-116">Example 2</span></span>
+```powershell
+PS C:\> Get-AzDataBoxJob -ResourceGroupName TestRg1
+
+jobResource.Name        jobResource.Sku.Name jobResource.Status  jobResource.StartTime jobResource.Location ResourceGroup
+----------------        -------------------- ------------------  --------------------- -------------------- -------------
+testtip2                DataBox              Cancelled           10-09-2018 06:34:53   westus               TestRg1
+.
+.
+.
+```
+
+<span data-ttu-id="3a1d0-117">Get-AzDataBoxJob mit dem Parameter ResourceGroupName ruft alle Databoxaufträge unter der angegebenen Ressourcengruppe ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-117">Get-AzDataBoxJob with ResourceGroupName parameter fetches all the databox jobs under the specified resource group</span></span>
+
+### <span data-ttu-id="3a1d0-118">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="3a1d0-118">Example 3</span></span>
+```powershell
+PS C:\> Get-AzDataBoxJob -ResourceGroupName TestRg1 -Name testtip2
+
+jobResource.Name        jobResource.Sku.Name jobResource.Status  jobResource.StartTime jobResource.Location ResourceGroup
+----------------        -------------------- ------------------  --------------------- -------------------- -------------
+testtip2                DataBox              Cancelled           10-09-2018 06:34:53   westus               TestRg1
+
+```
+
+<span data-ttu-id="3a1d0-119">Get-AzDataBoxJob mit angegebenen Ressourcengruppenname und Name ruft den jeweiligen Datenboxauftrag ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-119">Get-AzDataBoxJob with ResourceGroupName and Name specified will fetch that specific databox job</span></span>
+
+### <span data-ttu-id="3a1d0-120">Beispiel 4</span><span class="sxs-lookup"><span data-stu-id="3a1d0-120">Example 4</span></span>
+```powershell
+PS C:\> Get-AzDataBoxJob -ResourceId "/subscriptions/05b5dd1c-793d-41de-be9f-6f9ed142f695/resourceGroups/TestRg1/providers/Microsoft.DataBox/jobs/testtip2"
+
+jobResource.Name        jobResource.Sku.Name jobResource.Status  jobResource.StartTime jobResource.Location ResourceGroup
+----------------        -------------------- ------------------  --------------------- -------------------- -------------
+testtip2                DataBox              Cancelled           10-09-2018 06:34:53   westus               TestRg1
+
+```
+
+<span data-ttu-id="3a1d0-121">Get-AzDataBoxJob mit angegebener ResourceId ruft den jeweiligen Databoxauftrag ab.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-121">Get-AzDataBoxJob with ResourceId specified will fetch that specific databox job</span></span>
+
+## <span data-ttu-id="3a1d0-122">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="3a1d0-122">PARAMETERS</span></span>
+
+### <span data-ttu-id="3a1d0-123">-Abgebrochen</span><span class="sxs-lookup"><span data-stu-id="3a1d0-123">-Aborted</span></span>
+<span data-ttu-id="3a1d0-124">Parameter wechseln, um abgebrochene Aufträge zu abrufen</span><span class="sxs-lookup"><span data-stu-id="3a1d0-124">Switch Parameter to fetch Aborted jobs</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ListParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-125">-Storniert</span><span class="sxs-lookup"><span data-stu-id="3a1d0-125">-Cancelled</span></span>
+<span data-ttu-id="3a1d0-126">Parameter wechseln, um abgebrochene Aufträge ab abrufen</span><span class="sxs-lookup"><span data-stu-id="3a1d0-126">Switch Parameter to fetch Cancelled jobs</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ListParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-127">-Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="3a1d0-127">-Completed</span></span>
+<span data-ttu-id="3a1d0-128">Parameter wechseln, um abgeschlossene Aufträge ab abrufen</span><span class="sxs-lookup"><span data-stu-id="3a1d0-128">Switch Parameter to fetch Completed jobs</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ListParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-129">-CompletedWithError</span><span class="sxs-lookup"><span data-stu-id="3a1d0-129">-CompletedWithError</span></span>
+<span data-ttu-id="3a1d0-130">Parameter wechseln zum Abrufen von Aufträgen, die mit Fehlern abgeschlossen wurden</span><span class="sxs-lookup"><span data-stu-id="3a1d0-130">Switch Parameter to fetch jobs completed with errors</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ListParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-131">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3a1d0-131">-DefaultProfile</span></span>
+<span data-ttu-id="3a1d0-132">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-132">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-133">-Name</span><span class="sxs-lookup"><span data-stu-id="3a1d0-133">-Name</span></span>
+<span data-ttu-id="3a1d0-134">Name des Databox-Auftrags</span><span class="sxs-lookup"><span data-stu-id="3a1d0-134">Databox Job Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByNameParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-135">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="3a1d0-135">-ResourceGroupName</span></span>
+<span data-ttu-id="3a1d0-136">Name der Databox-Jobressourcengruppe</span><span class="sxs-lookup"><span data-stu-id="3a1d0-136">Databox Job Resource Group Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ListParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: GetByNameParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-137">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="3a1d0-137">-ResourceId</span></span>
+<span data-ttu-id="3a1d0-138">Databox Job Resource Id</span><span class="sxs-lookup"><span data-stu-id="3a1d0-138">Databox Job Resource Id</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceIdParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="3a1d0-139">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3a1d0-139">CommonParameters</span></span>
+<span data-ttu-id="3a1d0-140">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3a1d0-140">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3a1d0-141">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="3a1d0-141">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="3a1d0-142">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="3a1d0-142">INPUTS</span></span>
+
+### <span data-ttu-id="3a1d0-143">System.String</span><span class="sxs-lookup"><span data-stu-id="3a1d0-143">System.String</span></span>
+
+## <span data-ttu-id="3a1d0-144">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="3a1d0-144">OUTPUTS</span></span>
+
+### <span data-ttu-id="3a1d0-145">Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.PSDataBoxJob</span><span class="sxs-lookup"><span data-stu-id="3a1d0-145">Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.PSDataBoxJob</span></span>
+
+## <span data-ttu-id="3a1d0-146">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="3a1d0-146">NOTES</span></span>
+
+## <span data-ttu-id="3a1d0-147">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="3a1d0-147">RELATED LINKS</span></span>
