@@ -1,0 +1,176 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+Module Name: Az.EventHub
+online version: https://docs.microsoft.com/powershell/module/az.eventhub/new-azeventhubconsumergroup
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/New-AzEventHubConsumerGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventHub/EventHub/help/New-AzEventHubConsumerGroup.md
+ms.openlocfilehash: 2a11ab0ec68ee01864f1255953121b91f1b27ebf
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101921176"
+---
+# <span data-ttu-id="0ff8b-101">New-AzEventHubConsumerGroup</span><span class="sxs-lookup"><span data-stu-id="0ff8b-101">New-AzEventHubConsumerGroup</span></span>
+
+## <span data-ttu-id="0ff8b-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="0ff8b-102">SYNOPSIS</span></span>
+<span data-ttu-id="0ff8b-103">Erstellt eine neue Consumergruppe für den angegebenen Ereignishub.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-103">Creates a new consumer group for the specified Event Hub.</span></span>
+
+## <span data-ttu-id="0ff8b-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0ff8b-104">SYNTAX</span></span>
+
+```
+New-AzEventHubConsumerGroup [-ResourceGroupName] <String> [-Namespace] <String> [-EventHub] <String>
+ [-Name] <String> [[-UserMetadata] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="0ff8b-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="0ff8b-105">DESCRIPTION</span></span>
+<span data-ttu-id="0ff8b-106">Erstellt eine neue Consumergruppe für den angegebenen Ereignishub.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-106">Creates a new consumer group for the specified Event Hub.</span></span>
+
+## <span data-ttu-id="0ff8b-107">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="0ff8b-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="0ff8b-108">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="0ff8b-108">Example 1</span></span>
+```
+PS C:\> New-AzEventHubConsumerGroup -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -ConsumerGroupName MyConsumerGroupName
+```
+
+<span data-ttu-id="0ff8b-109">Erstellt die Consumergruppe \` MyConsumerGroupName im Ereignishub MyEventHubName , die auf den Namespace MyNamespaceName mit der Ressourcengruppe \` \` \` \` \` \` MyResourceGroupName festgelegt \` ist.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-109">Creates the consumer group \`MyConsumerGroupName\` in the Event Hub \`MyEventHubName\`, scoped to the namespace \`MyNamespaceName\`, with resource group \`MyResourceGroupName\`.</span></span>
+
+## <span data-ttu-id="0ff8b-110">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="0ff8b-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="0ff8b-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0ff8b-111">-DefaultProfile</span></span>
+<span data-ttu-id="0ff8b-112">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-112">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-113">-EventHub</span><span class="sxs-lookup"><span data-stu-id="0ff8b-113">-EventHub</span></span>
+<span data-ttu-id="0ff8b-114">EventHub-Name</span><span class="sxs-lookup"><span data-stu-id="0ff8b-114">EventHub Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: EventHubName
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-115">-Name</span><span class="sxs-lookup"><span data-stu-id="0ff8b-115">-Name</span></span>
+<span data-ttu-id="0ff8b-116">ConsumerGroup Name</span><span class="sxs-lookup"><span data-stu-id="0ff8b-116">ConsumerGroup Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ConsumerGroupName
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-117">-Namespace</span><span class="sxs-lookup"><span data-stu-id="0ff8b-117">-Namespace</span></span>
+<span data-ttu-id="0ff8b-118">Namespacename</span><span class="sxs-lookup"><span data-stu-id="0ff8b-118">Namespace Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: NamespaceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-119">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="0ff8b-119">-ResourceGroupName</span></span>
+<span data-ttu-id="0ff8b-120">Ressourcengruppenname</span><span class="sxs-lookup"><span data-stu-id="0ff8b-120">Resource Group Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-121">-UserMetadata</span><span class="sxs-lookup"><span data-stu-id="0ff8b-121">-UserMetadata</span></span>
+<span data-ttu-id="0ff8b-122">Benutzermetadaten für ConsumerGroup</span><span class="sxs-lookup"><span data-stu-id="0ff8b-122">User Metadata for ConsumerGroup</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-123">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="0ff8b-123">-Confirm</span></span>
+<span data-ttu-id="0ff8b-124">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-124">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-125">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="0ff8b-125">-WhatIf</span></span>
+<span data-ttu-id="0ff8b-126">Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-126">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="0ff8b-127">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-127">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="0ff8b-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0ff8b-128">CommonParameters</span></span>
+<span data-ttu-id="0ff8b-129">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0ff8b-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0ff8b-130">Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="0ff8b-130">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="0ff8b-131">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="0ff8b-131">INPUTS</span></span>
+
+### <span data-ttu-id="0ff8b-132">System.String</span><span class="sxs-lookup"><span data-stu-id="0ff8b-132">System.String</span></span>
+
+## <span data-ttu-id="0ff8b-133">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="0ff8b-133">OUTPUTS</span></span>
+
+### <span data-ttu-id="0ff8b-134">Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes</span><span class="sxs-lookup"><span data-stu-id="0ff8b-134">Microsoft.Azure.Commands.EventHub.Models.PSConsumerGroupAttributes</span></span>
+
+## <span data-ttu-id="0ff8b-135">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="0ff8b-135">NOTES</span></span>
+
+## <span data-ttu-id="0ff8b-136">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="0ff8b-136">RELATED LINKS</span></span>
