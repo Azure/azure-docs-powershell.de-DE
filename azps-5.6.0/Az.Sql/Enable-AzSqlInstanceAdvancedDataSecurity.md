@@ -1,0 +1,219 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+Module Name: Az.Sql
+online version: https://docs.microsoft.com/powershell/module/az.sql/enable-azsqlinstanceadvanceddatasecurity
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Enable-AzSqlInstanceAdvancedDataSecurity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Enable-AzSqlInstanceAdvancedDataSecurity.md
+ms.openlocfilehash: 01effbfbd0a9f4df8cd8bf611c6a2f25875452a6
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101918083"
+---
+# <span data-ttu-id="a89d7-101">Enable-AzSqlInstanceAdvancedDataSecurity</span><span class="sxs-lookup"><span data-stu-id="a89d7-101">Enable-AzSqlInstanceAdvancedDataSecurity</span></span>
+
+## <span data-ttu-id="a89d7-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="a89d7-102">SYNOPSIS</span></span>
+<span data-ttu-id="a89d7-103">Aktiviert Advanced Data Security für eine verwaltete Instanz.</span><span class="sxs-lookup"><span data-stu-id="a89d7-103">Enables Advanced Data Security on a managed instance.</span></span>
+
+## <span data-ttu-id="a89d7-104">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="a89d7-104">SYNTAX</span></span>
+
+```
+Enable-AzSqlInstanceAdvancedDataSecurity [-DoNotConfigureVulnerabilityAssessment] [-AsJob]
+ [-DeploymentName <String>] [-InputObject <AzureSqlManagedInstanceModel>] -InstanceName <String>
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="a89d7-105">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a89d7-105">DESCRIPTION</span></span>
+<span data-ttu-id="a89d7-106">Das **Cmdlet Enable-AzSqlInstanceAdvancedDataSecurity** aktiviert Advanced Data Security für eine verwaltete Instanz.</span><span class="sxs-lookup"><span data-stu-id="a89d7-106">The **Enable-AzSqlInstanceAdvancedDataSecurity** cmdlet enables Advanced Data Security on a managed instance.</span></span> <span data-ttu-id="a89d7-107">Advanced Data Security ist ein einheitliches Sicherheitspaket, das Datenklassifizierung, Vulnerability Assessment und Advanced Threat Protection für Ihre verwaltete Instanz umfasst.</span><span class="sxs-lookup"><span data-stu-id="a89d7-107">Advanced Data Security is a unified security package that includes Data Classification, Vulnerability Assessment and Advanced Threat Protection for your managed instance.</span></span> <span data-ttu-id="a89d7-108">(Zum Speichern von Sicherheitsbewertungen wird automatisch ein neues Speicherkonto erstellt.</span><span class="sxs-lookup"><span data-stu-id="a89d7-108">(A new storage account will automatically be created for saving vulnerability assessments.</span></span> <span data-ttu-id="a89d7-109">Wenn zuvor ein Speicherkonto zu diesem Zweck erstellt wurde, wird es stattdessen verwendet.</span><span class="sxs-lookup"><span data-stu-id="a89d7-109">If a storage account was previously created for this purpose, it will be used instead)</span></span>
+
+## <span data-ttu-id="a89d7-110">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="a89d7-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="a89d7-111">Beispiel 1: Aktivieren der verwalteten Instanz Advanced Data Security</span><span class="sxs-lookup"><span data-stu-id="a89d7-111">Example 1: Enable managed instance Advanced Data Security</span></span>
+```powershell
+PS C:\>  Enable-AzSqlInstanceAdvancedDataSecurity `
+            -ResourceGroupName "ResourceGroup01" `
+            -InstanceName "ManagedInstance01" 
+
+ResourceGroupName            : ResourceGroup01
+ManagedInstanceName          : ManagedInstance01
+IsEnabled                    : True
+```
+
+### <span data-ttu-id="a89d7-112">Beispiel 2: Aktivieren der verwalteten Instanz Advanced Data Security from server resource</span><span class="sxs-lookup"><span data-stu-id="a89d7-112">Example 2: Enable managed instance Advanced Data Security from server resource</span></span>
+```powershell
+PS C:\>  Get-AzSqlInstance `
+           -ResourceGroupName "ResourceGroup01" `
+           -Name "ManagedInstance01" `
+           | Enable-AzSqlInstanceAdvancedDataSecurity
+
+ResourceGroupName            : ResourceGroup01
+ManagedInstanceName          : ManagedInstance01
+IsEnabled                    : True
+```
+
+### <span data-ttu-id="a89d7-113">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="a89d7-113">Example 3</span></span>
+
+<span data-ttu-id="a89d7-114">Aktiviert Advanced Data Security für eine verwaltete Instanz.</span><span class="sxs-lookup"><span data-stu-id="a89d7-114">Enables Advanced Data Security on a managed instance.</span></span> <span data-ttu-id="a89d7-115">(automatisch generiert)</span><span class="sxs-lookup"><span data-stu-id="a89d7-115">(autogenerated)</span></span>
+
+```powershell
+<!-- Aladdin Generated Example --> 
+Enable-AzSqlInstanceAdvancedDataSecurity -DoNotConfigureVulnerabilityAssessment -InstanceName 'ContosoManagedInstanceName' -ResourceGroupName MyResourceGroup
+```
+
+## <span data-ttu-id="a89d7-116">PARAMETER</span><span class="sxs-lookup"><span data-stu-id="a89d7-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="a89d7-117">-AsJob</span><span class="sxs-lookup"><span data-stu-id="a89d7-117">-AsJob</span></span>
+<span data-ttu-id="a89d7-118">Ausführen des Cmdlets im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="a89d7-118">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="a89d7-119">-DefaultProfile</span></span>
+<span data-ttu-id="a89d7-120">Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a89d7-120">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-121">-DeploymentName</span><span class="sxs-lookup"><span data-stu-id="a89d7-121">-DeploymentName</span></span>
+<span data-ttu-id="a89d7-122">Geben Sie einen benutzerdefinierten Namen für die Advanced Data Security-Bereitstellung an.</span><span class="sxs-lookup"><span data-stu-id="a89d7-122">Supply a custom name for Advanced Data Security deployment</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-123">-DoNotConfigureVulnerabilityAssessment</span><span class="sxs-lookup"><span data-stu-id="a89d7-123">-DoNotConfigureVulnerabilityAssessment</span></span>
+<span data-ttu-id="a89d7-124">Sicherheitsrisikobeurteilung nicht automatisch aktivieren (Dadurch wird kein Speicherkonto erstellt)</span><span class="sxs-lookup"><span data-stu-id="a89d7-124">Do not auto enable Vulnerability Assessment (This will not create a storage account)</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-125">-InputObject</span><span class="sxs-lookup"><span data-stu-id="a89d7-125">-InputObject</span></span>
+<span data-ttu-id="a89d7-126">Das verwaltete Instanzobjekt, das mit dem Richtlinienvorgang "Advanced Data Security" verwendet werden soll</span><span class="sxs-lookup"><span data-stu-id="a89d7-126">The managed instance object to use with Advanced Data Security policy operation</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-127">-InstanceName</span><span class="sxs-lookup"><span data-stu-id="a89d7-127">-InstanceName</span></span>
+<span data-ttu-id="a89d7-128">SQL Name der verwalteten Datenbank.</span><span class="sxs-lookup"><span data-stu-id="a89d7-128">SQL Database managed instance name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-129">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="a89d7-129">-ResourceGroupName</span></span>
+<span data-ttu-id="a89d7-130">Der Name der Ressourcengruppe.</span><span class="sxs-lookup"><span data-stu-id="a89d7-130">The name of the resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-131">-Bestätigen</span><span class="sxs-lookup"><span data-stu-id="a89d7-131">-Confirm</span></span>
+<span data-ttu-id="a89d7-132">Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.</span><span class="sxs-lookup"><span data-stu-id="a89d7-132">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="a89d7-133">-WhatIf</span></span>
+<span data-ttu-id="a89d7-134">Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a89d7-134">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="a89d7-135">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="a89d7-135">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="a89d7-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a89d7-136">CommonParameters</span></span>
+<span data-ttu-id="a89d7-137">Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="a89d7-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a89d7-138">Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="a89d7-138">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="a89d7-139">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="a89d7-139">INPUTS</span></span>
+
+### <span data-ttu-id="a89d7-140">Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel</span><span class="sxs-lookup"><span data-stu-id="a89d7-140">Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel</span></span>
+
+### <span data-ttu-id="a89d7-141">System.String</span><span class="sxs-lookup"><span data-stu-id="a89d7-141">System.String</span></span>
+
+## <span data-ttu-id="a89d7-142">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="a89d7-142">OUTPUTS</span></span>
+
+### <span data-ttu-id="a89d7-143">Microsoft.Azure.Commands.Sql.AdvancedThreatProtection.Model.ManagedInstanceAdvancedDataSecurityPolicyModel</span><span class="sxs-lookup"><span data-stu-id="a89d7-143">Microsoft.Azure.Commands.Sql.AdvancedThreatProtection.Model.ManagedInstanceAdvancedDataSecurityPolicyModel</span></span>
+
+## <span data-ttu-id="a89d7-144">NOTIZEN</span><span class="sxs-lookup"><span data-stu-id="a89d7-144">NOTES</span></span>
+
+## <span data-ttu-id="a89d7-145">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="a89d7-145">RELATED LINKS</span></span>
