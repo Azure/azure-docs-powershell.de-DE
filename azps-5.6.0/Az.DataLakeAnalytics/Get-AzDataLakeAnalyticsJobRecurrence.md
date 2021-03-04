@@ -1,0 +1,148 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+Module Name: Az.DataLakeAnalytics
+online version: https://docs.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjobrecurrence
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobRecurrence.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobRecurrence.md
+ms.openlocfilehash: 751fa50a6c29c826fe707852efa661b78d1b9c33
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101945185"
+---
+# Get-AzDataLakeAnalyticsJobRecurrence
+
+## SYNOPSIS
+Ruft eine Datenseeanalyseauftragsserie oder -serie ab.
+
+## SYNTAX
+
+### GetAllInAccount (Standard)
+```
+Get-AzDataLakeAnalyticsJobRecurrence [-Account] <String> [-SubmittedAfter <DateTimeOffset>]
+ [-SubmittedBefore <DateTimeOffset>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### GetBySpecificJobRecurrence
+```
+Get-AzDataLakeAnalyticsJobRecurrence [-Account] <String> [-RecurrenceId] <Guid>
+ [-SubmittedAfter <DateTimeOffset>] [-SubmittedBefore <DateTimeOffset>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Die **Get-AzDataLakeAnalyticsJobRecurrence** ruft eine angegebene Azure Data Lake Analytics-Auftragsserie oder eine Liste der Serien ab.
+
+## BEISPIELE
+
+### Beispiel 1: Erhalten einer angegebenen Serie
+```
+PS C:\>Get-AzDataLakeAnalyticsJobRecurrence -Account "contosoadla" -RecurrenceId 83cb7ad2-3523-4b82-b909-d478b0d8aea3
+```
+
+Dieser Befehl ruft die angegebene Auftragsserie mit der ID "83cb7ad2-3523-4b82-b909-d478b0d8aea3" im Konto "contosoadla" ab.
+
+### Beispiel 2: Erhalten einer Liste aller Serien im Konto
+```
+PS C:\>Get-AzDataLakeAnalyticsJobRecurrence -AccountName "contosoadla"
+```
+
+Dieser Befehl ruft eine Liste aller Serien im Konto "contosoadla" ab.
+
+## PARAMETER
+
+### -Konto
+Name des Data Lake Analytics-Kontonamens, unter dem die Auftragsserie abgerufen werden soll.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: AccountName
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecurrenceId
+ID der bestimmten Auftragsserie, für die Informationen zurücksenden werden.
+
+```yaml
+Type: System.Guid
+Parameter Sets: GetBySpecificJobRecurrence
+Aliases: Id
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SubmittedAfter
+Ein optionaler Filter, der eine Auftragsserie(n) zurückgibt, die nur nach dem angegebenen Zeitpunkt übermittelt wurde.
+
+```yaml
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubmittedBefore
+Ein optionaler Filter, der eine Auftragsserie(n) zurückgibt, die nur vor dem angegebenen Zeitpunkt übermittelt wurde.
+
+```yaml
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## EINGABEN
+
+### System.String
+
+### System.Guid
+
+### System.Nullable'1[[System.DateTimeOffset, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSJobRecurrenceInformation
+
+## NOTIZEN
+
+## VERWANDTE LINKS

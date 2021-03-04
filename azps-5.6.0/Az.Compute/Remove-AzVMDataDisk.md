@@ -1,0 +1,142 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+Module Name: Az.Compute
+ms.assetid: D5943E9F-E4E6-4A1F-A144-44691CF32FC8
+online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmdatadisk
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Remove-AzVMDataDisk.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Remove-AzVMDataDisk.md
+ms.openlocfilehash: 72ccf9994b303e9e191594f32bb2aa23f0abd9ad
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101934259"
+---
+# Remove-AzVMDataDisk
+
+## SYNOPSIS
+Entfernt einen Datenträger von einem virtuellen Computer.
+
+## SYNTAX
+
+```
+Remove-AzVMDataDisk [-VM] <PSVirtualMachine> [[-DataDiskNames] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Das **Cmdlet Remove-AzVMDataDisk** entfernt einen Datenträger von einem virtuellen Computer.
+
+## BEISPIELE
+
+### Beispiel 1: Entfernen eines Datenträgers von einem virtuellen Computer
+```
+PS C:\> $VirtualMachine = Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" 
+PS C:\> Remove-AzVMDataDisk -VM $VirtualMachine -Name "Disk3"
+PS C:\> Update-AzVM -ResourceGroupName "ResourceGroup11" -VM $VirtualMachine
+```
+
+Der erste Befehl ruft den virtuellen Computer mit dem Namen VirtualMachine07 mithilfe des **Get-AzVM-Cmdlets** ab.
+Der Befehl speichert den virtuellen Computer in der $VirtualMachine.
+Mit dem zweiten Befehl wird der Datenträger mit dem Namen "Disk3" von dem virtuellen Computer entfernt, der auf der $VirtualMachine.
+Der letzte Befehl aktualisiert den Zustand des virtuellen Computers, der in $VirtualMachine In ResourceGroup11 gespeichert ist.
+
+## PARAMETER
+
+### -DataDiskNames
+Gibt die Namen einer oder mehrere Datenträger an, die von diesem Cmdlet entfernt werden.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases: Name
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, der Mandant und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VM
+Gibt das Objekt des lokalen virtuellen Computers an, von dem ein Datenträger entfernt werden soll.
+Zum Abrufen eines Virtuellen Computerobjekts verwenden Sie das Get-AzVM Cmdlet.
+
+```yaml
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Bestätigen
+Fordert Sie zur Bestätigung auf, bevor Sie das Cmdlet ausführen.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Zeigt, was passieren würde, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EINGABEN
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+## NOTIZEN
+
+## VERWANDTE LINKS
+
+[Add-AzVMDataDisk](./Add-AzVMDataDisk.md)
+
+[Get-AzVM](./Get-AzVM.md)
+
+

@@ -1,0 +1,110 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+Module Name: Az.Storage
+online version: https://docs.microsoft.com/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyfilter
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyFilter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyFilter.md
+ms.openlocfilehash: 40a2420803197b21bb9f0f8d20b771482b4e694b
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101944573"
+---
+# New-AzStorageAccountManagementPolicyFilter
+
+## SYNOPSIS
+Erstellt ein ManagementPolicy-Regelfilterobjekt, das in New-AzStorageAccountManagementPolicyRule verwendet werden kann.
+
+## SYNTAX
+
+```
+New-AzStorageAccountManagementPolicyFilter [-PrefixMatch <String[]>] [-BlobType <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## BESCHREIBUNG
+Das **Cmdlet New-AzStorageAccountManagementPolicyFilter** erstellt ein ManagementPolicy-Regelfilterobjekt, das in New-AzStorageAccountManagementPolicyRule verwendet werden kann.
+
+## BEISPIELE
+
+### Beispiel 1: Erstellt ein ManagementPolicy-Regelfilterobjekt, fügt es dann einer Verwaltungsrichtlinienregel hinzu und legt es auf ein Speicherkonto an.
+```
+PS C:\>$filter = New-AzStorageAccountManagementPolicyFilter -PrefixMatch blobprefix1,blobprefix2 -BlobType appendBlob,blockBlob
+PS C:\>$filter 
+
+PrefixMatch                BlobTypes  
+-----------                ---------  
+{blobprefix1, blobprefix2} {appendBlob, blockBlob}
+
+PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterModificationGreaterThan 100
+PS C:\>$rule = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action -Filter $filter
+PS C:\>$policy = Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule
+```
+
+Mit diesem Befehl wird ein ManagementPolicy-Regelfilterobjekt erstellt. Fügen Sie sie dann einer Verwaltungsrichtlinienregel hinzu, und legen Sie sie auf ein Speicherkonto festgelegt.
+
+## PARAMETER
+
+### -BlobType
+Ein Array von Zeichenfolgen für blobtypes, die übereinstimmen. Derzeit unterstützt blockBlob alle Gestuft- und Löschaktionen. Für appendBlob werden nur Löschaktionen unterstützt.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: blockBlob, appendBlob
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Die Anmeldeinformationen, das Konto, den Mandanten und das Abonnement, die für die Kommunikation mit Azure verwendet werden.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrefixMatch
+Ein Array von Zeichenfolgen für zu übereinstimmende Präfixe.
+Eine Präfixzeichenfolge muss mit einem Containernamen beginnen.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Dieses Cmdlet unterstützt die gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen finden Sie unter about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## EINGABEN
+
+### Keine
+
+## AUSGABEN
+
+### Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyRuleFilter
+
+## NOTIZEN
+
+## VERWANDTE LINKS
